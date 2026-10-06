@@ -1,0 +1,580 @@
+.unifacs-hero-section {
+  padding: 200px 0 0;
+  background: #ffe0ed;
+}
+
+.unifacs-hero-cards-wrap {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+  margin-top: -170px;
+  margin-bottom: -170px;
+}
+
+.unifacs-hero-wrap {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 0px;
+  align-items: start;
+}
+
+.unifacs-hero-cards-wrap {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+  margin-top: -170px;
+  margin-bottom: -170px;
+}
+
+.unifacs-hero-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #141414;
+  margin: 0 0 20px;
+  max-width: 90%;
+}
+
+.unifacs-hero-text {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #3d3d3d;
+  max-width: 700px;
+}
+
+.unifacs-hero-text strong {
+  font-weight: 700;
+}
+
+.unifacs-hero-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #1a1a2e;
+}
+
+.unifacs-hero-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.unifacs-hero-card {
+  background: #000e29;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  width: 100%;
+}
+
+.unifacs-hero-card-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin: 0 0 8px;
+}
+
+.unifacs-hero-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.unifacs-hero-card-list li {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #f5f5f5;
+  margin: 0 0 12px;
+}
+
+.unifacs-hero-card-list li.unifacs-hero-card-text {
+  margin-bottom: 12px;
+}
+
+.unifacs-hero-card-list li.unifacs-hero-card-meta-item::before {
+  content: "\2022  ";
+}
+
+.unifacs-hero-card-list li.unifacs-hero-card-meta-item strong {
+  font-weight: 600;
+}
+
+.unifacs-hero-card-note {
+  display: block;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  color: #f5f5f5;
+  margin: 0 0 36px;
+  flex-grow: 1;
+}
+
+.unifacs-hero-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #ff8fc7;
+  color: #141414;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.unifacs-hero-card-btn:hover {
+  background: #ff7ab9;
+}
+
+.unifacs-hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 0 0 70px;
+}
+
+.unifacs-hero-links a {
+  position: relative;
+  display: inline-block;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #141414;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.unifacs-hero-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ff8fc7;
+  transition: width 0.25s ease;
+}
+
+.unifacs-hero-links a:hover::after {
+  width: 100%;
+}
+
+.unifacs-hero-media {
+  position: relative;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.unifacs-hero-media img {
+  position: relative;
+  top: -60px;
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 1280px) {
+  .unifacs-hero-media img {
+    width: 453px;
+  }
+}
+
+@media (max-width: 960px) {
+  .unifacs-hero-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .unifacs-hero-media {
+    position: relative;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .unifacs-hero-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .unifacs-hero-cards-wrap {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+    margin-top: -170px;
+    margin-bottom: -170px;
+  }
+}
+
+/* SOBRE / DIFERENCIAIS -- mesma secao do hero, por causa da sobreposicao dos cards */
+.unifacs-about-section {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  padding: 170px 0 80px;
+}
+
+.unifacs-about-wrap {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.unifacs-about-col-sticky {
+  position: sticky;
+  top: 100px;
+}
+
+.unifacs-about-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #141414;
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.unifacs-about-text {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3d3d3d;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.unifacs-about-text strong {
+  font-weight: 700;
+}
+
+.unifacs-about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.unifacs-about-list-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #141414;
+  margin: 0 0 8px;
+}
+
+.unifacs-about-list-text {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3d3d3d;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .unifacs-about-section {
+    padding-top: 48px;
+  }
+
+  .unifacs-about-wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .unifacs-about-col-sticky {
+    position: static;
+  }
+}
+/* CARD MEDICINA UNIFACS - Matriz Curricular / Projeto Pedagogico (dentro da coluna direita) */
+.unifacs-curriculum-block {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.unifacs-curriculum-image {
+  width: 100%;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 0 20px;
+  display: block;
+}
+
+.unifacs-curriculum-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #141414;
+  margin: 0 0 8px;
+}
+
+.unifacs-curriculum-meta {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #141414;
+  margin: 0 0 14px;
+}
+
+.unifacs-curriculum-meta strong {
+  color: #ff0475;
+}
+
+.unifacs-curriculum-text {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3d3d3d;
+  margin: 0 0 20px;
+}
+
+.unifacs-curriculum-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.unifacs-curriculum-btn-group {
+  flex: 1;
+  min-width: 140px;
+}
+
+.unifacs-curriculum-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 302px;
+  height: 54px;
+  border: 1px solid #1d4189;
+  border-radius: 8px;
+  color: #1d4189;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 12px;
+  transition: background 0.2s ease;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.unifacs-curriculum-btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.unifacs-curriculum-btn:hover {
+  background: rgba(29, 65, 137, 0.08);
+}
+
+.unifacs-curriculum-btn-caption {
+  display: block;
+  margin-top: 6px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  color: #3d3d3d;
+  text-align: start;
+}
+
+.unifacs-curriculum-btn-full {
+  width: 100%;
+  margin-top: 32px;
+  max-width: 100%;
+}
+/* ESTRUTURA DE PONTA (dentro da coluna direita) */
+.unifacs-structure-block {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.unifacs-structure-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #141414;
+  margin: 0 0 12px;
+}
+
+.unifacs-structure-intro {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 15px;
+  color: #3d3d3d;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+.unifacs-structure-intro strong {
+  font-weight: 700;
+  color: #141414;
+}
+
+.unifacs-structure-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.unifacs-structure-img {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.unifacs-structure-item-content {
+  flex: 1;
+}
+
+.unifacs-structure-item-content h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #141414;
+  margin: 0 0 6px;
+}
+
+.unifacs-structure-item-content p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  color: #3d3d3d;
+  line-height: 1.5;
+  margin: 0;
+}
+@media (max-width: 420px) {
+  .unifacs-structure-item,
+  .unifacs-structure-item-reverse {
+    flex-direction: column;
+  }
+
+  .unifacs-structure-img {
+    width: 100%;
+    height: 160px;
+  }
+}
+/* METODOLOGIAS ATIVAS (dentro da coluna direita) */
+.unifacs-methods-block {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.unifacs-methods-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #141414;
+  margin: 0 0 12px;
+}
+
+.unifacs-methods-text {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  color: #3d3d3d;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.unifacs-methods-text strong {
+  font-weight: 700;
+  color: #141414;
+}
+
+.unifacs-methods-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.unifacs-methods-list li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  padding: 14px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.unifacs-methods-arrow {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #e13f91;
+  margin-top: 32px;
+}
+
+.unifacs-methods-list h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #141414;
+  margin: 0 0 4px;
+}
+
+.unifacs-methods-list p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  color: #3d3d3d;
+  line-height: 1.5;
+  margin: 0;
+}
+/* MERCADO DE TRABALHO (dentro da coluna direita) */
+.unifacs-market-block {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.unifacs-market-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #141414;
+  margin: 0 0 12px;
+}
+
+.unifacs-market-text {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 15px;
+  color: #3d3d3d;
+  line-height: 1.5;
+  margin: 0;
+}
