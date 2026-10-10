@@ -1,0 +1,593 @@
+/* ====================================================================
+   Página Medicina Anhembi Morumbi (UAM)
+   Figma: página "Protótipo [em construção] - Anhembi Morumbi",
+   nó 21:7901 "Desktop"
+   ==================================================================== */
+
+.section {
+  padding: 64px var(--page-gutter);
+}
+
+.section--subtle {
+  background-color: var(--surface-inverted);
+}
+
+.section--tint {
+  background-color: var(--surface-brand-tint);
+}
+
+.section--tint-strong {
+  background-color: var(--surface-brand-tint-strong);
+}
+
+.section--dark {
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  padding: 56px var(--page-gutter);
+}
+
+.section--mint {
+  background-color: var(--surface-brand-primary-light);
+}
+
+/* ---------- Processo seletivo ---------- */
+.selection-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-extra-large);
+}
+
+.selection-intro__title span {
+  color: var(--text-heading);
+}
+
+.selection-intro__guidance {
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  color: var(--text-primary-dark);
+}
+
+/* ---------- Nosso DNA ---------- */
+.dna-pillars {
+  display: flex;
+  gap: var(--spacing-extra-large);
+  margin-top: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.dna-pillar {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  padding-top: 20px;
+  border-top: 2px solid var(--border-brand-soft-strong);
+}
+
+.dna-pillar__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.dna-pillar__title {
+  font-size: var(--font-size-xl);
+  color: var(--text-brand);
+}
+
+.dna-pillar__text {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}
+
+/* ---------- Jornada curricular / Matriz em espiral ---------- */
+.spiral-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.spiral-status-row {
+  display: flex;
+  gap: var(--spacing-medium);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+  background-color: var(--surface-brand-soft);
+  border: 1px solid var(--border-brand-primary);
+  border-radius: 8px;
+  padding: 4px var(--spacing-extra-small);
+  font-size: var(--font-size-xs);
+  color: var(--text-brand);
+}
+
+.status-pill img {
+  width: 12px;
+  height: 12px;
+}
+
+.spiral-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+.btn-pill-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.btn-pill-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Campus e infraestrutura ---------- */
+.campus-layout {
+  display: flex;
+  gap: var(--spacing-extra-large);
+  margin-top: var(--spacing-extra-large);
+  align-items: stretch;
+}
+
+.campus-panel {
+  flex: 0 0 300px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.campus-panel__title {
+  font-size: var(--font-size-md);
+  color: var(--text-brand);
+}
+
+.campus-panel__text {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}
+
+.campus-chip-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.campus-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.campus-detail__location {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+  font-size: var(--font-size-xxs);
+  color: var(--text-secondary-dark);
+}
+
+.campus-detail__location img {
+  width: 12px;
+  height: 12px;
+}
+
+.campus-detail__address {
+  font-size: var(--font-size-xs);
+  color: var(--text-primary-dark);
+}
+
+.campus-gallery {
+  flex: 1 1 0;
+  display: flex;
+  gap: var(--spacing-extra-small);
+  min-width: 0;
+}
+
+.campus-gallery__main {
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: var(--radius-medium) 0 0 var(--radius-medium);
+  overflow: hidden;
+}
+
+.campus-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campus-gallery__thumbs {
+  flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.campus-thumb {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.campus-thumb:first-child {
+  border-radius: 0 var(--radius-medium) 0 0;
+}
+
+.campus-thumb:last-child {
+  border-radius: 0 0 var(--radius-medium) 0;
+}
+
+.campus-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campus-thumb__label {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  background-color: rgba(0, 121, 106, 0.75);
+  color: var(--text-inverted);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  padding: 2px var(--spacing-micro);
+  border-radius: var(--spacing-micro);
+}
+
+/* ---------- Metodologia ---------- */
+.methodology {
+  display: flex;
+  gap: 64px;
+  align-items: stretch;
+}
+
+.methodology__intro {
+  flex: 0 0 368px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+}
+
+.methodology__image-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.methodology__image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-medium);
+}
+
+.methodology__caption {
+  font-size: var(--font-size-xs);
+  color: var(--text-primary-dark);
+}
+
+.methodology__list {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+/* ---------- Ecossistema de prática ---------- */
+.practice-heading {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-lg);
+  color: var(--text-inverted);
+  margin-bottom: var(--spacing-large);
+}
+
+/* ---------- Financiamentos ---------- */
+.financing-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.financing-intro {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+}
+
+.financing-highlight {
+  background-color: var(--surface-brand-primary);
+  border: 2px solid var(--surface-brand-primary-light);
+  border-radius: 12px;
+  padding: 20px var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-micro);
+  max-width: 513px;
+}
+
+.financing-highlight__label {
+  color: var(--surface-brand-primary-light);
+  font-size: var(--font-size-xxs);
+  opacity: 0.85;
+}
+
+.financing-highlight__value {
+  color: var(--text-inverted);
+  font-size: var(--font-size-2xl);
+}
+
+.financing-highlight__note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 6px;
+  color: var(--surface-brand-primary-light);
+  font-size: var(--font-size-xxs);
+  opacity: 0.75;
+}
+
+.financing-highlight__note::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: var(--surface-brand-primary-light);
+  opacity: 0.6;
+}
+
+.financing-programs {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+/* ---------- Seu Futuro na Medicina ---------- */
+.future-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.future-header__text {
+  flex: 1 1 480px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+/* ---------- Grupo Inspirali ---------- */
+.inspirali-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+}
+
+.inspirali-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+}
+
+.inspirali-mark {
+  height: 24px;
+  width: auto;
+}
+
+.inspirali-header__title {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-lg);
+  color: var(--text-brand);
+  max-width: 600px;
+}
+
+.inspirali-header__text {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+  max-width: 600px;
+}
+
+.stats-grid {
+  display: flex;
+  gap: var(--spacing-large);
+  flex-wrap: wrap;
+}
+
+.lifelong {
+  display: flex;
+  gap: var(--spacing-extra-large);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lifelong__text {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.lifelong__text p {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}
+
+.timeline {
+  flex: 1 1 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-step {
+  display: flex;
+  gap: var(--spacing-medium);
+  align-items: flex-start;
+}
+
+.timeline-step__connector {
+  flex: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-step__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  flex-shrink: 0;
+}
+
+.timeline-step__dot img {
+  width: 16px;
+  height: 16px;
+}
+
+.timeline-step__line {
+  width: 2px;
+  flex: 1 1 auto;
+  background-color: var(--border-brand-soft-strong);
+  min-height: 24px;
+}
+
+.timeline-step__content {
+  flex: 1 1 0;
+  padding-bottom: var(--spacing-large);
+}
+
+.timeline-step__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-heading);
+}
+
+.timeline-step:last-child .timeline-step__title {
+  color: var(--text-brand);
+}
+
+.timeline-step__text {
+  font-size: var(--font-size-xs);
+  color: var(--text-primary-dark);
+}
+
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  background-color: var(--surface-secondary-subtle);
+  border: 1px solid var(--border-brand-soft);
+  border-radius: 12px;
+  padding: var(--spacing-extra-large);
+}
+
+.partner-logos img {
+  height: 28px;
+  width: auto;
+}
+
+/* ====================================================================
+   Responsividade
+   ==================================================================== */
+
+@media (max-width: 1280px) {
+  .section,
+  .section--dark {
+    padding-left: var(--page-gutter-tablet);
+    padding-right: var(--page-gutter-tablet);
+  }
+}
+
+@media (max-width: 1024px) {
+  .methodology,
+  .campus-layout,
+  .financing-layout,
+  .lifelong {
+    flex-direction: column;
+  }
+
+  .methodology__intro,
+  .campus-panel {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .campus-gallery {
+    width: 100%;
+  }
+
+  .selection-card__tabs {
+    padding-left: var(--spacing-large);
+    padding-right: var(--spacing-large);
+  }
+
+  .selection-card__panel {
+    padding-left: var(--spacing-large);
+    padding-right: var(--spacing-large);
+  }
+}
+
+@media (max-width: 860px) {
+  .unit-panel__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dna-pillars {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .section,
+  .section--dark {
+    padding-left: var(--page-gutter-mobile);
+    padding-right: var(--page-gutter-mobile);
+  }
+
+  .campus-gallery {
+    flex-direction: column;
+  }
+
+  .campus-gallery__thumbs {
+    flex-direction: row;
+    flex-basis: auto;
+  }
+
+  .financing-highlight {
+    max-width: 100%;
+  }
+
+  .stats-grid {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    min-width: 100%;
+  }
+
+  .partner-logos {
+    justify-content: center;
+  }
+}

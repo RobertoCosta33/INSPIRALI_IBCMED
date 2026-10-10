@@ -1,0 +1,184 @@
+/* ====================================================================
+   Header institucional + navegação do curso
+   Figma: "Institutional header" (16:7767) + "Course navigation" (12:8408)
+   ==================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.institutional-header {
+  background-color: var(--surface-inverted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large) var(--page-gutter);
+}
+
+.institutional-header__identity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.institutional-header__mark {
+  display: block;
+  height: 30px;
+  width: auto;
+}
+
+.institutional-header__divider {
+  width: 1px;
+  height: 32px;
+  background-color: #d1d5db;
+}
+
+.institutional-header__inspirali {
+  display: block;
+  height: 14px;
+  width: auto;
+}
+
+.institutional-header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.institutional-header__link {
+  padding: var(--spacing-micro);
+  font-size: var(--font-size-sm);
+  color: var(--text-brand);
+  white-space: nowrap;
+}
+
+.institutional-header__link:hover,
+.institutional-header__link:focus-visible {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-small);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-brand);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.course-nav {
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+}
+
+.course-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  padding: var(--spacing-medium) var(--page-gutter);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.course-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.course-nav__link {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  white-space: nowrap;
+  color: var(--text-inverted);
+  opacity: 0.92;
+}
+
+.course-nav__link:hover,
+.course-nav__link:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+  .institutional-header {
+    padding: var(--spacing-medium) var(--page-gutter-tablet);
+  }
+
+  .course-nav__list {
+    padding: var(--spacing-small) var(--page-gutter-tablet);
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 860px) {
+  .institutional-header__nav {
+    position: fixed;
+    inset: 72px 0 auto 0;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--surface-inverted);
+    padding: var(--spacing-large) var(--page-gutter-mobile);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-16px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .institutional-header__nav.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .institutional-header__nav .btn {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .institutional-header {
+    padding: var(--spacing-medium) var(--page-gutter-mobile);
+  }
+
+  .institutional-header__inspirali {
+    display: none;
+  }
+
+  .institutional-header__divider {
+    display: none;
+  }
+
+  .course-nav__list {
+    padding: var(--spacing-small) var(--page-gutter-mobile);
+  }
+}

@@ -1,0 +1,228 @@
+/* ====================================================================
+   Rodapé institucional — Figma: "Footer" (150:3552)
+   ==================================================================== */
+
+.site-footer {
+  background-color: var(--surface-brand-primary-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-extra-large);
+  padding-bottom: var(--spacing-extra-large);
+}
+
+.footer-invitation {
+  width: 100%;
+  background-color: var(--surface-brand-primary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+  padding: 64px var(--page-gutter);
+}
+
+.footer-invitation__title {
+  flex: 1 1 480px;
+  color: var(--text-inverted);
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-xl);
+  max-width: 772px;
+}
+
+.footer-body {
+  width: 100%;
+  max-width: var(--page-max-width);
+  padding: 0 var(--page-gutter);
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-large) 0;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 180px;
+  border-right: 2px solid #3d3d3d;
+  padding: 0 var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.footer-col:first-child {
+  padding-left: 0;
+}
+
+.footer-col:last-child {
+  border-right: none;
+}
+
+.footer-col__title {
+  color: var(--text-footer);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  padding-bottom: var(--spacing-small);
+}
+
+.footer-col__title--lg {
+  font-size: var(--font-size-md);
+}
+
+.footer-col__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col__links a {
+  color: var(--text-footer);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  padding: var(--spacing-extra-small) 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+}
+
+.footer-col__links a:hover,
+.footer-col__links a:focus-visible {
+  text-decoration: underline;
+}
+
+.footer-col__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.footer-col__contact-label {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xs);
+}
+
+.footer-col__contact-value {
+  color: var(--text-inverted);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+}
+
+.footer-emec-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-large);
+}
+
+.footer-emec-strip__line {
+  flex: 1 1 auto;
+  height: 2px;
+  border: none;
+  background-color: #3d3d3d;
+}
+
+.footer-emec-strip img {
+  height: 24px;
+  width: auto;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-emec-qr {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-emec-qr img {
+  width: 70px;
+  height: auto;
+}
+
+.footer-emec-qr p {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  max-width: 100px;
+}
+
+.footer-bottom__links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-bottom__links a,
+.footer-bottom__links button {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xs);
+}
+
+.footer-copyright {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xxs);
+  text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .footer-invitation,
+  .footer-body {
+    padding-left: var(--page-gutter-tablet);
+    padding-right: var(--page-gutter-tablet);
+  }
+}
+
+@media (max-width: 860px) {
+  .footer-col {
+    flex: 1 1 45%;
+    border-right: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-invitation,
+  .footer-body {
+    padding-left: var(--page-gutter-mobile);
+    padding-right: var(--page-gutter-mobile);
+  }
+
+  .footer-invitation {
+    padding-top: var(--spacing-extra-large);
+    padding-bottom: var(--spacing-extra-large);
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+  }
+
+  .footer-emec-strip {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

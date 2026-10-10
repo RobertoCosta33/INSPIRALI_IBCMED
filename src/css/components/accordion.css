@@ -1,0 +1,78 @@
+/* ====================================================================
+   Disclosure / Accordeon — usado em Metodologia e Perguntas frequentes
+   Figma: componente "Disclosure" (ex.: 181:3791, 181:3885)
+   ==================================================================== */
+
+.accordion-item {
+  width: 100%;
+}
+
+.accordion-item + .accordion-item {
+  margin-top: var(--spacing-extra-small);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  background-color: var(--surface-secondary-subtle);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-large);
+  min-height: 80px;
+  text-align: left;
+}
+
+.accordion-trigger__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+  line-height: var(--line-height-sm);
+}
+
+.accordion-trigger__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.accordion-trigger__icon .icon-minus {
+  display: none;
+}
+
+.accordion-item.is-open .accordion-trigger__icon .icon-plus {
+  display: none;
+}
+
+.accordion-item.is-open .accordion-trigger__icon .icon-minus {
+  display: block;
+}
+
+.accordion-panel {
+  display: none;
+  padding: var(--spacing-medium) var(--spacing-large) 0;
+}
+
+.accordion-item.is-open .accordion-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.accordion-panel__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand-dark);
+}
+
+.accordion-panel__text {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}
+
+.accordion-summary {
+  padding: 0 var(--spacing-large);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}

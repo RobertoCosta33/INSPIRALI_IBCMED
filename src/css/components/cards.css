@@ -1,0 +1,171 @@
+/* ====================================================================
+   Cartões reutilizáveis
+   ==================================================================== */
+
+.info-card {
+  flex: 1 1 0;
+  min-width: 260px;
+  background-color: var(--surface-secondary-subtle);
+  border-radius: var(--radius-medium);
+  padding: var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-large);
+}
+
+.info-card__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+}
+
+.info-card__subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--text-primary-dark);
+}
+
+.info-card__text {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}
+
+/* Cartão de disciplina (Matriz Curricular) */
+.discipline-card {
+  background-color: var(--surface-brand-primary-light-alt);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.discipline-card__eyebrow {
+  font-size: var(--font-size-xxs);
+  color: var(--text-heading);
+  text-transform: uppercase;
+}
+
+.discipline-card__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+}
+
+.discipline-card__text {
+  font-size: var(--font-size-xs);
+  color: var(--text-heading);
+}
+
+/* Cartão de estatística institucional (Grupo Inspirali) */
+.stat-card {
+  flex: 1 1 0;
+  min-width: 220px;
+  background-color: var(--surface-secondary-subtle);
+  border: 1px solid var(--border-brand-soft);
+  border-radius: 12px;
+  padding: 20px var(--spacing-large) var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.stat-card__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.stat-card__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-small);
+  background-color: var(--surface-brand-soft-weak);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card__icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.stat-card__value {
+  font-size: var(--font-size-2xl);
+  color: var(--text-brand);
+}
+
+.stat-card__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-heading);
+}
+
+.stat-card__text {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}
+
+/* Cartão do carrossel de pós-graduação */
+.posgrad-card {
+  flex: 0 0 290px;
+  width: 290px;
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-medium);
+  box-shadow: 4px 4px 4px -1px rgba(17, 17, 17, 0.1), 0px 4px 4px -1px rgba(17, 17, 17, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.posgrad-card__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.posgrad-card__body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.posgrad-card__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+}
+
+.posgrad-card__text {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary-dark);
+}
+
+/* Chips de campus */
+.campus-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  padding: var(--spacing-small) var(--spacing-small);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-xs);
+  width: 100%;
+}
+
+.campus-chip img {
+  width: 12px;
+  height: 12px;
+}
+
+.campus-chip--active {
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  font-weight: var(--font-weight-bold);
+}
+
+.campus-chip--inactive {
+  background-color: var(--surface-inverted);
+  color: var(--text-brand);
+}
