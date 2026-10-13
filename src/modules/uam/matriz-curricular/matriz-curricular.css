@@ -1,0 +1,51 @@
+/* ====================================================================
+   Módulo: Matriz Curricular em Espiral / Jornada curricular (UAM)
+   Figma: "Jornada curricular" (64:2770)
+   ==================================================================== */
+
+.spiral-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.spiral-status-row {
+  display: flex;
+  gap: var(--spacing-medium);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+  background-color: var(--surface-brand-soft);
+  border: 1px solid var(--border-brand-primary);
+  border-radius: 8px;
+  padding: 4px var(--spacing-extra-small);
+  font-size: var(--font-size-xs);
+  color: var(--text-brand);
+}
+
+.status-pill img {
+  width: 12px;
+  height: 12px;
+}
+
+.spiral-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+.btn-pill-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.btn-pill-icon img {
+  width: 16px;
+  height: 16px;
+}

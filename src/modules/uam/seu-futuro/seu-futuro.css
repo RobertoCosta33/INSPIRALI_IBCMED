@@ -1,0 +1,20 @@
+/* ====================================================================
+   Módulo: Seu Futuro na Medicina (UAM)
+   Figma: "Seu Futuro na Medicina" (181:2362 / 181:2363)
+   ==================================================================== */
+
+.future-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.future-header__text {
+  flex: 1 1 480px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}

@@ -24,7 +24,7 @@ O IBCMED reúne páginas de divulgação do curso de Medicina em diferentes facu
 >
 > | Instituição | Node-id Figma | Status |
 > |---|---|---|
-> | UAM (Anhembi Morumbi) | `181:3627` ("Medicina Anhembi Morumbi • Desktop", dentro da página "UAM - LP") | Implementado em `pages/uam/` |
+> | UAM (Anhembi Morumbi) | `21:7901` ("Desktop", dentro da página "Protótipo [em construção] - Anhembi Morumbi") | Implementado em `src/pages/uam/` + `src/modules/uam/*` |
 > | UNIFACS | — | A definir com o time de design |
 > | AGES, UNIFG, FASEH, USJT, UNP, UNA, UNIBH, UNISUL | — | A definir com o time de design |
 
@@ -44,41 +44,58 @@ Antes de construir qualquer página nova:
 
 ## 3. Estrutura do projeto
 
+Tudo o que é pré-HubSpot vive dentro de `src/`. `public/` guarda assets estáticos. `ibcmed-theme/` só nasce na fase de conversão para HubL.
+
 ```
 ibcmed/
-  AGENTS.md                      # este arquivo
-  pages/
-    uam/index.html                # preview estático da página (HTML puro, pronta para revisão visual)
-    <instituicao>/index.html
+  AGENTS.md                        # este arquivo
   src/
     css/
-      tokens.css                  # cores, tipografia, espaçamento e radius extraídos do Figma
-      base.css                    # reset + estilos base + utilitários (botões, links, container)
-      components/                 # CSS reutilizável entre instituições (header, footer, accordion, cards, forms)
-      pages/
-        uam.css                   # CSS específico do layout da página UAM
-    js/
-      header.js                   # menu mobile
-      accordion.js                # disclosures (metodologia, FAQ)
-      form.js                     # validação simples do formulário de contato
+      tokens.css                   # cores, tipografia, espaçamento e radius extraídos do Figma
+      base.css                     # reset + estilos base + seções genéricas + utilitários (botões, links, container)
+      components/                  # CSS de padrões de UI reaproveitados por vários módulos
+        accordion.css              # disclosures (ex.: Metodologia)
+        cards.css                  # cartões (info-card, discipline-card, stat-card, posgrad-card...)
+        tabs.css                   # abas (Processo seletivo, Matriz Curricular)
+        carousel.css               # carrosséis (Ecossistema, Seu Futuro na Medicina)
+    modules/
+      shared/                      # módulos reaproveitados por todas as instituições
+        header/
+          header.html
+          header.css
+          header.js
+        footer/
+          footer.html
+          footer.css
+      <instituicao>/               # um módulo por seção principal da página daquela instituição
+        <secao>/
+          <secao>.html
+          <secao>.css
+          <secao>.js                # apenas quando a seção tem interatividade própria
+    pages/
+      <instituicao>/
+        index.html                 # monta a página colando o HTML de cada módulo e referenciando
+                                    # os respectivos <secao>.css/<secao>.js — pronta para revisão visual
   public/
     images/
-      shared/                     # logos e selos comuns a todas as instituições (Inspirali, e-MEC, etc.)
-      uam/, <instituicao>/        # fotos específicas de cada instituição
-    icons/                        # ícones SVG reutilizáveis (setas, +/-, etc.)
-    docs/                         # PDFs (matrizes curriculares, editais) quando existirem
-  templates/                      # reservado para a conversão em tema HubSpot (ver templates/README.md)
+      shared/                      # logos e selos comuns a todas as instituições (Inspirali, e-MEC, etc.)
+      <instituicao>/               # fotos específicas de cada instituição
+    icons/                         # ícones SVG reutilizáveis (setas, +/-, etc.)
+    docs/                          # PDFs (matrizes curriculares, editais) quando existirem
+  src/templates/                   # reservado para a conversão em tema HubSpot (ver src/templates/README.md)
     README.md
-  ibcmed-theme/                   # tema HubSpot de verdade (Design Manager) — criado na fase de conversão
+  ibcmed-theme/                    # tema HubSpot de verdade (Design Manager) — criado na fase de conversão
 ```
 
 ### Regras de modularização
 
-- Um bloco de CSS (`src/css/pages/<instituicao>.css`) + seções semânticas (`<section>`) por página; seções compartilhadas (header, footer, accordion, cards, forms) vivem em `src/css/components/` para reuso entre instituições.
+- **Um módulo por seção principal da página** (ex.: `processo-seletivo`, `nosso-dna`, `matriz-curricular`, `campus`, `metodologia`, `ecossistema`, `financiamentos`, `seu-futuro`, `grupo-inspirali`), cada um com seu próprio `<secao>.html` + `<secao>.css` (+ `<secao>.js` quando necessário), em `src/modules/<instituicao>/<secao>/`.
+- Header e footer são módulos **compartilhados** entre todas as instituições: `src/modules/shared/header/` e `src/modules/shared/footer/`.
+- Padrões de UI reaproveitados por múltiplos módulos (botões, abas, carrosséis, accordions, cartões) ficam em `src/css/components/` — evita duplicar CSS igual em vários módulos. Tokens de design e reset ficam em `src/css/tokens.css`/`base.css`.
 - Inglês para nomes de pastas, arquivos, classes CSS e variáveis. Português apenas no conteúdo visível.
-- Imagens com `get_asset_url('../images/arquivo.png')` nos módulos HubL (fase de conversão), e caminho relativo simples (`../../public/images/...`) nas páginas em `pages/`.
-- Antes de ir para o HubSpot, toda página nasce como HTML/CSS/JS simples em `pages/`, revisada visualmente, só depois convertida em módulos HubL dentro de `templates/`/`ibcmed-theme/`.
-- Ao converter para HubL, cada `<section>` da página vira um módulo (`ibcmed-theme/modules/<secao>.module/`), mantendo a mesma divisão usada em `pages/<instituicao>/index.html`.
+- Imagens com `get_asset_url('../images/arquivo.png')` nos módulos HubL (fase de conversão), e caminho absoluto a partir da raiz (`/public/images/...`) nas páginas em `src/pages/`.
+- Antes de ir para o HubSpot, toda página nasce como módulos HTML/CSS/JS simples em `src/modules/`, compostos em `src/pages/<instituicao>/index.html` para revisão visual, só depois convertida em módulos HubL dentro de `src/templates/`/`ibcmed-theme/`.
+- Ao converter para HubL, cada módulo de `src/modules/<instituicao>/<secao>/` vira um módulo HubL (`ibcmed-theme/modules/<secao>.module/`) — a estrutura já nasce 1:1 com o destino final.
 
 ---
 
@@ -119,7 +136,7 @@ Para cada instituição, ao criar a página:
 
 - [ ] Conteúdo, textos e imagens fiéis ao Figma daquela instituição.
 - [ ] Nenhuma URL temporária do Figma (`figma.com/api/mcp/asset/...`) restante no código — todos os assets baixados para `public/`.
-- [ ] Header e footer compartilhados reaproveitados (`src/css/components/header.css`, `footer.css`).
+- [ ] Header e footer compartilhados reaproveitados (`src/modules/shared/header/`, `src/modules/shared/footer/`).
 - [ ] Responsividade testada (desktop, tablet, mobile).
 - [ ] HTML semântico, com `alt` descritivo em imagens e hierarquia de headings (`h1` único, `h2`/`h3` em sequência).
 - [ ] SEO: `<title>`, meta descrição, `canonical`, Open Graph e dados estruturados (`schema.org/Course`) definidos.
@@ -131,7 +148,7 @@ Para cada instituição, ao criar a página:
 
 ## 8. Próximos passos
 
-1. Revisar visualmente `pages/uam/index.html` (piloto, construído a partir do Figma) com o time responsável.
+1. Revisar visualmente `src/pages/uam/index.html` (piloto, construído a partir do Figma) com o time responsável.
 2. Definir e autenticar as contas HubSpot (sandbox e produção) do IBCMED na CLI.
-3. Após aprovação do piloto, criar a estrutura inicial de `ibcmed-theme/` (layout base, header, footer) e converter `pages/uam/` em módulos HubL dentro de `templates/`.
-4. Repetir o fluxo Figma → `pages/<instituicao>/` → aprovação → conversão HubL → upload para as demais instituições, conforme as telas forem disponibilizadas no Figma.
+3. Após aprovação do piloto, criar a estrutura inicial de `ibcmed-theme/` (layout base, header, footer) e converter cada módulo de `src/modules/uam/` em um módulo HubL dentro de `src/templates/`.
+4. Repetir o fluxo Figma → `src/modules/<instituicao>/` → `src/pages/<instituicao>/` → aprovação → conversão HubL → upload para as demais instituições, conforme as telas forem disponibilizadas no Figma.

@@ -1,0 +1,41 @@
+/* ====================================================================
+   Módulo: Nosso DNA (UAM)
+   Figma: "Nosso DNA" (65:1450 / 65:1597)
+   ==================================================================== */
+
+.dna-pillars {
+  display: flex;
+  gap: var(--spacing-extra-large);
+  margin-top: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.dna-pillar {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  padding-top: 20px;
+  border-top: 2px solid var(--border-brand-soft-strong);
+}
+
+.dna-pillar__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.dna-pillar__title {
+  font-size: var(--font-size-xl);
+  color: var(--text-brand);
+}
+
+.dna-pillar__text {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}
+
+@media (max-width: 860px) {
+  .dna-pillars {
+    flex-direction: column;
+  }
+}

@@ -206,6 +206,49 @@ h4 {
   background-color: var(--surface-brand-primary-light);
 }
 
+/* Seções de página — usadas por todos os módulos de conteúdo */
+.section {
+  padding: 64px var(--page-gutter);
+}
+
+.section--subtle {
+  background-color: var(--surface-inverted);
+}
+
+.section--tint {
+  background-color: var(--surface-brand-tint);
+}
+
+.section--tint-strong {
+  background-color: var(--surface-brand-tint-strong);
+}
+
+.section--dark {
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  padding: 56px var(--page-gutter);
+}
+
+.section--mint {
+  background-color: var(--surface-brand-primary-light);
+}
+
+@media (max-width: 1280px) {
+  .section,
+  .section--dark {
+    padding-left: var(--page-gutter-tablet);
+    padding-right: var(--page-gutter-tablet);
+  }
+}
+
+@media (max-width: 640px) {
+  .section,
+  .section--dark {
+    padding-left: var(--page-gutter-mobile);
+    padding-right: var(--page-gutter-mobile);
+  }
+}
+
 /* Links de texto com seta */
 .text-link {
   display: inline-flex;

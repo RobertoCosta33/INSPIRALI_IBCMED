@@ -1,0 +1,78 @@
+/* ====================================================================
+   Módulo: Financiamentos (UAM)
+   Figma: "Financiamentos" (117:3044 / 132:3070)
+   ==================================================================== */
+
+.financing-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.financing-intro {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+}
+
+.financing-highlight {
+  background-color: var(--surface-brand-primary);
+  border: 2px solid var(--surface-brand-primary-light);
+  border-radius: 12px;
+  padding: 20px var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-micro);
+  max-width: 513px;
+}
+
+.financing-highlight__label {
+  color: var(--surface-brand-primary-light);
+  font-size: var(--font-size-xxs);
+  opacity: 0.85;
+}
+
+.financing-highlight__value {
+  color: var(--text-inverted);
+  font-size: var(--font-size-2xl);
+}
+
+.financing-highlight__note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 6px;
+  color: var(--surface-brand-primary-light);
+  font-size: var(--font-size-xxs);
+  opacity: 0.75;
+}
+
+.financing-highlight__note::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: var(--surface-brand-primary-light);
+  opacity: 0.6;
+}
+
+.financing-programs {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+@media (max-width: 1024px) {
+  .financing-layout {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .financing-highlight {
+    max-width: 100%;
+  }
+}

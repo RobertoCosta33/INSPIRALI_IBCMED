@@ -31,15 +31,28 @@
       rel="stylesheet"
     />
 
+    <!-- Design system: tokens e base compartilhados por todas as páginas -->
     <link rel="stylesheet" href="/src/css/tokens.css" />
     <link rel="stylesheet" href="/src/css/base.css" />
-    <link rel="stylesheet" href="/src/css/components/header.css" />
-    <link rel="stylesheet" href="/src/css/components/footer.css" />
     <link rel="stylesheet" href="/src/css/components/accordion.css" />
     <link rel="stylesheet" href="/src/css/components/cards.css" />
     <link rel="stylesheet" href="/src/css/components/tabs.css" />
     <link rel="stylesheet" href="/src/css/components/carousel.css" />
-    <link rel="stylesheet" href="/src/css/pages/uam.css" />
+
+    <!-- Módulos compartilhados -->
+    <link rel="stylesheet" href="/src/modules/shared/header/header.css" />
+    <link rel="stylesheet" href="/src/modules/shared/footer/footer.css" />
+
+    <!-- Módulos da página UAM -->
+    <link rel="stylesheet" href="/src/modules/uam/processo-seletivo/processo-seletivo.css" />
+    <link rel="stylesheet" href="/src/modules/uam/nosso-dna/nosso-dna.css" />
+    <link rel="stylesheet" href="/src/modules/uam/matriz-curricular/matriz-curricular.css" />
+    <link rel="stylesheet" href="/src/modules/uam/campus/campus.css" />
+    <link rel="stylesheet" href="/src/modules/uam/metodologia/metodologia.css" />
+    <link rel="stylesheet" href="/src/modules/uam/ecossistema/ecossistema.css" />
+    <link rel="stylesheet" href="/src/modules/uam/financiamentos/financiamentos.css" />
+    <link rel="stylesheet" href="/src/modules/uam/seu-futuro/seu-futuro.css" />
+    <link rel="stylesheet" href="/src/modules/uam/grupo-inspirali/grupo-inspirali.css" />
 
     <script type="application/ld+json">
       {
@@ -909,9 +922,11 @@
       </div>
     </footer>
 
-    <script src="/src/js/header.js"></script>
-    <script src="/src/js/tabs.js"></script>
-    <script src="/src/js/accordion.js"></script>
-    <script src="/src/js/carousel.js"></script>
+    <script src="/src/modules/shared/header/header.js"></script>
+    <script src="/src/modules/uam/processo-seletivo/processo-seletivo.js"></script>
+    <script src="/src/modules/uam/matriz-curricular/matriz-curricular.js"></script>
+    <script src="/src/modules/uam/metodologia/metodologia.js"></script>
+    <script src="/src/modules/uam/ecossistema/ecossistema.js"></script>
+    <script src="/src/modules/uam/seu-futuro/seu-futuro.js"></script>
   </body>
 </html>
