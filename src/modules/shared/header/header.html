@@ -32,19 +32,24 @@
         </button>
 
         <nav class="institutional-header__nav" id="institutional-nav" data-menu-nav aria-label="Navegação institucional">
-          <div class="institutional-header__lang">
-            <button type="button" class="institutional-header__lang-item is-active">POR</button>
-            <span class="institutional-header__lang-divider" aria-hidden="true"></span>
-            <button type="button" class="institutional-header__lang-item">ENG</button>
-            <span class="institutional-header__lang-divider" aria-hidden="true"></span>
-            <button type="button" class="institutional-header__lang-item">ESP</button>
+          <div class="institutional-header__stack">
+            <div class="institutional-header__lang">
+              <button type="button" class="institutional-header__lang-item is-active">POR</button>
+              <span class="institutional-header__lang-divider" aria-hidden="true"></span>
+              <button type="button" class="institutional-header__lang-item">ENG</button>
+              <span class="institutional-header__lang-divider" aria-hidden="true"></span>
+              <button type="button" class="institutional-header__lang-item">ESP</button>
+            </div>
+            <div class="institutional-header__row">
+              <a class="institutional-header__link" href="#">Sou Candidato</a>
+              <span class="institutional-header__lang-divider" aria-hidden="true"></span>
+              <button type="button" class="institutional-header__link institutional-header__link--dropdown">
+                Sou Aluno
+                <img src="/public/icons/icon-arrow-down.svg" alt="" aria-hidden="true" width="8" height="8" />
+              </button>
+            </div>
           </div>
-          <a class="institutional-header__link" href="#">Sou Candidato</a>
-          <span class="institutional-header__lang-divider" aria-hidden="true"></span>
-          <button type="button" class="institutional-header__link institutional-header__link--dropdown">
-            Sou Aluno
-            <img src="/public/icons/icon-arrow-down.svg" alt="" aria-hidden="true" width="8" height="8" />
-          </button>
+          <span class="institutional-header__divider" aria-hidden="true"></span>
           <button type="button" class="institutional-header__search" aria-label="Buscar">
             <img src="/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
           </button>

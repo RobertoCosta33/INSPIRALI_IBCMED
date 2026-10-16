@@ -1,6 +1,6 @@
 /* ====================================================================
    Módulo: Financiamentos (UAM)
-   Figma: "Financiamentos" (117:3044 / 132:3070)
+   Figma: "Financiamentos" (117:3044)
    ==================================================================== */
 
 .section--subtle:has(.financing-watermark) {
@@ -10,17 +10,17 @@
 
 .financing-watermark {
   position: absolute;
-  left: 0;
+  left: -1px;
   bottom: 0;
-  width: 180px;
+  width: 236px;
   height: auto;
-  opacity: 0.6;
   pointer-events: none;
 }
 
 .financing-layout {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: var(--spacing-extra-large);
   flex-wrap: wrap;
@@ -28,71 +28,62 @@
 
 .financing-intro {
   flex: 1 1 420px;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: var(--spacing-extra-large);
+  gap: 39px;
 }
 
 .financing-highlight {
   background-color: var(--surface-brand-primary);
-  border: 2px solid var(--surface-brand-primary-light);
-  border-radius: 12px;
-  padding: 20px var(--spacing-large);
+  border-radius: var(--radius-small);
+  padding: 20px 32px;
   min-height: 179px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: var(--spacing-micro);
-  max-width: 513px;
+  width: 100%;
 }
 
 .financing-highlight__label {
   color: var(--surface-brand-primary-light);
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
   opacity: 0.85;
 }
 
 .financing-highlight__value {
-  color: var(--text-inverted);
+  color: #ffffff;
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
 }
 
 .financing-highlight__note {
-  display: flex;
-  align-items: center;
-  gap: 6px;
   padding-top: 6px;
   color: var(--surface-brand-primary-light);
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
   opacity: 0.75;
-}
-
-.financing-highlight__note::before {
-  content: "";
-  width: 24px;
-  height: 2px;
-  background-color: var(--surface-brand-primary-light);
-  opacity: 0.6;
 }
 
 .financing-programs {
   flex: 1 1 420px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-large);
+  gap: var(--spacing-medium);
 }
 
 @media (max-width: 1024px) {
   .financing-layout {
     flex-direction: column;
+    align-items: stretch;
   }
-}
 
-@media (max-width: 640px) {
-  .financing-highlight {
-    max-width: 100%;
+  .financing-intro {
+    max-width: none;
   }
 }

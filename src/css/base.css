@@ -10,12 +10,28 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 150px;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fallback caso o JS do header ainda não tenha calculado a altura real
+   (ver src/modules/shared/header/header.js) — evita que o conteúdo
+   apareça atrás do header fixo antes do primeiro cálculo. */
+body {
+  padding-top: 136px;
+}
+
+@media (max-width: 860px) {
+  body {
+    padding-top: 72px;
+  }
 }
 
 body {
@@ -221,6 +237,9 @@ h4 {
 
 /* Seções de página — usadas por todos os módulos de conteúdo */
 .section {
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
   padding: 64px var(--page-gutter);
 }
 

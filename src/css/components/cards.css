@@ -6,28 +6,33 @@
   flex: 1 1 0;
   min-width: 260px;
   background-color: var(--surface-secondary-subtle);
-  border-radius: var(--radius-medium);
-  padding: var(--spacing-large);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-small) var(--spacing-large);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--spacing-large);
+  gap: var(--spacing-small);
 }
 
 .info-card__title {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
 
 .info-card__subtitle {
-  font-size: var(--font-size-xs);
-  color: var(--text-primary-dark);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-brand);
 }
 
 .info-card__text {
-  font-size: var(--font-size-sm);
-  color: var(--text-primary-dark);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: #555046;
 }
 
 /* Cartão de disciplina (Matriz Curricular) */
@@ -61,6 +66,7 @@
 .stat-card {
   flex: 1 1 0;
   min-width: 220px;
+  height: 260px;
   background-color: var(--surface-secondary-subtle);
   border: 1px solid var(--border-brand-soft);
   border-radius: var(--radius-small);
@@ -68,6 +74,10 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-small);
+}
+
+.stat-card--no-value {
+  border-color: var(--surface-brand-primary-light);
 }
 
 .stat-card__row {
@@ -99,13 +109,16 @@
 }
 
 .stat-card__title {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
 
 .stat-card__text {
   font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
 }
 

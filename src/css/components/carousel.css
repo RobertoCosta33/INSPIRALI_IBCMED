@@ -68,7 +68,7 @@
 }
 
 .evidence-carousel__value {
-  font-size: var(--font-size-4xl);
+  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
 }
@@ -88,18 +88,17 @@
 }
 
 .carousel-controls__btn {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-small);
-  background-color: var(--surface-brand-soft);
+  padding: 14px;
+  border-radius: var(--radius-extra-small);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .carousel-controls__btn img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .carousel-controls__dots {
@@ -111,8 +110,8 @@
 .carousel-dot {
   height: 6px;
   width: 32px;
-  border-radius: 3px;
-  background-color: var(--surface-brand-soft);
+  border-radius: var(--spacing-micro);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .carousel-dot.is-active {

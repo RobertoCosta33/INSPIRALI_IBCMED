@@ -107,19 +107,24 @@
         </button>
 
         <nav class="institutional-header__nav" id="institutional-nav" data-menu-nav aria-label="Navegação institucional">
-          <div class="institutional-header__lang">
-            <button type="button" class="institutional-header__lang-item is-active">POR</button>
-            <span class="institutional-header__lang-divider" aria-hidden="true"></span>
-            <button type="button" class="institutional-header__lang-item">ENG</button>
-            <span class="institutional-header__lang-divider" aria-hidden="true"></span>
-            <button type="button" class="institutional-header__lang-item">ESP</button>
+          <div class="institutional-header__stack">
+            <div class="institutional-header__lang">
+              <button type="button" class="institutional-header__lang-item is-active">POR</button>
+              <span class="institutional-header__lang-divider" aria-hidden="true"></span>
+              <button type="button" class="institutional-header__lang-item">ENG</button>
+              <span class="institutional-header__lang-divider" aria-hidden="true"></span>
+              <button type="button" class="institutional-header__lang-item">ESP</button>
+            </div>
+            <div class="institutional-header__row">
+              <a class="institutional-header__link" href="#">Sou Candidato</a>
+              <span class="institutional-header__lang-divider" aria-hidden="true"></span>
+              <button type="button" class="institutional-header__link institutional-header__link--dropdown">
+                Sou Aluno
+                <img src="/public/icons/icon-arrow-down.svg" alt="" aria-hidden="true" width="8" height="8" />
+              </button>
+            </div>
           </div>
-          <a class="institutional-header__link" href="#">Sou Candidato</a>
-          <span class="institutional-header__lang-divider" aria-hidden="true"></span>
-          <button type="button" class="institutional-header__link institutional-header__link--dropdown">
-            Sou Aluno
-            <img src="/public/icons/icon-arrow-down.svg" alt="" aria-hidden="true" width="8" height="8" />
-          </button>
+          <span class="institutional-header__divider" aria-hidden="true"></span>
           <button type="button" class="institutional-header__search" aria-label="Buscar">
             <img src="/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
           </button>
@@ -300,13 +305,13 @@
           Confira a matriz completa com as disciplinas do curso e o projeto pedagógico com a proposta de ensino.
         </p>
         <div class="spiral-ctas">
-          <a class="btn-pill btn-pill-icon" style="width: auto; padding-left: 16px; padding-right: 16px;" href="#">
+          <a class="spiral-cta" href="#">
             Baixar matriz curricular
-            <img src="/public/icons/icon-pdf.svg" alt="" aria-hidden="true" />
+            <img src="/public/icons/icon-pdf.svg" alt="" aria-hidden="true" width="24" height="24" />
           </a>
-          <a class="btn-pill-outline btn-pill-icon" href="#">
+          <a class="spiral-cta spiral-cta--outline" href="#">
             Ver mais detalhes
-            <img src="/public/icons/icon-arrow-right-small.svg" alt="" aria-hidden="true" />
+            <img src="/public/icons/icon-arrow-right-small.svg" alt="" aria-hidden="true" width="24" height="24" />
           </a>
         </div>
 
@@ -418,50 +423,58 @@
         <div class="docente-grid">
           <article class="docente-card">
             <img class="docente-card__photo" src="/public/images/uam/docente/coordenadora-1.png" alt="Coordenadora do campus Mooca" loading="lazy" />
+            <div class="docente-card__overlay" aria-hidden="true"></div>
             <div class="docente-card__info">
-              <p class="docente-card__role">Coordenadora - Mooca</p>
-              <p class="docente-card__name">Nome do Educador</p>
+              <div class="docente-card__identity">
+                <p class="docente-card__role">Coordenadora - Mooca</p>
+                <p class="docente-card__name">Nome do Educador</p>
+              </div>
               <p class="docente-card__bio">
                 Cardiopediatra com doutorado em Cardiologia Feral, atua no Instituto Fernandes Figueira (FIOCRUZ) e
                 como professora de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica,
                 com ampla experiência.
               </p>
-              <a class="btn-pill" style="width: 100%;" href="#">Ver perfil completo</a>
+              <a class="docente-card__more" href="#">Ver mais +</a>
             </div>
           </article>
 
           <article class="docente-card">
             <img class="docente-card__photo" src="/public/images/uam/docente/coordenadora-1.png" alt="Coordenadora do campus Piracicaba" loading="lazy" />
+            <div class="docente-card__overlay" aria-hidden="true"></div>
             <div class="docente-card__info">
-              <p class="docente-card__role">Coordenadora - Piracicaba</p>
-              <p class="docente-card__name">Nome do Educador</p>
+              <div class="docente-card__identity">
+                <p class="docente-card__role">Coordenadora - Piracicaba</p>
+                <p class="docente-card__name">Nome do Educador</p>
+              </div>
               <p class="docente-card__bio">
                 Cardiopediatra com doutorado em Cardiologia Feral, atua no Instituto Fernandes Figueira (FIOCRUZ) e
                 como professora de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica,
                 com ampla experiência.
               </p>
-              <a class="btn-pill" style="width: 100%;" href="#">Ver perfil completo</a>
+              <a class="docente-card__more" href="#">Ver mais +</a>
             </div>
           </article>
 
           <article class="docente-card">
             <img class="docente-card__photo" src="/public/images/uam/docente/coordenadora-2.png" alt="Barbra Rafaela de Melo Santos Azevedo, coordenadora do campus São José dos Campos" loading="lazy" />
+            <div class="docente-card__overlay" aria-hidden="true"></div>
             <div class="docente-card__info">
-              <p class="docente-card__role">Coordenadora - São José dos Campos</p>
-              <p class="docente-card__name">Barbra Rafaela de Melo Santos Azevedo</p>
+              <div class="docente-card__identity">
+                <p class="docente-card__role">Coordenadora - São José dos Campos</p>
+                <p class="docente-card__name">Barbra Rafaela de Melo Santos Azevedo</p>
+              </div>
               <p class="docente-card__bio">
                 Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos.
                 Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo
                 hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de
                 Cirurgiões.
               </p>
-              <a class="btn-pill" style="width: 100%;" href="#">Ver perfil completo</a>
+              <a class="docente-card__more" href="#">Ver mais +</a>
             </div>
           </article>
         </div>
       </section>
-
-      <section class="section section--tint" id="nossos-campus" aria-labelledby="campus-title">
+      <section class="section section--tint-strong" id="nossos-campus" aria-labelledby="campus-title">
         <p class="eyebrow">ONDE A FORMAÇÃO ACONTECE</p>
         <h2 class="section-intro__title" id="campus-title">Três campus. Uma formação conectada à prática.</h2>
         <p class="section-intro__text">
@@ -480,15 +493,15 @@
             </div>
             <div class="campus-chip-list">
               <button type="button" class="campus-chip campus-chip--active">
-                <img src="/public/icons/icon-building.svg" alt="" aria-hidden="true" />
+                <img src="/public/icons/icon-building-white.svg" alt="" aria-hidden="true" width="16" height="16" />
                 Mooca — São Paulo
               </button>
               <button type="button" class="campus-chip campus-chip--inactive">
-                <img src="/public/icons/icon-building.svg" alt="" aria-hidden="true" />
+                <img src="/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" width="16" height="16" />
                 Piracicaba
               </button>
               <button type="button" class="campus-chip campus-chip--inactive">
-                <img src="/public/icons/icon-building.svg" alt="" aria-hidden="true" />
+                <img src="/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" width="16" height="16" />
                 São José dos Campos
               </button>
             </div>
@@ -510,6 +523,7 @@
               <img class="campus-gallery__image is-active" data-gallery-slide data-label="Biblioteca" src="/public/images/uam/campus-gallery/main.png" alt="Biblioteca do campus Mooca da Anhembi Morumbi" loading="lazy" />
               <img class="campus-gallery__image" data-gallery-slide data-label="Laboratórios equipados" src="/public/images/uam/campus-gallery/lab.png" alt="Laboratórios equipados do campus Mooca" loading="lazy" />
               <img class="campus-gallery__image" data-gallery-slide data-label="Sala de aula presencial" src="/public/images/uam/campus-gallery/sala.png" alt="Sala de aula presencial do campus Mooca" loading="lazy" />
+              <div class="campus-gallery__overlay" aria-hidden="true"></div>
               <span class="campus-gallery__label" data-gallery-label>Biblioteca</span>
               <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / 03</span>
               <div class="campus-gallery__nav">
@@ -538,13 +552,12 @@
           </div>
         </div>
       </section>
-
       <section class="section section--subtle" id="metodologia" aria-labelledby="metodologia-title">
         <div class="methodology">
           <div class="methodology__intro">
             <div>
               <p class="eyebrow">METODOLOGIA E TECNOLOGIA</p>
-              <h2 class="section-intro__title" id="metodologia-title" style="font-size: var(--font-size-2xl); line-height: var(--line-height-lg);">
+              <h2 class="section-intro__title" id="metodologia-title">
                 A ciência por trás do seu aprendizado
               </h2>
               <p class="section-intro__text" style="margin-top: var(--spacing-small);">
@@ -568,10 +581,11 @@
               <button class="accordion-trigger" data-accordion-trigger aria-expanded="true">
                 <span class="accordion-trigger__title">Metodologia de Harvard - CBCL</span>
                 <span class="accordion-trigger__icon">
-                  <img class="icon-plus" src="/public/icons/icon-plus-teal.svg" alt="" width="24" height="24" />
-                  <img class="icon-minus" src="/public/icons/icon-minus-teal.svg" alt="" width="24" height="24" />
+                  <img class="icon-plus" src="/public/icons/icon-plus-teal.svg" alt="" width="16" height="16" />
+                  <img class="icon-minus" src="/public/icons/icon-minus-teal.svg" alt="" width="16" height="16" />
                 </span>
               </button>
+              <hr class="accordion-divider" />
               <div class="accordion-panel" data-accordion-panel>
                 <p class="accordion-panel__text">
                   Aprendizagem Colaborativa Baseada em Casos. Você discutirá diagnósticos reais em equipe,
@@ -584,10 +598,11 @@
               <button class="accordion-trigger" data-accordion-trigger aria-expanded="false">
                 <span class="accordion-trigger__title">Imersão com MedRoom</span>
                 <span class="accordion-trigger__icon">
-                  <img class="icon-plus" src="/public/icons/icon-plus-teal.svg" alt="" width="24" height="24" />
-                  <img class="icon-minus" src="/public/icons/icon-minus-teal.svg" alt="" width="24" height="24" />
+                  <img class="icon-plus" src="/public/icons/icon-plus-teal.svg" alt="" width="16" height="16" />
+                  <img class="icon-minus" src="/public/icons/icon-minus-teal.svg" alt="" width="16" height="16" />
                 </span>
               </button>
+              <hr class="accordion-divider" />
               <div class="accordion-panel" data-accordion-panel>
                 <p class="accordion-panel__text">
                   Simulação realística com cenários clínicos imersivos para desenvolver habilidades técnicas e de
@@ -600,10 +615,11 @@
               <button class="accordion-trigger" data-accordion-trigger aria-expanded="false">
                 <span class="accordion-trigger__title">Fluência Digital e ProntLife</span>
                 <span class="accordion-trigger__icon">
-                  <img class="icon-plus" src="/public/icons/icon-plus-teal.svg" alt="" width="24" height="24" />
-                  <img class="icon-minus" src="/public/icons/icon-minus-teal.svg" alt="" width="24" height="24" />
+                  <img class="icon-plus" src="/public/icons/icon-plus-teal.svg" alt="" width="16" height="16" />
+                  <img class="icon-minus" src="/public/icons/icon-minus-teal.svg" alt="" width="16" height="16" />
                 </span>
               </button>
+              <hr class="accordion-divider" />
               <div class="accordion-panel" data-accordion-panel>
                 <p class="accordion-panel__text">
                   Ferramentas digitais e prontuário eletrônico para preparar você para a prática médica orientada
@@ -616,10 +632,11 @@
               <button class="accordion-trigger" data-accordion-trigger aria-expanded="false">
                 <span class="accordion-trigger__title">Avaliação Programática</span>
                 <span class="accordion-trigger__icon">
-                  <img class="icon-plus" src="/public/icons/icon-plus-teal.svg" alt="" width="24" height="24" />
-                  <img class="icon-minus" src="/public/icons/icon-minus-teal.svg" alt="" width="24" height="24" />
+                  <img class="icon-plus" src="/public/icons/icon-plus-teal.svg" alt="" width="16" height="16" />
+                  <img class="icon-minus" src="/public/icons/icon-minus-teal.svg" alt="" width="16" height="16" />
                 </span>
               </button>
+              <hr class="accordion-divider" />
               <div class="accordion-panel" data-accordion-panel>
                 <p class="accordion-panel__text">
                   Avaliação contínua e formativa ao longo do curso, acompanhando sua evolução em múltiplas
@@ -631,7 +648,7 @@
         </div>
       </section>
 
-      <section class="section--dark" id="ecossistema-de-cuidado" aria-labelledby="ecossistema-title">
+      <section class="section section--dark" id="ecossistema-de-cuidado" aria-labelledby="ecossistema-title">
         <p class="eyebrow" style="color: var(--text-inverted);">ECOSSISTEMA DE CUIDADO E PRÁTICA</p>
         <h2 class="practice-heading" id="ecossistema-title">Onde a Medicina Acontece.</h2>
         <p class="section-intro__text" style="color: var(--text-inverted); margin-bottom: var(--spacing-large);">
@@ -688,7 +705,7 @@
               <button type="button" class="carousel-dot" data-evidence-dot aria-label="Slide 3"></button>
               <button type="button" class="carousel-dot" data-evidence-dot aria-label="Slide 4"></button>
             </div>
-            <button type="button" class="carousel-controls__btn" style="background-color: var(--surface-brand-primary-dark);" data-evidence-next aria-label="Próximo slide">
+            <button type="button" class="carousel-controls__btn" data-evidence-next aria-label="Próximo slide">
               <img src="/public/icons/icon-chevron-right-circle.svg" alt="" aria-hidden="true" />
             </button>
           </div>
@@ -784,7 +801,7 @@
               <p class="stat-card__title">Excelência Comprovada</p>
               <p class="stat-card__text">100% das instituições avaliadas pelo MEC possuem conceitos de excelência (notas 4 e 5).</p>
             </article>
-            <article class="stat-card">
+            <article class="stat-card stat-card--no-value">
               <div class="stat-card__row">
                 <span class="stat-card__icon"><img src="/public/icons/icon-shield-check.svg" alt="" aria-hidden="true" /></span>
               </div>
@@ -796,8 +813,8 @@
           <div class="lifelong">
             <div class="lifelong__text">
               <div>
-                <p class="eyebrow" style="margin-bottom: var(--spacing-extra-small);">LIFELONG LEARNING</p>
-                <p style="color: var(--text-heading); font-size: var(--font-size-sm);">Aprendizado para a Vida</p>
+                <p class="lifelong__label">LIFELONG LEARNING</p>
+                <p class="lifelong__sublabel">Aprendizado para a Vida</p>
               </div>
               <p>
                 Nosso compromisso não termina na entrega do diploma. Ao ingressar na Anhembi Morumbi, você se
@@ -850,19 +867,18 @@
           </div>
 
           <div class="partner-logos">
-            <img src="/public/images/shared/logo-ages.svg" alt="Ages" loading="lazy" />
-            <img src="/public/images/shared/logo-saojudas.svg" alt="São Judas" loading="lazy" />
-            <img src="/public/images/shared/logo-unibh.svg" alt="UniBH" loading="lazy" />
-            <img src="/public/images/shared/logo-unifacs.svg" alt="UNIFACS" loading="lazy" />
-            <img src="/public/images/shared/logo-unifg.svg" alt="UniFG" loading="lazy" />
-            <img src="/public/images/shared/logo-unisul.svg" alt="UNISUL" loading="lazy" />
-            <img src="/public/images/shared/logo-anhembi-small.svg" alt="Universidade Anhembi Morumbi" loading="lazy" />
-            <img src="/public/images/shared/logo-unp.svg" alt="UNP" loading="lazy" />
-            <img src="/public/images/shared/logo-una.svg" alt="UNA" loading="lazy" />
+            <img src="/public/images/shared/logo-ages.svg" alt="Ages" loading="lazy" width="67" height="19" />
+            <img src="/public/images/shared/logo-saojudas.svg" alt="São Judas" loading="lazy" width="111" height="24" />
+            <img src="/public/images/shared/logo-unibh.svg" alt="UniBH" loading="lazy" width="87" height="25" />
+            <img src="/public/images/shared/logo-unifacs.svg" alt="UNIFACS" loading="lazy" width="119" height="25" />
+            <img src="/public/images/shared/logo-unifg.svg" alt="UniFG" loading="lazy" width="104" height="34" />
+            <img src="/public/images/shared/logo-unisul.svg" alt="UNISUL" loading="lazy" width="97" height="25" />
+            <img src="/public/images/shared/logo-anhembi-small.svg" alt="Universidade Anhembi Morumbi" loading="lazy" width="124" height="21" />
+            <img src="/public/images/shared/logo-unp.svg" alt="UNP" loading="lazy" width="122" height="27" />
+            <img src="/public/images/shared/logo-una.svg" alt="UNA" loading="lazy" width="68" height="19" />
           </div>
         </div>
       </section>
-
       <section class="section section--subtle" id="seu-futuro-na-medicina" aria-labelledby="futuro-title">
         <div class="future-panel">
           <div class="future-header__text">

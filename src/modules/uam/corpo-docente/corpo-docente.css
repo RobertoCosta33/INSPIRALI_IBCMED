@@ -1,11 +1,12 @@
 /* ====================================================================
    Módulo: Corpo docente (UAM)
-   Figma: "Corpo docente" (523:29924 / 402:7731)
+   Figma: "Corpo docente" (402:7731 / Card - Docente 571:26187)
    ==================================================================== */
 
 .docente-grid {
   display: flex;
-  gap: var(--spacing-extra-large);
+  gap: 24px;
+  height: 518px;
   margin-top: 56px;
   align-items: stretch;
 }
@@ -13,50 +14,82 @@
 .docente-card {
   flex: 1 1 0;
   min-width: 0;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  border-radius: var(--radius-small);
+  overflow: hidden;
 }
 
 .docente-card__photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 320px;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-medium) var(--radius-medium) 0 0;
+}
+
+.docente-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 3, 41, 0) 0%, rgba(0, 71, 62, 0.8) 80%, #00473e 100%);
 }
 
 .docente-card__info {
-  background-color: var(--surface-secondary-subtle);
-  border-radius: 0 0 var(--radius-medium) var(--radius-medium);
-  padding: var(--spacing-large) var(--spacing-large) var(--spacing-extra-large);
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-large);
-  flex: 1 1 0;
+  gap: 12px;
+}
+
+.docente-card__identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #ffffff;
 }
 
 .docente-card__role {
-  font-size: var(--font-size-sm);
-  color: var(--text-brand);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
 }
 
 .docente-card__name {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  line-height: var(--line-height-tight);
 }
 
 .docente-card__bio {
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: #cccccc;
+}
+
+.docente-card__more {
   font-size: var(--font-size-sm);
-  color: var(--text-brand);
-  flex: 1 1 0;
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+}
+
+.docente-card__more:hover,
+.docente-card__more:focus-visible {
+  text-decoration: underline;
 }
 
 @media (max-width: 1024px) {
   .docente-grid {
     flex-direction: column;
+    height: auto;
   }
 
-  .docente-card__photo {
-    height: 260px;
+  .docente-card {
+    height: 420px;
   }
 }
