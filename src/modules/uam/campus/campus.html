@@ -1,6 +1,6 @@
       <section class="section section--tint" id="nossos-campus" aria-labelledby="campus-title">
         <p class="eyebrow">ONDE A FORMAÇÃO ACONTECE</p>
-        <h2 class="section-intro__title" id="campus-title">Três campi. Uma formação conectada à prática.</h2>
+        <h2 class="section-intro__title" id="campus-title">Três campus. Uma formação conectada à prática.</h2>
         <p class="section-intro__text">
           Medicina na capital e no interior de São Paulo, com laboratórios, salas de aula e biblioteca para apoiar
           a sua jornada.
@@ -16,46 +16,61 @@
               </p>
             </div>
             <div class="campus-chip-list">
-              <span class="campus-chip campus-chip--active">
-                <img src="/public/icons/icon-building-white.svg" alt="" aria-hidden="true" />
+              <button type="button" class="campus-chip campus-chip--active">
+                <img src="/public/icons/icon-building.svg" alt="" aria-hidden="true" />
                 Mooca — São Paulo
-              </span>
-              <span class="campus-chip campus-chip--inactive">
-                <img src="/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" />
+              </button>
+              <button type="button" class="campus-chip campus-chip--inactive">
+                <img src="/public/icons/icon-building.svg" alt="" aria-hidden="true" />
                 Piracicaba
-              </span>
-              <span class="campus-chip campus-chip--inactive">
-                <img src="/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" />
+              </button>
+              <button type="button" class="campus-chip campus-chip--inactive">
+                <img src="/public/icons/icon-building.svg" alt="" aria-hidden="true" />
                 São José dos Campos
-              </span>
+              </button>
             </div>
             <div class="campus-detail">
               <p class="campus-detail__location">
-                <img src="/public/icons/icon-location-star.svg" alt="" aria-hidden="true" />
+                <img src="/public/icons/icon-location.svg" alt="" aria-hidden="true" />
                 São Paulo, SP
               </p>
-              <p class="campus-detail__address">Rua Prof. Almeida Lima, 1.134 – Mooca<br />CEP 03164-000</p>
+              <p class="campus-detail__address">
+                Rua Prof. Almeida Lima, 1.134 – Mooca • CEP 03164-000 -
+                <a href="#">Ver no mapa</a>
+              </p>
             </div>
-            <a class="btn-pill" style="width: auto; align-self: flex-start; padding-left: 16px; padding-right: 16px;" href="#">Conheça a unidade</a>
+            <a class="campus-panel__cta" href="#">Conheça mais da unidade</a>
           </div>
 
-          <div class="campus-gallery">
-            <div class="campus-gallery__main">
-              <img src="/public/images/uam/campus-main.png" alt="Campus Mooca da Anhembi Morumbi" loading="lazy" />
+          <div class="campus-gallery" data-campus-gallery>
+            <div class="campus-gallery__viewport">
+              <img class="campus-gallery__image is-active" data-gallery-slide data-label="Biblioteca" src="/public/images/uam/campus-gallery/main.png" alt="Biblioteca do campus Mooca da Anhembi Morumbi" loading="lazy" />
+              <img class="campus-gallery__image" data-gallery-slide data-label="Laboratórios equipados" src="/public/images/uam/campus-gallery/lab.png" alt="Laboratórios equipados do campus Mooca" loading="lazy" />
+              <img class="campus-gallery__image" data-gallery-slide data-label="Sala de aula presencial" src="/public/images/uam/campus-gallery/sala.png" alt="Sala de aula presencial do campus Mooca" loading="lazy" />
+              <span class="campus-gallery__label" data-gallery-label>Biblioteca</span>
+              <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / 03</span>
+              <div class="campus-gallery__nav">
+                <button type="button" class="campus-gallery__nav-btn" data-gallery-prev aria-label="Imagem anterior">
+                  <img src="/public/icons/icon-chevron-left-white.svg" alt="" aria-hidden="true" />
+                </button>
+                <button type="button" class="campus-gallery__nav-btn" data-gallery-next aria-label="Próxima imagem">
+                  <img src="/public/icons/icon-chevron-right-white.svg" alt="" aria-hidden="true" />
+                </button>
+              </div>
             </div>
             <div class="campus-gallery__thumbs">
-              <div class="campus-thumb">
-                <img src="/public/images/uam/campus-main.png" alt="Biblioteca do campus Mooca" loading="lazy" />
+              <button type="button" class="campus-thumb is-active" data-gallery-thumb="0">
+                <img src="/public/images/uam/campus-gallery/biblioteca.png" alt="" loading="lazy" />
                 <span class="campus-thumb__label">Biblioteca</span>
-              </div>
-              <div class="campus-thumb">
-                <img src="/public/images/uam/campus-thumb-lab.png" alt="Laboratórios equipados do campus Mooca" loading="lazy" />
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="1">
+                <img src="/public/images/uam/campus-gallery/lab.png" alt="" loading="lazy" />
                 <span class="campus-thumb__label">Laboratórios equipados</span>
-              </div>
-              <div class="campus-thumb">
-                <img src="/public/images/uam/campus-thumb-sala.png" alt="Sala de aula presencial do campus Mooca" loading="lazy" />
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="2">
+                <img src="/public/images/uam/campus-gallery/sala.png" alt="" loading="lazy" />
                 <span class="campus-thumb__label">Sala de aula presencial</span>
-              </div>
+              </button>
             </div>
           </div>
         </div>

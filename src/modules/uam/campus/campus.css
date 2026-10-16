@@ -1,6 +1,6 @@
 /* ====================================================================
    Módulo: Campus e infraestrutura (UAM)
-   Figma: "Campus e infraestrutura" (64:2621)
+   Figma: "Campus e infraestrutura" (523:29925)
    ==================================================================== */
 
 .campus-layout {
@@ -12,6 +12,7 @@
 
 .campus-panel {
   flex: 0 0 300px;
+  max-width: 400px;
   min-width: 240px;
   display: flex;
   flex-direction: column;
@@ -19,7 +20,8 @@
 }
 
 .campus-panel__title {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
   color: var(--text-brand);
 }
 
@@ -34,6 +36,34 @@
   gap: var(--spacing-extra-small);
 }
 
+.campus-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  height: 48px;
+  padding: var(--spacing-medium);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  width: 100%;
+}
+
+.campus-chip img {
+  width: 16px;
+  height: 16px;
+}
+
+.campus-chip--active {
+  background-color: var(--surface-brand-primary);
+  color: var(--text-footer);
+}
+
+.campus-chip--inactive {
+  background-color: var(--text-footer);
+  border: 1px solid var(--border-brand-primary);
+  color: var(--text-brand);
+}
+
 .campus-detail {
   display: flex;
   flex-direction: column;
@@ -43,9 +73,10 @@
 .campus-detail__location {
   display: flex;
   align-items: center;
-  gap: var(--spacing-micro);
+  gap: var(--spacing-extra-small);
   font-size: var(--font-size-xxs);
-  color: var(--text-secondary-dark);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
 }
 
 .campus-detail__location img {
@@ -54,8 +85,27 @@
 }
 
 .campus-detail__address {
-  font-size: var(--font-size-xs);
-  color: var(--text-primary-dark);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  color: #3d3d3d;
+}
+
+.campus-detail__address a {
+  color: var(--text-brand);
+  text-decoration: underline;
+}
+
+.campus-panel__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  padding: 20px var(--spacing-large);
+  border-radius: var(--radius-small);
+  background-color: var(--surface-brand-primary);
+  color: var(--text-footer);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
 }
 
 .campus-gallery {
@@ -65,17 +115,69 @@
   min-width: 0;
 }
 
-.campus-gallery__main {
+.campus-gallery__viewport {
+  position: relative;
   flex: 1 1 0;
   min-width: 0;
-  border-radius: var(--radius-medium) 0 0 var(--radius-medium);
+  border-radius: var(--radius-small);
   overflow: hidden;
 }
 
-.campus-gallery__main img {
+.campus-gallery__image {
+  display: none;
   width: 100%;
   height: 100%;
+  min-height: 420px;
   object-fit: cover;
+}
+
+.campus-gallery__image.is-active {
+  display: block;
+}
+
+.campus-gallery__label {
+  position: absolute;
+  top: var(--spacing-medium);
+  left: var(--spacing-medium);
+  background-color: rgba(0, 31, 26, 0.75);
+  color: var(--text-footer);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-extra-small) var(--spacing-small);
+  border-radius: var(--spacing-micro);
+}
+
+.campus-gallery__counter {
+  position: absolute;
+  bottom: var(--spacing-medium);
+  left: var(--spacing-medium);
+  color: var(--text-footer);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.campus-gallery__nav {
+  position: absolute;
+  bottom: var(--spacing-medium);
+  right: var(--spacing-medium);
+  display: flex;
+  gap: var(--spacing-extra-small);
+}
+
+.campus-gallery__nav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-total);
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campus-gallery__nav-btn img {
+  width: 16px;
+  height: 16px;
 }
 
 .campus-gallery__thumbs {
@@ -90,14 +192,7 @@
   flex: 1 1 0;
   min-height: 0;
   overflow: hidden;
-}
-
-.campus-thumb:first-child {
-  border-radius: 0 var(--radius-medium) 0 0;
-}
-
-.campus-thumb:last-child {
-  border-radius: 0 0 var(--radius-medium) 0;
+  border-radius: var(--spacing-micro);
 }
 
 .campus-thumb img {
@@ -106,12 +201,17 @@
   object-fit: cover;
 }
 
+.campus-thumb.is-active {
+  outline: 2px solid var(--surface-brand-primary);
+  outline-offset: -2px;
+}
+
 .campus-thumb__label {
   position: absolute;
   left: 8px;
   bottom: 8px;
   background-color: rgba(0, 121, 106, 0.75);
-  color: var(--text-inverted);
+  color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
   padding: 2px var(--spacing-micro);
@@ -126,6 +226,7 @@
   .campus-panel {
     flex-basis: auto;
     width: 100%;
+    max-width: none;
   }
 
   .campus-gallery {
@@ -141,5 +242,9 @@
   .campus-gallery__thumbs {
     flex-direction: row;
     flex-basis: auto;
+  }
+
+  .campus-gallery__image {
+    min-height: 260px;
   }
 }

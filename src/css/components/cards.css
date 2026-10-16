@@ -63,7 +63,7 @@
   min-width: 220px;
   background-color: var(--surface-secondary-subtle);
   border: 1px solid var(--border-brand-soft);
-  border-radius: 12px;
+  border-radius: var(--radius-small);
   padding: 20px var(--spacing-large) var(--spacing-large);
   display: flex;
   flex-direction: column;
@@ -93,6 +93,8 @@
 
 .stat-card__value {
   font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-xl);
   color: var(--text-brand);
 }
 
@@ -133,7 +135,7 @@
 }
 
 .posgrad-card__title {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   color: var(--text-brand);
 }

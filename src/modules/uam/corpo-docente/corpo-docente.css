@@ -1,0 +1,62 @@
+/* ====================================================================
+   Módulo: Corpo docente (UAM)
+   Figma: "Corpo docente" (523:29924 / 402:7731)
+   ==================================================================== */
+
+.docente-grid {
+  display: flex;
+  gap: var(--spacing-extra-large);
+  margin-top: 56px;
+  align-items: stretch;
+}
+
+.docente-card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.docente-card__photo {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-medium) var(--radius-medium) 0 0;
+}
+
+.docente-card__info {
+  background-color: var(--surface-secondary-subtle);
+  border-radius: 0 0 var(--radius-medium) var(--radius-medium);
+  padding: var(--spacing-large) var(--spacing-large) var(--spacing-extra-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  flex: 1 1 0;
+}
+
+.docente-card__role {
+  font-size: var(--font-size-sm);
+  color: var(--text-brand);
+}
+
+.docente-card__name {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+}
+
+.docente-card__bio {
+  font-size: var(--font-size-sm);
+  color: var(--text-brand);
+  flex: 1 1 0;
+}
+
+@media (max-width: 1024px) {
+  .docente-grid {
+    flex-direction: column;
+  }
+
+  .docente-card__photo {
+    height: 260px;
+  }
+}

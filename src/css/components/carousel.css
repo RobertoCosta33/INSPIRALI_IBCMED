@@ -58,20 +58,25 @@
 .evidence-carousel__eyebrow {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
 }
 
 .evidence-carousel__subtitle {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
 }
 
 .evidence-carousel__value {
   font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-lg);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
 }
 
 .evidence-carousel__label {
   font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
   max-width: 540px;
 }
 

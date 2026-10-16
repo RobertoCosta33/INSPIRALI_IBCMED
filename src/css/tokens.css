@@ -1,9 +1,13 @@
 /* ====================================================================
    Design tokens — extraídos do Figma "Redesign - Páginas IES"
    (arquivo IiZ3Zct5TP6nxPirunSyhk, página "Protótipo [em construção] -
-   Anhembi Morumbi", nó 21:7901 "Desktop", UAM). Mantém os nomes de
-   variável usados no Figma (surface/*, text/*, border/*, spacing/*,
-   radius/*, font/*) para facilitar a conversão futura em módulos HubL.
+   Anhembi Morumbi", nó 523:29919 "Desktop", UAM — atualização dos
+   designers de 2026-10-16). Mantém os nomes de variável usados no
+   Figma (surface/*, text/*, border/*, spacing/*, radius/*, font/*)
+   para facilitar a conversão futura em módulos HubL.
+
+   IMPORTANTE: a fonte da marca é "Bricolage Grotesque" (Google Fonts),
+   não "DIN Round Pro"/"Outfit" usadas numa versão anterior deste tema.
    ==================================================================== */
 
 :root {
@@ -37,8 +41,8 @@
   --border-brand-soft: rgba(0, 121, 106, 0.2);
   --border-brand-soft-strong: rgba(0, 121, 106, 0.4);
 
-  /* Tipografia */
-  --font-family-base: "DIN Round Pro", "Outfit", "Segoe UI", sans-serif;
+  /* Tipografia — família da marca: Bricolage Grotesque (Google Fonts) */
+  --font-family-base: "Bricolage Grotesque", "Segoe UI", sans-serif;
 
   --font-size-xxs: 12px;
   --font-size-xs: 14px;
@@ -50,13 +54,23 @@
   --font-size-3xl: 40px;
   --font-size-4xl: 48px;
 
+  /* Alturas de linha (razões, como definidas no Figma) */
+  --line-height-tight: 1.16;
+  --line-height-snug: 1.2;
+  --line-height-relaxed: 1.4;
+
+  /* Compatibilidade com módulos existentes (px fixos aproximados) */
   --line-height-xs: 16px;
   --line-height-sm: 24px;
   --line-height-lg: 40px;
   --line-height-xl: 48px;
 
+  /* Pesos — Bricolage Grotesque: ExtraLight 200, Light 300, Regular 400, Bold 700, ExtraBold 800 */
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
 
   /* Espaçamento */
   --spacing-micro: 4px;

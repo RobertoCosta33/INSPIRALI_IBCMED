@@ -3,7 +3,23 @@
    Figma: "Financiamentos" (117:3044 / 132:3070)
    ==================================================================== */
 
+.section--subtle:has(.financing-watermark) {
+  position: relative;
+  overflow: hidden;
+}
+
+.financing-watermark {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+  height: auto;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .financing-layout {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: var(--spacing-extra-large);
@@ -23,8 +39,10 @@
   border: 2px solid var(--surface-brand-primary-light);
   border-radius: 12px;
   padding: 20px var(--spacing-large);
+  min-height: 179px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: var(--spacing-micro);
   max-width: 513px;
 }
@@ -37,7 +55,9 @@
 
 .financing-highlight__value {
   color: var(--text-inverted);
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xl);
 }
 
 .financing-highlight__note {

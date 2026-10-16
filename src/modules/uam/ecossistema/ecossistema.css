@@ -5,7 +5,8 @@
 
 .practice-heading {
   font-size: var(--font-size-2xl);
-  line-height: var(--line-height-lg);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
   color: var(--text-inverted);
   margin-bottom: var(--spacing-large);
 }

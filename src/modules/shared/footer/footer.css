@@ -49,7 +49,7 @@
 .footer-col {
   flex: 1 1 200px;
   min-width: 180px;
-  border-right: 2px solid #3d3d3d;
+  border-right: 2px solid rgba(255, 255, 255, 0.25);
   padding: 0 var(--spacing-large);
   display: flex;
   flex-direction: column;

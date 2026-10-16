@@ -21,14 +21,17 @@
 }
 
 .inspirali-header__title {
-  font-size: var(--font-size-2xl);
-  line-height: var(--line-height-lg);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: var(--text-brand);
   max-width: 600px;
 }
 
 .inspirali-header__text {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
   max-width: 600px;
 }

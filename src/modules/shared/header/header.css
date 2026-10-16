@@ -1,6 +1,6 @@
 /* ====================================================================
    Header institucional + navegação do curso
-   Figma: "Institutional header" (16:7767) + "Course navigation" (12:8408)
+   Figma: "Institutional header" (523:29934) + "Course navigation" (523:29935)
    ==================================================================== */
 
 .site-header {
@@ -32,8 +32,9 @@
 
 .institutional-header__divider {
   width: 1px;
-  height: 32px;
-  background-color: #d1d5db;
+  height: 24px;
+  background-color: #7a7a7a;
+  opacity: 0.4;
 }
 
 .institutional-header__inspirali {
@@ -45,19 +46,55 @@
 .institutional-header__nav {
   display: flex;
   align-items: center;
-  gap: var(--spacing-large);
+  gap: var(--spacing-medium);
+}
+
+.institutional-header__lang {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.institutional-header__lang-item {
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  color: #7a7a7a;
+}
+
+.institutional-header__lang-item.is-active {
+  color: #141414;
+}
+
+.institutional-header__lang-divider {
+  width: 1px;
+  height: 8px;
+  background-color: #7a7a7a;
 }
 
 .institutional-header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
   padding: var(--spacing-micro);
-  font-size: var(--font-size-sm);
-  color: var(--text-brand);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  color: #141414;
   white-space: nowrap;
 }
 
 .institutional-header__link:hover,
 .institutional-header__link:focus-visible {
   text-decoration: underline;
+}
+
+.institutional-header__search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-small);
+  background-color: rgba(122, 122, 122, 0.08);
 }
 
 .menu-toggle {
@@ -89,6 +126,12 @@
 
 .menu-toggle[aria-expanded="true"] span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
+}
+
+.institutional-header__nav .btn {
+  height: 40px;
+  padding: var(--spacing-small);
+  font-size: var(--font-size-xs);
 }
 
 .course-nav {
