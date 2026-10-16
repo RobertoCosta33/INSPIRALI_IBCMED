@@ -25,9 +25,31 @@
 .footer-invitation__title {
   flex: 1 1 480px;
   color: var(--text-inverted);
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-3xl);
   line-height: var(--line-height-xl);
   max-width: 772px;
+}
+
+.footer-invitation__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: var(--spacing-extra-small);
+  padding: 12px var(--spacing-large);
+  border-radius: var(--radius-small);
+  background-color: #f7faf9;
+  color: var(--text-brand);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  white-space: nowrap;
+}
+
+.footer-invitation__cta:hover,
+.footer-invitation__cta:focus-visible {
+  background-color: var(--surface-inverted);
 }
 
 .footer-body {

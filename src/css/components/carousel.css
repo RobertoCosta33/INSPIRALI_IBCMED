@@ -143,10 +143,39 @@
   scroll-snap-align: start;
 }
 
+.card-carousel__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-extra-large);
+  width: 100%;
+  position: relative;
+}
+
+.card-carousel__dots {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.card-carousel__dot {
+  height: 6px;
+  width: 32px;
+  border-radius: 3px;
+  background-color: rgba(0, 121, 106, 0.16);
+}
+
+.card-carousel__dot.is-active {
+  width: 64px;
+  background-color: var(--surface-brand-primary);
+}
+
 .card-carousel__nav {
   display: flex;
   align-items: center;
   gap: var(--spacing-small);
+  position: absolute;
+  right: 0;
 }
 
 .card-carousel__nav-btn {

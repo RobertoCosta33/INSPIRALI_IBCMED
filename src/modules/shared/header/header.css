@@ -17,9 +17,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  padding: var(--spacing-large) var(--page-gutter);
+  padding: var(--spacing-large) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .institutional-header__identity {
@@ -161,9 +159,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  padding: var(--spacing-medium) var(--page-gutter);
+  padding: var(--spacing-medium) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
   overflow-x: auto;
   scrollbar-width: none;
 }

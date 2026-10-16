@@ -124,38 +124,50 @@
 
 /* Cartão do carrossel de pós-graduação */
 .posgrad-card {
-  flex: 0 0 290px;
-  width: 290px;
-  background-color: var(--surface-inverted);
-  border-radius: var(--radius-medium);
-  box-shadow: 4px 4px 4px -1px rgba(17, 17, 17, 0.1), 0px 4px 4px -1px rgba(17, 17, 17, 0.05);
+  position: relative;
+  flex: 0 0 540px;
+  width: 540px;
+  height: 409px;
+  border-radius: var(--radius-small);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .posgrad-card__image {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 160px;
+  height: 100%;
   object-fit: cover;
 }
 
+.posgrad-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 3, 41, 0) 0%, rgba(0, 3, 41, 0.85) 100%);
+}
+
 .posgrad-card__body {
-  padding: 20px;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-extra-small);
+  gap: 10px;
 }
 
 .posgrad-card__title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  line-height: var(--line-height-tight);
+  color: #ffffff;
 }
 
 .posgrad-card__text {
-  font-size: var(--font-size-xs);
-  color: var(--text-secondary-dark);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Chips de campus */

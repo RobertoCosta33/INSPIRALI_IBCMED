@@ -235,12 +235,13 @@ h4 {
   background-color: var(--surface-brand-primary-light);
 }
 
-/* Seções de página — usadas por todos os módulos de conteúdo */
+/* Seções de página — usadas por todos os módulos de conteúdo.
+   O fundo (cor/gradiente) ocupa 100% da largura da tela; o padding
+   lateral cresce dinamicamente para centralizar o conteúdo em telas
+   largas (limitando-o a --page-max-width), sem nunca ficar menor que
+   o gutter padrão. */
 .section {
-  max-width: var(--page-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 64px var(--page-gutter);
+  padding: 64px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .section--subtle {
@@ -258,7 +259,7 @@ h4 {
 .section--dark {
   background-color: var(--surface-brand-primary);
   color: var(--text-inverted);
-  padding: 56px var(--page-gutter);
+  padding: 56px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .section--mint {

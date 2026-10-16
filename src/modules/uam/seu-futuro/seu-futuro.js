@@ -29,12 +29,24 @@
     const track = root.querySelector("[data-card-track]");
     const prevBtn = root.querySelector("[data-card-prev]");
     const nextBtn = root.querySelector("[data-card-next]");
+    const dots = root.querySelectorAll(".card-carousel__dot");
     if (!track) return;
+
+    let dotIndex = 0;
+
+    function updateDots(direction) {
+      if (!dots.length) return;
+      dotIndex = (dotIndex + direction + dots.length) % dots.length;
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("is-active", i === dotIndex);
+      });
+    }
 
     function scrollByCard(direction) {
       const card = track.querySelector(":scope > *");
       const amount = card ? card.getBoundingClientRect().width + 16 : 300;
       track.scrollBy({ left: direction * amount, behavior: "smooth" });
+      updateDots(direction);
     }
 
     if (prevBtn) prevBtn.addEventListener("click", function () { scrollByCard(-1); });
