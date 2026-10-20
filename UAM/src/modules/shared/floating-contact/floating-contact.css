@@ -49,7 +49,8 @@
 
 .floating-contact__trigger:hover,
 .floating-contact__trigger:focus-visible {
-  background-color: var(--surface-brand-soft);
+  background-color: #c9d1dc;
+  color: #545b8e;
 }
 
 .floating-contact__trigger img {
@@ -230,7 +231,8 @@
 
 .floating-contact__submit:hover,
 .floating-contact__submit:focus-visible {
-  background-color: var(--surface-brand-primary-dark);
+  background-color: #212972;
+  color: #ffffff;
 }
 
 .floating-contact__disclaimer {
