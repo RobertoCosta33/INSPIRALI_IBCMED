@@ -32,32 +32,33 @@
     />
 
     <!-- Design system: tokens e base compartilhados por todas as páginas -->
-    <link rel="stylesheet" href="/src/css/tokens.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/css/base.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/css/components/accordion.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/css/components/cards.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/css/components/tabs.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/css/components/carousel.css?v=1792524669878" />
+    <link rel="stylesheet" href="/src/css/tokens.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/css/base.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/css/components/accordion.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/css/components/cards.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/css/components/tabs.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/css/components/carousel.css?v=1792526110136" />
 
     <!-- Módulos compartilhados -->
-    <link rel="stylesheet" href="/src/modules/shared/header/header.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/shared/footer/footer.css?v=1792524669878" />
+    <link rel="stylesheet" href="/src/modules/shared/header/header.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/shared/footer/footer.css?v=1792526110136" />
 
     <!-- Módulos da página UAM -->
-    <link rel="stylesheet" href="/src/modules/uam/processo-seletivo/processo-seletivo.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/processo-seletivo/edital-modal.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/sobre-instituicao/sobre-instituicao.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/nosso-dna/nosso-dna.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/matriz-curricular/matriz-curricular.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/corpo-docente/corpo-docente.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/campus/campus.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/metodologia/metodologia.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/ecossistema/ecossistema.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/financiamentos/financiamentos.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/grupo-inspirali/grupo-inspirali.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/seu-futuro/seu-futuro.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/uam/faq-contato/faq-contato.css?v=1792524669878" />
-    <link rel="stylesheet" href="/src/modules/shared/floating-contact/floating-contact.css?v=1792524669878" />
+    <link rel="stylesheet" href="/src/modules/uam/processo-seletivo/processo-seletivo.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/processo-seletivo/edital-modal.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/sobre-instituicao/sobre-instituicao.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/nosso-dna/nosso-dna.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/matriz-curricular/matriz-curricular.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/corpo-docente/corpo-docente.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/campus/campus.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/metodologia/metodologia.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/ecossistema/ecossistema.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/financiamentos/financiamentos.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/grupo-inspirali/grupo-inspirali.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/seu-futuro/seu-futuro.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/uam/faq-contato/faq-contato.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/shared/floating-contact/floating-contact.css?v=1792526110136" />
+    <link rel="stylesheet" href="/src/modules/shared/page-search/page-search.css?v=1792526110136" />
 
     <script type="application/ld+json">
       {
@@ -114,7 +115,7 @@
         <nav class="institutional-header__nav" id="institutional-nav" data-menu-nav aria-label="Navegação institucional">
           <a class="institutional-header__link" href="#">Sou Candidato</a>
           <span class="institutional-header__divider" aria-hidden="true"></span>
-          <button type="button" class="institutional-header__search" aria-label="Buscar">
+          <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
             <img src="/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
           </button>
           <div class="header-cta-dropdown" data-dropdown>
@@ -2086,6 +2087,30 @@
       </div>
     </footer>
 
+    <div class="page-search" data-page-search hidden>
+      <div class="page-search__bar">
+        <img src="/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
+        <input
+          type="text"
+          class="page-search__input"
+          data-page-search-input
+          placeholder="Buscar nesta página..."
+          autocomplete="off"
+          aria-label="Buscar nesta página"
+        />
+        <span class="page-search__count" data-page-search-count>0/0</span>
+        <button type="button" class="page-search__nav" data-page-search-prev aria-label="Resultado anterior">
+          <img src="/public/icons/icon-arrow-down.svg" alt="" aria-hidden="true" class="page-search__nav-icon page-search__nav-icon--up" />
+        </button>
+        <button type="button" class="page-search__nav" data-page-search-next aria-label="Próximo resultado">
+          <img src="/public/icons/icon-arrow-down.svg" alt="" aria-hidden="true" class="page-search__nav-icon" />
+        </button>
+        <button type="button" class="page-search__close" data-page-search-close aria-label="Fechar busca">
+          <img src="/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+        </button>
+      </div>
+    </div>
+
     <div class="floating-contact" data-floating-contact>
       <div class="floating-contact__item">
         <div class="floating-contact__panel floating-contact__panel--call" data-floating-panel="call" hidden>
@@ -2163,16 +2188,18 @@
       </a>
     </div>
 
-    <script src="/src/modules/shared/header/header.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/processo-seletivo/processo-seletivo.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/corpo-docente/corpo-docente.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/matriz-curricular/matriz-curricular.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/campus/campus.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/metodologia/metodologia.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/ecossistema/ecossistema.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/financiamentos/financiamentos.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/seu-futuro/seu-futuro.js?v=1792524669878"></script>
-    <script src="/src/modules/uam/faq-contato/faq-contato.js?v=1792524669878"></script>
-    <script src="/src/modules/shared/floating-contact/floating-contact.js?v=1792524669878"></script>
+    <script src="/src/modules/shared/header/header.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/processo-seletivo/processo-seletivo.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/corpo-docente/corpo-docente.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/matriz-curricular/matriz-curricular.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/campus/campus.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/metodologia/metodologia.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/ecossistema/ecossistema.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/financiamentos/financiamentos.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/seu-futuro/seu-futuro.js?v=1792526110136"></script>
+    <script src="/src/modules/uam/faq-contato/faq-contato.js?v=1792526110136"></script>
+    <script src="/src/modules/shared/floating-contact/floating-contact.js?v=1792526110136"></script>
+    <script src="/src/vendor/mark.min.js?v=1792526110136"></script>
+    <script src="/src/modules/shared/page-search/page-search.js?v=1792526110136"></script>
   </body>
 </html>
