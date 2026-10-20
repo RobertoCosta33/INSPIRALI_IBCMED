@@ -128,7 +128,7 @@
 
 .card-carousel__track {
   display: flex;
-  gap: var(--spacing-medium);
+  gap: var(--spacing-large);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -146,7 +146,7 @@
 .card-carousel__footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: var(--spacing-extra-large);
   width: 100%;
   position: relative;

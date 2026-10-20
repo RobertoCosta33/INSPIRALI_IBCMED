@@ -24,7 +24,8 @@
 
 .inspirali-header__title {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-display, var(--font-family-base));
   line-height: var(--line-height-tight);
   color: var(--text-brand);
   max-width: 606px;

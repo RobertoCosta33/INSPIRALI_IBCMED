@@ -21,7 +21,8 @@
 
 .campus-panel__title {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-display, var(--font-family-base));
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
@@ -144,20 +145,25 @@
   position: relative;
   flex: 1 1 0;
   min-width: 0;
+  min-height: 420px;
   border-radius: var(--radius-small);
   overflow: hidden;
 }
 
 .campus-gallery__image {
-  display: none;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 420px;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
 }
 
 .campus-gallery__image.is-active {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .campus-gallery__overlay {
@@ -199,6 +205,7 @@
 }
 
 .campus-gallery__nav-btn {
+  position: relative;
   width: 24px;
   height: 24px;
   border-radius: var(--radius-total);
@@ -208,30 +215,48 @@
 }
 
 .campus-gallery__nav-btn img {
-  width: 24px;
-  height: 24px;
-}
-
-.campus-gallery__nav-btn[data-gallery-prev] {
-  background-color: #a3a3a3;
-}
-
-.campus-gallery__nav-btn[data-gallery-prev] img {
+  position: relative;
+  z-index: 1;
   width: 10px;
   height: 10px;
 }
 
+.campus-gallery__nav-btn--prev {
+  background-color: #a3a3a3;
+}
+
+.campus-gallery__nav-icon--flip {
+  transform: scaleX(-1);
+}
+
+.campus-gallery__nav-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-total);
+  background: conic-gradient(var(--surface-brand-primary) calc(var(--progress, 0) * 1%), #dcdce0 0);
+}
+
+.campus-gallery__nav-ring::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  border-radius: var(--radius-total);
+  background-color: #fafaff;
+}
+
 .campus-gallery__thumbs {
   flex: 0 0 180px;
+  max-height: 420px;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-extra-small);
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .campus-thumb {
   position: relative;
-  flex: 1 1 0;
-  min-height: 0;
+  flex: 0 0 132px;
   overflow: hidden;
   border-radius: var(--spacing-micro);
 }
@@ -285,7 +310,7 @@
     flex-basis: auto;
   }
 
-  .campus-gallery__image {
+  .campus-gallery__viewport {
     min-height: 260px;
   }
 }

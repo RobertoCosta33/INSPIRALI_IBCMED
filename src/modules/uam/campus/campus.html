@@ -16,15 +16,42 @@
               </p>
             </div>
             <div class="campus-chip-list">
-              <button type="button" class="campus-chip campus-chip--active">
+              <button
+                type="button"
+                class="campus-chip campus-chip--active"
+                data-campus-chip
+                data-campus="mooca"
+                data-city="São Paulo, SP"
+                data-address="Rua Prof. Almeida Lima, 1.134 – Mooca, São Paulo - SP, 03164-000"
+                data-cta="https://portal.anhembi.br/unidades/mooca/"
+                aria-pressed="true"
+              >
                 <img src="/public/icons/icon-building-white.svg" alt="" aria-hidden="true" width="16" height="16" />
                 Mooca — São Paulo
               </button>
-              <button type="button" class="campus-chip campus-chip--inactive">
+              <button
+                type="button"
+                class="campus-chip campus-chip--inactive"
+                data-campus-chip
+                data-campus="piracicaba"
+                data-city="Piracicaba, SP"
+                data-address="Av. Rio das Pedras, 1.601 – Pompéia, Piracicaba - SP, 13425-380"
+                data-cta="https://portal.anhembi.br/unidades/piracicaba/"
+                aria-pressed="false"
+              >
                 <img src="/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" width="16" height="16" />
                 Piracicaba
               </button>
-              <button type="button" class="campus-chip campus-chip--inactive">
+              <button
+                type="button"
+                class="campus-chip campus-chip--inactive"
+                data-campus-chip
+                data-campus="sao-jose-dos-campos"
+                data-city="São José dos Campos, SP"
+                data-address="Av. Dep. Benedito Matarazzo, 6.070 – Jardim Aquarius, São José dos Campos - SP, 12230-002"
+                data-cta="https://portal.anhembi.br/unidades/sao-jose-dos-campos/"
+                aria-pressed="false"
+              >
                 <img src="/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" width="16" height="16" />
                 São José dos Campos
               </button>
@@ -32,45 +59,43 @@
             <div class="campus-detail">
               <p class="campus-detail__location">
                 <img src="/public/icons/icon-location.svg" alt="" aria-hidden="true" />
-                São Paulo, SP
+                <span data-campus-city>São Paulo, SP</span>
               </p>
-              <p class="campus-detail__address">
-                Rua Prof. Almeida Lima, 1.134 – Mooca • CEP 03164-000 -
-                <a href="#">Ver no mapa</a>
-              </p>
+              <p class="campus-detail__address" data-campus-address>Rua Prof. Almeida Lima, 1.134 – Mooca, São Paulo - SP, 03164-000</p>
             </div>
-            <a class="campus-panel__cta" href="#">Conheça mais da unidade</a>
+            <a class="campus-panel__cta" href="https://portal.anhembi.br/unidades/mooca/" target="_blank" rel="noopener" data-campus-cta>Conheça mais da unidade</a>
           </div>
 
           <div class="campus-gallery" data-campus-gallery>
             <div class="campus-gallery__viewport">
-              <img class="campus-gallery__image is-active" data-gallery-slide data-label="Biblioteca" src="/public/images/uam/campus-gallery/main.png" alt="Biblioteca do campus Mooca da Anhembi Morumbi" loading="lazy" />
-              <img class="campus-gallery__image" data-gallery-slide data-label="Laboratórios equipados" src="/public/images/uam/campus-gallery/lab.png" alt="Laboratórios equipados do campus Mooca" loading="lazy" />
-              <img class="campus-gallery__image" data-gallery-slide data-label="Sala de aula presencial" src="/public/images/uam/campus-gallery/sala.png" alt="Sala de aula presencial do campus Mooca" loading="lazy" />
+              <img class="campus-gallery__image is-active" data-gallery-slide data-label="Mooca" src="/public/images/uam/campus-gallery/mooca/photo-1.jpg" alt="Foto 1 do campus Mooca da Anhembi Morumbi" loading="lazy" />
+              <img class="campus-gallery__image" data-gallery-slide data-label="Mooca" src="/public/images/uam/campus-gallery/mooca/photo-2.jpg" alt="Foto 2 do campus Mooca da Anhembi Morumbi" loading="lazy" />
+              <img class="campus-gallery__image" data-gallery-slide data-label="Mooca" src="/public/images/uam/campus-gallery/mooca/photo-3.jpg" alt="Foto 3 do campus Mooca da Anhembi Morumbi" loading="lazy" />
               <div class="campus-gallery__overlay" aria-hidden="true"></div>
-              <span class="campus-gallery__label" data-gallery-label>Biblioteca</span>
-              <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / 03</span>
+              <span class="campus-gallery__label" data-gallery-label>Mooca</span>
+              <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>07</span></span>
               <div class="campus-gallery__nav">
-                <button type="button" class="campus-gallery__nav-btn" data-gallery-prev aria-label="Imagem anterior">
-                  <img src="/public/icons/icon-chevron-left-white.svg" alt="" aria-hidden="true" />
+                <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
+                  <img src="/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
                 </button>
-                <button type="button" class="campus-gallery__nav-btn" data-gallery-next aria-label="Próxima imagem">
-                  <img src="/public/icons/icon-chevron-right-white.svg" alt="" aria-hidden="true" />
+                <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
+                  <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 14"></span>
+                  <img class="campus-gallery__nav-icon--flip" src="/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
                 </button>
               </div>
             </div>
             <div class="campus-gallery__thumbs">
               <button type="button" class="campus-thumb is-active" data-gallery-thumb="0">
-                <img src="/public/images/uam/campus-gallery/biblioteca.png" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Biblioteca</span>
+                <img src="/public/images/uam/campus-gallery/mooca/photo-1.jpg" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Mooca</span>
               </button>
               <button type="button" class="campus-thumb" data-gallery-thumb="1">
-                <img src="/public/images/uam/campus-gallery/lab.png" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Laboratórios equipados</span>
+                <img src="/public/images/uam/campus-gallery/mooca/photo-2.jpg" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Mooca</span>
               </button>
               <button type="button" class="campus-thumb" data-gallery-thumb="2">
-                <img src="/public/images/uam/campus-gallery/sala.png" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Sala de aula presencial</span>
+                <img src="/public/images/uam/campus-gallery/mooca/photo-3.jpg" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Mooca</span>
               </button>
             </div>
           </div>
