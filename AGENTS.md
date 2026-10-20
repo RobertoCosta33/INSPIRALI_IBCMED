@@ -16,7 +16,7 @@ O IBCMED reúne páginas de divulgação do curso de Medicina em diferentes facu
 > Cada instituição tem (ou terá) sua própria página dentro desse arquivo Figma, com conteúdo, imagens e textos já definidos pelo time de design. O trabalho de implementação consiste em:
 > 1. Localizar o node-id da página da instituição no Figma (pedir ao responsável o link com `node-id` se não estiver disponível).
 > 2. Usar o MCP do Figma (`figma-remote-mcp-server`) — `get_metadata` para mapear a estrutura de seções, `get_design_context` (com a skill `figma-design-to-code` carregada antes) para extrair textos, tokens de design e assets de cada seção, e `get_screenshot` para conferência visual.
-> 3. Baixar todos os assets (imagens/ícones) referenciados pelo Figma para `<INSTITUICAO>/public/images/` — nunca deixar URLs temporárias do Figma (`figma.com/api/mcp/asset/...`) no código.
+> 3. Baixar todos os assets (imagens/ícones) referenciados pelo Figma para `<INSTITUICAO>/src/public/images/` — nunca deixar URLs temporárias do Figma (`figma.com/api/mcp/asset/...`) no código.
 > 4. Reconstruir a página em HTML/CSS/JS próprios (ver estrutura de pastas abaixo), seguindo fielmente layout, hierarquia, cores, tipografia e espaçamento do Figma — sem usar Tailwind nem o código React gerado pelo MCP diretamente (ele é só referência).
 > 5. Aplicar responsividade (o Figma normalmente só tem o desktop desenhado) seguindo boas práticas de breakpoints (ver seção 5).
 >
@@ -24,7 +24,7 @@ O IBCMED reúne páginas de divulgação do curso de Medicina em diferentes facu
 >
 > | Instituição | Node-id Figma | Status |
 > |---|---|---|
-> | UAM (Anhembi Morumbi) | `523:29919` ("Desktop", página "Redesign - Páginas IES") | Implementado em `UAM/pages/` + `UAM/modules/sections/*` — **piloto/referência de estrutura para as próximas instituições** |
+> | UAM (Anhembi Morumbi) | `523:29919` ("Desktop", página "Redesign - Páginas IES") | Implementado em `UAM/src/pages/` + `UAM/src/modules/sections/*` — **piloto/referência de estrutura para as próximas instituições** |
 > | UNIFACS | — | A definir com o time de design |
 > | AGES, UNIFG, FASEH, USJT, UNP, UNA, UNIBH, UNISUL | — | A definir com o time de design |
 
@@ -37,7 +37,7 @@ Antes de construir qualquer página nova:
 1. Peça/confirme o link do Figma com `node-id` da página da instituição.
 2. Rode `get_metadata` no node para mapear todas as seções (frames) filhas.
 3. Para cada seção principal, rode `get_design_context` (sempre após carregar a skill `figma-design-to-code`) para obter texto, tokens (`cor`, `spacing`, `radius`, `font`) e URLs de assets.
-4. Baixe os assets com `curl` para `<INSTITUICAO>/public/images/` (fotos) e `<INSTITUICAO>/public/icons/` (ícones/SVGs).
+4. Baixe os assets com `curl` para `<INSTITUICAO>/src/public/images/` (fotos) e `<INSTITUICAO>/src/public/icons/` (ícones/SVGs).
 5. Nunca edite os arquivos de referência brutos (prints, metadados) — eles só servem de apoio durante a implementação.
 
 ---
@@ -52,66 +52,69 @@ Cada instituição é **autocontida**: todo o código, estilos, módulos e asset
 ibcmed/
   AGENTS.md                          # este arquivo
   README.md
-  templates/                         # reservado para a fase de conversão HubSpot (ver templates/README.md) — cross-instituição
   UAM/                                # tudo da Anhembi Morumbi vive aqui dentro
-    pages/
-      index.html                     # monta a página colando o HTML de cada módulo — pronta para revisão visual
-    modules/
-      shared/                        # módulos de "chrome" da página, reaproveitados entre as seções desta instituição
-        header/
-          header.html
-          header.css
-          header.js
-        footer/
-          footer.html
-          footer.css
-        floating-contact/            # widget flutuante "Ligue já!" / "Tem alguma dúvida?" / WhatsApp
-        page-search/                 # busca "Ctrl+F" customizada (mark.js)
-      sections/                      # um módulo por seção principal da página (1:1 com os frames do Figma)
-        processo-seletivo/
-          processo-seletivo.html
-          processo-seletivo.css
-          processo-seletivo.js       # só quando a seção tem interatividade própria
-          edital-modal.html/.css     # sub-componentes da seção ficam juntos dela
-        sobre-instituicao/
-        nosso-dna/
-        matriz-curricular/
-        corpo-docente/
-        campus/
-        metodologia/
-        ecossistema/
-        financiamentos/
-        grupo-inspirali/
-        seu-futuro/
-        faq-contato/
-    css/
-      tokens.css                     # cores, tipografia, espaçamento e radius extraídos do Figma (ver seção 4)
-      base.css                       # reset + estilos base + `.section` genérica + utilitários (botões, links, container)
-      components/                    # CSS de padrões de UI reaproveitados por várias seções desta instituição
-        accordion.css                # disclosures (ex.: Metodologia, FAQ, modal de editais)
-        cards.css                    # cartões (info-card, discipline-card, stat-card, posgrad-card...)
-        tabs.css                     # abas (Processo seletivo, Matriz Curricular)
-        carousel.css                 # carrosséis (Ecossistema, Seu Futuro na Medicina)
-    vendor/
-      mark.min.js                    # bibliotecas de terceiros vendorizadas localmente (nunca via CDN)
-    public/
-      images/
-        shared/                      # logos/selos usados em mais de uma seção desta instituição (Inspirali, e-MEC, parceiros)
-        campus-gallery/, docente/, institucional/, ...   # fotos específicas de cada seção
-      icons/                         # ícones SVG usados nesta instituição
-      docs/                          # PDFs (matrizes curriculares, editais)
+    src/
+      pages/
+        index.html                   # monta a página colando o HTML de cada módulo — pronta para revisão visual
+      modules/
+        shared/                      # módulos de "chrome" da página, reaproveitados entre as seções desta instituição
+          header/
+            header.html
+            header.css
+            header.js
+          footer/
+            footer.html
+            footer.css
+          floating-contact/          # widget flutuante "Ligue já!" / "Tem alguma dúvida?" / WhatsApp
+          page-search/               # busca "Ctrl+F" customizada (mark.js)
+        sections/                    # um módulo por seção principal da página (1:1 com os frames do Figma)
+          processo-seletivo/
+            processo-seletivo.html
+            processo-seletivo.css
+            processo-seletivo.js     # só quando a seção tem interatividade própria
+            edital-modal.html/.css   # sub-componentes da seção ficam juntos dela
+          sobre-instituicao/
+          nosso-dna/
+          matriz-curricular/
+          corpo-docente/
+          campus/
+          metodologia/
+          ecossistema/
+          financiamentos/
+          grupo-inspirali/
+          seu-futuro/
+          faq-contato/
+      css/
+        tokens.css                   # cores, tipografia, espaçamento e radius extraídos do Figma (ver seção 4)
+        base.css                     # reset + estilos base + `.section` genérica + utilitários (botões, links, container)
+        components/                  # CSS de padrões de UI reaproveitados por várias seções desta instituição
+          accordion.css              # disclosures (ex.: Metodologia, FAQ, modal de editais)
+          cards.css                  # cartões (info-card, discipline-card, stat-card, posgrad-card...)
+          tabs.css                   # abas (Processo seletivo, Matriz Curricular)
+          carousel.css               # carrosséis (Ecossistema, Seu Futuro na Medicina)
+      vendor/
+        mark.min.js                  # bibliotecas de terceiros vendorizadas localmente (nunca via CDN)
+      public/
+        images/
+          shared/                    # logos/selos usados em mais de uma seção desta instituição (Inspirali, e-MEC, parceiros)
+          campus-gallery/, docente/, institucional/, ...   # fotos específicas de cada seção
+        icons/                       # ícones SVG usados nesta instituição
+        docs/                        # PDFs (matrizes curriculares, editais)
+      templates/                     # reservado para a fase de conversão HubSpot desta instituição (ver 3.3)
 
   UNIFACS/                           # futura instituição — mesma estrutura exata de UAM/ (ver 3.2)
-    pages/
-    modules/
-      shared/
-      sections/
-    css/
-    vendor/
-    public/
+    src/
+      pages/
+      modules/
+        shared/
+        sections/
+      css/
+      vendor/
+      public/
+      templates/
 ```
 
-Todos os caminhos referenciados em HTML/CSS/JS são **absolutos a partir da raiz do site**, sempre prefixados pela pasta da instituição: `/UAM/css/...`, `/UAM/modules/...`, `/UAM/public/...`, `/UAM/vendor/...`. Isso é o que permite servir `UAM/` e `UNIFACS/` lado a lado sem colisão de rotas.
+Todos os caminhos referenciados em HTML/CSS/JS são **absolutos a partir da raiz do site**, sempre prefixados pela pasta da instituição e por `src/`: `/UAM/src/css/...`, `/UAM/src/modules/...`, `/UAM/src/public/...`, `/UAM/src/vendor/...`. Isso é o que permite servir `UAM/` e `UNIFACS/` lado a lado sem colisão de rotas.
 
 ### 3.2 Regra obrigatória: analisar a estrutura da UAM antes de criar uma nova instituição
 
@@ -120,28 +123,32 @@ Todos os caminhos referenciados em HTML/CSS/JS são **absolutos a partir da raiz
 1. **Ler a árvore completa de `UAM/`** (`modules/shared/*`, `modules/sections/*`, `css/*`, `public/*`) para entender quais seções/módulos existem e como cada um é organizado (HTML + CSS + JS separados, nomes de classes, convenções de `data-*` para JS).
 2. **Reaproveitar a mesma divisão de seções** sempre que o Figma da nova instituição tiver conteúdo equivalente (ex.: toda instituição deve ter `processo-seletivo/`, `matriz-curricular/`, `campus/`, `faq-contato/`, etc., mesmo que o conteúdo interno mude). Só crie uma seção nova se o Figma realmente tiver algo sem equivalente na UAM.
 3. **Copiar os módulos `shared/` da UAM como ponto de partida** (`header`, `footer`, `floating-contact`, `page-search`) e ajustar apenas conteúdo/identidade visual (logo, cores de marca se a instituição tiver outra, links) — a estrutura de arquivos e o comportamento em JS devem continuar os mesmos.
-4. **Copiar `css/tokens.css`, `css/base.css` e `css/components/*` como ponto de partida**, atualizando só os valores de tokens que o Figma da nova instituição definir diferente (cor de marca, fonte, etc.) — a lista de variáveis e a nomenclatura devem continuar idênticas (ver seção 4) para manter a conversão para HubL previsível.
-5. **Seguir o mesmo padrão de composição**: `pages/index.html` cola o HTML de cada módulo em ordem e referencia os respectivos `.css`/`.js` com cache-busting (`?v=<timestamp>`), exatamente como em `UAM/pages/index.html`.
+4. **Copiar `src/css/tokens.css`, `src/css/base.css` e `src/css/components/*` como ponto de partida**, atualizando só os valores de tokens que o Figma da nova instituição definir diferente (cor de marca, fonte, etc.) — a lista de variáveis e a nomenclatura devem continuar idênticas (ver seção 4) para manter a conversão para HubL previsível.
+5. **Seguir o mesmo padrão de composição**: `pages/index.html` cola o HTML de cada módulo em ordem e referencia os respectivos `.css`/`.js` com cache-busting (`?v=<timestamp>`), exatamente como em `UAM/src/pages/index.html`.
 6. Só depois de replicar a estrutura, aplicar as diferenças reais de conteúdo/design que o Figma da nova instituição trouxer.
 
 Resumindo: **a estrutura é sempre a mesma — só as informações, mídias e eventualmente os tokens de cor/fonte mudam entre instituições.**
 
+### 3.3 Templates HubSpot: um por instituição
+
+Diferente de uma versão anterior deste documento, **não existe mais uma pasta `templates/` compartilhada na raiz**. Cada instituição tem sua própria `src/templates/` (ex.: `UAM/src/templates/`), reservada para a fase de conversão HubSpot daquela instituição especificamente. Enquanto a página está em construção/aprovação como HTML/CSS/JS puro, essa pasta fica praticamente vazia (só com um `README.md` explicando o destino). Quando a página for aprovada visualmente, ela é portada para lá seguindo a estrutura de tema do HubSpot (`theme.json`, `fields.json`, `templates/layouts/base.html`, `modules/<secao>.module/...`), uma seção por módulo, espelhando `src/modules/sections/` da mesma instituição.
+
 ### Regras de modularização
 
-- **Um módulo por seção principal da página** (1:1 com os frames do Figma), cada um com seu próprio `<secao>.html` + `<secao>.css` (+ `<secao>.js` quando necessário), em `<INSTITUICAO>/modules/sections/<secao>/`.
-- Header, footer, widget de contato flutuante e busca em página são módulos **compartilhados dentro da instituição**: `<INSTITUICAO>/modules/shared/<modulo>/`.
-- Padrões de UI reaproveitados por múltiplas seções (botões, abas, carrosséis, accordions, cartões) ficam em `<INSTITUICAO>/css/components/` — evita duplicar CSS igual em vários módulos. Tokens de design e reset ficam em `<INSTITUICAO>/css/tokens.css`/`base.css`.
-- Bibliotecas de terceiros (ex.: `mark.js`) são **vendorizadas localmente** em `<INSTITUICAO>/vendor/` — nunca carregadas via CDN externo (consistência offline, sem dependência de terceiros em produção).
+- **Um módulo por seção principal da página** (1:1 com os frames do Figma), cada um com seu próprio `<secao>.html` + `<secao>.css` (+ `<secao>.js` quando necessário), em `<INSTITUICAO>/src/modules/sections/<secao>/`.
+- Header, footer, widget de contato flutuante e busca em página são módulos **compartilhados dentro da instituição**: `<INSTITUICAO>/src/modules/shared/<modulo>/`.
+- Padrões de UI reaproveitados por múltiplas seções (botões, abas, carrosséis, accordions, cartões) ficam em `<INSTITUICAO>/src/css/components/` — evita duplicar CSS igual em vários módulos. Tokens de design e reset ficam em `<INSTITUICAO>/src/css/tokens.css`/`base.css`.
+- Bibliotecas de terceiros (ex.: `mark.js`) são **vendorizadas localmente** em `<INSTITUICAO>/src/vendor/` — nunca carregadas via CDN externo (consistência offline, sem dependência de terceiros em produção).
 - Inglês para nomes de pastas, arquivos, classes CSS e variáveis. Português apenas no conteúdo visível.
-- Imagens com `get_asset_url('../images/arquivo.png')` nos módulos HubL (fase de conversão), e caminho absoluto a partir da raiz (`/UAM/public/images/...`) nas páginas estáticas.
-- Antes de ir para o HubSpot, toda página nasce como módulos HTML/CSS/JS simples em `<INSTITUICAO>/modules/`, compostos em `<INSTITUICAO>/pages/index.html` para revisão visual, só depois convertida em módulos HubL dentro de `templates/`/`ibcmed-theme/`.
-- Ao converter para HubL, cada módulo de `<INSTITUICAO>/modules/sections/<secao>/` vira um módulo HubL (`ibcmed-theme/modules/<secao>.module/`) — a estrutura já nasce 1:1 com o destino final.
+- Imagens com `get_asset_url('../images/arquivo.png')` nos módulos HubL (fase de conversão), e caminho absoluto a partir da raiz (`/UAM/src/public/images/...`) nas páginas estáticas.
+- Antes de ir para o HubSpot, toda página nasce como módulos HTML/CSS/JS simples em `<INSTITUICAO>/src/modules/`, compostos em `<INSTITUICAO>/src/pages/index.html` para revisão visual, só depois convertida em módulos HubL dentro de `<INSTITUICAO>/src/templates/`/`ibcmed-theme/`.
+- Ao converter para HubL, cada módulo de `<INSTITUICAO>/src/modules/sections/<secao>/` vira um módulo HubL (`ibcmed-theme/modules/<secao>.module/`) — a estrutura já nasce 1:1 com o destino final.
 
 ---
 
 ## 4. Design system (tokens, componentes e padrões visuais)
 
-Estes valores vêm de `UAM/css/tokens.css` e `UAM/css/base.css`, extraídos do Figma. **Toda nova instituição parte destes mesmos tokens e nomes de variável**, ajustando apenas os valores que o Figma dela definir diferente (ex.: outra cor de marca), nunca a nomenclatura.
+Estes valores vêm de `UAM/src/css/tokens.css` e `UAM/src/css/base.css`, extraídos do Figma. **Toda nova instituição parte destes mesmos tokens e nomes de variável**, ajustando apenas os valores que o Figma dela definir diferente (ex.: outra cor de marca), nunca a nomenclatura.
 
 ### 4.1 Cores (`--surface-*`, `--text-*`, `--border-*`)
 
@@ -198,15 +205,15 @@ Escala em múltiplos de 4px: `micro 4px · extra-small 8px · small 12px · medi
 
 ### 4.7 Cards, abas e accordions
 
-- Cards informativos (`info-card`, `discipline-card` etc. em `css/components/cards.css`) usam `--surface-secondary-subtle` como fundo e `--radius-small`.
-- Abas (`css/components/tabs.css`) seguem o padrão: aba ativa em `bold`/cor de marca, abas inativas em `regular`/cinza, conteúdo trocado via `[hidden]` + JS (`data-tab`/`data-tab-panel`).
-- Accordions (`css/components/accordion.css`) usam animação de altura via `grid-template-rows: 0fr → 1fr` (preferir a técnica de `max-height`/`grid-template-rows` com `overflow: hidden` no wrapper interno — **nunca** com padding direto no elemento que anima, isso vaza conteúdo durante a transição).
+- Cards informativos (`info-card`, `discipline-card` etc. em `src/css/components/cards.css`) usam `--surface-secondary-subtle` como fundo e `--radius-small`.
+- Abas (`src/css/components/tabs.css`) seguem o padrão: aba ativa em `bold`/cor de marca, abas inativas em `regular`/cinza, conteúdo trocado via `[hidden]` + JS (`data-tab`/`data-tab-panel`).
+- Accordions (`src/css/components/accordion.css`) usam animação de altura via `grid-template-rows: 0fr → 1fr` (preferir a técnica de `max-height`/`grid-template-rows` com `overflow: hidden` no wrapper interno — **nunca** com padding direto no elemento que anima, isso vaza conteúdo durante a transição).
 
 ---
 
 ## 5. Responsividade
 
-- O Figma normalmente só define o layout desktop (1440px). Não copie pixel a pixel sem adaptar: aplique breakpoints padrão (`1280px`, `1024px`, `860px`, `640px`) usando `flex-wrap`, reordenação de colunas e ajuste de paddings (`--page-gutter` → `--page-gutter-tablet` → `--page-gutter-mobile`, definidos em `css/tokens.css`).
+- O Figma normalmente só define o layout desktop (1440px). Não copie pixel a pixel sem adaptar: aplique breakpoints padrão (`1280px`, `1024px`, `860px`, `640px`) usando `flex-wrap`, reordenação de colunas e ajuste de paddings (`--page-gutter` → `--page-gutter-tablet` → `--page-gutter-mobile`, definidos em `src/css/tokens.css`).
 - Teste sempre em desktop, tablet e mobile antes de considerar a página pronta.
 - Caso o Figma tenha telas mobile/tablet específicas para a instituição, priorize-as sobre a adaptação automática.
 
@@ -241,10 +248,10 @@ Para cada instituição nova, ao criar a página:
 
 - [ ] **Analisou a estrutura de `UAM/` (seção 3.2) antes de começar** e reaproveitou a mesma divisão de módulos/seções.
 - [ ] Conteúdo, textos e imagens fiéis ao Figma daquela instituição.
-- [ ] Nenhuma URL temporária do Figma (`figma.com/api/mcp/asset/...`) restante no código — todos os assets baixados para `<INSTITUICAO>/public/`.
-- [ ] Nenhuma biblioteca de terceiros via CDN — tudo vendorizado em `<INSTITUICAO>/vendor/`.
-- [ ] Header, footer, widget de contato e busca reaproveitados a partir de `UAM/modules/shared/*` (ajustando só conteúdo/identidade).
-- [ ] Tokens de design (`css/tokens.css`) partindo dos valores da UAM, só trocando o que o Figma da instituição define diferente.
+- [ ] Nenhuma URL temporária do Figma (`figma.com/api/mcp/asset/...`) restante no código — todos os assets baixados para `<INSTITUICAO>/src/public/`.
+- [ ] Nenhuma biblioteca de terceiros via CDN — tudo vendorizado em `<INSTITUICAO>/src/vendor/`.
+- [ ] Header, footer, widget de contato e busca reaproveitados a partir de `UAM/src/modules/shared/*` (ajustando só conteúdo/identidade).
+- [ ] Tokens de design (`src/css/tokens.css`) partindo dos valores da UAM, só trocando o que o Figma da instituição define diferente.
 - [ ] Responsividade testada (desktop, tablet, mobile).
 - [ ] HTML semântico, com `alt` descritivo em imagens e hierarquia de headings (`h1` único, `h2`/`h3` em sequência).
 - [ ] SEO: `<title>`, meta descrição, `canonical`, Open Graph e dados estruturados (`schema.org/Course`) definidos.
@@ -256,7 +263,7 @@ Para cada instituição nova, ao criar a página:
 
 ## 9. Próximos passos
 
-1. Revisar visualmente `UAM/pages/index.html` (piloto, construído a partir do Figma) com o time responsável.
+1. Revisar visualmente `UAM/src/pages/index.html` (piloto, construído a partir do Figma) com o time responsável.
 2. Definir e autenticar as contas HubSpot (sandbox e produção) do IBCMED na CLI.
-3. Após aprovação do piloto, criar a estrutura inicial de `ibcmed-theme/` (layout base, header, footer) e converter cada módulo de `UAM/modules/sections/*` em um módulo HubL dentro de `templates/`.
-4. Repetir o fluxo Figma → `<INSTITUICAO>/modules/` → `<INSTITUICAO>/pages/` → aprovação → conversão HubL → upload para as demais instituições, conforme as telas forem disponibilizadas no Figma — **sempre partindo da estrutura de `UAM/` como modelo** (seção 3.2).
+3. Após aprovação do piloto, criar a estrutura inicial de `ibcmed-theme/` (layout base, header, footer) e converter cada módulo de `UAM/src/modules/sections/*` em um módulo HubL dentro de `UAM/src/templates/`.
+4. Repetir o fluxo Figma → `<INSTITUICAO>/src/modules/` → `<INSTITUICAO>/src/pages/` → aprovação → conversão HubL → upload para as demais instituições, conforme as telas forem disponibilizadas no Figma — **sempre partindo da estrutura de `UAM/` como modelo** (seção 3.2).
