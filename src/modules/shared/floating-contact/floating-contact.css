@@ -1,0 +1,258 @@
+/* ====================================================================
+   Widget flutuante de contato — "Ligue já!", "Tem alguma dúvida?" e WhatsApp
+   ==================================================================== */
+
+.floating-contact {
+  position: fixed;
+  right: var(--page-gutter-mobile, 24px);
+  bottom: 24px;
+  z-index: 300;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-small);
+}
+
+.floating-contact__item {
+  position: relative;
+}
+
+.floating-contact__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-small);
+  height: 60px;
+  background-color: var(--surface-inverted);
+  padding: 16px 32px;
+  border-radius: var(--radius-small);
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.12);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-heading);
+  white-space: nowrap;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-contact__trigger--call {
+  width: 200px;
+}
+
+.floating-contact__trigger--doubt {
+  width: 300px;
+}
+
+.floating-contact__trigger-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-brand-soft);
+}
+
+.floating-contact__trigger:hover,
+.floating-contact__trigger:focus-visible {
+  background-color: var(--surface-brand-soft);
+}
+
+.floating-contact__trigger img {
+  width: 20px;
+  height: 20px;
+}
+
+.floating-contact__whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-total);
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.16);
+  transition: transform 0.3s ease;
+}
+
+.floating-contact__whatsapp:hover,
+.floating-contact__whatsapp:focus-visible {
+  transform: scale(1.06);
+}
+
+.floating-contact__whatsapp img {
+  width: 56px;
+  height: 56px;
+}
+
+/* O botão vira a própria caixa ao abrir: o painel nasce de baixo
+   (mesmo canto do botão, mesma largura) e o botão desaparece com um
+   fade suave, como se ele mesmo tivesse "subido" e virado a caixa. */
+.floating-contact__item.is-active .floating-contact__trigger {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.floating-contact__panel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-small);
+  box-shadow: 0 16px 40px rgba(17, 17, 17, 0.18);
+  padding: var(--spacing-large);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.floating-contact__panel--call {
+  width: 200px;
+}
+
+.floating-contact__panel--doubt {
+  width: 300px;
+}
+
+.floating-contact__panel[hidden] {
+  display: none;
+}
+
+.floating-contact__panel.is-open {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.floating-contact__panel-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  margin-bottom: var(--spacing-medium);
+}
+
+.floating-contact__panel-header img:first-child {
+  width: 20px;
+  height: 20px;
+}
+
+.floating-contact__panel-header p {
+  flex: 1 1 0;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-heading);
+}
+
+.floating-contact__close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-total);
+  background-color: var(--surface-brand-primary);
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.2);
+}
+
+.floating-contact__close img {
+  width: 10px;
+  height: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.floating-contact__call-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-primary-dark);
+  margin-bottom: var(--spacing-extra-small);
+}
+
+.floating-contact__call-number {
+  display: block;
+  text-align: center;
+  padding: var(--spacing-small);
+  border-radius: var(--radius-small);
+  background-color: var(--surface-brand-soft);
+  color: var(--text-brand);
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+  font-weight: var(--font-weight-bold);
+}
+
+.floating-contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.floating-contact__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.floating-contact__field input {
+  width: 100%;
+  height: 44px;
+  padding: 0 var(--spacing-extra-large) 0 var(--spacing-medium);
+  border: 1px solid var(--border-brand-soft);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-xs);
+  font-family: inherit;
+  color: var(--text-heading);
+}
+
+.floating-contact__field input::placeholder {
+  color: var(--text-primary-dark);
+}
+
+.floating-contact__field img {
+  position: absolute;
+  right: var(--spacing-medium);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.floating-contact__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-extra-small);
+  height: 44px;
+  border-radius: var(--radius-small);
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.3s ease;
+}
+
+.floating-contact__submit:hover,
+.floating-contact__submit:focus-visible {
+  background-color: var(--surface-brand-primary-dark);
+}
+
+.floating-contact__disclaimer {
+  font-size: 11px;
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.floating-contact__disclaimer a {
+  color: var(--text-brand);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .floating-contact {
+    right: var(--page-gutter-mobile, 16px);
+    bottom: 16px;
+  }
+
+  .floating-contact__trigger,
+  .floating-contact__panel {
+    width: calc(100vw - 32px);
+    max-width: 280px;
+  }
+}

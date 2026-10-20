@@ -13,6 +13,21 @@
     return photos;
   }
 
+  function youtubeThumb(videoId) {
+    return "https://img.youtube.com/vi/" + videoId + "/hqdefault.jpg";
+  }
+
+  function videoSlide(videoId, name) {
+    return {
+      type: "video",
+      videoId: videoId,
+      videoUrl: "https://www.youtube.com/watch?v=" + videoId,
+      src: youtubeThumb(videoId),
+      label: "Vídeo institucional",
+      alt: "Vídeo institucional do campus " + name,
+    };
+  }
+
   const CAMPUS_GALLERIES = {
     mooca: buildGallery("mooca", "Mooca", 7),
     piracicaba: buildGallery("piracicaba", "Piracicaba", 6),
@@ -23,6 +38,11 @@
   CAMPUS_GALLERIES["sao-jose-dos-campos"][1].src = CAMPUS_GALLERIES["sao-jose-dos-campos"][1].src.replace(/\.jpg$/, ".png");
   CAMPUS_GALLERIES["sao-jose-dos-campos"][6].src = CAMPUS_GALLERIES["sao-jose-dos-campos"][6].src.replace(/\.jpg$/, ".png");
   CAMPUS_GALLERIES["sao-jose-dos-campos"][9].src = CAMPUS_GALLERIES["sao-jose-dos-campos"][9].src.replace(/\.jpg$/, ".png");
+
+  // Vídeo institucional de cada unidade, sempre como último item da galeria.
+  CAMPUS_GALLERIES.mooca.push(videoSlide("pZ5RWFXfIQU", "Mooca"));
+  CAMPUS_GALLERIES.piracicaba.push(videoSlide("kOfW_fLo23c", "Piracicaba"));
+  CAMPUS_GALLERIES["sao-jose-dos-campos"].push(videoSlide("I8S5-E5OYlQ", "São José dos Campos"));
 
   document.querySelectorAll("[data-campus-gallery]").forEach(function (root) {
     const viewport = root.querySelector(".campus-gallery__viewport");
@@ -77,7 +97,7 @@
       scrollThumbIntoView(index);
       if (counter) counter.textContent = String(index + 1).padStart(2, "0");
       if (total) total.textContent = String(slides.length).padStart(2, "0");
-      if (label) label.textContent = slides[index].getAttribute("data-label") || slides[index].alt;
+      if (label) label.textContent = slides[index].getAttribute("data-label") || "";
       startAutoplay();
     }
 
@@ -114,23 +134,39 @@
 
       viewport.querySelectorAll("[data-gallery-slide]").forEach(function (el) { el.remove(); });
       photos.forEach(function (photo, i) {
+        const slide = document.createElement("div");
+        slide.className = "campus-gallery__image" + (i === 0 ? " is-active" : "") + (photo.type === "video" ? " campus-gallery__image--video" : "");
+        slide.setAttribute("data-gallery-slide", "");
+        slide.setAttribute("data-label", photo.label);
+        if (photo.type === "video") slide.setAttribute("data-video-url", photo.videoUrl);
+
         const img = document.createElement("img");
-        img.className = "campus-gallery__image" + (i === 0 ? " is-active" : "");
-        img.setAttribute("data-gallery-slide", "");
-        img.setAttribute("data-label", photo.label);
+        img.className = "campus-gallery__photo";
         img.src = photo.src;
         img.alt = photo.alt;
         img.loading = "lazy";
-        viewport.insertBefore(img, overlay);
+        slide.appendChild(img);
+
+        if (photo.type === "video") {
+          const playIcon = document.createElement("img");
+          playIcon.className = "campus-gallery__play";
+          playIcon.src = "/public/icons/icon-play-white.svg";
+          playIcon.alt = "";
+          playIcon.setAttribute("aria-hidden", "true");
+          slide.appendChild(playIcon);
+        }
+
+        viewport.insertBefore(slide, overlay);
       });
 
       thumbsList.innerHTML = "";
       photos.forEach(function (photo, i) {
         const btn = document.createElement("button");
         btn.type = "button";
-        btn.className = "campus-thumb" + (i === 0 ? " is-active" : "");
+        btn.className = "campus-thumb" + (i === 0 ? " is-active" : "") + (photo.type === "video" ? " campus-thumb--video" : "");
         btn.setAttribute("data-gallery-thumb", String(i));
-        btn.innerHTML = '<img src="' + photo.src + '" alt="" loading="lazy" /><span class="campus-thumb__label">' + photo.label + "</span>";
+        const playIconHtml = photo.type === "video" ? '<img class="campus-thumb__play" src="/public/icons/icon-play-white.svg" alt="" aria-hidden="true" />' : "";
+        btn.innerHTML = '<img class="campus-thumb__photo" src="' + photo.src + '" alt="" loading="lazy" />' + playIconHtml + '<span class="campus-thumb__label">' + photo.label + "</span>";
         thumbsList.appendChild(btn);
       });
 
@@ -145,8 +181,62 @@
     if (nextBtn) nextBtn.addEventListener("click", function () { show(index + 1); });
     thumbs.forEach(bindThumb);
 
+    // Clicar na imagem/vídeo em destaque: vídeo abre o YouTube em nova aba,
+    // imagem abre em um overlay (lightbox) ampliado.
+    if (viewport) {
+      viewport.addEventListener("click", function (event) {
+        if (event.target.closest(".campus-gallery__nav")) return;
+        const activeSlide = slides[index];
+        if (!activeSlide) return;
+
+        const videoUrl = activeSlide.getAttribute("data-video-url");
+        if (videoUrl) {
+          window.open(videoUrl, "_blank", "noopener");
+          return;
+        }
+
+        const img = activeSlide.querySelector("img");
+        if (img) openLightbox(img.src, img.alt);
+      });
+    }
+
     root.loadCampus = loadCampus;
     loadCampus("mooca");
+  });
+
+  // Lightbox simples para ampliar a imagem clicada.
+  const lightbox = document.querySelector("[data-campus-lightbox]");
+  const lightboxImg = lightbox ? lightbox.querySelector("[data-campus-lightbox-image]") : null;
+  const lightboxClose = lightbox ? lightbox.querySelector("[data-campus-lightbox-close]") : null;
+
+  function openLightbox(src, alt) {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.hidden = false;
+    requestAnimationFrame(function () {
+      lightbox.classList.add("is-open");
+    });
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove("is-open");
+    document.body.style.overflow = "";
+    setTimeout(function () {
+      lightbox.hidden = true;
+    }, 250);
+  }
+
+  if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeLightbox();
   });
 
   // Alternância entre as unidades (chips "Mooca", "Piracicaba", "São José dos Campos").

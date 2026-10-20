@@ -20,4 +20,18 @@
       });
     });
   });
+
+  // Botão "Ver mais +" de cada unidade/período da Matriz Curricular:
+  // revela os grupos de disciplinas extras (Integração ao SUS, Inovações em Medicina etc.).
+  document.querySelectorAll("[data-unit-more]").forEach(function (button) {
+    const panel = button.closest(".unit-panel");
+    const extra = panel ? panel.querySelector("[data-unit-extra]") : null;
+    if (!extra) return;
+
+    button.addEventListener("click", function () {
+      const isOpen = extra.classList.toggle("is-open");
+      button.setAttribute("aria-expanded", String(isOpen));
+      button.textContent = isOpen ? "Ver menos -" : "Ver mais +";
+    });
+  });
 })();
