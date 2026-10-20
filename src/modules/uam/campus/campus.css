@@ -49,6 +49,17 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   width: 100%;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.campus-chip:hover,
+.campus-chip:focus-visible,
+.campus-chip--active:hover,
+.campus-chip--active:focus-visible,
+.campus-chip--inactive:hover,
+.campus-chip--inactive:focus-visible {
+  background-color: #212972;
+  color: var(--text-brand);
 }
 
 .campus-chip img {
@@ -105,12 +116,21 @@
   height: 64px;
   padding: 20px var(--spacing-large);
   border-radius: var(--radius-small);
+  border: 1px solid transparent;
   background-color: var(--surface-brand-primary);
   backdrop-filter: blur(20px);
   color: var(--text-footer);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.campus-panel__cta:hover,
+.campus-panel__cta:focus-visible {
+  background-color: #c9d1dc;
+  border-color: #212872;
+  color: #545b8e;
 }
 
 .campus-gallery {

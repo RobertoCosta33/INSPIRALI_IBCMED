@@ -128,7 +128,7 @@
   width: 22px;
   height: 2px;
   background-color: var(--text-brand);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.4s ease;
 }
 
 .menu-toggle[aria-expanded="true"] span:nth-child(1) {
@@ -174,6 +174,7 @@
   white-space: nowrap;
   color: var(--text-inverted);
   opacity: 0.92;
+  transition: opacity 0.4s ease;
 }
 
 .course-nav__link:hover,
@@ -239,4 +240,73 @@
   .course-nav__list {
     padding: var(--spacing-small) var(--page-gutter-mobile);
   }
+}
+
+/* Dropdown "Inscreva-se para 2027.1" */
+.header-cta-dropdown {
+  position: relative;
+}
+
+.header-cta-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.header-cta-dropdown__chevron {
+  transition: transform 0.3s ease;
+}
+
+.header-cta-dropdown.is-open .header-cta-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.header-cta-dropdown__menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 8px;
+  min-width: 280px;
+  z-index: 110;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-cta-dropdown__menu-inner {
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-small);
+  box-shadow: 0 16px 32px rgba(17, 17, 17, 0.15);
+  padding: var(--spacing-small);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header-cta-dropdown.is-open .header-cta-dropdown__menu,
+.header-cta-dropdown:hover .header-cta-dropdown__menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.header-cta-dropdown:hover .header-cta-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.header-cta-dropdown__item {
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-heading);
+  white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.header-cta-dropdown__item:hover,
+.header-cta-dropdown__item:focus-visible {
+  background-color: var(--surface-primary-subtle);
+  color: var(--text-brand);
 }

@@ -1,7 +1,10 @@
-// Controla a abertura/fechamento dos itens de "Disclosure"
-// (Metodologia e Perguntas frequentes).
+// Controla a abertura/fechamento dos itens de "Disclosure" do FAQ.
+// Escopado ao próprio container para não interferir com outros accordions
+// da página (ex.: Metodologia), que têm seu próprio script.
 (function () {
-  const items = document.querySelectorAll("[data-accordion-item]");
+  const container = document.querySelector(".faq-contato");
+  if (!container) return;
+  const items = container.querySelectorAll("[data-accordion-item]");
 
   items.forEach(function (item) {
     const trigger = item.querySelector("[data-accordion-trigger]");

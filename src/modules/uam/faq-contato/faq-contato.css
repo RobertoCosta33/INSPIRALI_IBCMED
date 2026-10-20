@@ -96,6 +96,13 @@
   color: var(--text-footer);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
+  transition: background-color 0.4s ease;
+}
+
+.faq-contato__submit:hover,
+.faq-contato__submit:focus-visible {
+  background-color: #212972;
+  color: #ffffff;
 }
 
 .faq-contato__disclaimer {
@@ -150,14 +157,19 @@
 }
 
 .faq-item__panel {
-  display: none;
-  padding: 0 var(--spacing-large) var(--spacing-large);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
   font-size: var(--font-size-sm);
   color: #141414;
 }
 
 .faq-item.is-open .faq-item__panel {
-  display: block;
+  max-height: 300px;
+}
+
+.faq-item__panel-inner {
+  padding: 0 var(--spacing-large) var(--spacing-large);
 }
 
 @media (max-width: 1024px) {

@@ -35,3 +35,31 @@
     });
   });
 })();
+
+// Dropdown "Inscreva-se para 2027.1" no header.
+(function () {
+  const dropdown = document.querySelector("[data-dropdown]");
+  if (!dropdown) return;
+
+  const trigger = dropdown.querySelector("[data-dropdown-trigger]");
+  if (!trigger) return;
+
+  function closeDropdown() {
+    dropdown.classList.remove("is-open");
+    trigger.setAttribute("aria-expanded", "false");
+  }
+
+  trigger.addEventListener("click", function (event) {
+    event.stopPropagation();
+    const isOpen = dropdown.classList.toggle("is-open");
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!dropdown.contains(event.target)) closeDropdown();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeDropdown();
+  });
+})();

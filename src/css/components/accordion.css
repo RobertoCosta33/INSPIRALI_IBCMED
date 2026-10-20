@@ -31,21 +31,36 @@
 }
 
 .accordion-trigger__icon {
+  position: relative;
   flex-shrink: 0;
   width: 16px;
   height: 16px;
 }
 
+.accordion-item--static .accordion-trigger {
+  cursor: default;
+}
+
+.accordion-trigger__icon .icon-plus,
 .accordion-trigger__icon .icon-minus {
-  display: none;
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.accordion-trigger__icon .icon-minus {
+  opacity: 0;
+  transform: rotate(-90deg);
 }
 
 .accordion-item.is-open .accordion-trigger__icon .icon-plus {
-  display: none;
+  opacity: 0;
+  transform: rotate(90deg);
 }
 
 .accordion-item.is-open .accordion-trigger__icon .icon-minus {
-  display: block;
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
 .accordion-item.is-open .accordion-trigger {
@@ -66,17 +81,23 @@
 }
 
 .accordion-panel {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
   background-color: var(--surface-secondary-subtle);
   border-radius: 0 0 var(--radius-small) var(--radius-small);
-  padding: var(--spacing-large);
-  padding-top: var(--spacing-medium);
+  transition: max-height 0.35s ease;
 }
 
 .accordion-item.is-open .accordion-panel {
+  max-height: 600px;
+}
+
+.accordion-panel__inner {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-large);
+  padding: var(--spacing-large);
+  padding-top: var(--spacing-medium);
 }
 
 .accordion-panel__title {

@@ -45,11 +45,13 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-sm);
   white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .footer-invitation__cta:hover,
 .footer-invitation__cta:focus-visible {
-  background-color: var(--surface-inverted);
+  background-color: #37545a;
+  color: #0a7466;
 }
 
 .footer-body {

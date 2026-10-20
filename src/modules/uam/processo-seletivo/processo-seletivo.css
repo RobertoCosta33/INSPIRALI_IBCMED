@@ -99,6 +99,7 @@
   font-weight: var(--font-weight-regular);
   color: var(--surface-primary-subtle);
   white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 .selection-card__tab.is-active {
@@ -106,6 +107,11 @@
   border-color: transparent;
   font-weight: var(--font-weight-bold);
   color: var(--text-brand);
+}
+
+.selection-card__tab:not(.is-active):hover,
+.selection-card__tab:not(.is-active):focus-visible {
+  background-color: #479f93;
 }
 
 .selection-card__panel {
@@ -188,7 +194,7 @@
   background-color: #ffffff;
   color: var(--text-brand);
   font-size: var(--font-size-lg);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .selection-card__cta:hover,
@@ -210,7 +216,7 @@
   border-radius: var(--radius-total);
   font-size: var(--font-size-sm);
   color: #e0fff9;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .selection-card__link:hover,
