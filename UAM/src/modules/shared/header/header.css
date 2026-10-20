@@ -156,10 +156,11 @@
 
 .course-nav__list {
   display: flex;
+  height: 56px;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  padding: var(--spacing-medium) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+  padding: var(--spacing-small) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -171,6 +172,7 @@
 .course-nav__link {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
+  font-weight: var(--font-weight-bold);
   white-space: nowrap;
   color: var(--text-inverted);
   opacity: 0.92;
