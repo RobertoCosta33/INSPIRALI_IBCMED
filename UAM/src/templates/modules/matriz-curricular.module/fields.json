@@ -48,6 +48,12 @@
     "default": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docs/Matriz_Curricular_Medicina_-_UAM_-_Novo_PPC.pdf"
   },
   {
+    "name": "download_2026_caption",
+    "label": "Legenda abaixo do botão (matriz 2026)",
+    "type": "text",
+    "default": "Para novos alunos"
+  },
+  {
     "name": "download_current_label",
     "label": "Texto do botão (matriz atual)",
     "type": "text",
@@ -58,6 +64,12 @@
     "label": "Arquivo PDF (matriz atual)",
     "type": "file",
     "default": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docs/57e5d6d0-f9d7-4167-9059-be004c1134e9.pdf"
+  },
+  {
+    "name": "download_current_caption",
+    "label": "Legenda abaixo do botão (matriz atual)",
+    "type": "text",
+    "default": "Para alunos a partir do 2º semestre"
   },
   {
     "name": "ppc_label",

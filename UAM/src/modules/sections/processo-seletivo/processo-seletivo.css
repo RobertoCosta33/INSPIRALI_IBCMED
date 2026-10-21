@@ -175,6 +175,11 @@
   color: #ffffff;
 }
 
+.selection-card__facts-note {
+  font-size: var(--font-size-xs);
+  color: #ffffff;
+}
+
 .selection-card__actions {
   display: flex;
   flex-direction: column;
@@ -237,8 +242,45 @@
 }
 
 @media (max-width: 640px) {
+  .selection-card {
+    padding: var(--spacing-medium);
+    gap: var(--spacing-large);
+  }
+
   .selection-card__tabs {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .selection-card__eyebrow,
+  .selection-card__name {
+    font-size: var(--font-size-xl);
+  }
+
+  .selection-card__lead {
+    font-size: var(--font-size-sm);
+  }
+
+  .selection-card__facts-note {
+    font-size: var(--font-size-xxs);
+  }
+
+  .selection-card__cta {
+    height: 40px;
+    padding: var(--spacing-small);
+    font-size: var(--font-size-xs);
+  }
+
+  .selection-card__cta img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Recorte da imagem de fundo é diferente no mobile (Figma: left -41.73%,
+     width 217.98%) — usar o recorte do desktop aqui esticava/espremia a
+     imagem por causa da proporção mais estreita do card. */
+  .selection-card__bg {
+    left: -41.73%;
+    width: 217.98%;
   }
 }

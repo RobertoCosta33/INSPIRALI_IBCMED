@@ -160,6 +160,124 @@
   }
 }
 
+/* Modal "Ver mais" — detalhes do coordenador (foto + bio completa) */
+.docente-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-extra-large);
+}
+
+.docente-modal[hidden] {
+  display: none;
+}
+
+.docente-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 15, 14, 0.75);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.docente-modal.is-open .docente-modal__backdrop {
+  opacity: 1;
+}
+
+.docente-modal__dialog {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 850px;
+  height: 528px;
+  max-height: 90vh;
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  transform: scale(0.96);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.docente-modal.is-open .docente-modal__dialog {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.docente-modal__photo-wrap {
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+}
+
+.docente-modal__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.docente-modal__content {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large);
+  overflow-y: auto;
+}
+
+.docente-modal__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-large);
+}
+
+.docente-modal__name {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-display, var(--font-family-base));
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.docente-modal__role {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-heading);
+  margin-top: var(--spacing-extra-small);
+}
+
+.docente-modal__close {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.docente-modal__close img {
+  width: 100%;
+  height: 100%;
+}
+
+.docente-modal__bio {
+  flex: 1 1 0;
+  background-color: #e0fff9;
+  border-radius: var(--radius-small);
+  padding: var(--spacing-medium) var(--spacing-large);
+}
+
+.docente-modal__bio p {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-heading);
+}
+
 @media (max-width: 1024px) {
   .docente-grid {
     height: auto;
@@ -170,5 +288,29 @@
     flex: 0 0 300px;
     width: 300px;
     height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .docente-modal {
+    padding: var(--spacing-medium);
+  }
+
+  .docente-modal__dialog {
+    flex-direction: column;
+    height: auto;
+    max-height: 85vh;
+  }
+
+  .docente-modal__photo-wrap {
+    flex: 0 0 260px;
+  }
+
+  .docente-modal__photo {
+    object-position: top center;
+  }
+
+  .docente-modal__content {
+    flex: 1 1 auto;
   }
 }

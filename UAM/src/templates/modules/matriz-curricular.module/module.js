@@ -17,6 +17,10 @@
           const isMatch = panel.getAttribute("data-tab-panel") === target;
           panel.hidden = !isMatch;
         });
+
+        // Em telas estreitas as abas rolam na horizontal — garante que a aba
+        // escolhida fique visível mesmo se estiver fora da área visível.
+        tab.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
       });
     });
   });

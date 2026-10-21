@@ -23,7 +23,7 @@
                   como professora de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica,
                   com ampla experiência.
                 </p>
-                <a class="docente-card__more" href="#">Ver mais +</a>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
               </div>
             </article>
 
@@ -40,7 +40,7 @@
                   como professora de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica,
                   com ampla experiência.
                 </p>
-                <a class="docente-card__more" href="#">Ver mais +</a>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
               </div>
             </article>
 
@@ -58,7 +58,7 @@
                   hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de
                   Cirurgiões.
                 </p>
-                <a class="docente-card__more" href="#">Ver mais +</a>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
               </div>
             </article>
 
@@ -76,7 +76,7 @@
                   hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de
                   Cirurgiões.
                 </p>
-                <a class="docente-card__more" href="#">Ver mais +</a>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
               </div>
             </article>
 
@@ -94,7 +94,7 @@
                   hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de
                   Cirurgiões.
                 </p>
-                <a class="docente-card__more" href="#">Ver mais +</a>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
               </div>
             </article>
 
@@ -112,7 +112,7 @@
                   hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de
                   Cirurgiões.
                 </p>
-                <a class="docente-card__more" href="#">Ver mais +</a>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
               </div>
             </article>
           </div>
@@ -127,6 +127,29 @@
           <div class="docente-carousel__steps">
             <span class="docente-carousel__step is-active" data-docente-step></span>
             <span class="docente-carousel__step" data-docente-step></span>
+          </div>
+        </div>
+
+        <div class="docente-modal" data-docente-modal hidden aria-hidden="true">
+          <div class="docente-modal__backdrop" data-docente-modal-close></div>
+          <div class="docente-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="docente-modal-name">
+            <div class="docente-modal__photo-wrap">
+              <img class="docente-modal__photo" data-docente-modal-photo src="" alt="" />
+            </div>
+            <div class="docente-modal__content">
+              <div class="docente-modal__header">
+                <div>
+                  <p class="docente-modal__name" id="docente-modal-name" data-docente-modal-name></p>
+                  <p class="docente-modal__role" data-docente-modal-role></p>
+                </div>
+                <button type="button" class="docente-modal__close" data-docente-modal-close aria-label="Fechar">
+                  <img src="/UAM/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+                </button>
+              </div>
+              <div class="docente-modal__bio">
+                <p data-docente-modal-bio></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -158,7 +158,18 @@
 
 @media (max-width: 860px) {
   .unit-tabs {
+    flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
+  }
+
+  .unit-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .unit-tab {
+    flex: 0 0 auto;
+    min-width: 90px;
+    white-space: nowrap;
   }
 }

@@ -17,14 +17,24 @@
 
   <div class="section-intro__text" style="margin-top: var(--spacing-extra-large);">{{ module.downloads_text }}</div>
   <div class="spiral-ctas">
-    <a class="spiral-cta" href="{{ module.download_2026_file }}" target="_blank" rel="noopener">
-      {{ module.download_2026_label }}
-      <img src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
-    </a>
-    <a class="spiral-cta" href="{{ module.download_current_file }}" target="_blank" rel="noopener">
-      {{ module.download_current_label }}
-      <img src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
-    </a>
+    <div class="spiral-cta-group">
+      <a class="spiral-cta" href="{{ module.download_2026_file }}" target="_blank" rel="noopener">
+        {{ module.download_2026_label }}
+        <img src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+      </a>
+      {% if module.download_2026_caption %}
+      <p class="spiral-cta-group__caption">{{ module.download_2026_caption }}</p>
+      {% endif %}
+    </div>
+    <div class="spiral-cta-group">
+      <a class="spiral-cta" href="{{ module.download_current_file }}" target="_blank" rel="noopener">
+        {{ module.download_current_label }}
+        <img src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+      </a>
+      {% if module.download_current_caption %}
+      <p class="spiral-cta-group__caption">{{ module.download_current_caption }}</p>
+      {% endif %}
+    </div>
     <a class="spiral-cta spiral-cta--outline" href="{{ module.ppc_url.url.href }}" target="_blank" rel="noopener">
       {{ module.ppc_label }}
       <img src="{{ get_asset_url('../../public/icons/icon-arrow-right-small.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
