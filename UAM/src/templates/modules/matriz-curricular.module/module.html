@@ -58,7 +58,7 @@
         <div class="unit-panel__disciplines">
           {% for discipline in group.disciplines %}
           <div class="unit-panel__discipline">
-            <p class="unit-panel__discipline-name">{{ discipline.name }}</p>
+            <p class="unit-panel__discipline-name">{{ discipline.discipline_name }}</p>
             <p class="unit-panel__discipline-hours">{{ discipline.hours }}</p>
           </div>
           {% endfor %}
@@ -75,7 +75,7 @@
             <div class="unit-panel__disciplines">
               {% for discipline in group.disciplines %}
               <div class="unit-panel__discipline">
-                <p class="unit-panel__discipline-name">{{ discipline.name }}</p>
+                <p class="unit-panel__discipline-name">{{ discipline.discipline_name }}</p>
                 <p class="unit-panel__discipline-hours">{{ discipline.hours }}</p>
               </div>
               {% endfor %}

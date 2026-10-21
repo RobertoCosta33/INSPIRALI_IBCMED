@@ -45,7 +45,7 @@
         <div class="header-cta-dropdown__menu" data-dropdown-menu>
           <div class="header-cta-dropdown__menu-inner">
             {% for item in module.enrollment_items %}
-            <a class="header-cta-dropdown__item" href="{{ item.url.url.href }}" target="_blank" rel="noopener">{{ item.label }}</a>
+            <a class="header-cta-dropdown__item" href="{{ item.url.url.href }}" target="_blank" rel="noopener">{{ item.item_label }}</a>
             {% endfor %}
           </div>
         </div>
@@ -56,7 +56,7 @@
   <nav class="course-nav" aria-label="Navegação do curso">
     <div class="course-nav__list">
       {% for link in module.course_nav_links %}
-      <a class="course-nav__link" href="{{ link.url.url.href }}"{% if link.url.url.type == "EXTERNAL" and "http" in link.url.url.href %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+      <a class="course-nav__link" href="{{ link.url.url.href }}"{% if link.url.url.type == "EXTERNAL" and "http" in link.url.url.href %} target="_blank" rel="noopener"{% endif %}>{{ link.link_label }}</a>
       {% endfor %}
     </div>
   </nav>

@@ -1,30 +1,115 @@
 [
-  { "name": "eyebrow", "label": "Eyebrow", "type": "text", "default": "SEU FUTURO NA MEDICINA" },
-  { "name": "title", "label": "Título", "type": "text", "default": "Explore as áreas de pós-graduação" },
-  { "name": "intro_text", "label": "Texto introdutório", "type": "richtext", "default": "Conheça as áreas do conhecimento da Inspirali Pós Medicina e encontre cursos para o seu momento de carreira." },
-  { "name": "cta_label", "label": "Texto do botão", "type": "text", "default": "Saiba mais" },
-  { "name": "cta_url", "label": "Link do botão (definir quando houver destino)", "type": "url", "default": { "url": { "href": "#", "type": "EXTERNAL" } } },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "SEU FUTURO NA MEDICINA"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Explore as áreas de pós-graduação"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Conheça as áreas do conhecimento da Inspirali Pós Medicina e encontre cursos para o seu momento de carreira."
+  },
+  {
+    "name": "cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Saiba mais"
+  },
+  {
+    "name": "cta_url",
+    "label": "Link do botão (definir quando houver destino)",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "#",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
   {
     "name": "cards",
     "label": "Cartões de áreas",
     "type": "group",
-    "occurrence": { "min": 1, "max": 15, "default": 11 },
+    "occurrence": {
+      "min": 1,
+      "max": 15,
+      "default": 11
+    },
     "children": [
-      { "name": "image", "label": "Imagem", "type": "image", "default": { "src": "", "alt": "" } },
-      { "name": "text", "label": "Texto (especialidades)", "type": "richtext", "default": "" },
-      { "name": "title", "label": "Título", "type": "text", "default": "" }
+      {
+        "name": "image",
+        "label": "Imagem",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "text",
+        "label": "Texto (especialidades)",
+        "type": "richtext",
+        "default": ""
+      },
+      {
+        "name": "title",
+        "label": "Título",
+        "type": "text",
+        "default": ""
+      }
     ],
     "default": [
-      { "text": "Pediatria, Neonatologia, Neuropediatria e Nutrologia Pediátrica.", "title": "Saúde da Criança e do Adolescente" },
-      { "text": "Ultrassonografia, Ecodoppler e Imagem da Mama.", "title": "Saúde em Imagem e Diagnóstico" },
-      { "text": "Ginecologia e Obstetrícia, Uroginecologia e Ginecologia Regenerativa.", "title": "Saúde da Mulher" },
-      { "text": "Dermatologia Clínica e Cosmética, Cirurgia Ambulatorial Dermatológica e Estética Corporal Feminina.", "title": "Saúde da Pele e Estética" },
-      { "text": "Nutrologia, Medicina do Esporte e Endocrinologia e Metabologia.", "title": "Saúde Metabólica e Performance" },
-      { "text": "Endoscopia Digestiva e Fellowship em Colonoscopia.", "title": "Saúde Digestiva" },
-      { "text": "Pós-graduação em Geriatria.", "title": "Saúde do Idoso" },
-      { "text": "Medicina do Trabalho e Perícia Médica.", "title": "Saúde focada em Gestão e Tecnologia" },
-      { "text": "Urgência e Emergência e Medicina da Dor e Terapias Intervencionistas.", "title": "Saúde Clínica" },
-      { "text": "Psiquiatria, Neurologia, Sexologia Clínica e Medicina do Sono.", "title": "Saúde Mental e Comportamental" }
+      {
+        "text": "Pediatria, Neonatologia, Neuropediatria e Nutrologia Pediátrica.",
+        "title": "Saúde da Criança e do Adolescente"
+      },
+      {
+        "text": "Ultrassonografia, Ecodoppler e Imagem da Mama.",
+        "title": "Saúde em Imagem e Diagnóstico"
+      },
+      {
+        "text": "Ginecologia e Obstetrícia, Uroginecologia e Ginecologia Regenerativa.",
+        "title": "Saúde da Mulher"
+      },
+      {
+        "text": "Dermatologia Clínica e Cosmética, Cirurgia Ambulatorial Dermatológica e Estética Corporal Feminina.",
+        "title": "Saúde da Pele e Estética"
+      },
+      {
+        "text": "Nutrologia, Medicina do Esporte e Endocrinologia e Metabologia.",
+        "title": "Saúde Metabólica e Performance"
+      },
+      {
+        "text": "Endoscopia Digestiva e Fellowship em Colonoscopia.",
+        "title": "Saúde Digestiva"
+      },
+      {
+        "text": "Pós-graduação em Geriatria.",
+        "title": "Saúde do Idoso"
+      },
+      {
+        "text": "Medicina do Trabalho e Perícia Médica.",
+        "title": "Saúde focada em Gestão e Tecnologia"
+      },
+      {
+        "text": "Urgência e Emergência e Medicina da Dor e Terapias Intervencionistas.",
+        "title": "Saúde Clínica"
+      },
+      {
+        "text": "Psiquiatria, Neurologia, Sexologia Clínica e Medicina do Sono.",
+        "title": "Saúde Mental e Comportamental"
+      }
     ]
   }
 ]

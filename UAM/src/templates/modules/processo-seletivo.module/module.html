@@ -30,7 +30,7 @@
     <div class="selection-card__panel" data-tab-panel="tab-{{ loop.index0 }}"{% if not loop.first %} hidden{% endif %}>
       <div class="selection-card__info">
         <span class="selection-status">{{ tab.status_label }}</span>
-        <p class="selection-card__name">{{ tab.name }}</p>
+        <p class="selection-card__name">{{ tab.modality_name }}</p>
         <div class="selection-card__description">{{ tab.description }}</div>
       </div>
       {% if tab.facts %}
@@ -79,7 +79,7 @@
         <div class="edital-item__panel" data-accordion-panel>
           <div class="edital-item__panel-inner">
             {% for link in item.links %}
-            <a class="edital-item__link" href="{{ link.url.url.href }}" target="_blank" rel="noopener">→  {{ link.label }}</a>
+            <a class="edital-item__link" href="{{ link.url.url.href }}" target="_blank" rel="noopener">→  {{ link.link_label }}</a>
             {% endfor %}
           </div>
         </div>
@@ -90,5 +90,4 @@
 </div>
 
 {{ require_css(get_asset_url('./module.css')) }}
-{{ require_css(get_asset_url('./edital-modal.css')) }}
 {{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

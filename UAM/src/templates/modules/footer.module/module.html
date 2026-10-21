@@ -11,7 +11,7 @@
         <p class="footer-col__title">{{ column.title }}</p>
         <div class="footer-col__links">
           {% for link in column.links %}
-          <a href="{{ link.url.url.href }}" target="_blank" rel="noopener">{{ link.label }} <span class="footer-col__links-arrow">→</span></a>
+          <a href="{{ link.url.url.href }}" target="_blank" rel="noopener">{{ link.link_label }} <span class="footer-col__links-arrow">→</span></a>
           {% endfor %}
         </div>
       </div>
@@ -22,7 +22,7 @@
         <div class="footer-col__contact">
           {% for item in module.contact_items %}
           <div>
-            <p class="footer-col__contact-label">{{ item.label }}</p>
+            <p class="footer-col__contact-label">{{ item.contact_label }}</p>
             <p class="footer-col__contact-value">{{ item.value }}</p>
           </div>
           {% endfor %}

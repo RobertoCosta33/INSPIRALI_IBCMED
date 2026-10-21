@@ -68,12 +68,15 @@
   {
     "name": "ppc_url",
     "label": "Link do projeto pedagógico",
-    "type": "url",
+    "type": "link",
     "default": {
       "url": {
         "href": "https://portal.anhembi.br/sobre/documentos-institucionais/",
-        "type": "EXTERNAL"
-      }
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
     }
   },
   {
@@ -137,7 +140,7 @@
             },
             "children": [
               {
-                "name": "name",
+                "name": "discipline_name",
                 "label": "Nome da disciplina",
                 "type": "text",
                 "default": ""
@@ -179,7 +182,7 @@
             },
             "children": [
               {
-                "name": "name",
+                "name": "discipline_name",
                 "label": "Nome da disciplina",
                 "type": "text",
                 "default": ""
@@ -207,12 +210,12 @@
             "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
             "disciplines": [
               {
-                "name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica I",
-                "hours": "180h"
+                "hours": "180h",
+                "discipline_name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica I"
               },
               {
-                "name": "Raciocínio Clínico Colaborativo I",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Raciocínio Clínico Colaborativo I"
               }
             ]
           },
@@ -220,12 +223,12 @@
             "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
             "disciplines": [
               {
-                "name": "Habilidades Médicas I",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Habilidades Médicas I"
               },
               {
-                "name": "Desenvolvimento Pessoal, Profissional e Ético I",
-                "hours": "18h"
+                "hours": "18h",
+                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético I"
               }
             ]
           }
@@ -235,8 +238,8 @@
             "group_title": "INTEGRAÇÃO AO SUS",
             "disciplines": [
               {
-                "name": "Práticas Médicas e Interprofissionais (Extensão*) I",
-                "hours": "144h"
+                "hours": "144h",
+                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) I"
               }
             ]
           },
@@ -244,8 +247,8 @@
             "group_title": "INOVAÇÕES EM MEDICINA",
             "disciplines": [
               {
-                "name": "Integração Saúde, Sociedade e Ambiente I",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Integração Saúde, Sociedade e Ambiente I"
               }
             ]
           }
@@ -262,12 +265,12 @@
             "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
             "disciplines": [
               {
-                "name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica II",
-                "hours": "180h"
+                "hours": "180h",
+                "discipline_name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica II"
               },
               {
-                "name": "Raciocínio Clínico Colaborativo II",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Raciocínio Clínico Colaborativo II"
               }
             ]
           },
@@ -275,12 +278,12 @@
             "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
             "disciplines": [
               {
-                "name": "Habilidades Médicas II",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Habilidades Médicas II"
               },
               {
-                "name": "Desenvolvimento Pessoal, Profissional e Ético II",
-                "hours": "18h"
+                "hours": "18h",
+                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético II"
               }
             ]
           }
@@ -290,8 +293,8 @@
             "group_title": "INTEGRAÇÃO AO SUS",
             "disciplines": [
               {
-                "name": "Práticas Médicas e Interprofissionais (Extensão*) II",
-                "hours": "144h"
+                "hours": "144h",
+                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) II"
               }
             ]
           },
@@ -299,8 +302,8 @@
             "group_title": "INOVAÇÕES EM MEDICINA",
             "disciplines": [
               {
-                "name": "Integração Saúde, Sociedade e Ambiente II",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Integração Saúde, Sociedade e Ambiente II"
               }
             ]
           }
@@ -317,12 +320,12 @@
             "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
             "disciplines": [
               {
-                "name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica III",
-                "hours": "180h"
+                "hours": "180h",
+                "discipline_name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica III"
               },
               {
-                "name": "Raciocínio Clínico Colaborativo III",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Raciocínio Clínico Colaborativo III"
               }
             ]
           },
@@ -330,16 +333,16 @@
             "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
             "disciplines": [
               {
-                "name": "Habilidades Médicas III",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Habilidades Médicas III"
               },
               {
-                "name": "Bases Farmacológicas e Não-Farmacológicas I",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Bases Farmacológicas e Não-Farmacológicas I"
               },
               {
-                "name": "Desenvolvimento Pessoal, Profissional e Ético III",
-                "hours": "18h"
+                "hours": "18h",
+                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético III"
               }
             ]
           }
@@ -349,8 +352,8 @@
             "group_title": "INTEGRAÇÃO AO SUS",
             "disciplines": [
               {
-                "name": "Práticas Médicas e Interprofissionais (Extensão*) III",
-                "hours": "144h"
+                "hours": "144h",
+                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) III"
               }
             ]
           },
@@ -358,8 +361,8 @@
             "group_title": "INOVAÇÕES EM MEDICINA",
             "disciplines": [
               {
-                "name": "Ciência e Tecnologias Médicas I",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Ciência e Tecnologias Médicas I"
               }
             ]
           }
@@ -376,12 +379,12 @@
             "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
             "disciplines": [
               {
-                "name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica IV",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica IV"
               },
               {
-                "name": "Raciocínio Clínico Colaborativo IV",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Raciocínio Clínico Colaborativo IV"
               }
             ]
           },
@@ -389,16 +392,16 @@
             "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
             "disciplines": [
               {
-                "name": "Habilidades Médicas IV",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Habilidades Médicas IV"
               },
               {
-                "name": "Bases Farmacológicas e Não-Farmacológicas II",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Bases Farmacológicas e Não-Farmacológicas II"
               },
               {
-                "name": "Desenvolvimento Pessoal, Profissional e Ético IV",
-                "hours": "18h"
+                "hours": "18h",
+                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético IV"
               }
             ]
           }
@@ -408,8 +411,8 @@
             "group_title": "INTEGRAÇÃO AO SUS",
             "disciplines": [
               {
-                "name": "Práticas Médicas e Interprofissionais (Extensão*) IV",
-                "hours": "144h"
+                "hours": "144h",
+                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) IV"
               }
             ]
           },
@@ -417,8 +420,8 @@
             "group_title": "INOVAÇÕES EM MEDICINA",
             "disciplines": [
               {
-                "name": "Ciência e Tecnologias Médicas II",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Ciência e Tecnologias Médicas II"
               }
             ]
           }
@@ -435,12 +438,12 @@
             "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
             "disciplines": [
               {
-                "name": "Medicina Integrada I",
-                "hours": "144h"
+                "hours": "144h",
+                "discipline_name": "Medicina Integrada I"
               },
               {
-                "name": "Raciocínio Clínico Colaborativo V",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Raciocínio Clínico Colaborativo V"
               }
             ]
           },
@@ -448,16 +451,16 @@
             "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
             "disciplines": [
               {
-                "name": "Habilidades Médicas V",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Habilidades Médicas V"
               },
               {
-                "name": "Habilidades Procedurais e Cirúrgicas I",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Habilidades Procedurais e Cirúrgicas I"
               },
               {
-                "name": "Desenvolvimento Pessoal, Profissional e Ético V",
-                "hours": "18h"
+                "hours": "18h",
+                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético V"
               }
             ]
           }
@@ -467,8 +470,8 @@
             "group_title": "INTEGRAÇÃO AO SUS",
             "disciplines": [
               {
-                "name": "Práticas Médicas e Interprofissionais (Extensão*) V",
-                "hours": "252h"
+                "hours": "252h",
+                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) V"
               }
             ]
           }
@@ -485,12 +488,12 @@
             "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
             "disciplines": [
               {
-                "name": "Medicina Integrada II",
-                "hours": "144h"
+                "hours": "144h",
+                "discipline_name": "Medicina Integrada II"
               },
               {
-                "name": "Raciocínio Clínico Colaborativo VI",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Raciocínio Clínico Colaborativo VI"
               }
             ]
           },
@@ -498,16 +501,16 @@
             "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
             "disciplines": [
               {
-                "name": "Habilidades Médicas VI",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Habilidades Médicas VI"
               },
               {
-                "name": "Habilidades Procedurais e Cirúrgicas II",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Habilidades Procedurais e Cirúrgicas II"
               },
               {
-                "name": "Desenvolvimento Pessoal, Profissional e Ético VI",
-                "hours": "18h"
+                "hours": "18h",
+                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético VI"
               }
             ]
           }
@@ -517,8 +520,8 @@
             "group_title": "INTEGRAÇÃO AO SUS",
             "disciplines": [
               {
-                "name": "Práticas Médicas e Interprofissionais (Extensão*) VI",
-                "hours": "252h"
+                "hours": "252h",
+                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) VI"
               }
             ]
           }
@@ -535,12 +538,12 @@
             "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
             "disciplines": [
               {
-                "name": "Medicina Integrada III",
-                "hours": "144h"
+                "hours": "144h",
+                "discipline_name": "Medicina Integrada III"
               },
               {
-                "name": "Raciocínio Clínico Colaborativo VII",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Raciocínio Clínico Colaborativo VII"
               }
             ]
           },
@@ -548,16 +551,16 @@
             "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
             "disciplines": [
               {
-                "name": "Habilidades Médicas VII",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Habilidades Médicas VII"
               },
               {
-                "name": "Habilidades Procedurais e Cirúrgicas III",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Habilidades Procedurais e Cirúrgicas III"
               },
               {
-                "name": "Desenvolvimento Pessoal, Profissional e Ético VII",
-                "hours": "18h"
+                "hours": "18h",
+                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético VII"
               }
             ]
           }
@@ -567,8 +570,8 @@
             "group_title": "INTEGRAÇÃO AO SUS",
             "disciplines": [
               {
-                "name": "Práticas Médicas e Interprofissionais (Extensão*) VII",
-                "hours": "252h"
+                "hours": "252h",
+                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) VII"
               }
             ]
           }
@@ -585,12 +588,12 @@
             "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
             "disciplines": [
               {
-                "name": "Medicina Integrada IV",
-                "hours": "144h"
+                "hours": "144h",
+                "discipline_name": "Medicina Integrada IV"
               },
               {
-                "name": "Raciocínio Clínico Colaborativo VIII",
-                "hours": "108h"
+                "hours": "108h",
+                "discipline_name": "Raciocínio Clínico Colaborativo VIII"
               }
             ]
           },
@@ -598,16 +601,16 @@
             "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
             "disciplines": [
               {
-                "name": "Habilidades Médicas VIII",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Habilidades Médicas VIII"
               },
               {
-                "name": "Habilidades Procedurais e Cirúrgicas IV",
-                "hours": "72h"
+                "hours": "72h",
+                "discipline_name": "Habilidades Procedurais e Cirúrgicas IV"
               },
               {
-                "name": "Desenvolvimento Pessoal, Profissional e Ético VIII",
-                "hours": "18h"
+                "hours": "18h",
+                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético VIII"
               }
             ]
           }
@@ -617,8 +620,8 @@
             "group_title": "INTEGRAÇÃO AO SUS",
             "disciplines": [
               {
-                "name": "Práticas Médicas e Interprofissionais (Extensão*) VIII",
-                "hours": "252h"
+                "hours": "252h",
+                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) VIII"
               }
             ]
           }
@@ -635,16 +638,16 @@
             "group_title": "9º PERÍODO",
             "disciplines": [
               {
-                "name": "Saúde da Mulher e da Criança I (120h+120h)",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde da Mulher e da Criança I (120h+120h)"
               },
               {
-                "name": "Saúde da Família e da Comunidade I + Saúde Mental I (120h+120h)",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde da Família e da Comunidade I + Saúde Mental I (120h+120h)"
               },
               {
-                "name": "Saúde do Adulto I",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde do Adulto I"
               }
             ]
           }
@@ -654,16 +657,16 @@
             "group_title": "10º PERÍODO",
             "disciplines": [
               {
-                "name": "Saúde da Mulher e da Criança II (120h+120h)",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde da Mulher e da Criança II (120h+120h)"
               },
               {
-                "name": "Saúde da Família e da Comunidade II + Saúde Mental II (120h+120h)",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde da Família e da Comunidade II + Saúde Mental II (120h+120h)"
               },
               {
-                "name": "Saúde do Adulto II",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde do Adulto II"
               }
             ]
           },
@@ -671,16 +674,16 @@
             "group_title": "11º PERÍODO",
             "disciplines": [
               {
-                "name": "Saúde da Mulher e da Criança III (120h+120h)",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde da Mulher e da Criança III (120h+120h)"
               },
               {
-                "name": "Saúde da Família e da Comunidade III + Saúde do Idoso I (120h+120h)",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde da Família e da Comunidade III + Saúde do Idoso I (120h+120h)"
               },
               {
-                "name": "Urgências e Emergências I",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Urgências e Emergências I"
               }
             ]
           },
@@ -688,16 +691,16 @@
             "group_title": "12º PERÍODO",
             "disciplines": [
               {
-                "name": "Estágio Eletivo",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Estágio Eletivo"
               },
               {
-                "name": "Saúde da Família e da Comunidade IV + Saúde do Idoso II (120h+120h)",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Saúde da Família e da Comunidade IV + Saúde do Idoso II (120h+120h)"
               },
               {
-                "name": "Urgência e Emergência II",
-                "hours": "240h"
+                "hours": "240h",
+                "discipline_name": "Urgência e Emergência II"
               }
             ]
           },
@@ -705,12 +708,12 @@
             "group_title": "UNIDADES CURRICULARES OPTATIVAS",
             "disciplines": [
               {
-                "name": "LIBRAS",
-                "hours": "80h"
+                "hours": "80h",
+                "discipline_name": "LIBRAS"
               },
               {
-                "name": "Inglês Instrumental",
-                "hours": "80h"
+                "hours": "80h",
+                "discipline_name": "Inglês Instrumental"
               }
             ]
           },
@@ -718,20 +721,20 @@
             "group_title": "UNIDADES CURRICULARES ELETIVAS",
             "disciplines": [
               {
-                "name": "Tópicos Especiais em Medicina I",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Tópicos Especiais em Medicina I"
               },
               {
-                "name": "Tópicos Especiais em Medicina II",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Tópicos Especiais em Medicina II"
               },
               {
-                "name": "Tópicos Especiais em Medicina III",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Tópicos Especiais em Medicina III"
               },
               {
-                "name": "Tópicos Especiais em Medicina IV",
-                "hours": "36h"
+                "hours": "36h",
+                "discipline_name": "Tópicos Especiais em Medicina IV"
               }
             ]
           }
