@@ -1,0 +1,83 @@
+/* ====================================================================
+   Módulo: Seu Futuro na Medicina (UAM)
+   Figma: "Seu Futuro na Medicina" (181:2362) — painel contido
+   ==================================================================== */
+
+.future-panel {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 88px;
+  align-items: center;
+}
+
+.future-header__text {
+  flex: 0 0 450px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.future-header__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.future-header__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  padding: 20px 24px;
+  gap: 16px;
+  border-radius: var(--radius-small);
+  border: 1px solid var(--border-brand-primary);
+  background-color: rgba(254, 255, 250, 0.08);
+  backdrop-filter: blur(20px);
+  color: var(--text-brand);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.future-header__cta img {
+  width: 24px;
+  height: 24px;
+}
+
+.future-header__cta:hover,
+.future-header__cta:focus-visible {
+  background-color: #c9d1dc;
+  color: #545b8e;
+}
+
+
+
+.card-carousel {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+  align-items: center;
+}
+
+.card-carousel__track {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .future-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-extra-large);
+  }
+
+  .future-header__text {
+    flex-basis: auto;
+  }
+}

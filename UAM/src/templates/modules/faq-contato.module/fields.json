@@ -1,0 +1,38 @@
+[
+  { "name": "eyebrow", "label": "Eyebrow", "type": "text", "default": "PERGUNTAS FREQUENTES" },
+  { "name": "title", "label": "Título", "type": "text", "default": "Tem alguma dúvida sobre a Medicina Anhembi Morumbi?" },
+  {
+    "name": "show_form",
+    "label": "Mostrar formulário de contato",
+    "type": "boolean",
+    "default": false,
+    "help_text": "Desativado por enquanto — o formulário será reativado no futuro. Quando ativar, os dropdowns deixam de ficar centralizados e voltam a dividir espaço com o formulário."
+  },
+  { "name": "form_title", "label": "Texto acima do formulário", "type": "text", "default": "É muito fácil! Preencha o formulário e nós entraremos em contato com você!" },
+  {
+    "name": "contact_form",
+    "label": "Formulário HubSpot",
+    "type": "form",
+    "default": { "response_type": "inline", "message": "Obrigado! Entraremos em contato em breve." },
+    "help_text": "Selecione o formulário do HubSpot criado para captar esses leads."
+  },
+  { "name": "form_disclaimer", "label": "Aviso de privacidade", "type": "richtext", "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"https://portal.anhembi.br/canal-de-privacidade/\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>." },
+  {
+    "name": "faq_items",
+    "label": "Perguntas frequentes",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 20, "default": 6 },
+    "children": [
+      { "name": "question", "label": "Pergunta", "type": "text", "default": "" },
+      { "name": "answer", "label": "Resposta", "type": "richtext", "default": "" }
+    ],
+    "default": [
+      { "question": "Como fazer faculdade de Medicina em São Paulo?", "answer": "Confira o processo seletivo e as formas de ingresso disponíveis na Anhembi Morumbi, em São Paulo." },
+      { "question": "É possível se transferir para a Medicina Anhembi Morumbi?", "answer": "Sim, consulte o edital de Transferência Externa 27.1 para conhecer os critérios e prazos." },
+      { "question": "Como funciona o FIES para Medicina?", "answer": "O FIES é um financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social)." },
+      { "question": "Como funciona o Prouni para Medicina?", "answer": "O Prouni oferece bolsas de estudo integrais (100%) ou parciais (50%) através da sua nota do Enem." },
+      { "question": "Por que estudar Medicina em São Paulo?", "answer": "São Paulo concentra uma rede ampla de hospitais, centros de saúde e oportunidades de prática clínica." },
+      { "question": "Quanto ganha um médico recém-formado?", "answer": "A remuneração varia conforme a especialidade, a região e o regime de trabalho escolhido." }
+    ]
+  }
+]

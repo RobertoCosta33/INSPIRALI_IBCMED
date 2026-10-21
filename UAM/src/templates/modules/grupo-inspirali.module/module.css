@@ -1,0 +1,197 @@
+/* ====================================================================
+   Módulo: Grupo Inspirali (UAM)
+   Figma: "Grupo Inspirali" (150:4207)
+   ==================================================================== */
+
+.inspirali-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+}
+
+.inspirali-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+}
+
+.inspirali-mark {
+  width: 204px;
+  height: 24px;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.inspirali-header__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-display, var(--font-family-base));
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
+  max-width: 606px;
+}
+
+.inspirali-header__text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+  max-width: 606px;
+}
+
+.stats-grid {
+  display: flex;
+  gap: var(--spacing-large);
+  flex-wrap: wrap;
+}
+
+.lifelong {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lifelong__text {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lifelong__text > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.lifelong__label {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
+}
+
+.lifelong__sublabel {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.lifelong__text > p {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.timeline {
+  flex: 1 1 400px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-step {
+  display: flex;
+  gap: var(--spacing-medium);
+  align-items: stretch;
+}
+
+.timeline-step:last-child .timeline-step__title {
+  color: var(--text-brand);
+}
+
+.timeline-step__connector {
+  flex: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-step__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-relaxed);
+  flex-shrink: 0;
+}
+
+.timeline-step__dot img {
+  width: 16px;
+  height: 16px;
+}
+
+.timeline-step__line {
+  width: 2px;
+  flex: 1 1 auto;
+  background-color: var(--border-brand-soft-strong);
+  min-height: 24px;
+}
+
+.timeline-step__content {
+  flex: 1 1 0;
+  padding-bottom: var(--spacing-large);
+}
+
+.timeline-step__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.timeline-step__text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.partner-logos {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  background-color: var(--surface-secondary-subtle);
+  border: 1px solid var(--border-brand-soft);
+  border-radius: 12px;
+  padding: var(--spacing-extra-large);
+  overflow-x: auto;
+}
+
+.partner-logos img {
+  width: auto;
+  height: auto;
+  max-width: none;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .lifelong {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    min-width: 100%;
+  }
+
+  .partner-logos {
+    justify-content: flex-start;
+  }
+}

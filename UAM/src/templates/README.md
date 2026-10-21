@@ -1,15 +1,85 @@
-# UAM/src/templates/
+# UAM/src/templates/ — Tema HubSpot (IBCMED - Anhembi Morumbi)
 
-Pasta reservada para a fase de conversão HubSpot (HubL) **desta
-instituição (UAM)**. Cada instituição tem a sua própria `src/templates/`
-(ex.: `UNIFACS/src/templates/`) — não existe uma pasta de templates
-compartilhada entre instituições.
+Conversão da página estática (`UAM/src/pages/index.html` + `UAM/src/modules/`)
+para um tema HubSpot CMS (HubL), pronta para upload quando houver uma conta/
+Personal Access Key configurada (ver seção "Próximos passos").
 
-Enquanto a página está em construção/aprovação como HTML/CSS/JS puro
-(ver `UAM/src/pages/`, `UAM/src/modules/` e `UAM/src/public/`), este
-diretório fica praticamente vazio. Quando a página for aprovada
-visualmente, ela é portada para cá seguindo a estrutura de tema do
-HubSpot (`theme.json`, `fields.json`, `templates/layouts/base.html`,
-`modules/<secao>.module/...`), uma seção por módulo, espelhando
-`UAM/src/modules/sections/` — ver `AGENTS.md` na raiz do projeto para
-o fluxo completo.
+## Estrutura
+
+```
+UAM/src/templates/
+  theme.json                 # metadados do tema
+  fields.json                 # campos globais de estilo (cores/fonte)
+  templates/
+    layouts/
+      base.html                # <head>, header/footer/widgets, CSS/JS globais
+    medicina-uam.html           # template de página — monta os módulos de seção em ordem
+  modules/
+    header.module/              # compartilhado
+    footer.module/               # compartilhado
+    floating-contact.module/     # compartilhado — "Ligue já!" + WhatsApp (+ "Tem alguma dúvida?" desativável)
+    page-search.module/          # compartilhado — busca Ctrl+F (mark.js)
+    processo-seletivo.module/    # inclui o modal de editais
+    sobre-instituicao.module/
+    nosso-dna.module/
+    matriz-curricular.module/
+    corpo-docente.module/
+    campus.module/
+    metodologia.module/
+    ecossistema.module/
+    financiamentos.module/
+    grupo-inspirali.module/
+    seu-futuro.module/
+    faq-contato.module/          # inclui o formulário (desativável)
+  css/
+    tokens.css, base.css, components/*.css   # cópia de UAM/src/css/ (design system compartilhado, carregado 1x em base.html)
+  vendor/
+    mark.min.js
+```
+
+Cada `*.module/` segue o padrão HubSpot: `meta.json` (metadados do módulo),
+`fields.json` (campos editáveis no editor de conteúdo) e `module.html`
+(HubL + `require_css`/`require_js` apontando para `module.css`/`module.js`
+do próprio módulo, via `get_asset_url('./module.css')`).
+
+## Decisões de conversão
+
+- **Todo conteúdo de texto, imagem e link é editável via `fields.json`**
+  (títulos, textos, CTAs, imagens, itens de listas/carrosséis) — grupos
+  repetíveis (`type: "group"`, `occurrence`) são usados para listas como
+  pilares do DNA, estatísticas do Grupo Inspirali, coordenadores, fotos de
+  campus, disciplinas da matriz curricular, perguntas do FAQ, etc.
+- **Formulário de contato (seção FAQ) e botão flutuante "Tem alguma
+  dúvida?"** seguem desativados por padrão (`show_form` / `show_doubt_button`
+  = `false` no `fields.json`), com HTML pronto usando o módulo nativo de
+  formulário do HubSpot (`{% form form_to_use=module.form_id %}`). Para
+  reativar: marque o campo booleano no editor e informe o GUID do formulário
+  (criado em Marketing > Formulários no HubSpot).
+- **Matriz Curricular e Campus** usam grupos aninhados (unidade → grupo →
+  disciplina; campus → fotos) e um pequeno bloco de dados serializados em
+  JSON (`<script type="application/json">`) para alimentar o `module.js` do
+  carrossel de campus — assim o JS genérico de carrossel continua
+  reaproveitável, mas os dados (fotos, vídeo do YouTube, endereço, etc.)
+  vêm 100% dos campos do módulo.
+- **PDFs da Matriz Curricular** usam campos do tipo `file` — serão
+  apontados para o arquivo certo assim que forem enviados ao File Manager
+  do HubSpot.
+- **Imagens**: os campos de imagem (`type: "image"`) ficam com `src` vazio
+  no `fields.json` até as imagens serem enviadas ao Design Manager/File
+  Manager do HubSpot — nesse momento, edite o conteúdo da página pelo
+  editor visual (ou atualize os defaults) apontando para a URL final.
+  Ícones decorativos fixos (que não variam por instituição) continuam
+  referenciados via `get_asset_url()` direto no `module.html`.
+
+## Próximos passos (antes de publicar)
+
+1. Autenticar a HubSpot CLI (`hs init` / `hs auth`) com a conta de destino.
+2. Enviar `UAM/src/templates/` para o Design Manager (`hs cms upload` —
+   nunca usar `--clean`; sempre buscar/comparar o conteúdo remoto antes).
+3. Fazer upload das imagens/PDFs para o Design Manager/File Manager e
+   atualizar os campos de imagem/arquivo com as URLs reais.
+4. Criar a página em Marketing > Website > Páginas usando o template
+   `medicina-uam.html` e revisar visualmente no preview do HubSpot antes
+   de publicar.
+5. Quando o formulário de contato for aprovado, criar o formulário no
+   HubSpot, ativar `show_form`/`show_doubt_button` e preencher o GUID.

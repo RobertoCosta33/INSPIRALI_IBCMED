@@ -1,0 +1,19 @@
+<section class="section section--tint-strong" id="nosso-dna" aria-labelledby="dna-title">
+  <p class="eyebrow">{{ module.eyebrow }}</p>
+  <h2 class="section-intro__title" id="dna-title">{{ module.title }}</h2>
+  <div class="section-intro__text">{{ module.intro_text }}</div>
+
+  <div class="dna-pillars">
+    {% for pillar in module.pillars %}
+    <div class="dna-pillar">
+      <img class="dna-pillar__photo" src="{{ pillar.photo.src }}" alt="{{ pillar.photo.alt }}" loading="lazy" />
+      <span class="dna-pillar__divider" aria-hidden="true"></span>
+      <img class="dna-pillar__icon" src="{{ pillar.icon.src }}" alt="" aria-hidden="true" />
+      <p class="dna-pillar__title">{{ pillar.title }}</p>
+      <div class="dna-pillar__text">{{ pillar.text }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{{ require_css(get_asset_url('./module.css')) }}

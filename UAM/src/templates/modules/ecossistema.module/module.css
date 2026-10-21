@@ -1,0 +1,12 @@
+/* ====================================================================
+   Módulo: Ecossistema de prática e cuidado (UAM)
+   Figma: "Ecossistema de prática e cuidado" (64:2117 / 112:2816)
+   ==================================================================== */
+
+.practice-heading {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-inverted);
+  margin-bottom: var(--spacing-large);
+}

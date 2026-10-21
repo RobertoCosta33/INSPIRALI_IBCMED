@@ -1,0 +1,71 @@
+<div class="floating-contact" data-floating-contact>
+  <div class="floating-contact__item">
+    <div class="floating-contact__panel floating-contact__panel--call" data-floating-panel="call" hidden>
+      <div class="floating-contact__panel-header">
+        <img src="{{ get_asset_url('../../public/icons/icon-phone-teal.svg') }}" alt="" aria-hidden="true" />
+        <span class="floating-contact__trigger-divider" aria-hidden="true"></span>
+        <p>{{ module.call_label }}</p>
+        <button type="button" class="floating-contact__close" data-floating-close aria-label="Fechar">
+          <img src="{{ get_asset_url('../../public/icons/icon-modal-close.svg') }}" alt="" aria-hidden="true" />
+        </button>
+      </div>
+      <div class="floating-contact__panel-body">
+        <p class="floating-contact__call-label">{{ module.call_phone_label }}</p>
+        <a class="floating-contact__call-number" href="tel:{{ module.call_phone_tel }}">{{ module.call_phone_number }}</a>
+      </div>
+    </div>
+
+    <button type="button" class="floating-contact__trigger floating-contact__trigger--call" data-floating-trigger="call">
+      <img src="{{ get_asset_url('../../public/icons/icon-phone-teal.svg') }}" alt="" aria-hidden="true" />
+      <span class="floating-contact__trigger-divider" aria-hidden="true"></span>
+      <span>{{ module.call_label }}</span>
+    </button>
+  </div>
+
+  {# "Tem alguma dúvida?" fica oculto até show_doubt_button ser ativado no editor. #}
+  {% if module.show_doubt_button %}
+  <div class="floating-contact__item">
+    <div class="floating-contact__panel floating-contact__panel--doubt" data-floating-panel="doubt" hidden>
+      <div class="floating-contact__panel-header">
+        <img src="{{ get_asset_url('../../public/icons/icon-chat-bubble-teal.svg') }}" alt="" aria-hidden="true" />
+        <span class="floating-contact__trigger-divider" aria-hidden="true"></span>
+        <p>{{ module.doubt_label }}</p>
+        <button type="button" class="floating-contact__close" data-floating-close aria-label="Fechar">
+          <img src="{{ get_asset_url('../../public/icons/icon-modal-close.svg') }}" alt="" aria-hidden="true" />
+        </button>
+      </div>
+      <div class="floating-contact__form">
+        {% if module.doubt_form.form_id %}
+          {% form "doubt_form"
+            form_to_use=module.doubt_form.form_id,
+            response_response_type=module.doubt_form.response_type,
+            response_message=module.doubt_form.message,
+            response_redirect_id=module.doubt_form.redirect_id,
+            response_redirect_url=module.doubt_form.redirect_url
+          %}
+        {% endif %}
+        <p class="floating-contact__disclaimer">{{ module.doubt_disclaimer }}</p>
+      </div>
+    </div>
+
+    <button type="button" class="floating-contact__trigger floating-contact__trigger--doubt" data-floating-trigger="doubt">
+      <img src="{{ get_asset_url('../../public/icons/icon-chat-bubble-teal.svg') }}" alt="" aria-hidden="true" />
+      <span class="floating-contact__trigger-divider" aria-hidden="true"></span>
+      <span>{{ module.doubt_label }}</span>
+    </button>
+  </div>
+  {% endif %}
+
+  <a
+    class="floating-contact__whatsapp"
+    href="{{ module.whatsapp_url.url.href }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="Fale conosco pelo WhatsApp"
+  >
+    <img src="{{ get_asset_url('../../public/icons/icon-whatsapp.svg') }}" alt="" aria-hidden="true" />
+  </a>
+</div>
+
+{{ require_css(get_asset_url('./module.css')) }}
+{{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

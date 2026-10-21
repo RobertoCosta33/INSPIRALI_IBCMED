@@ -24,7 +24,7 @@ O IBCMED reúne páginas de divulgação do curso de Medicina em diferentes facu
 >
 > | Instituição | Node-id Figma | Status |
 > |---|---|---|
-> | UAM (Anhembi Morumbi) | `523:29919` ("Desktop", página "Redesign - Páginas IES") | Implementado em `UAM/src/pages/` + `UAM/src/modules/sections/*` — **piloto/referência de estrutura para as próximas instituições** |
+> | UAM (Anhembi Morumbi) | `523:29919` ("Desktop", página "Redesign - Páginas IES") | HTML/CSS/JS aprovado em `UAM/src/pages/` + `UAM/src/modules/sections/*` — **piloto/referência de estrutura para as próximas instituições**. Convertido para tema HubSpot (HubL) em `UAM/src/templates/` (ver `UAM/src/templates/README.md`); ainda não publicado — falta autenticar a HubSpot CLI, enviar imagens/PDFs ao Design Manager/File Manager e revisar no preview antes de publicar. |
 > | UNIFACS | — | A definir com o time de design |
 > | AGES, UNIFG, FASEH, USJT, UNP, UNA, UNIBH, UNISUL | — | A definir com o time de design |
 
@@ -132,6 +132,13 @@ Resumindo: **a estrutura é sempre a mesma — só as informações, mídias e e
 ### 3.3 Templates HubSpot: um por instituição
 
 Diferente de uma versão anterior deste documento, **não existe mais uma pasta `templates/` compartilhada na raiz**. Cada instituição tem sua própria `src/templates/` (ex.: `UAM/src/templates/`), reservada para a fase de conversão HubSpot daquela instituição especificamente. Enquanto a página está em construção/aprovação como HTML/CSS/JS puro, essa pasta fica praticamente vazia (só com um `README.md` explicando o destino). Quando a página for aprovada visualmente, ela é portada para lá seguindo a estrutura de tema do HubSpot (`theme.json`, `fields.json`, `templates/layouts/base.html`, `modules/<secao>.module/...`), uma seção por módulo, espelhando `src/modules/sections/` da mesma instituição.
+
+**`UAM/src/templates/` já está convertida e serve de referência/modelo para a conversão das próximas instituições** (ver `UAM/src/templates/README.md` para detalhes de cada decisão). Pontos a replicar ao converter uma nova instituição:
+- Um `*.module/` por seção (`meta.json` + `fields.json` + `module.html` + `module.css`/`module.js` quando houver), 1:1 com `src/modules/sections/<secao>/`.
+- Todo texto/imagem/link vira campo editável (`fields.json`); listas repetidas (pilares, estatísticas, fotos de campus, disciplinas da matriz, perguntas do FAQ, etc.) usam campos `group` com `occurrence`.
+- CSS/JS de design system (`tokens.css`, `base.css`, `components/*.css`, `vendor/mark.min.js`) são copiados para `templates/css/` e `templates/vendor/` e carregados uma única vez em `templates/layouts/base.html` — não duplicar em cada módulo.
+- Formulários ainda não aprovados ficam atrás de um campo booleano (`show_form`/`show_doubt_button` = `false`) em vez de comentados no HTML, para que o cliente possa reativá-los pelo editor do HubSpot sem precisar de um desenvolvedor.
+- Upload ao HubSpot só acontece depois de autenticar a CLI e com aprovação explícita — ver seção 6.
 
 ### Regras de modularização
 

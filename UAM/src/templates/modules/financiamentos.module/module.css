@@ -1,0 +1,152 @@
+/* ====================================================================
+   Módulo: Financiamentos (UAM)
+   Figma: "Financiamentos" (117:3044)
+   ==================================================================== */
+
+.section--subtle:has(.financing-watermark) {
+  position: relative;
+  overflow: hidden;
+}
+
+.financing-watermark {
+  position: absolute;
+  left: -1px;
+  bottom: 0;
+  width: 236px;
+  height: auto;
+  pointer-events: none;
+}
+
+.financing-layout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.financing-intro {
+  flex: 1 1 420px;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+}
+
+.financing-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%;
+}
+
+.financing-highlight {
+  position: relative;
+  background-color: var(--surface-brand-primary);
+  border-radius: var(--radius-small);
+  padding: 20px 32px;
+  min-height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.financing-highlight__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-micro);
+  min-height: 140px;
+  opacity: 0;
+  position: absolute;
+  inset: 20px 32px;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.financing-highlight__slide.is-active {
+  opacity: 1;
+  position: relative;
+  inset: auto;
+  pointer-events: auto;
+}
+
+.financing-highlight__campus {
+  color: var(--surface-brand-primary-light);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.financing-highlight__label {
+  color: var(--surface-brand-primary-light);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.85;
+}
+
+.financing-highlight__value {
+  color: #ffffff;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+}
+
+.financing-highlight__note {
+  padding-top: 6px;
+  color: var(--surface-brand-primary-light);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.75;
+}
+
+.financing-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-extra-small);
+}
+
+.financing-dot {
+  height: 6px;
+  width: 32px;
+  border-radius: 3px;
+  background-color: rgba(0, 121, 106, 0.25);
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.financing-dot:hover {
+  background-color: rgba(0, 121, 106, 0.45);
+}
+
+.financing-dot.is-active {
+  width: 64px;
+  background-color: var(--surface-brand-primary);
+}
+
+.financing-dot.is-active:hover {
+  background-color: var(--surface-brand-primary);
+}
+
+.financing-programs {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+@media (max-width: 1024px) {
+  .financing-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .financing-intro {
+    max-width: none;
+  }
+}

@@ -1,0 +1,164 @@
+/* ====================================================================
+   Abas — "Matriz Curricular em Espiral" (Unidades de Aprendizagem)
+   Figma: "Information card/Matriz Curricular/Desktop" (515:29125)
+   ==================================================================== */
+
+.unit-card {
+  width: 100%;
+  background-color: var(--surface-primary-subtle);
+  border-radius: var(--radius-medium);
+  padding: var(--spacing-medium) var(--spacing-large) var(--spacing-large);
+}
+
+.unit-tabs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1.5px solid var(--border-brand-soft);
+}
+
+.unit-tab {
+  flex: 1 1 0;
+  min-width: 90px;
+  padding: var(--spacing-small);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-brand);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1.5px;
+}
+
+.unit-tab.is-active {
+  font-weight: var(--font-weight-extrabold);
+  border-bottom-color: var(--text-brand);
+}
+
+.unit-panel {
+  padding: var(--spacing-extra-large) var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.unit-panel__extra {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.4s ease;
+}
+
+.unit-panel__extra.is-open {
+  grid-template-rows: 1fr;
+}
+
+.unit-panel__extra-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.unit-panel[hidden] {
+  display: none;
+}
+
+.unit-panel__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.unit-panel__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--text-brand);
+}
+
+.unit-panel__hours {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+  background-color: var(--surface-brand-soft);
+  border-radius: var(--spacing-micro);
+  padding: var(--spacing-micro) var(--spacing-extra-small);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--text-brand);
+}
+
+.unit-panel__hours img {
+  width: 12px;
+  height: 12px;
+}
+
+.unit-panel__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-display, var(--font-family-base));
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.unit-panel__divider {
+  height: 1px;
+  background-color: var(--border-brand-soft);
+  border: none;
+}
+
+.unit-panel__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.unit-panel__group-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  color: #3d3d3d;
+}
+
+.unit-panel__disciplines {
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-panel__discipline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-small) 0;
+  border-bottom: 1px solid var(--border-brand-soft);
+}
+
+.unit-panel__discipline-name {
+  font-size: var(--font-size-sm);
+  color: var(--text-heading);
+}
+
+.unit-panel__discipline-hours {
+  font-size: var(--font-size-xs);
+  color: var(--text-brand);
+  white-space: nowrap;
+}
+
+.unit-panel__more {
+  align-self: center;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+}
+
+.unit-panel__placeholder {
+  text-align: center;
+  padding: var(--spacing-extra-large) 0;
+}
+
+@media (max-width: 860px) {
+  .unit-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}

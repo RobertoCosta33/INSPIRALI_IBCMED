@@ -1,0 +1,24 @@
+[
+  { "name": "eyebrow", "label": "Eyebrow", "type": "text", "default": "ECOSSISTEMA DE CUIDADO E PRÁTICA" },
+  { "name": "title", "label": "Título", "type": "text", "default": "Onde a Medicina Acontece." },
+  { "name": "intro_text", "label": "Texto introdutório", "type": "richtext", "default": "Uma rede de prática, cuidado e suporte que acompanha o estudante em cada etapa da formação — dentro e fora da universidade." },
+  {
+    "name": "slides",
+    "label": "Slides do carrossel",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 8, "default": 4 },
+    "children": [
+      { "name": "image", "label": "Imagem", "type": "image", "default": { "src": "", "alt": "" } },
+      { "name": "eyebrow", "label": "Eyebrow do slide", "type": "text", "default": "Centros Integrados de Saúde (CIS)" },
+      { "name": "subtitle", "label": "Subtítulo (opcional)", "type": "text", "default": "" },
+      { "name": "value", "label": "Valor em destaque (opcional)", "type": "text", "default": "" },
+      { "name": "label", "label": "Texto de apoio", "type": "richtext", "default": "Conteúdo detalhado em breve." }
+    ],
+    "default": [
+      { "eyebrow": "Centros Integrados de Saúde (CIS)", "subtitle": "Prática intensa sob supervisão de elite", "value": "+218.000", "label": "agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à população." },
+      { "eyebrow": "Estágios em hospitais parceiros", "subtitle": "", "value": "", "label": "Conteúdo detalhado em breve." },
+      { "eyebrow": "Ligas acadêmicas", "subtitle": "", "value": "", "label": "Conteúdo detalhado em breve." },
+      { "eyebrow": "Suporte psicopedagógico", "subtitle": "", "value": "", "label": "Conteúdo detalhado em breve." }
+    ]
+  }
+]

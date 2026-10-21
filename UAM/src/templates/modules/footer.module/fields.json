@@ -1,0 +1,136 @@
+[
+  {
+    "name": "invitation_title",
+    "label": "Título do convite",
+    "type": "text",
+    "default": "A maior autoridade em educação médica do Brasil espera por você."
+  },
+  { "name": "invitation_cta_label", "label": "Texto do botão", "type": "text", "default": "Inscreva-se agora para 2027.1" },
+  {
+    "name": "invitation_cta_url",
+    "label": "Link do botão",
+    "type": "url",
+    "default": { "url": { "href": "#processos-seletivos", "type": "EXTERNAL" } }
+  },
+  {
+    "name": "link_columns",
+    "label": "Colunas de links institucionais",
+    "type": "group",
+    "occurrence": { "min": 0, "max": 5, "default": 3 },
+    "children": [
+      { "name": "title", "label": "Título da coluna", "type": "text", "default": "A Anhembi Morumbi" },
+      {
+        "name": "links",
+        "label": "Links",
+        "type": "group",
+        "occurrence": { "min": 0, "max": 20, "default": 5 },
+        "children": [
+          { "name": "label", "label": "Texto", "type": "text", "default": "Link" },
+          { "name": "url", "label": "URL", "type": "url", "default": { "url": { "href": "https://portal.anhembi.br/", "type": "EXTERNAL" } } }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "title": "A Anhembi Morumbi",
+        "links": [
+          { "label": "Sobre a Anhembi Morumbi", "url": { "url": { "href": "https://portal.anhembi.br/institucional", "type": "EXTERNAL" } } },
+          { "label": "Unidades e Polos", "url": { "url": { "href": "https://portal.anhembi.br/unidades", "type": "EXTERNAL" } } },
+          { "label": "Nosso Currículo", "url": { "url": { "href": "https://portal.anhembi.br/nosso-curriculo", "type": "EXTERNAL" } } },
+          { "label": "Avaliação Institucional e CPA", "url": { "url": { "href": "https://portal.anhembi.br/sobre/avaliacao-institucional-e-cpa/", "type": "EXTERNAL" } } },
+          { "label": "UC Dual", "url": { "url": { "href": "https://portal.anhembi.br/uc-dual", "type": "EXTERNAL" } } },
+          { "label": "Cadastro", "url": { "url": { "href": "https://portal.anhembi.br/cadastro-emec", "type": "EXTERNAL" } } },
+          { "label": "Internacional Office", "url": { "url": { "href": "https://portal.anhembi.br/sobre/internacional/", "type": "EXTERNAL" } } },
+          { "label": "Pesquisa e Desenvolvimento Científico", "url": { "url": { "href": "https://portal.anhembi.br/pesquisa-e-desenvolvimento-cientifico/", "type": "EXTERNAL" } } },
+          { "label": "Núcleo de Apoio Psicopedagógico e Inclusão (NAPI)", "url": { "url": { "href": "https://portal.anhembi.br/napi", "type": "EXTERNAL" } } },
+          { "label": "Biblioteca", "url": { "url": { "href": "https://portal.anhembi.br/biblioteca", "type": "EXTERNAL" } } },
+          { "label": "Blog", "url": { "url": { "href": "https://portal.anhembi.br/blog", "type": "EXTERNAL" } } },
+          { "label": "Trabalhe Conosco", "url": { "url": { "href": "https://www.vagas.com.br/", "type": "EXTERNAL" } } }
+        ]
+      },
+      {
+        "title": "Faça parte",
+        "links": [
+          { "label": "Graduação", "url": { "url": { "href": "https://portal.anhembi.br/graduacao", "type": "EXTERNAL" } } },
+          { "label": "Pós-Graduação e MBA", "url": { "url": { "href": "https://pos.anhembi.br/", "type": "EXTERNAL" } } },
+          { "label": "Mestrado e Doutorado", "url": { "url": { "href": "https://portal.anhembi.br/mestrado-doutorado", "type": "EXTERNAL" } } },
+          { "label": "Cursos livres e Extensão", "url": { "url": { "href": "https://portal.anhembi.br/bolsas-financiamentos/extensao-universitaria", "type": "EXTERNAL" } } },
+          { "label": "Modalidades", "url": { "url": { "href": "https://portal.anhembi.br/modalidades", "type": "EXTERNAL" } } },
+          { "label": "Formas de Entrada", "url": { "url": { "href": "https://portal.anhembi.br/formas-entrada", "type": "EXTERNAL" } } },
+          { "label": "Bolsas e Financiamentos", "url": { "url": { "href": "https://portal.anhembi.br/bolsas-financiamentos", "type": "EXTERNAL" } } }
+        ]
+      },
+      {
+        "title": "Alunos, Professores e Candidatos",
+        "links": [
+          { "label": "Calendário Acadêmico", "url": { "url": { "href": "https://portal.anhembi.br/calendario-academico/", "type": "EXTERNAL" } } },
+          { "label": "Editais", "url": { "url": { "href": "https://portal.anhembi.br/editais", "type": "EXTERNAL" } } },
+          { "label": "ENADE", "url": { "url": { "href": "https://portal.anhembi.br/enade", "type": "EXTERNAL" } } },
+          { "label": "Consulta Pública de Diploma", "url": { "url": { "href": "https://portal.anhembi.br/consultar-diploma/", "type": "EXTERNAL" } } },
+          { "label": "Consulta de Histórico", "url": { "url": { "href": "https://portal.anhembi.br/consultar-historico/", "type": "EXTERNAL" } } },
+          { "label": "Repositório Universitário da Ânima (RUNA)", "url": { "url": { "href": "https://repositorio.animaeducacao.com.br/communities/b460710d-a0cf-4312-bc3e-2b5414183473", "type": "EXTERNAL" } } }
+        ]
+      }
+    ]
+  },
+  { "name": "contact_title", "label": "Título da coluna de contato", "type": "text", "default": "Central de Atendimento" },
+  {
+    "name": "contact_items",
+    "label": "Contatos",
+    "type": "group",
+    "occurrence": { "min": 0, "max": 5, "default": 2 },
+    "children": [
+      { "name": "label", "label": "Rótulo", "type": "text", "default": "Graduação e Pós-graduação" },
+      { "name": "value", "label": "Telefone", "type": "text", "default": "11 4007-1192" }
+    ],
+    "default": [
+      { "label": "Graduação e Pós-graduação", "value": "11 4007-1192" },
+      { "label": "EAD", "value": "11 5108-0481" }
+    ]
+  },
+  {
+    "name": "emec_strip_logo",
+    "label": "Selo e-MEC (faixa)",
+    "type": "image",
+    "default": { "src": "", "alt": "Faculdade de Medicina em São Paulo e na Anhembi Morumbi" }
+  },
+  {
+    "name": "social_links",
+    "label": "Redes sociais",
+    "type": "group",
+    "children": [
+      { "name": "facebook_url", "label": "Facebook", "type": "url", "default": { "url": { "href": "https://www.facebook.com/anhembi.morumbi", "type": "EXTERNAL" } } },
+      { "name": "instagram_url", "label": "Instagram", "type": "url", "default": { "url": { "href": "https://www.instagram.com/anhembimorumbi/", "type": "EXTERNAL" } } },
+      { "name": "linkedin_url", "label": "LinkedIn", "type": "url", "default": { "url": { "href": "https://www.linkedin.com/school/universidade-anhembi-morumbi/", "type": "EXTERNAL" } } },
+      { "name": "tiktok_url", "label": "TikTok", "type": "url", "default": { "url": { "href": "https://www.tiktok.com/@anhembi.morumbi", "type": "EXTERNAL" } } },
+      { "name": "x_url", "label": "X (Twitter)", "type": "url", "default": { "url": { "href": "https://x.com/anhembimorumbi", "type": "EXTERNAL" } } },
+      { "name": "youtube_url", "label": "YouTube", "type": "url", "default": { "url": { "href": "https://www.youtube.com/user/anhembimorumbi", "type": "EXTERNAL" } } }
+    ],
+    "default": {}
+  },
+  {
+    "name": "emec_qr_image",
+    "label": "QR Code e-MEC",
+    "type": "image",
+    "default": { "src": "", "alt": "QR Code do cadastro e-MEC da Anhembi Morumbi" }
+  },
+  { "name": "emec_qr_label", "label": "Texto do QR Code", "type": "text", "default": "Acesse aqui o cadastro da UAM no e-MEC" },
+  {
+    "name": "emec_qr_url",
+    "label": "Link do QR Code",
+    "type": "url",
+    "default": { "url": { "href": "https://portal.anhembi.br/cadastro-emec/", "type": "EXTERNAL" } }
+  },
+  {
+    "name": "privacy_channel_url",
+    "label": "Link do Canal de Privacidade",
+    "type": "url",
+    "default": { "url": { "href": "https://portal.anhembi.br/canal-de-privacidade/", "type": "EXTERNAL" } }
+  },
+  {
+    "name": "copyright_text",
+    "label": "Texto de copyright",
+    "type": "text",
+    "default": "Copyright © 2026 - Ânima Educação. Todos os direitos reservados."
+  }
+]

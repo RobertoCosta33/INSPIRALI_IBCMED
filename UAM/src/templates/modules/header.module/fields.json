@@ -1,0 +1,72 @@
+[
+  {
+    "name": "home_url",
+    "label": "Link do logo (página inicial)",
+    "type": "url",
+    "default": { "url": { "content_id": null, "href": "/", "type": "EXTERNAL" } }
+  },
+  {
+    "name": "institution_logo",
+    "label": "Logo da instituição",
+    "type": "image",
+    "default": { "src": "", "alt": "Anhembi Morumbi", "width": 180, "height": 30 }
+  },
+  {
+    "name": "inspirali_logo",
+    "label": "Logo Inspirali",
+    "type": "image",
+    "default": { "src": "", "alt": "Inspirali", "width": 118, "height": 14 }
+  },
+  {
+    "name": "enrollment_cta_label",
+    "label": "Texto do botão de inscrição",
+    "type": "text",
+    "default": "Inscreva-se para 2027.1"
+  },
+  {
+    "name": "enrollment_items",
+    "label": "Opções do dropdown de inscrição",
+    "type": "group",
+    "occurrence": { "min": 0, "max": 10, "default": 4 },
+    "children": [
+      { "name": "label", "label": "Texto", "type": "text", "default": "Processo Enem 27.1" },
+      {
+        "name": "url",
+        "label": "Link",
+        "type": "url",
+        "default": { "url": { "content_id": null, "href": "https://fichainscricao.inspirali.com/", "type": "EXTERNAL" } }
+      }
+    ],
+    "default": [
+      { "label": "Processo Enem 27.1", "url": { "url": { "href": "https://fichainscricao.inspirali.com/concurso/18399", "type": "EXTERNAL" } } },
+      { "label": "Transferência Externa 27.1 - Prova 29/10", "url": { "url": { "href": "https://fichainscricao.inspirali.com/concurso/18408", "type": "EXTERNAL" } } },
+      { "label": "Portador de Diploma 27.1", "url": { "url": { "href": "https://fichainscricao.inspirali.com/concurso/18429", "type": "EXTERNAL" } } },
+      { "label": "Retorno 27.1", "url": { "url": { "href": "https://fichainscricao.inspirali.com/concurso/18441", "type": "EXTERNAL" } } }
+    ]
+  },
+  {
+    "name": "course_nav_links",
+    "label": "Links do menu do curso",
+    "type": "group",
+    "occurrence": { "min": 0, "max": 15, "default": 8 },
+    "children": [
+      { "name": "label", "label": "Texto", "type": "text", "default": "Editais e Resultados" },
+      {
+        "name": "url",
+        "label": "Link (âncora da página ou URL externa)",
+        "type": "url",
+        "default": { "url": { "content_id": null, "href": "#processos-seletivos", "type": "EXTERNAL" } }
+      }
+    ],
+    "default": [
+      { "label": "Editais e Resultados", "url": { "url": { "href": "#processos-seletivos", "type": "EXTERNAL" } } },
+      { "label": "Diferenciais", "url": { "url": { "href": "#nosso-dna", "type": "EXTERNAL" } } },
+      { "label": "Matriz Curricular", "url": { "url": { "href": "#matriz-curricular", "type": "EXTERNAL" } } },
+      { "label": "Nossos Campus", "url": { "url": { "href": "#nossos-campus", "type": "EXTERNAL" } } },
+      { "label": "Ensino e Prática", "url": { "url": { "href": "#metodologia", "type": "EXTERNAL" } } },
+      { "label": "Bolsas e Financiamentos", "url": { "url": { "href": "#investimento-e-financiamentos", "type": "EXTERNAL" } } },
+      { "label": "Grupo Inspirali", "url": { "url": { "href": "#grupo-inspirali", "type": "EXTERNAL" } } },
+      { "label": "Loja", "url": { "url": { "href": "https://umapenca.com/lojameduam/", "type": "EXTERNAL" } } }
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+<header class="site-header">
+  <div class="institutional-header">
+    <div class="institutional-header__identity">
+      <a href="{{ module.home_url.url.href }}" aria-label="Página inicial {{ module.institution_logo.alt }}">
+        <img
+          src="{{ module.institution_logo.src }}"
+          alt="{{ module.institution_logo.alt }}"
+          class="institutional-header__mark"
+          width="{{ module.institution_logo.width }}"
+          height="{{ module.institution_logo.height }}"
+        />
+      </a>
+      <span class="institutional-header__divider" aria-hidden="true"></span>
+      <img
+        src="{{ module.inspirali_logo.src }}"
+        alt="{{ module.inspirali_logo.alt }}"
+        class="institutional-header__inspirali"
+        width="{{ module.inspirali_logo.width }}"
+        height="{{ module.inspirali_logo.height }}"
+      />
+    </div>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      data-menu-toggle
+      aria-expanded="false"
+      aria-controls="institutional-nav"
+      aria-label="Abrir menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="institutional-header__nav" id="institutional-nav" data-menu-nav aria-label="Navegação institucional">
+      <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
+        <img src="{{ get_asset_url('../../public/icons/icon-search.svg') }}" alt="" aria-hidden="true" width="16" height="16" />
+      </button>
+      <div class="header-cta-dropdown" data-dropdown>
+        <button type="button" class="btn btn-primary header-cta-dropdown__trigger" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
+          {{ module.enrollment_cta_label }}
+          <img src="{{ get_asset_url('../../public/icons/icon-arrow-down-white.svg') }}" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="12" height="12" />
+        </button>
+        <div class="header-cta-dropdown__menu" data-dropdown-menu>
+          <div class="header-cta-dropdown__menu-inner">
+            {% for item in module.enrollment_items %}
+            <a class="header-cta-dropdown__item" href="{{ item.url.url.href }}" target="_blank" rel="noopener">{{ item.label }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <nav class="course-nav" aria-label="Navegação do curso">
+    <div class="course-nav__list">
+      {% for link in module.course_nav_links %}
+      <a class="course-nav__link" href="{{ link.url.url.href }}"{% if link.url.url.type == "EXTERNAL" and "http" in link.url.url.href %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+</header>
+
+{{ require_css(get_asset_url('./module.css')) }}
+{{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

@@ -1,0 +1,26 @@
+[
+  { "name": "eyebrow", "label": "Eyebrow", "type": "text", "default": "CORPO DOCENTE DE ELITE" },
+  { "name": "title", "label": "Título", "type": "text", "default": "Coordenadores especialistas ao seu lado" },
+  { "name": "intro_text", "label": "Texto introdutório", "type": "richtext", "default": "Em Mooca, Piracicaba e São José dos Campos, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu desenvolvimento." },
+  {
+    "name": "coordinators",
+    "label": "Coordenadores",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 20, "default": 6 },
+    "children": [
+      { "name": "photo", "label": "Foto", "type": "image", "default": { "src": "", "alt": "" } },
+      { "name": "role", "label": "Cargo / unidade", "type": "text", "default": "Coordenadora Médica - Mooca" },
+      { "name": "name", "label": "Nome", "type": "text", "default": "" },
+      { "name": "bio", "label": "Biografia", "type": "richtext", "default": "" },
+      { "name": "more_url", "label": "Link \"Ver mais\"", "type": "url", "default": { "url": { "href": "#", "type": "EXTERNAL" } } }
+    ],
+    "default": [
+      { "role": "Coordenadora Médica - Mooca", "name": "Simone Pereira Vidotti", "bio": "Cardiopediatra com doutorado em Cardiologia Feral, atua no Instituto Fernandes Figueira (FIOCRUZ) e como professora de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica, com ampla experiência." },
+      { "role": "Coordenadora Administrativa - Mooca", "name": "Tatiana Helfenstein Tocci Moreira", "bio": "Cardiopediatra com doutorado em Cardiologia Feral, atua no Instituto Fernandes Figueira (FIOCRUZ) e como professora de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica, com ampla experiência." },
+      { "role": "Coordenadora Médica - Piracicaba", "name": "Barbra Rafaela de Melo Santos Azevedo", "bio": "Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos. Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de Cirurgiões." },
+      { "role": "Coordenadora Administrativa - Piracicaba", "name": "Lais Tono Cardoso", "bio": "Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos. Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de Cirurgiões." },
+      { "role": "Coordenadora Administrativa - São José dos Campos", "name": "Debora Daisy da Silva Vogel", "bio": "Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos. Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de Cirurgiões." },
+      { "role": "Coordenadora Médica - São José dos Campos", "name": "Barbra Rafaela de Melo Santos Azevedo", "bio": "Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos. Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de Cirurgiões." }
+    ]
+  }
+]

@@ -1,0 +1,174 @@
+/* ====================================================================
+   Módulo: Corpo docente (UAM)
+   Figma: "Corpo docente" (523:29924)
+   ==================================================================== */
+
+.docente-carousel {
+  position: relative;
+  width: 100%;
+  margin-top: 56px;
+}
+
+.docente-grid {
+  display: flex;
+  gap: 24px;
+  height: 518px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.docente-card {
+  flex: 0 0 389px;
+  width: 389px;
+  min-width: 0;
+  position: relative;
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.docente-card__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.docente-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 3, 41, 0) 0%, rgba(0, 71, 62, 0.8) 80%, #00473e 100%);
+}
+
+.docente-card__info {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.docente-card__identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #ffffff;
+}
+
+.docente-card__role {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+}
+
+.docente-card__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-display, var(--font-family-base));
+  line-height: var(--line-height-tight);
+}
+
+.docente-card__bio {
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: #cccccc;
+}
+
+.docente-card__more {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
+  color: #ffffff;
+  transition: color 0.4s ease;
+}
+
+.docente-card__more:hover,
+.docente-card__more:focus-visible {
+  text-decoration: underline;
+}
+
+.docente-carousel__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--text-brand);
+  border-radius: var(--radius-small);
+  background-color: rgba(250, 250, 255, 0.4);
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.4s ease;
+}
+
+.docente-carousel__nav:hover,
+.docente-carousel__nav:focus-visible {
+  background-color: #c9d1dc;
+}
+
+.docente-carousel__nav img {
+  width: 24px;
+  height: 24px;
+}
+
+.docente-carousel__nav--prev {
+  left: -64px;
+}
+
+.docente-carousel__nav--next {
+  right: -64px;
+}
+
+.docente-carousel__steps {
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 24px;
+  padding: 4px 8px;
+  border-radius: var(--radius-small);
+  background-color: rgba(0, 121, 106, 0.4);
+  backdrop-filter: blur(20px);
+}
+
+.docente-carousel__step {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-total);
+  background-color: #ffffff;
+}
+
+.docente-carousel__step.is-active {
+  background-color: var(--text-brand);
+}
+
+@media (max-width: 1280px) {
+  .docente-carousel__nav--prev {
+    left: 0;
+  }
+
+  .docente-carousel__nav--next {
+    right: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .docente-grid {
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .docente-card {
+    flex: 0 0 300px;
+    width: 300px;
+    height: 420px;
+  }
+}
