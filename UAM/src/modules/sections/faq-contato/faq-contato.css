@@ -19,6 +19,28 @@
   gap: var(--spacing-extra-large);
 }
 
+/* Enquanto o formulário está comentado/desativado, a seção vira uma
+   única coluna central: título em cima, dropdowns centralizados embaixo. */
+.faq-contato--form-disabled {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.faq-contato--form-disabled .faq-contato__form-col {
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.faq-contato--form-disabled .faq-contato__title {
+  align-items: center;
+}
+
+.faq-contato--form-disabled .faq-contato__list {
+  padding-top: 0;
+  margin: 0 auto;
+}
+
 .faq-contato__title {
   display: flex;
   flex-direction: column;
