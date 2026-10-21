@@ -98,6 +98,14 @@
       if (counter) counter.textContent = String(index + 1).padStart(2, "0");
       if (total) total.textContent = String(slides.length).padStart(2, "0");
       if (label) label.textContent = slides[index].getAttribute("data-label") || "";
+      // "Anterior" fica de fato desabilitado (não clicável, sem dar a volta
+      // para a última foto) só na primeira foto; das demais em diante usa o
+      // mesmo destaque do botão "Próxima". "Próxima" nunca desabilita — ao
+      // chegar na última foto, volta para a primeira (loop).
+      if (prevBtn) {
+        prevBtn.classList.toggle("is-enabled", index !== 0);
+        prevBtn.disabled = index === 0;
+      }
       startAutoplay();
     }
 
@@ -191,7 +199,11 @@
 
         const videoUrl = activeSlide.getAttribute("data-video-url");
         if (videoUrl) {
-          window.open(videoUrl, "_blank", "noopener");
+          if (typeof window.openVideoModal === "function") {
+            window.openVideoModal(videoUrl);
+          } else {
+            window.open(videoUrl, "_blank", "noopener");
+          }
           return;
         }
 

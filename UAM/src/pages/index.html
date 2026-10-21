@@ -32,33 +32,34 @@
     />
 
     <!-- Design system: tokens e base compartilhados por todas as páginas -->
-    <link rel="stylesheet" href="/UAM/src/css/tokens.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/css/base.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/css/components/accordion.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/css/components/cards.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/css/components/tabs.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/css/components/carousel.css?v=1792584820263" />
+    <link rel="stylesheet" href="/UAM/src/css/tokens.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/css/base.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/css/components/accordion.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/css/components/cards.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/css/components/tabs.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/css/components/carousel.css?v=1792600405714" />
 
     <!-- Módulos compartilhados -->
-    <link rel="stylesheet" href="/UAM/src/modules/shared/header/header.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/shared/footer/footer.css?v=1792584820263" />
+    <link rel="stylesheet" href="/UAM/src/modules/shared/header/header.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/shared/footer/footer.css?v=1792600405714" />
 
     <!-- Módulos da página UAM -->
-    <link rel="stylesheet" href="/UAM/src/modules/sections/processo-seletivo/processo-seletivo.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/processo-seletivo/edital-modal.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/sobre-instituicao/sobre-instituicao.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/nosso-dna/nosso-dna.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/matriz-curricular/matriz-curricular.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/corpo-docente/corpo-docente.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/campus/campus.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/metodologia/metodologia.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/ecossistema/ecossistema.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/financiamentos/financiamentos.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/grupo-inspirali/grupo-inspirali.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/seu-futuro/seu-futuro.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/sections/faq-contato/faq-contato.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/shared/floating-contact/floating-contact.css?v=1792584820263" />
-    <link rel="stylesheet" href="/UAM/src/modules/shared/page-search/page-search.css?v=1792584820263" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/processo-seletivo/processo-seletivo.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/processo-seletivo/edital-modal.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/sobre-instituicao/sobre-instituicao.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/nosso-dna/nosso-dna.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/matriz-curricular/matriz-curricular.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/corpo-docente/corpo-docente.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/campus/campus.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/metodologia/metodologia.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/ecossistema/ecossistema.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/financiamentos/financiamentos.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/grupo-inspirali/grupo-inspirali.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/seu-futuro/seu-futuro.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/sections/faq-contato/faq-contato.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/shared/floating-contact/floating-contact.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/shared/page-search/page-search.css?v=1792600405714" />
+    <link rel="stylesheet" href="/UAM/src/modules/shared/video-modal/video-modal.css?v=1792600405714" />
 
     <script type="application/ld+json">
       {
@@ -395,15 +396,14 @@
             alt="Aluna da Anhembi Morumbi em missão humanitária no Brasil"
             loading="lazy"
           />
-          <a
+          <button
+            type="button"
             class="institutional-about__video-play"
-            href="https://www.youtube.com/watch?v=yQwlmYldIzM"
-            target="_blank"
-            rel="noopener"
+            data-open-video-modal="yQwlmYldIzM"
             aria-label="Assistir ao vídeo institucional da Anhembi Morumbi"
           >
             <img src="/UAM/src/public/icons/icon-youtube-play-button.png" alt="" aria-hidden="true" />
-          </a>
+          </button>
         </div>
 
         <div class="institutional-about__content">
@@ -1412,6 +1412,26 @@
           <img class="campus-lightbox__image" data-campus-lightbox-image src="" alt="" />
         </div>
       </section>
+
+      <div class="video-modal" data-video-modal hidden aria-hidden="true">
+        <div class="video-modal__backdrop" data-video-modal-close></div>
+        <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="Vídeo institucional">
+          <button type="button" class="video-modal__close" data-video-modal-close aria-label="Fechar vídeo">
+            <img src="/UAM/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+          </button>
+          <div class="video-modal__frame">
+            <iframe
+              data-video-modal-iframe
+              src=""
+              title="Vídeo institucional"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
       <section class="section section--subtle" id="metodologia" aria-labelledby="metodologia-title">
         <div class="methodology">
           <div class="methodology__intro">
@@ -1541,24 +1561,42 @@
               </div>
             </div>
             <div class="evidence-carousel__slide" data-evidence-slide>
-              <img src="/UAM/src/public/images/ecosystem-carousel-1.png" alt="Estágios em hospitais parceiros da Medicina Anhembi Morumbi" loading="lazy" />
+              <img src="/UAM/src/public/images/ecosystem-carousel-2.png" alt="Aluna da Anhembi Morumbi em missão humanitária atendendo paciente" loading="lazy" />
               <div class="evidence-carousel__content">
-                <p class="evidence-carousel__eyebrow">Estágios em hospitais parceiros</p>
-                <p class="evidence-carousel__label">Conteúdo detalhado em breve.</p>
+                <div>
+                  <p class="evidence-carousel__eyebrow">Travessia Humanitária</p>
+                  <p class="evidence-carousel__subtitle">A medicina além dos muros</p>
+                </div>
+                <p class="evidence-carousel__label">
+                  Participe de expedições transformadoras na Amazônia, no Sertão e em comunidades vulneráveis,
+                  aplicando a humanização na prática.
+                </p>
               </div>
             </div>
             <div class="evidence-carousel__slide" data-evidence-slide>
-              <img src="/UAM/src/public/images/ecosystem-carousel-1.png" alt="Ligas acadêmicas da Medicina Anhembi Morumbi" loading="lazy" />
+              <img src="/UAM/src/public/images/ecosystem-carousel-3.png" alt="Equipe médica em atendimento hospitalar de alta complexidade" loading="lazy" />
               <div class="evidence-carousel__content">
-                <p class="evidence-carousel__eyebrow">Ligas acadêmicas</p>
-                <p class="evidence-carousel__label">Conteúdo detalhado em breve.</p>
+                <div>
+                  <p class="evidence-carousel__eyebrow">Rede Hospitalar de Alta Complexidade</p>
+                  <p class="evidence-carousel__subtitle">Internato sólido de alto nível</p>
+                </div>
+                <p class="evidence-carousel__label">
+                  Internato sólido com vivência em urgência, cirurgia e pediatria através de parcerias com
+                  hospitais de referência.
+                </p>
               </div>
             </div>
             <div class="evidence-carousel__slide" data-evidence-slide>
-              <img src="/UAM/src/public/images/ecosystem-carousel-1.png" alt="Suporte psicopedagógico aos alunos de Medicina" loading="lazy" />
+              <img src="/UAM/src/public/images/ecosystem-carousel-4.png" alt="Mãos entrelaçadas representando acolhimento e cuidado emocional" loading="lazy" />
               <div class="evidence-carousel__content">
-                <p class="evidence-carousel__eyebrow">Suporte psicopedagógico</p>
-                <p class="evidence-carousel__label">Conteúdo detalhado em breve.</p>
+                <div>
+                  <p class="evidence-carousel__eyebrow">Programa Angatu (Saúde Mental)</p>
+                  <p class="evidence-carousel__subtitle">Cuidado com quem vai cuidar</p>
+                </div>
+                <p class="evidence-carousel__label">
+                  Reconhecemos que cuidar de vidas exige resiliência. Oferecemos acolhimento psicológico,
+                  oficinas de bem-estar e grupos de apoio para garantir uma carreira saudável e equilibrada.
+                </p>
               </div>
             </div>
           </div>
@@ -1780,7 +1818,7 @@
                 carreira.
               </p>
             </div>
-            <a class="future-header__cta" href="#">
+            <a class="future-header__cta" href="https://inspiraliposmedicina.com/" target="_blank" rel="noopener">
               Saiba mais
               <img src="/UAM/src/public/icons/icon-arrow-right-outline-teal.svg" alt="" aria-hidden="true" width="24" height="24" />
             </a>
@@ -2200,18 +2238,19 @@
     </div>
     </div>
 
-    <script src="/UAM/src/modules/shared/header/header.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/processo-seletivo/processo-seletivo.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/corpo-docente/corpo-docente.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/matriz-curricular/matriz-curricular.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/campus/campus.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/metodologia/metodologia.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/ecossistema/ecossistema.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/financiamentos/financiamentos.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/seu-futuro/seu-futuro.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/sections/faq-contato/faq-contato.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/shared/floating-contact/floating-contact.js?v=1792584820263"></script>
-    <script src="/UAM/src/vendor/mark.min.js?v=1792584820263"></script>
-    <script src="/UAM/src/modules/shared/page-search/page-search.js?v=1792584820263"></script>
+    <script src="/UAM/src/modules/shared/header/header.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/processo-seletivo/processo-seletivo.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/corpo-docente/corpo-docente.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/matriz-curricular/matriz-curricular.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/shared/video-modal/video-modal.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/campus/campus.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/metodologia/metodologia.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/ecossistema/ecossistema.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/financiamentos/financiamentos.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/seu-futuro/seu-futuro.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/sections/faq-contato/faq-contato.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/shared/floating-contact/floating-contact.js?v=1792600405714"></script>
+    <script src="/UAM/src/vendor/mark.min.js?v=1792600405714"></script>
+    <script src="/UAM/src/modules/shared/page-search/page-search.js?v=1792600405714"></script>
   </body>
 </html>

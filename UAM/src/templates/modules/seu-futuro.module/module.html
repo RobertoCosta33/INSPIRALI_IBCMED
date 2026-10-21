@@ -6,7 +6,7 @@
         <h2 class="section-intro__title future-header__title" id="futuro-title">{{ module.title }}</h2>
         <div class="section-intro__text">{{ module.intro_text }}</div>
       </div>
-      <a class="future-header__cta" href="{{ module.cta_url.url.href }}">
+      <a class="future-header__cta" href="{{ module.cta_url.url.href }}"{% if module.cta_url.open_in_new_tab %} target="_blank" rel="noopener{% if module.cta_url.no_follow %} nofollow{% endif %}"{% endif %}>
         {{ module.cta_label }}
         <img src="{{ get_asset_url('../../public/icons/icon-arrow-right-outline-teal.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
       </a>
@@ -38,6 +38,15 @@
     </div>
   </div>
 </section>
+
+<script>
+  window.UAM_CARD_NAV_ICONS = {
+    prevActive: "{{ get_asset_url('../../public/icons/icon-chevron-left-nav-white.svg') }}",
+    prevInactive: "{{ get_asset_url('../../public/icons/icon-chevron-left-nav.svg') }}",
+    nextActive: "{{ get_asset_url('../../public/icons/icon-chevron-right-nav.svg') }}",
+    nextInactive: "{{ get_asset_url('../../public/icons/icon-chevron-right-nav-teal.svg') }}"
+  };
+</script>
 
 {{ require_css(get_asset_url('./module.css')) }}
 {{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

@@ -6,15 +6,14 @@
       alt="{{ module.video_cover_image.alt }}"
       loading="lazy"
     />
-    <a
+    <button
+      type="button"
       class="institutional-about__video-play"
-      href="{{ module.video_url.url.href }}"
-      target="_blank"
-      rel="noopener"
+      data-open-video-modal="{{ module.video_url.url.href }}"
       aria-label="Assistir ao vídeo institucional da Anhembi Morumbi"
     >
       <img src="{{ get_asset_url('../../public/icons/icon-youtube-play-button.png') }}" alt="" aria-hidden="true" />
-    </a>
+    </button>
   </div>
 
   <div class="institutional-about__content">

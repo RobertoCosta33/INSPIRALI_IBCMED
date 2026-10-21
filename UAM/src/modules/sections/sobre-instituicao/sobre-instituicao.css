@@ -35,6 +35,10 @@
   transform: translate(-50%, -50%);
   width: 103px;
   height: 103px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .institutional-about__video-play img {

@@ -97,8 +97,8 @@
 }
 
 .carousel-controls__btn img {
-  width: 20px;
-  height: 20px;
+  width: 7px;
+  height: 12px;
 }
 
 .carousel-controls__dots {
@@ -190,6 +190,10 @@
 
 .card-carousel__nav-btn--active {
   background-color: var(--surface-brand-primary);
+}
+
+.card-carousel__nav-btn:disabled {
+  cursor: not-allowed;
 }
 
 .card-carousel__nav-btn img {

@@ -29,10 +29,51 @@
     const track = root.querySelector("[data-card-track]");
     const prevBtn = root.querySelector("[data-card-prev]");
     const nextBtn = root.querySelector("[data-card-next]");
+    const prevIcon = prevBtn ? prevBtn.querySelector("img") : null;
+    const nextIcon = nextBtn ? nextBtn.querySelector("img") : null;
     const dots = root.querySelectorAll(".card-carousel__dot");
     if (!track) return;
 
+    const ICONS = {
+      prev: {
+        active: "/UAM/src/public/icons/icon-chevron-left-nav-white.svg",
+        inactive: "/UAM/src/public/icons/icon-chevron-left-nav.svg",
+      },
+      next: {
+        active: "/UAM/src/public/icons/icon-chevron-right-nav.svg",
+        inactive: "/UAM/src/public/icons/icon-chevron-right-nav-teal.svg",
+      },
+    };
+
     let dotIndex = 0;
+    const EDGE_TOLERANCE = 2; // px de folga para evitar problemas de arredondamento
+
+    // "Anterior" fica de fato desabilitado (não clicável, sem dar a volta
+    // para o último cartão) só no primeiro cartão. "Próximo" nunca desabilita
+    // — ao chegar no último cartão, volta para o primeiro (loop).
+    function isAtStart() {
+      return track.scrollLeft <= EDGE_TOLERANCE;
+    }
+
+    function isAtEnd() {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      return track.scrollLeft >= maxScroll - EDGE_TOLERANCE;
+    }
+
+    function updateNavState() {
+      const atStart = isAtStart();
+
+      if (prevBtn) {
+        prevBtn.classList.toggle("card-carousel__nav-btn--active", !atStart);
+        prevBtn.disabled = atStart;
+        if (prevIcon) prevIcon.src = atStart ? ICONS.prev.inactive : ICONS.prev.active;
+      }
+      if (nextBtn) {
+        nextBtn.classList.add("card-carousel__nav-btn--active");
+        nextBtn.disabled = false;
+        if (nextIcon) nextIcon.src = ICONS.next.active;
+      }
+    }
 
     function updateDots(direction) {
       if (!dots.length) return;
@@ -43,6 +84,13 @@
     }
 
     function scrollByCard(direction) {
+      // "Próximo" no último cartão dá a volta para o primeiro, em vez de
+      // tentar rolar além do fim (o que não faria nada visualmente).
+      if (direction > 0 && isAtEnd()) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+        updateDots(1);
+        return;
+      }
       const card = track.querySelector(":scope > *");
       const amount = card ? card.getBoundingClientRect().width + 16 : 300;
       track.scrollBy({ left: direction * amount, behavior: "smooth" });
@@ -51,5 +99,7 @@
 
     if (prevBtn) prevBtn.addEventListener("click", function () { scrollByCard(-1); });
     if (nextBtn) nextBtn.addEventListener("click", function () { scrollByCard(1); });
+    track.addEventListener("scroll", updateNavState);
+    updateNavState();
   });
 })();

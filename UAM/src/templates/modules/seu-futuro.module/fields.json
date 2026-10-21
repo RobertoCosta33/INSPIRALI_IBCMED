@@ -25,15 +25,15 @@
   },
   {
     "name": "cta_url",
-    "label": "Link do botão (definir quando houver destino)",
+    "label": "Link do botão \"Saiba mais\"",
     "type": "link",
     "default": {
       "url": {
-        "href": "#",
+        "href": "https://inspiraliposmedicina.com/",
         "type": "EXTERNAL",
         "content_id": null
       },
-      "open_in_new_tab": false,
+      "open_in_new_tab": true,
       "no_follow": false
     }
   },

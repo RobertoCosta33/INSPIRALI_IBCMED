@@ -240,6 +240,15 @@
 
 .campus-gallery__nav-btn--prev {
   background-color: #a3a3a3;
+  transition: background-color 0.2s ease;
+}
+
+.campus-gallery__nav-btn--prev.is-enabled {
+  background-color: #fafaff;
+}
+
+.campus-gallery__nav-btn:disabled {
+  cursor: not-allowed;
 }
 
 .campus-gallery__nav-icon--flip {
