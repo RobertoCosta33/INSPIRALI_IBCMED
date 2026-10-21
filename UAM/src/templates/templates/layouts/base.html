@@ -23,12 +23,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
 
     <!-- Design system: tokens e base compartilhados por todas as páginas desta instituição -->
-    {{ require_css(get_asset_url("../css/tokens.css")) }}
-    {{ require_css(get_asset_url("../css/base.css")) }}
-    {{ require_css(get_asset_url("../css/components/accordion.css")) }}
-    {{ require_css(get_asset_url("../css/components/cards.css")) }}
-    {{ require_css(get_asset_url("../css/components/tabs.css")) }}
-    {{ require_css(get_asset_url("../css/components/carousel.css")) }}
+    {{ require_css(get_asset_url("../../css/tokens.css")) }}
+    {{ require_css(get_asset_url("../../css/base.css")) }}
+    {{ require_css(get_asset_url("../../css/components/accordion.css")) }}
+    {{ require_css(get_asset_url("../../css/components/cards.css")) }}
+    {{ require_css(get_asset_url("../../css/components/tabs.css")) }}
+    {{ require_css(get_asset_url("../../css/components/carousel.css")) }}
 
     {{ standard_header_includes }}
   </head>
@@ -38,14 +38,14 @@
     {% module "header" path="../../modules/header.module" %}
 
     <main id="conteudo-principal">
-      {% block main_content %}{% end_block %}
+      {% block main_content %}{% endblock %}
     </main>
 
     {% module "footer" path="../../modules/footer.module" %}
     {% module "floating_contact" path="../../modules/floating-contact.module" %}
     {% module "page_search" path="../../modules/page-search.module" %}
 
-    {{ require_js(get_asset_url("../vendor/mark.min.js"), { "position": "footer" }) }}
+    {{ require_js(get_asset_url("../../vendor/mark.min.js"), { "position": "footer" }) }}
 
     {{ standard_footer_includes }}
   </body>
