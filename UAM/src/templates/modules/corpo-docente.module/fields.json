@@ -73,32 +73,56 @@
       {
         "role": "Coordenadora Médica - Mooca",
         "bio": "Cardiopediatra com doutorado em Cardiologia Feral, atua no Instituto Fernandes Figueira (FIOCRUZ) e como professora de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica, com ampla experiência.",
-        "person_name": "Simone Pereira Vidotti"
+        "person_name": "Simone Pereira Vidotti",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/simone-pereira-vidotti.png",
+          "alt": "Simone Pereira Vidotti"
+        }
       },
       {
         "role": "Coordenadora Administrativa - Mooca",
         "bio": "Cardiopediatra com doutorado em Cardiologia Feral, atua no Instituto Fernandes Figueira (FIOCRUZ) e como professora de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica, com ampla experiência.",
-        "person_name": "Tatiana Helfenstein Tocci Moreira"
+        "person_name": "Tatiana Helfenstein Tocci Moreira",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/tatiana-helfenstein.png",
+          "alt": "Tatiana Helfenstein Tocci Moreira"
+        }
       },
       {
         "role": "Coordenadora Médica - Piracicaba",
         "bio": "Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos. Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de Cirurgiões.",
-        "person_name": "Barbra Rafaela de Melo Santos Azevedo"
+        "person_name": "Barbra Rafaela de Melo Santos Azevedo",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/barbra-rafaela.png",
+          "alt": "Barbra Rafaela de Melo Santos Azevedo"
+        }
       },
       {
         "role": "Coordenadora Administrativa - Piracicaba",
         "bio": "Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos. Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de Cirurgiões.",
-        "person_name": "Lais Tono Cardoso"
+        "person_name": "Lais Tono Cardoso",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/lais-tono-cardoso.png",
+          "alt": "Lais Tono Cardoso"
+        }
       },
       {
         "role": "Coordenadora Administrativa - São José dos Campos",
         "bio": "Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos. Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de Cirurgiões.",
-        "person_name": "Debora Daisy da Silva Vogel"
+        "person_name": "Debora Daisy da Silva Vogel",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/debora-daisy.png",
+          "alt": "Debora Daisy da Silva Vogel"
+        }
       },
       {
         "role": "Coordenadora Médica - São José dos Campos",
         "bio": "Coordenadora de Medicina e professora da Universidade Anhembi Morumbi de São José dos Campos. Pós-graduanda em endocrinologia e metabologia pelo IBCMED. Mestre pela Unifesp. Cirurgiã Geral pelo hospital municipal Prof. José de Carvalho Florence e Cirurgiã de Trauma pelo Colégio Brasileiro de Cirurgiões.",
-        "person_name": "Barbra Rafaela de Melo Santos Azevedo"
+        "person_name": "Barbra Rafaela de Melo Santos Azevedo",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/barbra-rafaela.png",
+          "alt": "Barbra Rafaela de Melo Santos Azevedo"
+        }
       }
     ]
   }

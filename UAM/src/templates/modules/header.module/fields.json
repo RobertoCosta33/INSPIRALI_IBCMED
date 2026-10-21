@@ -18,7 +18,7 @@
     "label": "Logo da instituição",
     "type": "image",
     "default": {
-      "src": "",
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/anhembi-morumbi-mark.svg",
       "alt": "Anhembi Morumbi",
       "width": 180,
       "height": 30
@@ -29,7 +29,7 @@
     "label": "Logo Inspirali",
     "type": "image",
     "default": {
-      "src": "",
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/inspirali-mark.svg",
       "alt": "Inspirali",
       "width": 118,
       "height": 14

@@ -362,7 +362,7 @@
     "label": "Selo e-MEC (faixa)",
     "type": "image",
     "default": {
-      "src": "",
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/emec-logo-footer.svg",
       "alt": "Faculdade de Medicina em São Paulo e na Anhembi Morumbi"
     }
   },
@@ -463,7 +463,7 @@
     "label": "QR Code e-MEC",
     "type": "image",
     "default": {
-      "src": "",
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/emec-qrcode.png",
       "alt": "QR Code do cadastro e-MEC da Anhembi Morumbi"
     }
   },

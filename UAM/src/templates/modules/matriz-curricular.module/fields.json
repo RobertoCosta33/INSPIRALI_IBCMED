@@ -45,7 +45,7 @@
     "name": "download_2026_file",
     "label": "Arquivo PDF (matriz 2026)",
     "type": "file",
-    "default": ""
+    "default": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docs/Matriz_Curricular_Medicina_-_UAM_-_Novo_PPC.pdf"
   },
   {
     "name": "download_current_label",
@@ -57,7 +57,7 @@
     "name": "download_current_file",
     "label": "Arquivo PDF (matriz atual)",
     "type": "file",
-    "default": ""
+    "default": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docs/57e5d6d0-f9d7-4167-9059-be004c1134e9.pdf"
   },
   {
     "name": "ppc_label",

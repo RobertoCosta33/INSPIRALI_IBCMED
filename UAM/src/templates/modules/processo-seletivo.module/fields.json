@@ -34,7 +34,7 @@
     "label": "Imagem de fundo do card",
     "type": "image",
     "default": {
-      "src": "",
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/processo-seletivo-bg.png",
       "alt": ""
     }
   },
@@ -140,7 +140,11 @@
           }
         },
         "edital_link_label": "Consultar Edital",
-        "modality_name": "Enem 27.1"
+        "modality_name": "Enem 27.1",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-school.svg",
+          "alt": ""
+        }
       },
       {
         "tab_label": "Transferência Externa 27.1",
@@ -155,7 +159,11 @@
           }
         },
         "edital_link_label": "Consultar Edital",
-        "modality_name": "Transferência Externa 27.1"
+        "modality_name": "Transferência Externa 27.1",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-sync-alt.svg",
+          "alt": ""
+        }
       },
       {
         "tab_label": "Portador de Diploma 27.1",
@@ -170,7 +178,11 @@
           }
         },
         "edital_link_label": "Consultar Edital",
-        "modality_name": "Portador de Diploma 27.1"
+        "modality_name": "Portador de Diploma 27.1",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-license.svg",
+          "alt": ""
+        }
       }
     ]
   },

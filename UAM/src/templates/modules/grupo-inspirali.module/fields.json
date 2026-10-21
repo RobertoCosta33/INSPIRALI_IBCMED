@@ -1,52 +1,252 @@
 [
-  { "name": "inspirali_logo", "label": "Logo Inspirali", "type": "image", "default": { "src": "", "alt": "Inspirali", "width": 204, "height": 24 } },
-  { "name": "title", "label": "Título", "type": "text", "default": "Faça Parte da Principal Autoridade em Educação Médica do Brasil" },
-  { "name": "text", "label": "Texto", "type": "richtext", "default": "A Inspirali é dedicada exclusivamente a formar e acompanhar médicos em todas as etapas da carreira, desde a graduação até os níveis mais avançados de especialização." },
+  {
+    "name": "inspirali_logo",
+    "label": "Logo Inspirali",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/inspirali-pos-mark.svg",
+      "alt": "Inspirali",
+      "width": 204,
+      "height": 24
+    }
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Faça Parte da Principal Autoridade em Educação Médica do Brasil"
+  },
+  {
+    "name": "text",
+    "label": "Texto",
+    "type": "richtext",
+    "default": "A Inspirali é dedicada exclusivamente a formar e acompanhar médicos em todas as etapas da carreira, desde a graduação até os níveis mais avançados de especialização."
+  },
   {
     "name": "stats",
     "label": "Cartões de estatísticas",
     "type": "group",
-    "occurrence": { "min": 1, "max": 6, "default": 4 },
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 4
+    },
     "children": [
-      { "name": "icon", "label": "Ícone", "type": "image", "default": { "src": "", "alt": "" } },
-      { "name": "value", "label": "Valor (deixe vazio para ocultar)", "type": "text", "default": "15" },
-      { "name": "title", "label": "Título", "type": "text", "default": "Presença Nacional" },
-      { "name": "text", "label": "Texto", "type": "richtext", "default": "15 instituições de Ensino Superior em pontos estratégicos do país." }
+      {
+        "name": "icon",
+        "label": "Ícone",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "value",
+        "label": "Valor (deixe vazio para ocultar)",
+        "type": "text",
+        "default": "15"
+      },
+      {
+        "name": "title",
+        "label": "Título",
+        "type": "text",
+        "default": "Presença Nacional"
+      },
+      {
+        "name": "text",
+        "label": "Texto",
+        "type": "richtext",
+        "default": "15 instituições de Ensino Superior em pontos estratégicos do país."
+      }
     ],
     "default": [
-      { "value": "15", "title": "Presença Nacional", "text": "15 instituições de Ensino Superior em pontos estratégicos do país, garantindo uma rede de intercâmbio e estágios." },
-      { "value": "+ 1.300", "title": "Corpo Docente de Elite", "text": "Mais de 1.300 professores e médicos especialistas dedicados à sua formação e ao acompanhamento próximo do seu desenvolvimento." },
-      { "value": "100%", "title": "Excelência Comprovada", "text": "100% das instituições avaliadas pelo MEC possuem conceitos de excelência (notas 4 e 5)." },
-      { "value": "", "title": "Solidez Ecossistema Ânima", "text": "Segurança e transparência de um grupo com Rating AA.br pela Moody's, garantindo a estabilidade da sua jornada de seis anos." }
+      {
+        "value": "15",
+        "title": "Presença Nacional",
+        "text": "15 instituições de Ensino Superior em pontos estratégicos do país, garantindo uma rede de intercâmbio e estágios.",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-map-pin.svg",
+          "alt": ""
+        }
+      },
+      {
+        "value": "+ 1.300",
+        "title": "Corpo Docente de Elite",
+        "text": "Mais de 1.300 professores e médicos especialistas dedicados à sua formação e ao acompanhamento próximo do seu desenvolvimento.",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-users.svg",
+          "alt": ""
+        }
+      },
+      {
+        "value": "100%",
+        "title": "Excelência Comprovada",
+        "text": "100% das instituições avaliadas pelo MEC possuem conceitos de excelência (notas 4 e 5).",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-award.svg",
+          "alt": ""
+        }
+      },
+      {
+        "value": "",
+        "title": "Solidez Ecossistema Ânima",
+        "text": "Segurança e transparência de um grupo com Rating AA.br pela Moody's, garantindo a estabilidade da sua jornada de seis anos.",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-shield-check.svg",
+          "alt": ""
+        }
+      }
     ]
   },
-  { "name": "lifelong_label", "label": "Rótulo \"Lifelong Learning\"", "type": "text", "default": "LIFELONG LEARNING" },
-  { "name": "lifelong_sublabel", "label": "Sublabel", "type": "text", "default": "Aprendizado para a Vida" },
-  { "name": "lifelong_text", "label": "Texto", "type": "richtext", "default": "Nosso compromisso não termina na entrega do diploma. Ao ingressar na Anhembi Morumbi, você se conecta a uma rede que oferece suporte para a aprovação na residência médica, pós-graduação e educação continuada durante toda a sua vida profissional." },
+  {
+    "name": "lifelong_label",
+    "label": "Rótulo \"Lifelong Learning\"",
+    "type": "text",
+    "default": "LIFELONG LEARNING"
+  },
+  {
+    "name": "lifelong_sublabel",
+    "label": "Sublabel",
+    "type": "text",
+    "default": "Aprendizado para a Vida"
+  },
+  {
+    "name": "lifelong_text",
+    "label": "Texto",
+    "type": "richtext",
+    "default": "Nosso compromisso não termina na entrega do diploma. Ao ingressar na Anhembi Morumbi, você se conecta a uma rede que oferece suporte para a aprovação na residência médica, pós-graduação e educação continuada durante toda a sua vida profissional."
+  },
   {
     "name": "timeline_steps",
     "label": "Linha do tempo",
     "type": "group",
-    "occurrence": { "min": 1, "max": 6, "default": 4 },
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 4
+    },
     "children": [
-      { "name": "icon", "label": "Ícone (para o último passo, opcional)", "type": "image", "default": { "src": "", "alt": "" } },
-      { "name": "title", "label": "Título", "type": "text", "default": "Graduação" },
-      { "name": "text", "label": "Texto", "type": "richtext", "default": "Formação médica de excelência." }
+      {
+        "name": "icon",
+        "label": "Ícone (para o último passo, opcional)",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "title",
+        "label": "Título",
+        "type": "text",
+        "default": "Graduação"
+      },
+      {
+        "name": "text",
+        "label": "Texto",
+        "type": "richtext",
+        "default": "Formação médica de excelência."
+      }
     ],
     "default": [
-      { "title": "Graduação", "text": "Formação médica de excelência com infraestrutura premium e corpo docente especializado." },
-      { "title": "Residência Médica", "text": "Suporte dedicado para aprovação e acompanhamento durante a residência." },
-      { "title": "Pós-Graduação", "text": "Especialização de alto nível para médicos que buscam excelência clínica e científica." },
-      { "title": "Educação Continuada", "text": "Uma rede de aprendizado permanente, por toda a sua vida profissional." }
+      {
+        "title": "Graduação",
+        "text": "Formação médica de excelência com infraestrutura premium e corpo docente especializado."
+      },
+      {
+        "title": "Residência Médica",
+        "text": "Suporte dedicado para aprovação e acompanhamento durante a residência."
+      },
+      {
+        "title": "Pós-Graduação",
+        "text": "Especialização de alto nível para médicos que buscam excelência clínica e científica."
+      },
+      {
+        "title": "Educação Continuada",
+        "text": "Uma rede de aprendizado permanente, por toda a sua vida profissional.",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-infinity.svg",
+          "alt": ""
+        }
+      }
     ]
   },
   {
     "name": "partner_logos",
     "label": "Logos de instituições parceiras",
     "type": "group",
-    "occurrence": { "min": 0, "max": 15, "default": 9 },
+    "occurrence": {
+      "min": 0,
+      "max": 15,
+      "default": 9
+    },
     "children": [
-      { "name": "logo", "label": "Logo", "type": "image", "default": { "src": "", "alt": "" } }
+      {
+        "name": "logo",
+        "label": "Logo",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      }
+    ],
+    "default": [
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-ages.svg",
+          "alt": "Ages"
+        }
+      },
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-saojudas.svg",
+          "alt": "São Judas"
+        }
+      },
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unibh.svg",
+          "alt": "UniBH"
+        }
+      },
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unifacs.svg",
+          "alt": "UNIFACS"
+        }
+      },
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unifg.svg",
+          "alt": "UniFG"
+        }
+      },
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unisul.svg",
+          "alt": "UNISUL"
+        }
+      },
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-anhembi-small.svg",
+          "alt": "Universidade Anhembi Morumbi"
+        }
+      },
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unp.svg",
+          "alt": "UNP"
+        }
+      },
+      {
+        "logo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-una.svg",
+          "alt": "UNA"
+        }
+      }
     ]
   }
 ]

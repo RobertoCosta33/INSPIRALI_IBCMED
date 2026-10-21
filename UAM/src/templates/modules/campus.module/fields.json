@@ -132,13 +132,48 @@
         },
         "video_id": "pZ5RWFXfIQU",
         "photos": [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/photo-1.jpg",
+              "alt": "Mooca — foto 1 do campus Mooca"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/photo-2.jpg",
+              "alt": "Mooca — foto 2 do campus Mooca"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/photo-3.jpg",
+              "alt": "Mooca — foto 3 do campus Mooca"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/photo-4.jpg",
+              "alt": "Mooca — foto 4 do campus Mooca"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/photo-5.jpg",
+              "alt": "Mooca — foto 5 do campus Mooca"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/photo-6.jpg",
+              "alt": "Mooca — foto 6 do campus Mooca"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/photo-7.jpg",
+              "alt": "Mooca — foto 7 do campus Mooca"
+            }
+          }
         ]
       },
       {
@@ -155,12 +190,42 @@
         },
         "video_id": "kOfW_fLo23c",
         "photos": [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/photo-1.jpg",
+              "alt": "Piracicaba — foto 1 do campus Piracicaba"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/photo-2.jpg",
+              "alt": "Piracicaba — foto 2 do campus Piracicaba"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/photo-3.jpg",
+              "alt": "Piracicaba — foto 3 do campus Piracicaba"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/photo-4.jpg",
+              "alt": "Piracicaba — foto 4 do campus Piracicaba"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/photo-5.jpg",
+              "alt": "Piracicaba — foto 5 do campus Piracicaba"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/photo-6.jpeg",
+              "alt": "Piracicaba — foto 6 do campus Piracicaba"
+            }
+          }
         ]
       },
       {
@@ -177,16 +242,66 @@
         },
         "video_id": "I8S5-E5OYlQ",
         "photos": [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-1.jpg",
+              "alt": "São José dos Campos — foto 1 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-2.png",
+              "alt": "São José dos Campos — foto 2 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-3.jpg",
+              "alt": "São José dos Campos — foto 3 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-4.jpg",
+              "alt": "São José dos Campos — foto 4 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-5.jpg",
+              "alt": "São José dos Campos — foto 5 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-6.jpg",
+              "alt": "São José dos Campos — foto 6 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-7.png",
+              "alt": "São José dos Campos — foto 7 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-8.jpg",
+              "alt": "São José dos Campos — foto 8 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-9.png",
+              "alt": "São José dos Campos — foto 9 do campus São José dos Campos"
+            }
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/photo-10.jpg",
+              "alt": "São José dos Campos — foto 10 do campus São José dos Campos"
+            }
+          }
         ]
       }
     ]

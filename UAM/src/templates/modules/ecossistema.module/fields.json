@@ -66,25 +66,41 @@
         "eyebrow": "Centros Integrados de Saúde (CIS)",
         "subtitle": "Prática intensa sob supervisão de elite",
         "value": "+218.000",
-        "support_text": "agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à população."
+        "support_text": "agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à população.",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/ecosystem-carousel-1.png",
+          "alt": "Centros Integrados de Saúde (CIS)"
+        }
       },
       {
         "eyebrow": "Estágios em hospitais parceiros",
         "subtitle": "",
         "value": "",
-        "support_text": "Conteúdo detalhado em breve."
+        "support_text": "Conteúdo detalhado em breve.",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/ecosystem-carousel-1.png",
+          "alt": "Estágios em hospitais parceiros"
+        }
       },
       {
         "eyebrow": "Ligas acadêmicas",
         "subtitle": "",
         "value": "",
-        "support_text": "Conteúdo detalhado em breve."
+        "support_text": "Conteúdo detalhado em breve.",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/ecosystem-carousel-1.png",
+          "alt": "Ligas acadêmicas"
+        }
       },
       {
         "eyebrow": "Suporte psicopedagógico",
         "subtitle": "",
         "value": "",
-        "support_text": "Conteúdo detalhado em breve."
+        "support_text": "Conteúdo detalhado em breve.",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/ecosystem-carousel-1.png",
+          "alt": "Suporte psicopedagógico"
+        }
       }
     ]
   }
