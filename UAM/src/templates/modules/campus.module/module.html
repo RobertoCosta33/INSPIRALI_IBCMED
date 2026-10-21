@@ -4,7 +4,7 @@
   <div class="section-intro__text">{{ module.intro_text }}</div>
 
   <div class="campus-layout">
-    <div class="campus-panel">
+    <div class="campus-panel campus-panel--top">
       <div>
         <p class="campus-panel__title">{{ module.panel_title }}</p>
         <div class="campus-panel__text">{{ module.panel_text }}</div>
@@ -26,6 +26,9 @@
         </button>
         {% endfor %}
       </div>
+    </div>
+
+    <div class="campus-panel campus-panel--bottom">
       <div class="campus-detail">
         <p class="campus-detail__location">
           <img src="{{ get_asset_url('../../public/icons/icon-location.svg') }}" alt="" aria-hidden="true" />
@@ -37,23 +40,27 @@
     </div>
 
     <div class="campus-gallery" data-campus-gallery>
-      <div class="campus-gallery__viewport">
-        {% for photo in module.campuses[0].photos %}
-        <div class="campus-gallery__image{% if loop.first %} is-active{% endif %}" data-gallery-slide data-label="{{ module.campuses[0].display_name }}">
-          <img class="campus-gallery__photo" src="{{ photo.image.src }}" alt="{{ photo.image.alt }}" loading="lazy" />
+      <div class="campus-gallery__media">
+        <div class="campus-gallery__viewport">
+          {% for photo in module.campuses[0].photos %}
+          <div class="campus-gallery__image{% if loop.first %} is-active{% endif %}" data-gallery-slide data-label="{{ module.campuses[0].display_name }}">
+            <img class="campus-gallery__photo" src="{{ photo.image.src }}" alt="{{ photo.image.alt }}" loading="lazy" />
+          </div>
+          {% endfor %}
+          <div class="campus-gallery__overlay" aria-hidden="true"></div>
+          <span class="campus-gallery__label" data-gallery-label>{{ module.campuses[0].display_name }}</span>
         </div>
-        {% endfor %}
-        <div class="campus-gallery__overlay" aria-hidden="true"></div>
-        <span class="campus-gallery__label" data-gallery-label>{{ module.campuses[0].display_name }}</span>
-        <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>{{ module.campuses[0].photos|length }}</span></span>
-        <div class="campus-gallery__nav">
-          <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
-            <img src="{{ get_asset_url('../../public/icons/icon-chevron-left-teal-small.svg') }}" alt="" aria-hidden="true" />
-          </button>
-          <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
-            <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 0"></span>
-            <img class="campus-gallery__nav-icon--flip" src="{{ get_asset_url('../../public/icons/icon-chevron-left-teal-small.svg') }}" alt="" aria-hidden="true" />
-          </button>
+        <div class="campus-gallery__meta">
+          <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>{{ module.campuses[0].photos|length }}</span></span>
+          <div class="campus-gallery__nav">
+            <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
+              <img src="{{ get_asset_url('../../public/icons/icon-chevron-left-teal-small.svg') }}" alt="" aria-hidden="true" />
+            </button>
+            <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
+              <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 0"></span>
+              <img class="campus-gallery__nav-icon--flip" src="{{ get_asset_url('../../public/icons/icon-chevron-left-teal-small.svg') }}" alt="" aria-hidden="true" />
+            </button>
+          </div>
         </div>
       </div>
       <div class="campus-gallery__thumbs">

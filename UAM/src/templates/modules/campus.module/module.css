@@ -3,17 +3,31 @@
    Figma: "Campus e infraestrutura" (523:29925)
    ==================================================================== */
 
+/* Grid com áreas nomeadas: no desktop, as duas metades do painel ficam
+   empilhadas na coluna esquerda e a galeria ocupa a coluna direita; no
+   mobile, a ordem muda para título/chips -> galeria -> endereço/CTA
+   (ver breakpoint abaixo), sem precisar duplicar HTML. */
 .campus-layout {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(240px, 400px) 1fr;
+  grid-template-areas:
+    "panel-top gallery"
+    "panel-bottom gallery";
   gap: var(--spacing-extra-large);
   margin-top: var(--spacing-extra-large);
   align-items: stretch;
 }
 
+.campus-panel--top {
+  grid-area: panel-top;
+}
+
+.campus-panel--bottom {
+  grid-area: panel-bottom;
+  align-self: end;
+}
+
 .campus-panel {
-  flex: 0 0 300px;
-  max-width: 400px;
-  min-width: 240px;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-large);
@@ -135,19 +149,34 @@
 }
 
 .campus-gallery {
-  flex: 1 1 0;
+  grid-area: gallery;
   display: flex;
   gap: var(--spacing-extra-small);
   min-width: 0;
 }
 
-.campus-gallery__viewport {
+.campus-gallery__media {
   position: relative;
   flex: 1 1 0;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.campus-gallery__viewport {
+  position: relative;
   min-height: 420px;
   border-radius: var(--radius-small);
   overflow: hidden;
+}
+
+.campus-gallery__meta {
+  position: absolute;
+  inset: auto 24px 24px auto;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .campus-gallery__image {
@@ -203,9 +232,6 @@
 }
 
 .campus-gallery__counter {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
   color: var(--text-footer);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
@@ -213,9 +239,6 @@
 }
 
 .campus-gallery__nav {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
   display: flex;
   align-items: center;
   gap: var(--spacing-extra-small);
@@ -372,14 +395,22 @@
 }
 
 @media (max-width: 1024px) {
+  /* Empilha em coluna única, na ordem: título/chips -> galeria -> endereço/CTA. */
   .campus-layout {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "panel-top"
+      "gallery"
+      "panel-bottom";
   }
 
   .campus-panel {
-    flex-basis: auto;
     width: 100%;
     max-width: none;
+  }
+
+  .campus-panel--bottom {
+    align-self: auto;
   }
 
   .campus-gallery {
@@ -392,12 +423,44 @@
     flex-direction: column;
   }
 
+  /* No mobile o Figma substitui a faixa de miniaturas por um contador
+     (ex.: "01 / 03") e os controles abaixo da imagem, em vez de
+     sobrepostos a ela. */
   .campus-gallery__thumbs {
-    flex-direction: row;
-    flex-basis: auto;
+    display: none;
   }
 
   .campus-gallery__viewport {
-    min-height: 260px;
+    min-height: 0;
+    height: 242px;
+  }
+
+  .campus-gallery__meta {
+    position: static;
+    inset: auto;
+    width: 100%;
+    margin-top: var(--spacing-extra-small);
+  }
+
+  .campus-gallery__counter {
+    color: #141414;
+  }
+
+  .campus-gallery__nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .campus-gallery__nav-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .campus-gallery__nav-btn--prev {
+    background-color: #fafaff;
+  }
+
+  .campus-gallery__nav-btn--prev.is-enabled {
+    background-color: #fafaff;
   }
 }

@@ -7,7 +7,7 @@
         </p>
 
         <div class="campus-layout">
-          <div class="campus-panel">
+          <div class="campus-panel campus-panel--top">
             <div>
               <p class="campus-panel__title">Nossas unidades</p>
               <p class="campus-panel__text">
@@ -56,6 +56,9 @@
                 São José dos Campos
               </button>
             </div>
+          </div>
+
+          <div class="campus-panel campus-panel--bottom">
             <div class="campus-detail">
               <p class="campus-detail__location">
                 <img src="/UAM/src/public/icons/icon-location.svg" alt="" aria-hidden="true" />
@@ -67,21 +70,25 @@
           </div>
 
           <div class="campus-gallery" data-campus-gallery>
-            <div class="campus-gallery__viewport">
-              <img class="campus-gallery__image is-active" data-gallery-slide data-label="Mooca" src="/UAM/src/public/images/campus-gallery/mooca/photo-1.jpg" alt="Foto 1 do campus Mooca da Anhembi Morumbi" loading="lazy" />
-              <img class="campus-gallery__image" data-gallery-slide data-label="Mooca" src="/UAM/src/public/images/campus-gallery/mooca/photo-2.jpg" alt="Foto 2 do campus Mooca da Anhembi Morumbi" loading="lazy" />
-              <img class="campus-gallery__image" data-gallery-slide data-label="Mooca" src="/UAM/src/public/images/campus-gallery/mooca/photo-3.jpg" alt="Foto 3 do campus Mooca da Anhembi Morumbi" loading="lazy" />
-              <div class="campus-gallery__overlay" aria-hidden="true"></div>
-              <span class="campus-gallery__label" data-gallery-label>Mooca</span>
-              <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>07</span></span>
-              <div class="campus-gallery__nav">
-                <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
-                  <img src="/UAM/src/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
-                </button>
-                <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
-                  <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 14"></span>
-                  <img class="campus-gallery__nav-icon--flip" src="/UAM/src/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
-                </button>
+            <div class="campus-gallery__media">
+              <div class="campus-gallery__viewport">
+                <img class="campus-gallery__image is-active" data-gallery-slide data-label="Mooca" src="/UAM/src/public/images/campus-gallery/mooca/photo-1.jpg" alt="Foto 1 do campus Mooca da Anhembi Morumbi" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Mooca" src="/UAM/src/public/images/campus-gallery/mooca/photo-2.jpg" alt="Foto 2 do campus Mooca da Anhembi Morumbi" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Mooca" src="/UAM/src/public/images/campus-gallery/mooca/photo-3.jpg" alt="Foto 3 do campus Mooca da Anhembi Morumbi" loading="lazy" />
+                <div class="campus-gallery__overlay" aria-hidden="true"></div>
+                <span class="campus-gallery__label" data-gallery-label>Mooca</span>
+              </div>
+              <div class="campus-gallery__meta">
+                <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>07</span></span>
+                <div class="campus-gallery__nav">
+                  <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
+                    <img src="/UAM/src/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
+                  </button>
+                  <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
+                    <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 14"></span>
+                    <img class="campus-gallery__nav-icon--flip" src="/UAM/src/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
               </div>
             </div>
             <div class="campus-gallery__thumbs">

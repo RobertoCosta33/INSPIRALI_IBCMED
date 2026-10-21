@@ -14,15 +14,24 @@
   gap: var(--spacing-small);
 }
 
-a.info-card {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+.info-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+  transition: color 0.4s ease;
 }
 
-a.info-card:hover {
-  background-color: var(--surface-brand-soft);
+.info-card__link img {
+  width: 16px;
+  height: 16px;
+}
+
+.info-card__link:hover,
+.info-card__link:focus-visible {
+  color: var(--surface-brand-primary-dark);
 }
 
 .info-card__title {
