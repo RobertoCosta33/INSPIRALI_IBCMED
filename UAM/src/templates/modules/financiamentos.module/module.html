@@ -28,6 +28,15 @@
 
     <div class="financing-programs">
       {% for program in module.programs %}
+      {% if program.url.url.href %}
+      <a class="info-card" href="{{ program.url.url.href }}"{% if program.url.open_in_new_tab %} target="_blank" rel="noopener{% if program.url.no_follow %} nofollow{% endif %}"{% endif %}>
+        <div>
+          <p class="info-card__title">{{ program.title }}</p>
+          <p class="info-card__subtitle">{{ program.subtitle }}</p>
+        </div>
+        <div class="info-card__text">{{ program.text }}</div>
+      </a>
+      {% else %}
       <article class="info-card">
         <div>
           <p class="info-card__title">{{ program.title }}</p>
@@ -35,6 +44,7 @@
         </div>
         <div class="info-card__text">{{ program.text }}</div>
       </article>
+      {% endif %}
       {% endfor %}
     </div>
   </div>

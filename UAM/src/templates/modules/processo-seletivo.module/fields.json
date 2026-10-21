@@ -131,7 +131,7 @@
         "tab_label": "Enem 27.1",
         "status_label": "Inscrições Abertas",
         "description": "Prova presencial focada nos conhecimentos do Ensino Médio.",
-        "facts": "<p><strong>Data das Provas:</strong> XX/XX/XX</p><p><strong>Investimento:</strong> 12 parcelas de R$ xxx por ano. Possibilidades de financiamento e bolsa.</p>",
+        "facts": "<p><strong>Investimento:</strong> 12 parcelas de R$ xxx por ano. Possibilidades de financiamento e bolsa.</p>",
         "cta_label": "Quero me inscrever para 27.1",
         "cta_url": {
           "url": {

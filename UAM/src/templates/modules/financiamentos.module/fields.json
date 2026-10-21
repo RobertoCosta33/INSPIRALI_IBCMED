@@ -27,12 +27,18 @@
     "children": [
       { "name": "title", "label": "Título", "type": "text", "default": "FIES" },
       { "name": "subtitle", "label": "Subtítulo", "type": "text", "default": "Financiamento estudantil" },
-      { "name": "text", "label": "Texto", "type": "richtext", "default": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social)." }
+      { "name": "text", "label": "Texto", "type": "richtext", "default": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social)." },
+      {
+        "name": "url",
+        "label": "Link externo (deixe vazio para o card não ser clicável)",
+        "type": "link",
+        "default": { "url": { "href": "", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false }
+      }
     ],
     "default": [
-      { "title": "FIES", "subtitle": "Financiamento estudantil", "text": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social)." },
-      { "title": "Prouni", "subtitle": "Bolsas de estudo", "text": "Bolsas de estudo integrais (100%) ou parciais (50%) através da sua nota do Enem." },
-      { "title": "Pravaler", "subtitle": "Financiamento privado", "text": "Financiamento estudantil privado com condições flexíveis e parcelamento facilitado." }
+      { "title": "FIES", "subtitle": "Financiamento estudantil", "text": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social).", "url": { "url": { "href": "", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
+      { "title": "Prouni", "subtitle": "Bolsas de estudo", "text": "Bolsas de estudo integrais (100%) ou parciais (50%) através da sua nota do Enem.", "url": { "url": { "href": "https://acessounico.mec.gov.br/prouni", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
+      { "title": "Pravaler", "subtitle": "Financiamento privado", "text": "Financiamento estudantil privado com condições flexíveis e parcelamento facilitado.", "url": { "url": { "href": "https://www.pravaler.com.br/campanhas/lp-campeao2/medicina/?ies_code=62&nome=ANHEMBI%20MORUMBI&faculdade&utm_source=trade&utm_medium=site-faculdade&utm_campaign=positiva%C3%A7%C3%A3o-medicina", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } }
     ]
   }
 ]
