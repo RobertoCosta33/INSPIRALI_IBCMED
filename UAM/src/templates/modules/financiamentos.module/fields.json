@@ -11,12 +11,13 @@
       { "name": "campus_name", "label": "Nome do campus", "type": "text", "default": "UAM - Mooca" },
       { "name": "price_label", "label": "Rótulo", "type": "text", "default": "Investimento Mensal (2026)" },
       { "name": "price_value", "label": "Valor", "type": "text", "default": "R$ 13.295,00" },
-      { "name": "price_note", "label": "Nota", "type": "text", "default": "Consulte condições de financiamento ao lado" }
+      { "name": "price_note", "label": "Nota", "type": "text", "default": "Consulte condições de financiamento" },
+      { "name": "price_disclaimer", "label": "Nota de rodapé", "type": "text", "default": "*Mensalidade de 2026 vinculada à pontualidade" }
     ],
     "default": [
-      { "campus_name": "UAM - Mooca", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 13.295,00", "price_note": "Consulte condições de financiamento ao lado" },
-      { "campus_name": "UAM - Piracicaba", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento ao lado" },
-      { "campus_name": "UAM - São José dos Campos", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento ao lado" }
+      { "campus_name": "UAM - Mooca", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 13.295,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" },
+      { "campus_name": "UAM - Piracicaba", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" },
+      { "campus_name": "UAM - São José dos Campos", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" }
     ]
   },
   {

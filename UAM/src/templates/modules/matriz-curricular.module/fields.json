@@ -69,7 +69,7 @@
     "name": "download_current_caption",
     "label": "Legenda abaixo do botão (matriz atual)",
     "type": "text",
-    "default": "Para alunos a partir do 2º semestre"
+    "default": "Para alunos a partir do 3º semestre"
   },
   {
     "name": "ppc_label",

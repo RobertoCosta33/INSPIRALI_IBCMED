@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="institutional-header">
     <div class="institutional-header__identity">
-      <a href="{{ module.home_url.url.href }}" aria-label="Página inicial {{ module.institution_logo.alt }}">
+      <a href="{{ module.home_url.url.href }}" class="institutional-header__brand" aria-label="Página inicial {{ module.institution_logo.alt }}">
         <img
           src="{{ module.institution_logo.src }}"
           alt="{{ module.institution_logo.alt }}"
@@ -9,15 +9,23 @@
           width="{{ module.institution_logo.width }}"
           height="{{ module.institution_logo.height }}"
         />
+        {% if module.institution_subtitle %}
+        <span class="institutional-header__subtitle">{{ module.institution_subtitle }}</span>
+        {% endif %}
       </a>
+      {% if module.partner_logo.src %}
       <span class="institutional-header__divider" aria-hidden="true"></span>
-      <img
-        src="{{ module.inspirali_logo.src }}"
-        alt="{{ module.inspirali_logo.alt }}"
-        class="institutional-header__inspirali"
-        width="{{ module.inspirali_logo.width }}"
-        height="{{ module.inspirali_logo.height }}"
-      />
+      <div class="institutional-header__partner">
+        {% if module.partner_label %}
+        <span class="institutional-header__partner-label">{{ module.partner_label }}</span>
+        {% endif %}
+        <img
+          src="{{ module.partner_logo.src }}"
+          alt="{{ module.partner_logo.alt }}"
+          class="institutional-header__einstein"
+        />
+      </div>
+      {% endif %}
     </div>
 
     <button
@@ -51,6 +59,13 @@
         </div>
       </div>
     </nav>
+  </div>
+
+  <div class="institutional-header__mobile-search">
+    <span class="institutional-header__mobile-search-placeholder">O que você procura?</span>
+    <button type="button" class="institutional-header__mobile-search-btn" data-search-trigger aria-label="Buscar nesta página">
+      <img src="{{ get_asset_url('../../public/icons/icon-search.svg') }}" alt="" aria-hidden="true" width="16" height="16" />
+    </button>
   </div>
 
   <nav class="course-nav" aria-label="Navegação do curso">

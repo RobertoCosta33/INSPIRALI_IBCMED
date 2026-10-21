@@ -11,15 +11,26 @@
 
 .inspirali-header {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-extra-large);
+  align-items: flex-start;
+  gap: 130px;
 }
 
-.inspirali-mark {
-  width: 204px;
-  height: 24px;
+.inspirali-header__brand {
+  display: flex;
   flex-shrink: 0;
-  align-self: flex-start;
+}
+
+.inspirali-header__lockup {
+  /* Proporção da imagem fonte (650x302): "INSPIRALI" ocupa ~67px de altura,
+     a partir da linha 35 — nessa altura (180px) ele fica perto do tamanho
+     do título (--font-size-3xl, 40px). O margin-top negativo compensa o
+     espaço em branco da própria imagem acima de "INSPIRALI", alinhando o
+     topo da palavra com o topo da primeira linha do título ao lado. */
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  object-position: left top;
+  margin-top: -21px;
 }
 
 .inspirali-header__title {
@@ -183,6 +194,16 @@
 }
 
 @media (max-width: 640px) {
+  .inspirali-header {
+    flex-direction: column;
+    gap: var(--spacing-large);
+  }
+
+  .inspirali-header__lockup {
+    height: 130px;
+    margin-top: -15px;
+  }
+
   .stats-grid {
     flex-direction: column;
   }
@@ -193,5 +214,33 @@
 
   .partner-logos {
     justify-content: flex-start;
+  }
+
+  .inspirali-header__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .inspirali-header__text {
+    font-size: var(--font-size-sm);
+  }
+
+  .lifelong__label {
+    font-size: var(--font-size-sm);
+  }
+
+  .lifelong__sublabel {
+    font-size: var(--font-size-2xl);
+  }
+
+  .lifelong__text > p {
+    font-size: var(--font-size-xs);
+  }
+
+  .timeline-step__title {
+    font-size: var(--font-size-sm);
+  }
+
+  .timeline-step__text {
+    font-size: var(--font-size-xs);
   }
 }

@@ -9,7 +9,7 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Três campus. Uma formação conectada à prática."
+    "default": "Três campi. Uma formação conectada à prática."
   },
   {
     "name": "intro_text",

@@ -1,33 +1,33 @@
 [
   {
     "name": "eyebrow",
-    "label": "Eyebrow",
+    "label": "Eyebrow (deixe vazio para ocultar)",
     "type": "text",
-    "default": "SEU PRÓXIMO PASSO"
+    "default": ""
   },
   {
     "name": "title_line_1",
     "label": "Título (linha 1, cor escura)",
     "type": "text",
-    "default": "Medicina Anhembi Morumbi:"
+    "default": "Medicina Anhembi Morumbi"
   },
   {
     "name": "title_line_2",
     "label": "Título (linha 2, cor de marca)",
     "type": "text",
-    "default": "A Prática que Transforma Realidades"
+    "default": "| Excelência Acadêmica Einstein"
   },
   {
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Formação com nota máxima no MEC, integrada ao ecossistema Inspirali. Dê o primeiro passo rumo a uma medicina centrada na excelência, na ciência e no cuidado humano."
+    "default": "<p>Um formação médica que une excelência técnico-científica, humanização e responsabilidade social através de uma visão integral do ser humano, da sociedade e do planeta.</p><p>Parte do ecossistema de ensino médico Inspirali, com colaboração do Einstein Hospital Israelita em seu desenvolvimento acadêmico.</p>"
   },
   {
     "name": "guidance_text",
-    "label": "Texto de orientação",
+    "label": "Texto de orientação (deixe vazio para ocultar)",
     "type": "richtext",
-    "default": "Compare as modalidades de ingresso. Antes de se inscrever, confira a disponibilidade e as condições do edital correspondente."
+    "default": ""
   },
   {
     "name": "card_bg_image",

@@ -10,3 +10,11 @@
   color: var(--text-inverted);
   margin-bottom: var(--spacing-large);
 }
+
+@media (max-width: 640px) {
+  .practice-heading {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-display, var(--font-family-base));
+  }
+}

@@ -173,3 +173,21 @@
     white-space: nowrap;
   }
 }
+
+@media (max-width: 640px) {
+  .unit-tab {
+    font-size: var(--font-size-xs);
+  }
+
+  .unit-panel__eyebrow {
+    font-size: var(--font-size-xxs);
+  }
+
+  .unit-panel__hours {
+    font-size: var(--font-size-xxs);
+  }
+
+  .unit-panel__title {
+    font-size: var(--font-size-xl);
+  }
+}

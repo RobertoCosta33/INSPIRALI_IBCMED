@@ -1,12 +1,16 @@
 <section class="section section--subtle" id="processos-seletivos" aria-labelledby="processo-seletivo-title">
   <div class="selection-intro">
+    {% if module.eyebrow %}
     <p class="eyebrow">{{ module.eyebrow }}</p>
+    {% endif %}
     <h1 class="section-intro__title" id="processo-seletivo-title">
-      <span class="text-heading">{{ module.title_line_1 }}</span><br />
+      <span class="text-heading">{{ module.title_line_1 }}</span>
       <span class="text-brand">{{ module.title_line_2 }}</span>
     </h1>
     <div class="section-intro__text">{{ module.intro_text }}</div>
+    {% if module.guidance_text %}
     <div class="selection-intro__guidance">{{ module.guidance_text }}</div>
+    {% endif %}
   </div>
 
   <div class="selection-card" data-tabs>

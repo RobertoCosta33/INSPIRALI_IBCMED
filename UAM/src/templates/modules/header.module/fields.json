@@ -25,14 +25,26 @@
     }
   },
   {
-    "name": "inspirali_logo",
-    "label": "Logo Inspirali",
+    "name": "institution_subtitle",
+    "label": "Subtítulo abaixo da logo da instituição",
+    "type": "text",
+    "default": "Medicina"
+  },
+  {
+    "name": "partner_label",
+    "label": "Texto do parceiro acadêmico (ex.: \"Excelência Acadêmica\")",
+    "type": "text",
+    "default": "Excelência Acadêmica"
+  },
+  {
+    "name": "partner_logo",
+    "label": "Logo do parceiro acadêmico (ex.: Einstein)",
     "type": "image",
     "default": {
-      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/inspirali-mark.svg",
-      "alt": "Inspirali",
-      "width": 118,
-      "height": 14
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/einstein-logo-horizontal.png",
+      "alt": "Hospital Israelita Albert Einstein",
+      "width": 1635,
+      "height": 385
     }
   },
   {
@@ -150,7 +162,7 @@
             "type": "EXTERNAL"
           }
         },
-        "link_label": "Editais e Resultados"
+        "link_label": "Formas de Ingresso"
       },
       {
         "url": {
@@ -177,7 +189,7 @@
             "type": "EXTERNAL"
           }
         },
-        "link_label": "Nossos Campus"
+        "link_label": "Nossos Campi"
       },
       {
         "url": {

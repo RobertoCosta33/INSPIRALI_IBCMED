@@ -105,6 +105,14 @@
   opacity: 0.75;
 }
 
+.financing-highlight__disclaimer {
+  margin-top: var(--spacing-extra-small);
+  color: var(--surface-brand-primary-light);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+}
+
 .financing-dots {
   display: flex;
   align-items: center;
@@ -265,5 +273,18 @@
 
   .bolsa-modal__box {
     padding: var(--spacing-medium) var(--spacing-large);
+  }
+
+  .financing-highlight__campus {
+    font-size: var(--font-size-xs);
+  }
+
+  .financing-highlight__label,
+  .financing-highlight__note {
+    font-size: var(--font-size-xxs);
+  }
+
+  .financing-highlight__value {
+    font-size: var(--font-size-2xl);
   }
 }

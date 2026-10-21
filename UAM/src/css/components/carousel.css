@@ -200,3 +200,23 @@
   width: 24px;
   height: 24px;
 }
+
+@media (max-width: 640px) {
+  .evidence-carousel__eyebrow {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-display, var(--font-family-base));
+  }
+
+  .evidence-carousel__subtitle {
+    font-size: var(--font-size-xs);
+  }
+
+  .evidence-carousel__value {
+    font-size: var(--font-size-2xl);
+  }
+
+  .evidence-carousel__label {
+    font-size: var(--font-size-sm);
+  }
+}

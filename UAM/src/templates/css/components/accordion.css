@@ -118,3 +118,10 @@
   font-size: var(--font-size-sm);
   color: var(--text-primary-dark);
 }
+
+@media (max-width: 640px) {
+  .accordion-trigger__title,
+  .accordion-panel__text {
+    font-size: var(--font-size-xs);
+  }
+}

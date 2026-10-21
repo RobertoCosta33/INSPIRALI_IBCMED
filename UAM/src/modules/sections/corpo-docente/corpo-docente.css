@@ -313,4 +313,20 @@
   .docente-modal__content {
     flex: 1 1 auto;
   }
+
+  .docente-card__role {
+    font-size: var(--font-size-xxs);
+  }
+
+  .docente-card__name {
+    font-size: var(--font-size-sm);
+  }
+
+  .docente-card__bio {
+    font-size: var(--font-size-xxs);
+  }
+
+  .docente-card__more {
+    font-size: var(--font-size-xxs);
+  }
 }

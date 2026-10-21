@@ -36,7 +36,7 @@
 .spiral-ctas {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-medium);
   margin-top: var(--spacing-medium);
 }
@@ -93,7 +93,7 @@
   .spiral-cta {
     height: 52px;
     padding: var(--spacing-medium);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
   }
 
   .spiral-cta img {
@@ -104,6 +104,10 @@
   .spiral-cta-group__caption {
     padding-left: 0;
     font-size: var(--font-size-xxs);
+  }
+
+  .status-pill {
+    font-size: var(--font-size-xs);
   }
 }
 

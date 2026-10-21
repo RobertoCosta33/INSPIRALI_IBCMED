@@ -1,26 +1,26 @@
 [
   {
     "name": "inspirali_logo",
-    "label": "Logo Inspirali",
+    "label": "Logo Inspirali + Parceiro acadêmico (imagem única, ex.: Inspirali + Excelência Acadêmica Einstein)",
     "type": "image",
     "default": {
-      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/inspirali-pos-mark.svg",
-      "alt": "Inspirali",
-      "width": 204,
-      "height": 24
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/inspirali-einstein-lockup.png",
+      "alt": "Inspirali — Excelência Acadêmica Einstein",
+      "width": 650,
+      "height": 302
     }
   },
   {
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Faça Parte da Principal Autoridade em Educação Médica do Brasil"
+    "default": "Um ecossistema dedicado ao ensino médico de alta qualidade no Brasil."
   },
   {
     "name": "text",
     "label": "Texto",
     "type": "richtext",
-    "default": "A Inspirali é dedicada exclusivamente a formar e acompanhar médicos em todas as etapas da carreira, desde a graduação até os níveis mais avançados de especialização."
+    "default": "Excelência Técnico-Científica, Humanização e Responsabilidade Social. Essas são as diretrizes das escolas Inspirali, que em sua graduação, contam com a colaboração do Einstein Hospital Israelita, através de um acordo de desenvolvimento de seu plano acadêmico."
   },
   {
     "name": "stats",
@@ -81,8 +81,8 @@
       },
       {
         "value": "100%",
-        "title": "Excelência Comprovada",
-        "text": "100% das instituições avaliadas pelo MEC possuem conceitos de excelência (notas 4 e 5).",
+        "title": "Graduação<br />Excelência Acadêmica Einstein",
+        "text": "Em um acordo inédito, exclusivo e de longo prazo com o Einstein, a graduação das escolas Inspirali contam com a assessoria e consultoria acadêmica da maior referência em medicina no país.",
         "icon": {
           "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-award.svg",
           "alt": ""

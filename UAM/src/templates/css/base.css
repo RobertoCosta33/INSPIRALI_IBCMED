@@ -157,6 +157,25 @@ h4 {
   color: var(--text-primary-dark);
 }
 
+@media (max-width: 640px) {
+  /* Figma mobile (375-575px): Title 4 (24px), em vez do tamanho desktop
+     (--font-size-3xl, 40px), usado por padrão em todos os títulos de seção.
+     Precisa vir DEPOIS das regras acima no arquivo: como têm a mesma
+     especificidade, a regra declarada por último no CSS vence, mesmo
+     dentro de um media query. */
+  .section-intro__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .section-intro__text {
+    font-size: var(--font-size-sm);
+  }
+
+  .eyebrow {
+    font-size: var(--font-size-xxs);
+  }
+}
+
 /* Utilitários de cor de texto */
 .text-brand {
   color: var(--text-brand);

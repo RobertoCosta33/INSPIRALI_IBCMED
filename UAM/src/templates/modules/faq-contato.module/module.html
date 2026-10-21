@@ -27,7 +27,10 @@
     <div class="faq-item" data-accordion-item>
       <button type="button" class="faq-item__trigger" data-accordion-trigger aria-expanded="false">
         <span>{{ item.question }}</span>
-        <img class="icon-plus" src="{{ get_asset_url('../../public/icons/icon-plus-small.svg') }}" alt="" aria-hidden="true" />
+        <span class="faq-item__icon">
+          <img class="icon-plus" src="{{ get_asset_url('../../public/icons/icon-plus-teal.svg') }}" alt="" aria-hidden="true" />
+          <img class="icon-minus" src="{{ get_asset_url('../../public/icons/icon-minus-teal.svg') }}" alt="" aria-hidden="true" />
+        </span>
       </button>
       <div class="faq-item__panel" data-accordion-panel>
         <div class="faq-item__panel-inner">

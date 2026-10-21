@@ -81,3 +81,16 @@
     flex-basis: auto;
   }
 }
+
+@media (max-width: 640px) {
+  .future-header__cta {
+    height: 40px;
+    padding: var(--spacing-small);
+    font-size: var(--font-size-xs);
+  }
+
+  .future-header__cta img {
+    width: 16px;
+    height: 16px;
+  }
+}

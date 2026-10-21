@@ -1,9 +1,9 @@
 // Busca "Ctrl+F" dentro da página, usando a lib mark.js para destacar
 // correspondências parciais em todo o <main> e navegar entre elas.
 (function () {
-  const trigger = document.querySelector("[data-search-trigger]");
+  const triggers = document.querySelectorAll("[data-search-trigger]");
   const panel = document.querySelector("[data-page-search]");
-  if (!trigger || !panel || typeof Mark === "undefined") return;
+  if (!triggers.length || !panel || typeof Mark === "undefined") return;
 
   const input = panel.querySelector("[data-page-search-input]");
   const countEl = panel.querySelector("[data-page-search-count]");
@@ -102,12 +102,14 @@
     setTimeout(function () { panel.hidden = true; }, 250);
   }
 
-  trigger.addEventListener("click", function () {
-    if (panel.classList.contains("is-open")) {
-      closeSearch();
-    } else {
-      openSearch();
-    }
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      if (panel.classList.contains("is-open")) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    });
   });
 
   closeBtn.addEventListener("click", closeSearch);
