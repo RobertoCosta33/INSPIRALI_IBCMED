@@ -9,22 +9,16 @@
           width="{{ module.institution_logo.width }}"
           height="{{ module.institution_logo.height }}"
         />
-        {% if module.institution_subtitle %}
-        <span class="institutional-header__subtitle">{{ module.institution_subtitle }}</span>
-        {% endif %}
       </a>
       {% if module.partner_logo.src %}
       <span class="institutional-header__divider" aria-hidden="true"></span>
-      <div class="institutional-header__partner">
-        {% if module.partner_label %}
-        <span class="institutional-header__partner-label">{{ module.partner_label }}</span>
-        {% endif %}
-        <img
-          src="{{ module.partner_logo.src }}"
-          alt="{{ module.partner_logo.alt }}"
-          class="institutional-header__einstein"
-        />
-      </div>
+      <img
+        src="{{ module.partner_logo.src }}"
+        alt="{{ module.partner_logo.alt }}"
+        class="institutional-header__einstein"
+        width="{{ module.partner_logo.width }}"
+        height="{{ module.partner_logo.height }}"
+      />
       {% endif %}
     </div>
 

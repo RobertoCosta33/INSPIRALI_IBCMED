@@ -28,48 +28,25 @@
 
 .institutional-header__brand {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--spacing-micro);
+  align-items: center;
 }
 
 .institutional-header__mark {
   display: block;
-  height: 44px;
+  height: 64px;
   width: auto;
-}
-
-.institutional-header__subtitle {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-brand);
 }
 
 .institutional-header__divider {
   width: 1px;
-  height: 44px;
+  height: 56px;
   background-color: #7a7a7a;
   opacity: 0.4;
 }
 
-.institutional-header__partner {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-small);
-}
-
-.institutional-header__partner-label {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-tight);
-  color: var(--text-secondary-dark);
-}
-
 .institutional-header__einstein {
   display: block;
-  height: 44px;
+  height: 40px;
   width: auto;
 }
 
@@ -293,23 +270,11 @@
   }
 
   .institutional-header__mark {
-    height: 26px;
-  }
-
-  .institutional-header__subtitle {
-    font-size: 9px;
+    height: 36px;
   }
 
   .institutional-header__divider {
-    height: 26px;
-  }
-
-  .institutional-header__partner {
-    gap: var(--spacing-micro);
-  }
-
-  .institutional-header__partner-label {
-    font-size: 9px;
+    height: 32px;
   }
 
   .institutional-header__einstein {
