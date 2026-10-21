@@ -6,6 +6,7 @@
     const dots = root.querySelectorAll("[data-evidence-dot]");
     const prevBtn = root.querySelector("[data-evidence-prev]");
     const nextBtn = root.querySelector("[data-evidence-next]");
+    const viewport = root.querySelector(".evidence-carousel__viewport");
     let index = 0;
 
     function show(newIndex) {
@@ -23,6 +24,24 @@
     dots.forEach(function (dot, i) {
       dot.addEventListener("click", function () { show(i); });
     });
+
+    // Arrastar (swipe) sobre o slide para trocar, no mobile/tablet.
+    if (viewport) {
+      let touchStartX = null;
+
+      viewport.addEventListener("touchstart", function (event) {
+        touchStartX = event.touches[0].clientX;
+      }, { passive: true });
+
+      viewport.addEventListener("touchend", function (event) {
+        if (touchStartX === null) return;
+        const deltaX = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > 40) {
+          show(index + (deltaX < 0 ? 1 : -1));
+        }
+        touchStartX = null;
+      });
+    }
   });
 
   document.querySelectorAll("[data-card-carousel]").forEach(function (root) {

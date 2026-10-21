@@ -189,7 +189,12 @@
     // Clicar na imagem/vídeo em destaque: vídeo abre o YouTube em nova aba,
     // imagem abre em um overlay (lightbox) ampliado.
     if (viewport) {
+      // Arrastar (swipe) sobre a imagem para trocar de foto, no mobile/tablet.
+      let touchStartX = null;
+      let didSwipe = false;
+
       viewport.addEventListener("click", function (event) {
+        if (didSwipe) { didSwipe = false; return; }
         if (event.target.closest(".campus-gallery__nav")) return;
         const activeSlide = slides[index];
         if (!activeSlide) return;
@@ -206,6 +211,26 @@
 
         const img = activeSlide.querySelector("img");
         if (img) openLightbox(img.src, img.alt);
+      });
+
+      viewport.addEventListener("touchstart", function (event) {
+        touchStartX = event.touches[0].clientX;
+        didSwipe = false;
+      }, { passive: true });
+
+      viewport.addEventListener("touchmove", function (event) {
+        if (touchStartX === null) return;
+        if (Math.abs(event.touches[0].clientX - touchStartX) > 10) didSwipe = true;
+      }, { passive: true });
+
+      viewport.addEventListener("touchend", function (event) {
+        if (touchStartX === null) return;
+        const deltaX = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > 40) {
+          didSwipe = true;
+          show(index + (deltaX < 0 ? 1 : -1));
+        }
+        touchStartX = null;
       });
     }
 

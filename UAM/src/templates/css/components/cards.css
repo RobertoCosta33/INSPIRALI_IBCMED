@@ -148,6 +148,16 @@ a.info-card:hover {
   width: 548px;
 }
 
+/* No mobile, todos os cards ficam do tamanho do menor (262px) — o card
+   largo quebrava o texto de forma diferente ao trocar de slide. */
+@media (max-width: 640px) {
+  .posgrad-card,
+  .posgrad-card:nth-child(even) {
+    flex-basis: 262px;
+    width: 262px;
+  }
+}
+
 .posgrad-card__image {
   position: absolute;
   inset: 0;
