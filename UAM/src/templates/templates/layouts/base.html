@@ -30,6 +30,10 @@
     {{ require_css(get_asset_url("../../css/components/tabs.css")) }}
     {{ require_css(get_asset_url("../../css/components/carousel.css")) }}
 
+    <!-- Carregado no <head> (posição "head") para garantir que window.Mark já
+         exista antes do module.js do page-search.module rodar no footer. -->
+    {{ require_js(get_asset_url("../../vendor/mark.min.js"), { "position": "head" }) }}
+
     {{ standard_header_includes }}
   </head>
   <body class="{{ builtin_body_classes }}">
@@ -44,8 +48,6 @@
     {% module "footer" path="../../modules/footer.module" %}
     {% module "floating_contact" path="../../modules/floating-contact.module" %}
     {% module "page_search" path="../../modules/page-search.module" %}
-
-    {{ require_js(get_asset_url("../../vendor/mark.min.js"), { "position": "footer" }) }}
 
     {{ standard_footer_includes }}
   </body>
