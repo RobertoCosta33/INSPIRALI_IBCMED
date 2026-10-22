@@ -47,23 +47,23 @@
       <div class="campus-gallery__media">
         <div class="campus-gallery__viewport">
           {% for photo in module.campuses[0].photos %}
-          <div class="campus-gallery__image{% if loop.first %} is-active{% endif %}" data-gallery-slide data-label="{{ module.campuses[0].display_name }}">
+          <div class="campus-gallery__image{% if loop.first %} is-active{% endif %}" data-gallery-slide data-label="{{ photo.caption }}">
             <img class="campus-gallery__photo" src="{{ photo.image.src }}" alt="{{ photo.image.alt }}" loading="lazy" />
           </div>
           {% endfor %}
           <div class="campus-gallery__overlay" aria-hidden="true"></div>
-          <span class="campus-gallery__label" data-gallery-label>{{ module.campuses[0].display_name }}</span>
-        </div>
-        <div class="campus-gallery__meta">
-          <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>{{ module.campuses[0].photos|length }}</span></span>
-          <div class="campus-gallery__nav">
-            <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
-              <img src="{{ get_asset_url('../../public/icons/icon-chevron-left-teal-small.svg') }}" alt="" aria-hidden="true" />
-            </button>
-            <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
-              <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 0"></span>
-              <img class="campus-gallery__nav-icon--flip" src="{{ get_asset_url('../../public/icons/icon-chevron-left-teal-small.svg') }}" alt="" aria-hidden="true" />
-            </button>
+          <span class="campus-gallery__label" data-gallery-label>{{ module.campuses[0].photos[0].label }}</span>
+          <div class="campus-gallery__meta">
+            <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>{{ module.campuses[0].photos|length }}</span></span>
+            <div class="campus-gallery__nav">
+              <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
+                <img src="{{ get_asset_url('../../public/icons/icon-chevron-left-teal-small.svg') }}" alt="" aria-hidden="true" />
+              </button>
+              <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
+                <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 0"></span>
+                <img class="campus-gallery__nav-icon--flip" src="{{ get_asset_url('../../public/icons/icon-chevron-left-teal-small.svg') }}" alt="" aria-hidden="true" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
         {% for photo in module.campuses[0].photos %}
         <button type="button" class="campus-thumb{% if loop.first %} is-active{% endif %}" data-gallery-thumb="{{ loop.index0 }}">
           <img class="campus-thumb__photo" src="{{ photo.image.src }}" alt="" loading="lazy" />
-          <span class="campus-thumb__label">{{ module.campuses[0].display_name }}</span>
+          <span class="campus-thumb__label">{{ photo.caption }}</span>
         </button>
         {% endfor %}
       </div>
@@ -100,7 +100,7 @@
     "videoId": "{{ campus.video_id }}",
     "photos": [
       {% for photo in campus.photos %}
-      { "src": "{{ photo.image.src }}" }{% if not loop.last %},{% endif %}
+      { "src": "{{ photo.image.src }}", "label": "{{ photo.caption }}" }{% if not loop.last %},{% endif %}
       {% endfor %}
     ]
   }{% if not loop.last %},{% endif %}

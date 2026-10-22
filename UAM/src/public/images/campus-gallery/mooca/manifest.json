@@ -1,0 +1,30 @@
+[
+  {
+    "label": "Biblioteca",
+    "file": "biblioteca.jpg"
+  },
+  {
+    "label": "Consultórios Teste",
+    "file": "consultorios-teste.jpg"
+  },
+  {
+    "label": "Enfermaria simulada",
+    "file": "enfermaria-simulada.jpg"
+  },
+  {
+    "label": "Entrada do campus",
+    "file": "entrada-do-campus.jpg"
+  },
+  {
+    "label": "Laboratório de anatomia",
+    "file": "laboratorio-de-anatomia.jpg"
+  },
+  {
+    "label": "Laboratório de simulação clínica",
+    "file": "laboratorio-de-simulacao-clinica.jpg"
+  },
+  {
+    "label": "Área de convivência",
+    "file": "area-de-convivencia.jpg"
+  }
+]

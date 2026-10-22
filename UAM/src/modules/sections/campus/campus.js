@@ -1,16 +1,19 @@
 // Carrossel simples da galeria de ambientes do campus + alternância entre
 // as unidades (Mooca, Piracicaba, São José dos Campos).
 (function () {
-  function buildGallery(folder, name, count) {
-    const photos = [];
-    for (let i = 1; i <= count; i++) {
-      photos.push({
-        src: "/UAM/src/public/images/campus-gallery/" + folder + "/photo-" + i + ".jpg",
-        label: name,
-        alt: name + " — foto " + i + " do campus " + name,
-      });
-    }
-    return photos;
+  // Cada foto usa o próprio nome do arquivo (sem extensão) como legenda da
+  // miniatura — ex.: "sala-de-aula.jpg" exibe "Sala de aula". O selo verde
+  // em cima da imagem grande continua mostrando o nome do campus
+  // (`campusLabel`), não o nome do arquivo.
+  function buildGallery(folder, name, files) {
+    return files.map(function (entry) {
+      return {
+        src: "/UAM/src/public/images/campus-gallery/" + folder + "/" + entry[1],
+        label: entry[0],
+        campusLabel: name,
+        alt: entry[0] + " — campus " + name,
+      };
+    });
   }
 
   function youtubeThumb(videoId) {
@@ -24,20 +27,42 @@
       videoUrl: "https://www.youtube.com/watch?v=" + videoId,
       src: youtubeThumb(videoId),
       label: "Vídeo institucional",
+      campusLabel: name,
       alt: "Vídeo institucional do campus " + name,
     };
   }
 
   const CAMPUS_GALLERIES = {
-    mooca: buildGallery("mooca", "Mooca", 7),
-    piracicaba: buildGallery("piracicaba", "Piracicaba", 6),
-    "sao-jose-dos-campos": buildGallery("sao-jose-dos-campos", "São José dos Campos", 10),
+    mooca: buildGallery("mooca", "Mooca", [
+      ["Biblioteca", "biblioteca.jpg"],
+      ["Consultórios Teste", "consultorios-teste.jpg"],
+      ["Enfermaria simulada", "enfermaria-simulada.jpg"],
+      ["Entrada do campus", "entrada-do-campus.jpg"],
+      ["Laboratório de anatomia", "laboratorio-de-anatomia.jpg"],
+      ["Laboratório de simulação clínica", "laboratorio-de-simulacao-clinica.jpg"],
+      ["Área de convivência", "area-de-convivencia.jpg"],
+    ]),
+    piracicaba: buildGallery("piracicaba", "Piracicaba", [
+      ["Biblioteca", "biblioteca.jpg"],
+      ["Corredores e acesso às salas", "corredores-e-acesso-as-salas.jpg"],
+      ["Laboratório de habilidades médicas", "laboratorio-de-habilidades-medicas.jpg"],
+      ["Laboratório de procedimentos médicos", "laboratorio-de-procedimentos-medicos.jpg"],
+      ["Área de convivência externa", "area-de-convivencia-externa.jpg"],
+      ["Área de convivência interna", "area-de-convivencia-interna.jpg"],
+    ]),
+    "sao-jose-dos-campos": buildGallery("sao-jose-dos-campos", "São José dos Campos", [
+      ["Consultório Teste", "consultorio-teste.jpg"],
+      ["Consultório Teste", "consultorio-teste-2.jpg"],
+      ["Consultórios", "consultorios.jpg"],
+      ["Entrada principal", "entrada-principal.jpg"],
+      ["Fachada", "fachada.jpg"],
+      ["Hall principal", "hall-principal.jpg"],
+      ["Laboratório de anatomia", "laboratorio-de-anatomia.jpg"],
+      ["Laboratório de simulação clínica", "laboratorio-de-simulacao-clinica.jpg"],
+      ["Sala de aula", "sala-de-aula.jpg"],
+      ["Vista aérea", "vista-aerea.jpg"],
+    ]),
   };
-  // Algumas fotos foram salvas como .png em vez de .jpg; corrige extensões conhecidas.
-  CAMPUS_GALLERIES.piracicaba[5].src = CAMPUS_GALLERIES.piracicaba[5].src.replace(/\.jpg$/, ".jpeg");
-  CAMPUS_GALLERIES["sao-jose-dos-campos"][1].src = CAMPUS_GALLERIES["sao-jose-dos-campos"][1].src.replace(/\.jpg$/, ".png");
-  CAMPUS_GALLERIES["sao-jose-dos-campos"][6].src = CAMPUS_GALLERIES["sao-jose-dos-campos"][6].src.replace(/\.jpg$/, ".png");
-  CAMPUS_GALLERIES["sao-jose-dos-campos"][9].src = CAMPUS_GALLERIES["sao-jose-dos-campos"][9].src.replace(/\.jpg$/, ".png");
 
   // Vídeo institucional de cada unidade, sempre como último item da galeria.
   CAMPUS_GALLERIES.mooca.push(videoSlide("pZ5RWFXfIQU", "Mooca"));
@@ -254,8 +279,43 @@
       });
     }
 
+    // A galeria (viewport + miniaturas) precisa ter exatamente a mesma
+    // altura da coluna esquerda inteira (título + chips + endereço + botão
+    // "Conheça mais da unidade"), como no Figma. CSS puro (grid/flex
+    // stretch) cria um loop de auto-sizing com a galeria tentando crescer
+    // para caber o próprio conteúdo das miniaturas — por isso medimos a
+    // altura real da coluna esquerda em JS e aplicamos no viewport.
+    const layout = root.closest(".campus-layout");
+    const panelTop = layout ? layout.querySelector(".campus-panel--top") : null;
+    const panelBottom = layout ? layout.querySelector(".campus-panel--bottom") : null;
+
+    function syncGalleryHeight() {
+      if (!layout || !panelTop || !panelBottom || !viewport) return;
+      if (window.innerWidth <= 860) {
+        viewport.style.height = "";
+        if (thumbsList) thumbsList.style.maxHeight = "";
+        return;
+      }
+      const layoutStyles = window.getComputedStyle(layout);
+      const rowGap = parseFloat(layoutStyles.rowGap || layoutStyles.gap || "0") || 0;
+      const height = panelTop.offsetHeight + rowGap + panelBottom.offsetHeight;
+      viewport.style.height = height + "px";
+      // Miniaturas acompanham exatamente a mesma altura do viewport —
+      // o excesso de fotos rola dentro da própria coluna.
+      if (thumbsList) thumbsList.style.maxHeight = height + "px";
+    }
+
+    window.addEventListener("resize", syncGalleryHeight);
+    if (window.ResizeObserver && panelTop && panelBottom) {
+      const ro = new ResizeObserver(syncGalleryHeight);
+      ro.observe(panelTop);
+      ro.observe(panelBottom);
+    }
+    root.syncGalleryHeight = syncGalleryHeight;
+
     root.loadCampus = loadCampus;
     loadCampus("mooca");
+    syncGalleryHeight();
   });
 
   // Lightbox simples para ampliar a imagem clicada.
@@ -325,6 +385,10 @@
         if (addressEl) addressEl.textContent = chip.getAttribute("data-address") || "";
         if (ctaEl) ctaEl.href = chip.getAttribute("data-cta") || "#";
         if (gallery && gallery.loadCampus) gallery.loadCampus(chip.getAttribute("data-campus"));
+        // O endereço muda de tamanho entre unidades (quebra de linha
+        // diferente) — re-sincroniza a altura do viewport com a coluna
+        // esquerda depois da troca.
+        if (gallery && gallery.syncGalleryHeight) requestAnimationFrame(gallery.syncGalleryHeight);
       });
     });
   });

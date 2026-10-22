@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Consultório Teste",
+    "file": "consultorio-teste.jpg"
+  },
+  {
+    "label": "Consultório Teste",
+    "file": "consultorio-teste-2.jpg"
+  },
+  {
+    "label": "Consultórios",
+    "file": "consultorios.jpg"
+  },
+  {
+    "label": "Entrada principal",
+    "file": "entrada-principal.jpg"
+  },
+  {
+    "label": "Fachada",
+    "file": "fachada.jpg"
+  },
+  {
+    "label": "Hall principal",
+    "file": "hall-principal.jpg"
+  },
+  {
+    "label": "Laboratório de anatomia",
+    "file": "laboratorio-de-anatomia.jpg"
+  },
+  {
+    "label": "Laboratório de simulação clínica",
+    "file": "laboratorio-de-simulacao-clinica.jpg"
+  },
+  {
+    "label": "Sala de aula",
+    "file": "sala-de-aula.jpg"
+  },
+  {
+    "label": "Vista aérea",
+    "file": "vista-aerea.jpg"
+  }
+]

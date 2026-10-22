@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Biblioteca",
+    "file": "biblioteca.jpg"
+  },
+  {
+    "label": "Corredores e acesso às salas",
+    "file": "corredores-e-acesso-as-salas.jpg"
+  },
+  {
+    "label": "Laboratório de habilidades médicas",
+    "file": "laboratorio-de-habilidades-medicas.jpg"
+  },
+  {
+    "label": "Laboratório de procedimentos médicos",
+    "file": "laboratorio-de-procedimentos-medicos.jpg"
+  },
+  {
+    "label": "Área de convivência externa",
+    "file": "area-de-convivencia-externa.jpg"
+  },
+  {
+    "label": "Área de convivência interna",
+    "file": "area-de-convivencia-interna.jpg"
+  }
+]

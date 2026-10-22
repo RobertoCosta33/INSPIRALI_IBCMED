@@ -30,11 +30,11 @@
   const FIRST_CAMPUS_KEY = campusData.length ? campusData[0].campus_key : null;
 
   campusData.forEach(function (campus) {
-    const photos = (campus.photos || []).map(function (photo, i) {
+    const photos = (campus.photos || []).map(function (photo) {
       return {
         src: photo.src,
-        label: campus.label,
-        alt: campus.label + " — foto " + (i + 1) + " do campus " + campus.label,
+        label: photo.label || campus.label,
+        alt: (photo.label || campus.label) + " — campus " + campus.label,
       };
     });
     if (campus.videoId) photos.push(videoSlide(campus.videoId, campus.label));
@@ -251,8 +251,41 @@
       });
     }
 
+    // A galeria (viewport + miniaturas) precisa ter exatamente a mesma
+    // altura da coluna esquerda inteira (título + chips + endereço + botão
+    // "Conheça mais da unidade"), como no Figma. CSS puro (grid/flex
+    // stretch) cria um loop de auto-sizing com a galeria tentando crescer
+    // para caber o próprio conteúdo das miniaturas — por isso medimos a
+    // altura real da coluna esquerda em JS e aplicamos no viewport.
+    const layout = root.closest(".campus-layout");
+    const panelTop = layout ? layout.querySelector(".campus-panel--top") : null;
+    const panelBottom = layout ? layout.querySelector(".campus-panel--bottom") : null;
+
+    function syncGalleryHeight() {
+      if (!layout || !panelTop || !panelBottom || !viewport) return;
+      if (window.innerWidth <= 860) {
+        viewport.style.height = "";
+        if (thumbsList) thumbsList.style.maxHeight = "";
+        return;
+      }
+      const layoutStyles = window.getComputedStyle(layout);
+      const rowGap = parseFloat(layoutStyles.rowGap || layoutStyles.gap || "0") || 0;
+      const height = panelTop.offsetHeight + rowGap + panelBottom.offsetHeight;
+      viewport.style.height = height + "px";
+      if (thumbsList) thumbsList.style.maxHeight = height + "px";
+    }
+
+    window.addEventListener("resize", syncGalleryHeight);
+    if (window.ResizeObserver && panelTop && panelBottom) {
+      const ro = new ResizeObserver(syncGalleryHeight);
+      ro.observe(panelTop);
+      ro.observe(panelBottom);
+    }
+    root.syncGalleryHeight = syncGalleryHeight;
+
     root.loadCampus = loadCampus;
     if (FIRST_CAMPUS_KEY) loadCampus(FIRST_CAMPUS_KEY);
+    syncGalleryHeight();
   });
 
   // Lightbox simples para ampliar a imagem clicada.
@@ -323,6 +356,7 @@
         if (addressEl) addressEl.textContent = chip.getAttribute("data-address") || "";
         if (ctaEl) ctaEl.href = chip.getAttribute("data-cta") || "#";
         if (gallery && gallery.loadCampus) gallery.loadCampus(chip.getAttribute("data-campus"));
+        if (gallery && gallery.syncGalleryHeight) requestAnimationFrame(gallery.syncGalleryHeight);
       });
     });
   });

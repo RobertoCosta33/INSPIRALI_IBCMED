@@ -27,11 +27,16 @@
 }
 
 .financing-intro {
+  /* `justify-content: space-between` (em vez de `flex-end`) alinha o
+     texto ("Planeje o seu futuro...") pelo topo — junto com "FIES" do
+     primeiro card ao lado — e mantém o card de valor onde já estava,
+     grudado embaixo (a coluna inteira é esticada pela altura de
+     `.financing-programs` via `align-items: stretch` do layout pai). */
   flex: 1 1 420px;
   max-width: 460px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 39px;
 }
 

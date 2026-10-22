@@ -324,6 +324,7 @@
 .campus-thumb__label {
   position: absolute;
   left: 8px;
+  right: 8px;
   bottom: 8px;
   background-color: rgba(0, 121, 106, 0.75);
   color: var(--text-footer);
@@ -331,6 +332,10 @@
   font-weight: var(--font-weight-bold);
   padding: 2px var(--spacing-micro);
   border-radius: var(--spacing-micro);
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .campus-thumb__play {
