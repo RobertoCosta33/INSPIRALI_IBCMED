@@ -21,6 +21,19 @@
           />
         </div>
 
+        <!-- No mobile (≤640px) usamos o PNG exportado direto do Figma (frame
+             "Logo" do header mobile) em vez de recriar o lockup com SVG +
+             texto + imagem separados — evita qualquer divergência de
+             alinhamento/espaçamento entre a logo e "Medicina". -->
+        <a href="/UAM/src/pages/" class="institutional-header__brand-mobile" aria-label="Página inicial Anhembi Morumbi">
+          <img
+            src="/UAM/src/public/images/shared/header-logo-mobile.png"
+            alt="Universidade Anhembi Morumbi — Medicina"
+            width="1095"
+            height="176"
+          />
+        </a>
+
         <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
           <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
             <img src="/UAM/src/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />

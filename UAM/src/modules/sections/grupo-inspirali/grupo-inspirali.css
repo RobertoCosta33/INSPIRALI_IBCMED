@@ -73,6 +73,33 @@
 .inspirali-header__lockup-mark {
   height: 24px;
   width: auto;
+}
+
+.inspirali-header__lockup-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #7a7a7a;
+  opacity: 0.4;
+}
+
+.inspirali-header__lockup-partner {
+  height: 24px;
+  width: auto;
+}
+
+/* Versão horizontal (INSPIRALI | Excelência Acadêmica Einstein lado a
+   lado) usada só até 1023px (Figma 768px) — a imagem única do desktop é
+   empilhada (INSPIRALI em cima, Einstein embaixo) e não cabe bem quando a
+   logo fica centralizada numa largura estreita. */
+.inspirali-header__lockup-row {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.inspirali-header__lockup-mark {
+  height: 24px;
+  width: auto;
   flex-shrink: 0;
 }
 
@@ -257,13 +284,6 @@
 /* Até 1023px o Figma empilha cabeçalho, stats e timeline (coluna única) —
    só a partir de 1024px eles ficam lado a lado. */
 @media (max-width: 1023px) {
-  #grupo-inspirali::before {
-    top: -80px;
-    right: -120px;
-    width: 420px;
-    height: 400px;
-  }
-
   .lifelong {
     flex-direction: column;
   }
@@ -271,6 +291,12 @@
   .inspirali-header {
     flex-direction: column;
     gap: var(--spacing-large);
+  }
+
+  /* A logo fica centralizada acima do título (Figma 768px) — só ela, o
+     bloco de título/descrição continua alinhado à esquerda. */
+  .inspirali-header__brand {
+    align-self: center;
   }
 
   /* A logo fica centralizada acima do título (Figma 768px) — só ela, o

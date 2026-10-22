@@ -42,6 +42,17 @@
     }
   },
   {
+    "name": "mobile_logo",
+    "label": "Logo combinada para mobile (≤640px) — PNG exportado direto do Figma, já com instituição + subtítulo + parceiro embutidos no espaçamento exato do design",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/header-logo-mobile.png",
+      "alt": "Universidade Anhembi Morumbi — Medicina",
+      "width": 1095,
+      "height": 176
+    }
+  },
+  {
     "name": "enrollment_cta_label",
     "label": "Texto do botão de inscrição (desktop)",
     "type": "text",

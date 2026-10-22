@@ -23,6 +23,17 @@
       {% endif %}
     </div>
 
+    {% if module.mobile_logo.src %}
+    <a href="{{ module.home_url.url.href }}" class="institutional-header__brand-mobile" aria-label="Página inicial {{ module.institution_logo.alt }}">
+      <img
+        src="{{ module.mobile_logo.src }}"
+        alt="{{ module.mobile_logo.alt }}"
+        width="{{ module.mobile_logo.width }}"
+        height="{{ module.mobile_logo.height }}"
+      />
+    </a>
+    {% endif %}
+
     <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
       <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
         <img src="{{ get_asset_url('../../public/icons/icon-search.svg') }}" alt="" aria-hidden="true" width="16" height="16" />

@@ -65,6 +65,20 @@
   flex-shrink: 0;
 }
 
+/* PNG único (Anhembi + Medicina + Einstein já combinados), exportado
+   direto do frame "Logo" do Figma mobile — só aparece em ≤640px (ver
+   `.institutional-header__identity` abaixo). */
+.institutional-header__brand-mobile {
+  display: none;
+  flex-shrink: 0;
+}
+
+.institutional-header__brand-mobile img {
+  display: block;
+  height: 32px;
+  width: auto;
+}
+
 .institutional-header__einstein {
   /* Largura calculada pela proporção real do PNG (467x69 ≈ 6.77:1) — mesmo
      motivo do `.institutional-header__mark` acima. */
@@ -252,26 +266,16 @@
     gap: var(--spacing-extra-small);
   }
 
+  /* Troca a versão "montada" (SVG + texto + divisor + PNG do Einstein,
+     usada no desktop/tablet) pelo PNG único exportado direto do Figma —
+     já traz Anhembi + Medicina + Einstein no espaçamento exato do design,
+     sem risco de desalinhar "Medicina" na montagem via CSS. */
   .institutional-header__identity {
-    gap: var(--spacing-extra-small);
+    display: none;
   }
 
-  .institutional-header__mark {
-    height: 18px;
-    width: 108px;
-  }
-
-  .institutional-header__subtitle {
-    font-size: 7px;
-  }
-
-  .institutional-header__divider {
-    height: 16px;
-  }
-
-  .institutional-header__einstein {
-    height: 13px;
-    width: 88px;
+  .institutional-header__brand-mobile {
+    display: block;
   }
 
   /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
