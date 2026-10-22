@@ -89,6 +89,15 @@
         }
       },
       {
+        "role": "Coordenadora Médica - São José dos Campos",
+        "bio": "Coordenadora do Curso de Medicina da Universidade Anhembi Morumbi Campus Piracicaba, e docente e coordenadora do Curso de Medicina da Universidade Anhembi Morumbi Campus São José dos Campos. Mestra em Ciências da Saúde pela Unifesp. Especialista em Cirurgia do Trauma pelo Colégio Brasileiro de Cirurgiões e em Cirurgia Geral pelo Hospital Municipal Dr. José de Carvalho Florence. Pós-graduada em Endocrinologia e Metabologia pelo IBCMED. Graduada em Medicina pela Faculdade de Medicina de Itajubá.",
+        "person_name": "Barbra Rafaela de Melo Santos Azevedo",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/barbra-rafaela.png",
+          "alt": "Barbra Rafaela de Melo Santos Azevedo"
+        }
+      },
+      {
         "role": "Coordenadora Administrativa - Piracicaba",
         "bio": "Coordenadora administrativa e docente do Curso de Medicina da Universidade Anhembi Morumbi Campus Piracicaba. Doutora e mestra em Odontologia, área de concentração em Fisiologia, pela UNICAMP. Graduada em Ciências Biológicas (Licenciatura/Bacharelado) pela Universidade Metodista de Piracicaba. Membro da Comissão de Ensino da Sociedade Brasileira de Fisiologia.",
         "person_name": "Lais Tono Cardozo",
@@ -104,15 +113,6 @@
         "photo": {
           "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/debora-daisy.png",
           "alt": "Debora Daisy da Silva Vogel"
-        }
-      },
-      {
-        "role": "Coordenadora Médica - São José dos Campos",
-        "bio": "Coordenadora do Curso de Medicina da Universidade Anhembi Morumbi Campus Piracicaba, e docente e coordenadora do Curso de Medicina da Universidade Anhembi Morumbi Campus São José dos Campos. Mestra em Ciências da Saúde pela Unifesp. Especialista em Cirurgia do Trauma pelo Colégio Brasileiro de Cirurgiões e em Cirurgia Geral pelo Hospital Municipal Dr. José de Carvalho Florence. Pós-graduada em Endocrinologia e Metabologia pelo IBCMED. Graduada em Medicina pela Faculdade de Medicina de Itajubá.",
-        "person_name": "Barbra Rafaela de Melo Santos Azevedo",
-        "photo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/barbra-rafaela.png",
-          "alt": "Barbra Rafaela de Melo Santos Azevedo"
         }
       }
     ]
