@@ -76,7 +76,7 @@
         if (progressRing) progressRing.style.setProperty("--progress", String(progress));
 
         if (elapsed >= AUTOPLAY_DURATION) {
-          show(index + 1);
+          show(index + 1, { scrollThumb: false });
           return;
         }
         autoplayRaf = requestAnimationFrame(tick);
@@ -85,7 +85,7 @@
       autoplayRaf = requestAnimationFrame(tick);
     }
 
-    function show(newIndex) {
+    function show(newIndex, options) {
       index = (newIndex + slides.length) % slides.length;
 
       slides.forEach(function (slide, i) {
@@ -94,7 +94,11 @@
       thumbs.forEach(function (thumb, i) {
         thumb.classList.toggle("is-active", i === index);
       });
-      scrollThumbIntoView(index);
+      // A troca automática (autoplay) não deve rolar a coluna de miniaturas —
+      // só a navegação manual (clique em seta/miniatura) faz isso.
+      if (!options || options.scrollThumb !== false) {
+        scrollThumbIntoView(index);
+      }
       if (counter) counter.textContent = String(index + 1).padStart(2, "0");
       if (total) total.textContent = String(slides.length).padStart(2, "0");
       if (label) label.textContent = slides[index].getAttribute("data-label") || "";
@@ -104,7 +108,11 @@
       // chegar na última foto, volta para a primeira (loop).
       if (prevBtn) {
         prevBtn.classList.toggle("is-enabled", index !== 0);
-        prevBtn.disabled = index === 0;
+        // Usa aria-disabled em vez de `disabled`: desabilitar via atributo
+        // HTML um botão que está com foco (ex.: o usuário acabou de clicar
+        // nele para chegar na 1ª foto) força o navegador a tirar o foco, o
+        // que em alguns navegadores dispara um scroll indesejado da página.
+        prevBtn.setAttribute("aria-disabled", String(index === 0));
       }
       startAutoplay();
     }
@@ -119,9 +127,15 @@
       if (!thumb || !thumbsList) return;
       if (thumbsList.scrollHeight <= thumbsList.clientHeight) return;
 
-      const thumbTop = thumb.offsetTop;
-      const thumbBottom = thumbTop + thumb.offsetHeight;
+      // Usa getBoundingClientRect() em vez de offsetTop: como a lista de
+      // miniaturas não tem `position` próprio, offsetTop seria relativo a
+      // um ancestral posicionado bem mais acima (ou ao <body>), dando um
+      // valor enorme e fazendo o scroll sempre pular pro final da lista.
+      const thumbRect = thumb.getBoundingClientRect();
+      const listRect = thumbsList.getBoundingClientRect();
       const viewTop = thumbsList.scrollTop;
+      const thumbTop = viewTop + (thumbRect.top - listRect.top);
+      const thumbBottom = thumbTop + thumb.offsetHeight;
       const viewBottom = viewTop + thumbsList.clientHeight;
 
       if (thumbTop < viewTop) {
@@ -185,7 +199,10 @@
       show(0);
     }
 
-    if (prevBtn) prevBtn.addEventListener("click", function () { show(index - 1); });
+    if (prevBtn) prevBtn.addEventListener("click", function () {
+      if (prevBtn.getAttribute("aria-disabled") === "true") return;
+      show(index - 1);
+    });
     if (nextBtn) nextBtn.addEventListener("click", function () { show(index + 1); });
     thumbs.forEach(bindThumb);
 

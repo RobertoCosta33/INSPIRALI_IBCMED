@@ -270,7 +270,7 @@
   background-color: #fafaff;
 }
 
-.campus-gallery__nav-btn:disabled {
+.campus-gallery__nav-btn[aria-disabled="true"] {
   cursor: not-allowed;
 }
 
