@@ -9,13 +9,13 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Explore as áreas de pós-graduação"
+    "default": "Sua jornada na Medicina continua aqui"
   },
   {
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Conheça as áreas do conhecimento da Inspirali Pós Medicina e encontre cursos para o seu momento de carreira."
+    "default": "Da graduação à pós-graduação, estamos ao seu lado em cada etapa da sua formação e evolução profissional."
   },
   {
     "name": "cta_label",
