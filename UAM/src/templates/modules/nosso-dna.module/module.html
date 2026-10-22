@@ -1,7 +1,9 @@
 <section class="section section--tint-strong" id="nosso-dna" aria-labelledby="dna-title">
-  <p class="eyebrow">{{ module.eyebrow }}</p>
-  <h2 class="section-intro__title" id="dna-title">{{ module.title }}</h2>
-  <div class="section-intro__text">{{ module.intro_text }}</div>
+  <div class="section-intro">
+    <p class="eyebrow">{{ module.eyebrow }}</p>
+    <h2 class="section-intro__title" id="dna-title">{{ module.title }}</h2>
+    <div class="section-intro__text">{{ module.intro_text }}</div>
+  </div>
 
   <div class="dna-pillars" data-dna-carousel>
     {% for pillar in module.pillars %}
