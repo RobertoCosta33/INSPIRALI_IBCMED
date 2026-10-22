@@ -3,7 +3,35 @@
    Figma: "Grupo Inspirali" (150:4207)
    ==================================================================== */
 
+#grupo-inspirali {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Padrão decorativo "constelação" do Figma, atrás da logo/título — a
+   imagem de origem é preto sobre transparente; usamos como máscara para
+   pintar com a cor de marca, em vez de recortar/colorir o PNG. */
+#grupo-inspirali::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  right: -160px;
+  width: 640px;
+  height: 600px;
+  background-color: rgba(0, 121, 106, 0.18);
+  -webkit-mask-image: url("https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/grupo-inspirali-broto.png");
+  mask-image: url("https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/grupo-inspirali-broto.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  pointer-events: none;
+}
+
 .inspirali-section {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-extra-large);
@@ -31,6 +59,33 @@
   object-fit: contain;
   object-position: left top;
   margin-top: -21px;
+}
+
+/* Versão horizontal (INSPIRALI | Excelência Acadêmica Einstein lado a
+   lado) usada só até 1023px (Figma 768px) — a imagem única do desktop é
+   empilhada (INSPIRALI em cima, Einstein embaixo) e não cabe bem quando a
+   logo fica centralizada numa largura estreita. */
+.inspirali-header__lockup-row {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.inspirali-header__lockup-mark {
+  height: 24px;
+  width: auto;
+}
+
+.inspirali-header__lockup-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #7a7a7a;
+  opacity: 0.4;
+}
+
+.inspirali-header__lockup-partner {
+  height: 24px;
+  width: auto;
 }
 
 .inspirali-header__title {
@@ -188,21 +243,46 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 1024px) {
-  .lifelong {
-    flex-direction: column;
+/* Entre 1024 e 1280px (gutter de tablet) os 4 cards ainda ficam numa única
+   fileira (Figma: 1024px), mas precisam de um min-width menor que o do
+   desktop largo para caberem sem quebrar linha. */
+@media (max-width: 1280px) {
+  .stat-card {
+    min-width: 190px;
   }
 }
 
-@media (max-width: 640px) {
+/* Até 1023px o Figma empilha cabeçalho, stats e timeline (coluna única) —
+   só a partir de 1024px eles ficam lado a lado. */
+@media (max-width: 1023px) {
+  #grupo-inspirali::before {
+    top: -80px;
+    right: -120px;
+    width: 420px;
+    height: 400px;
+  }
+
+  .lifelong {
+    flex-direction: column;
+  }
+
   .inspirali-header {
     flex-direction: column;
     gap: var(--spacing-large);
   }
 
+  /* A logo fica centralizada acima do título (Figma 768px) — só ela, o
+     bloco de título/descrição continua alinhado à esquerda. */
+  .inspirali-header__brand {
+    align-self: center;
+  }
+
   .inspirali-header__lockup {
-    height: 130px;
-    margin-top: -15px;
+    display: none;
+  }
+
+  .inspirali-header__lockup-row {
+    display: flex;
   }
 
   .stats-grid {

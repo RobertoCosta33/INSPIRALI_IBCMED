@@ -79,7 +79,10 @@
   color: var(--text-primary-dark);
 }
 
-@media (max-width: 640px) {
+/* Até 1023px o Figma usa o card "Mobile" da matriz curricular (botões de
+   download empilhados em largura total) — só a partir de 1024px vira o
+   card "Desktop" com os botões lado a lado. */
+@media (max-width: 1023px) {
   .spiral-ctas {
     flex-direction: column;
     align-items: stretch;

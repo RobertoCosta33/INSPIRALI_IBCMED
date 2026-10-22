@@ -123,6 +123,11 @@
   gap: var(--spacing-medium);
   background-color: #dcdce0;
   padding: var(--spacing-extra-small) var(--page-gutter-mobile);
+  width: 100%;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
 .institutional-header__mobile-search-placeholder {
@@ -143,37 +148,6 @@
   border-radius: var(--radius-small);
   background-color: rgba(122, 122, 122, 0.08);
   flex-shrink: 0;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-small);
-}
-
-.menu-toggle span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background-color: var(--text-brand);
-  transition: transform 0.2s ease, opacity 0.4s ease;
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
 }
 
 .institutional-header__nav .btn {
@@ -229,35 +203,9 @@
   }
 }
 
-@media (max-width: 860px) {
-  .institutional-header__nav {
-    position: fixed;
-    inset: 72px 0 auto 0;
-    flex-direction: column;
-    align-items: stretch;
-    background-color: var(--surface-inverted);
-    padding: var(--spacing-large) var(--page-gutter-mobile);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-    transform: translateY(-16px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-
-  .institutional-header__nav.is-open {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .institutional-header__nav .btn {
-    width: 100%;
-  }
-
-  .menu-toggle {
-    display: inline-flex;
-  }
-}
+/* No mobile/tablet o header fica só com as logos + o botão "Inscreva-se"
+   (sem menu hambúrguer) — a navegação do curso já está disponível logo
+   abaixo, na faixa verde, e a busca tem sua própria barra dedicada. */
 
 @media (max-width: 640px) {
   .institutional-header {
@@ -342,15 +290,26 @@
   gap: 2px;
 }
 
-.header-cta-dropdown.is-open .header-cta-dropdown__menu,
-.header-cta-dropdown:hover .header-cta-dropdown__menu {
+.header-cta-dropdown.is-open .header-cta-dropdown__menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-.header-cta-dropdown:hover .header-cta-dropdown__chevron {
-  transform: rotate(180deg);
+/* :hover só controla o dropdown em dispositivos que realmente têm um
+   ponteiro com hover (mouse) — em touch, o navegador simula ":hover" após
+   o toque e ele "gruda" aberto mesmo depois do clique fechar via JS
+   (.is-open removida), porque o CSS continua casando. */
+@media (hover: hover) {
+  .header-cta-dropdown:hover .header-cta-dropdown__menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .header-cta-dropdown:hover .header-cta-dropdown__chevron {
+    transform: rotate(180deg);
+  }
 }
 
 .header-cta-dropdown__item {

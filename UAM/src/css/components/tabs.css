@@ -174,7 +174,10 @@
   }
 }
 
-@media (max-width: 640px) {
+/* Até 1023px o Figma usa o card "Mobile" da matriz curricular (mesmas
+   fontes compactas do mobile) — só a partir de 1024px vira o card
+   "Desktop", com fontes maiores. */
+@media (max-width: 1023px) {
   .unit-tab {
     font-size: var(--font-size-xs);
   }

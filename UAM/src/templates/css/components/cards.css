@@ -177,7 +177,11 @@
   .info-card__text {
     font-size: var(--font-size-sm);
   }
+}
 
+/* Grupo Inspirali: até 1023px os stat cards usam as fontes compactas
+   (mesmo breakpoint em que o grid empilha, ver grupo-inspirali.css). */
+@media (max-width: 1023px) {
   .stat-card__value {
     font-size: var(--font-size-xl);
   }

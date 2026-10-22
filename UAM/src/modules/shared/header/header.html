@@ -20,20 +20,7 @@
           />
         </div>
 
-        <button
-          type="button"
-          class="menu-toggle"
-          data-menu-toggle
-          aria-expanded="false"
-          aria-controls="institutional-nav"
-          aria-label="Abrir menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="institutional-header__nav" id="institutional-nav" data-menu-nav aria-label="Navegação institucional">
+        <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
           <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
             <img src="/UAM/src/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
           </button>
@@ -54,12 +41,12 @@
         </nav>
       </div>
 
-      <div class="institutional-header__mobile-search">
+      <button type="button" class="institutional-header__mobile-search" data-search-trigger aria-label="Buscar nesta página">
         <span class="institutional-header__mobile-search-placeholder">O que você procura?</span>
-        <button type="button" class="institutional-header__mobile-search-btn" data-search-trigger aria-label="Buscar nesta página">
+        <span class="institutional-header__mobile-search-btn">
           <img src="/UAM/src/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
-        </button>
-      </div>
+        </span>
+      </button>
 
       <nav class="course-nav" aria-label="Navegação do curso">
         <div class="course-nav__list">

@@ -235,9 +235,28 @@
     padding: var(--spacing-large);
   }
 
-  .selection-card__eyebrow,
+  /* Só o nome do card ("Enem 27.1" etc.) diminui nesta largura — o eyebrow
+     ("Ingresso 2027.1") continua em 40px até a dobra tablet (≤860px). */
   .selection-card__name {
     font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 860px) {
+  /* A partir do tablet (Figma: 768px) os botões de forma de ingresso ficam
+     empilhados em largura total, em vez da fileira compacta do desktop. */
+  .selection-card__tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .selection-card__eyebrow,
+  .selection-card__name {
+    font-size: var(--font-size-xl);
+  }
+
+  .selection-card__lead {
+    font-size: var(--font-size-sm);
   }
 }
 
@@ -245,11 +264,6 @@
   .selection-card {
     padding: var(--spacing-medium);
     gap: var(--spacing-large);
-  }
-
-  .selection-card__tabs {
-    flex-direction: column;
-    align-items: stretch;
   }
 
   .selection-card__eyebrow,
