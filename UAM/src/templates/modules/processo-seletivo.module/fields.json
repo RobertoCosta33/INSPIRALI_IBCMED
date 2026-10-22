@@ -91,7 +91,7 @@
         "name": "description",
         "label": "Descrição",
         "type": "richtext",
-        "default": "Prova presencial focada nos conhecimentos do Ensino Médio."
+        "default": "Ingresse direto usando sua melhor nota do Enem dos últimos 10 anos."
       },
       {
         "name": "facts",
@@ -130,7 +130,7 @@
       {
         "tab_label": "Enem 27.1",
         "status_label": "Inscrições Abertas",
-        "description": "<p>Prova presencial focada nos conhecimentos do Ensino Médio.</p><p>Ingresse direto usando sua melhor nota do Enem dos últimos 10 anos.</p>",
+        "description": "<p>Ingresse direto usando sua melhor nota do Enem dos últimos 10 anos.</p>",
         "facts": "<p><strong>Investimento:</strong> A partir de 12 parcelas de R$ 12.995 por ano.</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 referente às unidades São José dos Campos e Piracicaba, vinculada à pontualidade.</p>",
         "cta_label": "Quero me inscrever para 27.1",
         "cta_url": {
@@ -150,7 +150,7 @@
         "tab_label": "Transferência Externa 27.1",
         "status_label": "Inscrições Abertas",
         "description": "Venha de outra instituição de forma simples.",
-        "facts": "<p><strong>Data da Prova:</strong> 29/10/2026</p><p><strong>Investimento:</strong> A partir de 12 parcelas de R$ 12.995 por ano.</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 referente às unidades São José dos Campos e Piracicaba, vinculada à pontualidade.</p><p><strong>Como funciona?:</strong> Prova online para alunos de outras instituições mediante taxa de inscrição.</p>",
+        "facts": "<p><strong>Data da Prova:</strong> 29/10/2026</p><p><strong>Investimento:</strong> A partir de 12 parcelas de R$ 12.995 por ano.</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 referente às unidades São José dos Campos e Piracicaba, vinculada à pontualidade.</p><p><strong>Como funciona:</strong> Prova online para alunos de outras instituições mediante taxa de inscrição.</p>",
         "cta_label": "Quero me inscrever para 27.1",
         "cta_url": {
           "url": {
