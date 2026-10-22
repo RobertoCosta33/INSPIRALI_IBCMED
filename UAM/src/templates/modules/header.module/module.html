@@ -9,6 +9,7 @@
           width="{{ module.institution_logo.width }}"
           height="{{ module.institution_logo.height }}"
         />
+        {% if module.institution_subtitle %}<span class="institutional-header__subtitle">{{ module.institution_subtitle }}</span>{% endif %}
       </a>
       {% if module.partner_logo.src %}
       <span class="institutional-header__divider" aria-hidden="true"></span>
@@ -28,7 +29,8 @@
       </button>
       <div class="header-cta-dropdown" data-dropdown>
         <button type="button" class="btn btn-primary header-cta-dropdown__trigger" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
-          {{ module.enrollment_cta_label }}
+          <span class="header-cta-dropdown__trigger-full">{{ module.enrollment_cta_label }}</span>
+          <span class="header-cta-dropdown__trigger-short">{{ module.enrollment_cta_label_short }}</span>
           <img src="{{ get_asset_url('../../public/icons/icon-arrow-down-white.svg') }}" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="12" height="12" />
         </button>
         <div class="header-cta-dropdown__menu" data-dropdown-menu>

@@ -15,14 +15,20 @@
   },
   {
     "name": "institution_logo",
-    "label": "Logo da instituição (já com o subtítulo, ex.: \"Medicina\", embutido na imagem)",
+    "label": "Logo da instituição (vetor, sem o subtítulo embutido)",
     "type": "image",
     "default": {
-      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/anhembi-morumbi-lockup-green.png",
-      "alt": "Universidade Anhembi Morumbi — Medicina",
-      "width": 414,
-      "height": 111
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/anhembi-morumbi-mark.svg",
+      "alt": "Universidade Anhembi Morumbi",
+      "width": 180,
+      "height": 30
     }
+  },
+  {
+    "name": "institution_subtitle",
+    "label": "Subtítulo abaixo da logo (ex.: \"Medicina\"). Deixe vazio para ocultar.",
+    "type": "text",
+    "default": "Medicina"
   },
   {
     "name": "partner_logo",
@@ -37,9 +43,15 @@
   },
   {
     "name": "enrollment_cta_label",
-    "label": "Texto do botão de inscrição",
+    "label": "Texto do botão de inscrição (desktop)",
     "type": "text",
     "default": "Inscreva-se para 2027.1"
+  },
+  {
+    "name": "enrollment_cta_label_short",
+    "label": "Texto do botão de inscrição no mobile (versão curta)",
+    "type": "text",
+    "default": "Inscreva-se"
   },
   {
     "name": "enrollment_items",

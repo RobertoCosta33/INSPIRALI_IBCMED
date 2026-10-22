@@ -20,6 +20,10 @@
   padding: var(--spacing-large) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
+.header-cta-dropdown__trigger-short {
+  display: none;
+}
+
 .institutional-header__identity {
   display: flex;
   align-items: center;
@@ -28,13 +32,23 @@
 
 .institutional-header__brand {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-micro);
 }
 
 .institutional-header__mark {
   display: block;
-  height: 64px;
+  height: 44px;
   width: auto;
+}
+
+.institutional-header__subtitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-brand);
 }
 
 .institutional-header__divider {
@@ -54,6 +68,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-medium);
+  flex-shrink: 0;
 }
 
 .institutional-header__stack {
@@ -197,6 +212,18 @@
     padding: var(--spacing-medium) var(--page-gutter-tablet);
   }
 
+  .institutional-header__mark {
+    height: 40px;
+  }
+
+  .institutional-header__divider {
+    height: 36px;
+  }
+
+  .institutional-header__einstein {
+    height: 28px;
+  }
+
   .course-nav__list {
     padding: var(--spacing-small) var(--page-gutter-tablet);
     justify-content: flex-start;
@@ -215,18 +242,45 @@
 
   .institutional-header__identity {
     gap: var(--spacing-small);
+    min-width: 0;
+    flex-shrink: 1;
   }
 
   .institutional-header__mark {
-    height: 36px;
+    height: 22px;
+  }
+
+  .institutional-header__subtitle {
+    font-size: 7px;
   }
 
   .institutional-header__divider {
-    height: 32px;
+    height: 20px;
   }
 
   .institutional-header__einstein {
-    height: 22px;
+    height: 16px;
+  }
+
+  /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
+     caber ao lado da logo + Einstein numa única linha, como no Figma. */
+  .header-cta-dropdown__trigger-full {
+    display: none;
+  }
+
+  .header-cta-dropdown__trigger-short {
+    display: inline;
+  }
+
+  /* O botão mobile do Figma é liso, sem a setinha de dropdown do desktop. */
+  .header-cta-dropdown__chevron {
+    display: none;
+  }
+
+  .institutional-header__nav .btn {
+    height: 32px;
+    padding: 0 var(--spacing-small);
+    font-size: var(--font-size-xxs);
   }
 
   .institutional-header__mobile-search {
@@ -237,10 +291,6 @@
      dentro do menu hambúrguer neste breakpoint. */
   .institutional-header__search {
     display: none;
-  }
-
-  .institutional-header__nav .btn {
-    font-size: var(--font-size-xxs);
   }
 
   .course-nav__list {
