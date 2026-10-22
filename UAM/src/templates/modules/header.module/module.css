@@ -35,12 +35,18 @@
   flex-direction: column;
   align-items: flex-end;
   gap: var(--spacing-micro);
+  flex-shrink: 0;
 }
 
 .institutional-header__mark {
+  /* Largura calculada pela proporção real do SVG (180x30 = 6:1) em vez de
+     `width: auto` — como a logo é item flex, deixar a largura "auto" pode
+     fazer o navegador resolvê-la errado durante o layout flex (esticando/
+     espremendo a imagem) especialmente combinada com `flex-shrink`. */
   display: block;
   height: 44px;
-  width: auto;
+  width: 264px;
+  flex-shrink: 0;
 }
 
 .institutional-header__subtitle {
@@ -48,7 +54,7 @@
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-brand);
+  color: #39393b;
 }
 
 .institutional-header__divider {
@@ -56,12 +62,16 @@
   height: 56px;
   background-color: #7a7a7a;
   opacity: 0.4;
+  flex-shrink: 0;
 }
 
 .institutional-header__einstein {
+  /* Largura calculada pela proporção real do PNG (467x69 ≈ 6.77:1) — mesmo
+     motivo do `.institutional-header__mark` acima. */
   display: block;
   height: 40px;
-  width: auto;
+  width: 271px;
+  flex-shrink: 0;
 }
 
 .institutional-header__nav {
@@ -214,6 +224,7 @@
 
   .institutional-header__mark {
     height: 40px;
+    width: 240px;
   }
 
   .institutional-header__divider {
@@ -222,6 +233,7 @@
 
   .institutional-header__einstein {
     height: 28px;
+    width: 190px;
   }
 
   .course-nav__list {
@@ -237,17 +249,16 @@
 @media (max-width: 640px) {
   .institutional-header {
     padding: var(--spacing-small) var(--page-gutter-mobile);
-    gap: var(--spacing-small);
+    gap: var(--spacing-extra-small);
   }
 
   .institutional-header__identity {
-    gap: var(--spacing-small);
-    min-width: 0;
-    flex-shrink: 1;
+    gap: var(--spacing-extra-small);
   }
 
   .institutional-header__mark {
-    height: 22px;
+    height: 18px;
+    width: 108px;
   }
 
   .institutional-header__subtitle {
@@ -255,11 +266,12 @@
   }
 
   .institutional-header__divider {
-    height: 20px;
+    height: 16px;
   }
 
   .institutional-header__einstein {
-    height: 16px;
+    height: 13px;
+    width: 88px;
   }
 
   /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para

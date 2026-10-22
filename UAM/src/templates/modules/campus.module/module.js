@@ -306,6 +306,17 @@
           c.classList.toggle("campus-chip--active", isActive);
           c.classList.toggle("campus-chip--inactive", !isActive);
           c.setAttribute("aria-pressed", String(isActive));
+
+          // O ícone precisa trocar de cor junto com o estado — senão fica
+          // branco sobre fundo branco (inativo) ou teal sobre fundo teal
+          // (ativo), ou seja, invisível. Troca só o nome do arquivo na URL
+          // já resolvida pelo get_asset_url (independe do domínio/hash).
+          const icon = c.querySelector("img");
+          if (icon) {
+            icon.src = isActive
+              ? icon.src.replace("icon-building-teal", "icon-building-white")
+              : icon.src.replace("icon-building-white", "icon-building-teal");
+          }
         });
 
         if (cityEl) cityEl.textContent = chip.getAttribute("data-city") || "";

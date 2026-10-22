@@ -309,6 +309,16 @@
           c.classList.toggle("campus-chip--active", isActive);
           c.classList.toggle("campus-chip--inactive", !isActive);
           c.setAttribute("aria-pressed", String(isActive));
+
+          // O ícone precisa trocar de cor junto com o estado — senão fica
+          // branco sobre fundo branco (inativo) ou teal sobre fundo teal
+          // (ativo), ou seja, invisível.
+          const icon = c.querySelector("img");
+          if (icon) {
+            icon.src = isActive
+              ? "/UAM/src/public/icons/icon-building-white.svg"
+              : "/UAM/src/public/icons/icon-building-teal.svg";
+          }
         });
 
         if (cityEl) cityEl.textContent = chip.getAttribute("data-city") || "";

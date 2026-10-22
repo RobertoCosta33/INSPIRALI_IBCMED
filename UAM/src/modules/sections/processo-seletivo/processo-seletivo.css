@@ -39,12 +39,17 @@
 }
 
 .selection-card__bg {
+  /* `object-fit: cover` é essencial aqui: sem ele, a imagem é esticada de
+     forma não-uniforme para preencher width % e height % diferentes (que
+     são só um jeito de reproduzir o recorte/posição do Figma), em vez de
+     manter a proporção original e cortar o excesso. */
   position: absolute;
   top: 0;
   left: 24.07%;
   width: 103.96%;
   height: 100%;
   max-width: none;
+  object-fit: cover;
   z-index: -2;
 }
 

@@ -21,7 +21,11 @@
           data-cta="{{ campus.cta_url.url.href }}"
           aria-pressed="{% if loop.first %}true{% else %}false{% endif %}"
         >
-          <img src="{{ get_asset_url(loop.first and '../../public/icons/icon-building-white.svg' or '../../public/icons/icon-building-teal.svg') }}" alt="" aria-hidden="true" width="16" height="16" />
+          {% if loop.first %}
+          <img src="{{ get_asset_url('../../public/icons/icon-building-white.svg') }}" alt="" aria-hidden="true" width="16" height="16" />
+          {% else %}
+          <img src="{{ get_asset_url('../../public/icons/icon-building-teal.svg') }}" alt="" aria-hidden="true" width="16" height="16" />
+          {% endif %}
           {{ campus.chip_label }}
         </button>
         {% endfor %}

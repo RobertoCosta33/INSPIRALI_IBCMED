@@ -236,33 +236,6 @@
   color: #cccccc;
 }
 
-/* Chips de campus */
-.campus-chip {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-extra-small);
-  padding: var(--spacing-small) var(--spacing-small);
-  border-radius: var(--radius-small);
-  font-size: var(--font-size-xs);
-  width: 100%;
-}
-
-.campus-chip img {
-  width: 12px;
-  height: 12px;
-}
-
-.campus-chip--active {
-  background-color: var(--surface-brand-primary);
-  color: var(--text-inverted);
-  font-weight: var(--font-weight-bold);
-}
-
-.campus-chip--inactive {
-  background-color: var(--surface-inverted);
-  color: var(--text-brand);
-}
-
 @media (max-width: 640px) {
   .posgrad-card__title {
     font-size: var(--font-size-lg);

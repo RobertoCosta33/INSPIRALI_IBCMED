@@ -39,7 +39,7 @@
 
 .inspirali-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 130px;
 }
 
@@ -51,14 +51,13 @@
 .inspirali-header__lockup {
   /* Proporção da imagem fonte (650x302): "INSPIRALI" ocupa ~67px de altura,
      a partir da linha 35 — nessa altura (180px) ele fica perto do tamanho
-     do título (--font-size-3xl, 40px). O margin-top negativo compensa o
-     espaço em branco da própria imagem acima de "INSPIRALI", alinhando o
-     topo da palavra com o topo da primeira linha do título ao lado. */
+     do título (--font-size-3xl, 40px). `.inspirali-header` usa
+     `align-items: center`, então a logo fica centralizada verticalmente
+     em relação ao bloco de título + descrição ao lado. */
   height: 180px;
   width: auto;
   object-fit: contain;
   object-position: left top;
-  margin-top: -21px;
 }
 
 /* Versão horizontal (INSPIRALI | Excelência Acadêmica Einstein lado a
@@ -74,6 +73,7 @@
 .inspirali-header__lockup-mark {
   height: 24px;
   width: auto;
+  flex-shrink: 0;
 }
 
 .inspirali-header__lockup-divider {
@@ -81,11 +81,13 @@
   height: 24px;
   background-color: #7a7a7a;
   opacity: 0.4;
+  flex-shrink: 0;
 }
 
 .inspirali-header__lockup-partner {
   height: 24px;
   width: auto;
+  flex-shrink: 0;
 }
 
 .inspirali-header__title {
@@ -323,5 +325,23 @@
 
   .timeline-step__text {
     font-size: var(--font-size-xs);
+  }
+}
+
+/* Em telas realmente estreitas (375-640px), mesmo a versão horizontal
+   compacta da logo (24px) não cabe: INSPIRALI (575x67) + divisor +
+   Excelência Acadêmica Einstein (499x73) passam de 400px de largura
+   somados. Reduz a altura para caber dentro do card com folga. */
+@media (max-width: 640px) {
+  .inspirali-header__lockup-row {
+    gap: var(--spacing-extra-small);
+  }
+
+  .inspirali-header__lockup-mark {
+    height: 20px;
+  }
+
+  .inspirali-header__lockup-partner {
+    height: 20px;
   }
 }
