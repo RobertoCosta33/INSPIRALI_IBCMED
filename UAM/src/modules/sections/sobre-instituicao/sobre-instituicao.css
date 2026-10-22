@@ -109,6 +109,16 @@
 
   .institutional-about__content {
     flex-basis: auto;
+    order: 1;
+  }
+
+  /* Em layout de coluna, `flex: 1 1 0` (pensado para o desktop em linha)
+     faz a base do eixo principal (altura) ir a 0 e o vídeo some, já que o
+     container não tem altura extra pra distribuir via flex-grow. */
+  .institutional-about__video {
+    flex: 0 0 auto;
+    width: 100%;
+    order: 2;
   }
 }
 

@@ -3,7 +3,7 @@
   <h2 class="section-intro__title" id="dna-title">{{ module.title }}</h2>
   <div class="section-intro__text">{{ module.intro_text }}</div>
 
-  <div class="dna-pillars">
+  <div class="dna-pillars" data-dna-carousel>
     {% for pillar in module.pillars %}
     <div class="dna-pillar">
       <img class="dna-pillar__photo" src="{{ pillar.photo.src }}" alt="{{ pillar.photo.alt }}" loading="lazy" />
@@ -14,6 +14,15 @@
     </div>
     {% endfor %}
   </div>
+
+  {% if module.pillars|length > 1 %}
+  <div class="dna-pillars-dots" data-dna-dots aria-hidden="true">
+    {% for pillar in module.pillars %}
+    <button type="button" class="dna-pillars-dot{% if loop.first %} is-active{% endif %}" data-dna-dot="{{ loop.index0 }}" aria-label="Pilar {{ loop.index }}"></button>
+    {% endfor %}
+  </div>
+  {% endif %}
 </section>
 
 {{ require_css(get_asset_url('./module.css')) }}
+{{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

@@ -190,4 +190,8 @@
   .unit-panel__title {
     font-size: var(--font-size-xl);
   }
+
+  .unit-panel__more {
+    font-size: var(--font-size-xs);
+  }
 }
