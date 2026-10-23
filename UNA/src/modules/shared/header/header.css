@@ -39,52 +39,27 @@
 }
 
 .institutional-header__mark {
-  /* Largura calculada pela proporção real do SVG (180x30 = 6:1) em vez de
+  /* No Figma da UNA, o ícone + "UNA MEDICINA" + divisor + "Excelência
+     Acadêmica Einstein" já vêm como uma única imagem combinada (897x192
+     ≈ 4.67:1) — diferente da UAM, onde cada peça é um elemento separado.
+     Largura calculada pela proporção real da imagem em vez de
      `width: auto` — como a logo é item flex, deixar a largura "auto" pode
      fazer o navegador resolvê-la errado durante o layout flex (esticando/
      espremendo a imagem) especialmente combinada com `flex-shrink`. */
   display: block;
   height: 44px;
-  width: 264px;
+  width: 206px;
   flex-shrink: 0;
 }
 
-.institutional-header__subtitle {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #39393b;
-}
-
+/* Divisor entre "Sou Candidato" e o botão de busca (Figma: 24px de altura,
+   não o mesmo divisor de logo que a UAM usa — aqui a logo é uma imagem só,
+   sem divisor interno). */
 .institutional-header__divider {
   width: 1px;
-  height: 56px;
-  background-color: #7a7a7a;
+  height: 24px;
+  background-color: #292626;
   opacity: 0.4;
-  flex-shrink: 0;
-}
-
-/* PNG único (Anhembi + Medicina + Einstein já combinados), exportado
-   direto do frame "Logo" do Figma mobile — só aparece em ≤640px (ver
-   `.institutional-header__identity` abaixo). */
-.institutional-header__brand-mobile {
-  display: none;
-  flex-shrink: 0;
-}
-
-.institutional-header__brand-mobile img {
-  display: block;
-  height: 32px;
-  width: auto;
-}
-
-.institutional-header__einstein {
-  /* Largura calculada pela proporção real do PNG (467x69 ≈ 6.77:1) — mesmo
-     motivo do `.institutional-header__mark` acima. */
-  display: block;
-  height: 40px;
-  width: 271px;
   flex-shrink: 0;
 }
 
@@ -137,7 +112,7 @@
   padding: var(--spacing-micro);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
-  color: #141414;
+  color: var(--text-heading);
   white-space: nowrap;
 }
 
@@ -238,16 +213,7 @@
 
   .institutional-header__mark {
     height: 40px;
-    width: 240px;
-  }
-
-  .institutional-header__divider {
-    height: 36px;
-  }
-
-  .institutional-header__einstein {
-    height: 28px;
-    width: 190px;
+    width: 187px;
   }
 
   .course-nav__list {
@@ -266,16 +232,17 @@
     gap: var(--spacing-extra-small);
   }
 
-  /* Troca a versão "montada" (SVG + texto + divisor + PNG do Einstein,
-     usada no desktop/tablet) pelo PNG único exportado direto do Figma —
-     já traz Anhembi + Medicina + Einstein no espaçamento exato do design,
-     sem risco de desalinhar "Medicina" na montagem via CSS. */
-  .institutional-header__identity {
-    display: none;
+  .institutional-header__mark {
+    height: 32px;
+    width: 150px;
   }
 
-  .institutional-header__brand-mobile {
-    display: block;
+  /* "Sou Candidato" não cabe ao lado da logo + busca + "Inscreva-se" numa
+     única linha no mobile — some junto com seu divisor, igual ao padrão já
+     usado para o menu hambúrguer (removido) na UAM. */
+  .institutional-header__link,
+  .institutional-header__divider {
+    display: none;
   }
 
   /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para

@@ -97,7 +97,7 @@
 }
 
 .edital-item {
-  background-color: #e0fff9;
+  background-color: var(--surface-brand-primary-light);
   border-radius: var(--radius-small);
   overflow: hidden;
   flex-shrink: 0;

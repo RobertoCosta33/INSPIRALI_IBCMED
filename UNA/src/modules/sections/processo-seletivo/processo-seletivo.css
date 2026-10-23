@@ -58,7 +58,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to left, rgba(0, 121, 106, 0) 0%, var(--surface-brand-primary) 55%);
+  background: linear-gradient(to left, rgba(230, 0, 37, 0) 0%, var(--surface-brand-primary) 55%);
 }
 
 .selection-card__header {
@@ -73,7 +73,7 @@
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
-  color: #e0fff9;
+  color: var(--surface-primary-subtle);
 }
 
 .selection-card__lead {
@@ -116,7 +116,7 @@
 
 .selection-card__tab:not(.is-active):hover,
 .selection-card__tab:not(.is-active):focus-visible {
-  background-color: #479f93;
+  background-color: rgba(255, 255, 255, 0.28);
 }
 
 .selection-card__panel {
@@ -209,8 +209,8 @@
 
 .selection-card__cta:hover,
 .selection-card__cta:focus-visible {
-  background-color: #212972;
-  color: #136b7b;
+  background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
 }
 
 .selection-card__links-row {
@@ -225,14 +225,14 @@
   padding: var(--spacing-extra-small) var(--spacing-medium);
   border-radius: var(--radius-total);
   font-size: var(--font-size-sm);
-  color: #e0fff9;
+  color: var(--text-inverted);
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .selection-card__link:hover,
 .selection-card__link:focus-visible {
-  background-color: #e4e0c5;
-  color: #ebf6e6;
+  background-color: rgba(255, 255, 255, 0.16);
+  color: var(--text-inverted);
 }
 
 @media (max-width: 1024px) {

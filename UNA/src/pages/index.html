@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Medicina UNA | Inspirali</title>
+    <title>Medicina UNA: Excelência Acadêmica Einstein | Inspirali</title>
     <meta
       name="description"
       content="Medicina UNA, integrada ao ecossistema Inspirali. Conheça o processo seletivo, a matriz curricular, os campi e as formas de financiamento."
@@ -13,7 +13,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Inspirali" />
-    <meta property="og:title" content="Medicina UNA" />
+    <meta property="og:title" content="Medicina UNA: Excelência Acadêmica Einstein" />
     <meta
       property="og:description"
       content="Formação integrada ao ecossistema Inspirali. Dê o primeiro passo rumo a uma medicina centrada na excelência, na ciência e no cuidado humano."
@@ -25,25 +25,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
 
     <!-- Design system: tokens e base compartilhados por todas as páginas -->
-    <link rel="stylesheet" href="/UNA/src/css/tokens.css?v=1" />
-    <link rel="stylesheet" href="/UNA/src/css/base.css?v=1" />
-    <link rel="stylesheet" href="/UNA/src/css/components/accordion.css?v=1" />
-    <link rel="stylesheet" href="/UNA/src/css/components/cards.css?v=1" />
-    <link rel="stylesheet" href="/UNA/src/css/components/tabs.css?v=1" />
-    <link rel="stylesheet" href="/UNA/src/css/components/carousel.css?v=1" />
+    <link rel="stylesheet" href="/UNA/src/css/tokens.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/css/base.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/css/components/accordion.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/css/components/cards.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/css/components/tabs.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/css/components/carousel.css?v=2" />
 
     <!-- Módulos compartilhados -->
-    <link rel="stylesheet" href="/UNA/src/modules/shared/header/header.css?v=1" />
-    <link rel="stylesheet" href="/UNA/src/modules/shared/footer/footer.css?v=1" />
+    <link rel="stylesheet" href="/UNA/src/modules/shared/header/header.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/modules/shared/footer/footer.css?v=2" />
 
     <!-- Módulos da página UNA -->
-    <link rel="stylesheet" href="/UNA/src/modules/sections/processo-seletivo/processo-seletivo.css?v=1" />
-    <link rel="stylesheet" href="/UNA/src/modules/sections/processo-seletivo/edital-modal.css?v=1" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/processo-seletivo/processo-seletivo.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/processo-seletivo/edital-modal.css?v=2" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -51,42 +51,29 @@
     <header class="site-header">
       <div class="institutional-header">
         <div class="institutional-header__identity">
-          <a href="/UNA/src/pages/" class="institutional-header__brand" aria-label="Página inicial Anhembi Morumbi">
+          <!-- No Figma da UNA, a logo (ícone + "UNA MEDICINA" + divisor +
+               "Excelência Acadêmica Einstein") já vem como uma única imagem
+               combinada — diferente da UAM, onde cada peça é um elemento
+               separado (SVG + texto + divisor + PNG do Einstein). Por isso
+               aqui não há `__subtitle`/`__divider`/`__einstein` nem a
+               duplicata `__brand-mobile`: a mesma imagem serve todos os
+               breakpoints, só mudando de tamanho via CSS. -->
+          <a href="/UNA/src/pages/" class="institutional-header__brand" aria-label="Página inicial UNA">
             <img
-              src="/UNA/src/public/images/shared/anhembi-morumbi-mark.svg"
-              alt="Universidade Anhembi Morumbi"
+              src="/UNA/src/public/images/shared/una-header-logo.png"
+              alt="UNA Medicina — Excelência Acadêmica Einstein"
               class="institutional-header__mark"
-              width="180"
-              height="30"
+              width="897"
+              height="192"
             />
-            <span class="institutional-header__subtitle">Medicina</span>
           </a>
-          <span class="institutional-header__divider" aria-hidden="true"></span>
-          <img
-            src="/UNA/src/public/images/einstein-excelencia-partner.png"
-            alt="Excelência Acadêmica — Hospital Israelita Albert Einstein"
-            class="institutional-header__einstein"
-            width="467"
-            height="69"
-          />
         </div>
 
-        <!-- No mobile (≤640px) usamos o PNG exportado direto do Figma (frame
-             "Logo" do header mobile) em vez de recriar o lockup com SVG +
-             texto + imagem separados — evita qualquer divergência de
-             alinhamento/espaçamento entre a logo e "Medicina". -->
-        <a href="/UNA/src/pages/" class="institutional-header__brand-mobile" aria-label="Página inicial Anhembi Morumbi">
-          <img
-            src="/UNA/src/public/images/shared/header-logo-mobile.png"
-            alt="Universidade Anhembi Morumbi — Medicina"
-            width="1095"
-            height="176"
-          />
-        </a>
-
         <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
+          <a class="institutional-header__link" href="#">Sou Candidato</a>
+          <span class="institutional-header__divider" aria-hidden="true"></span>
           <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
-            <img src="/UNA/src/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
+            <img src="/UNA/src/public/icons/icon-search-outline.svg" alt="" aria-hidden="true" width="16" height="16" />
           </button>
           <div class="header-cta-dropdown" data-dropdown>
             <button type="button" class="btn btn-primary header-cta-dropdown__trigger" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
@@ -96,10 +83,9 @@
             </button>
             <div class="header-cta-dropdown__menu" data-dropdown-menu>
               <div class="header-cta-dropdown__menu-inner">
-                <a class="header-cta-dropdown__item" href="https://fichainscricao.inspirali.com/concurso/18399" target="_blank" rel="noopener">Processo Enem 27.1</a>
-                <a class="header-cta-dropdown__item" href="https://fichainscricao.inspirali.com/concurso/18408" target="_blank" rel="noopener">Transferência Externa 27.1 - Prova 29/10</a>
-                <a class="header-cta-dropdown__item" href="https://fichainscricao.inspirali.com/concurso/18429" target="_blank" rel="noopener">Portador de Diploma 27.1</a>
-                <a class="header-cta-dropdown__item" href="https://fichainscricao.inspirali.com/concurso/18441" target="_blank" rel="noopener">Retorno 27.1</a>
+                <a class="header-cta-dropdown__item" href="#" target="_blank" rel="noopener">Processo Enem 27.1</a>
+                <a class="header-cta-dropdown__item" href="#" target="_blank" rel="noopener">Transferência Externa 27.1</a>
+                <a class="header-cta-dropdown__item" href="#" target="_blank" rel="noopener">Portador de Diploma 27.1</a>
               </div>
             </div>
           </div>
@@ -109,20 +95,20 @@
       <button type="button" class="institutional-header__mobile-search" data-search-trigger aria-label="Buscar nesta página">
         <span class="institutional-header__mobile-search-placeholder">O que você procura?</span>
         <span class="institutional-header__mobile-search-btn">
-          <img src="/UNA/src/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
+          <img src="/UNA/src/public/icons/icon-search-outline.svg" alt="" aria-hidden="true" width="16" height="16" />
         </span>
       </button>
 
       <nav class="course-nav" aria-label="Navegação do curso">
         <div class="course-nav__list">
-          <a class="course-nav__link" href="#processos-seletivos">Formas de Ingresso</a>
+          <a class="course-nav__link" href="#editais-e-resultados">Editais e Resultados</a>
           <a class="course-nav__link" href="#nosso-dna">Diferenciais</a>
           <a class="course-nav__link" href="#matriz-curricular">Matriz Curricular</a>
-          <a class="course-nav__link" href="#nossos-campus">Nossos Campi</a>
+          <a class="course-nav__link" href="#nossos-campus">Nossos Campus</a>
           <a class="course-nav__link" href="#metodologia">Ensino e Prática</a>
           <a class="course-nav__link" href="#investimento-e-financiamentos">Bolsas e Financiamentos</a>
-          <a class="course-nav__link" href="#grupo-inspirali">Grupo Inspirali</a>
-          <a class="course-nav__link" href="https://umapenca.com/lojameduam/" target="_blank" rel="noopener">Loja</a>
+          <a class="course-nav__link" href="#grupo-inspirali">Inspirali</a>
+          <a class="course-nav__link" href="#" target="_blank" rel="noopener">Loja</a>
         </div>
       </nav>
     </header>
@@ -130,9 +116,10 @@
     <main id="conteudo-principal">
       <section class="section section--subtle" id="processos-seletivos" aria-labelledby="processo-seletivo-title">
         <div class="selection-intro">
+          <p class="eyebrow">SEU PRÓXIMO PASSO</p>
           <h1 class="section-intro__title" id="processo-seletivo-title">
-            <span class="text-heading">Medicina Anhembi Morumbi</span>
-            <span class="text-brand">| Excelência Acadêmica Einstein</span>
+            <span class="text-heading">Medicina Una:</span>
+            <span class="text-brand">Excelência Acadêmica Einstein</span>
           </h1>
           <p class="section-intro__text">
             Um formação médica que une excelência técnico-científica, humanização e responsabilidade social
@@ -174,15 +161,16 @@
               <p class="selection-card__description">Ingresse direto usando sua melhor nota do Enem dos últimos 10 anos.</p>
             </div>
             <div class="selection-card__facts">
-              <p><strong>Investimento:</strong> A partir de 12 parcelas de R$ 12.995 por ano.</p>
-              <p class="selection-card__facts-note">*Mensalidade de 2026 referente às unidades São José dos Campos e Piracicaba, vinculada à pontualidade.</p>
+              <p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*</p>
+              <p class="selection-card__facts-note">*Mensalidade de 2026 vinculada à pontualidade</p>
             </div>
             <div class="selection-card__actions">
-              <a class="selection-card__cta" href="https://fichainscricao.inspirali.com/concurso/18399" target="_blank" rel="noopener">
+              <a class="selection-card__cta" href="#" target="_blank" rel="noopener">
                 Quero me inscrever para 27.1
                 <img src="/UNA/src/public/icons/icon-arrow-right-filled.svg" alt="" aria-hidden="true" width="24" height="24" />
               </a>
               <div class="selection-card__links-row">
+                <!-- <a class="selection-card__link" href="#">Lista Convocados</a> -->
                 <a class="selection-card__link" href="#" data-open-edital-modal>Consultar Edital</a>
               </div>
             </div>
@@ -196,12 +184,12 @@
             </div>
             <div class="selection-card__facts">
               <p><strong>Data da Prova:</strong> 29/10/2026</p>
-              <p><strong>Investimento:</strong> A partir de 12 parcelas de R$ 12.995 por ano.</p>
-              <p class="selection-card__facts-note">*Mensalidade de 2026 referente às unidades São José dos Campos e Piracicaba, vinculada à pontualidade.</p>
+              <p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*</p>
+              <p class="selection-card__facts-note">*Mensalidade de 2026 vinculada à pontualidade</p>
               <p><strong>Como funciona:</strong> Prova online para alunos de outras instituições mediante taxa de inscrição.</p>
             </div>
             <div class="selection-card__actions">
-              <a class="selection-card__cta" href="https://fichainscricao.inspirali.com/concurso/18408" target="_blank" rel="noopener">
+              <a class="selection-card__cta" href="#" target="_blank" rel="noopener">
                 Quero me inscrever para 27.1
                 <img src="/UNA/src/public/icons/icon-arrow-right-filled.svg" alt="" aria-hidden="true" width="24" height="24" />
               </a>
@@ -218,12 +206,12 @@
               <p class="selection-card__description">Ingresse em Medicina via análise curricular da sua primeira graduação.</p>
             </div>
             <div class="selection-card__facts">
-              <p><strong>Investimento:</strong> A partir de 12 parcelas de R$ 12.995 por ano.</p>
-              <p class="selection-card__facts-note">*Mensalidade de 2026 referente às unidades São José dos Campos e Piracicaba, vinculada à pontualidade.</p>
+              <p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*</p>
+              <p class="selection-card__facts-note">*Mensalidade de 2026 vinculada à pontualidade</p>
               <p><strong>Como funciona:</strong> Para quem já possui uma graduação e busca uma nova jornada na Medicina. Análise de currículo rápida e direta.</p>
             </div>
             <div class="selection-card__actions">
-              <a class="selection-card__cta" href="https://fichainscricao.inspirali.com/concurso/18429" target="_blank" rel="noopener">
+              <a class="selection-card__cta" href="#" target="_blank" rel="noopener">
                 Quero me inscrever para 27.1
                 <img src="/UNA/src/public/icons/icon-arrow-right-filled.svg" alt="" aria-hidden="true" width="24" height="24" />
               </a>
@@ -252,22 +240,22 @@
               <button type="button" class="edital-item__trigger" data-accordion-trigger aria-expanded="false">
                 <span>Vestibular Tradicional 27.1 - Prova 18/10</span>
                 <span class="edital-item__icon">
-                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-teal.svg" alt="" aria-hidden="true" />
-                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-teal.svg" alt="" aria-hidden="true" />
+                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" aria-hidden="true" />
+                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" aria-hidden="true" />
                 </span>
               </button>
               <div class="edital-item__panel" data-accordion-panel>
                 <div class="edital-item__panel-inner">
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260929150925/Uam_-_Listagem_Final_Inscritos_Vestibular_Tradicional_29.09.pdf" target="_blank" rel="noopener">→  Listagem Final de Inscritos</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260925175918/Uam_-_Listagem_Preliminar_Inscritos_Vestibular_Trad_Retificado_25.09.26.pdf" target="_blank" rel="noopener">→  Listagem Preliminar de Inscritos</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260812140526/Inspira_Manual_Candidato.pdf" target="_blank" rel="noopener">→  Manual do candidato - Etapa 1</a>
-                <a class="edital-item__link" href="https://inspira.ada-shorts.com/app" target="_blank" rel="noopener">→  Atividades Etapa 1 - Acesse aqui</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261008152747/Uam_Edital_VT1_Presencial_Vunesp_27.1_08.10.2026.pdf" target="_blank" rel="noopener">→  Edital</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260714143940/Uam_Errata_1_VT1_Presencial_Vunesp_27.1_14.07.pdf" target="_blank" rel="noopener">→  Errata 1</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260731133219/Uam_Errata_2_VT1_Presencial_Vunesp_27.1_31.07.2026.pdf" target="_blank" rel="noopener">→  Errata 2</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260925175917/Uam_Errata_3_VT1_Presencial_Vunesp_27.1_25.09.2026.pdf" target="_blank" rel="noopener">→  Errata 3</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261008152747/Uam_Errata_4_VT1_Presencial_Vunesp_27.1_08.10.2026.pdf" target="_blank" rel="noopener">→  Errata 4</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260731133219/FAQ_Vestibular_Tradicional_Vunesp.pdf" target="_blank" rel="noopener">→  FAQ</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Listagem Final de Inscritos</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Listagem Preliminar de Inscritos</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Manual do candidato - Etapa 1</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Atividades Etapa 1 - Acesse aqui</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Edital</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Errata 1</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Errata 2</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Errata 3</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Errata 4</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  FAQ</a>
                 </div>
               </div>
             </div>
@@ -276,17 +264,17 @@
               <button type="button" class="edital-item__trigger" data-accordion-trigger aria-expanded="false">
                 <span>Processo Enem 27.1</span>
                 <span class="edital-item__icon">
-                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-teal.svg" alt="" aria-hidden="true" />
-                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-teal.svg" alt="" aria-hidden="true" />
+                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" aria-hidden="true" />
+                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" aria-hidden="true" />
                 </span>
               </button>
               <div class="edital-item__panel" data-accordion-panel>
                 <div class="edital-item__panel-inner">
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261016173953/Uam_Edital_Processo_Enem_2027.1_16.10.2026.pdf" target="_blank" rel="noopener">→  Edital</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261009134802/Uam_Errata_1_Processo_Enem_2027.1_09.10.2026.pdf" target="_blank" rel="noopener">→  Errata 1</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261016173952/Uam_Errata_2_Processo_Enem_2027.1_16.10.2026.pdf" target="_blank" rel="noopener">→  Errata 2</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260922153215/FAQ_Processo_Enem_1.pdf" target="_blank" rel="noopener">→  FAQ</a>
-                <a class="edital-item__link" href="https://fichainscricao.inspirali.com/concurso/18399" target="_blank" rel="noopener">→  Inscreva-se aqui</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Edital</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Errata 1</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Errata 2</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  FAQ</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Inscreva-se aqui</a>
                 </div>
               </div>
             </div>
@@ -295,16 +283,16 @@
               <button type="button" class="edital-item__trigger" data-accordion-trigger aria-expanded="false">
                 <span>Transferência Externa 27.1 - Prova 29/10</span>
                 <span class="edital-item__icon">
-                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-teal.svg" alt="" aria-hidden="true" />
-                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-teal.svg" alt="" aria-hidden="true" />
+                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" aria-hidden="true" />
+                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" aria-hidden="true" />
                 </span>
               </button>
               <div class="edital-item__panel" data-accordion-panel>
                 <div class="edital-item__panel-inner">
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261005135042/Uam_Edital_1_Transferncia_Externa_2027.1_05.10.2026.pdf" target="_blank" rel="noopener">→  Edital</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261005135042/FAQ_Transferncia_Externa.pdf" target="_blank" rel="noopener">→  FAQ</a>
-                <a class="edital-item__link" href="https://fichainscricao.inspirali.com/concurso/18408" target="_blank" rel="noopener">→  Inscreva-se aqui!</a>
-                <a class="edital-item__link" href="https://www.anhembi.br/inscreva/areacandidato/login" target="_blank" rel="noopener">→  Realize aqui o upload dos documentos obrigatórios para a análise curricular</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Edital</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  FAQ</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Inscreva-se aqui!</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Realize aqui o upload dos documentos obrigatórios para a análise curricular</a>
                 </div>
               </div>
             </div>
@@ -313,15 +301,15 @@
               <button type="button" class="edital-item__trigger" data-accordion-trigger aria-expanded="false">
                 <span>Portador de Diploma 27.1</span>
                 <span class="edital-item__icon">
-                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-teal.svg" alt="" aria-hidden="true" />
-                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-teal.svg" alt="" aria-hidden="true" />
+                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" aria-hidden="true" />
+                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" aria-hidden="true" />
                 </span>
               </button>
               <div class="edital-item__panel" data-accordion-panel>
                 <div class="edital-item__panel-inner">
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261005181905/Uam_Edital_Obten%C2%BA%C3%BAo_Novo_Ttulo_2027.1._05.10.2026.pdf" target="_blank" rel="noopener">→  Edital</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261006103123/FAQ_Obten%C3%A7%C3%A3o_de_Novo_T%C3%ADtulo_-_Portador_de_Diploma_27.pdf" target="_blank" rel="noopener">→  FAQ</a>
-                <a class="edital-item__link" href="https://fichainscricao.inspirali.com/concurso/18429" target="_blank" rel="noopener">→  Inscreva-se aqui!</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Edital</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  FAQ</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Inscreva-se aqui!</a>
                 </div>
               </div>
             </div>
@@ -330,15 +318,15 @@
               <button type="button" class="edital-item__trigger" data-accordion-trigger aria-expanded="false">
                 <span>Retorno 27.1</span>
                 <span class="edital-item__icon">
-                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-teal.svg" alt="" aria-hidden="true" />
-                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-teal.svg" alt="" aria-hidden="true" />
+                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" aria-hidden="true" />
+                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" aria-hidden="true" />
                 </span>
               </button>
               <div class="edital-item__panel" data-accordion-panel>
                 <div class="edital-item__panel-inner">
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261005142755/Uam_Edital_Retorno_2027.1_05.10.2026.pdf" target="_blank" rel="noopener">→  Edital</a>
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20261005142545/FAQ_Retorno_1.pdf" target="_blank" rel="noopener">→  FAQ</a>
-                <a class="edital-item__link" href="https://fichainscricao.inspirali.com/concurso/18441" target="_blank" rel="noopener">→  Inscreva-se aqui!</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Edital</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  FAQ</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Inscreva-se aqui!</a>
                 </div>
               </div>
             </div>
@@ -347,13 +335,13 @@
               <button type="button" class="edital-item__trigger" data-accordion-trigger aria-expanded="false">
                 <span>Campanha Mérito Inspirali</span>
                 <span class="edital-item__icon">
-                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-teal.svg" alt="" aria-hidden="true" />
-                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-teal.svg" alt="" aria-hidden="true" />
+                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" aria-hidden="true" />
+                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" aria-hidden="true" />
                 </span>
               </button>
               <div class="edital-item__panel" data-accordion-panel>
                 <div class="edital-item__panel-inner">
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260805155136/1645523_-__Regulamento_Bolsa_M%C3%A9rito_Inspirali_27.pdf" target="_blank" rel="noopener">→  Confira o regulamento!</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Confira o regulamento!</a>
                 </div>
               </div>
             </div>
@@ -362,13 +350,13 @@
               <button type="button" class="edital-item__trigger" data-accordion-trigger aria-expanded="false">
                 <span>Campanha Cashback</span>
                 <span class="edital-item__icon">
-                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-teal.svg" alt="" aria-hidden="true" />
-                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-teal.svg" alt="" aria-hidden="true" />
+                <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" aria-hidden="true" />
+                <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" aria-hidden="true" />
                 </span>
               </button>
               <div class="edital-item__panel" data-accordion-panel>
                 <div class="edital-item__panel-inner">
-                <a class="edital-item__link" href="https://estaticos.animaeducacao.com.br/medias/20260612155211/1551257_-_Regulamento_Bolsa_Cashback_26.pdf" target="_blank" rel="noopener">→  Confira o regulamento!</a>
+                <a class="edital-item__link" href="#" target="_blank" rel="noopener">→  Confira o regulamento!</a>
                 </div>
               </div>
             </div>
@@ -386,45 +374,44 @@
       <div class="footer-body">
         <nav class="footer-nav" aria-label="Links institucionais">
           <div class="footer-col">
-            <p class="footer-col__title">A Anhembi Morumbi</p>
+            <p class="footer-col__title">A UNA</p>
             <div class="footer-col__links">
-              <a href="https://portal.anhembi.br/institucional" target="_blank" rel="noopener">Sobre a Anhembi Morumbi <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/unidades" target="_blank" rel="noopener">Unidades e Polos <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/nosso-curriculo" target="_blank" rel="noopener">Nosso Currículo <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/sobre/avaliacao-institucional-e-cpa/" target="_blank" rel="noopener">Avaliação Institucional e CPA <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/uc-dual" target="_blank" rel="noopener">UC Dual <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/cadastro-emec" target="_blank" rel="noopener">Cadastro <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/sobre/internacional/" target="_blank" rel="noopener">Internacional Office <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/pesquisa-e-desenvolvimento-cientifico/" target="_blank" rel="noopener">Pesquisa e Desenvolvimento Científico <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/napi" target="_blank" rel="noopener">Núcleo de Apoio Psicopedagógico e Inclusão (NAPI) <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/biblioteca" target="_blank" rel="noopener">Biblioteca <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/blog" target="_blank" rel="noopener">Blog <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://www.vagas.com.br/" target="_blank" rel="noopener">Trabalhe Conosco <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Sobre a UNA <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Unidades e Polos <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Nosso Currículo <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Avaliação Institucional e CPA <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">UC Dual <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Cadastro <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Internacional Office <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Pesquisa e Desenvolvimento Científico <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Núcleo de Apoio Psicopedagógico e Inclusão (NAPI) <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Biblioteca <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Blog <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Trabalhe Conosco <span class="footer-col__links-arrow">→</span></a>
             </div>
           </div>
 
           <div class="footer-col">
             <p class="footer-col__title">Faça parte</p>
             <div class="footer-col__links">
-              <a href="https://portal.anhembi.br/graduacao" target="_blank" rel="noopener">Graduação <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://pos.anhembi.br/" target="_blank" rel="noopener">Pós-Graduação e MBA <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/mestrado-doutorado" target="_blank" rel="noopener">Mestrado e Doutorado <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/bolsas-financiamentos/extensao-universitaria" target="_blank" rel="noopener">Cursos livres e Extensão <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/modalidades" target="_blank" rel="noopener">Modalidades <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/formas-entrada" target="_blank" rel="noopener">Formas de Entrada <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/bolsas-financiamentos" target="_blank" rel="noopener">Bolsas e Financiamentos <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Graduação <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Pós-Graduação e MBA <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Cursos livres e Extensão <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Modalidades <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Formas de Entrada <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Bolsas e Financiamentos <span class="footer-col__links-arrow">→</span></a>
             </div>
           </div>
 
           <div class="footer-col">
             <p class="footer-col__title">Alunos, Professores e Candidatos</p>
             <div class="footer-col__links">
-              <a href="https://portal.anhembi.br/calendario-academico/" target="_blank" rel="noopener">Calendário Acadêmico <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/editais" target="_blank" rel="noopener">Editais <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/enade" target="_blank" rel="noopener">ENADE <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/consultar-diploma/" target="_blank" rel="noopener">Consulta Pública de Diploma <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://portal.anhembi.br/consultar-historico/" target="_blank" rel="noopener">Consulta de Histórico <span class="footer-col__links-arrow">→</span></a>
-              <a href="https://repositorio.animaeducacao.com.br/communities/b460710d-a0cf-4312-bc3e-2b5414183473" target="_blank" rel="noopener">Repositório Universitário da Ânima (RUNA) <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Calendário Acadêmico <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Editais <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">ENADE <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Consulta Pública de Diploma <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Consulta de Histórico <span class="footer-col__links-arrow">→</span></a>
+              <a href="#" target="_blank" rel="noopener">Repositório Universitário da Ânima (RUNA) <span class="footer-col__links-arrow">→</span></a>
             </div>
           </div>
 
@@ -433,11 +420,11 @@
             <div class="footer-col__contact">
               <div>
                 <p class="footer-col__contact-label">Graduação e Pós-graduação</p>
-                <p class="footer-col__contact-value">11 4007-1192</p>
+                <p class="footer-col__contact-value">31 3515-5213</p>
               </div>
               <div>
                 <p class="footer-col__contact-label">EAD</p>
-                <p class="footer-col__contact-value">11 5108-0481</p>
+                <p class="footer-col__contact-value">31 3500-7169</p>
               </div>
             </div>
           </div>
@@ -445,27 +432,27 @@
 
         <div class="footer-emec-strip">
           <hr class="footer-emec-strip__line" />
-          <img src="/UNA/src/public/images/shared/emec-logo-footer.svg" alt="Faculdade de Medicina em São Paulo e na Anhembi Morumbi" loading="lazy" />
+          <img src="/UNA/src/public/images/shared/una-65-anos-badge.png" alt="UNA 65 anos (1961-2026)" loading="lazy" />
           <hr class="footer-emec-strip__line" />
         </div>
 
         <div class="footer-bottom">
           <div class="footer-social">
-            <a href="https://www.facebook.com/anhembi.morumbi" target="_blank" rel="noopener" aria-label="Facebook da Anhembi Morumbi"><img src="/UNA/src/public/icons/social-facebook.svg" alt="" /></a>
-            <a href="https://www.instagram.com/anhembimorumbi/" target="_blank" rel="noopener" aria-label="Instagram da Anhembi Morumbi"><img src="/UNA/src/public/icons/social-instagram.svg" alt="" /></a>
-            <a href="https://www.linkedin.com/school/universidade-anhembi-morumbi/" target="_blank" rel="noopener" aria-label="LinkedIn da Anhembi Morumbi"><img src="/UNA/src/public/icons/social-linkedin.svg" alt="" /></a>
-            <a href="https://www.tiktok.com/@anhembi.morumbi" target="_blank" rel="noopener" aria-label="TikTok da Anhembi Morumbi"><img src="/UNA/src/public/icons/social-tiktok.svg" alt="" /></a>
-            <a href="https://x.com/anhembimorumbi" target="_blank" rel="noopener" aria-label="X (Twitter) da Anhembi Morumbi"><img src="/UNA/src/public/icons/social-x.svg" alt="" /></a>
-            <a href="https://www.youtube.com/user/anhembimorumbi" target="_blank" rel="noopener" aria-label="YouTube da Anhembi Morumbi"><img src="/UNA/src/public/icons/social-youtube.svg" alt="" /></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Facebook da UNA"><img src="/UNA/src/public/icons/social-facebook.svg" alt="" /></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram da UNA"><img src="/UNA/src/public/icons/social-instagram.svg" alt="" /></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn da UNA"><img src="/UNA/src/public/icons/social-linkedin.svg" alt="" /></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="TikTok da UNA"><img src="/UNA/src/public/icons/social-tiktok.svg" alt="" /></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="X (Twitter) da UNA"><img src="/UNA/src/public/icons/social-x.svg" alt="" /></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="YouTube da UNA"><img src="/UNA/src/public/icons/social-youtube.svg" alt="" /></a>
           </div>
 
           <div class="footer-emec-qr">
-            <img src="/UNA/src/public/images/shared/emec-qrcode.png" alt="QR Code do cadastro e-MEC da Anhembi Morumbi" loading="lazy" />
-            <a href="https://portal.anhembi.br/cadastro-emec/" target="_blank" rel="noopener">Acesse aqui o cadastro da UAM no e-MEC</a>
+            <img src="/UNA/src/public/images/shared/emec-qrcode.png" alt="QR Code do cadastro e-MEC da UNA" loading="lazy" />
+            <a href="#" target="_blank" rel="noopener">Acesse aqui o cadastro da UNA no e-MEC</a>
           </div>
 
           <div class="footer-bottom__links">
-            <a class="footer-bottom__link" href="https://portal.anhembi.br/canal-de-privacidade/" target="_blank" rel="noopener">Canal de privacidade</a>
+            <a class="footer-bottom__link" href="#" target="_blank" rel="noopener">Canal de privacidade</a>
             <a href="#top">Voltar ao topo</a>
           </div>
         </div>
@@ -474,7 +461,7 @@
       </div>
     </footer>
 
-    <script src="/UNA/src/modules/shared/header/header.js?v=1"></script>
-    <script src="/UNA/src/modules/sections/processo-seletivo/processo-seletivo.js?v=1"></script>
+    <script src="/UNA/src/modules/shared/header/header.js?v=2"></script>
+    <script src="/UNA/src/modules/sections/processo-seletivo/processo-seletivo.js?v=2"></script>
   </body>
 </html>

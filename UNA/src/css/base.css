@@ -144,8 +144,13 @@ h4 {
 }
 
 .section-intro__title {
+  /* Diferente da UAM (Marcellus, onde títulos grandes usam sempre
+     `regular` — negrito sintético destoaria do Figma): a UNA usa
+     Bricolage Grotesque, cuja família tem um peso ExtraBold desenhado
+     de verdade, e é exatamente o peso usado nos títulos no Figma da
+     UNA. Ver AGENTS.md "Fontes por instituição". */
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }

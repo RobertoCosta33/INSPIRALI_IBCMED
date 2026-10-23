@@ -1,48 +1,49 @@
 /* ====================================================================
    Design tokens — extraídos do Figma "Redesign - Páginas IES"
-   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "Protótipo [em construção] -
-   Anhembi Morumbi", nó 523:29919 "Desktop", UAM — atualização dos
-   designers de 2026-10-16). Mantém os nomes de variável usados no
-   Figma (surface/*, text/*, border/*, spacing/*, radius/*, font/*)
-   para facilitar a conversão futura em módulos HubL.
+   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "UNA", nó 898:26700 "Desktop").
+   Mantém os nomes de variável usados no Figma (surface/*, text/*,
+   border/*, spacing/*, radius/*, font/*) para facilitar a conversão
+   futura em módulos HubL — mesma nomenclatura usada em UAM/src/css/
+   tokens.css, só com os valores de marca da UNA.
 
-   IMPORTANTE: a fonte da marca é "Bricolage Grotesque" (Google Fonts),
-   não "DIN Round Pro"/"Outfit" usadas numa versão anterior deste tema.
+   IMPORTANTE: a fonte da marca da UNA é "Bricolage Grotesque" (Google
+   Fonts) — DIFERENTE da UAM, que usa "Marcellus". Ver AGENTS.md seção
+   "Fontes por instituição".
    ==================================================================== */
 
 :root {
   /* Cores de superfície */
   --surface-inverted: #ffffff;
   --surface-primary: #ffffff;
-  --surface-primary-subtle: #f4f7f6;
-  --surface-secondary-subtle: #edf1f0;
-  --surface-brand-primary: #00796a;
-  --surface-brand-primary-dark: #002924;
-  --surface-brand-primary-light: #ddeae6;
-  --surface-brand-primary-light-alt: #d2e3de;
-  --surface-brand-tint: rgba(221, 234, 230, 0.25);
-  --surface-brand-tint-strong: rgba(221, 234, 230, 0.75);
-  --surface-brand-soft: rgba(0, 121, 106, 0.12);
-  --surface-brand-soft-weak: rgba(0, 121, 106, 0.1);
+  --surface-primary-subtle: #fffafb;
+  --surface-secondary-subtle: #f4ede9;
+  --surface-brand-primary: #e60025;
+  --surface-brand-primary-dark: #290007;
+  --surface-brand-primary-light: #ffe0e4;
+  --surface-brand-primary-light-alt: #ffd0d6;
+  --surface-brand-tint: rgba(230, 0, 37, 0.08);
+  --surface-brand-tint-strong: rgba(230, 0, 37, 0.16);
+  --surface-brand-soft: rgba(230, 0, 37, 0.12);
+  --surface-brand-soft-weak: rgba(230, 0, 37, 0.1);
 
   /* Cores de texto */
   --text-inverted: #ffffff;
-  --text-heading: #111827;
-  --text-primary-dark: #555046;
-  --text-secondary-dark: #83746a;
-  --text-brand: #00796a;
-  --text-brand-dark: #00796a;
+  --text-heading: #0a0607;
+  --text-primary-dark: #0a0607;
+  --text-secondary-dark: #6b6668;
+  --text-brand: #e60025;
+  --text-brand-dark: #e60025;
   --text-footer-muted: #cccccc;
   --text-footer: #f5f5f5;
 
   /* Cores de borda */
-  --border-primary-light: #c9c8be;
-  --border-brand-primary: #00796a;
-  --border-brand-soft: rgba(0, 121, 106, 0.2);
-  --border-brand-soft-strong: rgba(0, 121, 106, 0.4);
+  --border-primary-light: #d8d2d3;
+  --border-brand-primary: #e60025;
+  --border-brand-soft: rgba(230, 0, 37, 0.2);
+  --border-brand-soft-strong: rgba(230, 0, 37, 0.4);
 
   /* Tipografia — família da marca: Bricolage Grotesque (Google Fonts) */
-  --font-family-base: "Marcellus", "Segoe UI", serif;
+  --font-family-base: "Bricolage Grotesque", "Segoe UI", sans-serif;
 
   --font-size-xxs: 12px;
   --font-size-xs: 14px;
@@ -65,10 +66,11 @@
   --line-height-lg: 40px;
   --line-height-xl: 48px;
 
-  /* Pesos — Bricolage Grotesque: ExtraLight 200, Light 300, Regular 400, Bold 700, ExtraBold 800 */
+  /* Pesos — Bricolage Grotesque: ExtraLight 200, Light 300, Regular 400, Medium 500, Bold 700, ExtraBold 800 */
   --font-weight-extralight: 200;
   --font-weight-light: 300;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
 

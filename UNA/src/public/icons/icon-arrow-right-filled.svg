@@ -1,3 +1,5 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="#00796a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Search">
+<path id="Vector" d="M17.9812 17.9812L22.875 22.875M20.7 10.9125C20.7 5.50702 16.318 1.125 10.9125 1.125C5.50702 1.125 1.125 5.50702 1.125 10.9125C1.125 16.318 5.50702 20.7 10.9125 20.7C16.318 20.7 20.7 16.318 20.7 10.9125Z" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" stroke="#F5F5F5"/>
+</g>
 </svg>

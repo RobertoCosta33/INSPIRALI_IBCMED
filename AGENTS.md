@@ -25,8 +25,9 @@ O IBCMED reúne páginas de divulgação do curso de Medicina em diferentes facu
 > | Instituição | Node-id Figma | Status |
 > |---|---|---|
 > | UAM (Anhembi Morumbi) | `523:29919` ("Desktop", página "Redesign - Páginas IES") | HTML/CSS/JS aprovado em `UAM/src/pages/` + `UAM/src/modules/sections/*` — **piloto/referência de estrutura para as próximas instituições**. Convertido para tema HubSpot (HubL) em `UAM/src/templates/` (ver `UAM/src/templates/README.md`); ainda não publicado — falta autenticar a HubSpot CLI, enviar imagens/PDFs ao Design Manager/File Manager e revisar no preview antes de publicar. |
-> | UNIFACS | — | A definir com o time de design |
-> | AGES, UNIFG, FASEH, USJT, UNP, UNA, UNIBH, UNISUL | — | A definir com o time de design |
+> | UNA | `898:26700` ("Desktop", página "UNA") | Em construção. Header + footer + primeira dobra (`processo-seletivo`) replicados da estrutura da UAM e já com conteúdo/cores/fonte da UNA (ver seção 4.2 "Fontes por instituição" — UNA usa Bricolage Grotesque, não Marcellus). Demais seções ainda pendentes de conteúdo do Figma. |
+> | UNIFACS, UNISUL | — | Pastas já criadas, aguardando Figma do time de design |
+> | AGES, UNIFG, FASEH, USJT, UNP, UNIBH | — | A definir com o time de design |
 
 ---
 
@@ -176,12 +177,25 @@ Estes valores vêm de `UAM/src/css/tokens.css` e `UAM/src/css/base.css`, extraí
 | Borda neutra | `--border-primary-light` | `#c9c8be` |
 | Borda de marca (soft) | `--border-brand-soft` | `rgba(0,121,106,.2)` |
 
+A cor de marca também muda por instituição (segue o mesmo princípio das fontes acima — ver `<INSTITUICAO>/src/css/tokens.css`). A UNA usa vermelho: `--surface-brand-primary` / `--text-brand` / `--border-brand-primary` = `#e60025`, `--surface-brand-primary-dark` = `#290007` (fundo escuro do rodapé/hover), `--surface-brand-primary-light` = `#ffe0e4`, `--text-heading` = `#0a0607`.
+
 ### 4.2 Tipografia
 
 - **Fonte base**: `Marcellus` (serifada) para **tudo** no site da UAM — títulos, corpo, labels, botões — por decisão explícita do responsável, mesmo quando o Figma usa `Figtree` em rótulos/corpo. Essa decisão é específica da UAM; confirme com o responsável se a próxima instituição deve seguir o mesmo caminho ou usar duas fontes como o Figma dela indicar.
 - Escala de tamanho (`--font-size-*`): `xxs 12px · xs 14px · sm 16px · md 18px · lg 20px · xl 24px · 2xl 32px · 3xl 40px · 4xl 48px`.
 - Alturas de linha: `tight 1.16` (títulos) · `snug 1.2` · `relaxed 1.4` (corpo de texto).
 - Pesos disponíveis: `regular 400 · bold 700 · extrabold 800` — **títulos grandes em Marcellus usam sempre `regular`** (o Figma define os títulos como Marcellus Regular; aplicar `bold`/`extrabold` neles gera negrito sintético e destoa do Figma). `bold`/`extrabold` ficam para eyebrows, labels de pill, abas ativas e botões.
+
+#### Fontes por instituição
+
+**A fonte NÃO é a mesma em todas as instituições — cada Figma define a sua.** Antes de portar `UAM/src/css/tokens.css` como ponto de partida para uma nova instituição (seção 3.2), confira no Figma dela qual é a fonte de marca e ajuste `--font-family-base` de acordo. Instituições confirmadas até agora:
+
+| Instituição | Fonte de marca | Observações |
+|---|---|---|
+| UAM (Anhembi Morumbi) | `Marcellus` (serifada) | Usada para **tudo** (títulos, corpo, botões); títulos grandes sempre em peso `regular` (ver acima). |
+| UNA | `Bricolage Grotesque` (sans-serif, Google Fonts, pesos 200–800) | Usada para **tudo** também. Diferente da UAM: `.section-intro__title` (títulos grandes de seção) usa peso **`extrabold`**, não `regular` — a família tem um ExtraBold desenhado de verdade (não é negrito sintético) e é exatamente o peso que o Figma da UNA usa nos títulos. Ver `UNA/src/css/tokens.css` e `UNA/src/css/base.css`. |
+
+Ao confirmar a fonte de uma nova instituição, carregue os pesos necessários via Google Fonts em `<INSTITUICAO>/src/pages/index.html` (`<link href="https://fonts.googleapis.com/css2?family=...&display=swap">`) e atualize `--font-family-base` + os comentários de `tokens.css`. Se os títulos grandes da fonte nova tiverem um peso "bold"/"extrabold" desenhado de verdade (não só o navegador aplicando negrito sintético), use esse peso em vez de forçar `regular` — confira comparando visualmente com o Figma.
 
 ### 4.3 Espaçamento (`--spacing-*`)
 

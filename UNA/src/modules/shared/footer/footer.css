@@ -51,8 +51,8 @@
 
 .footer-invitation__cta:hover,
 .footer-invitation__cta:focus-visible {
-  background-color: #37545a;
-  color: #0a7466;
+  background-color: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
 }
 
 .footer-body {
@@ -124,7 +124,7 @@
   bottom: 2px;
   width: 0;
   height: 2px;
-  background-color: #20bda2;
+  background-color: var(--surface-brand-primary);
   transition: width 0.35s ease;
 }
 
@@ -139,7 +139,7 @@
 
 .footer-col__links a:hover .footer-col__links-arrow,
 .footer-col__links a:focus-visible .footer-col__links-arrow {
-  color: #20bda2;
+  color: var(--surface-brand-primary);
 }
 
 .footer-col__contact {
@@ -166,10 +166,14 @@
 }
 
 .footer-emec-strip__line {
+  /* Branco translúcido (não #3d3d3d cinza-escuro como na UAM): o fundo do
+     rodapé da UNA é vermelho bem escuro (quase preto), então uma linha
+     cinza-escura ficaria praticamente invisível — no Figma a linha é
+     branca a 25% de opacidade. */
   flex: 1 1 auto;
   height: 2px;
   border: none;
-  background-color: #3d3d3d;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .footer-emec-strip img {
@@ -239,7 +243,7 @@
   bottom: 2px;
   width: 0;
   height: 2px;
-  background-color: #20bda2;
+  background-color: var(--surface-brand-primary);
   transition: width 0.35s ease;
 }
 
