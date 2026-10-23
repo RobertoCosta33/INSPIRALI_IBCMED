@@ -1,4 +1,6 @@
 <div class="floating-contact" data-floating-contact>
+  {# "Ligue já!" fica oculto até show_call_button ser ativado no editor. #}
+  {% if module.show_call_button %}
   <div class="floating-contact__item">
     <div class="floating-contact__panel floating-contact__panel--call" data-floating-panel="call" hidden>
       <div class="floating-contact__panel-header">
@@ -21,6 +23,7 @@
       <span>{{ module.call_label }}</span>
     </button>
   </div>
+  {% endif %}
 
   {# "Tem alguma dúvida?" fica oculto até show_doubt_button ser ativado no editor. #}
   {% if module.show_doubt_button %}

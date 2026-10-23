@@ -27,16 +27,15 @@
 }
 
 .financing-intro {
-  /* `justify-content: space-between` (em vez de `flex-end`) alinha o
-     texto ("Planeje o seu futuro...") pelo topo — junto com "FIES" do
-     primeiro card ao lado — e mantém o card de valor onde já estava,
-     grudado embaixo (a coluna inteira é esticada pela altura de
-     `.financing-programs` via `align-items: stretch` do layout pai). */
+  /* `justify-content: flex-end` (confirmado no Figma: node 739-36757) —
+     o bloco de texto + card de valor fica grudado embaixo, próximo da
+     base da coluna de cards ao lado, com espaço em branco acima; não
+     alinhado ao topo com "FIES". */
   flex: 1 1 420px;
   max-width: 460px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 39px;
 }
 

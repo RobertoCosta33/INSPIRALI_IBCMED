@@ -1,5 +1,12 @@
 [
   {
+    "name": "show_call_button",
+    "label": "Mostrar botão \"Ligue já!\"",
+    "type": "boolean",
+    "default": false,
+    "help_text": "Desativado por enquanto — fica só o botão do WhatsApp. Marque esta opção para reativar."
+  },
+  {
     "name": "call_label",
     "label": "Texto do botão \"Ligue já!\"",
     "type": "text",
