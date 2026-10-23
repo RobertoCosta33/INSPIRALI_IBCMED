@@ -55,6 +55,13 @@
   color: #555046;
 }
 
+.info-card__note {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: #555046;
+}
+
 /* Cartão de disciplina (Matriz Curricular) */
 .discipline-card {
   background-color: var(--surface-brand-primary-light-alt);

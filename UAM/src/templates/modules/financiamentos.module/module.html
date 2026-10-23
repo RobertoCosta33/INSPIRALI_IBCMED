@@ -19,10 +19,32 @@
           </div>
           {% endfor %}
         </div>
-        <div class="financing-dots" data-financing-dots>
-          {% for campus in module.campus_prices %}
-          <button type="button" class="financing-dot{% if loop.first %} is-active{% endif %}" data-financing-dot="{{ loop.index0 }}" aria-label="{{ campus.campus_name }}"></button>
-          {% endfor %}
+        <div class="financing-nav">
+          <button
+            type="button"
+            class="financing-nav__btn financing-nav__btn--prev"
+            data-financing-prev
+            data-icon-enabled="{{ get_asset_url('../../public/icons/icon-chevron-left-financing-active.svg') }}"
+            data-icon-disabled="{{ get_asset_url('../../public/icons/icon-chevron-left-financing.svg') }}"
+            aria-label="Unidade anterior"
+          >
+            <img src="{{ get_asset_url('../../public/icons/icon-chevron-left-financing.svg') }}" alt="" aria-hidden="true" />
+          </button>
+          <div class="financing-dots" data-financing-dots>
+            {% for campus in module.campus_prices %}
+            <button type="button" class="financing-dot{% if loop.first %} is-active{% endif %}" data-financing-dot="{{ loop.index0 }}" aria-label="{{ campus.campus_name }}"></button>
+            {% endfor %}
+          </div>
+          <button
+            type="button"
+            class="financing-nav__btn financing-nav__btn--next"
+            data-financing-next
+            data-icon-enabled="{{ get_asset_url('../../public/icons/icon-chevron-right-financing.svg') }}"
+            data-icon-disabled="{{ get_asset_url('../../public/icons/icon-chevron-right-financing-disabled.svg') }}"
+            aria-label="Próxima unidade"
+          >
+            <img src="{{ get_asset_url('../../public/icons/icon-chevron-right-financing.svg') }}" alt="" aria-hidden="true" />
+          </button>
         </div>
       </div>
     </div>
@@ -35,6 +57,9 @@
           <p class="info-card__subtitle">{{ program.subtitle }}</p>
         </div>
         <div class="info-card__text">{{ program.text }}</div>
+        {% if program.note %}
+        <p class="info-card__note">{{ program.note }}</p>
+        {% endif %}
         {% if program.opens_modal %}
         <button type="button" class="info-card__link" data-open-bolsa-modal>
           {{ program.link_label }}

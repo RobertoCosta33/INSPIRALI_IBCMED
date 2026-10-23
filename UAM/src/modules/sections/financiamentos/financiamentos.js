@@ -2,14 +2,29 @@
 // Campos). Clique nas barrinhas abaixo do valor para trocar de unidade. No
 // mobile/touch também é possível arrastar (swipe) sobre o card.
 (function () {
+  // Ícones das setas: cinza = desabilitada (não tem mais pra onde ir nesse
+  // sentido), verde = habilitada. Na 1ª unidade a seta esquerda fica cinza;
+  // na última, a direita; no meio, as duas ficam verdes.
+  const PREV_ICON_ENABLED = "/UAM/src/public/icons/icon-chevron-left-financing-active.svg";
+  const PREV_ICON_DISABLED = "/UAM/src/public/icons/icon-chevron-left-financing.svg";
+  const NEXT_ICON_ENABLED = "/UAM/src/public/icons/icon-chevron-right-financing.svg";
+  const NEXT_ICON_DISABLED = "/UAM/src/public/icons/icon-chevron-right-financing-disabled.svg";
+
   document.querySelectorAll("[data-financing-carousel]").forEach(function (root) {
     const slides = root.querySelectorAll("[data-financing-slide]");
     const dots = root.querySelectorAll("[data-financing-dot]");
+    const prevBtn = root.querySelector("[data-financing-prev]");
+    const nextBtn = root.querySelector("[data-financing-next]");
+    const prevIcon = prevBtn ? prevBtn.querySelector("img") : null;
+    const nextIcon = nextBtn ? nextBtn.querySelector("img") : null;
     const card = root.querySelector(".financing-highlight");
     let index = 0;
 
     function show(newIndex) {
-      index = (newIndex + slides.length) % slides.length;
+      // Sem loop: na primeira unidade não dá pra voltar, na última não dá
+      // pra avançar (diferente de outros carrosséis do site, que dão a
+      // volta) — é o que a seta cinza/desabilitada comunica.
+      index = Math.max(0, Math.min(newIndex, slides.length - 1));
 
       slides.forEach(function (slide, i) {
         const isActive = i === index;
@@ -19,11 +34,33 @@
       dots.forEach(function (dot, i) {
         dot.classList.toggle("is-active", i === index);
       });
+
+      const isFirst = index === 0;
+      const isLast = index === slides.length - 1;
+      if (prevBtn) prevBtn.setAttribute("aria-disabled", String(isFirst));
+      if (nextBtn) nextBtn.setAttribute("aria-disabled", String(isLast));
+      if (prevIcon) prevIcon.src = isFirst ? PREV_ICON_DISABLED : PREV_ICON_ENABLED;
+      if (nextIcon) nextIcon.src = isLast ? NEXT_ICON_DISABLED : NEXT_ICON_ENABLED;
     }
 
     dots.forEach(function (dot, i) {
       dot.addEventListener("click", function () { show(i); });
     });
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        if (prevBtn.getAttribute("aria-disabled") === "true") return;
+        show(index - 1);
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        if (nextBtn.getAttribute("aria-disabled") === "true") return;
+        show(index + 1);
+      });
+    }
+
+    show(0);
 
     // Arrastar (swipe) sobre o card para trocar de unidade.
     if (card) {

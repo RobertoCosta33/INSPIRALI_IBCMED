@@ -34,10 +34,18 @@
                   <p class="financing-highlight__disclaimer">*Mensalidade de 2026 vinculada à pontualidade</p>
                 </div>
               </div>
-              <div class="financing-dots" data-financing-dots>
-                <button type="button" class="financing-dot is-active" data-financing-dot="0" aria-label="UAM - Mooca"></button>
-                <button type="button" class="financing-dot" data-financing-dot="1" aria-label="UAM - Piracicaba"></button>
-                <button type="button" class="financing-dot" data-financing-dot="2" aria-label="UAM - São José dos Campos"></button>
+              <div class="financing-nav">
+                <button type="button" class="financing-nav__btn financing-nav__btn--prev" data-financing-prev aria-label="Unidade anterior">
+                  <img src="/UAM/src/public/icons/icon-chevron-left-financing.svg" alt="" aria-hidden="true" />
+                </button>
+                <div class="financing-dots" data-financing-dots>
+                  <button type="button" class="financing-dot is-active" data-financing-dot="0" aria-label="UAM - Mooca"></button>
+                  <button type="button" class="financing-dot" data-financing-dot="1" aria-label="UAM - Piracicaba"></button>
+                  <button type="button" class="financing-dot" data-financing-dot="2" aria-label="UAM - São José dos Campos"></button>
+                </div>
+                <button type="button" class="financing-nav__btn financing-nav__btn--next" data-financing-next aria-label="Próxima unidade">
+                  <img src="/UAM/src/public/icons/icon-chevron-right-financing.svg" alt="" aria-hidden="true" />
+                </button>
               </div>
             </div>
           </div>
@@ -84,12 +92,13 @@
             </article>
             <article class="info-card">
               <div>
-                <p class="info-card__title">Programa Bolsa Permanência</p>
+                <p class="info-card__title">Programa Bolsa Permanência*</p>
                 <p class="info-card__subtitle">Apoio financeiro</p>
               </div>
               <p class="info-card__text">
                 Apoio financeiro para você focar nos estudos, com solicitação simples e condições acessíveis.
               </p>
+              <p class="info-card__note">*Válido nas unidades São José dos Campos e Piracicaba.</p>
               <button type="button" class="info-card__link" data-open-bolsa-modal>
                 Veja mais
                 <img src="/UAM/src/public/icons/icon-arrow-right-small.svg" alt="" aria-hidden="true" width="16" height="16" />

@@ -5,11 +5,17 @@
   document.querySelectorAll("[data-financing-carousel]").forEach(function (root) {
     const slides = root.querySelectorAll("[data-financing-slide]");
     const dots = root.querySelectorAll("[data-financing-dot]");
+    const prevBtn = root.querySelector("[data-financing-prev]");
+    const nextBtn = root.querySelector("[data-financing-next]");
+    const prevIcon = prevBtn ? prevBtn.querySelector("img") : null;
+    const nextIcon = nextBtn ? nextBtn.querySelector("img") : null;
     const card = root.querySelector(".financing-highlight");
     let index = 0;
 
     function show(newIndex) {
-      index = (newIndex + slides.length) % slides.length;
+      // Sem loop: na primeira unidade não dá pra voltar, na última não dá
+      // pra avançar — a seta cinza/desabilitada comunica isso.
+      index = Math.max(0, Math.min(newIndex, slides.length - 1));
 
       slides.forEach(function (slide, i) {
         const isActive = i === index;
@@ -19,11 +25,33 @@
       dots.forEach(function (dot, i) {
         dot.classList.toggle("is-active", i === index);
       });
+
+      const isFirst = index === 0;
+      const isLast = index === slides.length - 1;
+      if (prevBtn) prevBtn.setAttribute("aria-disabled", String(isFirst));
+      if (nextBtn) nextBtn.setAttribute("aria-disabled", String(isLast));
+      if (prevIcon) prevIcon.src = isFirst ? prevBtn.dataset.iconDisabled : prevBtn.dataset.iconEnabled;
+      if (nextIcon) nextIcon.src = isLast ? nextBtn.dataset.iconDisabled : nextBtn.dataset.iconEnabled;
     }
 
     dots.forEach(function (dot, i) {
       dot.addEventListener("click", function () { show(i); });
     });
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        if (prevBtn.getAttribute("aria-disabled") === "true") return;
+        show(index - 1);
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        if (nextBtn.getAttribute("aria-disabled") === "true") return;
+        show(index + 1);
+      });
+    }
+
+    show(0);
 
     // Arrastar (swipe) sobre o card para trocar de unidade.
     if (card) {

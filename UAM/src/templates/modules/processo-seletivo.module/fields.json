@@ -225,7 +225,7 @@
     "occurrence": {
       "min": 0,
       "max": 15,
-      "default": 7
+      "default": 8
     },
     "children": [
       {
@@ -360,6 +360,38 @@
               }
             },
             "link_label": "FAQ"
+          }
+        ]
+      },
+      {
+        "title": "Certificações Internacionais 27.1",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261019111603/Uam_Processo_de_Certifica%C3%A7%C3%A3o_Internacional_2027.pdf",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Edital"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261019111837/FAQ_Certifica%C3%A7%C3%A3o_Internacional.pdf",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "FAQ"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://fichainscricao.inspirali.com/concurso/18436",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Inscreva-se aqui!"
           }
         ]
       },
