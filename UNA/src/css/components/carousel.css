@@ -197,8 +197,15 @@
 }
 
 .card-carousel__nav-btn img {
-  width: 24px;
-  height: 24px;
+  /* Os SVGs baixados do Figma (1065:39601) são uma "seta para cima"
+     (linha + ponta), não um chevron em L — o Figma gira -90° e espelha
+     no eixo X para apontar para os lados; replicamos a mesma transform
+     aqui, em vez de usar chevrons em L genéricos (diferente da UAM).
+     Tamanho natural do ícone (11.5x17.5) dentro do botão de 32px —
+     igual à proporção do inset do Figma (16x10 antes de girar). */
+  width: 10px;
+  height: 16px;
+  transform: rotate(-90deg) scaleX(-1);
 }
 
 @media (max-width: 640px) {

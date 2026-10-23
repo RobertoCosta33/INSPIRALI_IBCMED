@@ -207,8 +207,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 3, 41, 0) 40%, rgba(0, 71, 62, 0.878) 80%, #00473e 100%),
-    linear-gradient(180deg, rgba(0, 3, 41, 0) 0%, rgba(0, 3, 41, 0.4) 100%);
+    linear-gradient(180deg, rgba(41, 0, 7, 0) 40%, rgba(41, 0, 7, 0.878) 80%, #290007 100%),
+    linear-gradient(180deg, rgba(10, 6, 7, 0) 0%, rgba(10, 6, 7, 0.4) 100%);
 }
 
 .posgrad-card__body {
@@ -223,8 +223,7 @@
 
 .posgrad-card__title {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: #f5f5f5;
 }
