@@ -253,6 +253,7 @@ Escala em múltiplos de 4px: `micro 4px · extra-small 8px · small 12px · medi
 
 ## 7. Regras obrigatórias (idênticas ao projeto MedRoom)
 
+- **Nunca faça `git commit` (nem `git push`) sem perguntar ao desenvolvedor responsável antes**, mesmo que o upload ao HubSpot já tenha sido aprovado separadamente — commit/push é uma confirmação própria, não implícita na aprovação de subir ao HubSpot.
 - **Nunca envie nada para o HubSpot sem perguntar ao desenvolvedor responsável se está tudo pronto.**
 - **Antes de qualquer `hs cms upload`, verifique se há algo no HubSpot que não existe no projeto local** (fetch + diff) e traga para o projeto antes de subir.
 - **Nunca use `hs cms upload --clean`** — a flag apaga a pasta inteira no Design Manager antes de subir, destruindo qualquer arquivo que exista só no HubSpot.

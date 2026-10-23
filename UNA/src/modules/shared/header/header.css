@@ -52,17 +52,6 @@
   flex-shrink: 0;
 }
 
-/* Divisor entre "Sou Candidato" e o botão de busca (Figma: 24px de altura,
-   não o mesmo divisor de logo que a UAM usa — aqui a logo é uma imagem só,
-   sem divisor interno). */
-.institutional-header__divider {
-  width: 1px;
-  height: 24px;
-  background-color: #292626;
-  opacity: 0.4;
-  flex-shrink: 0;
-}
-
 .institutional-header__nav {
   display: flex;
   align-items: center;
@@ -103,22 +92,6 @@
   width: 1px;
   height: 8px;
   background-color: #7a7a7a;
-}
-
-.institutional-header__link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-micro);
-  padding: var(--spacing-micro);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-heading);
-  white-space: nowrap;
-}
-
-.institutional-header__link:hover,
-.institutional-header__link:focus-visible {
-  text-decoration: underline;
 }
 
 .institutional-header__search {
@@ -235,14 +208,6 @@
   .institutional-header__mark {
     height: 32px;
     width: 150px;
-  }
-
-  /* "Sou Candidato" não cabe ao lado da logo + busca + "Inscreva-se" numa
-     única linha no mobile — some junto com seu divisor, igual ao padrão já
-     usado para o menu hambúrguer (removido) na UAM. */
-  .institutional-header__link,
-  .institutional-header__divider {
-    display: none;
   }
 
   /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
