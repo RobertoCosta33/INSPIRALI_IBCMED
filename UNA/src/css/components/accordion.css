@@ -1,0 +1,127 @@
+/* ====================================================================
+   Disclosure / Accordeon — usado em Metodologia e Perguntas frequentes
+   Figma: componente "Disclosure" (ex.: 181:3791, 181:3885)
+   ==================================================================== */
+
+.accordion-item {
+  width: 100%;
+}
+
+.accordion-item + .accordion-item {
+  margin-top: var(--spacing-extra-small);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  background-color: var(--surface-secondary-subtle);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-large);
+  text-align: left;
+}
+
+.accordion-trigger__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+  line-height: var(--line-height-tight);
+}
+
+.accordion-trigger__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.accordion-item--static .accordion-trigger {
+  cursor: default;
+}
+
+.accordion-trigger__icon .icon-plus,
+.accordion-trigger__icon .icon-minus {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.accordion-trigger__icon .icon-minus {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.accordion-item.is-open .accordion-trigger__icon .icon-plus {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.accordion-item.is-open .accordion-trigger__icon .icon-minus {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.accordion-item.is-open .accordion-trigger {
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
+  padding-bottom: var(--spacing-medium);
+}
+
+.accordion-divider {
+  display: none;
+  height: 1px;
+  margin: 0 var(--spacing-medium);
+  background-color: #fafaff;
+  border: none;
+}
+
+.accordion-item.is-open .accordion-divider {
+  display: block;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--surface-secondary-subtle);
+  border-radius: 0 0 var(--radius-small) var(--radius-small);
+  transition: max-height 0.35s ease;
+}
+
+.accordion-item.is-open .accordion-panel {
+  max-height: 600px;
+}
+
+.accordion-panel__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large);
+  padding-top: var(--spacing-medium);
+}
+
+.accordion-panel__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand-dark);
+}
+
+.accordion-panel__text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: #3d3d3d;
+}
+
+.accordion-summary {
+  padding: 0 var(--spacing-large);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary-dark);
+}
+
+@media (max-width: 640px) {
+  .accordion-trigger__title,
+  .accordion-panel__text {
+    font-size: var(--font-size-xs);
+  }
+}

@@ -1,0 +1,95 @@
+/* ====================================================================
+   Design tokens — extraídos do Figma "Redesign - Páginas IES"
+   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "Protótipo [em construção] -
+   Anhembi Morumbi", nó 523:29919 "Desktop", UAM — atualização dos
+   designers de 2026-10-16). Mantém os nomes de variável usados no
+   Figma (surface/*, text/*, border/*, spacing/*, radius/*, font/*)
+   para facilitar a conversão futura em módulos HubL.
+
+   IMPORTANTE: a fonte da marca é "Bricolage Grotesque" (Google Fonts),
+   não "DIN Round Pro"/"Outfit" usadas numa versão anterior deste tema.
+   ==================================================================== */
+
+:root {
+  /* Cores de superfície */
+  --surface-inverted: #ffffff;
+  --surface-primary: #ffffff;
+  --surface-primary-subtle: #f4f7f6;
+  --surface-secondary-subtle: #edf1f0;
+  --surface-brand-primary: #00796a;
+  --surface-brand-primary-dark: #002924;
+  --surface-brand-primary-light: #ddeae6;
+  --surface-brand-primary-light-alt: #d2e3de;
+  --surface-brand-tint: rgba(221, 234, 230, 0.25);
+  --surface-brand-tint-strong: rgba(221, 234, 230, 0.75);
+  --surface-brand-soft: rgba(0, 121, 106, 0.12);
+  --surface-brand-soft-weak: rgba(0, 121, 106, 0.1);
+
+  /* Cores de texto */
+  --text-inverted: #ffffff;
+  --text-heading: #111827;
+  --text-primary-dark: #555046;
+  --text-secondary-dark: #83746a;
+  --text-brand: #00796a;
+  --text-brand-dark: #00796a;
+  --text-footer-muted: #cccccc;
+  --text-footer: #f5f5f5;
+
+  /* Cores de borda */
+  --border-primary-light: #c9c8be;
+  --border-brand-primary: #00796a;
+  --border-brand-soft: rgba(0, 121, 106, 0.2);
+  --border-brand-soft-strong: rgba(0, 121, 106, 0.4);
+
+  /* Tipografia — família da marca: Bricolage Grotesque (Google Fonts) */
+  --font-family-base: "Marcellus", "Segoe UI", serif;
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-size-4xl: 48px;
+
+  /* Alturas de linha (razões, como definidas no Figma) */
+  --line-height-tight: 1.16;
+  --line-height-snug: 1.2;
+  --line-height-relaxed: 1.4;
+
+  /* Compatibilidade com módulos existentes (px fixos aproximados) */
+  --line-height-xs: 16px;
+  --line-height-sm: 24px;
+  --line-height-lg: 40px;
+  --line-height-xl: 48px;
+
+  /* Pesos — Bricolage Grotesque: ExtraLight 200, Light 300, Regular 400, Bold 700, ExtraBold 800 */
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Espaçamento */
+  --spacing-micro: 4px;
+  --spacing-extra-small: 8px;
+  --spacing-small: 12px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-extra-large: 32px;
+
+  /* Raio de borda */
+  --radius-extra-small: 4px;
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-total: 999px;
+
+  /* Grade / contêiner (desktop de referência: 1440px) */
+  --page-max-width: 1440px;
+  --page-gutter: 112px;
+  --page-gutter-tablet: 48px;
+  --page-gutter-mobile: 20px;
+}
