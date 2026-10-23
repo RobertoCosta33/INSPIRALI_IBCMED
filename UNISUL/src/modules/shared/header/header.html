@@ -1,0 +1,62 @@
+    <header class="site-header">
+      <div class="institutional-header">
+        <div class="institutional-header__identity">
+          <!-- No Figma da UNISUL, a logo já vem como uma única imagem
+               combinada (ícone + "UNISUL" + "Excelência Acadêmica
+               Einstein") — igual à UNA/UNIFACS, diferente da UAM (peças
+               separadas). A mesma imagem serve todos os breakpoints, só
+               mudando de tamanho via CSS. -->
+          <a href="/UNISUL/src/pages/" class="institutional-header__brand" aria-label="Página inicial UNISUL">
+            <img
+              src="/UNISUL/src/public/images/shared/unisul-header-logo.png"
+              alt="UNISUL — Excelência Acadêmica Einstein"
+              class="institutional-header__mark"
+              width="1010"
+              height="192"
+            />
+          </a>
+        </div>
+
+        <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
+          <div class="institutional-header__link">Sou Candidato</div>
+          <span class="institutional-header__divider" aria-hidden="true"></span>
+          <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
+            <img src="/UNISUL/src/public/icons/icon-search-indigo.svg" alt="" aria-hidden="true" width="16" height="16" />
+          </button>
+          <div class="header-cta-dropdown" data-dropdown>
+            <button type="button" class="btn btn-primary header-cta-dropdown__trigger" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
+              <span class="header-cta-dropdown__trigger-full">Inscreva-se para 2027.1</span>
+              <span class="header-cta-dropdown__trigger-short">Inscreva-se</span>
+              <img src="/UNISUL/src/public/icons/icon-arrow-down-white.svg" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="12" height="12" />
+            </button>
+            <div class="header-cta-dropdown__menu" data-dropdown-menu>
+              <div class="header-cta-dropdown__menu-inner">
+                <a class="header-cta-dropdown__item" href="#">Enem 27.1</a>
+                <a class="header-cta-dropdown__item" href="#">Transferência Externa 27.1</a>
+                <a class="header-cta-dropdown__item" href="#">Portador de Diploma 27.1</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <button type="button" class="institutional-header__mobile-search" data-search-trigger aria-label="Buscar nesta página">
+        <span class="institutional-header__mobile-search-placeholder">O que você procura?</span>
+        <span class="institutional-header__mobile-search-btn">
+          <img src="/UNISUL/src/public/icons/icon-search-indigo.svg" alt="" aria-hidden="true" width="16" height="16" />
+        </span>
+      </button>
+
+      <nav class="course-nav" aria-label="Navegação do curso">
+        <div class="course-nav__list">
+          <a class="course-nav__link" href="#processos-seletivos">Editais e Resultados</a>
+          <a class="course-nav__link" href="#nosso-dna">Diferenciais</a>
+          <a class="course-nav__link" href="#matriz-curricular">Matriz Curricular</a>
+          <a class="course-nav__link" href="#nossos-campus">Nossos Campus</a>
+          <a class="course-nav__link" href="#metodologia">Ensino e Prática</a>
+          <a class="course-nav__link" href="#investimento-e-financiamentos">Bolsas e Financiamentos</a>
+          <a class="course-nav__link" href="#grupo-inspirali">Inspirali</a>
+          <a class="course-nav__link" href="#" target="_blank" rel="noopener">Loja</a>
+        </div>
+      </nav>
+    </header>

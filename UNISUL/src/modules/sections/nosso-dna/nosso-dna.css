@@ -1,0 +1,119 @@
+/* ====================================================================
+   Módulo: Nosso DNA (UAM)
+   Figma: "Nosso DNA" (65:1450 / 65:1597)
+   ==================================================================== */
+
+.dna-pillars {
+  display: flex;
+  gap: var(--spacing-extra-large);
+  margin-top: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.dna-pillar {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.dna-pillar__photo {
+  width: 100%;
+  height: 234px;
+  object-fit: cover;
+  border-radius: var(--radius-small);
+}
+
+.dna-pillar__divider {
+  display: block;
+  height: 2px;
+  background-color: var(--border-brand-soft-strong);
+}
+
+.dna-pillar__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.dna-pillar__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+}
+
+.dna-pillar__text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.dna-pillars-dots {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-extra-small);
+  margin-top: var(--spacing-medium);
+}
+
+.dna-pillars-dot {
+  height: 6px;
+  width: 32px;
+  border-radius: 3px;
+  background-color: var(--surface-brand-soft);
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.dna-pillars-dot:hover {
+  background-color: var(--border-brand-soft-strong);
+}
+
+.dna-pillars-dot.is-active {
+  width: 64px;
+  background-color: var(--surface-brand-primary);
+}
+
+.dna-pillars-dot.is-active:hover {
+  background-color: var(--surface-brand-primary);
+}
+
+@media (max-width: 860px) {
+  /* No mobile o Figma substitui o empilhamento vertical dos 3 pilares por
+     um carrossel horizontal com arraste (1 pilar por vez) + indicadores. */
+  .dna-pillars {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-left: calc(var(--page-gutter-mobile) * -1);
+    margin-right: calc(var(--page-gutter-mobile) * -1);
+    padding-left: var(--page-gutter-mobile);
+    padding-right: var(--page-gutter-mobile);
+  }
+
+  .dna-pillars::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dna-pillar {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: center;
+  }
+
+  .dna-pillars-dots {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .dna-pillar__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .dna-pillar__text {
+    font-size: var(--font-size-sm);
+  }
+}

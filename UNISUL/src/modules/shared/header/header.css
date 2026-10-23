@@ -1,0 +1,354 @@
+/* ====================================================================
+   Header institucional + navegação do curso
+   Figma: "Institutional header" (523:29934) + "Course navigation" (523:29935)
+   ==================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.institutional-header {
+  background-color: var(--surface-inverted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+}
+
+.header-cta-dropdown__trigger-short {
+  display: none;
+}
+
+.institutional-header__identity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.institutional-header__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-micro);
+  flex-shrink: 0;
+}
+
+.institutional-header__mark {
+  /* No Figma da UNISUL, a logo (ícone + "UNISUL" + "Excelência
+     Acadêmica Einstein") já vem como uma única imagem combinada
+     (1010x192 ≈ 5.26:1) — igual à UNA/UNIFACS, diferente da UAM (peças
+     separadas). Largura calculada pela proporção real da imagem em vez
+     de `width: auto`, pelo mesmo motivo de sempre: a logo é item flex,
+     e `auto` pode fazer o navegador esticar/espremer durante o layout. */
+  display: block;
+  height: 44px;
+  width: 231px;
+  flex-shrink: 0;
+}
+
+.institutional-header__divider {
+  width: 1px;
+  height: 56px;
+  background-color: #7a7a7a;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+.institutional-header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+  flex-shrink: 0;
+}
+
+.institutional-header__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-extra-small);
+}
+
+.institutional-header__lang {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.institutional-header__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.institutional-header__lang-item {
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  color: #7a7a7a;
+}
+
+.institutional-header__lang-item.is-active {
+  color: #141414;
+}
+
+.institutional-header__lang-divider {
+  width: 1px;
+  height: 8px;
+  background-color: #7a7a7a;
+}
+
+.institutional-header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+  padding: var(--spacing-micro);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  color: #141414;
+  white-space: nowrap;
+}
+
+.institutional-header__link:hover,
+.institutional-header__link:focus-visible {
+  text-decoration: underline;
+}
+
+.institutional-header__search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-small);
+  background-color: rgba(122, 122, 122, 0.08);
+}
+
+.institutional-header__mobile-search {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-medium);
+  background-color: #dcdce0;
+  padding: var(--spacing-extra-small) var(--page-gutter-mobile);
+  width: 100%;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.institutional-header__mobile-search-placeholder {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: #3d3d3d;
+}
+
+.institutional-header__mobile-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 32px;
+  border-radius: var(--radius-small);
+  background-color: rgba(122, 122, 122, 0.08);
+  flex-shrink: 0;
+}
+
+.institutional-header__nav .btn {
+  height: 40px;
+  padding: var(--spacing-small);
+  font-size: var(--font-size-xs);
+}
+
+.course-nav {
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+}
+
+.course-nav__list {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  padding: var(--spacing-small) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.course-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.course-nav__link {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  color: var(--text-inverted);
+  opacity: 0.92;
+  transition: opacity 0.4s ease;
+}
+
+.course-nav__link:hover,
+.course-nav__link:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+  .institutional-header {
+    padding: var(--spacing-medium) var(--page-gutter-tablet);
+  }
+
+  .institutional-header__mark {
+    height: 40px;
+    width: 210px;
+  }
+
+  .institutional-header__divider {
+    height: 36px;
+  }
+
+  .course-nav__list {
+    padding: var(--spacing-small) var(--page-gutter-tablet);
+    justify-content: flex-start;
+  }
+}
+
+/* No mobile/tablet o header fica só com a logo + o botão "Inscreva-se"
+   (sem menu hambúrguer) — a navegação do curso já está disponível logo
+   abaixo, na faixa azul, e a busca tem sua própria barra dedicada. */
+
+@media (max-width: 640px) {
+  .institutional-header {
+    padding: var(--spacing-small) var(--page-gutter-mobile);
+    gap: var(--spacing-extra-small);
+  }
+
+  .institutional-header__mark {
+    height: 32px;
+    width: 168px;
+  }
+
+  /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
+     caber ao lado da logo + Einstein numa única linha, como no Figma. */
+  .header-cta-dropdown__trigger-full {
+    display: none;
+  }
+
+  .header-cta-dropdown__trigger-short {
+    display: inline;
+  }
+
+  /* O botão mobile do Figma é liso, sem a setinha de dropdown do desktop. */
+  .header-cta-dropdown__chevron {
+    display: none;
+  }
+
+  .institutional-header__nav .btn {
+    height: 32px;
+    padding: 0 var(--spacing-small);
+    font-size: var(--font-size-xxs);
+  }
+
+  .institutional-header__mobile-search {
+    display: flex;
+  }
+
+  /* A busca já aparece na barra dedicada abaixo do header; evita duplicidade
+     dentro do menu hambúrguer neste breakpoint. */
+  .institutional-header__search {
+    display: none;
+  }
+
+  .course-nav__list {
+    padding: var(--spacing-small) var(--page-gutter-mobile);
+  }
+}
+
+/* Dropdown "Inscreva-se para 2027.1" */
+.header-cta-dropdown {
+  position: relative;
+}
+
+.header-cta-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.header-cta-dropdown__chevron {
+  transition: transform 0.3s ease;
+}
+
+.header-cta-dropdown.is-open .header-cta-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.header-cta-dropdown__menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 8px;
+  min-width: 280px;
+  z-index: 110;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-cta-dropdown__menu-inner {
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-small);
+  box-shadow: 0 16px 32px rgba(17, 17, 17, 0.15);
+  padding: var(--spacing-small);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header-cta-dropdown.is-open .header-cta-dropdown__menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* :hover só controla o dropdown em dispositivos que realmente têm um
+   ponteiro com hover (mouse) — em touch, o navegador simula ":hover" após
+   o toque e ele "gruda" aberto mesmo depois do clique fechar via JS
+   (.is-open removida), porque o CSS continua casando. */
+@media (hover: hover) {
+  .header-cta-dropdown:hover .header-cta-dropdown__menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .header-cta-dropdown:hover .header-cta-dropdown__chevron {
+    transform: rotate(180deg);
+  }
+}
+
+.header-cta-dropdown__item {
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-heading);
+  white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.header-cta-dropdown__item:hover,
+.header-cta-dropdown__item:focus-visible {
+  background-color: var(--surface-primary-subtle);
+  color: var(--text-brand);
+}
