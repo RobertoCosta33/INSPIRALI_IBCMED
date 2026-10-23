@@ -24,7 +24,8 @@
     <div class="selection-card__tabs" role="tablist">
       {% for tab in module.tabs %}
       <button type="button" class="selection-card__tab{% if loop.first %} is-active{% endif %}" data-tab="tab-{{ loop.index0 }}" role="tab">
-        <img src="{{ tab.icon.src }}" alt="" aria-hidden="true" width="24" height="24" />
+        <img class="selection-card__tab-icon selection-card__tab-icon--active" src="{{ tab.icon.src }}" alt="" aria-hidden="true" width="24" height="24" />
+        <img class="selection-card__tab-icon selection-card__tab-icon--inactive" src="{{ tab.icon_inactive.src }}" alt="" aria-hidden="true" width="24" height="24" />
         {{ tab.tab_label }}
       </button>
       {% endfor %}

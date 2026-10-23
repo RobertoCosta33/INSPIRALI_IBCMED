@@ -119,6 +119,22 @@
   background-color: #479f93;
 }
 
+/* O ícone de cada aba precisa trocar de cor conforme o estado (teal no
+   fundo branco ativo, quase-branco no fundo teal inativo) — como são
+   arquivos <img> (não SVG inline), `currentColor` não funciona; por
+   isso existem duas versões do ícone, alternadas via display. */
+.selection-card__tab-icon--inactive {
+  display: none;
+}
+
+.selection-card__tab:not(.is-active) .selection-card__tab-icon--active {
+  display: none;
+}
+
+.selection-card__tab:not(.is-active) .selection-card__tab-icon--inactive {
+  display: block;
+}
+
 .selection-card__panel {
   align-self: stretch;
   width: auto;
@@ -216,6 +232,7 @@
 .selection-card__links-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-medium);
 }
 

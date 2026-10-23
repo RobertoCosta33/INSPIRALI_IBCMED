@@ -115,6 +115,16 @@
   background-color: #c9d1dc;
 }
 
+.docente-carousel__nav[aria-disabled="true"] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.docente-carousel__nav[aria-disabled="true"]:hover,
+.docente-carousel__nav[aria-disabled="true"]:focus-visible {
+  background-color: transparent;
+}
+
 .docente-carousel__nav img {
   width: 24px;
   height: 24px;

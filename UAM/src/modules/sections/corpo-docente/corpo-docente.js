@@ -13,14 +13,31 @@
     track.scrollBy({ left: direction * track.clientWidth, behavior: "smooth" });
   }
 
-  if (prevBtn) prevBtn.addEventListener("click", () => scrollByPage(-1));
-  if (nextBtn) nextBtn.addEventListener("click", () => scrollByPage(1));
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      if (prevBtn.getAttribute("aria-disabled") === "true") return;
+      scrollByPage(-1);
+    });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      if (nextBtn.getAttribute("aria-disabled") === "true") return;
+      scrollByPage(1);
+    });
+  }
 
   function updateSteps() {
     const maxScroll = track.scrollWidth - track.clientWidth;
     const progress = maxScroll > 0 ? track.scrollLeft / maxScroll : 0;
     const activeIndex = Math.min(steps.length - 1, Math.round(progress * (steps.length - 1)));
     steps.forEach((step, index) => step.classList.toggle("is-active", index === activeIndex));
+
+    // Seta "anterior" desabilitada no início, "próxima" desabilitada no
+    // fim — sem loop, igual ao carrossel de Financiamentos.
+    const atStart = maxScroll <= 0 || track.scrollLeft <= 1;
+    const atEnd = maxScroll <= 0 || track.scrollLeft >= maxScroll - 1;
+    if (prevBtn) prevBtn.setAttribute("aria-disabled", String(atStart));
+    if (nextBtn) nextBtn.setAttribute("aria-disabled", String(atEnd));
   }
 
   track.addEventListener("scroll", updateSteps);

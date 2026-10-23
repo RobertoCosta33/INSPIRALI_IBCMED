@@ -62,7 +62,16 @@
     "children": [
       {
         "name": "icon",
-        "label": "Ícone da aba",
+        "label": "Ícone da aba (estado ativo — fundo claro)",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "icon_inactive",
+        "label": "Ícone da aba (estado inativo — fundo de marca)",
         "type": "image",
         "default": {
           "src": "",
@@ -142,7 +151,11 @@
         "edital_link_label": "Consultar Edital",
         "modality_name": "Enem 27.1",
         "icon": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-school.svg",
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-school-teal.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-school-white.svg",
           "alt": ""
         }
       },
@@ -161,7 +174,11 @@
         "edital_link_label": "Consultar Edital",
         "modality_name": "Transferência Externa 27.1",
         "icon": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-sync-alt.svg",
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-sync-alt-teal.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-sync-alt-white.svg",
           "alt": ""
         }
       },
@@ -180,7 +197,11 @@
         "edital_link_label": "Consultar Edital",
         "modality_name": "Portador de Diploma 27.1",
         "icon": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-license.svg",
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-license-teal.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-license-white.svg",
           "alt": ""
         }
       }
