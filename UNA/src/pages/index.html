@@ -30,21 +30,30 @@
     />
 
     <!-- Design system: tokens e base compartilhados por todas as páginas -->
-    <link rel="stylesheet" href="/UNA/src/css/tokens.css?v=2" />
-    <link rel="stylesheet" href="/UNA/src/css/base.css?v=2" />
-    <link rel="stylesheet" href="/UNA/src/css/components/accordion.css?v=2" />
-    <link rel="stylesheet" href="/UNA/src/css/components/cards.css?v=2" />
-    <link rel="stylesheet" href="/UNA/src/css/components/tabs.css?v=2" />
-    <link rel="stylesheet" href="/UNA/src/css/components/carousel.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/css/tokens.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/css/base.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/css/components/accordion.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/css/components/cards.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/css/components/tabs.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/css/components/carousel.css?v=1792766718772" />
 
     <!-- Módulos compartilhados -->
-    <link rel="stylesheet" href="/UNA/src/modules/shared/header/header.css?v=3" />
-    <link rel="stylesheet" href="/UNA/src/modules/shared/footer/footer.css?v=2" />
-    <link rel="stylesheet" href="/UNA/src/modules/shared/page-search/page-search.css?v=1" />
+    <link rel="stylesheet" href="/UNA/src/modules/shared/header/header.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/shared/footer/footer.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/shared/page-search/page-search.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/shared/video-modal/video-modal.css?v=1792766718772" />
 
     <!-- Módulos da página UNA -->
-    <link rel="stylesheet" href="/UNA/src/modules/sections/processo-seletivo/processo-seletivo.css?v=2" />
-    <link rel="stylesheet" href="/UNA/src/modules/sections/processo-seletivo/edital-modal.css?v=2" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/processo-seletivo/processo-seletivo.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/processo-seletivo/edital-modal.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/sobre-instituicao/sobre-instituicao.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/nosso-dna/nosso-dna.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/matriz-curricular/matriz-curricular.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/corpo-docente/corpo-docente.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/campus/campus.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/metodologia/metodologia.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/ecossistema/ecossistema.css?v=1792766718772" />
+    <link rel="stylesheet" href="/UNA/src/modules/sections/financiamentos/financiamentos.css?v=1792766718772" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -362,7 +371,1231 @@
           </div>
         </div>
       </div>
+
+      <section class="section section--tint-strong institutional-about" id="sobre-a-una" aria-labelledby="institutional-about-title">
+        <div class="institutional-about__video">
+          <img
+            class="institutional-about__video-image"
+            src="/UNA/src/public/images/institucional/video-cover.png"
+            alt="Vídeo institucional da Una"
+            loading="lazy"
+          />
+          <button
+            type="button"
+            class="institutional-about__video-play"
+            data-open-video-modal="yQwlmYldIzM"
+            aria-label="Assistir ao vídeo institucional da Una"
+          >
+            <img src="/UNA/src/public/icons/icon-youtube-play-button.png" alt="" aria-hidden="true" />
+          </button>
+        </div>
+
+        <div class="institutional-about__content">
+          <div class="institutional-about__intro">
+            <p class="eyebrow">SOBRE A UNA</p>
+            <h2 class="institutional-about__title" id="institutional-about-title">
+              Conhecimento que<br />transforma vidas.
+            </h2>
+          </div>
+          <div class="institutional-about__text">
+            <p>Há mais de 60 anos transformando vidas por meio da educação.</p>
+            <p>Assista ao vídeo institucional para conhecer melhor a Una.</p>
+          </div>
+          <a class="institutional-about__cta" href="#" target="_blank" rel="noopener">
+            Conheça a Una
+            <img src="/UNA/src/public/icons/icon-arrow-right-outline-red.svg" alt="" aria-hidden="true" width="24" height="24" />
+          </a>
+        </div>
+      </section>
+
+      <section class="section section--tint-strong" id="nosso-dna" aria-labelledby="dna-title">
+        <div class="section-intro">
+          <p class="eyebrow">NOSSO DNA</p>
+          <h2 class="section-intro__title" id="dna-title">Que tipo de médico você quer ser?</h2>
+          <p class="section-intro__text">
+            A coordenação do curso de Medicina e o Núcleo Docente Estruturante conectam a proposta pedagógica à
+            formação de médicos preparados para os desafios do cuidado, com rigor científico, humanização e
+            compromisso social.
+          </p>
+        </div>
+
+        <div class="dna-pillars" data-dna-carousel>
+          <div class="dna-pillar">
+            <img class="dna-pillar__photo" src="/UNA/src/public/images/dna-pillar-1-una.png" alt="Excelência técnico-científica" loading="lazy" />
+            <span class="dna-pillar__divider" aria-hidden="true"></span>
+            <img class="dna-pillar__icon" src="/UNA/src/public/icons/icon-teacher.svg" alt="" aria-hidden="true" />
+            <p class="dna-pillar__title">Excelência técnico-científica</p>
+            <p class="dna-pillar__text">
+              Uma formação rigorosa, na vanguarda da medicina, unindo base neurocientífica e fluência digital para
+              decisões clínicas precisas.
+            </p>
+          </div>
+          <div class="dna-pillar">
+            <img class="dna-pillar__photo" src="/UNA/src/public/images/dna-pillar-2.png" alt="Humanização do cuidado" loading="lazy" />
+            <span class="dna-pillar__divider" aria-hidden="true"></span>
+            <img class="dna-pillar__icon" src="/UNA/src/public/icons/icon-favourite.svg" alt="" aria-hidden="true" />
+            <p class="dna-pillar__title">Humanização do cuidado</p>
+            <p class="dna-pillar__text">
+              Valorizamos a empatia, a escuta ativa e o respeito à diversidade, colocando o paciente sempre no
+              centro do tratamento.
+            </p>
+          </div>
+          <div class="dna-pillar">
+            <img class="dna-pillar__photo" src="/UNA/src/public/images/dna-pillar-3.png" alt="Responsabilidade social" loading="lazy" />
+            <span class="dna-pillar__divider" aria-hidden="true"></span>
+            <img class="dna-pillar__icon" src="/UNA/src/public/icons/icon-location-star.svg" alt="" aria-hidden="true" />
+            <p class="dna-pillar__title">Responsabilidade social</p>
+            <p class="dna-pillar__text">
+              Médicos que transformam realidades. Formação profundamente alinhada ao SUS e à visão de Saúde Única
+              (One Health), integrando indivíduo, sociedade e planeta.
+            </p>
+          </div>
+        </div>
+
+        <div class="dna-pillars-dots" data-dna-dots aria-hidden="true">
+          <button type="button" class="dna-pillars-dot is-active" data-dna-dot="0" aria-label="Pilar 1"></button>
+          <button type="button" class="dna-pillars-dot" data-dna-dot="1" aria-label="Pilar 2"></button>
+          <button type="button" class="dna-pillars-dot" data-dna-dot="2" aria-label="Pilar 3"></button>
+        </div>
+      </section>
+
+      <section class="section section--subtle" id="matriz-curricular" aria-labelledby="matriz-title">
+        <div class="spiral-header">
+          <p class="eyebrow">MATRIZ CURRICULAR</p>
+          <h2 class="section-intro__title" id="matriz-title">Conheça a grade do curso</h2>
+          <p class="section-intro__text">
+            Veja as disciplinas que compõem a formação em Medicina na Una, organizadas semestre a
+            semestre ao longo da sua jornada.
+          </p>
+          <div class="spiral-status-row">
+            <span class="status-pill">
+              <img src="/UNA/src/public/icons/icon-star-small.svg" alt="" aria-hidden="true" />
+              Presencial
+            </span>
+            <span class="status-pill">
+              <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+              7260 horas totais
+            </span>
+          </div>
+        </div>
+
+        <p class="section-intro__text" style="margin-top: var(--spacing-extra-large);">
+          Confira a matriz completa com as disciplinas do curso e o projeto pedagógico com a proposta de ensino.
+        </p>
+        <div class="spiral-ctas">
+          <div class="spiral-cta-group">
+            <a class="spiral-cta" href="#" target="_blank" rel="noopener">
+              Baixar matriz curricular 2026
+              <img src="/UNA/src/public/icons/icon-pdf.svg" alt="" aria-hidden="true" width="24" height="24" />
+            </a>
+            <p class="spiral-cta-group__caption">Para novos alunos</p>
+          </div>
+          <div class="spiral-cta-group">
+            <a class="spiral-cta" href="#" target="_blank" rel="noopener">
+              Baixar matriz curricular
+              <img src="/UNA/src/public/icons/icon-pdf.svg" alt="" aria-hidden="true" width="24" height="24" />
+            </a>
+            <p class="spiral-cta-group__caption">Para alunos a partir do 3º semestre</p>
+          </div>
+          <a class="spiral-cta spiral-cta--outline" href="#" target="_blank" rel="noopener">
+            Projeto pedagógico
+            <img src="/UNA/src/public/icons/icon-arrow-right-small-red.svg" alt="" aria-hidden="true" width="24" height="24" />
+          </a>
+        </div>
+
+        <div class="unit-card" style="margin-top: var(--spacing-extra-large);" data-tabs>
+          <div class="unit-tabs" role="tablist">
+            <button type="button" class="unit-tab is-active" data-tab="unidade-1" role="tab">1ª Unidade</button>
+            <button type="button" class="unit-tab" data-tab="unidade-2" role="tab">2ª Unidade</button>
+            <button type="button" class="unit-tab" data-tab="unidade-3" role="tab">3ª Unidade</button>
+            <button type="button" class="unit-tab" data-tab="unidade-4" role="tab">4ª Unidade</button>
+            <button type="button" class="unit-tab" data-tab="unidade-5" role="tab">5ª Unidade</button>
+            <button type="button" class="unit-tab" data-tab="unidade-6" role="tab">6ª Unidade</button>
+            <button type="button" class="unit-tab" data-tab="unidade-7" role="tab">7ª Unidade</button>
+            <button type="button" class="unit-tab" data-tab="unidade-8" role="tab">8ª Unidade</button>
+            <button type="button" class="unit-tab" data-tab="internato" role="tab">Internato</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="unidade-1">
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">CICLO BÁSICO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 558h
+                </span>
+              </div>
+              <p class="unit-panel__title">Unidade de Aprendizagem 1</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">CIÊNCIAS E CLÍNICAS INTEGRADAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Bases Biológicas e Fisiopatológicas Aplicadas a Clínica I</p>
+                  <p class="unit-panel__discipline-hours">180h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Raciocínio Clínico Colaborativo I</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">COMPETÊNCIAS MÉDICAS E PESSOAIS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Médicas I</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Desenvolvimento Pessoal, Profissional e Ético I</p>
+                  <p class="unit-panel__discipline-hours">18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INTEGRAÇÃO AO SUS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Práticas Médicas e Interprofissionais (Extensão*) I</p>
+                  <p class="unit-panel__discipline-hours">144h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INOVAÇÕES EM MEDICINA</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Integração Saúde, Sociedade e Ambiente I</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="unidade-2" hidden>
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">CICLO BÁSICO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 558h
+                </span>
+              </div>
+              <p class="unit-panel__title">Unidade de Aprendizagem 2</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">CIÊNCIAS E CLÍNICAS INTEGRADAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Bases Biológicas e Fisiopatológicas Aplicadas a Clínica II</p>
+                  <p class="unit-panel__discipline-hours">180h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Raciocínio Clínico Colaborativo II</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">COMPETÊNCIAS MÉDICAS E PESSOAIS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Médicas II</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Desenvolvimento Pessoal, Profissional e Ético II</p>
+                  <p class="unit-panel__discipline-hours">18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INTEGRAÇÃO AO SUS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Práticas Médicas e Interprofissionais (Extensão*) II</p>
+                  <p class="unit-panel__discipline-hours">144h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INOVAÇÕES EM MEDICINA</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Integração Saúde, Sociedade e Ambiente II</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="unidade-3" hidden>
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">CICLO BÁSICO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 594h
+                </span>
+              </div>
+              <p class="unit-panel__title">Unidade de Aprendizagem 3</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">CIÊNCIAS E CLÍNICAS INTEGRADAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Bases Biológicas e Fisiopatológicas Aplicadas a Clínica III</p>
+                  <p class="unit-panel__discipline-hours">180h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Raciocínio Clínico Colaborativo III</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">COMPETÊNCIAS MÉDICAS E PESSOAIS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Médicas III</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Bases Farmacológicas e Não-Farmacológicas I</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Desenvolvimento Pessoal, Profissional e Ético III</p>
+                  <p class="unit-panel__discipline-hours">18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INTEGRAÇÃO AO SUS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Práticas Médicas e Interprofissionais (Extensão*) III</p>
+                  <p class="unit-panel__discipline-hours">144h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INOVAÇÕES EM MEDICINA</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Ciência e Tecnologias Médicas I</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="unidade-4" hidden>
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">CICLO BÁSICO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 522h
+                </span>
+              </div>
+              <p class="unit-panel__title">Unidade de Aprendizagem 4</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">CIÊNCIAS E CLÍNICAS INTEGRADAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Bases Biológicas e Fisiopatológicas Aplicadas a Clínica IV</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Raciocínio Clínico Colaborativo IV</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">COMPETÊNCIAS MÉDICAS E PESSOAIS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Médicas IV</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Bases Farmacológicas e Não-Farmacológicas II</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Desenvolvimento Pessoal, Profissional e Ético IV</p>
+                  <p class="unit-panel__discipline-hours">18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INTEGRAÇÃO AO SUS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Práticas Médicas e Interprofissionais (Extensão*) IV</p>
+                  <p class="unit-panel__discipline-hours">144h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INOVAÇÕES EM MEDICINA</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Ciência e Tecnologias Médicas II</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="unidade-5" hidden>
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">CICLO CLÍNICO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 666h
+                </span>
+              </div>
+              <p class="unit-panel__title">Unidade de Aprendizagem 5</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">CIÊNCIAS E CLÍNICAS INTEGRADAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Medicina Integrada I</p>
+                  <p class="unit-panel__discipline-hours">144h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Raciocínio Clínico Colaborativo V</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">COMPETÊNCIAS MÉDICAS E PESSOAIS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Médicas V</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Procedurais e Cirúrgicas I</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Desenvolvimento Pessoal, Profissional e Ético V</p>
+                  <p class="unit-panel__discipline-hours">18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INTEGRAÇÃO AO SUS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Práticas Médicas e Interprofissionais (Extensão*) V</p>
+                  <p class="unit-panel__discipline-hours">252h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="unidade-6" hidden>
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">CICLO CLÍNICO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 666h
+                </span>
+              </div>
+              <p class="unit-panel__title">Unidade de Aprendizagem 6</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">CIÊNCIAS E CLÍNICAS INTEGRADAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Medicina Integrada II</p>
+                  <p class="unit-panel__discipline-hours">144h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Raciocínio Clínico Colaborativo VI</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">COMPETÊNCIAS MÉDICAS E PESSOAIS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Médicas VI</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Procedurais e Cirúrgicas II</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Desenvolvimento Pessoal, Profissional e Ético VI</p>
+                  <p class="unit-panel__discipline-hours">18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INTEGRAÇÃO AO SUS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Práticas Médicas e Interprofissionais (Extensão*) VI</p>
+                  <p class="unit-panel__discipline-hours">252h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="unidade-7" hidden>
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">CICLO CLÍNICO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 666h
+                </span>
+              </div>
+              <p class="unit-panel__title">Unidade de Aprendizagem 7</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">CIÊNCIAS E CLÍNICAS INTEGRADAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Medicina Integrada III</p>
+                  <p class="unit-panel__discipline-hours">144h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Raciocínio Clínico Colaborativo VII</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">COMPETÊNCIAS MÉDICAS E PESSOAIS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Médicas VII</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Procedurais e Cirúrgicas III</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Desenvolvimento Pessoal, Profissional e Ético VII</p>
+                  <p class="unit-panel__discipline-hours">18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INTEGRAÇÃO AO SUS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Práticas Médicas e Interprofissionais (Extensão*) VII</p>
+                  <p class="unit-panel__discipline-hours">252h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="unidade-8" hidden>
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">CICLO CLÍNICO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 666h
+                </span>
+              </div>
+              <p class="unit-panel__title">Unidade de Aprendizagem 8</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">CIÊNCIAS E CLÍNICAS INTEGRADAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Medicina Integrada IV</p>
+                  <p class="unit-panel__discipline-hours">144h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Raciocínio Clínico Colaborativo VIII</p>
+                  <p class="unit-panel__discipline-hours">108h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">COMPETÊNCIAS MÉDICAS E PESSOAIS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Médicas VIII</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Habilidades Procedurais e Cirúrgicas IV</p>
+                  <p class="unit-panel__discipline-hours">72h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Desenvolvimento Pessoal, Profissional e Ético VIII</p>
+                  <p class="unit-panel__discipline-hours">18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">INTEGRAÇÃO AO SUS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Práticas Médicas e Interprofissionais (Extensão*) VIII</p>
+                  <p class="unit-panel__discipline-hours">252h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+
+          <div class="unit-panel" data-tab-panel="internato" hidden>
+            <div>
+              <div class="unit-panel__meta">
+                <p class="unit-panel__eyebrow">INTERNATO</p>
+                <span class="unit-panel__hours">
+                  <img src="/UNA/src/public/icons/icon-clock.svg" alt="" aria-hidden="true" />
+                  Total: 2880h
+                </span>
+              </div>
+              <p class="unit-panel__title">Internato</p>
+            </div>
+            <hr class="unit-panel__divider" />
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">9º PERÍODO</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde da Mulher e da Criança I (120h+120h)</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde da Família e da Comunidade I + Saúde Mental I (120h+120h)</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde do Adulto I</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__extra" data-unit-extra>
+              <div class="unit-panel__extra-inner">
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">10º PERÍODO</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde da Mulher e da Criança II (120h+120h)</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde da Família e da Comunidade II + Saúde Mental II (120h+120h)</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde do Adulto II</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">11º PERÍODO</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde da Mulher e da Criança III (120h+120h)</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde da Família e da Comunidade III + Saúde do Idoso I (120h+120h)</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Urgências e Emergências I</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">12º PERÍODO</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Estágio Eletivo</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Saúde da Família e da Comunidade IV + Saúde do Idoso II (120h+120h)</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Urgência e Emergência II</p>
+                  <p class="unit-panel__discipline-hours">240h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">UNIDADES CURRICULARES OPTATIVAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">LIBRAS</p>
+                  <p class="unit-panel__discipline-hours">80h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Inglês Instrumental</p>
+                  <p class="unit-panel__discipline-hours">80h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-panel__group">
+              <p class="unit-panel__group-title">UNIDADES CURRICULARES ELETIVAS</p>
+              <div class="unit-panel__disciplines">
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Tópicos Especiais em Medicina I</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Tópicos Especiais em Medicina II</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Tópicos Especiais em Medicina III</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+                <div class="unit-panel__discipline">
+                  <p class="unit-panel__discipline-name">Tópicos Especiais em Medicina IV</p>
+                  <p class="unit-panel__discipline-hours">36h</p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section section--subtle" id="corpo-docente" aria-labelledby="corpo-docente-title">
+        <div class="section-intro" style="max-width: 1002px;">
+          <p class="eyebrow">CORPO DOCENTE DE ELITE</p>
+          <h2 class="section-intro__title" id="corpo-docente-title">Coordenadores especialistas ao seu lado</h2>
+          <p class="section-intro__text">
+            Em Tucuruí (PA), nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu
+            desenvolvimento.
+          </p>
+        </div>
+
+        <div class="docente-carousel" data-docente-carousel>
+          <div class="docente-grid" data-docente-track>
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNA/src/public/images/docente/daniel-voloski-guasselli.png" alt="Daniel Voloski Guasselli" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Administrativo</p>
+                  <p class="docente-card__name">Daniel Voloski Guasselli</p>
+                </div>
+                <p class="docente-card__bio">
+                  Graduado em Licenciatura Plena em Ciências Biológicas (IFPA-Tucuruí - PA). Mestrado em Genética e
+                  Biologia Molecular pelo Programa de Pós-Graduação em Genética e Biologia Molecular (UFPA-Belém-PA).
+                  Doutorado em Genética e Biologia Molecular pelo Programa de Pós-graduação em Genética e Biologia
+                  molecular (UFPA-Belém-PA). Atuação Docente permanente na Faculdade Gamaliel (FATEFIG) nos cursos de
+                  Odontologia, Enfermagem, Estética e Nutrição - Campus Tucuruí - PA. Professor conteudista Faculdade
+                  Gamaliel (FATEFIG) - Campus Tucuruí - PA. Professor substituto na Universidade do Estado do Pará
+                  (UEPA) - Campus Tucuruí - PA. Professor ES III e Coordenador Adjunto no curso de Medicina Faculdade
+                  de Medicina UNA - Campus Tucuruí - PA.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNA/src/public/images/docente/leonardo-savio-creao.png" alt="Leonardo Sávio da Silva Creão" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Médico</p>
+                  <p class="docente-card__name">Leonardo Sávio da Silva Creão</p>
+                </div>
+                <p class="docente-card__bio">
+                  Possui graduação em medicina pela Universidade do Estado do Pará (2010). Atualmente é Médico no
+                  CENTRO MÉDICO DO PARÁ, POLÍCIA CIENTÍFICA DO PARÁ e no INSTITUTO DE PREVIDÊNCIA DOS SERVIDORES DO
+                  MUNICÍPIO DE TUCURUÍ-PA. Tem experiência na área de RADIOLOGIA E DIAGNÓSTICO POR IMAGEM, atuando
+                  principalmente nas seguintes áreas: Radiologia Geral - Ultrassonografia - Mamografia - Tomografia
+                  Computadorizada - Ressonância Magnética - Radiologia Vascular - Radiologia Intervencionista -
+                  Neurorradiologia. Mestrado Acadêmico pelo Programa de Pós-graduação em Oncologia e Ciências
+                  Médicas - UFPA e Especialização em Gestão e Auditoria em Sistemas de Saúde.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="docente-modal" data-docente-modal hidden aria-hidden="true">
+          <div class="docente-modal__backdrop" data-docente-modal-close></div>
+          <div class="docente-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="docente-modal-name">
+            <div class="docente-modal__photo-wrap">
+              <img class="docente-modal__photo" data-docente-modal-photo src="" alt="" />
+            </div>
+            <div class="docente-modal__content">
+              <div class="docente-modal__header">
+                <div>
+                  <p class="docente-modal__name" id="docente-modal-name" data-docente-modal-name></p>
+                  <p class="docente-modal__role" data-docente-modal-role></p>
+                </div>
+                <button type="button" class="docente-modal__close" data-docente-modal-close aria-label="Fechar">
+                  <img src="/UNA/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+                </button>
+              </div>
+              <div class="docente-modal__bio">
+                <p data-docente-modal-bio></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section section--tint-strong" id="nossos-campus" aria-labelledby="campus-title">
+        <p class="eyebrow">ONDE A FORMAÇÃO ACONTECE</p>
+        <h2 class="section-intro__title" id="campus-title">Onde estudar Medicina na Una:</h2>
+        <p class="section-intro__text">
+          Um campus pensado para a sua experiência. Veja onde você vai viver essa experiência.
+        </p>
+
+        <div class="campus-layout">
+          <div class="campus-panel campus-panel--top">
+            <div>
+              <p class="campus-panel__title">Tucuruí</p>
+              <p class="campus-panel__text">
+                Localizado em Tucuruí (PA), às margens do Rio Tocantins, o campus está no principal polo urbano da
+                região do Lago de Tucuruí, atendendo estudantes da cidade e dos municípios vizinhos com uma rotina
+                acadêmica próxima do mercado e da realidade local.
+              </p>
+            </div>
+          </div>
+
+          <div class="campus-panel campus-panel--bottom">
+            <div class="campus-detail">
+              <p class="campus-detail__location">
+                <img src="/UNA/src/public/icons/icon-location.svg" alt="" aria-hidden="true" />
+                <span data-campus-city>Tucuruí, PA</span>
+              </p>
+              <p class="campus-detail__address" data-campus-address>
+                Rua A, 1006 - Santa Mônica • CEP 68456-760 - <a href="#" target="_blank" rel="noopener">Ver no mapa</a>
+              </p>
+            </div>
+            <a class="campus-panel__cta" href="#" target="_blank" rel="noopener" data-campus-cta>Conheça mais da unidade</a>
+          </div>
+
+          <div class="campus-gallery" data-campus-gallery>
+            <div class="campus-gallery__media">
+              <div class="campus-gallery__viewport">
+                <img class="campus-gallery__image is-active" data-gallery-slide data-label="Fachada" src="/UNA/src/public/images/campus-gallery/tucurui/fachada.png" alt="Fachada — campus Tucuruí" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Sala de aula presencial" src="/UNA/src/public/images/campus-gallery/tucurui/sala-de-aula-presencial.png" alt="Sala de aula presencial — campus Tucuruí" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Laboratórios equipados" src="/UNA/src/public/images/campus-gallery/tucurui/laboratorios-equipados.png" alt="Laboratórios equipados — campus Tucuruí" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Espaços de Convivência" src="/UNA/src/public/images/campus-gallery/tucurui/espacos-de-convivencia.png" alt="Espaços de Convivência — campus Tucuruí" loading="lazy" />
+                <div class="campus-gallery__overlay" aria-hidden="true"></div>
+                <span class="campus-gallery__label" data-gallery-label>Fachada</span>
+                <div class="campus-gallery__meta">
+                  <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>04</span></span>
+                  <div class="campus-gallery__nav">
+                    <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
+                      <img src="/UNA/src/public/icons/icon-chevron-left-nav.svg" alt="" aria-hidden="true" />
+                    </button>
+                    <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
+                      <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 14"></span>
+                      <img class="campus-gallery__nav-icon--flip" src="/UNA/src/public/icons/icon-chevron-left-nav.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="campus-gallery__thumbs">
+              <button type="button" class="campus-thumb is-active" data-gallery-thumb="0">
+                <img src="/UNA/src/public/images/campus-gallery/tucurui/fachada.png" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Fachada</span>
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="1">
+                <img src="/UNA/src/public/images/campus-gallery/tucurui/sala-de-aula-presencial.png" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Sala de aula presencial</span>
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="2">
+                <img src="/UNA/src/public/images/campus-gallery/tucurui/laboratorios-equipados.png" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Laboratórios equipados</span>
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="3">
+                <img src="/UNA/src/public/images/campus-gallery/tucurui/espacos-de-convivencia.png" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Espaços de Convivência</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="campus-lightbox" data-campus-lightbox hidden>
+          <button type="button" class="campus-lightbox__close" data-campus-lightbox-close aria-label="Fechar imagem ampliada">
+            <img src="/UNA/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+          </button>
+          <img class="campus-lightbox__image" data-campus-lightbox-image src="" alt="" />
+        </div>
+      </section>
+
+
+      <section class="section section--subtle" id="metodologia" aria-labelledby="metodologia-title">
+        <div class="methodology">
+          <div class="methodology__intro">
+            <div>
+              <p class="eyebrow">METODOLOGIA E TECNOLOGIA</p>
+              <h2 class="section-intro__title" id="metodologia-title">
+                A ciência por trás do seu aprendizado
+              </h2>
+              <p class="section-intro__text" style="margin-top: var(--spacing-small);">
+                Metodologias ativas reconhecidas globalmente para sedimentar o conhecimento na memória de longo
+                prazo.
+              </p>
+            </div>
+            <div class="methodology__media">
+              <img
+                class="methodology__image"
+                src="/UNA/src/public/images/learning-environment.png"
+                alt="Alunos da Una em ambiente de aprendizagem prática"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="methodology__list">
+            <div class="accordion-item" data-accordion-item>
+              <button class="accordion-trigger" data-accordion-trigger aria-expanded="false">
+                <span class="accordion-trigger__title">Metodologia de Harvard - CBCL</span>
+                <span class="accordion-trigger__icon">
+                  <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" width="16" height="16" />
+                  <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" width="16" height="16" />
+                </span>
+              </button>
+              <hr class="accordion-divider" />
+              <div class="accordion-panel" data-accordion-panel>
+                <div class="accordion-panel__inner">
+                  <p class="accordion-panel__text">
+                    Aprendizagem Colaborativa Baseada em Casos. Você discutirá diagnósticos reais em equipe,
+                    desenvolvendo raciocínio clínico ao invés de memorizar teorias.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <button class="accordion-trigger" data-accordion-trigger aria-expanded="false">
+                <span class="accordion-trigger__title">Imersão com MedRoom</span>
+                <span class="accordion-trigger__icon">
+                  <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" width="16" height="16" />
+                  <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" width="16" height="16" />
+                </span>
+              </button>
+              <hr class="accordion-divider" />
+              <div class="accordion-panel" data-accordion-panel>
+                <div class="accordion-panel__inner">
+                  <p class="accordion-panel__text">
+                    A tecnologia a serviço da vida. Utilizamos plataformas líderes em realidade virtual para o
+                    estudo avançado de anatomia e fisiologia 3D, preparando você antes mesmo do contato real.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <button class="accordion-trigger" data-accordion-trigger aria-expanded="false">
+                <span class="accordion-trigger__title">Fluência Digital e ProntLife</span>
+                <span class="accordion-trigger__icon">
+                  <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" width="16" height="16" />
+                  <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" width="16" height="16" />
+                </span>
+              </button>
+              <hr class="accordion-divider" />
+              <div class="accordion-panel" data-accordion-panel>
+                <div class="accordion-panel__inner">
+                  <p class="accordion-panel__text">
+                    Domine a Medicina contemporânea. Uso ético de Inteligência Artificial e prontuário eletrônico
+                    inteligente para estruturar seu raciocínio clínico.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <button class="accordion-trigger" data-accordion-trigger aria-expanded="false">
+                <span class="accordion-trigger__title">Avaliação Programática</span>
+                <span class="accordion-trigger__icon">
+                  <img class="icon-plus" src="/UNA/src/public/icons/icon-plus-red.svg" alt="" width="16" height="16" />
+                  <img class="icon-minus" src="/UNA/src/public/icons/icon-minus-red.svg" alt="" width="16" height="16" />
+                </span>
+              </button>
+              <hr class="accordion-divider" />
+              <div class="accordion-panel" data-accordion-panel>
+                <div class="accordion-panel__inner">
+                  <p class="accordion-panel__text">
+                    Um sistema focado no seu crescimento contínuo. A avaliação não é punitiva, mas sim diagnóstica,
+                    com feedbacks constantes para lapidar sua performance e garantir sua segurança.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section section--dark" id="ecossistema-de-cuidado" aria-labelledby="ecossistema-title">
+        <p class="eyebrow" style="color: var(--text-inverted);">ECOSSISTEMA DE CUIDADO E PRÁTICA</p>
+        <h2 class="practice-heading" id="ecossistema-title">Onde a Medicina Acontece.</h2>
+        <p class="section-intro__text" style="color: var(--text-inverted); margin-bottom: var(--spacing-large);">
+          Uma rede de prática, cuidado e suporte que acompanha o estudante em cada etapa da formação — dentro e
+          fora da universidade.
+        </p>
+
+        <div class="evidence-carousel" data-evidence-carousel>
+          <div class="evidence-carousel__viewport">
+            <div class="evidence-carousel__slide is-active" data-evidence-slide>
+              <img src="/UNA/src/public/images/ecosystem-carousel-1.jpg" alt="Centro Integrado de Saúde da Una" loading="lazy" />
+              <div class="evidence-carousel__content">
+                <div>
+                  <p class="evidence-carousel__eyebrow">Centros Integrados de Saúde (CIS)</p>
+                  <p class="evidence-carousel__subtitle">Prática intensa sob supervisão de elite</p>
+                </div>
+                <p class="evidence-carousel__value">+218.000</p>
+                <p class="evidence-carousel__label">
+                  agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à
+                  população.
+                </p>
+              </div>
+            </div>
+            <div class="evidence-carousel__slide" data-evidence-slide>
+              <img src="/UNA/src/public/images/ecosystem-carousel-2.jpg" alt="Aluna da Una em missão humanitária atendendo paciente" loading="lazy" />
+              <div class="evidence-carousel__content">
+                <div>
+                  <p class="evidence-carousel__eyebrow">Travessia Humanitária</p>
+                  <p class="evidence-carousel__subtitle">A medicina além dos muros</p>
+                </div>
+                <p class="evidence-carousel__label">
+                  Participe de expedições transformadoras na Amazônia, no Sertão e em comunidades vulneráveis,
+                  aplicando a humanização na prática.
+                </p>
+              </div>
+            </div>
+            <div class="evidence-carousel__slide" data-evidence-slide>
+              <img src="/UNA/src/public/images/ecosystem-carousel-3.jpg" alt="Equipe médica em atendimento hospitalar de alta complexidade" loading="lazy" />
+              <div class="evidence-carousel__content">
+                <div>
+                  <p class="evidence-carousel__eyebrow">Rede Hospitalar de Alta Complexidade</p>
+                  <p class="evidence-carousel__subtitle">Internato sólido de alto nível</p>
+                </div>
+                <p class="evidence-carousel__label">
+                  Internato sólido com vivência em urgência, cirurgia e pediatria através de parcerias com
+                  hospitais de referência.
+                </p>
+              </div>
+            </div>
+            <div class="evidence-carousel__slide" data-evidence-slide>
+              <img src="/UNA/src/public/images/ecosystem-carousel-4.jpg" alt="Mãos entrelaçadas representando acolhimento e cuidado emocional" loading="lazy" />
+              <div class="evidence-carousel__content">
+                <div>
+                  <p class="evidence-carousel__eyebrow">Programa Angatu (Saúde Mental)</p>
+                  <p class="evidence-carousel__subtitle">Cuidado com quem vai cuidar</p>
+                </div>
+                <p class="evidence-carousel__label">
+                  Reconhecemos que cuidar de vidas exige resiliência. Oferecemos acolhimento psicológico,
+                  oficinas de bem-estar e grupos de apoio para garantir uma carreira saudável e equilibrada.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button type="button" class="carousel-controls__btn" data-evidence-prev aria-label="Slide anterior">
+              <img src="/UNA/src/public/icons/icon-chevron-left-circle.svg" alt="" aria-hidden="true" />
+            </button>
+            <div class="carousel-controls__dots">
+              <button type="button" class="carousel-dot is-active" data-evidence-dot aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot" data-evidence-dot aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot" data-evidence-dot aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot" data-evidence-dot aria-label="Slide 4"></button>
+            </div>
+            <button type="button" class="carousel-controls__btn" data-evidence-next aria-label="Próximo slide">
+              <img src="/UNA/src/public/icons/icon-chevron-right-circle.svg" alt="" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section section--subtle" id="investimento-e-financiamentos" aria-labelledby="financiamentos-title">
+        <img class="financing-watermark" src="/UNA/src/public/images/shared/watermark-m.svg" alt="" aria-hidden="true" />
+        <div class="financing-layout">
+          <div class="financing-intro">
+            <div>
+              <p class="eyebrow">PLANEJE O SEU FUTURO</p>
+              <h2 class="section-intro__title" id="financiamentos-title">Sua jornada na Medicina continua aqui</h2>
+              <p class="section-intro__text" style="margin-top: var(--spacing-small);">
+                Da graduação à pós-graduação, estamos ao seu lado em cada etapa da sua formação e evolução
+                profissional.
+              </p>
+            </div>
+            <div class="financing-carousel" data-financing-carousel>
+              <div class="financing-highlight">
+                <div class="financing-highlight__slide is-active" data-financing-slide>
+                  <p class="financing-highlight__label">Investimento Mensal (2026)</p>
+                  <p class="financing-highlight__value">R$ 11.995,00</p>
+                  <p class="financing-highlight__note">Consulte condições de financiamento ao lado</p>
+                  <p class="financing-highlight__disclaimer">*Mensalidade de 2026 vinculada à pontualidade</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="financing-programs">
+            <article class="info-card">
+              <div>
+                <p class="info-card__title">FIES</p>
+                <p class="info-card__subtitle">Financiamento estudantil</p>
+              </div>
+              <p class="info-card__text">
+                Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social).
+              </p>
+            </article>
+            <article class="info-card">
+              <div>
+                <p class="info-card__title">Prouni</p>
+                <p class="info-card__subtitle">Bolsas de estudo</p>
+              </div>
+              <p class="info-card__text">
+                Bolsas de estudo integrais (100%) ou parciais (50%) através da sua nota do Enem.
+              </p>
+            </article>
+            <article class="info-card">
+              <div>
+                <p class="info-card__title">Pravaler</p>
+                <p class="info-card__subtitle">Financiamento privado</p>
+              </div>
+              <p class="info-card__text">
+                Financiamento estudantil privado com condições flexíveis e parcelamento facilitado.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <div class="video-modal" data-video-modal hidden aria-hidden="true">
+      <div class="video-modal__backdrop" data-video-modal-close></div>
+      <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="Vídeo institucional">
+        <button type="button" class="video-modal__close" data-video-modal-close aria-label="Fechar vídeo">
+          <img src="/UNA/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+        </button>
+        <div class="video-modal__frame">
+          <iframe
+            data-video-modal-iframe
+            src=""
+            title="Vídeo institucional"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="footer-invitation">
@@ -484,9 +1717,17 @@
       </div>
     </div>
 
-    <script src="/UNA/src/modules/shared/header/header.js?v=2"></script>
-    <script src="/UNA/src/modules/sections/processo-seletivo/processo-seletivo.js?v=2"></script>
-    <script src="/UNA/src/vendor/mark.min.js?v=1"></script>
-    <script src="/UNA/src/modules/shared/page-search/page-search.js?v=1"></script>
+    <script src="/UNA/src/modules/shared/header/header.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/sections/processo-seletivo/processo-seletivo.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/sections/nosso-dna/nosso-dna.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/sections/matriz-curricular/matriz-curricular.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/sections/corpo-docente/corpo-docente.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/sections/campus/campus.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/sections/metodologia/metodologia.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/sections/ecossistema/ecossistema.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/sections/financiamentos/financiamentos.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/shared/video-modal/video-modal.js?v=1792766718772"></script>
+    <script src="/UNA/src/vendor/mark.min.js?v=1792766718772"></script>
+    <script src="/UNA/src/modules/shared/page-search/page-search.js?v=1792766718772"></script>
   </body>
 </html>

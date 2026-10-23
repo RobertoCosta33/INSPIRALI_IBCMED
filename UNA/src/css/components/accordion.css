@@ -110,7 +110,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: #3d3d3d;
+  color: var(--text-heading);
 }
 
 .accordion-summary {

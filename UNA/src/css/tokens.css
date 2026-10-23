@@ -16,13 +16,19 @@
   --surface-inverted: #ffffff;
   --surface-primary: #ffffff;
   --surface-primary-subtle: #fffafb;
-  --surface-secondary-subtle: #f4ede9;
+  /* Mesmo tom usado em "Sobre a Una"/"Nosso DNA"/Matriz Curricular — no
+     Figma, os cards de accordion (Metodologia, FAQ) usam esse tom rosa,
+     não um bege neutro. */
+  --surface-secondary-subtle: #ffe0e5;
   --surface-brand-primary: #e60025;
   --surface-brand-primary-dark: #290007;
   --surface-brand-primary-light: #ffe0e4;
   --surface-brand-primary-light-alt: #ffd0d6;
   --surface-brand-tint: rgba(230, 0, 37, 0.08);
-  --surface-brand-tint-strong: rgba(230, 0, 37, 0.16);
+  /* Valor sólido exato do Figma (não um blend rgba aproximado): fundo da
+     lista de unidades da Matriz Curricular e das seções "Sobre a Una" /
+     "Nosso DNA" (una/light/background/subtle). */
+  --surface-brand-tint-strong: #ffe1e6;
   --surface-brand-soft: rgba(230, 0, 37, 0.12);
   --surface-brand-soft-weak: rgba(230, 0, 37, 0.1);
 

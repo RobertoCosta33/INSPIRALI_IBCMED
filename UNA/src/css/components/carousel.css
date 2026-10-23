@@ -162,7 +162,7 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(0, 121, 106, 0.16);
+  background-color: rgba(230, 0, 37, 0.16);
 }
 
 .card-carousel__dot.is-active {

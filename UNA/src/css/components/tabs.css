@@ -4,8 +4,12 @@
    ==================================================================== */
 
 .unit-card {
+  /* No Figma da UNA (931:26828) o card inteiro tem um fundo rosa/vermelho
+     bem claro (~#ffe1e6), não o cinza neutro de `--surface-primary-subtle`
+     usado na UAM — por isso aqui usamos o tint de marca (mais forte),
+     que já é vermelho nos tokens da UNA. */
   width: 100%;
-  background-color: var(--surface-primary-subtle);
+  background-color: var(--surface-brand-tint-strong);
   border-radius: var(--radius-medium);
   padding: var(--spacing-medium) var(--spacing-large) var(--spacing-large);
 }
