@@ -1,0 +1,101 @@
+/* ====================================================================
+   Design tokens — extraídos do Figma "Redesign - Páginas IES"
+   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "UNIFACS", nó 1147:24544).
+   Mantém os nomes de variável usados no Figma (surface/*, text/*,
+   border/*, spacing/*, radius/*, font/*) para facilitar a conversão
+   futura em módulos HubL — mesma nomenclatura usada em UAM/UNA/src/css/
+   tokens.css, só com os valores de marca da UNIFACS.
+
+   IMPORTANTE: a fonte da marca da UNIFACS é "Bricolage Grotesque"
+   (Google Fonts), igual à UNA — DIFERENTE da UAM, que usa "Marcellus".
+   Ver AGENTS.md seção "Fontes por instituição".
+   ==================================================================== */
+
+:root {
+  /* Cores de superfície */
+  --surface-inverted: #ffffff;
+  --surface-primary: #ffffff;
+  --surface-primary-subtle: #fffafc;
+  /* Figma (modal de editais, 1145:44389): fundo rosa claro dos cards de
+     accordion/destaque — unifacs/background/subtle. */
+  --surface-secondary-subtle: #ffe0ed;
+  --surface-brand-primary: #1d4189;
+  /* Figma do footer (1147:24566): fundo escuro #000e29 — "unifacs/dark/
+     background/subtle", não um simples blend do azul de marca. */
+  --surface-brand-primary-dark: #000e29;
+  --surface-brand-primary-light: #e0e3ff;
+  --surface-brand-primary-light-alt: #c7cdff;
+  --surface-brand-tint: rgba(29, 65, 137, 0.08);
+  --surface-brand-tint-strong: #ffe0ed;
+  --surface-brand-soft: rgba(29, 65, 137, 0.12);
+  --surface-brand-soft-weak: rgba(29, 65, 137, 0.1);
+
+  /* Cores de texto */
+  --text-inverted: #ffffff;
+  --text-heading: #06070a;
+  --text-primary-dark: #06070a;
+  --text-secondary-dark: #262729;
+  --text-brand: #1d4189;
+  --text-brand-dark: #1d4189;
+  --text-footer-muted: #cccccc;
+  --text-footer: #f5f5f5;
+
+  /* Cores de borda */
+  --border-primary-light: #d8d2d3;
+  --border-brand-primary: #1d4189;
+  --border-brand-soft: rgba(29, 65, 137, 0.2);
+  --border-brand-soft-strong: rgba(29, 65, 137, 0.4);
+
+  /* Tipografia — família da marca: Bricolage Grotesque (Google Fonts) */
+  --font-family-base: "Bricolage Grotesque", "Segoe UI", sans-serif;
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-size-4xl: 48px;
+
+  /* Alturas de linha (razões, como definidas no Figma) */
+  --line-height-tight: 1.16;
+  --line-height-snug: 1.2;
+  --line-height-relaxed: 1.4;
+
+  /* Compatibilidade com módulos existentes (px fixos aproximados) */
+  --line-height-xs: 16px;
+  --line-height-sm: 24px;
+  --line-height-lg: 40px;
+  --line-height-xl: 48px;
+
+  /* Pesos — Bricolage Grotesque: ExtraLight 200, Light 300, Regular 400, Medium 500, Bold 700, ExtraBold 800 */
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Espaçamento */
+  --spacing-micro: 4px;
+  --spacing-extra-small: 8px;
+  --spacing-small: 12px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-extra-large: 32px;
+
+  /* Raio de borda */
+  --radius-extra-small: 4px;
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-total: 999px;
+
+  /* Grade / contêiner (desktop de referência: 1440px) */
+  --page-max-width: 1440px;
+  --page-gutter: 112px;
+  --page-gutter-tablet: 48px;
+  --page-gutter-mobile: 20px;
+}

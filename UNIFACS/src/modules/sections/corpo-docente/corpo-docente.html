@@ -1,0 +1,72 @@
+      <section class="section section--subtle" id="corpo-docente" aria-labelledby="corpo-docente-title">
+        <div class="section-intro" style="max-width: 1002px;">
+          <p class="eyebrow">CORPO DOCENTE DE ELITE</p>
+          <h2 class="section-intro__title" id="corpo-docente-title">Coordenadores especialistas ao seu lado</h2>
+          <p class="section-intro__text">
+            Na UNIFACS, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu
+            desenvolvimento.
+          </p>
+        </div>
+
+        <div class="docente-carousel" data-docente-carousel>
+          <div class="docente-grid" data-docente-track>
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNIFACS/src/public/images/docente/unifacs-docente.png" alt="Mauricio de Souza Campos" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Médico</p>
+                  <p class="docente-card__name">Mauricio de Souza Campos</p>
+                </div>
+                <p class="docente-card__bio">
+                  Médico especialista em Infectologia. Graduado em Medicina pela FMB - UFBA e em Bacharelado
+                  Interdisciplinar em Saúde - IHAC - UFBA. Mestre e Doutor em Processos Interativos de Órgãos e
+                  Sistemas pelo Instituto de Ciências da Saúde - UFBA. Dedica-se a pesquisa das hepatites virais, em
+                  especial as provocadas pelos vírus B e Delta.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNIFACS/src/public/images/docente/unifacs-docente.png" alt="Marcos Vinicius de Santana Silva" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Administrativo</p>
+                  <p class="docente-card__name">Marcos Vinicius de Santana Silva</p>
+                </div>
+                <p class="docente-card__bio">
+                  Cardiopediatra com doutorado em Cardiologia Fetal, atua no Instituto Fernandes Figueira (FIOCRUZ)
+                  e como professor de pós-graduação no IETECS. É especialista em ecocardiografia fetal e pediátrica,
+                  com ampla experiência.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="docente-modal" data-docente-modal hidden aria-hidden="true">
+          <div class="docente-modal__backdrop" data-docente-modal-close></div>
+          <div class="docente-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="docente-modal-name">
+            <div class="docente-modal__photo-wrap">
+              <img class="docente-modal__photo" data-docente-modal-photo src="" alt="" />
+            </div>
+            <div class="docente-modal__content">
+              <div class="docente-modal__header">
+                <div>
+                  <p class="docente-modal__name" id="docente-modal-name" data-docente-modal-name></p>
+                  <p class="docente-modal__role" data-docente-modal-role></p>
+                </div>
+                <button type="button" class="docente-modal__close" data-docente-modal-close aria-label="Fechar">
+                  <img src="/UNIFACS/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+                </button>
+              </div>
+              <div class="docente-modal__bio">
+                <p data-docente-modal-bio></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
