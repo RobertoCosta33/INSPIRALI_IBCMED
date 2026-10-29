@@ -14,8 +14,8 @@
     }
   },
   {
-    "name": "institution_logo",
-    "label": "Logo da instituição (imagem única: ícone + UNIFACS + Excelência Acadêmica Einstein)",
+    "name": "logo",
+    "label": "Logo do cabeçalho (imagem única: ícone + UNIFACS + Excelência Acadêmica Einstein, exportada do Figma)",
     "type": "image",
     "default": {
       "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/shared/unifacs-header-logo.png",

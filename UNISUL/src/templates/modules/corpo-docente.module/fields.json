@@ -15,7 +15,7 @@
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Em Palhoça e Tubarão, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu desenvolvimento."
+    "default": "Na Unisul, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu desenvolvimento."
   },
   {
     "name": "coordinators",

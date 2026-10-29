@@ -87,10 +87,12 @@
   height: 64px;
   padding: var(--spacing-large);
   border-radius: var(--radius-small);
-  border: 1px solid var(--border-brand-primary);
-  background-color: var(--surface-inverted);
+  /* Figma (2258:25144): fundo canvas (#f7f8f8), contorno e texto no accent
+     primário (#313132), SemiBold 16. */
+  border: 1px solid var(--surface-brand-primary-dark);
+  background-color: var(--surface-canvas);
   backdrop-filter: blur(20px);
-  color: var(--text-brand);
+  color: var(--text-brand-dark);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;

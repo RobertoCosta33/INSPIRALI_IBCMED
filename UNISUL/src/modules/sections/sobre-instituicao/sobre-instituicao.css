@@ -64,7 +64,7 @@
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-title);
 }
 
 .institutional-about__text {
@@ -72,9 +72,9 @@
   flex-direction: column;
   gap: var(--spacing-medium);
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-brand-quaternary);
+  color: var(--text-primary-dark);
 }
 
 .institutional-about__cta {
@@ -85,10 +85,11 @@
   height: 64px;
   padding: var(--spacing-large);
   border-radius: var(--radius-small);
-  border: 1px solid var(--border-brand-primary);
+  border: 1px solid var(--surface-brand-primary-dark);
   background-color: var(--surface-inverted);
   backdrop-filter: blur(20px);
-  color: var(--text-brand);
+  /* Figma: texto no accent primário (#313132), Bold 20. */
+  color: var(--text-brand-dark);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;

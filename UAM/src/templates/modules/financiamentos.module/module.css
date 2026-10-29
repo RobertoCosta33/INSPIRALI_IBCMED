@@ -48,7 +48,8 @@
 
 .financing-highlight {
   position: relative;
-  background-color: var(--surface-brand-primary);
+  /* Figma: card de valor mensal no accent primário (#313132). */
+  background-color: var(--surface-brand-primary-dark);
   border-radius: var(--radius-small);
   padding: 20px 32px;
   min-height: 180px;
@@ -153,13 +154,13 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(78, 141, 151, 0.2);
+  background-color: rgba(176, 148, 53, 0.2);
   cursor: pointer;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .financing-dot:hover {
-  background-color: rgba(78, 141, 151, 0.4);
+  background-color: rgba(176, 148, 53, 0.4);
 }
 
 .financing-dot.is-active {

@@ -328,6 +328,7 @@
     const chips = root.querySelectorAll("[data-campus-chip]");
     const cityEl = root.querySelector("[data-campus-city]");
     const addressEl = root.querySelector("[data-campus-address]");
+    const mapEl = root.querySelector("[data-campus-map]");
     const ctaEl = root.querySelector("[data-campus-cta]");
     const gallery = root.querySelector("[data-campus-gallery]");
     if (!chips.length) return;
@@ -354,6 +355,7 @@
 
         if (cityEl) cityEl.textContent = chip.getAttribute("data-city") || "";
         if (addressEl) addressEl.textContent = chip.getAttribute("data-address") || "";
+        if (mapEl) mapEl.href = chip.getAttribute("data-map") || "#";
         if (ctaEl) ctaEl.href = chip.getAttribute("data-cta") || "#";
         if (gallery && gallery.loadCampus) gallery.loadCampus(chip.getAttribute("data-campus"));
         if (gallery && gallery.syncGalleryHeight) requestAnimationFrame(gallery.syncGalleryHeight);

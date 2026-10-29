@@ -32,7 +32,7 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Educação que transforma realidades e abre novas oportunidades."
+    "default": "Conhecimento que transforma vidas."
   },
   {
     "name": "body_text",

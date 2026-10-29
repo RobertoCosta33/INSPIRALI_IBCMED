@@ -104,9 +104,9 @@
       },
       {
         "name": "link_label",
-        "label": "Texto do botão \"Saiba mais\"",
+        "label": "Texto do link com seta",
         "type": "text",
-        "default": "Saiba mais sobre o FIES"
+        "default": "Consultar condições do FIES"
       },
       {
         "name": "url",
@@ -129,7 +129,7 @@
         "subtitle": "Financiamento estudantil",
         "text": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social).",
         "note": "",
-        "link_label": "Saiba mais sobre o FIES",
+        "link_label": "Consultar condições do FIES",
         "url": {
           "url": {
             "href": "https://acessounico.mec.gov.br/fies",
@@ -144,7 +144,7 @@
         "subtitle": "Bolsas de estudo",
         "text": "Bolsas de estudo integrais (100%) ou parciais (50%) através da sua nota do Enem.",
         "note": "",
-        "link_label": "Saiba mais sobre o Prouni",
+        "link_label": "Consultar bolsas do Prouni",
         "url": {
           "url": {
             "href": "https://acessounico.mec.gov.br/prouni",
@@ -159,7 +159,7 @@
         "subtitle": "Financiamento privado",
         "text": "Financiamento estudantil privado com condições flexíveis e parcelamento facilitado.",
         "note": "",
-        "link_label": "Saiba mais sobre o Pravaler",
+        "link_label": "Consultar condições do Pravaler",
         "url": {
           "url": {
             "href": "https://www.pravaler.com.br/campanhas/lp-campeao2/medicina?ies_code=7&nome=UNA&faculdade",

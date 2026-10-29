@@ -9,13 +9,13 @@
     "name": "title_line_1",
     "label": "Título (linha 1, cor escura)",
     "type": "text",
-    "default": "Medicina Unisul"
+    "default": "Medicina Unisul |"
   },
   {
     "name": "title_line_2",
     "label": "Título (linha 2, cor de marca)",
     "type": "text",
-    "default": "| Excelência Acadêmica Einstein"
+    "default": "Excelência Acadêmica Einstein"
   },
   {
     "name": "intro_text",
@@ -149,7 +149,7 @@
         "status_label": "Inscrições Abertas",
         "modality_name": "Enem 27.1",
         "description": "Ingresse direto usando sua melhor nota do Enem dos últimos 10 anos.",
-        "facts": "<p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*.</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 vinculada à pontualidade.</p>",
+        "facts": "<p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 vinculada à pontualidade</p>",
         "cta_label": "Quero me inscrever para 27.1",
         "cta_url": {
           "url": {

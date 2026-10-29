@@ -18,7 +18,7 @@
   right: -160px;
   width: 640px;
   height: 600px;
-  background-color: rgba(78, 141, 151, 0.18);
+  background-color: rgba(176, 148, 53, 0.18);
   -webkit-mask-image: url("/UAM/src/public/images/shared/grupo-inspirali-broto.png");
   mask-image: url("/UAM/src/public/images/shared/grupo-inspirali-broto.png");
   -webkit-mask-size: contain;
@@ -257,7 +257,8 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-medium);
-  background-color: var(--surface-brand-primary-light);
+  /* Figma: faixa de logos em branco com borda dourada a 20%. */
+  background-color: var(--surface-inverted);
   border: 1px solid var(--border-brand-soft);
   border-radius: 12px;
   padding: var(--spacing-extra-large);

@@ -105,7 +105,7 @@
   padding: var(--spacing-small) var(--spacing-large);
   border-radius: var(--radius-small);
   border: 1px solid var(--surface-inverted);
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 250, 252, 0.15);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   color: var(--text-inverted);
@@ -115,8 +115,8 @@
 
 .selection-card__tab.is-active {
   background-color: var(--surface-inverted);
-  border-color: transparent;
-  font-weight: var(--font-weight-bold);
+  border-color: var(--surface-inverted);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-primary-dark);
 }
 
@@ -147,7 +147,7 @@
   width: auto;
   max-width: 700px;
   min-width: 0;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 250, 252, 0.15);
   border-radius: 8px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
   padding: var(--spacing-large);
@@ -176,7 +176,7 @@
   border-radius: 4px;
   padding: var(--spacing-extra-small);
   font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: #ffffff;
 }
 

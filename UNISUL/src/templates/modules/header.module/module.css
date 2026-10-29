@@ -17,44 +17,34 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  padding: var(--spacing-large) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+  /* Figma: altura 96px (logo de 72px + padding vertical de 16px). */
+  padding: var(--spacing-medium) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .header-cta-dropdown__trigger-short {
   display: none;
 }
 
-.institutional-header__identity {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-large);
-}
-
+/* Figma ("Institutional header/UNISUL", 2318:123369): a logo é uma imagem
+   única ("UNISUL 1", 1010x192) com ícone + "UNISUL" + "Excelência
+   Acadêmica Einstein" já combinados, em 72px de altura. */
 .institutional-header__brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--spacing-micro);
-  flex-shrink: 0;
-}
-
-.institutional-header__mark {
-  /* No Figma da UNISUL, a logo (ícone + "UNISUL" + "Excelência
-     Acadêmica Einstein") já vem como uma única imagem combinada
-     (1010x192 ≈ 5.26:1) — igual à UNA/UNIFACS, diferente da UAM (peças
-     separadas). Largura calculada pela proporção real da imagem em vez
-     de `width: auto`, pelo mesmo motivo de sempre: a logo é item flex,
-     e `auto` pode fazer o navegador esticar/espremer durante o layout. */
   display: block;
-  height: 44px;
-  width: 231px;
   flex-shrink: 0;
 }
 
+.institutional-header__brand img {
+  display: block;
+  height: 72px;
+  width: auto;
+}
+
+/* Figma: linha divisória de 24px (#313132 a 40%) entre "Sou Candidato" e
+   o botão de busca. */
 .institutional-header__divider {
   width: 1px;
-  height: 56px;
-  background-color: var(--surface-brand-quaternary);
+  height: 24px;
+  background-color: var(--surface-brand-primary-dark);
   opacity: 0.4;
   flex-shrink: 0;
 }
@@ -124,9 +114,15 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-small);
-  /* Figma: botão de busca com contorno areia (#7a6f66), sem preenchimento. */
-  border: 1px solid var(--border-brand-quaternary);
+  /* Figma: botão de busca só com contorno no accent primário (#313132). */
+  border: 1px solid var(--surface-brand-primary-dark);
   background-color: transparent;
+  transition: background-color 0.4s ease;
+}
+
+.institutional-header__search:hover,
+.institutional-header__search:focus-visible {
+  background-color: var(--surface-secondary-subtle);
 }
 
 .institutional-header__mobile-search {
@@ -164,20 +160,9 @@
 }
 
 .institutional-header__nav .btn {
-  height: 40px;
-  padding: var(--spacing-small);
+  height: 48px;
+  padding: var(--spacing-medium);
   font-size: var(--font-size-xs);
-}
-
-/* Figma: o botão "Inscreva-se" do header usa o accent areia (#7a6f66);
-   no hover escurece para o neutro escuro, como o resto da página. */
-.institutional-header__nav .btn.btn-primary {
-  background-color: var(--surface-brand-quaternary);
-}
-
-.institutional-header__nav .btn.btn-primary:hover,
-.institutional-header__nav .btn.btn-primary:focus-visible {
-  background-color: var(--surface-brand-primary-dark);
 }
 
 .course-nav {
@@ -207,7 +192,8 @@
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
   color: var(--text-inverted);
-  opacity: 0.92;
+  /* Figma: links da navegação do curso em branco, sem transparência. */
+  opacity: 1;
   transition: opacity 0.4s ease;
 }
 
@@ -222,13 +208,8 @@
     padding: var(--spacing-medium) var(--page-gutter-tablet);
   }
 
-  .institutional-header__mark {
-    height: 40px;
-    width: 210px;
-  }
-
-  .institutional-header__divider {
-    height: 36px;
+  .institutional-header__brand img {
+    height: 48px;
   }
 
   .course-nav__list {
@@ -239,7 +220,7 @@
 
 /* No mobile/tablet o header fica só com a logo + o botão "Inscreva-se"
    (sem menu hambúrguer) — a navegação do curso já está disponível logo
-   abaixo, na faixa azul, e a busca tem sua própria barra dedicada. */
+   abaixo, na faixa escura, e a busca tem sua própria barra dedicada. */
 
 @media (max-width: 640px) {
   .institutional-header {
@@ -247,9 +228,8 @@
     gap: var(--spacing-extra-small);
   }
 
-  .institutional-header__mark {
+  .institutional-header__brand img {
     height: 32px;
-    width: 168px;
   }
 
   /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
@@ -296,7 +276,12 @@
 .header-cta-dropdown__trigger {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-extra-small);
+  /* Figma: gap de 12px entre texto e seta, borda de 1px no mesmo tom. */
+  gap: var(--spacing-small);
+  /* Figma: este botão específico usa o accent neutro escuro (#313132),
+     diferente do `.btn-primary` genérico (dourado). */
+  background-color: var(--surface-brand-primary-dark) !important;
+  border: 1px solid var(--surface-brand-primary-dark) !important;
 }
 
 .header-cta-dropdown__chevron {

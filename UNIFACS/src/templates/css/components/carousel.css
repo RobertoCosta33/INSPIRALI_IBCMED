@@ -40,7 +40,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(18, 18, 18, 0), #121212);
+  background: linear-gradient(to bottom, rgba(34, 34, 34, 0), #222222 96%);
 }
 
 .evidence-carousel__content {
@@ -162,7 +162,7 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(78, 141, 151, 0.2);
+  background-color: rgba(176, 148, 53, 0.2);
 }
 
 .card-carousel__dot.is-active {
@@ -182,9 +182,9 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-small);
-  /* Figma: botão desabilitado em cinza-azulado (#d6dbde) com seta branca;
-     habilitado em teal (--active). */
-  background-color: var(--surface-neutral);
+  /* Figma (2320:79506): botão desabilitado = dourado a 35% (rgba(176,148,53,.35))
+     com seta branca; habilitado em dourado sólido (--active). */
+  background-color: rgba(176, 148, 53, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;

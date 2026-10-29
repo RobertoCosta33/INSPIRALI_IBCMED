@@ -25,7 +25,7 @@ body {
    (ver src/modules/shared/header/header.js) — evita que o conteúdo
    apareça atrás do header fixo antes do primeiro cálculo. */
 body {
-  padding-top: 136px;
+  padding-top: 152px;
 }
 
 @media (max-width: 860px) {
@@ -276,16 +276,16 @@ h4 {
 }
 
 .section--dark {
-  /* Figma (Ecossistema): fundo no accent quaternário (terroso), não no
-     teal de --surface-brand-primary — único uso desta classe. */
-  background-color: var(--surface-brand-quaternary);
+  /* Figma (Ecossistema): fundo no accent primário (#313132) — único uso
+     desta classe. */
+  background-color: var(--surface-brand-primary-dark);
   color: var(--text-inverted);
-  padding: 56px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+  padding: 72px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .section--mint {
-  /* Figma (Grupo Inspirali): fundo creme (--surface-primary-subtle),
-     não o teal claro — único uso desta classe. */
+  /* Figma (Grupo Inspirali): fundo cinza claro (--surface-primary-subtle)
+     — único uso desta classe. */
   background-color: var(--surface-primary-subtle);
 }
 

@@ -38,6 +38,8 @@
   justify-content: center;
   flex-shrink: 0;
   gap: var(--spacing-extra-small);
+  /* Figma (2320:79508): botão branco 64px, texto #898177 Bold 20, sem borda. */
+  height: 64px;
   padding: 20px var(--spacing-large);
   border-radius: var(--radius-small);
   background-color: var(--surface-inverted);
@@ -74,7 +76,7 @@
 .footer-col {
   flex: 1 1 200px;
   min-width: 180px;
-  border-right: 2px solid rgba(255, 255, 255, 0.25);
+  border-right: 2px solid rgba(245, 245, 245, 0.25);
   padding: 0 var(--spacing-large);
   display: flex;
   flex-direction: column;
@@ -89,15 +91,20 @@
   border-right: none;
 }
 
+/* Figma: títulos das colunas em Montserrat SemiBold 16 (só "A UNIFACS" é Bold 16). */
 .footer-col__title {
   color: var(--text-footer);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   padding-bottom: var(--spacing-small);
 }
 
+.footer-col:first-child .footer-col__title {
+  font-weight: var(--font-weight-bold);
+}
+
 .footer-col__title--lg {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
 }
 
 .footer-col__links {
@@ -149,7 +156,7 @@
 }
 
 .footer-col__contact-label {
-  color: var(--text-footer-muted);
+  color: var(--text-footer);
   font-size: var(--font-size-xs);
 }
 
@@ -195,7 +202,7 @@
 }
 
 .footer-emec-qr a {
-  color: var(--text-footer-muted);
+  color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
   max-width: 100px;
@@ -209,7 +216,7 @@
 
 .footer-bottom__links a,
 .footer-bottom__links button {
-  color: var(--text-footer-muted);
+  color: var(--text-footer);
   font-size: var(--font-size-xs);
 }
 
@@ -236,7 +243,7 @@
 }
 
 .footer-copyright {
-  color: var(--text-footer-muted);
+  color: var(--text-footer);
   font-size: var(--font-size-xxs);
   text-align: center;
 }

@@ -49,7 +49,8 @@
 
 .financing-highlight {
   position: relative;
-  background-color: var(--surface-brand-primary);
+  /* Figma: card de valor mensal no accent primário (#313132). */
+  background-color: var(--surface-brand-primary-dark);
   border-radius: var(--radius-small);
   padding: 20px 32px;
   min-height: 180px;
@@ -78,8 +79,7 @@
 }
 
 .financing-highlight__campus {
-  /* Figma (1100:13455): rótulo da unidade em #ddeae6 (único uso). */
-  color: #ddeae6;
+  color: var(--text-inverted);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-relaxed);
@@ -112,11 +112,13 @@
 }
 
 .financing-highlight__disclaimer {
-  margin-top: var(--spacing-extra-small);
+  margin-top: var(--spacing-micro);
   color: var(--text-inverted);
-  font-size: var(--font-size-xxs);
+  /* Figma (valor-note): Regular 14px, opacidade 75%. */
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.75;
 }
 
 .financing-nav {
@@ -154,14 +156,14 @@
 .financing-dot {
   height: 6px;
   width: 32px;
-  border-radius: 3px;
-  background-color: rgba(80, 123, 130, 0.2);
+  border-radius: var(--radius-extra-small);
+  background-color: rgba(176, 148, 53, 0.2);
   cursor: pointer;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .financing-dot:hover {
-  background-color: rgba(80, 123, 130, 0.4);
+  background-color: rgba(176, 148, 53, 0.4);
 }
 
 .financing-dot.is-active {

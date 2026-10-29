@@ -100,7 +100,7 @@
 }
 
 .campus-detail__location {
-  /* Figma: cidade em Montserrat Medium 14px no accent secundário (teal). */
+  /* Figma: cidade em Montserrat Medium 14px no accent de marca (dourado). */
   display: flex;
   align-items: center;
   gap: var(--spacing-extra-small);
@@ -133,7 +133,8 @@
   height: 64px;
   padding: 20px var(--spacing-large);
   border-radius: var(--radius-small);
-  border: 1px solid transparent;
+  /* Figma (2320:79495): CTA sólido #898177 sem borda. */
+  border: 0;
   background-color: var(--surface-brand-quaternary);
   backdrop-filter: blur(20px);
   color: var(--text-inverted);
@@ -217,26 +218,27 @@
   /* Figma: gradiente de rgba(49,49,50,0) (a partir de 50%) até #313132. */
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(49, 49, 50, 0) 50%, #313132 100%);
+  background: linear-gradient(to bottom, rgba(49, 49, 50, 0) 47.596%, #313132 100%);
   pointer-events: none;
 }
 
 .campus-gallery__label {
-  /* Figma: accent secundário (#4e8d97) a 75% — mesmo valor usado nas
-     legendas das miniaturas abaixo. */
+  /* Figma: accent quaternário/areia (#898177) a 75% — mesmo valor usado
+     nas legendas das miniaturas abaixo. */
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: rgba(78, 141, 151, 0.75);
+  background-color: rgba(137, 129, 119, 0.8);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   padding: 2px 4px;
   border-radius: 4px;
 }
 
 .campus-gallery__counter {
-  color: var(--text-footer);
+  /* Figma: contador "01 / 03" em #f5f5f5, Montserrat Bold 20. */
+  color: #f5f5f5;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
@@ -266,8 +268,8 @@
 }
 
 .campus-gallery__nav-btn--prev {
-  /* Figma: botão desabilitado em cinza-azulado com seta branca. */
-  background-color: var(--surface-neutral);
+  /* Figma (2320:79495): botão desabilitado em #c9c8be (inspirali/dark/accent/tertiary) com seta branca. */
+  background-color: var(--border-primary-light);
   transition: background-color 0.2s ease;
 }
 
@@ -325,7 +327,7 @@
   flex: 1 1 0;
   min-height: 0;
   overflow: hidden;
-  border-radius: var(--spacing-micro);
+  border-radius: var(--radius-small);
 }
 
 .campus-thumb__photo {
@@ -342,12 +344,12 @@
 .campus-thumb__label {
   position: absolute;
   left: 8px;
-  right: 8px;
+  max-width: calc(100% - 16px);
   bottom: 8px;
-  background-color: rgba(78, 141, 151, 0.75);
+  background-color: rgba(137, 129, 119, 0.8);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   padding: 2px var(--spacing-micro);
   border-radius: var(--spacing-micro);
   box-sizing: border-box;

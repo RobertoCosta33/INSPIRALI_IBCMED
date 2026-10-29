@@ -1,65 +1,77 @@
 /* ====================================================================
    Design tokens — extraídos do Figma "Redesign - Páginas IES"
-   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "UNISUL", nó 950:14136 —
-   tema "Inspirali" com acentos próprios da UNISUL). Mantém os nomes de
+   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "UNISUL", frame "UNISUL"
+   2318:123342 — tema "Inspirali" unificado). Mantém os nomes de
    variável usados no projeto (surface/*, text/*, border/*, spacing/*,
    radius/*, font/*) para facilitar a conversão futura em módulos HubL —
-   mesma nomenclatura usada em UAM/UNA/UNIFACS src/css/tokens.css, só
-   com os valores de marca da UNISUL.
+   mesma nomenclatura usada em UAM/UNA/UNIFACS src/css/tokens.css.
 
-   MUDANÇA DE MARCA: o antigo índigo (#293189) / azul-escuro (#000329)
-   foi substituído pela paleta neutra + teal acinzentado + areia do
-   Figma novo. A TIPOGRAFIA NÃO mudou: a fonte da marca da UNISUL
-   continua sendo "Bricolage Grotesque" (estilos "ANIMA/*": títulos
-   ExtraBold, corpo Light/Regular) — DIFERENTE da UAM, que migrou para
-   "Montserrat". Ver AGENTS.md seção "Fontes por instituição".
+   PALETA: a UNISUL passou a usar os mesmos tokens "Inspirali" da UAM
+   (dourado #b09435 como accent principal, cinza claro #f3f4f6, neutro
+   escuro #313132 e areia #898177) — o teal acinzentado (#507b82) e a
+   areia antiga (#7a6f66) foram removidos do Figma.
+
+   TIPOGRAFIA: continua "Bricolage Grotesque" (estilos "ANIMA/*": títulos
+   ExtraBold, corpo Light/Regular) nesta implementação. ATENÇÃO: o Figma
+   atual da UNISUL já usa "Montserrat" (como a UAM) nos estilos novos —
+   decisão pendente com o responsável. Ver AGENTS.md seção "Fontes por
+   instituição".
    ==================================================================== */
 
 :root {
   /* Cores de superfície */
   --surface-inverted: #ffffff;
   --surface-primary: #ffffff;
-  /* Figma: creme usado em Institucional, Nosso DNA, Campus e Grupo
-     Inspirali (e no info-card da Matriz Curricular). */
-  --surface-primary-subtle: #fcf7ee;
-  /* Figma: cinza translúcido dos cards de Metodologia e Financiamentos
-     (accordions / info-cards). */
-  --surface-secondary-subtle: rgba(214, 219, 222, 0.6);
-  /* Accent secundário (teal acinzentado, #507b82): eyebrows, CTAs com
-     borda, stats, dots, card de valor mensal. */
-  --surface-brand-primary: #507b82;
+  /* Figma: "inspirali/background/subtle" — cinza claro (#f3f4f6, antes
+     creme) usado em Institucional, Nosso DNA, Campus, Grupo Inspirali
+     e FAQ. */
+  --surface-primary-subtle: #f3f4f6;
+  /* Figma: mesmo cinza claro dos cards de Metodologia, Financiamentos
+     e Matriz ("Information card"). */
+  --surface-secondary-subtle: #f3f4f6;
+  /* "inspirali/accent/tertiary" — dourado, agora o accent principal de
+     marca (eyebrows, bolinhas, ícones, links). O teal "accent/secondary"
+     foi removido do Figma. */
+  --surface-brand-primary: #b09435;
   /* Neutro escuro (#313132): navegação do curso, rodapé, gradientes de
-     foto (cards de docente/pós-graduação, campus, Ingresso) e hover de
-     botões sólidos. */
+     foto (cards de docente/pós-graduação, campus, Ingresso), fundo do
+     Ecossistema, card de valor mensal e hover de botões sólidos. */
   --surface-brand-primary-dark: #313132;
-  /* Fundo claro da paleta (cards de estatística, hover de botões). */
+  /* Fundo claro da paleta (hover de botões). */
   --surface-brand-primary-light: #edf1f0;
-  --surface-brand-primary-light-alt: #dbe3e3;
-  --surface-brand-tint: rgba(80, 123, 130, 0.08);
-  /* Figma (Institucional, Nosso DNA, Campus): creme sólido, igual a
-     --surface-primary-subtle. */
-  --surface-brand-tint-strong: #fcf7ee;
-  --surface-brand-soft: rgba(80, 123, 130, 0.12);
-  --surface-brand-soft-weak: rgba(80, 123, 130, 0.1);
-  /* Accent quaternário (areia, #7a6f66): CTAs sólidos (Matriz, Campus,
-     FAQ, Header), fundo do Ecossistema e da faixa de convite do rodapé. */
-  --surface-brand-quaternary: #7a6f66;
-  --surface-brand-quaternary-soft: rgba(122, 111, 102, 0.2);
+  --surface-brand-primary-light-alt: #f3f4f6;
+  --surface-brand-tint: #f3f4f6;
+  /* Figma (Institucional, Nosso DNA, Campus): mesmo cinza sólido de
+     --surface-primary-subtle, não um tint translúcido. */
+  --surface-brand-tint-strong: #f3f4f6;
+  --surface-brand-soft: rgba(176, 148, 53, 0.12);
+  --surface-brand-soft-weak: rgba(176, 148, 53, 0.08);
+  /* Accent quaternário (areia, #898177): CTAs sólidos (Matriz, Campus,
+     FAQ), abas "CICLO BÁSICO", ícones +/− dos accordions e faixa de
+     convite do rodapé. */
+  --surface-brand-quaternary: #898177;
+  --surface-brand-quaternary-soft: rgba(137, 129, 119, 0.2);
   /* Fundo da seção FAQ e contato. */
-  --surface-canvas: #f7f8f8;
+  --surface-canvas: #f3f4f6;
   /* Cinza neutro: card do formulário, botão desabilitado do carrossel. */
   --surface-neutral: #d6dbde;
 
   /* Cores de texto */
   --text-inverted: #ffffff;
   --text-heading: #313132;
+  /* Figma: "inspirali/dark/background/canvas" — títulos grandes de seção
+     (Seu Futuro, Institucional, Nosso DNA...) em #222223. */
+  --text-title: #222223;
   --text-primary-dark: #313132;
-  /* Figma: texto de apoio (Light 20px) — areia. */
-  --text-secondary-dark: #7a6f66;
-  --text-brand: #507b82;
+  /* Texto de apoio (corpo de texto). */
+  --text-secondary-dark: #313132;
+  --text-brand: #b09435;
   --text-brand-dark: #313132;
-  --text-brand-quaternary: #7a6f66;
-  --text-brand-alt: #507b82;
+  --text-brand-quaternary: #898177;
+  /* "inspirali/light/accent/tertiary" — eyebrow do Corpo docente. */
+  --text-brand-alt: #b09437;
+  /* "inspirali/accent/tertiary" — dourado, destaque "Excelência Acadêmica Einstein". */
+  --text-brand-tertiary: #b09435;
   /* "UniSul/background/canvas" — links do rodapé e título do carrossel
      do Ecossistema. */
   --text-footer: #fafaff;
@@ -67,12 +79,12 @@
 
   /* Cores de borda */
   --border-primary-light: #d6dbde;
-  --border-brand-primary: #507b82;
-  --border-brand-soft: rgba(80, 123, 130, 0.2);
-  /* Figma: borda de abas e linhas da lista de disciplinas. */
-  --border-brand-soft-medium: rgba(80, 123, 130, 0.3);
-  --border-brand-soft-strong: rgba(80, 123, 130, 0.4);
-  --border-brand-quaternary: #7a6f66;
+  --border-brand-primary: #b09435;
+  --border-brand-soft: rgba(176, 148, 53, 0.2);
+  /* Figma: borda de abas e linhas da lista de disciplinas (areia a 30%). */
+  --border-brand-soft-medium: rgba(137, 129, 119, 0.3);
+  --border-brand-soft-strong: rgba(176, 148, 53, 0.4);
+  --border-brand-quaternary: #898177;
 
   /* Tipografia — família da marca: Bricolage Grotesque (Google Fonts) */
   --font-family-base: "Bricolage Grotesque", "Segoe UI", sans-serif;

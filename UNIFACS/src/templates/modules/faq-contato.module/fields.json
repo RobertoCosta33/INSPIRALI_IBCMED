@@ -9,7 +9,7 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Tem alguma dúvida sobre a Medicina na UNIFACS?"
+    "default": "Tem alguma dúvida sobre a Medicina UNIFACS?"
   },
   {
     "name": "show_form",

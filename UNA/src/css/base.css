@@ -25,7 +25,7 @@ body {
    (ver src/modules/shared/header/header.js) — evita que o conteúdo
    apareça atrás do header fixo antes do primeiro cálculo. */
 body {
-  padding-top: 136px;
+  padding-top: 152px;
 }
 
 @media (max-width: 860px) {
@@ -129,8 +129,8 @@ h4 {
 
 /* Eyebrow / rótulo de seção */
 .eyebrow {
-  /* Figma (Montserrat/Subtitle 1): eyebrows em Bold 700, cor accent/secondary. */
-  font-weight: var(--font-weight-bold);
+  /* Figma (Montserrat/Subtitle 1): eyebrows na cor accent/tertiary (dourado). */
+  font-weight: var(--font-weight-extrabold);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
@@ -282,16 +282,17 @@ h4 {
 }
 
 .section--dark {
-  /* Figma (Ecossistema): fundo no accent quaternário (terroso), não no
-     teal de --surface-brand-primary — único uso desta classe. */
-  background-color: var(--surface-brand-quaternary);
+  /* Figma (Ecossistema, 1037:28507): fundo no accent primário (#313132)
+     — único uso desta classe. O padding vertical segue em 56px (o Figma
+     da UNA não usa os 72px da UAM). */
+  background-color: var(--surface-brand-primary-dark);
   color: var(--text-inverted);
   padding: 56px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .section--mint {
-  /* Figma (Grupo Inspirali): fundo creme (--surface-primary-subtle),
-     não o teal claro — único uso desta classe. */
+  /* Figma (Grupo Inspirali): fundo cinza claro (--surface-primary-subtle)
+     — único uso desta classe. */
   background-color: var(--surface-primary-subtle);
 }
 

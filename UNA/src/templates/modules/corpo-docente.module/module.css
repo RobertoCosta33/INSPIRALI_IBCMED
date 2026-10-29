@@ -59,7 +59,7 @@
 
 .docente-card__role {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
 }
 
@@ -81,7 +81,7 @@
 
 .docente-card__more {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-inverted);
   transition: color 0.4s ease;
 }
@@ -144,7 +144,7 @@
   margin-top: 24px;
   padding: 4px 8px;
   border-radius: var(--radius-small);
-  background-color: rgba(122, 111, 102, 0.4);
+  background-color: rgba(137, 129, 119, 0.4);
   backdrop-filter: blur(20px);
 }
 

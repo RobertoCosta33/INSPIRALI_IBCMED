@@ -20,14 +20,16 @@
   /* Figma (Metodologia): cards no cinza claro "inspirali/background/canvas". */
   background-color: var(--surface-canvas);
   border-radius: var(--radius-small);
-  padding: var(--spacing-large);
+  /* Figma (2258:26024): card py 8 + conteúdo p 24 = 32px vertical / 24px lateral. */
+  padding: 32px var(--spacing-large);
   text-align: left;
 }
 
 .accordion-trigger__title {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  font-weight: var(--font-weight-extrabold);
+  /* Figma: título do disclosure em areia (#898177), ExtraBold 16. */
+  color: var(--text-brand-quaternary);
   line-height: var(--line-height-tight);
 }
 
@@ -66,13 +68,14 @@
 
 .accordion-item.is-open .accordion-trigger {
   border-radius: var(--radius-small) var(--radius-small) 0 0;
-  padding-bottom: var(--spacing-medium);
+  padding-bottom: var(--spacing-large);
 }
 
 .accordion-divider {
   display: none;
   height: 1px;
-  margin: 0 var(--spacing-medium);
+  /* Figma: borda superior branca de 1px ocupando toda a largura do card. */
+  margin: 0;
   background-color: var(--surface-inverted);
   border: none;
 }
@@ -98,7 +101,7 @@
   flex-direction: column;
   gap: var(--spacing-large);
   padding: var(--spacing-large);
-  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-extra-large);
 }
 
 .accordion-panel__title {

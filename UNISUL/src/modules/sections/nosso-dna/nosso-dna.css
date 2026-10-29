@@ -5,8 +5,9 @@
 
 .dna-pillars {
   display: flex;
-  gap: var(--spacing-extra-large);
-  margin-top: var(--spacing-extra-large);
+  /* Figma: gap de 48px entre pilares; 40px entre introdução e pilares. */
+  gap: 48px;
+  margin-top: 40px;
   flex-wrap: wrap;
 }
 
@@ -36,14 +37,16 @@
 }
 
 .dna-pillar__title {
+  /* Figma (Title 4): ExtraBold 24px, dourado #b09435, line-height 1.16. */
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
 
 .dna-pillar__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
 }
@@ -60,13 +63,13 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(80, 123, 130, 0.2);
+  background-color: rgba(176, 148, 53, 0.2);
   cursor: pointer;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .dna-pillars-dot:hover {
-  background-color: rgba(80, 123, 130, 0.4);
+  background-color: rgba(176, 148, 53, 0.4);
 }
 
 .dna-pillars-dot.is-active {

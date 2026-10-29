@@ -26,7 +26,7 @@
 }
 
 .future-header__cta {
-  /* Figma: borda/texto no accent secundário (teal), Montserrat Bold. */
+  /* Figma: borda/texto no accent primário (#313132), Montserrat Bold. */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -35,10 +35,10 @@
   padding: 20px 24px;
   gap: 16px;
   border-radius: var(--radius-small);
-  border: 1px solid var(--border-brand-primary);
+  border: 1px solid var(--surface-brand-primary-dark);
   background-color: rgba(254, 255, 250, 0.08);
   backdrop-filter: blur(20px);
-  color: var(--text-brand);
+  color: var(--text-brand-dark);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   transition: background-color 0.4s ease, color 0.4s ease;

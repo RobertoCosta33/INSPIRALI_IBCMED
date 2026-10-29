@@ -4,7 +4,7 @@
    ==================================================================== */
 
 .faq-contato {
-  background-color: var(--surface-canvas);
+  background-color: var(--surface-primary-subtle);
   padding: 72px var(--page-gutter);
   display: flex;
   gap: 80px;
@@ -158,12 +158,12 @@
 
 .faq-item__trigger {
   width: 100%;
-  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  padding: 16px 56px;
+  /* Figma: item do FAQ com padding 24px. */
+  padding: var(--spacing-large);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   color: var(--text-primary-dark);
@@ -214,7 +214,7 @@
 }
 
 .faq-item__panel-inner {
-  padding: 0 56px var(--spacing-medium);
+  padding: 0 var(--spacing-large) var(--spacing-large);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);

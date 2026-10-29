@@ -15,13 +15,23 @@
 }
 
 /* Figma (1332:66099): título/subtítulo dos cards de financiamento usam o
-   neutro escuro (accent/primary) e o link usa o teal (accent/secondary). */
+   neutro escuro (accent/primary) e o link usa o dourado (accent/tertiary). */
+/* Figma (2320:79498): link do card = Montserrat Bold 20 em dourado (#b09435),
+   seta dourada de 16px, gap 8px, fundo rgba(254,255,250,.08) com blur de 20px,
+   raio 8px e SEM borda. O botão ocupa só o conteúdo (não estica). */
 .info-card__link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  align-self: flex-start;
   gap: var(--spacing-extra-small);
-  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-small);
+  border-radius: var(--radius-small);
+  background-color: rgba(254, 255, 250, 0.08);
+  backdrop-filter: blur(20px);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: var(--text-brand);
   transition: color 0.4s ease;
 }
@@ -41,6 +51,10 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-primary-dark);
+}
+
+.info-card__title + .info-card__subtitle {
+  margin-top: var(--spacing-micro);
 }
 
 .info-card__subtitle {
@@ -96,8 +110,9 @@
   flex: 1 1 0;
   min-width: 220px;
   min-height: 260px;
-  background-color: var(--surface-brand-primary-light);
-  border: 1px solid var(--border-brand-soft);
+  /* Figma: card branco com borda areia a 20%. */
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--surface-brand-quaternary-soft);
   border-radius: var(--radius-small);
   padding: 20px var(--spacing-large) var(--spacing-large);
   display: flex;
@@ -109,6 +124,13 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-extra-small);
+  /* Figma (2320:79499): linha do ícone com altura mínima de 40px (cards sem número também). */
+  min-height: 40px;
+}
+
+.stat-card__row + .stat-card__title {
+  /* Figma: 8px entre a linha do ícone e o título (o card usa gap de 12px). */
+  margin-top: calc(-1 * var(--spacing-micro));
 }
 
 .stat-card__icon {
@@ -127,11 +149,11 @@
 }
 
 .stat-card__value {
-  /* Figma (1303:46870): número em Montserrat ExtraBold, cor do accent
-     secundário (teal). */
+  /* Figma (2320:79499): número em Montserrat Bold 32, cor do accent
+     de marca (dourado). */
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-extrabold);
-  line-height: var(--line-height-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
 
@@ -211,12 +233,13 @@
 }
 
 .posgrad-card__overlay {
-  /* Figma (1147:25396): degradê até o neutro escuro #313132 (accent/primary). */
+  /* Figma (2320:79506): degradê até o neutro escuro #313132 (accent/primary)
+     + segundo degradê rgba(0, 3, 41, 0 → 0.4), como no arquivo. */
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(49, 49, 50, 0) 40%, rgba(49, 49, 50, 0.88) 80%, #313132 100%),
-    linear-gradient(180deg, rgba(49, 49, 50, 0) 0%, rgba(49, 49, 50, 0.4) 100%);
+    linear-gradient(180deg, rgba(49, 49, 50, 0) 40%, rgba(49, 49, 50, 0.878) 80%, #313132 100%),
+    linear-gradient(180deg, rgba(0, 3, 41, 0) 0%, rgba(0, 3, 41, 0.4) 100%);
 }
 
 .posgrad-card__body {
@@ -240,7 +263,7 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--surface-neutral);
+  color: var(--text-inverted);
 }
 
 @media (max-width: 640px) {

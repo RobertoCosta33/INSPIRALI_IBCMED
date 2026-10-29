@@ -7,20 +7,35 @@
   min-width: 260px;
   background-color: var(--surface-secondary-subtle);
   border-radius: var(--radius-small);
-  padding: var(--spacing-small) var(--spacing-large);
+  /* Figma (FIES/Prouni/Pravaler/Bolsa): padding 16px 24px, gap 12px. */
+  padding: var(--spacing-medium) var(--spacing-large);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: var(--spacing-small);
 }
 
+.info-card > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-micro);
+}
+
+/* Figma: link/botão do card em dourado (#b09435) Bold 20px, sem borda, fundo
+   rgba(254,255,250,.08), seta de 16px; 24px de espaço acima (12px do gap +
+   12px de margem). */
 .info-card__link {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: var(--spacing-extra-small);
-  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-small);
+  border-radius: var(--radius-small);
+  background-color: rgba(254, 255, 250, 0.08);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-  color: var(--text-primary-dark);
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
   transition: color 0.4s ease;
 }
 
@@ -31,7 +46,7 @@
 
 .info-card__link:hover,
 .info-card__link:focus-visible {
-  color: var(--text-brand);
+  color: var(--surface-brand-primary-dark);
 }
 
 .info-card__title {
@@ -50,9 +65,9 @@
 
 .info-card__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-brand-quaternary);
+  color: var(--text-primary-dark);
 }
 
 .info-card__note {
@@ -94,8 +109,9 @@
   flex: 1 1 0;
   min-width: 220px;
   min-height: 260px;
-  background-color: var(--surface-brand-primary-light);
-  border: 1px solid var(--border-brand-soft);
+  /* Figma: card branco com borda areia a 20%. */
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--surface-brand-quaternary-soft);
   border-radius: var(--radius-small);
   padding: 20px var(--spacing-large) var(--spacing-large);
   display: flex;
@@ -104,7 +120,7 @@
 }
 
 .stat-card--no-value {
-  border-color: var(--border-brand-soft);
+  border-color: var(--surface-brand-quaternary-soft);
 }
 
 .stat-card__row {
@@ -117,7 +133,7 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-small);
-  background-color: var(--surface-brand-soft-weak);
+  background-color: var(--surface-brand-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +146,7 @@
 
 .stat-card__value {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-xl);
   color: var(--text-brand);
 }
@@ -146,7 +162,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-brand-quaternary);
+  color: var(--text-primary-dark);
 }
 
 /* Cartão do carrossel de pós-graduação */
@@ -155,7 +171,8 @@
   flex: 0 0 262px;
   width: 262px;
   height: 409px;
-  border-radius: var(--radius-small);
+  /* Figma (2318:14834): card sem raio (overflow-clip, sem rounded). */
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -182,6 +199,10 @@
   }
 
   .info-card__text {
+    font-size: var(--font-size-sm);
+  }
+
+  .info-card__link {
     font-size: var(--font-size-sm);
   }
 }
@@ -231,7 +252,8 @@
 
 .posgrad-card__title {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+  /* Figma: título do card em Regular 20px. */
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-tight);
   color: var(--text-inverted);
 }
@@ -240,7 +262,7 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--surface-canvas);
+  color: var(--text-inverted);
 }
 
 @media (max-width: 640px) {

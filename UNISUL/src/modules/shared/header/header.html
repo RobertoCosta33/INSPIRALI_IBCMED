@@ -1,33 +1,29 @@
     <header class="site-header">
       <div class="institutional-header">
-        <div class="institutional-header__identity">
-          <!-- No Figma da UNISUL, a logo já vem como uma única imagem
-               combinada (ícone + "UNISUL" + "Excelência Acadêmica
-               Einstein") — igual à UNA/UNIFACS, diferente da UAM (peças
-               separadas). A mesma imagem serve todos os breakpoints, só
-               mudando de tamanho via CSS. -->
-          <a href="/UNISUL/src/pages/" class="institutional-header__brand" aria-label="Página inicial UNISUL">
-            <img
-              src="/UNISUL/src/public/images/shared/unisul-header-logo.png"
-              alt="UNISUL — Excelência Acadêmica Einstein"
-              class="institutional-header__mark"
-              width="1010"
-              height="192"
-            />
-          </a>
-        </div>
+        <!-- No Figma da UNISUL, a logo já vem como uma única imagem
+             combinada (ícone + "UNISUL" + "Excelência Acadêmica
+             Einstein"), em 72px de altura. A mesma imagem serve todos os
+             breakpoints, só mudando de tamanho via CSS. -->
+        <a href="/UNISUL/src/pages/" class="institutional-header__brand" aria-label="Página inicial UNISUL">
+          <img
+            src="/UNISUL/src/public/images/shared/unisul-header-logo.png"
+            alt="UNISUL — Excelência Acadêmica Einstein"
+            width="1010"
+            height="192"
+          />
+        </a>
 
         <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
           <div class="institutional-header__link">Sou Candidato</div>
           <span class="institutional-header__divider" aria-hidden="true"></span>
           <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
-            <img src="/UNISUL/src/public/icons/icon-search-indigo.svg" alt="" aria-hidden="true" width="16" height="16" />
+            <img src="/UNISUL/src/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
           </button>
           <div class="header-cta-dropdown" data-dropdown>
             <button type="button" class="btn btn-primary header-cta-dropdown__trigger" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
               <span class="header-cta-dropdown__trigger-full">Inscreva-se para 2027.1</span>
               <span class="header-cta-dropdown__trigger-short">Inscreva-se</span>
-              <img src="/UNISUL/src/public/icons/icon-arrow-down-white.svg" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="12" height="12" />
+              <img src="/UNISUL/src/public/icons/icon-arrow-down-white.svg" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="16" height="16" />
             </button>
             <div class="header-cta-dropdown__menu" data-dropdown-menu>
               <div class="header-cta-dropdown__menu-inner">
@@ -43,7 +39,7 @@
       <button type="button" class="institutional-header__mobile-search" data-search-trigger aria-label="Buscar nesta página">
         <span class="institutional-header__mobile-search-placeholder">O que você procura?</span>
         <span class="institutional-header__mobile-search-btn">
-          <img src="/UNISUL/src/public/icons/icon-search-indigo.svg" alt="" aria-hidden="true" width="16" height="16" />
+          <img src="/UNISUL/src/public/icons/icon-search.svg" alt="" aria-hidden="true" width="16" height="16" />
         </span>
       </button>
 

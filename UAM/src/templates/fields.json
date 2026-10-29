@@ -6,9 +6,9 @@
     "children": [
       {
         "name": "brand_primary",
-        "label": "Cor primária (teal)",
+        "label": "Cor primária (dourado)",
         "type": "color",
-        "default": { "color": "#4E8D97", "opacity": 100 }
+        "default": { "color": "#B09435", "opacity": 100 }
       },
       {
         "name": "brand_primary_dark",

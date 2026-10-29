@@ -19,7 +19,7 @@
   right: -175px;
   width: 570px;
   height: 534px;
-  background-color: rgba(78, 141, 151, 0.2);
+  background-color: rgba(176, 148, 53, 0.2);
   -webkit-mask-image: url("/UNIFACS/src/public/images/shared/grupo-inspirali-broto-unifacs.png");
   mask-image: url("/UNIFACS/src/public/images/shared/grupo-inspirali-broto-unifacs.png");
   -webkit-mask-size: contain;
@@ -84,12 +84,9 @@
   flex-wrap: wrap;
 }
 
-/* Figma (1303:46864): fundo do card em #edf1f0 (`--surface-brand-primary-light`)
-   com borda rgba(78,141,151,.2), não o cinza translúcido de
-   `--surface-secondary-subtle` usado em Metodologia/Financiamentos. */
-#grupo-inspirali .stat-card {
-  background-color: var(--surface-brand-primary-light);
-}
+/* Os `.stat-card` desta seção seguem o componente base (cards.css): fundo
+   branco com borda areia a 20% (o antigo #edf1f0 tinha tom do teal e saiu
+   com a paleta nova). */
 
 .lifelong {
   display: flex;
@@ -113,7 +110,7 @@
 
 .lifelong__label {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
@@ -122,7 +119,7 @@
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .lifelong__text > p {
@@ -166,8 +163,8 @@
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
   flex-shrink: 0;
 }
 
@@ -179,7 +176,8 @@
 .timeline-step__line {
   width: 2px;
   flex: 1 1 auto;
-  background-color: var(--surface-brand-primary);
+  /* Figma: linha do conector dourada a 40%. */
+  background-color: rgba(176, 148, 53, 0.4);
   min-height: 24px;
 }
 
@@ -203,14 +201,13 @@
 }
 
 .partner-logos {
-  /* Figma (1147:24773): fundo #edf1f0 + borda rgba(78,141,151,.2) — igual
-     ao `.stat-card` desta seção. */
+  /* Figma: faixa de logos em branco com borda dourada a 20%. */
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-medium);
-  background-color: var(--surface-brand-primary-light);
+  background-color: var(--surface-inverted);
   border: 1px solid var(--border-brand-soft);
   border-radius: 12px;
   padding: var(--spacing-extra-large);

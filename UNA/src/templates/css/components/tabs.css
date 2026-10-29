@@ -4,8 +4,8 @@
    ==================================================================== */
 
 .unit-card {
-  /* Figma da UNA (931:26048): o card inteiro usa o creme
-     "inspirali/background/subtle" (--surface-primary-subtle). */
+  /* Figma da UNA (931:26048): o card inteiro usa o cinza claro
+     "inspirali/background/subtle" (--surface-primary-subtle, #f3f4f6). */
   width: 100%;
   background-color: var(--surface-primary-subtle);
   border-radius: var(--radius-medium);
@@ -16,7 +16,8 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1.5px solid var(--border-brand-soft);
+  /* Figma (931:26048): linha das abas em areia a 20%. */
+  border-bottom: 1.5px solid var(--surface-brand-quaternary-soft);
 }
 
 .unit-tab {
@@ -32,7 +33,7 @@
 }
 
 .unit-tab.is-active {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   border-bottom-color: var(--text-brand-quaternary);
 }
 
@@ -74,7 +75,7 @@
 
 .unit-panel__eyebrow {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-brand-quaternary);
 }
 
@@ -82,11 +83,12 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-micro);
-  background-color: var(--surface-brand-soft);
+  /* Figma: selo "Total: Nh" em areia a 12%. */
+  background-color: rgba(137, 129, 119, 0.12);
   border-radius: var(--spacing-micro);
   padding: var(--spacing-micro) var(--spacing-extra-small);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-brand-quaternary);
 }
 
@@ -104,7 +106,7 @@
 
 .unit-panel__divider {
   height: 1px;
-  background-color: var(--border-brand-soft);
+  background-color: var(--surface-brand-quaternary-soft);
   border: none;
 }
 
@@ -116,7 +118,7 @@
 
 .unit-panel__group-title {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-primary-dark);
 }
 
@@ -131,7 +133,7 @@
   justify-content: space-between;
   gap: var(--spacing-medium);
   padding: var(--spacing-small) 0;
-  border-bottom: 1px solid var(--border-brand-soft);
+  border-bottom: 1px solid var(--surface-brand-quaternary-soft);
 }
 
 .unit-panel__discipline-name {
@@ -147,7 +149,8 @@
 
 .unit-panel__more {
   align-self: center;
-  font-size: var(--font-size-xl);
+  /* Figma (925:25330): "Ver menos -" em Bold 20, areia (#898177). */
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   color: var(--text-brand-quaternary);
 }

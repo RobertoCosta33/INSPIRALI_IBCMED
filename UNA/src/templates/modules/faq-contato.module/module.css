@@ -18,7 +18,7 @@
   flex: 0 0 480px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-extra-large);
+  gap: 40px;
 }
 
 /* Enquanto o formulário está comentado/desativado, a seção vira uma
@@ -52,7 +52,7 @@
 
 .faq-contato__eyebrow {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   text-transform: uppercase;
   color: var(--text-brand);
 }
@@ -121,7 +121,7 @@
   background-color: var(--surface-brand-quaternary);
   color: var(--text-inverted);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   transition: background-color 0.4s ease;
 }
 
@@ -148,7 +148,8 @@
   max-width: 980px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-medium);
+  /* Figma (1959:102466): gap 24 entre os cards do FAQ. */
+  gap: var(--spacing-large);
   padding-top: 48px;
 }
 
@@ -166,9 +167,10 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  padding: 16px 56px;
+  /* Figma: card com py 8 + conteúdo com p 24 (= 32px vertical / 24px lateral). */
+  padding: 32px var(--spacing-large);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-primary-dark);
   text-align: left;
 }
@@ -217,7 +219,7 @@
 }
 
 .faq-item__panel-inner {
-  padding: 0 56px var(--spacing-medium);
+  padding: 0 var(--spacing-large) var(--spacing-large);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);

@@ -1,4 +1,5 @@
-/* ====================================================================
+MISSING:   gap: var(--spacing-extra-small);
+  /* Figma: este botão e /* ====================================================================
    Header institucional + navegação do curso
    Figma: "Institutional header" (523:29934) + "Course navigation" (523:29935)
    ==================================================================== */
@@ -17,43 +18,32 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  padding: var(--spacing-large) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+  /* Figma: altura 96px (logo de 72px + padding vertical de 16px). */
+  padding: var(--spacing-medium) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .header-cta-dropdown__trigger-short {
   display: none;
 }
 
-.institutional-header__identity {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-large);
-}
-
+/* No Figma da UNIFACS, a logo (ícone + "UNIFACS" + "Excelência Acadêmica
+   Einstein") já vem como uma única imagem combinada (1175x192 ≈ 6.12:1),
+   igual à UAM — não montamos o lockup em peças separadas. */
 .institutional-header__brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--spacing-micro);
+  display: block;
   flex-shrink: 0;
 }
 
-.institutional-header__mark {
-  /* No Figma da UNIFACS, a logo (ícone + "UNIFACS" + "Excelência
-     Acadêmica Einstein") já vem como uma única imagem combinada
-     (1175x192 ≈ 6.12:1) — igual à UNA, diferente da UAM (peças
-     separadas). Largura calculada pela proporção real da imagem em vez
-     de `width: auto`, pelo mesmo motivo de sempre: a logo é item flex,
-     e `auto` pode fazer o navegador esticar/espremer durante o layout. */
+.institutional-header__brand img {
   display: block;
-  height: 44px;
-  width: 269px;
-  flex-shrink: 0;
+  height: 72px;
+  width: auto;
 }
 
 .institutional-header__divider {
+  /* Figma (2320:79510): divisor de 1px x 24px, #313132 a 40%. */
   width: 1px;
-  height: 56px;
+  height: 24px;
   background-color: var(--surface-brand-primary-dark);
   opacity: 0.4;
   flex-shrink: 0;
@@ -127,6 +117,12 @@
   /* Figma: botão de busca com contorno no accent neutro escuro (#313132). */
   border: 1px solid var(--surface-brand-primary-dark);
   background-color: transparent;
+  transition: background-color 0.4s ease;
+}
+
+.institutional-header__search:hover,
+.institutional-header__search:focus-visible {
+  background-color: var(--surface-secondary-subtle);
 }
 
 .institutional-header__mobile-search {
@@ -163,14 +159,14 @@
 }
 
 .institutional-header__nav .btn {
-  height: 40px;
-  padding: var(--spacing-small);
+  height: 48px;
+  padding: var(--spacing-medium);
   font-size: var(--font-size-xs);
 }
 
 .course-nav {
   /* Figma: fundo no accent neutro escuro (--surface-brand-primary-dark,
-     #313132), não o teal de --surface-brand-primary. */
+     #313132), não o dourado de --surface-brand-primary. */
   background-color: var(--surface-brand-primary-dark);
   color: var(--text-inverted);
 }
@@ -196,7 +192,8 @@
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
   color: var(--text-inverted);
-  opacity: 0.92;
+  /* Figma (2320:79511): links da navegação em branco pleno (Bold 14). */
+  opacity: 1;
   transition: opacity 0.4s ease;
 }
 
@@ -211,9 +208,8 @@
     padding: var(--spacing-medium) var(--page-gutter-tablet);
   }
 
-  .institutional-header__mark {
-    height: 40px;
-    width: 245px;
+  .institutional-header__brand img {
+    height: 48px;
   }
 
   .institutional-header__divider {
@@ -236,9 +232,8 @@
     gap: var(--spacing-extra-small);
   }
 
-  .institutional-header__mark {
+  .institutional-header__brand img {
     height: 32px;
-    width: 196px;
   }
 
   /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
@@ -287,7 +282,7 @@
   align-items: center;
   gap: var(--spacing-extra-small);
   /* Figma: este botão específico usa o accent neutro escuro, diferente do
-     `.btn-primary` genérico (teal). */
+     `.btn-primary` genérico (dourado). */
   background-color: var(--surface-brand-primary-dark) !important;
   border-color: var(--surface-brand-primary-dark) !important;
 }

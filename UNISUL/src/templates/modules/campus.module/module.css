@@ -33,6 +33,13 @@
   gap: var(--spacing-large);
 }
 
+/* Figma (Left header): título + texto com 16px de espaço entre si. */
+.campus-panel--top > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
 .campus-panel__title {
   /* Figma (ANIMA/Title 3): ExtraBold 32px. */
   font-size: var(--font-size-2xl);
@@ -45,7 +52,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-brand-quaternary);
+  color: var(--text-primary-dark);
 }
 
 .campus-chip-list {
@@ -61,10 +68,11 @@
   height: 48px;
   padding: var(--spacing-medium);
   border-radius: var(--radius-small);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  /* Figma: texto do chip em SemiBold 16px. */
+  font-size: var(--font-size-sm);
+  font-weight: 600;
   width: 100%;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 .campus-chip:hover,
@@ -74,6 +82,7 @@
 .campus-chip--inactive:hover,
 .campus-chip--inactive:focus-visible {
   background-color: var(--surface-brand-primary-dark);
+  border-color: var(--surface-brand-primary-dark);
   color: var(--text-footer);
 }
 
@@ -104,7 +113,7 @@
   align-items: center;
   gap: var(--spacing-extra-small);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
   color: var(--text-brand);
 }
 
@@ -116,7 +125,8 @@
 .campus-detail__address {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
-  color: var(--text-brand-quaternary);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
 }
 
 .campus-detail__address a {
@@ -224,16 +234,16 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: rgba(80, 123, 130, 0.75);
+  background-color: rgba(137, 129, 119, 0.8);
   color: var(--text-inverted);
   font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   padding: 2px 4px;
   border-radius: 4px;
 }
 
 .campus-gallery__counter {
-  color: var(--text-inverted);
+  color: #f5f5f5;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
@@ -263,8 +273,9 @@
 }
 
 .campus-gallery__nav-btn--prev {
-  /* Figma: botão anterior desabilitado (01 / 03) em teal chapado. */
-  background-color: var(--surface-brand-primary);
+  /* Figma: botão anterior desabilitado (01 / 03) em cinza-areia
+     ("inspirali/dark/accent/tertiary", #c9c8be). */
+  background-color: #c9c8be;
   transition: background-color 0.2s ease;
 }
 
@@ -312,7 +323,8 @@
   position: relative;
   flex: 0 0 132px;
   overflow: hidden;
-  border-radius: var(--spacing-micro);
+  /* Figma: miniaturas com raio de 8px. */
+  border-radius: var(--radius-small);
 }
 
 .campus-thumb__photo {
@@ -329,12 +341,13 @@
 .campus-thumb__label {
   position: absolute;
   left: 8px;
-  right: 8px;
+  right: auto;
+  max-width: calc(100% - 16px);
   bottom: 8px;
-  background-color: rgba(80, 123, 130, 0.75);
+  background-color: rgba(137, 129, 119, 0.8);
   color: var(--text-inverted);
   font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   padding: 2px var(--spacing-micro);
   border-radius: var(--spacing-micro);
   box-sizing: border-box;

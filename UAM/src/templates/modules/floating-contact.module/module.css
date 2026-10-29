@@ -229,6 +229,11 @@
   transition: background-color 0.3s ease;
 }
 
+.floating-contact__submit img {
+  /* Seta branca sobre o botão dourado. */
+  filter: brightness(0) invert(1);
+}
+
 .floating-contact__submit:hover,
 .floating-contact__submit:focus-visible {
   background-color: var(--surface-brand-primary-dark);

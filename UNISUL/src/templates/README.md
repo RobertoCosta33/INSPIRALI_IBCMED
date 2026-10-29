@@ -56,9 +56,14 @@ Cada `*.module/` segue o padrão HubSpot: `meta.json`, `fields.json` (campos edi
 - **Tipografia diferente da UAM/UNA/UNIFACS**: a UNISUL mantém **Bricolage Grotesque**
   (estilos "ANIMA/\*" do Figma — títulos ExtraBold, corpo Light/Regular). As demais
   instituições usam Montserrat. Os pesos de fonte dos CSS seguem o Figma da UNISUL.
-- **Paleta própria**: marca `#507b82` (teal acinzentado), escuro `#313132`, claro `#edf1f0`,
-  apoio/areia `#7a6f66` (CTAs sólidos, fundo do Ecossistema, convite do rodapé) — ver
-  `css/tokens.css` e `fields.json` do tema.
+- **Paleta**: após a segunda rodada de cores do Figma ("tema Inspirali" unificado), a UNISUL
+  usa marca dourada `#b09435`, escuro `#313132` (rodapé, hover, fundo do Ecossistema, card de
+  valor mensal), cinza claro `#f3f4f6` (fundos sutis, cards, FAQ) e areia `#898177` (CTAs sólidos,
+  convite do rodapé, +/− dos accordions). O teal `#507b82` e a areia `#7a6f66` antigos saíram
+  do Figma — ver `css/tokens.css` e `fields.json` do tema. A **fonte** continua Bricolage
+  Grotesque (o Figma novo da UNISUL já usa Montserrat; decisão pendente com o responsável).
+- **Header**: logo em imagem única (campo `institution_logo`, 72px desktop / 48px tablet /
+  32px mobile), busca só com contorno escuro e botão "Inscreva-se" de 48px em `#313132`.
 - **Formulário de contato (FAQ)** segue desativado por padrão (`show_form = false`), com HTML
   pronto usando o módulo nativo de formulário do HubSpot. A UNISUL **não tem**
   `floating-contact` no `src`, então esse módulo não existe aqui e `base.html` não o carrega.

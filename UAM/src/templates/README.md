@@ -86,9 +86,11 @@ do próprio módulo, via `get_asset_url('./module.css')`).
 
 ## Estado da sincronização
 
-Sincronizado com `UAM/src` no commit `4972129` (paleta Inspirali `#4e8d97` /
-`#313132` / `#898177` / `#fcf7ee`, fonte Montserrat 200–800, setas dos
-carrosséis `icon-arrow-*-btn`). `css/`, `module.css`, `module.js` e os ícones de
+Sincronizado com `UAM/src` após a segunda rodada de cores do Figma (paleta
+Inspirali com dourado `#b09435` / `#313132` / areia `#898177` / cinza claro
+`#f3f4f6`, fonte Montserrat 200–800, setas dos carrosséis `icon-arrow-*-btn`).
+O header usa uma única imagem de logo (`public/images/shared/header-logo.png`,
+campo `logo`), exatamente como no Figma. `css/`, `module.css`, `module.js` e os ícones de
 `public/icons` são cópia do `src`; `campus`, `financiamentos` e `seu-futuro`
 mantêm o JS adaptado (dados via JSON / `data-*` / `window.UAM_CARD_NAV_ICONS`)
 e `processo-seletivo/module.css` inclui o CSS do `edital-modal`. Ícones de

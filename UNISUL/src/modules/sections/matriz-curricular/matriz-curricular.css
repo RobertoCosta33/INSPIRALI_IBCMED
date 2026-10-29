@@ -18,7 +18,8 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background-color: rgba(80, 123, 130, 0.15);
+  /* Figma: selo com fundo cinza claro, borda e texto dourados. */
+  background-color: var(--surface-primary-subtle);
   border: 1px solid var(--border-brand-primary);
   border-radius: 8px;
   padding: 4px 8px;
@@ -49,14 +50,15 @@
   padding: 20px 24px;
   gap: 16px;
   border-radius: var(--radius-small);
-  border: 1px solid #ffffff;
+  /* Figma: botões sólidos (areia #898177) sem borda. */
+  border: 0;
   background-color: var(--surface-brand-quaternary);
   backdrop-filter: blur(20px);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: #ffffff;
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .spiral-cta img {
@@ -115,7 +117,7 @@
 }
 
 .spiral-cta--outline {
-  border-color: var(--border-brand-quaternary);
+  border: 1px solid var(--border-brand-quaternary);
   background-color: rgba(254, 255, 250, 0.08);
   color: var(--text-brand-quaternary);
 }
@@ -123,12 +125,13 @@
 .spiral-cta:hover,
 .spiral-cta:focus-visible {
   background-color: var(--surface-brand-primary-light);
-  border-color: var(--surface-brand-quaternary);
+  box-shadow: inset 0 0 0 1px var(--surface-brand-quaternary);
   color: var(--surface-brand-quaternary);
 }
 
 .spiral-cta--outline:hover,
 .spiral-cta--outline:focus-visible {
+  box-shadow: none;
   background-color: var(--surface-brand-primary-light);
   color: var(--surface-brand-quaternary);
 }

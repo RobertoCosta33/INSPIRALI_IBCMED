@@ -17,7 +17,8 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  padding: var(--spacing-large) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+  /* Figma (898:26618): altura 96px = logo de 72px + padding vertical de 12px. */
+  padding: var(--spacing-small) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .header-cta-dropdown__trigger-short {
@@ -31,10 +32,7 @@
 }
 
 .institutional-header__brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--spacing-micro);
+  display: block;
   flex-shrink: 0;
 }
 
@@ -47,8 +45,9 @@
      fazer o navegador resolvê-la errado durante o layout flex (esticando/
      espremendo a imagem) especialmente combinada com `flex-shrink`. */
   display: block;
-  height: 44px;
-  width: 206px;
+  /* Figma ("UNA 2", 1886:96794): 336.375x72 no desktop. */
+  height: 72px;
+  width: 336px;
   flex-shrink: 0;
 }
 
@@ -101,7 +100,16 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-small);
-  background-color: rgba(122, 122, 122, 0.08);
+  /* Figma: botão de busca só com contorno no accent primário (#313132). */
+  border: 1px solid var(--surface-brand-primary-dark);
+  /* Figma (876:14165): fundo branco com contorno #313132. */
+  background-color: var(--surface-inverted);
+  transition: background-color 0.4s ease;
+}
+
+.institutional-header__search:hover,
+.institutional-header__search:focus-visible {
+  background-color: var(--surface-secondary-subtle);
 }
 
 .institutional-header__mobile-search {
@@ -145,7 +153,7 @@
 
 .course-nav {
   /* Figma: fundo no accent neutro escuro (--surface-brand-primary-dark,
-     #313132), não no teal de --surface-brand-primary. */
+     #313132), não no dourado de --surface-brand-primary. */
   background-color: var(--surface-brand-primary-dark);
   color: var(--text-inverted);
 }
@@ -171,7 +179,8 @@
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
   color: var(--text-inverted);
-  opacity: 0.92;
+  /* Figma (876:14321): links Bold 14 em branco sólido. */
+  opacity: 1;
   transition: opacity 0.4s ease;
 }
 
@@ -187,8 +196,8 @@
   }
 
   .institutional-header__mark {
-    height: 40px;
-    width: 187px;
+    height: 48px;
+    width: 224px;
   }
 
   .course-nav__list {
@@ -257,16 +266,10 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-extra-small);
-  /* Figma: o botão "Inscreva-se para 2027.1" usa o accent terciário
-     (dourado), diferente do .btn-primary genérico (teal). O hover do
-     .btn-primary (fundo #313132) continua valendo. */
-  background-color: var(--text-brand-tertiary);
-  border-color: var(--text-brand-tertiary);
-}
-
-.header-cta-dropdown__trigger:hover,
-.header-cta-dropdown__trigger:focus-visible {
-  border-color: var(--surface-brand-primary-dark);
+  /* Figma (876:14179): o botão "Inscreva-se para 2027.1" usa o accent
+     primário (#313132), diferente do .btn-primary genérico (dourado). */
+  background-color: var(--surface-brand-primary-dark) !important;
+  border-color: var(--surface-brand-primary-dark) !important;
 }
 
 .header-cta-dropdown__chevron {

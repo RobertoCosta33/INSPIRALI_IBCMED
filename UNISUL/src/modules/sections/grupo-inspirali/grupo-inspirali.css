@@ -19,7 +19,7 @@
   right: -175px;
   width: 570px;
   height: 534px;
-  background-color: rgba(80, 123, 130, 0.2);
+  background-color: rgba(176, 148, 53, 0.2);
   -webkit-mask-image: url("/UNISUL/src/public/images/shared/grupo-inspirali-broto-unisul.png");
   mask-image: url("/UNISUL/src/public/images/shared/grupo-inspirali-broto-unisul.png");
   -webkit-mask-size: contain;
@@ -72,7 +72,7 @@
 
 .inspirali-header__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
   max-width: 606px;
@@ -84,9 +84,8 @@
   flex-wrap: wrap;
 }
 
-/* Figma (1100:13603): os stat cards desta seção usam o fundo claro da
-   paleta (#edf1f0) e borda teal a 20% — já definidos em `.stat-card`
-   (cards.css), sem sobrescrita. */
+/* Figma: os stat cards desta seção são brancos com borda areia a 20% —
+   já definidos em `.stat-card` (cards.css), sem sobrescrita. */
 
 .lifelong {
   display: flex;
@@ -124,9 +123,9 @@
 
 .lifelong__text > p {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-brand-quaternary);
+  color: var(--text-primary-dark);
 }
 
 .timeline {
@@ -162,9 +161,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Figma (Subtitle 2): ExtraBold 14px, line-height 1.16. */
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
   flex-shrink: 0;
 }
 
@@ -176,7 +176,7 @@
 .timeline-step__line {
   width: 2px;
   flex: 1 1 auto;
-  background-color: var(--surface-brand-primary);
+  background-color: var(--border-brand-soft-strong);
   min-height: 24px;
 }
 
@@ -196,17 +196,17 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-brand-quaternary);
+  color: var(--text-primary-dark);
 }
 
 .partner-logos {
-  /* Figma (1100:13678): mesma superfície e borda dos `.stat-card`. */
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-medium);
-  background-color: var(--surface-brand-primary-light);
+  /* Figma: faixa de logos em branco com borda dourada a 20%. */
+  background-color: var(--surface-inverted);
   border: 1px solid var(--border-brand-soft);
   border-radius: 12px;
   padding: var(--spacing-extra-large);

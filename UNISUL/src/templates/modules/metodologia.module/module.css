@@ -37,6 +37,12 @@
   gap: var(--spacing-small);
 }
 
+/* Figma: 12px entre os itens da lista (o gap já cobre; zera a margem
+   padrão de .accordion-item + .accordion-item). */
+.methodology__list .accordion-item + .accordion-item {
+  margin-top: 0;
+}
+
 @media (max-width: 1024px) {
   .methodology {
     flex-direction: column;

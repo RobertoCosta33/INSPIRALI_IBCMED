@@ -6,10 +6,10 @@
     "children": [
       {
         "name": "brand_primary",
-        "label": "Cor primária (teal acinzentado)",
+        "label": "Cor primária (dourado)",
         "type": "color",
         "default": {
-          "color": "#507B82",
+          "color": "#B09435",
           "opacity": 100
         }
       },
@@ -33,10 +33,10 @@
       },
       {
         "name": "brand_quaternary",
-        "label": "Cor de apoio (areia: CTAs sólidos, convite do rodapé, Ecossistema)",
+        "label": "Cor de apoio (areia: CTAs sólidos, convite do rodapé, ícones +/− dos accordions)",
         "type": "color",
         "default": {
-          "color": "#7A6F66",
+          "color": "#898177",
           "opacity": 100
         }
       }

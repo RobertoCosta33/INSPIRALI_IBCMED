@@ -5,8 +5,9 @@
 
 .dna-pillars {
   display: flex;
-  gap: var(--spacing-extra-large);
-  margin-top: var(--spacing-extra-large);
+  /* Figma (2320:79492): gap de 48px entre pilares e 40px entre a intro e os pilares. */
+  gap: 48px;
+  margin-top: 40px;
   flex-wrap: wrap;
 }
 

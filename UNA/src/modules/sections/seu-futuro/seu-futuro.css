@@ -7,7 +7,7 @@
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
-  gap: 88px;
+  gap: 84px;
   align-items: center;
 }
 
@@ -16,13 +16,20 @@
   max-width: 450px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-large);
+  gap: 40px;
 }
 
 .future-header__content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-extra-small);
+  gap: var(--spacing-small);
+  /* Figma (2258:29988): "Future header" com pt 40 e gap 12 entre eyebrow,
+     título e texto. */
+  padding-top: 40px;
+}
+
+.future-header__content .eyebrow {
+  margin: 0;
 }
 
 .future-header__cta {
@@ -34,10 +41,11 @@
   padding: 20px 24px;
   gap: 16px;
   border-radius: var(--radius-small);
-  border: 1px solid var(--border-brand-primary);
-  background-color: rgba(254, 255, 250, 0.08);
+  /* Figma (2319:64283): contorno e texto no accent primário (#313132). */
+  border: 1px solid var(--surface-brand-primary-dark);
+  background-color: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
-  color: var(--text-brand);
+  color: var(--text-primary-dark);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   transition: background-color 0.4s ease, color 0.4s ease;

@@ -1,18 +1,15 @@
 <header class="site-header">
   <div class="institutional-header">
-    <div class="institutional-header__identity">
-      {# No Figma da UNIFACS a logo já vem como uma única imagem combinada (ícone + "UNIFACS" +
-         "Excelência Acadêmica Einstein"); a mesma imagem serve todos os breakpoints, só mudando de tamanho via CSS. #}
-      <a href="{{ module.home_url.url.href }}" class="institutional-header__brand" aria-label="Página inicial UNIFACS">
-        <img
-          src="{{ module.institution_logo.src }}"
-          alt="{{ module.institution_logo.alt }}"
-          class="institutional-header__mark"
-          width="{{ module.institution_logo.width }}"
-          height="{{ module.institution_logo.height }}"
-        />
-      </a>
-    </div>
+    {# No Figma da UNIFACS a logo já vem como uma única imagem combinada (ícone + "UNIFACS" +
+       "Excelência Acadêmica Einstein"), igual à UAM; a mesma imagem serve todos os breakpoints, só mudando de altura via CSS. #}
+    <a href="{{ module.home_url.url.href }}" class="institutional-header__brand" aria-label="Página inicial UNIFACS">
+      <img
+        src="{{ module.logo.src }}"
+        alt="{{ module.logo.alt }}"
+        width="{{ module.logo.width }}"
+        height="{{ module.logo.height }}"
+      />
+    </a>
 
     <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
       {% if module.candidate_label %}
@@ -26,7 +23,7 @@
         <button type="button" class="btn btn-primary header-cta-dropdown__trigger" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
           <span class="header-cta-dropdown__trigger-full">{{ module.enrollment_cta_label }}</span>
           <span class="header-cta-dropdown__trigger-short">{{ module.enrollment_cta_label_short }}</span>
-          <img src="{{ get_asset_url('../../public/icons/icon-arrow-down-white.svg') }}" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="12" height="12" />
+          <img src="{{ get_asset_url('../../public/icons/icon-arrow-down-white.svg') }}" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="16" height="16" />
         </button>
         <div class="header-cta-dropdown__menu" data-dropdown-menu>
           <div class="header-cta-dropdown__menu-inner">

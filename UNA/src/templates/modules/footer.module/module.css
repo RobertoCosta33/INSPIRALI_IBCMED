@@ -13,7 +13,7 @@
 
 .footer-invitation {
   width: 100%;
-  /* Figma: accent quaternário (terroso), não o teal de marca. */
+  /* Figma: accent quaternário (terroso), não o dourado de marca. */
   background-color: var(--surface-brand-quaternary);
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +28,7 @@
   color: var(--text-inverted);
   font-weight: var(--font-weight-extrabold);
   font-size: var(--font-size-3xl);
-  line-height: var(--line-height-xl);
+  line-height: var(--line-height-tight);
   max-width: 772px;
 }
 
@@ -38,6 +38,8 @@
   justify-content: center;
   flex-shrink: 0;
   gap: var(--spacing-extra-small);
+  /* Figma (2152:49101): botão branco de 64px de altura. */
+  height: 64px;
   padding: 12px var(--spacing-large);
   border-radius: var(--radius-small);
   background-color: var(--surface-inverted);
@@ -226,6 +228,8 @@
 .footer-bottom__links button {
   color: var(--text-footer-muted);
   font-size: var(--font-size-xs);
+  /* Figma (912:2747/2749): "Canal de privacidade" e "Voltar ao topo" em Bold 14. */
+  font-weight: var(--font-weight-bold);
 }
 
 .footer-bottom__link {
@@ -253,6 +257,7 @@
 .footer-copyright {
   color: var(--text-footer-muted);
   font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-light);
   text-align: center;
 }
 

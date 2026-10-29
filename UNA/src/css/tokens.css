@@ -17,33 +17,35 @@
   /* Cores de superfície */
   --surface-inverted: #ffffff;
   --surface-primary: #ffffff;
-  /* Figma: "inspirali/background/subtle" — fundo creme usado em
-     Institucional, Nosso DNA, Campus e Grupo Inspirali. */
-  --surface-primary-subtle: #fcf7ee;
-  /* Figma: cinza translúcido (inspirali/background/surface a 60%) —
-     "soft card" neutro (cards de accordion/info). */
-  --surface-secondary-subtle: rgba(214, 219, 222, 0.6);
-  /* "inspirali/accent/secondary" — teal suave, o accent principal
-     (eyebrows, CTAs com borda, links, stats). */
-  --surface-brand-primary: #4e8d97;
+  /* Figma: "inspirali/background/subtle" — cinza claro (#f3f4f6, antes
+     creme) usado em Institucional, Nosso DNA, Matriz, Campus e Grupo
+     Inspirali. */
+  --surface-primary-subtle: #f3f4f6;
+  /* Figma: mesmo cinza claro dos cards de Financiamentos e do card da
+     Matriz ("Information card"). */
+  --surface-secondary-subtle: #f3f4f6;
+  /* "inspirali/accent/tertiary" — dourado, agora o accent principal de
+     marca (eyebrows, bolinhas, ícones, links). O teal "accent/secondary"
+     deixou de ser usado nas telas da UNA. */
+  --surface-brand-primary: #b09435;
   /* "inspirali/accent/primary" — neutro escuro, usado em nav/footer/
      gradientes de card (substitui o vermelho escuro antigo). */
   --surface-brand-primary-dark: #313132;
   --surface-brand-primary-light: #edf1f0;
-  --surface-brand-primary-light-alt: #d2e3de;
-  --surface-brand-tint: rgba(78, 141, 151, 0.08);
-  /* Figma (Institucional, Nosso DNA, Campus): mesmo creme sólido de
+  --surface-brand-primary-light-alt: #f3f4f6;
+  --surface-brand-tint: #f3f4f6;
+  /* Figma (Institucional, Nosso DNA, Campus): mesmo cinza sólido de
      --surface-primary-subtle, não um tint translúcido. */
-  --surface-brand-tint-strong: #fcf7ee;
-  --surface-brand-soft: rgba(78, 141, 151, 0.12);
-  --surface-brand-soft-weak: rgba(78, 141, 151, 0.08);
+  --surface-brand-tint-strong: #f3f4f6;
+  --surface-brand-soft: rgba(176, 148, 53, 0.12);
+  --surface-brand-soft-weak: rgba(176, 148, 53, 0.08);
   /* "inspirali/accent/quaternary" — tom terroso/areia, segundo accent
      usado em Matriz Curricular, Campus, Ecossistema, Footer e nos CTAs
      sólidos de FAQ/Matriz. */
   --surface-brand-quaternary: #898177;
   --surface-brand-quaternary-soft: rgba(137, 129, 119, 0.2);
-  /* "inspirali/background/canvas" — fundo dos cards de Metodologia e
-     Financiamentos. */
+  /* "inspirali/light/background/canvas" — fundo dos cards de Metodologia e
+     do botão "Conheça a Una" (o Figma da UNA mantém #f7f8f8 aqui). */
   --surface-canvas: #f7f8f8;
   /* "inspirali/background/surface" — cinza neutro do card do formulário. */
   --surface-neutral: #d6dbde;
@@ -54,11 +56,11 @@
   --text-heading: #313132;
   --text-primary-dark: #313132;
   --text-secondary-dark: #3d3d3d;
-  --text-brand: #4e8d97;
+  --text-brand: #b09435;
   --text-brand-dark: #313132;
   --text-brand-quaternary: #898177;
-  /* "inspirali/light/accent/secondary" — teal um pouco mais escuro. */
-  --text-brand-alt: #507b82;
+  /* "inspirali/light/accent/tertiary" — dourado (tom claro do accent). */
+  --text-brand-alt: #b09437;
   /* "inspirali/accent/tertiary" — dourado, destaque "Excelência
      Acadêmica Einstein" e CTAs de destaque (header, Ingresso). */
   --text-brand-tertiary: #b09435;
@@ -67,9 +69,9 @@
 
   /* Cores de borda */
   --border-primary-light: #c9c8be;
-  --border-brand-primary: #4e8d97;
-  --border-brand-soft: rgba(78, 141, 151, 0.2);
-  --border-brand-soft-strong: rgba(78, 141, 151, 0.4);
+  --border-brand-primary: #b09435;
+  --border-brand-soft: rgba(176, 148, 53, 0.2);
+  --border-brand-soft-strong: rgba(176, 148, 53, 0.4);
   --border-brand-quaternary: #898177;
 
   /* Tipografia — família da marca: Montserrat (Google Fonts) */

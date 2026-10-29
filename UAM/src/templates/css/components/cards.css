@@ -94,8 +94,9 @@
   flex: 1 1 0;
   min-width: 220px;
   min-height: 260px;
-  background-color: var(--surface-brand-primary-light);
-  border: 1px solid var(--border-brand-soft);
+  /* Figma: card branco com borda areia a 20%. */
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--surface-brand-quaternary-soft);
   border-radius: var(--radius-small);
   padding: 20px var(--spacing-large) var(--spacing-large);
   display: flex;
@@ -104,7 +105,7 @@
 }
 
 .stat-card--no-value {
-  border-color: var(--surface-brand-primary-light);
+  border-color: var(--surface-brand-quaternary-soft);
 }
 
 .stat-card__row {

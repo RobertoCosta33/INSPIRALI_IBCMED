@@ -68,14 +68,27 @@ Cada `*.module/` segue o padrão HubSpot: `meta.json`, `fields.json` (campos edi
   cadastrado um 2º campus. O card "Programa Bolsa Permanência" é só um link ("Veja mais", hoje
   com `#`) — sem o modal de documentos da UAM.
 - **Header**: a logo da UNIFACS é uma única imagem combinada (ícone + nome + Excelência
-  Acadêmica Einstein), igual à UNA — não há logo separada de parceiro nem logo mobile.
+  Acadêmica Einstein), igual à UAM e à UNA — campo `logo`; não há logo separada de parceiro
+  nem logo mobile. Altura da logo 72px (desktop) → 48px (≤1280px) → 32px (≤640px).
 - **Seu Futuro / ícones de navegação**: os ícones de seta (ativo/desabilitado) vão para o JS via
   `window.UNIFACS_CARD_NAV_ICONS`; o ícone de play da galeria de campus via
   `window.UNIFACS_PLAY_ICON_URL` (ambos resolvidos com `get_asset_url`).
 - **Grupo Inspirali**: o CSS usa `grupo-inspirali-broto-unifacs.png` como máscara
   (`mask-image`); a URL aponta para o File Manager (ver tabela abaixo).
-- Tokens: marca `#4e8d97` (teal), escuro `#313132`, claro `#edf1f0`; fonte **Montserrat**
-  (200–800), títulos grandes em ExtraBold — ver `css/tokens.css`.
+- Tokens: marca dourado `#b09435`, escuro `#313132`, areia `#898177`, cinza claro `#f3f4f6`
+  (fundos de seção/cards); fonte **Montserrat** (200–800), títulos grandes em ExtraBold — ver
+  `css/tokens.css`.
+
+## Estado da sincronização
+
+Sincronizado com `UNIFACS/src` após a segunda rodada de cores do Figma (mesma da UAM: dourado
+`#b09435` / `#313132` / areia `#898177` / cinza claro `#f3f4f6`). `css/`, `module.css` e os
+ícones de `public/icons` são cópia do `src` (`grupo-inspirali` e `processo-seletivo` têm o mesmo
+conteúdo do `src`, só com URLs do HubSpot e o CSS do `edital-modal` embutido). O header passou a
+usar a imagem única de logo com a estrutura da UAM (`.institutional-header__brand img`).
+**Pendência:** PNGs ainda no tom antigo (teal) — `unifacs-header-logo.png`,
+`grupo-inspirali-broto-unifacs.png`, `dna-pillar-*-unifacs.png`, `processo-seletivo-bg.png` —
+precisam ser reexportados do Figma antes do upload.
 
 ## Pontos de atenção herdados do `src`
 
@@ -100,57 +113,57 @@ Os campos `image` usam, como default, URLs do File Manager no mesmo host/conta d
 abaixo (mesma convenção da UAM: `images/shared|docente|campus` mantêm a pasta; demais imagens
 vão para `misc/`; ícones usados em campos de imagem vão para `field-icons/`):
 
-| Origem | Destino no File Manager |
-|---|---|
-| `UNIFACS/src/public/images/campus/area-de-convivencia.jpg` | `UNIFACS-assets/campus/area-de-convivencia.jpg` |
-| `UNIFACS/src/public/images/campus/biblioteca.jpg` | `UNIFACS-assets/campus/biblioteca.jpg` |
-| `UNIFACS/src/public/images/campus/laboratorio-de-anatomia.jpg` | `UNIFACS-assets/campus/laboratorio-de-anatomia.jpg` |
-| `UNIFACS/src/public/images/campus/laboratorio-de-simulacao-clinica.jpg` | `UNIFACS-assets/campus/laboratorio-de-simulacao-clinica.jpg` |
-| `UNIFACS/src/public/images/campus/laboratorio-morfofuncional.jpg` | `UNIFACS-assets/campus/laboratorio-morfofuncional.jpg` |
-| `UNIFACS/src/public/images/campus/simulacao-cuidados-neonatais.jpg` | `UNIFACS-assets/campus/simulacao-cuidados-neonatais.jpg` |
-| `UNIFACS/src/public/images/docente/marcos-vinicius-silva.png` | `UNIFACS-assets/docente/marcos-vinicius-silva.png` |
-| `UNIFACS/src/public/images/docente/mauricio-campos.png` | `UNIFACS-assets/docente/mauricio-campos.png` |
-| `UNIFACS/src/public/icons/icon-award.svg` | `UNIFACS-assets/field-icons/icon-award.svg` |
-| `UNIFACS/src/public/icons/icon-favourite.svg` | `UNIFACS-assets/field-icons/icon-favourite.svg` |
-| `UNIFACS/src/public/icons/icon-infinity.svg` | `UNIFACS-assets/field-icons/icon-infinity.svg` |
-| `UNIFACS/src/public/icons/icon-license-active.svg` | `UNIFACS-assets/field-icons/icon-license-active.svg` |
-| `UNIFACS/src/public/icons/icon-license-inactive.svg` | `UNIFACS-assets/field-icons/icon-license-inactive.svg` |
-| `UNIFACS/src/public/icons/icon-location-star.svg` | `UNIFACS-assets/field-icons/icon-location-star.svg` |
-| `UNIFACS/src/public/icons/icon-map-pin.svg` | `UNIFACS-assets/field-icons/icon-map-pin.svg` |
-| `UNIFACS/src/public/icons/icon-school-active.svg` | `UNIFACS-assets/field-icons/icon-school-active.svg` |
-| `UNIFACS/src/public/icons/icon-school-inactive.svg` | `UNIFACS-assets/field-icons/icon-school-inactive.svg` |
-| `UNIFACS/src/public/icons/icon-shield-check.svg` | `UNIFACS-assets/field-icons/icon-shield-check.svg` |
-| `UNIFACS/src/public/icons/icon-sync-alt-active.svg` | `UNIFACS-assets/field-icons/icon-sync-alt-active.svg` |
-| `UNIFACS/src/public/icons/icon-sync-alt-inactive.svg` | `UNIFACS-assets/field-icons/icon-sync-alt-inactive.svg` |
-| `UNIFACS/src/public/icons/icon-teacher.svg` | `UNIFACS-assets/field-icons/icon-teacher.svg` |
-| `UNIFACS/src/public/icons/icon-users.svg` | `UNIFACS-assets/field-icons/icon-users.svg` |
-| `UNIFACS/src/public/images/dna-pillar-1-unifacs.png` | `UNIFACS-assets/misc/dna-pillar-1-unifacs.png` |
-| `UNIFACS/src/public/images/dna-pillar-2-unifacs.png` | `UNIFACS-assets/misc/dna-pillar-2-unifacs.png` |
-| `UNIFACS/src/public/images/dna-pillar-3-unifacs.png` | `UNIFACS-assets/misc/dna-pillar-3-unifacs.png` |
-| `UNIFACS/src/public/images/ecosystem-carousel-1.jpg` | `UNIFACS-assets/misc/ecosystem-carousel-1.jpg` |
-| `UNIFACS/src/public/images/ecosystem-carousel-2.jpg` | `UNIFACS-assets/misc/ecosystem-carousel-2.jpg` |
-| `UNIFACS/src/public/images/ecosystem-carousel-3.jpg` | `UNIFACS-assets/misc/ecosystem-carousel-3.jpg` |
-| `UNIFACS/src/public/images/ecosystem-carousel-4.jpg` | `UNIFACS-assets/misc/ecosystem-carousel-4.jpg` |
-| `UNIFACS/src/public/images/metodologia/learning-environment.jpg` | `UNIFACS-assets/misc/learning-environment.jpg` |
-| `UNIFACS/src/public/images/posgrad-unifacs-1.jpg` | `UNIFACS-assets/misc/posgrad-unifacs-1.jpg` |
-| `UNIFACS/src/public/images/posgrad-unifacs-2.jpg` | `UNIFACS-assets/misc/posgrad-unifacs-2.jpg` |
-| `UNIFACS/src/public/images/posgrad-unifacs-3.jpg` | `UNIFACS-assets/misc/posgrad-unifacs-3.jpg` |
-| `UNIFACS/src/public/images/posgrad-unifacs-4.jpg` | `UNIFACS-assets/misc/posgrad-unifacs-4.jpg` |
-| `UNIFACS/src/public/images/processo-seletivo-bg.png` | `UNIFACS-assets/misc/processo-seletivo-bg.png` |
-| `UNIFACS/src/public/images/institucional/video-cover.png` | `UNIFACS-assets/misc/video-cover.png` |
-| `UNIFACS/src/public/images/shared/emec-qrcode.png` | `UNIFACS-assets/shared/emec-qrcode.png` |
-| `UNIFACS/src/public/images/shared/grupo-inspirali-broto-unifacs.png` | `UNIFACS-assets/shared/grupo-inspirali-broto-unifacs.png` |
+| Origem                                                                   | Destino no File Manager                                       |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| `UNIFACS/src/public/images/campus/area-de-convivencia.jpg`               | `UNIFACS-assets/campus/area-de-convivencia.jpg`               |
+| `UNIFACS/src/public/images/campus/biblioteca.jpg`                        | `UNIFACS-assets/campus/biblioteca.jpg`                        |
+| `UNIFACS/src/public/images/campus/laboratorio-de-anatomia.jpg`           | `UNIFACS-assets/campus/laboratorio-de-anatomia.jpg`           |
+| `UNIFACS/src/public/images/campus/laboratorio-de-simulacao-clinica.jpg`  | `UNIFACS-assets/campus/laboratorio-de-simulacao-clinica.jpg`  |
+| `UNIFACS/src/public/images/campus/laboratorio-morfofuncional.jpg`        | `UNIFACS-assets/campus/laboratorio-morfofuncional.jpg`        |
+| `UNIFACS/src/public/images/campus/simulacao-cuidados-neonatais.jpg`      | `UNIFACS-assets/campus/simulacao-cuidados-neonatais.jpg`      |
+| `UNIFACS/src/public/images/docente/marcos-vinicius-silva.png`            | `UNIFACS-assets/docente/marcos-vinicius-silva.png`            |
+| `UNIFACS/src/public/images/docente/mauricio-campos.png`                  | `UNIFACS-assets/docente/mauricio-campos.png`                  |
+| `UNIFACS/src/public/icons/icon-award.svg`                                | `UNIFACS-assets/field-icons/icon-award.svg`                   |
+| `UNIFACS/src/public/icons/icon-favourite.svg`                            | `UNIFACS-assets/field-icons/icon-favourite.svg`               |
+| `UNIFACS/src/public/icons/icon-infinity.svg`                             | `UNIFACS-assets/field-icons/icon-infinity.svg`                |
+| `UNIFACS/src/public/icons/icon-license-active.svg`                       | `UNIFACS-assets/field-icons/icon-license-active.svg`          |
+| `UNIFACS/src/public/icons/icon-license-inactive.svg`                     | `UNIFACS-assets/field-icons/icon-license-inactive.svg`        |
+| `UNIFACS/src/public/icons/icon-location-star.svg`                        | `UNIFACS-assets/field-icons/icon-location-star.svg`           |
+| `UNIFACS/src/public/icons/icon-map-pin.svg`                              | `UNIFACS-assets/field-icons/icon-map-pin.svg`                 |
+| `UNIFACS/src/public/icons/icon-school-active.svg`                        | `UNIFACS-assets/field-icons/icon-school-active.svg`           |
+| `UNIFACS/src/public/icons/icon-school-inactive.svg`                      | `UNIFACS-assets/field-icons/icon-school-inactive.svg`         |
+| `UNIFACS/src/public/icons/icon-shield-check.svg`                         | `UNIFACS-assets/field-icons/icon-shield-check.svg`            |
+| `UNIFACS/src/public/icons/icon-sync-alt-active.svg`                      | `UNIFACS-assets/field-icons/icon-sync-alt-active.svg`         |
+| `UNIFACS/src/public/icons/icon-sync-alt-inactive.svg`                    | `UNIFACS-assets/field-icons/icon-sync-alt-inactive.svg`       |
+| `UNIFACS/src/public/icons/icon-teacher.svg`                              | `UNIFACS-assets/field-icons/icon-teacher.svg`                 |
+| `UNIFACS/src/public/icons/icon-users.svg`                                | `UNIFACS-assets/field-icons/icon-users.svg`                   |
+| `UNIFACS/src/public/images/dna-pillar-1-unifacs.png`                     | `UNIFACS-assets/misc/dna-pillar-1-unifacs.png`                |
+| `UNIFACS/src/public/images/dna-pillar-2-unifacs.png`                     | `UNIFACS-assets/misc/dna-pillar-2-unifacs.png`                |
+| `UNIFACS/src/public/images/dna-pillar-3-unifacs.png`                     | `UNIFACS-assets/misc/dna-pillar-3-unifacs.png`                |
+| `UNIFACS/src/public/images/ecosystem-carousel-1.jpg`                     | `UNIFACS-assets/misc/ecosystem-carousel-1.jpg`                |
+| `UNIFACS/src/public/images/ecosystem-carousel-2.jpg`                     | `UNIFACS-assets/misc/ecosystem-carousel-2.jpg`                |
+| `UNIFACS/src/public/images/ecosystem-carousel-3.jpg`                     | `UNIFACS-assets/misc/ecosystem-carousel-3.jpg`                |
+| `UNIFACS/src/public/images/ecosystem-carousel-4.jpg`                     | `UNIFACS-assets/misc/ecosystem-carousel-4.jpg`                |
+| `UNIFACS/src/public/images/metodologia/learning-environment.jpg`         | `UNIFACS-assets/misc/learning-environment.jpg`                |
+| `UNIFACS/src/public/images/posgrad-unifacs-1.jpg`                        | `UNIFACS-assets/misc/posgrad-unifacs-1.jpg`                   |
+| `UNIFACS/src/public/images/posgrad-unifacs-2.jpg`                        | `UNIFACS-assets/misc/posgrad-unifacs-2.jpg`                   |
+| `UNIFACS/src/public/images/posgrad-unifacs-3.jpg`                        | `UNIFACS-assets/misc/posgrad-unifacs-3.jpg`                   |
+| `UNIFACS/src/public/images/posgrad-unifacs-4.jpg`                        | `UNIFACS-assets/misc/posgrad-unifacs-4.jpg`                   |
+| `UNIFACS/src/public/images/processo-seletivo-bg.png`                     | `UNIFACS-assets/misc/processo-seletivo-bg.png`                |
+| `UNIFACS/src/public/images/institucional/video-cover.png`                | `UNIFACS-assets/misc/video-cover.png`                         |
+| `UNIFACS/src/public/images/shared/emec-qrcode.png`                       | `UNIFACS-assets/shared/emec-qrcode.png`                       |
+| `UNIFACS/src/public/images/shared/grupo-inspirali-broto-unifacs.png`     | `UNIFACS-assets/shared/grupo-inspirali-broto-unifacs.png`     |
 | `UNIFACS/src/public/images/shared/inspirali-einstein-lockup-unifacs.png` | `UNIFACS-assets/shared/inspirali-einstein-lockup-unifacs.png` |
-| `UNIFACS/src/public/images/shared/logo-ages.svg` | `UNIFACS-assets/shared/logo-ages.svg` |
-| `UNIFACS/src/public/images/shared/logo-anhembi-small.svg` | `UNIFACS-assets/shared/logo-anhembi-small.svg` |
-| `UNIFACS/src/public/images/shared/logo-saojudas.svg` | `UNIFACS-assets/shared/logo-saojudas.svg` |
-| `UNIFACS/src/public/images/shared/logo-una.svg` | `UNIFACS-assets/shared/logo-una.svg` |
-| `UNIFACS/src/public/images/shared/logo-unibh.svg` | `UNIFACS-assets/shared/logo-unibh.svg` |
-| `UNIFACS/src/public/images/shared/logo-unifacs.svg` | `UNIFACS-assets/shared/logo-unifacs.svg` |
-| `UNIFACS/src/public/images/shared/logo-unifg.svg` | `UNIFACS-assets/shared/logo-unifg.svg` |
-| `UNIFACS/src/public/images/shared/logo-unisul.svg` | `UNIFACS-assets/shared/logo-unisul.svg` |
-| `UNIFACS/src/public/images/shared/logo-unp.svg` | `UNIFACS-assets/shared/logo-unp.svg` |
-| `UNIFACS/src/public/images/shared/unifacs-header-logo.png` | `UNIFACS-assets/shared/unifacs-header-logo.png` |
+| `UNIFACS/src/public/images/shared/logo-ages.svg`                         | `UNIFACS-assets/shared/logo-ages.svg`                         |
+| `UNIFACS/src/public/images/shared/logo-anhembi-small.svg`                | `UNIFACS-assets/shared/logo-anhembi-small.svg`                |
+| `UNIFACS/src/public/images/shared/logo-saojudas.svg`                     | `UNIFACS-assets/shared/logo-saojudas.svg`                     |
+| `UNIFACS/src/public/images/shared/logo-una.svg`                          | `UNIFACS-assets/shared/logo-una.svg`                          |
+| `UNIFACS/src/public/images/shared/logo-unibh.svg`                        | `UNIFACS-assets/shared/logo-unibh.svg`                        |
+| `UNIFACS/src/public/images/shared/logo-unifacs.svg`                      | `UNIFACS-assets/shared/logo-unifacs.svg`                      |
+| `UNIFACS/src/public/images/shared/logo-unifg.svg`                        | `UNIFACS-assets/shared/logo-unifg.svg`                        |
+| `UNIFACS/src/public/images/shared/logo-unisul.svg`                       | `UNIFACS-assets/shared/logo-unisul.svg`                       |
+| `UNIFACS/src/public/images/shared/logo-unp.svg`                          | `UNIFACS-assets/shared/logo-unp.svg`                          |
+| `UNIFACS/src/public/images/shared/unifacs-header-logo.png`               | `UNIFACS-assets/shared/unifacs-header-logo.png`               |
 
 PDFs: a matriz curricular e os editais usam links externos (`estaticos.animaeducacao.com.br`),
 então não há PDFs para enviar (`UNIFACS/src/public/docs/` está vazio).

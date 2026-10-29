@@ -7,8 +7,9 @@
   width: 100%;
 }
 
+/* Figma: 12px entre os cards, já dado pelo gap da lista. */
 .accordion-item + .accordion-item {
-  margin-top: var(--spacing-extra-small);
+  margin-top: 0;
 }
 
 .accordion-trigger {
@@ -26,7 +27,8 @@
 .accordion-trigger__title {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-extrabold);
-  color: var(--text-brand);
+  /* Figma: título do disclosure em areia (#898177). */
+  color: var(--text-brand-quaternary);
   line-height: var(--line-height-tight);
 }
 
@@ -65,7 +67,6 @@
 
 .accordion-item.is-open .accordion-trigger {
   border-radius: var(--radius-small) var(--radius-small) 0 0;
-  padding-bottom: var(--spacing-medium);
 }
 
 .accordion-divider {
@@ -97,7 +98,6 @@
   flex-direction: column;
   gap: var(--spacing-large);
   padding: var(--spacing-large);
-  padding-top: var(--spacing-medium);
 }
 
 .accordion-panel__title {

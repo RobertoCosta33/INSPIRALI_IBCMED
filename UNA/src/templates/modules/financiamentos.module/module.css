@@ -48,7 +48,8 @@
 
 .financing-highlight {
   position: relative;
-  background-color: var(--surface-brand-primary);
+  /* Figma (1044:29032): card de valor mensal no accent primário (#313132). */
+  background-color: var(--surface-brand-primary-dark);
   border-radius: var(--radius-small);
   padding: 20px 32px;
   min-height: 180px;

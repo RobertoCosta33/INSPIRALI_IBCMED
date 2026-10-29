@@ -225,12 +225,12 @@
 }
 
 .campus-gallery__label {
-  /* Figma: rgba(80,123,130,0.75) (light/accent/secondary) — mesmo valor
-     usado nas legendas das miniaturas abaixo. */
+  /* Figma (948:41446): areia (#898177) a 80% — mesmo valor usado nas
+     legendas das miniaturas abaixo. */
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: rgba(80, 123, 130, 0.75);
+  background-color: rgba(137, 129, 119, 0.8);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
@@ -241,7 +241,8 @@
 .campus-gallery__counter {
   color: var(--text-footer);
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-regular);
+  /* Figma (948:41432): contador "01 / 06" em Bold 20. */
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
 }
 
@@ -342,7 +343,7 @@
   left: 8px;
   right: 8px;
   bottom: 8px;
-  background-color: rgba(80, 123, 130, 0.75);
+  background-color: rgba(137, 129, 119, 0.8);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);

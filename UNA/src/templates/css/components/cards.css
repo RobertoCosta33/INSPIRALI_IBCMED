@@ -5,8 +5,9 @@
 .info-card {
   flex: 1 1 0;
   min-width: 260px;
-  /* Figma (Financiamentos): cards no cinza claro "inspirali/background/canvas". */
-  background-color: var(--surface-canvas);
+  /* Figma (Financiamentos, 1959:101144): cards no cinza claro
+     "inspirali/background/subtle" (#f3f4f6). */
+  background-color: var(--surface-secondary-subtle);
   border-radius: var(--radius-small);
   padding: var(--spacing-small) var(--spacing-large);
   display: flex;
@@ -39,14 +40,15 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--text-brand);
+  /* Figma: título e subtítulo do card em #313132 (só o link é dourado). */
+  color: var(--text-primary-dark);
 }
 
 .info-card__subtitle {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-brand);
+  color: var(--text-primary-dark);
 }
 
 .info-card__text {
@@ -88,8 +90,9 @@
   flex: 1 1 0;
   min-width: 220px;
   min-height: 260px;
-  background-color: var(--surface-brand-primary-light);
-  border: 1px solid var(--border-brand-soft);
+  /* Figma: card branco com borda areia a 20%. */
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--surface-brand-quaternary-soft);
   border-radius: var(--radius-small);
   padding: 20px var(--spacing-large) var(--spacing-large);
   display: flex;
@@ -98,7 +101,7 @@
 }
 
 .stat-card--no-value {
-  border-color: var(--surface-brand-primary-light);
+  border-color: var(--surface-brand-quaternary-soft);
 }
 
 .stat-card__row {
@@ -111,7 +114,8 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-small);
-  background-color: var(--surface-brand-soft);
+  /* Figma (2258:26707): fundo do ícone em dourado a 10%. */
+  background-color: rgba(176, 148, 53, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;

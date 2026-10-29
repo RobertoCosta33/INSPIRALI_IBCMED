@@ -78,7 +78,8 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--surface-neutral);
+  /* Figma: bio em "inspirali/background/subtle" (#f3f4f6). */
+  color: var(--surface-primary-subtle);
 }
 
 .docente-card__more {
@@ -117,7 +118,7 @@
 }
 
 .docente-carousel__nav[aria-disabled="true"] {
-  opacity: 0.35;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
@@ -146,7 +147,7 @@
   margin-top: 24px;
   padding: 4px 8px;
   border-radius: var(--radius-small);
-  background-color: var(--surface-brand-quaternary);
+  background-color: rgba(137, 129, 119, 0.4);
   backdrop-filter: blur(20px);
 }
 
@@ -155,12 +156,17 @@
   height: 8px;
   border-radius: var(--radius-total);
   background-color: var(--surface-inverted);
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .docente-carousel__step.is-active {
-  opacity: 1;
+  /* Figma: passo ativo em areia (#898177), os demais em branco. */
+  background-color: var(--surface-brand-quaternary);
+}
+
+/* Figma: o eyebrow desta seção usa "light/accent/tertiary" (#b09437). */
+#corpo-docente .eyebrow {
+  color: var(--text-brand-alt);
 }
 
 @media (max-width: 1280px) {

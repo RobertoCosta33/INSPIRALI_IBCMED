@@ -18,12 +18,13 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background-color: rgba(80, 123, 130, 0.15);
+  /* Figma: selo com fundo cinza claro, borda e texto dourados. */
+  background-color: var(--surface-primary-subtle);
   border: 1px solid var(--border-brand-primary);
   border-radius: 8px;
   padding: 4px 8px;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
@@ -49,7 +50,8 @@
   padding: 20px 24px;
   gap: 16px;
   border-radius: var(--radius-small);
-  border: 1px solid #ffffff;
+  /* Figma (2320:79493): CTAs de download sólidos (#898177) SEM borda. */
+  border: 0;
   background-color: var(--surface-brand-quaternary);
   backdrop-filter: blur(20px);
   font-size: var(--font-size-lg);
@@ -115,7 +117,7 @@
 }
 
 .spiral-cta--outline {
-  border-color: var(--border-brand-quaternary);
+  border: 1px solid var(--border-brand-quaternary);
   background-color: rgba(254, 255, 250, 0.08);
   color: var(--text-brand-quaternary);
 }

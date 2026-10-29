@@ -223,7 +223,7 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: rgba(80, 123, 130, 0.8);
+  background-color: rgba(137, 129, 119, 0.8);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-medium);
@@ -326,7 +326,7 @@
   left: 8px;
   right: 8px;
   bottom: 8px;
-  background-color: rgba(80, 123, 130, 0.8);
+  background-color: rgba(137, 129, 119, 0.8);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-medium);

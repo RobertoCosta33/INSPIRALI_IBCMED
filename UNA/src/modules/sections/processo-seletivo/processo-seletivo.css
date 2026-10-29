@@ -37,11 +37,13 @@
   width: 100%;
   border-radius: var(--radius-medium);
   overflow: hidden;
-  padding: 40px 40px 56px;
+  /* Figma (908:11076, "UNA/Information card"): padding 40 em todos os lados
+     e gap 32 entre cabeçalho, abas e painel. */
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 40px;
+  gap: var(--spacing-extra-large);
 }
 
 .selection-card__bg {
@@ -115,11 +117,12 @@
 }
 
 .selection-card__tab.is-active {
-  /* Figma: aba ativa branca com texto/ícone no accent terciário (dourado). */
+  /* Figma (908:11076): aba ativa branca com texto/ícone no accent
+     primário (#313132), ExtraBold. */
   background-color: var(--surface-inverted);
   border-color: transparent;
-  font-weight: var(--font-weight-bold);
-  color: var(--text-brand-tertiary);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--text-primary-dark);
 }
 
 .selection-card__tab:not(.is-active):hover,
@@ -173,11 +176,14 @@
   display: inline-flex;
   align-items: center;
   align-self: flex-start;
-  background-color: rgba(255, 255, 255, 0.12);
+  /* Figma (876:15159): selo "Inscrições Abertas" em areia (#898177) com
+     borda branca, ExtraBold 12. */
+  background-color: var(--surface-brand-quaternary);
   border: 1px solid var(--surface-inverted);
   border-radius: 4px;
   padding: var(--spacing-extra-small);
   font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-inverted);
 }
 
@@ -229,7 +235,8 @@
   padding: 20px 24px;
   border-radius: var(--radius-small);
   background-color: var(--surface-inverted);
-  color: var(--text-brand-tertiary);
+  /* Figma (876:15173): texto Bold 20 no accent primário (#313132). */
+  color: var(--text-primary-dark);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   transition: background-color 0.4s ease, color 0.4s ease;

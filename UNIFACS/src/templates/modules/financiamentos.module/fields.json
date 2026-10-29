@@ -173,10 +173,10 @@
         }
       },
       {
-        "title": "Programa Bolsa Permanência",
+        "title": "Programa Bolsa Permanência*",
         "subtitle": "Apoio financeiro",
-        "text": "Apoio financeiro para você focar nos estudos, com solicitação simples e condições acessíveis.",
-        "note": "",
+        "text": "Apoio financeiro do MEC para estudantes de Medicina vinculados ao Programa Mais Médicos.",
+        "note": "*Válido nas unidades São José dos Campos e Piracicaba.",
         "link_label": "Veja mais",
         "url": {
           "url": {

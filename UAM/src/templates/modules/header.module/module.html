@@ -1,38 +1,13 @@
 <header class="site-header">
   <div class="institutional-header">
-    <div class="institutional-header__identity">
-      <a href="{{ module.home_url.url.href }}" class="institutional-header__brand" aria-label="Página inicial {{ module.institution_logo.alt }}">
-        <img
-          src="{{ module.institution_logo.src }}"
-          alt="{{ module.institution_logo.alt }}"
-          class="institutional-header__mark"
-          width="{{ module.institution_logo.width }}"
-          height="{{ module.institution_logo.height }}"
-        />
-        {% if module.institution_subtitle %}<span class="institutional-header__subtitle">{{ module.institution_subtitle }}</span>{% endif %}
-      </a>
-      {% if module.partner_logo.src %}
-      <span class="institutional-header__divider" aria-hidden="true"></span>
+    <a href="{{ module.home_url.url.href }}" class="institutional-header__brand" aria-label="Página inicial {{ module.logo.alt }}">
       <img
-        src="{{ module.partner_logo.src }}"
-        alt="{{ module.partner_logo.alt }}"
-        class="institutional-header__einstein"
-        width="{{ module.partner_logo.width }}"
-        height="{{ module.partner_logo.height }}"
-      />
-      {% endif %}
-    </div>
-
-    {% if module.mobile_logo.src %}
-    <a href="{{ module.home_url.url.href }}" class="institutional-header__brand-mobile" aria-label="Página inicial {{ module.institution_logo.alt }}">
-      <img
-        src="{{ module.mobile_logo.src }}"
-        alt="{{ module.mobile_logo.alt }}"
-        width="{{ module.mobile_logo.width }}"
-        height="{{ module.mobile_logo.height }}"
+        src="{{ module.logo.src }}"
+        alt="{{ module.logo.alt }}"
+        width="{{ module.logo.width }}"
+        height="{{ module.logo.height }}"
       />
     </a>
-    {% endif %}
 
     <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
       <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
@@ -42,7 +17,7 @@
         <button type="button" class="btn btn-primary header-cta-dropdown__trigger" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
           <span class="header-cta-dropdown__trigger-full">{{ module.enrollment_cta_label }}</span>
           <span class="header-cta-dropdown__trigger-short">{{ module.enrollment_cta_label_short }}</span>
-          <img src="{{ get_asset_url('../../public/icons/icon-arrow-down-white.svg') }}" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="12" height="12" />
+          <img src="{{ get_asset_url('../../public/icons/icon-arrow-down-white.svg') }}" alt="" aria-hidden="true" class="header-cta-dropdown__chevron" width="16" height="16" />
         </button>
         <div class="header-cta-dropdown__menu" data-dropdown-menu>
           <div class="header-cta-dropdown__menu-inner">

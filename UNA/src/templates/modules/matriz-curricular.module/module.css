@@ -18,14 +18,14 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  /* Figma: pill em light/accent/secondary (#507b82) a 12%, texto no accent
-     secundário (#4e8d97) em Bold. */
-  background-color: rgba(80, 123, 130, 0.12);
-  border: 1px solid var(--text-brand-alt);
+  /* Figma (925:24952): pill com fundo dourado a 12%, borda e texto no
+     accent terciário (#b09435), ExtraBold. */
+  background-color: var(--surface-brand-soft);
+  border: 1px solid var(--border-brand-primary);
   border-radius: 8px;
   padding: 4px 8px;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }

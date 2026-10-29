@@ -32,25 +32,25 @@
     "name": "eyebrow",
     "label": "Eyebrow",
     "type": "text",
-    "default": "SOBRE A UNISUL"
+    "default": "DESCUBRA A UNISUL"
   },
   {
     "name": "title",
     "label": "Título",
     "type": "richtext",
-    "default": "Conhecimento que amplia horizontes e abre novos caminhos."
+    "default": "Conhecimento que transforma vidas."
   },
   {
     "name": "body_text",
     "label": "Texto",
     "type": "richtext",
-    "default": "<p>Com mais de 60 anos de história voltados à produção de conhecimento e transformação social, são mais de 300 mil pessoas impactadas por meio de ações junto à comunidade.</p><p>Assista ao vídeo institucional para conhecer melhor a Unisul.</p>"
+    "default": "<p>Com mais de 60 anos de legado, a Unisul já impactou mais de 300 mil vidas através de iniciativas que promovem o conhecimento e a inclusão social.</p><p>Veja nosso vídeo institucional para entender melhor a Unisul.</p>"
   },
   {
     "name": "cta_label",
     "label": "Texto do botão",
     "type": "text",
-    "default": "Conheça a Unisul"
+    "default": "Explore a Unisul"
   },
   {
     "name": "cta_url",

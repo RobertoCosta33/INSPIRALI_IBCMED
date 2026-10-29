@@ -9,7 +9,7 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Dois campus. Uma formação conectada à prática."
+    "default": "Estrutura completa em um só lugar"
   },
   {
     "name": "intro_text",
@@ -71,7 +71,13 @@
       },
       {
         "name": "address",
-        "label": "Endereço completo",
+        "label": "Endereço (rua, número, bairro • CEP)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "map_url",
+        "label": "Link \"Ver no mapa\"",
         "type": "text",
         "default": ""
       },
@@ -129,7 +135,8 @@
         "chip_label": "Palhoça",
         "display_name": "Palhoça",
         "city": "Palhoça, SC",
-        "address": "Av. Pedra Branca, 25 - Cidade Universitária, Palhoça - SC, 88137-270",
+        "address": "Av. Pedra Branca, 25 - Cidade Universitária • CEP 88137-270",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Av.%20Pedra%20Branca%2C%2025%20-%20Cidade%20Universit%C3%A1ria%2C%20Palho%C3%A7a%20-%20SC%2C%2088137-270",
         "cta_url": {
           "url": {
             "content_id": null,
@@ -190,7 +197,8 @@
         "chip_label": "Tubarão",
         "display_name": "Tubarão",
         "city": "Tubarão, SC",
-        "address": "Av. José Acácio Moreira, 787 - Dehon, Tubarão - SC, 88704-900",
+        "address": "Av. José Acácio Moreira, 787 - Dehon • CEP 88704-900",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Av.%20Jos%C3%A9%20Ac%C3%A1cio%20Moreira%2C%20787%20-%20Dehon%2C%20Tubar%C3%A3o%20-%20SC%2C%2088704-900",
         "cta_url": {
           "url": {
             "content_id": null,

@@ -16,9 +16,8 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* Figma: abas inativas usam contorno em light/accent/secondary
-     (#507b82) a 30%. */
-  border-bottom: 1.5px solid rgba(80, 123, 130, 0.3);
+  /* Figma (2320:79493): contorno das abas em areia (accent/quaternary) a 30%. */
+  border-bottom: 1.5px solid rgba(137, 129, 119, 0.3);
 }
 
 .unit-tab {
@@ -34,7 +33,7 @@
 }
 
 .unit-tab.is-active {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   border-bottom-color: var(--text-primary-dark);
 }
 
@@ -75,22 +74,23 @@
 }
 
 .unit-panel__eyebrow {
+  /* Figma: "CICLO BÁSICO" em Montserrat ExtraBold 14, cor accent/quaternary (#898177). */
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary-dark);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__hours {
-  /* Figma: selo "Total: Xh" com fundo light/accent/secondary a 15% e
-     texto no accent quaternário (Bold). */
+  /* Figma (2320:79493): selo "Total: Xh" com fundo areia a 15%, padding 4px 6px,
+     texto no accent quaternário (ExtraBold). */
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-micro);
-  background-color: rgba(80, 123, 130, 0.15);
+  background-color: rgba(137, 129, 119, 0.15);
   border-radius: var(--spacing-micro);
-  padding: var(--spacing-micro) var(--spacing-extra-small);
+  padding: var(--spacing-micro) 6px;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-brand-quaternary);
 }
 
@@ -107,9 +107,9 @@
 }
 
 .unit-panel__divider {
-  /* Figma: divisor no accent secundário (teal) a 30% de opacidade. */
+  /* Figma (2320:79493): divisor dourado (accent/tertiary #b09435) a 30% de opacidade. */
   height: 1px;
-  background-color: rgba(78, 141, 151, 0.3);
+  background-color: rgba(176, 148, 53, 0.3);
   border: none;
 }
 
@@ -121,7 +121,7 @@
 
 .unit-panel__group-title {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-primary-dark);
 }
 
@@ -136,7 +136,7 @@
   justify-content: space-between;
   gap: var(--spacing-medium);
   padding: var(--spacing-small) 0;
-  border-bottom: 1px solid rgba(80, 123, 130, 0.3);
+  border-bottom: 1px solid rgba(137, 129, 119, 0.3);
 }
 
 .unit-panel__discipline-name {
@@ -153,7 +153,8 @@
 
 .unit-panel__more {
   align-self: center;
-  font-size: var(--font-size-xl);
+  /* Figma: "Ver mais +" Montserrat Bold 20, cor #898177. */
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   color: var(--text-brand-quaternary);
 }

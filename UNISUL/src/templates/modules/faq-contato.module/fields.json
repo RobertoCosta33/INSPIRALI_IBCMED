@@ -9,7 +9,7 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Tem alguma dúvida sobre a Medicina na Unisul?"
+    "default": "Tem alguma dúvida sobre a Medicina Unisul?"
   },
   {
     "name": "show_form",
@@ -65,11 +65,11 @@
     ],
     "default": [
       {
-        "question": "Por que fazer Medicina na Unisul?",
+        "question": "Por que fazer Medicina na UniSul?",
         "answer": "<p>A Unisul integra o ecossistema Inspirali, com a colaboração acadêmica do Hospital Israelita Albert Einstein na graduação. Você tem formação técnico-científica de excelência, humanização do cuidado e compromisso com a responsabilidade social, em uma região com forte rede de prática em saúde.</p>"
       },
       {
-        "question": "Quanto tempo tem a faculdade de Medicina?",
+        "question": "Quanto dura a faculdade de Medicina?",
         "answer": "<p>O curso de Medicina tem duração mínima de 6 anos (12 semestres), divididos entre o ciclo básico, o ciclo clínico e o internato — período de imersão prática em hospitais e serviços de saúde.</p><p>Na Unisul, essa jornada é acompanhada de perto por um corpo docente especializado e pela parceria acadêmica com o Hospital Israelita Albert Einstein, através do Ecossistema Inspirali.</p>"
       },
       {

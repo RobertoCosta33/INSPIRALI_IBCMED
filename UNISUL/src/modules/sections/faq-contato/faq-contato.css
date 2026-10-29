@@ -4,7 +4,7 @@
    ==================================================================== */
 
 .faq-contato {
-  background-color: var(--surface-canvas);
+  background-color: var(--surface-primary-subtle);
   padding: 72px var(--page-gutter);
   display: flex;
   gap: 80px;
@@ -52,15 +52,14 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-extrabold);
   text-transform: uppercase;
-  color: var(--text-brand-quaternary);
+  color: var(--text-brand);
 }
 
 .faq-contato__title h2 {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
-  /* Figma (1100:14380): título em #464647, um tom acima do heading. */
-  color: #464647;
+  color: var(--text-primary-dark);
 }
 
 .faq-contato__form {
@@ -73,9 +72,10 @@
 }
 
 .faq-contato__form-title {
+  /* Figma (Title 6): Bold 16px, line-height 1.16. */
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: var(--text-primary-dark);
 }
 
@@ -91,7 +91,7 @@
   gap: var(--spacing-medium);
   height: 58px;
   padding: var(--spacing-extra-small) var(--spacing-micro);
-  border-bottom: 1px solid rgba(122, 122, 122, 0.55);
+  border-bottom: 1px solid #7a7a7a;
 }
 
 .faq-contato__field input {
@@ -119,8 +119,10 @@
   border-radius: var(--radius-small);
   background-color: var(--surface-brand-quaternary);
   color: var(--text-inverted);
+  /* Figma: botão Enviar em Bold 14px. */
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   transition: background-color 0.4s ease;
 }
 
@@ -133,11 +135,11 @@
 .faq-contato__disclaimer {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-relaxed);
-  color: #3d3d3d;
+  color: var(--text-primary-dark);
 }
 
 .faq-contato__disclaimer a {
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   text-decoration: underline;
 }
 
@@ -159,14 +161,15 @@
 
 .faq-item__trigger {
   width: 100%;
-  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  padding: 16px 56px;
+  /* Figma (Pergunta frequente/Top): padding 24px, Bold 16px. */
+  padding: var(--spacing-large);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: var(--text-primary-dark);
   text-align: left;
 }
@@ -215,7 +218,7 @@
 }
 
 .faq-item__panel-inner {
-  padding: 0 56px var(--spacing-medium);
+  padding: 0 var(--spacing-large) var(--spacing-large);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);

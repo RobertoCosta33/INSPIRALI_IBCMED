@@ -30,7 +30,7 @@ Cada `*.module/` tem `meta.json` ("<Nome> - UNA"), `fields.json`, `module.html`,
 
 ## Decisões específicas da UNA
 
-- **Identidade**: cor de marca `#4E8D97`, neutro escuro `#313132`, fonte **Montserrat** (Google Fonts,
+- **Identidade**: cor de marca (dourado) `#B09435`, neutro escuro `#313132`, areia `#898177`, cinza claro `#f3f4f6`, fonte **Montserrat** (Google Fonts,
   pesos 200–800), paleta "Inspirali" de `UNA/src/css/tokens.css`. O link de fonte em `base.html` é o mesmo de `pages/index.html`.
 - **Sem widget flutuante**: `UNA/src` não tem `floating-contact`, então não existe esse módulo e ele não é chamado em `base.html`.
 - **Header**: a logo da UNA é uma imagem única (ícone + "UNA MEDICINA" + "Excelência Acadêmica Einstein"). Por isso
@@ -60,14 +60,14 @@ Os campos de imagem têm como default URLs de `https://51397625.fs1.hubspotuserc
 (mesmo host/ID da UAM, pasta `UNA-assets`). **Nada foi enviado**: é preciso subir os arquivos de `UNA/src/public/`
 para o File Manager em `UNA-assets/` com este mapeamento (o mesmo da UAM):
 
-| Origem em `UNA/src/public/` | Destino no File Manager |
-|---|---|
-| `images/shared/*` | `UNA-assets/shared/` |
-| `images/*` (raiz) e `images/institucional/*` | `UNA-assets/misc/` |
-| `images/campus-gallery/**` | `UNA-assets/campus-gallery/**` |
-| `images/docente/*` | `UNA-assets/docente/` |
-| `icons/*` usados em campos editáveis (ícones de abas, pilares, estatísticas) | `UNA-assets/field-icons/` |
-| `docs/*` | `UNA-assets/docs/` (hoje vazio: os PDFs da matriz apontam para `estaticos.animaeducacao.com.br`) |
+| Origem em `UNA/src/public/`                                                  | Destino no File Manager                                                                          |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `images/shared/*`                                                            | `UNA-assets/shared/`                                                                             |
+| `images/*` (raiz) e `images/institucional/*`                                 | `UNA-assets/misc/`                                                                               |
+| `images/campus-gallery/**`                                                   | `UNA-assets/campus-gallery/**`                                                                   |
+| `images/docente/*`                                                           | `UNA-assets/docente/`                                                                            |
+| `icons/*` usados em campos editáveis (ícones de abas, pilares, estatísticas) | `UNA-assets/field-icons/`                                                                        |
+| `docs/*`                                                                     | `UNA-assets/docs/` (hoje vazio: os PDFs da matriz apontam para `estaticos.animaeducacao.com.br`) |
 
 Arquivos referenciados (49):
 
@@ -79,6 +79,16 @@ Arquivos referenciados (49):
 
 Ícones fixos (setas, redes sociais, busca, etc.) e `watermark-m.svg` continuam via `get_asset_url()` a partir de `templates/public/`
 (Design Manager) — não precisam ir ao File Manager. Lembrete: `.webp`/`.ico` e vídeos não são aceitos pelo Design Manager.
+
+## Estado da sincronização
+
+Sincronizado com `UNA/src` após a segunda rodada de cores do Figma (paleta Inspirali com dourado `#b09435` /
+`#313132` / areia `#898177` / cinza claro `#f3f4f6`; `#f7f8f8` só na Metodologia e no botão "Conheça a Una", como no Figma da UNA).
+`css/`, `module.css` e os ícones de `public/icons` são cópia do `src` (os `module.css` mantêm só as URLs do File Manager
+no lugar dos caminhos locais). O header continua com a logo única (`una-header-logo.png`, agora 72px de altura no desktop,
+busca só com contorno `#313132` e CTA escuro `#313132`). Os ícones recoloridos que são lidos de campos
+(`field-icons/`: `icon-school-active`, `icon-sync-alt-active`, `icon-license-active`, `icon-award`, `icon-users`, `icon-map-pin`,
+`icon-shield-check`, `icon-teacher`, `icon-favourite`, `icon-location-star`) precisam ser reenviados ao File Manager.
 
 ## Próximos passos (antes de publicar)
 

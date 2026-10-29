@@ -162,7 +162,7 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(78, 141, 151, 0.2);
+  background-color: rgba(176, 148, 53, 0.2);
 }
 
 .card-carousel__dot.is-active {
@@ -182,7 +182,9 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-small);
-  background-color: var(--surface-brand-soft);
+  /* Figma (2258:30028): botão inativo em dourado a 35%, ativo em dourado
+     sólido, com a seta branca. */
+  background-color: rgba(176, 148, 53, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,10 +196,6 @@
 
 .card-carousel__nav-btn:disabled {
   cursor: not-allowed;
-}
-
-.card-carousel__nav-btn:disabled img {
-  opacity: 0.4;
 }
 
 .card-carousel__nav-btn img {

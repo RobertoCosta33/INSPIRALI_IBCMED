@@ -83,13 +83,14 @@
   justify-content: center;
   gap: var(--spacing-medium);
   height: 64px;
-  padding: var(--spacing-large);
+  padding: 20px var(--spacing-large);
   border-radius: var(--radius-small);
-  border: 1px solid var(--border-brand-primary);
+  border: 1px solid var(--surface-brand-primary-dark);
   background-color: var(--surface-inverted);
   backdrop-filter: blur(20px);
-  color: var(--text-brand);
-  font-size: var(--font-size-sm);
+  /* Figma: texto no accent primário (#313132), Bold 20. */
+  color: var(--text-brand-dark);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }

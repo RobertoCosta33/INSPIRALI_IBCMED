@@ -22,6 +22,7 @@
           data-campus="{{ campus.campus_key }}"
           data-city="{{ campus.city }}"
           data-address="{{ campus.address }}"
+          data-map="{{ campus.map_url }}"
           data-cta="{{ campus.cta_url.url.href }}"
           aria-pressed="{% if loop.first %}true{% else %}false{% endif %}"
         >
@@ -57,8 +58,15 @@
           />
           <span data-campus-city>{{ module.campuses[0].city }}</span>
         </p>
-        <p class="campus-detail__address" data-campus-address>
-          {{ module.campuses[0].address }}
+        <p class="campus-detail__address">
+          <span data-campus-address>{{ module.campuses[0].address }}</span> -
+          <a
+            href="{{ module.campuses[0].map_url }}"
+            target="_blank"
+            rel="noopener"
+            data-campus-map
+            >Ver no mapa</a
+          >
         </p>
       </div>
       <a

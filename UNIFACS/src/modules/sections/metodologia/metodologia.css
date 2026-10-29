@@ -37,6 +37,11 @@
   gap: var(--spacing-small);
 }
 
+/* Figma (2320:79496): 12px entre os disclosures (o gap do flex já cobre; zera a margem do componente). */
+.methodology__list .accordion-item + .accordion-item {
+  margin-top: 0;
+}
+
 @media (max-width: 1024px) {
   .methodology {
     flex-direction: column;

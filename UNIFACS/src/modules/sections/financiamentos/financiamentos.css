@@ -48,7 +48,8 @@
 
 .financing-highlight {
   position: relative;
-  background-color: var(--surface-brand-primary);
+  /* Figma: card de valor mensal no accent primário (#313132). */
+  background-color: var(--surface-brand-primary-dark);
   border-radius: var(--radius-small);
   padding: 20px 32px;
   min-height: 180px;
@@ -76,6 +77,16 @@
   pointer-events: auto;
 }
 
+.financing-highlight__campus {
+  /* Figma (2320:79498): nome da unidade em Montserrat SemiBold 16, branco a 85%. */
+  margin-bottom: var(--spacing-extra-small);
+  color: var(--text-inverted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.85;
+}
+
 .financing-highlight__label {
   color: var(--text-inverted);
   font-size: var(--font-size-xs);
@@ -92,7 +103,7 @@
 }
 
 .financing-highlight__note {
-  padding-top: 6px;
+  margin-top: -2px;
   color: var(--text-inverted);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
@@ -101,11 +112,12 @@
 }
 
 .financing-highlight__disclaimer {
-  margin-top: var(--spacing-extra-small);
+  /* Figma: observação em Regular 14, branco a 75%. */
   color: var(--text-inverted);
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.75;
 }
 
 .financing-programs {

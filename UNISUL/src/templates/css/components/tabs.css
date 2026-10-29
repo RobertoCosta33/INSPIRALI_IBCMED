@@ -4,7 +4,7 @@
    ==================================================================== */
 
 .unit-card {
-  /* Figma (Information card/Matriz curricular): fundo creme sólido. */
+  /* Figma (Information card/Matriz curricular): fundo cinza claro sólido. */
   width: 100%;
   background-color: var(--surface-primary-subtle);
   border-radius: var(--radius-medium);
@@ -21,6 +21,11 @@
 .unit-tab {
   flex: 1 1 0;
   min-width: 90px;
+  /* Figma: abas com 56px de altura, texto centralizado. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
   padding: var(--spacing-small);
   text-align: center;
   font-size: var(--font-size-sm);
@@ -78,13 +83,13 @@
 }
 
 .unit-panel__hours {
-  /* Figma: chip teal a 15% de opacidade, texto em areia. */
+  /* Figma: chip areia a 20% de opacidade, texto em areia. */
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-micro);
-  background-color: rgba(80, 123, 130, 0.15);
+  background-color: rgba(137, 129, 119, 0.15);
   border-radius: var(--spacing-micro);
-  padding: var(--spacing-micro) var(--spacing-extra-small);
+  padding: var(--spacing-micro) 6px;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-extrabold);
   color: var(--text-brand-quaternary);
@@ -99,12 +104,13 @@
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .unit-panel__divider {
   height: 1px;
-  background-color: var(--border-brand-soft);
+  /* Figma: divisor dourado (#b09435) a 30% de opacidade. */
+  background-color: rgba(176, 148, 53, 0.3);
   border: none;
 }
 
@@ -136,18 +142,20 @@
 
 .unit-panel__discipline-name {
   font-size: var(--font-size-sm);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .unit-panel__discipline-hours {
   font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
   color: var(--text-brand-quaternary);
   white-space: nowrap;
 }
 
 .unit-panel__more {
   align-self: center;
-  font-size: var(--font-size-xl);
+  /* Figma: "Ver mais +" em Bold 20px. */
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   color: var(--text-brand-quaternary);
 }

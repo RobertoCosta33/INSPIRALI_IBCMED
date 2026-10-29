@@ -19,7 +19,7 @@
   right: -175px;
   width: 570px;
   height: 534px;
-  background-color: rgba(78, 141, 151, 0.2);
+  background-color: rgba(176, 148, 53, 0.2);
   -webkit-mask-image: url("https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/shared/grupo-inspirali-broto-una.png");
   mask-image: url("https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/shared/grupo-inspirali-broto-una.png");
   -webkit-mask-size: contain;
@@ -84,11 +84,10 @@
   flex-wrap: wrap;
 }
 
-/* No Figma (1044:31070) o fundo do card é o teal claro (#edf1f0), não o
-   cinza translúcido de `--surface-secondary-subtle` — o .stat-card
-   base já usa --surface-brand-primary-light; mantido explícito aqui. */
+/* No Figma (2258:26704) o fundo do card é branco com borda areia a 20% —
+   o .stat-card base já usa --surface-inverted; mantido explícito aqui. */
 #grupo-inspirali .stat-card {
-  background-color: var(--surface-brand-primary-light);
+  background-color: var(--surface-inverted);
 }
 
 .lifelong {
@@ -113,7 +112,8 @@
 
 .lifelong__label {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  /* Figma (2258:26742): "LIFELONG LEARNING" em Subtitle 1 (ExtraBold 16). */
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
@@ -161,7 +161,8 @@
   height: 32px;
   border-radius: 16px;
   background-color: var(--surface-brand-primary);
-  color: var(--text-inverted);
+  /* Figma (2258:26749): número do passo em #f7f8f8 (canvas). */
+  color: var(--surface-canvas);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,15 +204,15 @@
 }
 
 .partner-logos {
-  /* Figma (1044:31145): fundo teal claro (#edf1f0) + borda teal a 20% —
+  /* Figma (2258:26778): faixa de logos em branco com borda areia a 20% —
      igual ao `.stat-card` desta seção. */
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-medium);
-  background-color: var(--surface-brand-primary-light);
-  border: 1px solid var(--border-brand-soft);
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--surface-brand-quaternary-soft);
   border-radius: 12px;
   padding: var(--spacing-extra-large);
   overflow-x: auto;

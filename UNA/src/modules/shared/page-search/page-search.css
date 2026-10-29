@@ -90,7 +90,7 @@
 
 /* Destaques gerados pelo mark.js. Cor e texto fixos (não herdam do
    elemento ao redor) para garantir contraste tanto em fundos claros quanto
-   em cards escuros (ex.: card teal de Investimento Mensal). */
+   em cards escuros (ex.: card escuro de Investimento Mensal). */
 .page-search-highlight {
   background-color: #ffe08a;
   color: #111827;

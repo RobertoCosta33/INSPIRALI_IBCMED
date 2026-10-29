@@ -144,7 +144,7 @@
   margin-top: 24px;
   padding: 4px 8px;
   border-radius: var(--radius-small);
-  background-color: rgba(122, 111, 102, 0.4);
+  background-color: rgba(137, 129, 119, 0.4);
   backdrop-filter: blur(20px);
 }
 
@@ -159,7 +159,7 @@
   background-color: var(--surface-brand-quaternary);
 }
 
-/* Figma: o eyebrow desta seção usa "light/accent/secondary" (#507b82). */
+/* Figma: o eyebrow desta seção usa "light/accent/tertiary" (#b09437). */
 #corpo-docente .eyebrow {
   color: var(--text-brand-alt);
 }

@@ -75,7 +75,7 @@
     "name": "ppc_label",
     "label": "Texto do botão (projeto pedagógico)",
     "type": "text",
-    "default": "Projeto pedagógico"
+    "default": "Projeto Pedagógico"
   },
   {
     "name": "ppc_url",

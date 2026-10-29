@@ -60,13 +60,13 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(78, 141, 151, 0.2);
+  background-color: rgba(176, 148, 53, 0.2);
   cursor: pointer;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .dna-pillars-dot:hover {
-  background-color: rgba(78, 141, 151, 0.4);
+  background-color: rgba(176, 148, 53, 0.4);
 }
 
 .dna-pillars-dot.is-active {
