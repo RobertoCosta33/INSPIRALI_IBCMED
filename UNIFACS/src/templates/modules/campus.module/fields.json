@@ -1,0 +1,167 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "ONDE A FORMAÇÃO ACONTECE"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Estrutura completa em um só lugar"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Laboratórios equipados e ambiente acolhedor em Salvador para uma formação médica de alta qualidade."
+  },
+  {
+    "name": "panel_title",
+    "label": "Título do painel",
+    "type": "text",
+    "default": "Nossa unidade"
+  },
+  {
+    "name": "panel_text",
+    "label": "Texto do painel",
+    "type": "richtext",
+    "default": "Infraestrutura de excelência para o seu sucesso: auditório, biblioteca, laboratórios de última geração e muito mais, projetados para o seu desenvolvimento acadêmico e profissional."
+  },
+  {
+    "name": "campus_name",
+    "label": "Nome do campus (selo sobre a foto e legenda das imagens)",
+    "type": "text",
+    "default": "Salvador"
+  },
+  {
+    "name": "campus_key",
+    "label": "Identificador interno do campus (sem espaços)",
+    "type": "text",
+    "default": "salvador"
+  },
+  {
+    "name": "city",
+    "label": "Cidade / UF",
+    "type": "text",
+    "default": "Salvador, BA"
+  },
+  {
+    "name": "address_text",
+    "label": "Endereço (texto antes do link do mapa)",
+    "type": "text",
+    "default": "Av. Luís Viana Filho, 3100 - 3146, Pituaçu - Imbuí • CEP 41720-200 -"
+  },
+  {
+    "name": "map_label",
+    "label": "Texto do link do mapa",
+    "type": "text",
+    "default": "Ver no mapa"
+  },
+  {
+    "name": "map_url",
+    "label": "Link do mapa",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://maps.app.goo.gl/DhouPDW3Xbza5tdc9",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": true,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Conheça mais da unidade"
+  },
+  {
+    "name": "cta_url",
+    "label": "Link do botão",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.unifacs.br/unidades/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": true,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "photos",
+    "label": "Fotos do campus",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 6
+    },
+    "children": [
+      {
+        "name": "image",
+        "label": "Imagem",
+        "type": "image",
+        "default": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/campus/biblioteca.jpg",
+          "alt": "Biblioteca — campus Salvador"
+        }
+      },
+      {
+        "name": "caption",
+        "label": "Legenda",
+        "type": "text",
+        "default": "Biblioteca"
+      }
+    ],
+    "default": [
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/campus/biblioteca.jpg",
+          "alt": "Biblioteca — campus Salvador"
+        },
+        "caption": "Biblioteca"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/campus/laboratorio-de-anatomia.jpg",
+          "alt": "Laboratório de anatomia — campus Salvador"
+        },
+        "caption": "Laboratório de anatomia"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/campus/laboratorio-de-simulacao-clinica.jpg",
+          "alt": "Laboratório de simulação clínica — campus Salvador"
+        },
+        "caption": "Laboratório de simulação clínica"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/campus/laboratorio-morfofuncional.jpg",
+          "alt": "Laboratório morfofuncional — campus Salvador"
+        },
+        "caption": "Laboratório morfofuncional"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/campus/simulacao-cuidados-neonatais.jpg",
+          "alt": "Simulação de cuidados neonatais — campus Salvador"
+        },
+        "caption": "Simulação de cuidados neonatais"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/campus/area-de-convivencia.jpg",
+          "alt": "Área de convivência — campus Salvador"
+        },
+        "caption": "Área de convivência"
+      }
+    ]
+  }
+]

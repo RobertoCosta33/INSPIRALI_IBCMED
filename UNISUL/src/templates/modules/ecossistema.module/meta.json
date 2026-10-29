@@ -1,0 +1,17 @@
+{
+  "label": "Ecossistema de Cuidado - UNISUL",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Carrossel \"Ecossistema de Cuidado e Prática\".",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "ecossistema"
+  ],
+  "is_available_for_new_content": true
+}

@@ -1,0 +1,189 @@
+<section
+  class="section section--subtle"
+  id="processos-seletivos"
+  aria-labelledby="processo-seletivo-title"
+>
+  <div class="selection-intro">
+    {% if module.eyebrow %}
+    <p class="eyebrow">{{ module.eyebrow }}</p>
+    {% endif %}
+    <h1 class="section-intro__title" id="processo-seletivo-title">
+      <span class="text-heading">{{ module.title_line_1 }}</span>
+      <span class="text-brand">{{ module.title_line_2 }}</span>
+    </h1>
+    <div class="section-intro__text">{{ module.intro_text }}</div>
+    {% if module.guidance_text %}
+    <div class="selection-intro__guidance">{{ module.guidance_text }}</div>
+    {% endif %}
+  </div>
+
+  <div class="selection-card" data-tabs>
+    <img
+      class="selection-card__bg"
+      src="{{ module.card_bg_image.src }}"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <div class="selection-card__header">
+      <p class="selection-card__eyebrow">{{ module.card_eyebrow }}</p>
+      <p class="selection-card__lead">{{ module.card_lead }}</p>
+    </div>
+
+    <div class="selection-card__tabs" role="tablist">
+      {% for tab in module.tabs %}
+      <button
+        type="button"
+        class="selection-card__tab{% if loop.first %} is-active{% endif %}"
+        data-tab="tab-{{ loop.index0 }}"
+        role="tab"
+      >
+        <img
+          class="selection-card__tab-icon selection-card__tab-icon--active"
+          src="{{ tab.icon.src }}"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+        <img
+          class="selection-card__tab-icon selection-card__tab-icon--inactive"
+          src="{{ tab.icon_inactive.src }}"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+        {{ tab.tab_label }}
+      </button>
+      {% endfor %}
+    </div>
+
+    {% for tab in module.tabs %}
+    <div
+      class="selection-card__panel"
+      data-tab-panel="tab-{{ loop.index0 }}"
+      {%
+      if
+      not
+      loop.first
+      %}
+      hidden{%
+      endif
+      %}
+    >
+      <div class="selection-card__info">
+        <span class="selection-status">{{ tab.status_label }}</span>
+        <p class="selection-card__name">{{ tab.modality_name }}</p>
+        <div class="selection-card__description">{{ tab.description }}</div>
+      </div>
+      {% if tab.facts %}
+      <div class="selection-card__facts">{{ tab.facts }}</div>
+      {% endif %}
+      <div class="selection-card__actions">
+        <a
+          class="selection-card__cta"
+          href="{{ tab.cta_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ tab.cta_label }}
+          <img
+            src="{{ get_asset_url('../../public/icons/icon-arrow-right-filled.svg') }}"
+            alt=""
+            aria-hidden="true"
+            width="24"
+            height="24"
+          />
+        </a>
+        <div class="selection-card__links-row">
+          {% if module.show_convocados_link %}
+          <a
+            class="selection-card__link"
+            href="{{ module.convocados_url.url.href }}"
+            >Lista Convocados</a
+          >
+          {% endif %}
+          <a class="selection-card__link" href="#" data-open-edital-modal
+            >{{ tab.edital_link_label }}</a
+          >
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="edital-modal" data-edital-modal hidden aria-hidden="true">
+  <div class="edital-modal__backdrop" data-edital-modal-close></div>
+  <div
+    class="edital-modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="edital-modal-title"
+  >
+    <div class="edital-modal__header">
+      <div class="edital-modal__header-text">
+        <p id="edital-modal-title">{{ module.modal_title }}</p>
+        <div>{{ module.modal_subtitle }}</div>
+      </div>
+      <button
+        type="button"
+        class="edital-modal__close"
+        data-edital-modal-close
+        aria-label="Fechar"
+      >
+        <img
+          src="{{ get_asset_url('../../public/icons/icon-modal-close.svg') }}"
+          alt=""
+          aria-hidden="true"
+        />
+      </button>
+    </div>
+
+    <div class="edital-modal__list">
+      {% for item in module.modal_items %}
+      <div class="edital-item" data-accordion-item>
+        <button
+          type="button"
+          class="edital-item__trigger"
+          data-accordion-trigger
+          aria-expanded="false"
+        >
+          <span>{{ item.title }}</span>
+          <span class="edital-item__icon">
+            <img
+              class="icon-plus"
+              src="{{ get_asset_url('../../public/icons/icon-plus-teal.svg') }}"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="icon-minus"
+              src="{{ get_asset_url('../../public/icons/icon-minus-teal.svg') }}"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+        <div class="edital-item__panel" data-accordion-panel>
+          <div class="edital-item__panel-inner">
+            {% for link in item.links %}
+            <a
+              class="edital-item__link"
+              href="{{ link.url.url.href }}"
+              target="_blank"
+              rel="noopener"
+              >→ {{ link.link_label }}</a
+            >
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{{ require_css(get_asset_url('./module.css')) }} {{
+require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

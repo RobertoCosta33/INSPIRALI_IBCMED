@@ -1,0 +1,17 @@
+{
+  "label": "Nossos Campus - UNISUL",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Seletor de campus (Palhoça, Tubarão) com galeria de fotos/vídeo e lightbox.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "campus"
+  ],
+  "is_available_for_new_content": true
+}

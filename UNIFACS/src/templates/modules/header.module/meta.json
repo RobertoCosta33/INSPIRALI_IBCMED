@@ -1,0 +1,20 @@
+{
+  "label": "Header - UNIFACS",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Cabeçalho institucional + menu do curso. Compartilhado em todas as páginas da UNIFACS.",
+  "host_template_types": [
+    "PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "header",
+    "navigation"
+  ],
+  "is_available_for_new_content": false
+}

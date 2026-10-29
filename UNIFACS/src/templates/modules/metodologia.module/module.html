@@ -1,0 +1,69 @@
+<section
+  class="section section--subtle"
+  id="metodologia"
+  aria-labelledby="metodologia-title"
+>
+  <div class="methodology">
+    <div class="methodology__intro">
+      <div>
+        <p class="eyebrow">{{ module.eyebrow }}</p>
+        <h2 class="section-intro__title" id="metodologia-title">
+          {{ module.title }}
+        </h2>
+        <div
+          class="section-intro__text"
+          style="margin-top: var(--spacing-small)"
+        >
+          {{ module.intro_text }}
+        </div>
+      </div>
+      <div class="methodology__media">
+        <img
+          class="methodology__image"
+          src="{{ module.media_image.src }}"
+          alt="{{ module.media_image.alt }}"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <div class="methodology__list">
+      {% for item in module.accordion_items %}
+      <div class="accordion-item" data-accordion-item>
+        <button
+          class="accordion-trigger"
+          data-accordion-trigger
+          aria-expanded="false"
+        >
+          <span class="accordion-trigger__title">{{ item.title }}</span>
+          <span class="accordion-trigger__icon">
+            <img
+              class="icon-plus"
+              src="{{ get_asset_url('../../public/icons/icon-plus-teal.svg') }}"
+              alt=""
+              width="16"
+              height="16"
+            />
+            <img
+              class="icon-minus"
+              src="{{ get_asset_url('../../public/icons/icon-minus-teal.svg') }}"
+              alt=""
+              width="16"
+              height="16"
+            />
+          </span>
+        </button>
+        <hr class="accordion-divider" />
+        <div class="accordion-panel" data-accordion-panel>
+          <div class="accordion-panel__inner">
+            <div class="accordion-panel__text">{{ item.text }}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ require_css(get_asset_url('./module.css')) }} {{
+require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

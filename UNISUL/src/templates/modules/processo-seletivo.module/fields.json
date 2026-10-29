@@ -1,0 +1,703 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow (deixe vazio para ocultar)",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "title_line_1",
+    "label": "Título (linha 1, cor escura)",
+    "type": "text",
+    "default": "Medicina Unisul"
+  },
+  {
+    "name": "title_line_2",
+    "label": "Título (linha 2, cor de marca)",
+    "type": "text",
+    "default": "| Excelência Acadêmica Einstein"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "<p>Um formação médica que une excelência técnico-científica, humanização e responsabilidade social através de uma visão integral do ser humano, da sociedade e do planeta.</p><p>Parte do ecossistema de ensino médico Inspirali, com colaboração do Einstein Hospital Israelita em seu desenvolvimento acadêmico.</p>"
+  },
+  {
+    "name": "guidance_text",
+    "label": "Texto de orientação (deixe vazio para ocultar)",
+    "type": "richtext",
+    "default": ""
+  },
+  {
+    "name": "card_bg_image",
+    "label": "Imagem de fundo do card",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/misc/processo-seletivo-bg.png",
+      "alt": ""
+    }
+  },
+  {
+    "name": "card_eyebrow",
+    "label": "Eyebrow do card",
+    "type": "text",
+    "default": "Ingresso 2027.1"
+  },
+  {
+    "name": "card_lead",
+    "label": "Chamada do card",
+    "type": "text",
+    "default": "Escolha sua forma de ingresso:"
+  },
+  {
+    "name": "tabs",
+    "label": "Modalidades de ingresso (abas)",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "icon",
+        "label": "Ícone da aba (estado ativo — fundo claro)",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "icon_inactive",
+        "label": "Ícone da aba (estado inativo — fundo escuro)",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "tab_label",
+        "label": "Texto da aba",
+        "type": "text",
+        "default": "Enem 27.1"
+      },
+      {
+        "name": "status_label",
+        "label": "Status",
+        "type": "text",
+        "default": "Inscrições Abertas"
+      },
+      {
+        "name": "modality_name",
+        "label": "Nome da modalidade",
+        "type": "text",
+        "default": "Enem 27.1"
+      },
+      {
+        "name": "description",
+        "label": "Descrição",
+        "type": "richtext",
+        "default": ""
+      },
+      {
+        "name": "facts",
+        "label": "Dados adicionais (datas, investimento — opcional)",
+        "type": "richtext",
+        "default": ""
+      },
+      {
+        "name": "cta_label",
+        "label": "Texto do botão de inscrição",
+        "type": "text",
+        "default": "Quero me inscrever para 27.1"
+      },
+      {
+        "name": "cta_url",
+        "label": "Link de inscrição",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://fichainscricao.inspirali.com/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "edital_link_label",
+        "label": "Texto do link \"Consultar Edital\"",
+        "type": "text",
+        "default": "Consultar Edital"
+      }
+    ],
+    "default": [
+      {
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/field-icons/icon-school-active.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/field-icons/icon-school-inactive.svg",
+          "alt": ""
+        },
+        "tab_label": "Enem 27.1",
+        "status_label": "Inscrições Abertas",
+        "modality_name": "Enem 27.1",
+        "description": "Ingresse direto usando sua melhor nota do Enem dos últimos 10 anos.",
+        "facts": "<p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*.</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 vinculada à pontualidade.</p>",
+        "cta_label": "Quero me inscrever para 27.1",
+        "cta_url": {
+          "url": {
+            "content_id": null,
+            "href": "https://fichainscricao.inspirali.com/concurso/18400",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "edital_link_label": "Consultar Edital"
+      },
+      {
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/field-icons/icon-sync-alt-active.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/field-icons/icon-sync-alt-inactive.svg",
+          "alt": ""
+        },
+        "tab_label": "Transferência Externa 27.1",
+        "status_label": "Inscrições Abertas",
+        "modality_name": "Transferência Externa 27.1",
+        "description": "Venha de outra instituição de forma simples.",
+        "facts": "<p><strong>Data da Prova:</strong> 29/10/2026</p><p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*.</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 vinculada à pontualidade.</p><p><strong>Como funciona:</strong> Prova online para alunos de outras instituições mediante taxa de inscrição.</p>",
+        "cta_label": "Quero me inscrever para 27.1",
+        "cta_url": {
+          "url": {
+            "content_id": null,
+            "href": "https://fichainscricao.inspirali.com/concurso/18505",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "edital_link_label": "Consultar Edital"
+      },
+      {
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/field-icons/icon-license-active.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/field-icons/icon-license-inactive.svg",
+          "alt": ""
+        },
+        "tab_label": "Portador de Diploma 27.1",
+        "status_label": "Inscrições Abertas",
+        "modality_name": "Portador de Diploma 27.1",
+        "description": "Ingresse em Medicina via análise curricular da sua primeira graduação.",
+        "facts": "<p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*.</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 vinculada à pontualidade.</p><p><strong>Como funciona:</strong> Para quem já possui uma graduação e busca uma nova jornada na Medicina. Análise de currículo rápida e direta.</p>",
+        "cta_label": "Quero me inscrever para 27.1",
+        "cta_url": {
+          "url": {
+            "content_id": null,
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "edital_link_label": "Consultar Edital"
+      }
+    ]
+  },
+  {
+    "name": "show_convocados_link",
+    "label": "Mostrar link \"Lista Convocados\"",
+    "type": "boolean",
+    "default": false
+  },
+  {
+    "name": "convocados_url",
+    "label": "Link \"Lista Convocados\"",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "href": "#",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "modal_title",
+    "label": "Título do modal de editais",
+    "type": "text",
+    "default": "Processo Seletivo Medicina"
+  },
+  {
+    "name": "modal_subtitle",
+    "label": "Subtítulo do modal",
+    "type": "richtext",
+    "default": "Acompanhe aqui os editais, inscrições, resultados e outros documentos da sua forma de entrada de escolha!"
+  },
+  {
+    "name": "modal_items",
+    "label": "Itens do modal de editais",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 15,
+      "default": 8
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Título do item",
+        "type": "text",
+        "default": "Vestibular Tradicional 27.1 - Prova 18/10"
+      },
+      {
+        "name": "links",
+        "label": "Links (documentos, inscrição, etc.)",
+        "type": "group",
+        "occurrence": {
+          "min": 0,
+          "max": 15,
+          "default": 3
+        },
+        "children": [
+          {
+            "name": "link_label",
+            "label": "Texto do link",
+            "type": "text",
+            "default": "Edital"
+          },
+          {
+            "name": "url",
+            "label": "URL (PDF ou página)",
+            "type": "link",
+            "default": {
+              "url": {
+                "content_id": null,
+                "href": "#",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "title": "Vestibular Tradicional 27.1 - Prova 18/10",
+        "links": [
+          {
+            "link_label": "Listagem Final de Inscritos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260929150925/Uam_-_Listagem_Final_Inscritos_Vestibular_Tradicional_29.09.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Listagem Preliminar de Inscritos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260925175918/Uam_-_Listagem_Preliminar_Inscritos_Vestibular_Trad_Retificado_25.09.26.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Manual do candidato - Etapa 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260812140526/Inspira_Manual_Candidato.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Atividades Etapa 1 - Acesse aqui",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://inspira.ada-shorts.com/app",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261008152747/Uam_Edital_VT1_Presencial_Vunesp_27.1_08.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260714143940/Uam_Errata_1_VT1_Presencial_Vunesp_27.1_14.07.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 2",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260731133219/Uam_Errata_2_VT1_Presencial_Vunesp_27.1_31.07.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 3",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260925175917/Uam_Errata_3_VT1_Presencial_Vunesp_27.1_25.09.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 4",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261008152747/Uam_Errata_4_VT1_Presencial_Vunesp_27.1_08.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260731133219/FAQ_Vestibular_Tradicional_Vunesp.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Certificações Internacionais 27.1",
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261019111603/Uam_Processo_de_Certifica%C3%A7%C3%A3o_Internacional_2027.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261019111837/FAQ_Certifica%C3%A7%C3%A3o_Internacional.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18436",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Processo Enem 27.1",
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261016173953/Uam_Edital_Processo_Enem_2027.1_16.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261009134802/Uam_Errata_1_Processo_Enem_2027.1_09.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 2",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261016173952/Uam_Errata_2_Processo_Enem_2027.1_16.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260922153215/FAQ_Processo_Enem_1.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18400",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Transferência Externa 27.1 - Prova 29/10",
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261005135042/Uam_Edital_1_Transferncia_Externa_2027.1_05.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261005135042/FAQ_Transferncia_Externa.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18505",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Realize aqui o upload dos documentos obrigatórios para a análise curricular",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.anhembi.br/inscreva/areacandidato/login",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Portador de Diploma 27.1",
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261005181905/Uam_Edital_Obten%C2%BA%C3%BAo_Novo_Ttulo_2027.1._05.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261006103123/FAQ_Obten%C3%A7%C3%A3o_de_Novo_T%C3%ADtulo_-_Portador_de_Diploma_27.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18429",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Retorno 27.1",
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261005142755/Uam_Edital_Retorno_2027.1_05.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261005142545/FAQ_Retorno_1.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18441",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Campanha Mérito Inspirali",
+        "links": [
+          {
+            "link_label": "Confira o regulamento!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260805155136/1645523_-__Regulamento_Bolsa_M%C3%A9rito_Inspirali_27.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Campanha Cashback",
+        "links": [
+          {
+            "link_label": "Confira o regulamento!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260612155211/1551257_-_Regulamento_Bolsa_Cashback_26.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

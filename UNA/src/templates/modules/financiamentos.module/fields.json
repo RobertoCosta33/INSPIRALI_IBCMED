@@ -1,0 +1,174 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "PLANEJE O SEU FUTURO"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Sua jornada na Medicina continua aqui"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Da graduação à pós-graduação, estamos ao seu lado em cada etapa da sua formação e evolução profissional."
+  },
+  {
+    "name": "campus_prices",
+    "label": "Investimento mensal por campus",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 1
+    },
+    "children": [
+      {
+        "name": "campus_name",
+        "label": "Nome da unidade (deixe vazio para ocultar — a UNA tem uma única unidade)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "price_label",
+        "label": "Rótulo",
+        "type": "text",
+        "default": "Investimento Mensal (2026)"
+      },
+      {
+        "name": "price_value",
+        "label": "Valor",
+        "type": "text",
+        "default": "R$ 13.295,00"
+      },
+      {
+        "name": "price_note",
+        "label": "Nota",
+        "type": "text",
+        "default": "Consulte condições de financiamento"
+      },
+      {
+        "name": "price_disclaimer",
+        "label": "Nota de rodapé",
+        "type": "text",
+        "default": "*Mensalidade de 2026 vinculada à pontualidade"
+      }
+    ],
+    "default": [
+      {
+        "campus_name": "",
+        "price_label": "Investimento Mensal (2026)",
+        "price_value": "R$ 11.995,00",
+        "price_note": "Consulte condições de financiamento ao lado",
+        "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade"
+      }
+    ]
+  },
+  {
+    "name": "programs",
+    "label": "Programas de financiamento",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Título",
+        "type": "text",
+        "default": "FIES"
+      },
+      {
+        "name": "subtitle",
+        "label": "Subtítulo",
+        "type": "text",
+        "default": "Financiamento estudantil"
+      },
+      {
+        "name": "text",
+        "label": "Texto",
+        "type": "richtext",
+        "default": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social)."
+      },
+      {
+        "name": "note",
+        "label": "Nota pequena (opcional, ex.: \"*Válido nas unidades...\")",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "link_label",
+        "label": "Texto do botão \"Saiba mais\"",
+        "type": "text",
+        "default": "Saiba mais sobre o FIES"
+      },
+      {
+        "name": "url",
+        "label": "Link externo (ignorado se \"abre o modal\" estiver marcado)",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": true,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "title": "FIES",
+        "subtitle": "Financiamento estudantil",
+        "text": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social).",
+        "note": "",
+        "link_label": "Saiba mais sobre o FIES",
+        "url": {
+          "url": {
+            "href": "https://acessounico.mec.gov.br/fies",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": true,
+          "no_follow": false
+        }
+      },
+      {
+        "title": "Prouni",
+        "subtitle": "Bolsas de estudo",
+        "text": "Bolsas de estudo integrais (100%) ou parciais (50%) através da sua nota do Enem.",
+        "note": "",
+        "link_label": "Saiba mais sobre o Prouni",
+        "url": {
+          "url": {
+            "href": "https://acessounico.mec.gov.br/prouni",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": true,
+          "no_follow": false
+        }
+      },
+      {
+        "title": "Pravaler",
+        "subtitle": "Financiamento privado",
+        "text": "Financiamento estudantil privado com condições flexíveis e parcelamento facilitado.",
+        "note": "",
+        "link_label": "Saiba mais sobre o Pravaler",
+        "url": {
+          "url": {
+            "href": "https://www.pravaler.com.br/campanhas/lp-campeao2/medicina?ies_code=7&nome=UNA&faculdade",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": true,
+          "no_follow": false
+        }
+      }
+    ]
+  }
+]

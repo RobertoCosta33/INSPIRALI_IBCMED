@@ -1,0 +1,17 @@
+{
+  "label": "Metodologia - UNIFACS",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Seção \"Metodologia e Tecnologia\" com accordion de 4 itens.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "metodologia"
+  ],
+  "is_available_for_new_content": true
+}

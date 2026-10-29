@@ -1,0 +1,17 @@
+{
+  "label": "Corpo Docente - UNISUL",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Carrossel de coordenadores por campus.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "corpo-docente"
+  ],
+  "is_available_for_new_content": true
+}

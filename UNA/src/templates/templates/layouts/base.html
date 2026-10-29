@@ -1,0 +1,54 @@
+<!doctype html>
+{% if is_in_editor or content.language %}{% set lang_attr = content.language|replace("-", "_")|replace("_", "-") %}{% else %}{% set lang_attr = "pt-BR" %}{% endif %}
+<html lang="{{ lang_attr }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page_meta.html_title }}</title>
+    <meta name="description" content="{{ page_meta.meta_description }}" />
+    {% if page_meta.canonical_url %}<link rel="canonical" href="{{ page_meta.canonical_url }}" />{% endif %}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Inspirali" />
+    <meta property="og:title" content="{{ page_meta.html_title }}" />
+    <meta property="og:description" content="{{ page_meta.meta_description }}" />
+    {% if page_meta.featured_image %}<meta property="og:image" content="{{ page_meta.featured_image }}" />{% endif %}
+    <meta property="og:url" content="{{ page_meta.canonical_url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Design system: tokens e base compartilhados por todas as páginas desta instituição -->
+    {{ require_css(get_asset_url("../../css/tokens.css")) }}
+    {{ require_css(get_asset_url("../../css/base.css")) }}
+    {{ require_css(get_asset_url("../../css/components/accordion.css")) }}
+    {{ require_css(get_asset_url("../../css/components/cards.css")) }}
+    {{ require_css(get_asset_url("../../css/components/tabs.css")) }}
+    {{ require_css(get_asset_url("../../css/components/carousel.css")) }}
+
+    <!-- Carregado no <head> (posição "head") para garantir que window.Mark já
+         exista antes do module.js do page-search.module rodar no footer. -->
+    {{ require_js(get_asset_url("../../vendor/mark.min.js"), { "position": "head" }) }}
+
+    {{ standard_header_includes }}
+  </head>
+  <body class="{{ builtin_body_classes }}">
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    {% module "header" path="../../modules/header.module" %}
+
+    <main id="conteudo-principal">
+      {% block main_content %}{% endblock %}
+    </main>
+
+    {% module "footer" path="../../modules/footer.module" %}
+    {% module "page_search" path="../../modules/page-search.module" %}
+    {% module "video_modal" path="../../modules/video-modal.module" %}
+
+    {{ standard_footer_includes }}
+  </body>
+</html>

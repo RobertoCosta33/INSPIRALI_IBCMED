@@ -1,0 +1,69 @@
+[
+  {
+    "name": "video_cover_image",
+    "label": "Imagem de capa do vídeo",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/misc/video-cover.png",
+      "alt": "Mapa dos campi da Unisul em Santa Catarina"
+    }
+  },
+  {
+    "name": "video_url",
+    "label": "Link do vídeo (YouTube)",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "href": "https://www.youtube.com/watch?v=yQwlmYldIzM",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "video_aria_label",
+    "label": "Texto acessível do botão de vídeo (aria-label)",
+    "type": "text",
+    "default": "Assistir ao vídeo institucional da Unisul"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "SOBRE A UNISUL"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "richtext",
+    "default": "Conhecimento que amplia horizontes e abre novos caminhos."
+  },
+  {
+    "name": "body_text",
+    "label": "Texto",
+    "type": "richtext",
+    "default": "<p>Com mais de 60 anos de história voltados à produção de conhecimento e transformação social, são mais de 300 mil pessoas impactadas por meio de ações junto à comunidade.</p><p>Assista ao vídeo institucional para conhecer melhor a Unisul.</p>"
+  },
+  {
+    "name": "cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Conheça a Unisul"
+  },
+  {
+    "name": "cta_url",
+    "label": "Link do botão",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "href": "https://www.unisul.br/sobre/",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

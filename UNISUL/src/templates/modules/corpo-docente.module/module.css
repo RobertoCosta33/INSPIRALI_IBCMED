@@ -1,0 +1,344 @@
+/* ====================================================================
+   Módulo: Corpo docente (UAM)
+   Figma: "Corpo docente" (523:29924)
+   ==================================================================== */
+
+.docente-carousel {
+  position: relative;
+  width: 100%;
+  margin-top: 56px;
+}
+
+.docente-grid {
+  display: flex;
+  gap: 24px;
+  height: 518px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.docente-card {
+  flex: 0 0 389px;
+  width: 389px;
+  min-width: 0;
+  position: relative;
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.docente-card__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.docente-card__overlay {
+  /* Figma: gradiente até o cinza escuro (#313132), via rgba(49,49,50,.8)
+     aos 80%. */
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(49, 49, 50, 0) 0%, rgba(49, 49, 50, 0.8) 80%, #313132 100%);
+}
+
+.docente-card__info {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.docente-card__identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--text-inverted);
+}
+
+.docente-card__role {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+}
+
+.docente-card__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.docente-card__bio {
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--surface-neutral);
+}
+
+.docente-card__more {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--text-inverted);
+  transition: color 0.4s ease;
+}
+
+.docente-card__more:hover,
+.docente-card__more:focus-visible {
+  text-decoration: underline;
+}
+
+.docente-carousel__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-brand-quaternary);
+  border-radius: var(--radius-small);
+  background-color: rgba(250, 250, 255, 0.4);
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.4s ease;
+}
+
+.docente-carousel__nav:hover,
+.docente-carousel__nav:focus-visible {
+  background-color: var(--surface-brand-primary-light);
+}
+
+.docente-carousel__nav[aria-disabled="true"] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.docente-carousel__nav[aria-disabled="true"]:hover,
+.docente-carousel__nav[aria-disabled="true"]:focus-visible {
+  background-color: transparent;
+}
+
+.docente-carousel__nav img {
+  width: 24px;
+  height: 24px;
+}
+
+.docente-carousel__nav--prev {
+  left: -64px;
+}
+
+.docente-carousel__nav--next {
+  right: -64px;
+}
+
+.docente-carousel__steps {
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 24px;
+  padding: 4px 8px;
+  border-radius: var(--radius-small);
+  background-color: var(--surface-brand-quaternary);
+  backdrop-filter: blur(20px);
+}
+
+.docente-carousel__step {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-total);
+  background-color: var(--surface-inverted);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.docente-carousel__step.is-active {
+  opacity: 1;
+}
+
+@media (max-width: 1280px) {
+  .docente-carousel__nav--prev {
+    left: 0;
+  }
+
+  .docente-carousel__nav--next {
+    right: 0;
+  }
+}
+
+/* Modal "Ver mais" — detalhes do coordenador (foto + bio completa) */
+.docente-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-extra-large);
+}
+
+.docente-modal[hidden] {
+  display: none;
+}
+
+.docente-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 15, 14, 0.75);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.docente-modal.is-open .docente-modal__backdrop {
+  opacity: 1;
+}
+
+.docente-modal__dialog {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 850px;
+  height: 528px;
+  max-height: 90vh;
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  transform: scale(0.96);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.docente-modal.is-open .docente-modal__dialog {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.docente-modal__photo-wrap {
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+}
+
+.docente-modal__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.docente-modal__content {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large);
+  overflow-y: auto;
+}
+
+.docente-modal__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-large);
+}
+
+.docente-modal__name {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.docente-modal__role {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-heading);
+  margin-top: var(--spacing-extra-small);
+}
+
+.docente-modal__close {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.docente-modal__close img {
+  width: 100%;
+  height: 100%;
+}
+
+.docente-modal__bio {
+  flex: 1 1 0;
+  background-color: var(--surface-primary-subtle);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-medium) var(--spacing-large);
+}
+
+.docente-modal__bio p {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-heading);
+}
+
+@media (max-width: 1024px) {
+  .docente-grid {
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .docente-card {
+    flex: 0 0 300px;
+    width: 300px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .docente-modal {
+    padding: var(--spacing-medium);
+  }
+
+  .docente-modal__dialog {
+    flex-direction: column;
+    height: auto;
+    max-height: 85vh;
+  }
+
+  .docente-modal__photo-wrap {
+    flex: 0 0 260px;
+  }
+
+  .docente-modal__photo {
+    object-position: top center;
+  }
+
+  .docente-modal__content {
+    flex: 1 1 auto;
+  }
+
+  .docente-card__role {
+    font-size: var(--font-size-xxs);
+  }
+
+  .docente-card__name {
+    font-size: var(--font-size-sm);
+  }
+
+  .docente-card__bio {
+    font-size: var(--font-size-xxs);
+  }
+
+  .docente-card__more {
+    font-size: var(--font-size-xxs);
+  }
+}

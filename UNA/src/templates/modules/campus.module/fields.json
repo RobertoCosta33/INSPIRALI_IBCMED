@@ -1,0 +1,134 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "ONDE A FORMAÇÃO ACONTECE"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Onde estudar Medicina na Una:"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Um campus pensado para a sua experiência. Veja onde você vai viver essa experiência."
+  },
+  {
+    "name": "campus_name",
+    "label": "Nome do campus (título do painel)",
+    "type": "text",
+    "default": "Tucuruí"
+  },
+  {
+    "name": "campus_text",
+    "label": "Texto do painel",
+    "type": "richtext",
+    "default": "Localizado em Tucuruí (PA), às margens do Rio Tocantins, o campus está no principal polo urbano da região do Lago de Tucuruí, atendendo estudantes da cidade e dos municípios vizinhos com uma rotina acadêmica próxima do mercado e da realidade local."
+  },
+  {
+    "name": "city",
+    "label": "Cidade/UF (linha com ícone de localização)",
+    "type": "text",
+    "default": "Tucuruí, PA"
+  },
+  {
+    "name": "address",
+    "label": "Endereço (aceita link \"Ver no mapa\")",
+    "type": "richtext",
+    "default": "Rua A, 1006 - Santa Mônica • CEP 68456-760 - <a href=\"https://maps.app.goo.gl/6fbvZkw6jYCVJcZY8\" target=\"_blank\" rel=\"noopener\">Ver no mapa</a>"
+  },
+  {
+    "name": "cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Conheça mais da unidade"
+  },
+  {
+    "name": "cta_url",
+    "label": "Link do botão",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.una.br/unidades/tucurui/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "video_id",
+    "label": "ID do vídeo institucional no YouTube (opcional — vira o último item da galeria)",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "photos",
+    "label": "Fotos da galeria",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 5
+    },
+    "children": [
+      {
+        "name": "image",
+        "label": "Imagem",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "caption",
+        "label": "Legenda",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "caption": "Laboratório morfofuncional",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/campus-gallery/tucurui/laboratorio-morfofuncional.jpg",
+          "alt": "Laboratório morfofuncional — campus Tucuruí"
+        }
+      },
+      {
+        "caption": "Laboratório morfofuncional com realidade virtual",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/campus-gallery/tucurui/laboratorio-morfofuncional-realidade-virtual.jpg",
+          "alt": "Laboratório morfofuncional com realidade virtual — campus Tucuruí"
+        }
+      },
+      {
+        "caption": "Enfermaria simulada",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/campus-gallery/tucurui/enfermaria-simulada.jpg",
+          "alt": "Enfermaria simulada — campus Tucuruí"
+        }
+      },
+      {
+        "caption": "Sala de aprendizagem ativa",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/campus-gallery/tucurui/sala-de-aprendizagem-ativa.jpg",
+          "alt": "Sala de aprendizagem ativa — campus Tucuruí"
+        }
+      },
+      {
+        "caption": "Espaço de estudos",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/campus-gallery/tucurui/espaco-de-estudos.jpg",
+          "alt": "Espaço de estudos — campus Tucuruí"
+        }
+      }
+    ]
+  }
+]

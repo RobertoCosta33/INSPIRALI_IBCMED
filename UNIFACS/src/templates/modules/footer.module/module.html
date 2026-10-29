@@ -1,0 +1,134 @@
+<footer class="site-footer">
+  <div class="footer-invitation">
+    <p class="footer-invitation__title">{{ module.invitation_title }}</p>
+    <a
+      class="footer-invitation__cta"
+      href="{{ module.invitation_cta_url.url.href }}"
+      >{{ module.invitation_cta_label }}</a
+    >
+  </div>
+
+  <div class="footer-body">
+    <nav class="footer-nav" aria-label="Links institucionais">
+      {% for column in module.link_columns %}
+      <div class="footer-col">
+        <p class="footer-col__title">{{ column.title }}</p>
+        <div class="footer-col__links">
+          {% for link in column.links %}
+          <a href="{{ link.url.url.href }}" target="_blank" rel="noopener"
+            >{{ link.link_label }}
+            <span class="footer-col__links-arrow">→</span></a
+          >
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+
+      <div class="footer-col">
+        <p class="footer-col__title footer-col__title--lg">
+          {{ module.contact_title }}
+        </p>
+        <div class="footer-col__contact">
+          {% for item in module.contact_items %}
+          <div>
+            <p class="footer-col__contact-label">{{ item.contact_label }}</p>
+            <p class="footer-col__contact-value">{{ item.value }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </nav>
+
+    {# Diferente da UAM: o Figma da UNIFACS (1147:24566) não tem a faixa com o
+    logo e-MEC — só as duas linhas divisórias, que já viram a borda superior de
+    `.footer-bottom` (ver footer.css). #}
+
+    <div class="footer-bottom">
+      <div class="footer-social">
+        <a
+          href="{{ module.social_links.facebook_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook da UNIFACS"
+          ><img
+            src="{{ get_asset_url('../../public/icons/social-facebook.svg') }}"
+            alt=""
+        /></a>
+        <a
+          href="{{ module.social_links.instagram_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram da UNIFACS"
+          ><img
+            src="{{ get_asset_url('../../public/icons/social-instagram.svg') }}"
+            alt=""
+        /></a>
+        <a
+          href="{{ module.social_links.linkedin_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn da UNIFACS"
+          ><img
+            src="{{ get_asset_url('../../public/icons/social-linkedin.svg') }}"
+            alt=""
+        /></a>
+        <a
+          href="{{ module.social_links.tiktok_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="TikTok da UNIFACS"
+          ><img
+            src="{{ get_asset_url('../../public/icons/social-tiktok.svg') }}"
+            alt=""
+        /></a>
+        <a
+          href="{{ module.social_links.x_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="X (Twitter) da UNIFACS"
+          ><img
+            src="{{ get_asset_url('../../public/icons/social-x.svg') }}"
+            alt=""
+        /></a>
+        <a
+          href="{{ module.social_links.youtube_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="YouTube da UNIFACS"
+          ><img
+            src="{{ get_asset_url('../../public/icons/social-youtube.svg') }}"
+            alt=""
+        /></a>
+      </div>
+
+      <div class="footer-emec-qr">
+        <img
+          src="{{ module.emec_qr_image.src }}"
+          alt="{{ module.emec_qr_image.alt }}"
+          loading="lazy"
+        />
+        <a
+          href="{{ module.emec_qr_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+          >{{ module.emec_qr_label }}</a
+        >
+      </div>
+
+      <div class="footer-bottom__links">
+        <a
+          class="footer-bottom__link"
+          href="{{ module.privacy_channel_url.url.href }}"
+          target="_blank"
+          rel="noopener"
+          >Canal de privacidade</a
+        >
+        <a href="#top">Voltar ao topo</a>
+      </div>
+    </div>
+
+    <p class="footer-copyright">{{ module.copyright_text }}</p>
+  </div>
+</footer>
+
+{{ require_css(get_asset_url('./module.css')) }}

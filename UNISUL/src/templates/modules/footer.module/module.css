@@ -1,0 +1,280 @@
+/* ====================================================================
+   Rodapé institucional — Figma: "Footer" (150:3552)
+   ==================================================================== */
+
+.site-footer {
+  background-color: var(--surface-brand-primary-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-extra-large);
+  padding-bottom: var(--spacing-extra-large);
+}
+
+.footer-invitation {
+  width: 100%;
+  /* Figma: faixa de convite em areia (#7a6f66) sobre o rodapé #313132. */
+  background-color: var(--surface-brand-quaternary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+  padding: 64px var(--page-gutter);
+}
+
+.footer-invitation__title {
+  flex: 1 1 480px;
+  color: var(--text-inverted);
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-tight);
+  max-width: 772px;
+}
+
+.footer-invitation__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: var(--spacing-extra-small);
+  padding: 12px var(--spacing-large);
+  border-radius: var(--radius-small);
+  background-color: var(--surface-inverted);
+  color: var(--text-brand-quaternary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.footer-invitation__cta:hover,
+.footer-invitation__cta:focus-visible {
+  background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
+}
+
+.footer-body {
+  width: 100%;
+  max-width: var(--page-max-width);
+  padding: 0 var(--page-gutter);
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-large) 0;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 180px;
+  border-right: 2px solid rgba(255, 255, 255, 0.25);
+  padding: 0 var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.footer-col:first-child {
+  padding-left: 0;
+}
+
+.footer-col:last-child {
+  border-right: none;
+}
+
+.footer-col__title {
+  color: var(--text-inverted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  padding-bottom: var(--spacing-small);
+}
+
+.footer-col__title--lg {
+  font-size: var(--font-size-md);
+}
+
+.footer-col__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col__links a {
+  position: relative;
+  width: fit-content;
+  color: var(--text-footer);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  padding: var(--spacing-extra-small) 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+}
+
+.footer-col__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--surface-brand-primary);
+  transition: width 0.35s ease;
+}
+
+.footer-col__links a:hover::after,
+.footer-col__links a:focus-visible::after {
+  width: 100%;
+}
+
+.footer-col__links-arrow {
+  transition: color 0.35s ease;
+}
+
+.footer-col__links a:hover .footer-col__links-arrow,
+.footer-col__links a:focus-visible .footer-col__links-arrow {
+  color: var(--surface-brand-primary);
+}
+
+.footer-col__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.footer-col__contact-label {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xs);
+}
+
+.footer-col__contact-value {
+  color: var(--text-inverted);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+}
+
+.footer-bottom {
+  /* Figma (1147:24849-24855): duas linhas divisórias (branco a 25% de
+     opacidade) separando as colunas de links do bloco social/e-MEC —
+     a UNIFACS não tem a faixa com logo e-MEC que a UAM tem aqui. */
+  border-top: 2px solid rgba(253, 250, 255, 0.25);
+  padding-top: var(--spacing-extra-large);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-emec-qr {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-emec-qr img {
+  width: 70px;
+  height: auto;
+}
+
+.footer-emec-qr a {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  max-width: 100px;
+}
+
+.footer-bottom__links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-bottom__links a,
+.footer-bottom__links button {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xs);
+}
+
+.footer-bottom__link {
+  position: relative;
+  width: fit-content;
+  padding: var(--spacing-extra-small) 0;
+}
+
+.footer-bottom__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--surface-brand-primary);
+  transition: width 0.35s ease;
+}
+
+.footer-bottom__link:hover::after,
+.footer-bottom__link:focus-visible::after {
+  width: 100%;
+}
+
+.footer-copyright {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xxs);
+  text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .footer-invitation,
+  .footer-body {
+    padding-left: var(--page-gutter-tablet);
+    padding-right: var(--page-gutter-tablet);
+  }
+}
+
+@media (max-width: 860px) {
+  .footer-col {
+    flex: 1 1 45%;
+    border-right: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-invitation,
+  .footer-body {
+    padding-left: var(--page-gutter-mobile);
+    padding-right: var(--page-gutter-mobile);
+  }
+
+  .footer-invitation {
+    padding-top: var(--spacing-extra-large);
+    padding-bottom: var(--spacing-extra-large);
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

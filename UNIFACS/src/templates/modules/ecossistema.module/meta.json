@@ -1,0 +1,17 @@
+{
+  "label": "Ecossistema - UNIFACS",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Seção \"Ecossistema de cuidado e prática\" com carrossel de evidências.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "ecossistema"
+  ],
+  "is_available_for_new_content": true
+}

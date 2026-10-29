@@ -1,0 +1,501 @@
+[
+  {
+    "name": "invitation_title",
+    "label": "Título do convite",
+    "type": "text",
+    "default": "A maior autoridade em educação médica do Brasil espera por você."
+  },
+  {
+    "name": "invitation_cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Inscreva-se agora para 2027.1"
+  },
+  {
+    "name": "invitation_cta_url",
+    "label": "Link do botão",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "#processos-seletivos",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "link_columns",
+    "label": "Colunas de links institucionais",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 5,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Título da coluna",
+        "type": "text",
+        "default": "A UNA"
+      },
+      {
+        "name": "links",
+        "label": "Links",
+        "type": "group",
+        "occurrence": {
+          "min": 0,
+          "max": 20,
+          "default": 5
+        },
+        "children": [
+          {
+            "name": "link_label",
+            "label": "Texto",
+            "type": "text",
+            "default": "Link"
+          },
+          {
+            "name": "url",
+            "label": "URL",
+            "type": "link",
+            "default": {
+              "url": {
+                "href": "https://www.una.br/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "title": "A UNA",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sobre/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Sobre a UNA"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/unidades/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Unidades e Polos"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/nosso-curriculo/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Nosso Currículo"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sobre/avaliacao-institucional-e-cpa/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Avaliação Institucional e CPA"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/nosso-curriculo/uc-dual/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "UC Dual"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/cadastro-emec/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Cadastro"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sobre/internacional/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Internacional Office"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/nosso-curriculo/pesquisa/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Pesquisa e Desenvolvimento Científico"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sou-estudante/napi/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Núcleo de Apoio Psicopedagógico e Inclusão (NAPI)"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sou-estudante/biblioteca/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Biblioteca"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/blog/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Blog"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.vagas.com.br/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Trabalhe Conosco"
+          }
+        ]
+      },
+      {
+        "title": "Faça parte",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/graduacao/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Graduação"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://pos.una.br/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Pós-Graduação e MBA"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sou-estudante/extensao-universitaria/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Cursos livres e Extensão"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/modalidades/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Modalidades"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/formas-de-entrada/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Formas de Entrada"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/bolsas-e-financiamentos/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Bolsas e Financiamentos"
+          }
+        ]
+      },
+      {
+        "title": "Alunos, Professores e Candidatos",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sou-estudante/calendario/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Calendário Acadêmico"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sou-candidato/editais/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Editais"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://www.una.br/sou-estudante/enade/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "ENADE"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://diploma.una.br/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Consulta Pública de Diploma"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://historicoescolar.una.br/",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Consulta de Histórico"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://repositorio.animaeducacao.com.br/communities/b9f0cebe-b061-41f2-b31d-b0c2635de546",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Repositório Universitário da Ânima (RUNA)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "contact_title",
+    "label": "Título da coluna de contato",
+    "type": "text",
+    "default": "Central de Atendimento"
+  },
+  {
+    "name": "contact_items",
+    "label": "Contatos",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 5,
+      "default": 2
+    },
+    "children": [
+      {
+        "name": "contact_label",
+        "label": "Rótulo",
+        "type": "text",
+        "default": "Graduação e Pós-graduação"
+      },
+      {
+        "name": "value",
+        "label": "Telefone",
+        "type": "text",
+        "default": "31 3515-5213"
+      }
+    ],
+    "default": [
+      {
+        "contact_label": "Graduação e Pós-graduação",
+        "value": "31 3515-5213"
+      },
+      {
+        "contact_label": "EAD",
+        "value": "31 3500-7169"
+      }
+    ]
+  },
+  {
+    "name": "emec_strip_logo",
+    "label": "Selo da faixa do rodapé (UNA 65 anos)",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/shared/una-65-anos-badge.png",
+      "alt": "UNA 65 anos (1961-2026)"
+    }
+  },
+  {
+    "name": "social_links",
+    "label": "Redes sociais",
+    "type": "group",
+    "children": [
+      {
+        "name": "facebook_url",
+        "label": "Facebook",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.facebook.com/unaoficial",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "instagram_url",
+        "label": "Instagram",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.instagram.com/unaoficial/",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "linkedin_url",
+        "label": "LinkedIn",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.linkedin.com/school/unaoficial/",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "tiktok_url",
+        "label": "TikTok",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.tiktok.com/@unaoficial",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "x_url",
+        "label": "X (Twitter)",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://x.com/unaoficial",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "youtube_url",
+        "label": "YouTube",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.youtube.com/channel/UC9wum_NgNvabawhxl9rxUrg",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": {}
+  },
+  {
+    "name": "emec_qr_image",
+    "label": "QR Code e-MEC",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/shared/emec-qrcode.png",
+      "alt": "QR Code do cadastro e-MEC da UNA"
+    }
+  },
+  {
+    "name": "emec_qr_label",
+    "label": "Texto do QR Code",
+    "type": "text",
+    "default": "Acesse aqui o cadastro da UNA no e-MEC"
+  },
+  {
+    "name": "emec_qr_url",
+    "label": "Link do QR Code",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.una.br/cadastro-emec/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "privacy_channel_url",
+    "label": "Link do Canal de Privacidade",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.una.br/canal-de-privacidade/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "copyright_text",
+    "label": "Texto de copyright",
+    "type": "text",
+    "default": "Copyright © 2026 - Ânima Educação. Todos os direitos reservados."
+  }
+]

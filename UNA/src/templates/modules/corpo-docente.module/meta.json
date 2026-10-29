@@ -1,0 +1,17 @@
+{
+  "label": "Corpo Docente - UNA",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Coordenadores do curso de Medicina da UNA (cards + modal \"Ver mais\").",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "corpo-docente"
+  ],
+  "is_available_for_new_content": true
+}

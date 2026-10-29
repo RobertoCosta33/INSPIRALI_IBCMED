@@ -1,0 +1,20 @@
+{
+  "label": "Modal de vídeo - UNA",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Modal de vídeo institucional (YouTube) da UNA.",
+  "host_template_types": [
+    "PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "video",
+    "modal"
+  ],
+  "is_available_for_new_content": false
+}

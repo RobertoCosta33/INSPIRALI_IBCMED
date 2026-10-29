@@ -4,8 +4,8 @@
    ==================================================================== */
 
 .practice-heading {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-inverted);
   margin-bottom: var(--spacing-large);
@@ -14,7 +14,5 @@
 @media (max-width: 640px) {
   .practice-heading {
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-regular);
-    font-family: var(--font-family-display, var(--font-family-base));
   }
 }

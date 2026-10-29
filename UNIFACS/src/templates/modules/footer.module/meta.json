@@ -1,0 +1,19 @@
+{
+  "label": "Footer - UNIFACS",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Rodapé institucional com links, contato, redes sociais e e-MEC. Compartilhado em todas as páginas da UNIFACS.",
+  "host_template_types": [
+    "PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "footer"
+  ],
+  "is_available_for_new_content": false
+}

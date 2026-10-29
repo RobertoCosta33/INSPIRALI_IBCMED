@@ -1,0 +1,128 @@
+/* ====================================================================
+   Design tokens — extraídos do Figma "Redesign - Páginas IES"
+   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "UNISUL", nó 950:14136 —
+   tema "Inspirali" com acentos próprios da UNISUL). Mantém os nomes de
+   variável usados no projeto (surface/*, text/*, border/*, spacing/*,
+   radius/*, font/*) para facilitar a conversão futura em módulos HubL —
+   mesma nomenclatura usada em UAM/UNA/UNIFACS src/css/tokens.css, só
+   com os valores de marca da UNISUL.
+
+   MUDANÇA DE MARCA: o antigo índigo (#293189) / azul-escuro (#000329)
+   foi substituído pela paleta neutra + teal acinzentado + areia do
+   Figma novo. A TIPOGRAFIA NÃO mudou: a fonte da marca da UNISUL
+   continua sendo "Bricolage Grotesque" (estilos "ANIMA/*": títulos
+   ExtraBold, corpo Light/Regular) — DIFERENTE da UAM, que migrou para
+   "Montserrat". Ver AGENTS.md seção "Fontes por instituição".
+   ==================================================================== */
+
+:root {
+  /* Cores de superfície */
+  --surface-inverted: #ffffff;
+  --surface-primary: #ffffff;
+  /* Figma: creme usado em Institucional, Nosso DNA, Campus e Grupo
+     Inspirali (e no info-card da Matriz Curricular). */
+  --surface-primary-subtle: #fcf7ee;
+  /* Figma: cinza translúcido dos cards de Metodologia e Financiamentos
+     (accordions / info-cards). */
+  --surface-secondary-subtle: rgba(214, 219, 222, 0.6);
+  /* Accent secundário (teal acinzentado, #507b82): eyebrows, CTAs com
+     borda, stats, dots, card de valor mensal. */
+  --surface-brand-primary: #507b82;
+  /* Neutro escuro (#313132): navegação do curso, rodapé, gradientes de
+     foto (cards de docente/pós-graduação, campus, Ingresso) e hover de
+     botões sólidos. */
+  --surface-brand-primary-dark: #313132;
+  /* Fundo claro da paleta (cards de estatística, hover de botões). */
+  --surface-brand-primary-light: #edf1f0;
+  --surface-brand-primary-light-alt: #dbe3e3;
+  --surface-brand-tint: rgba(80, 123, 130, 0.08);
+  /* Figma (Institucional, Nosso DNA, Campus): creme sólido, igual a
+     --surface-primary-subtle. */
+  --surface-brand-tint-strong: #fcf7ee;
+  --surface-brand-soft: rgba(80, 123, 130, 0.12);
+  --surface-brand-soft-weak: rgba(80, 123, 130, 0.1);
+  /* Accent quaternário (areia, #7a6f66): CTAs sólidos (Matriz, Campus,
+     FAQ, Header), fundo do Ecossistema e da faixa de convite do rodapé. */
+  --surface-brand-quaternary: #7a6f66;
+  --surface-brand-quaternary-soft: rgba(122, 111, 102, 0.2);
+  /* Fundo da seção FAQ e contato. */
+  --surface-canvas: #f7f8f8;
+  /* Cinza neutro: card do formulário, botão desabilitado do carrossel. */
+  --surface-neutral: #d6dbde;
+
+  /* Cores de texto */
+  --text-inverted: #ffffff;
+  --text-heading: #313132;
+  --text-primary-dark: #313132;
+  /* Figma: texto de apoio (Light 20px) — areia. */
+  --text-secondary-dark: #7a6f66;
+  --text-brand: #507b82;
+  --text-brand-dark: #313132;
+  --text-brand-quaternary: #7a6f66;
+  --text-brand-alt: #507b82;
+  /* "UniSul/background/canvas" — links do rodapé e título do carrossel
+     do Ecossistema. */
+  --text-footer: #fafaff;
+  --text-footer-muted: #ffffff;
+
+  /* Cores de borda */
+  --border-primary-light: #d6dbde;
+  --border-brand-primary: #507b82;
+  --border-brand-soft: rgba(80, 123, 130, 0.2);
+  /* Figma: borda de abas e linhas da lista de disciplinas. */
+  --border-brand-soft-medium: rgba(80, 123, 130, 0.3);
+  --border-brand-soft-strong: rgba(80, 123, 130, 0.4);
+  --border-brand-quaternary: #7a6f66;
+
+  /* Tipografia — família da marca: Bricolage Grotesque (Google Fonts) */
+  --font-family-base: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-size-4xl: 48px;
+
+  /* Alturas de linha (razões, como definidas no Figma) */
+  --line-height-tight: 1.16;
+  --line-height-snug: 1.2;
+  --line-height-relaxed: 1.4;
+
+  /* Compatibilidade com módulos existentes (px fixos aproximados) */
+  --line-height-xs: 16px;
+  --line-height-sm: 24px;
+  --line-height-lg: 40px;
+  --line-height-xl: 48px;
+
+  /* Pesos — Bricolage Grotesque: ExtraLight 200, Light 300, Regular 400, Medium 500, Bold 700, ExtraBold 800 */
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Espaçamento */
+  --spacing-micro: 4px;
+  --spacing-extra-small: 8px;
+  --spacing-small: 12px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-extra-large: 32px;
+
+  /* Raio de borda */
+  --radius-extra-small: 4px;
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-total: 999px;
+
+  /* Grade / contêiner (desktop de referência: 1440px) */
+  --page-max-width: 1440px;
+  --page-gutter: 112px;
+  --page-gutter-tablet: 48px;
+  --page-gutter-mobile: 20px;
+}

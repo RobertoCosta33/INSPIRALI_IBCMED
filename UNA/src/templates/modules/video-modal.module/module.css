@@ -1,0 +1,89 @@
+/* ====================================================================
+   Módulo compartilhado: modal de vídeo institucional (YouTube embutido)
+   Reaproveitado por "Sobre a UNA" e pela galeria de campus.
+   ==================================================================== */
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-extra-large);
+}
+
+.video-modal[hidden] {
+  display: none;
+}
+
+.video-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 15, 14, 0.9);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.video-modal.is-open .video-modal__backdrop {
+  opacity: 1;
+}
+
+.video-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  transform: scale(0.96);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.video-modal.is-open .video-modal__dialog {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.video-modal__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.video-modal__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-modal__close {
+  position: absolute;
+  top: calc(-1 * var(--spacing-extra-large) / 2 - 40px);
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-total);
+  background-color: var(--surface-inverted);
+}
+
+.video-modal__close img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 640px) {
+  .video-modal {
+    padding: var(--spacing-medium);
+  }
+
+  .video-modal__close {
+    top: -52px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "label": "Processo Seletivo - UNIFACS",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Seção \"Ingresso 2027.1\" com abas de modalidade e modal de editais/resultados.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "processo-seletivo"
+  ],
+  "is_available_for_new_content": true
+}

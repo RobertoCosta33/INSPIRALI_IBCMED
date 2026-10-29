@@ -1,0 +1,722 @@
+[
+  {
+    "name": "invitation_title",
+    "label": "Título do convite",
+    "type": "text",
+    "default": "A maior autoridade em educação médica do Brasil espera por você."
+  },
+  {
+    "name": "invitation_cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Inscreva-se agora para 2027.1"
+  },
+  {
+    "name": "invitation_cta_url",
+    "label": "Link do botão",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "#processos-seletivos",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "link_columns",
+    "label": "Colunas de links institucionais",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 5,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Título da coluna",
+        "type": "text",
+        "default": "A UNIFACS"
+      },
+      {
+        "name": "links",
+        "label": "Links",
+        "type": "group",
+        "occurrence": {
+          "min": 0,
+          "max": 20,
+          "default": 12
+        },
+        "children": [
+          {
+            "name": "link_label",
+            "label": "Texto",
+            "type": "text",
+            "default": "Sobre a UNIFACS"
+          },
+          {
+            "name": "url",
+            "label": "URL",
+            "type": "link",
+            "default": {
+              "url": {
+                "href": "https://www.unifacs.br/sobre/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ],
+        "default": [
+          {
+            "link_label": "Sobre a UNIFACS",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sobre/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Unidades e Polos",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/unidades/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Nosso Currículo",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/nosso-curriculo/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Avaliação Institucional e CPA",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sobre/avaliacao-institucional-e-cpa/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "UC Dual",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/nosso-curriculo/uc-dual/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Cadastro",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/cadastro-emec/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Internacional Office",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sobre/internacional/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Pesquisa e Desenvolvimento Científico",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/nosso-curriculo/iniciacao/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Núcleo de Apoio Psicopedagógico e Inclusão (NAPI)",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sou-estudante/napi/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Biblioteca",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sou-estudante/biblioteca/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Blog",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/blog/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Trabalhe Conosco",
+            "url": {
+              "url": {
+                "href": "https://www.vagas.com.br/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "title": "A UNIFACS",
+        "links": [
+          {
+            "link_label": "Sobre a UNIFACS",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sobre/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Unidades e Polos",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/unidades/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Nosso Currículo",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/nosso-curriculo/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Avaliação Institucional e CPA",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sobre/avaliacao-institucional-e-cpa/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "UC Dual",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/nosso-curriculo/uc-dual/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Cadastro",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/cadastro-emec/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Internacional Office",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sobre/internacional/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Pesquisa e Desenvolvimento Científico",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/nosso-curriculo/iniciacao/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Núcleo de Apoio Psicopedagógico e Inclusão (NAPI)",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sou-estudante/napi/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Biblioteca",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sou-estudante/biblioteca/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Blog",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/blog/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Trabalhe Conosco",
+            "url": {
+              "url": {
+                "href": "https://www.vagas.com.br/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Faça parte",
+        "links": [
+          {
+            "link_label": "Graduação",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/graduacao/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Pós-Graduação e MBA",
+            "url": {
+              "url": {
+                "href": "https://pos.unifacs.br/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Mestrado e Doutorado",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/mestrado-doutorado/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Cursos livres e Extensão",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sou-estudante/extensao-universitaria/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Modalidades",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/modalidades/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Formas de Entrada",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/formas-de-entrada/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Bolsas e Financiamentos",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/bolsas-e-financiamentos/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Alunos, Professores e Candidatos",
+        "links": [
+          {
+            "link_label": "Calendário Acadêmico",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sou-estudante/calendario/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Editais",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sou-candidato/editais/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "ENADE",
+            "url": {
+              "url": {
+                "href": "https://www.unifacs.br/sou-estudante/enade/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Consulta Pública de Diploma",
+            "url": {
+              "url": {
+                "href": "https://diploma.unifacs.br/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Consulta de Histórico",
+            "url": {
+              "url": {
+                "href": "https://historicoescolar.unifacs.br/",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Repositório Universitário da Ânima (RUNA)",
+            "url": {
+              "url": {
+                "href": "https://repositorio.animaeducacao.com.br/communities/845a8a5e-f4b5-4293-8971-fb051ab0816c",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "contact_title",
+    "label": "Título da coluna de contato",
+    "type": "text",
+    "default": "Central de Atendimento"
+  },
+  {
+    "name": "contact_items",
+    "label": "Contatos",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 5,
+      "default": 2
+    },
+    "children": [
+      {
+        "name": "contact_label",
+        "label": "Rótulo",
+        "type": "text",
+        "default": "Graduação e Pós-graduação"
+      },
+      {
+        "name": "value",
+        "label": "Telefone",
+        "type": "text",
+        "default": "11 4007-1192"
+      }
+    ],
+    "default": [
+      {
+        "contact_label": "Graduação e Pós-graduação",
+        "value": "11 4007-1192"
+      },
+      {
+        "contact_label": "EAD",
+        "value": "11 5108-0481"
+      }
+    ]
+  },
+  {
+    "name": "social_links",
+    "label": "Redes sociais",
+    "type": "group",
+    "children": [
+      {
+        "name": "facebook_url",
+        "label": "Facebook",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.facebook.com/universidadesalvador",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "instagram_url",
+        "label": "Instagram",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.instagram.com/universidadesalvador/",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "linkedin_url",
+        "label": "LinkedIn",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.linkedin.com/school/universidade-salvador/",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "tiktok_url",
+        "label": "TikTok",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.tiktok.com/@unifacs",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "x_url",
+        "label": "X (Twitter)",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://x.com/unifacs",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "youtube_url",
+        "label": "YouTube",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://www.youtube.com/user/universidadesalvador",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": {}
+  },
+  {
+    "name": "emec_qr_image",
+    "label": "QR Code e-MEC",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/shared/emec-qrcode.png",
+      "alt": "QR Code do cadastro e-MEC da UNIFACS"
+    }
+  },
+  {
+    "name": "emec_qr_label",
+    "label": "Texto do QR Code",
+    "type": "text",
+    "default": "Acesse aqui o cadastro da UNIFACS no e-MEC"
+  },
+  {
+    "name": "emec_qr_url",
+    "label": "Link do QR Code",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.unifacs.br/cadastro-emec/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "privacy_channel_url",
+    "label": "Link do Canal de Privacidade",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.unifacs.br/canal-de-privacidade/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "copyright_text",
+    "label": "Texto de copyright",
+    "type": "text",
+    "default": "Copyright © 2026 - Ânima Educação. Todos os direitos reservados."
+  }
+]

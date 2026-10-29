@@ -1,0 +1,18 @@
+{
+  "label": "FAQ e Contato - UNA",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Perguntas frequentes + formulário de contato (desativado por padrão; ative em \"Exibir formulário\").",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "faq",
+    "contato"
+  ],
+  "is_available_for_new_content": true
+}

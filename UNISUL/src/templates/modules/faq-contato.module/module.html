@@ -1,0 +1,62 @@
+<section
+  class="faq-contato{% if not module.show_form %} faq-contato--form-disabled{% endif %}"
+  id="faq-e-contato"
+  aria-labelledby="faq-title"
+>
+  <div class="faq-contato__form-col">
+    <div class="faq-contato__title">
+      <p class="faq-contato__eyebrow">{{ module.eyebrow }}</p>
+      <h2 id="faq-title">{{ module.title }}</h2>
+    </div>
+
+    {% if module.show_form %}
+    <div class="faq-contato__form">
+      <p class="faq-contato__form-title">{{ module.form_title }}</p>
+      {% if module.contact_form.form_id %} {% form "contact_form"
+      form_to_use=module.contact_form.form_id,
+      response_response_type=module.contact_form.response_type,
+      response_message=module.contact_form.message,
+      response_redirect_id=module.contact_form.redirect_id,
+      response_redirect_url=module.contact_form.redirect_url %} {% endif %}
+      <div class="faq-contato__disclaimer">{{ module.form_disclaimer }}</div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="faq-contato__list" data-tabs>
+    {% for item in module.faq_items %}
+    <div class="faq-item" data-accordion-item>
+      <button
+        type="button"
+        class="faq-item__trigger"
+        data-accordion-trigger
+        aria-expanded="false"
+      >
+        <span>{{ item.question }}</span>
+        <span class="faq-item__icon">
+          <img
+            class="icon-plus"
+            src="{{ get_asset_url('../../public/icons/icon-plus-quaternary.svg') }}"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="icon-minus"
+            src="{{ get_asset_url('../../public/icons/icon-minus-quaternary.svg') }}"
+            alt=""
+            aria-hidden="true"
+          />
+        </span>
+      </button>
+      <div class="faq-item__panel" data-accordion-panel>
+        <div class="faq-item__panel-inner">
+          <div>{{ item.answer }}</div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{{ require_css(get_asset_url('./module.css')) }} {{
+require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

@@ -1,0 +1,17 @@
+{
+  "label": "Grupo Inspirali - UNISUL",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Seção institucional do Grupo Inspirali: estatísticas, linha do tempo \"lifelong learning\" e logos parceiros.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "inspirali"
+  ],
+  "is_available_for_new_content": true
+}

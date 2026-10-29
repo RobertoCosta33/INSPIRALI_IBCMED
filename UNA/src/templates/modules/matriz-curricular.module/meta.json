@@ -1,0 +1,17 @@
+{
+  "label": "Matriz Curricular - UNA",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Matriz curricular da UNA: PDFs para download + abas por unidade de aprendizagem/internato.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "matriz-curricular"
+  ],
+  "is_available_for_new_content": true
+}

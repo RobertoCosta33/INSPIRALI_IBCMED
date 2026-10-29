@@ -1,0 +1,17 @@
+{
+  "label": "Corpo Docente - UNIFACS",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Seção \"Corpo docente de elite\" com os coordenadores do curso e modal de biografia.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "docentes"
+  ],
+  "is_available_for_new_content": true
+}

@@ -43,7 +43,7 @@
 
 .dna-pillar__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
 }
@@ -60,13 +60,13 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(0, 121, 106, 0.16);
+  background-color: rgba(78, 141, 151, 0.2);
   cursor: pointer;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .dna-pillars-dot:hover {
-  background-color: rgba(0, 121, 106, 0.4);
+  background-color: rgba(78, 141, 151, 0.4);
 }
 
 .dna-pillars-dot.is-active {
@@ -110,8 +110,6 @@
 @media (max-width: 640px) {
   .dna-pillar__title {
     font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-regular);
-    font-family: var(--font-family-display, var(--font-family-base));
   }
 
   .dna-pillar__text {

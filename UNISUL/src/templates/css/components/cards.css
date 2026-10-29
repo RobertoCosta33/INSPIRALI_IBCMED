@@ -1,0 +1,250 @@
+/* ====================================================================
+   Cartões reutilizáveis
+   ==================================================================== */
+
+.info-card {
+  flex: 1 1 0;
+  min-width: 260px;
+  background-color: var(--surface-secondary-subtle);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-small) var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-small);
+}
+
+.info-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary-dark);
+  transition: color 0.4s ease;
+}
+
+.info-card__link img {
+  width: 16px;
+  height: 16px;
+}
+
+.info-card__link:hover,
+.info-card__link:focus-visible {
+  color: var(--text-brand);
+}
+
+.info-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-primary-dark);
+}
+
+.info-card__subtitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.info-card__text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-brand-quaternary);
+}
+
+.info-card__note {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+/* Cartão de disciplina (Matriz Curricular) */
+.discipline-card {
+  background-color: var(--surface-brand-primary-light-alt);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.discipline-card__eyebrow {
+  font-size: var(--font-size-xxs);
+  color: var(--text-heading);
+  text-transform: uppercase;
+}
+
+.discipline-card__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand);
+}
+
+.discipline-card__text {
+  font-size: var(--font-size-xs);
+  color: var(--text-heading);
+}
+
+/* Cartão de estatística institucional (Grupo Inspirali) */
+.stat-card {
+  flex: 1 1 0;
+  min-width: 220px;
+  min-height: 260px;
+  background-color: var(--surface-brand-primary-light);
+  border: 1px solid var(--border-brand-soft);
+  border-radius: var(--radius-small);
+  padding: 20px var(--spacing-large) var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.stat-card--no-value {
+  border-color: var(--border-brand-soft);
+}
+
+.stat-card__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.stat-card__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-small);
+  background-color: var(--surface-brand-soft-weak);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card__icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.stat-card__value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-xl);
+  color: var(--text-brand);
+}
+
+.stat-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-primary-dark);
+}
+
+.stat-card__text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-brand-quaternary);
+}
+
+/* Cartão do carrossel de pós-graduação */
+.posgrad-card {
+  position: relative;
+  flex: 0 0 262px;
+  width: 262px;
+  height: 409px;
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.posgrad-card:nth-child(even) {
+  flex-basis: 548px;
+  width: 548px;
+}
+
+/* No mobile, todos os cards ficam do tamanho do menor (262px) — o card
+   largo quebrava o texto de forma diferente ao trocar de slide. */
+@media (max-width: 640px) {
+  .posgrad-card,
+  .posgrad-card:nth-child(even) {
+    flex-basis: 262px;
+    width: 262px;
+  }
+
+  .info-card__title {
+    font-size: var(--font-size-sm);
+  }
+
+  .info-card__subtitle {
+    font-size: var(--font-size-xs);
+  }
+
+  .info-card__text {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Grupo Inspirali: até 1023px os stat cards usam as fontes compactas
+   (mesmo breakpoint em que o grid empilha, ver grupo-inspirali.css). */
+@media (max-width: 1023px) {
+  .stat-card__value {
+    font-size: var(--font-size-xl);
+  }
+
+  .stat-card__title {
+    font-size: var(--font-size-sm);
+  }
+
+  .stat-card__text {
+    font-size: var(--font-size-xs);
+  }
+}
+
+.posgrad-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.posgrad-card__overlay {
+  /* Figma (1100:14257): degradê até o cinza escuro (#313132). */
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(49, 49, 50, 0) 40%, rgba(49, 49, 50, 0.878) 80%, #313132 100%),
+    linear-gradient(180deg, rgba(49, 49, 50, 0) 0%, rgba(49, 49, 50, 0.4) 100%);
+}
+
+.posgrad-card__body {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.posgrad-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-inverted);
+}
+
+.posgrad-card__text {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--surface-canvas);
+}
+
+@media (max-width: 640px) {
+  .posgrad-card__title {
+    font-size: var(--font-size-lg);
+  }
+}

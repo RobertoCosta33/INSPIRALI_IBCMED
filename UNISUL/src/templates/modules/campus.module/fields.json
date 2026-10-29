@@ -1,0 +1,258 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "ONDE A FORMAÇÃO ACONTECE"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Dois campus. Uma formação conectada à prática."
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Medicina em Santa Catarina, com laboratórios, salas de aula e biblioteca para apoiar a sua jornada."
+  },
+  {
+    "name": "panel_title",
+    "label": "Título do painel lateral",
+    "type": "text",
+    "default": "Nossas unidades"
+  },
+  {
+    "name": "panel_text",
+    "label": "Texto do painel lateral",
+    "type": "richtext",
+    "default": "Infraestrutura de excelência para o seu sucesso: auditório, biblioteca, laboratórios de última geração e muito mais, projetados para o seu desenvolvimento acadêmico e profissional."
+  },
+  {
+    "name": "cta_label",
+    "label": "Texto do botão \"Conheça mais\"",
+    "type": "text",
+    "default": "Conheça mais da unidade"
+  },
+  {
+    "name": "campuses",
+    "label": "Campus / unidades",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 2
+    },
+    "children": [
+      {
+        "name": "campus_key",
+        "label": "Identificador (sem espaços/acentos)",
+        "type": "text",
+        "default": "palhoca"
+      },
+      {
+        "name": "chip_label",
+        "label": "Texto do chip de seleção",
+        "type": "text",
+        "default": "Palhoça"
+      },
+      {
+        "name": "display_name",
+        "label": "Nome exibido na galeria (legenda das fotos)",
+        "type": "text",
+        "default": "Palhoça"
+      },
+      {
+        "name": "city",
+        "label": "Cidade",
+        "type": "text",
+        "default": "Palhoça, SC"
+      },
+      {
+        "name": "address",
+        "label": "Endereço completo",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "cta_url",
+        "label": "Link \"Conheça mais da unidade\"",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://www.unisul.br/unidades/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "video_id",
+        "label": "ID do vídeo institucional no YouTube (opcional)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "photos",
+        "label": "Fotos do campus",
+        "type": "group",
+        "occurrence": {
+          "min": 1,
+          "max": 20,
+          "default": 6
+        },
+        "children": [
+          {
+            "name": "image",
+            "label": "Foto",
+            "type": "image",
+            "default": {
+              "src": "",
+              "alt": ""
+            }
+          },
+          {
+            "name": "caption",
+            "label": "Legenda da foto (aparece na miniatura e no selo da imagem grande)",
+            "type": "text",
+            "default": ""
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "campus_key": "palhoca",
+        "chip_label": "Palhoça",
+        "display_name": "Palhoça",
+        "city": "Palhoça, SC",
+        "address": "Av. Pedra Branca, 25 - Cidade Universitária, Palhoça - SC, 88137-270",
+        "cta_url": {
+          "url": {
+            "content_id": null,
+            "href": "https://www.unisul.br/unidades/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "video_id": "",
+        "photos": [
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/palhoca/fachada-cis.jpg",
+              "alt": "Fachada do Centro Integrado de Saúde — campus Palhoça"
+            },
+            "caption": "Fachada do Centro Integrado de Saúde"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/palhoca/recepcao-cis.jpg",
+              "alt": "Recepção do Centro Integrado de Saúde — campus Palhoça"
+            },
+            "caption": "Recepção do Centro Integrado de Saúde"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/palhoca/laboratorio-morfofuncional.jpg",
+              "alt": "Laboratório morfofuncional — campus Palhoça"
+            },
+            "caption": "Laboratório morfofuncional"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/palhoca/laboratorio-mesa-anatomica-digital.jpg",
+              "alt": "Laboratório com mesa anatômica digital — campus Palhoça"
+            },
+            "caption": "Laboratório com mesa anatômica digital"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/palhoca/sala-de-exames-clinicos.jpg",
+              "alt": "Sala de exames clínicos — campus Palhoça"
+            },
+            "caption": "Sala de exames clínicos"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/palhoca/vista-aerea.jpg",
+              "alt": "Vista aérea do campus — campus Palhoça"
+            },
+            "caption": "Vista aérea do campus"
+          }
+        ]
+      },
+      {
+        "campus_key": "tubarao",
+        "chip_label": "Tubarão",
+        "display_name": "Tubarão",
+        "city": "Tubarão, SC",
+        "address": "Av. José Acácio Moreira, 787 - Dehon, Tubarão - SC, 88704-900",
+        "cta_url": {
+          "url": {
+            "content_id": null,
+            "href": "https://www.unisul.br/unidades/tubarao/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "video_id": "",
+        "photos": [
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/tubarao/fachada-do-campus.jpg",
+              "alt": "Fachada do campus — campus Tubarão"
+            },
+            "caption": "Fachada do campus"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/tubarao/recepcao-clinica-integrada.jpg",
+              "alt": "Recepção da Clínica Integrada de Saúde — campus Tubarão"
+            },
+            "caption": "Recepção da Clínica Integrada de Saúde"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/tubarao/acesso-aos-consultorios.jpg",
+              "alt": "Acesso aos consultórios — campus Tubarão"
+            },
+            "caption": "Acesso aos consultórios"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/tubarao/laboratorio-de-anatomia.jpg",
+              "alt": "Laboratório de anatomia — campus Tubarão"
+            },
+            "caption": "Laboratório de anatomia"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/tubarao/laboratorio-de-habilidades-clinicas.jpg",
+              "alt": "Laboratório de habilidades clínicas — campus Tubarão"
+            },
+            "caption": "Laboratório de habilidades clínicas"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/tubarao/espaco-de-convivencia-e-estudos.jpg",
+              "alt": "Espaço de convivência e estudos — campus Tubarão"
+            },
+            "caption": "Espaço de convivência e estudos"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/campus-gallery/tubarao/espaco-de-estudos-compartilhado.jpg",
+              "alt": "Espaço de estudos compartilhado — campus Tubarão"
+            },
+            "caption": "Espaço de estudos compartilhado"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -32,7 +32,7 @@ UAM/src/templates/
     seu-futuro.module/
     faq-contato.module/          # inclui o formulário (desativável)
   css/
-    tokens.css, base.css, components/*.css   # cópia de UAM/src/css/ (design system compartilhado, carregado 1x em base.html)
+    tokens.css, base.css, components/*.css   # cópia de UAM/src/css/ (design system compartilhado, carregado 1x em base.html; paleta/fonte Inspirali — Montserrat)
   vendor/
     mark.min.js
 ```
@@ -83,3 +83,14 @@ do próprio módulo, via `get_asset_url('./module.css')`).
    de publicar.
 5. Quando o formulário de contato for aprovado, criar o formulário no
    HubSpot, ativar `show_form`/`show_doubt_button` e preencher o GUID.
+
+## Estado da sincronização
+
+Sincronizado com `UAM/src` no commit `4972129` (paleta Inspirali `#4e8d97` /
+`#313132` / `#898177` / `#fcf7ee`, fonte Montserrat 200–800, setas dos
+carrosséis `icon-arrow-*-btn`). `css/`, `module.css`, `module.js` e os ícones de
+`public/icons` são cópia do `src`; `campus`, `financiamentos` e `seu-futuro`
+mantêm o JS adaptado (dados via JSON / `data-*` / `window.UAM_CARD_NAV_ICONS`)
+e `processo-seletivo/module.css` inclui o CSS do `edital-modal`. Ícones de
+campos de imagem (`field-icons/*` no File Manager) precisam ser reenviados com as
+versões recoloridas de `UAM/src/public/icons/`.

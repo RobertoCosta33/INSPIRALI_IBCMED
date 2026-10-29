@@ -1,0 +1,100 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "NOSSO DNA"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Que tipo de médico você quer ser?"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "A coordenação do curso de Medicina e o Núcleo Docente Estruturante conectam a proposta pedagógica à formação de médicos preparados para os desafios do cuidado, com rigor científico, humanização e compromisso social."
+  },
+  {
+    "name": "pillars",
+    "label": "Pilares",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "photo",
+        "label": "Foto",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "icon",
+        "label": "Ícone",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "title",
+        "label": "Título",
+        "type": "text",
+        "default": "Excelência técnico-científica"
+      },
+      {
+        "name": "text",
+        "label": "Texto",
+        "type": "richtext",
+        "default": "Uma formação rigorosa, na vanguarda da medicina."
+      }
+    ],
+    "default": [
+      {
+        "title": "Excelência técnico-científica",
+        "text": "Uma formação rigorosa, na vanguarda da medicina, unindo base neurocientífica e fluência digital para decisões clínicas precisas.",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/dna-pillar-1-una.png",
+          "alt": "Excelência técnico-científica"
+        },
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-teacher.svg",
+          "alt": ""
+        }
+      },
+      {
+        "title": "Humanização do cuidado",
+        "text": "Valorizamos a empatia, a escuta ativa e o respeito à diversidade, colocando o paciente sempre no centro do tratamento.",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/dna-pillar-2.png",
+          "alt": "Humanização do cuidado"
+        },
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-favourite.svg",
+          "alt": ""
+        }
+      },
+      {
+        "title": "Responsabilidade social",
+        "text": "Médicos que transformam realidades. Formação profundamente alinhada ao SUS e à visão de Saúde Única (One Health), integrando indivíduo, sociedade e planeta.",
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/dna-pillar-3.png",
+          "alt": "Responsabilidade social"
+        },
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-location-star.svg",
+          "alt": ""
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,291 @@
+/* ====================================================================
+   Módulo: Grupo Inspirali (UAM)
+   Figma: "Grupo Inspirali" (150:4207)
+   ==================================================================== */
+
+#grupo-inspirali {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Padrão decorativo "Broto" do Figma, atrás do cabeçalho — a imagem de
+   origem é preto sobre transparente; usamos como máscara para pintar com
+   a cor de marca, em vez de recortar/colorir o PNG. Posição/opacidade
+   conferidas no Figma (1044:31038/31040): canto inferior direito, 20%. */
+#grupo-inspirali::before {
+  content: "";
+  position: absolute;
+  bottom: 118px;
+  right: -175px;
+  width: 570px;
+  height: 534px;
+  background-color: rgba(80, 123, 130, 0.2);
+  -webkit-mask-image: url("https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/shared/grupo-inspirali-broto-unisul.png");
+  mask-image: url("https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/shared/grupo-inspirali-broto-unisul.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  pointer-events: none;
+}
+
+.inspirali-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+}
+
+.inspirali-header {
+  display: flex;
+  align-items: center;
+  gap: 130px;
+}
+
+.inspirali-header__brand {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.inspirali-header__lockup {
+  /* Proporção da imagem fonte (650x302): "INSPIRALI" ocupa ~67px de altura,
+     a partir da linha 35 — nessa altura (180px) ele fica perto do tamanho
+     do título (--font-size-3xl, 40px). `.inspirali-header` usa
+     `align-items: center`, então a logo fica centralizada verticalmente
+     em relação ao bloco de título + descrição ao lado. */
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  object-position: left top;
+}
+
+.inspirali-header__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
+  max-width: 606px;
+  margin-bottom: 18px;
+}
+
+.inspirali-header__text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+  max-width: 606px;
+}
+
+.stats-grid {
+  display: flex;
+  gap: var(--spacing-large);
+  flex-wrap: wrap;
+}
+
+/* Figma (1100:13603): os stat cards desta seção usam o fundo claro da
+   paleta (#edf1f0) e borda teal a 20% — já definidos em `.stat-card`
+   (cards.css), sem sobrescrita. */
+
+.lifelong {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lifelong__text {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lifelong__text > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.lifelong__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
+}
+
+.lifelong__sublabel {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.lifelong__text > p {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-brand-quaternary);
+}
+
+.timeline {
+  flex: 1 1 400px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-step {
+  display: flex;
+  gap: var(--spacing-medium);
+  align-items: stretch;
+}
+
+.timeline-step:last-child .timeline-step__title {
+  color: var(--text-brand);
+}
+
+.timeline-step__connector {
+  flex: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-step__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-relaxed);
+  flex-shrink: 0;
+}
+
+.timeline-step__dot img {
+  width: 16px;
+  height: 16px;
+}
+
+.timeline-step__line {
+  width: 2px;
+  flex: 1 1 auto;
+  background-color: var(--surface-brand-primary);
+  min-height: 24px;
+}
+
+.timeline-step__content {
+  flex: 1 1 0;
+  padding-bottom: var(--spacing-large);
+}
+
+.timeline-step__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.timeline-step__text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-brand-quaternary);
+}
+
+.partner-logos {
+  /* Figma (1100:13678): mesma superfície e borda dos `.stat-card`. */
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  background-color: var(--surface-brand-primary-light);
+  border: 1px solid var(--border-brand-soft);
+  border-radius: 12px;
+  padding: var(--spacing-extra-large);
+  overflow-x: auto;
+}
+
+.partner-logos img {
+  width: auto;
+  height: auto;
+  max-width: none;
+  flex-shrink: 0;
+}
+
+/* Entre 1024 e 1280px (gutter de tablet) os 4 cards ainda ficam numa única
+   fileira (Figma: 1024px), mas precisam de um min-width menor que o do
+   desktop largo para caberem sem quebrar linha. */
+@media (max-width: 1280px) {
+  .stat-card {
+    min-width: 190px;
+  }
+}
+
+/* Até 1023px o Figma empilha cabeçalho, stats e timeline (coluna única) —
+   só a partir de 1024px eles ficam lado a lado. */
+@media (max-width: 1023px) {
+  .lifelong {
+    flex-direction: column;
+  }
+
+  .inspirali-header {
+    flex-direction: column;
+    gap: var(--spacing-large);
+  }
+
+  /* A logo fica centralizada acima do título (Figma 768px) — só ela, o
+     bloco de título/descrição continua alinhado à esquerda. */
+  .inspirali-header__brand {
+    align-self: center;
+  }
+
+  .stats-grid {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    min-width: 100%;
+  }
+
+  .partner-logos {
+    justify-content: flex-start;
+  }
+
+  .inspirali-header__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .inspirali-header__text {
+    font-size: var(--font-size-sm);
+  }
+
+  .lifelong__label {
+    font-size: var(--font-size-sm);
+  }
+
+  .lifelong__sublabel {
+    font-size: var(--font-size-2xl);
+  }
+
+  .lifelong__text > p {
+    font-size: var(--font-size-xs);
+  }
+
+  .timeline-step__title {
+    font-size: var(--font-size-sm);
+  }
+
+  .timeline-step__text {
+    font-size: var(--font-size-xs);
+  }
+}
+
+

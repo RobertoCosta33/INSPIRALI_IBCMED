@@ -1,0 +1,572 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow (deixe vazio para ocultar)",
+    "type": "text",
+    "default": "SEU PRÓXIMO PASSO"
+  },
+  {
+    "name": "title_line_1",
+    "label": "Título (linha 1, cor escura)",
+    "type": "text",
+    "default": "Medicina Una:"
+  },
+  {
+    "name": "title_line_2",
+    "label": "Título (linha 2, cor de marca)",
+    "type": "text",
+    "default": "Excelência Acadêmica Einstein"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "<p>Um formação médica que une excelência técnico-científica, humanização e responsabilidade social através de uma visão integral do ser humano, da sociedade e do planeta.</p><p>Parte do ecossistema de ensino médico Inspirali, com colaboração do Einstein Hospital Israelita em seu desenvolvimento acadêmico.</p>"
+  },
+  {
+    "name": "guidance_text",
+    "label": "Texto de orientação (deixe vazio para ocultar)",
+    "type": "richtext",
+    "default": ""
+  },
+  {
+    "name": "card_bg_image",
+    "label": "Imagem de fundo do card",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/processo-seletivo-bg.png",
+      "alt": ""
+    }
+  },
+  {
+    "name": "card_eyebrow",
+    "label": "Eyebrow do card",
+    "type": "text",
+    "default": "Ingresso 2027.1"
+  },
+  {
+    "name": "card_lead",
+    "label": "Chamada do card",
+    "type": "text",
+    "default": "Escolha sua forma de ingresso:"
+  },
+  {
+    "name": "tabs",
+    "label": "Modalidades de ingresso (abas)",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "icon",
+        "label": "Ícone da aba (estado ativo — fundo claro)",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "icon_inactive",
+        "label": "Ícone da aba (estado inativo — fundo de marca)",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "tab_label",
+        "label": "Texto da aba",
+        "type": "text",
+        "default": "Enem 27.1"
+      },
+      {
+        "name": "status_label",
+        "label": "Status",
+        "type": "text",
+        "default": "Inscrições Abertas"
+      },
+      {
+        "name": "modality_name",
+        "label": "Nome da modalidade",
+        "type": "text",
+        "default": "Enem 27.1"
+      },
+      {
+        "name": "description",
+        "label": "Descrição",
+        "type": "richtext",
+        "default": "Ingresse direto usando sua melhor nota do Enem dos últimos 10 anos."
+      },
+      {
+        "name": "facts",
+        "label": "Dados adicionais (datas, investimento — opcional)",
+        "type": "richtext",
+        "default": ""
+      },
+      {
+        "name": "cta_label",
+        "label": "Texto do botão de inscrição",
+        "type": "text",
+        "default": "Quero me inscrever para 27.1"
+      },
+      {
+        "name": "cta_url",
+        "label": "Link de inscrição",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "edital_link_label",
+        "label": "Texto do link \"Consultar Edital\"",
+        "type": "text",
+        "default": "Consultar Edital"
+      }
+    ],
+    "default": [
+      {
+        "tab_label": "Enem 27.1",
+        "status_label": "Inscrições Abertas",
+        "description": "Ingresse direto usando sua melhor nota do Enem dos últimos 10 anos.",
+        "facts": "<p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 vinculada à pontualidade</p>",
+        "cta_label": "Quero me inscrever para 27.1",
+        "cta_url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18415",
+            "type": "EXTERNAL"
+          }
+        },
+        "edital_link_label": "Consultar Edital",
+        "modality_name": "Enem 27.1",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-school-active.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-school-inactive.svg",
+          "alt": ""
+        }
+      },
+      {
+        "tab_label": "Transferência Externa 27.1",
+        "status_label": "Inscrições Abertas",
+        "description": "Venha de outra instituição de forma simples.",
+        "facts": "<p><strong>Data da Prova:</strong> 29/10/2026</p><p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 vinculada à pontualidade</p><p><strong>Como funciona:</strong> Prova online para alunos de outras instituições mediante taxa de inscrição.</p>",
+        "cta_label": "Quero me inscrever para 27.1",
+        "cta_url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18501",
+            "type": "EXTERNAL"
+          }
+        },
+        "edital_link_label": "Consultar Edital",
+        "modality_name": "Transferência Externa 27.1",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-sync-alt-active.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-sync-alt-inactive.svg",
+          "alt": ""
+        }
+      },
+      {
+        "tab_label": "Portador de Diploma 27.1",
+        "status_label": "Inscrições Abertas",
+        "description": "Para quem já possui uma graduação e busca uma nova jornada na Medicina. Análise de currículo rápida e direta.",
+        "facts": "<p><strong>Investimento:</strong> 12 parcelas de R$XXX por ano*</p><p class=\"selection-card__facts-note\">*Mensalidade de 2026 vinculada à pontualidade</p><p><strong>Como funciona?:</strong> Para quem já possui uma graduação e busca uma nova jornada na Medicina. Análise de currículo rápida e direta.</p>",
+        "cta_label": "Quero me inscrever para 27.1",
+        "cta_url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18434",
+            "type": "EXTERNAL"
+          }
+        },
+        "edital_link_label": "Consultar Edital",
+        "modality_name": "Portador de Diploma 27.1",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-license-active.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/field-icons/icon-license-inactive.svg",
+          "alt": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "show_convocados_link",
+    "label": "Mostrar link \"Lista Convocados\"",
+    "type": "boolean",
+    "default": false
+  },
+  {
+    "name": "convocados_url",
+    "label": "Link \"Lista Convocados\"",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "#",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "modal_title",
+    "label": "Título do modal de editais",
+    "type": "text",
+    "default": "Processo Seletivo Medicina"
+  },
+  {
+    "name": "modal_subtitle",
+    "label": "Subtítulo do modal",
+    "type": "richtext",
+    "default": "Acompanhe aqui os editais, inscrições, resultados e outros documentos da sua forma de entrada de escolha!"
+  },
+  {
+    "name": "modal_items",
+    "label": "Itens do modal de editais",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 15,
+      "default": 7
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Título do item",
+        "type": "text",
+        "default": "Vestibular Tradicional 27.1 - Prova 18/10"
+      },
+      {
+        "name": "links",
+        "label": "Links (documentos, inscrição, etc.)",
+        "type": "group",
+        "occurrence": {
+          "min": 0,
+          "max": 15,
+          "default": 3
+        },
+        "children": [
+          {
+            "name": "link_label",
+            "label": "Texto do link",
+            "type": "text",
+            "default": "Edital"
+          },
+          {
+            "name": "url",
+            "label": "URL (PDF ou página)",
+            "type": "link",
+            "default": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL",
+                "content_id": null
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "title": "Vestibular Tradicional 27.1 - Prova 18/10",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Listagem Final de Inscritos"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Listagem Preliminar de Inscritos"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Manual do candidato - Etapa 1"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Atividades Etapa 1 - Acesse aqui"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Edital"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Errata 1"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Errata 2"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Errata 3"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Errata 4"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "FAQ"
+          }
+        ]
+      },
+      {
+        "title": "Processo Enem 27.1",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Edital"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Errata 1"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Errata 2"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "FAQ"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://fichainscricao.inspirali.com/concurso/18415",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Inscreva-se aqui"
+          }
+        ]
+      },
+      {
+        "title": "Transferência Externa 27.1 - Prova 29/10",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Edital"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "FAQ"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://fichainscricao.inspirali.com/concurso/18501",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Inscreva-se aqui!"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Realize aqui o upload dos documentos obrigatórios para a análise curricular"
+          }
+        ]
+      },
+      {
+        "title": "Portador de Diploma 27.1",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Edital"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "FAQ"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "https://fichainscricao.inspirali.com/concurso/18434",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Inscreva-se aqui!"
+          }
+        ]
+      },
+      {
+        "title": "Retorno 27.1",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Edital"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "FAQ"
+          },
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Inscreva-se aqui!"
+          }
+        ]
+      },
+      {
+        "title": "Campanha Mérito Inspirali",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Confira o regulamento!"
+          }
+        ]
+      },
+      {
+        "title": "Campanha Cashback",
+        "links": [
+          {
+            "url": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            },
+            "link_label": "Confira o regulamento!"
+          }
+        ]
+      }
+    ]
+  }
+]

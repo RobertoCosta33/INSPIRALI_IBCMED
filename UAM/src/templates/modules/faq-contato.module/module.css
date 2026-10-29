@@ -4,7 +4,7 @@
    ==================================================================== */
 
 .faq-contato {
-  background-color: #f6f9f8;
+  background-color: var(--surface-canvas);
   padding: 72px var(--page-gutter);
   display: flex;
   gap: 80px;
@@ -57,13 +57,13 @@
 
 .faq-contato__title h2 {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .faq-contato__form {
-  background-color: #dcdce0;
+  background-color: var(--surface-neutral);
   border-radius: var(--radius-small);
   padding: var(--spacing-medium);
   display: flex;
@@ -73,8 +73,9 @@
 
 .faq-contato__form-title {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  color: #141414;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
 }
 
 .faq-contato__fields {
@@ -99,11 +100,11 @@
   background: none;
   font-family: inherit;
   font-size: var(--font-size-xs);
-  color: #3d3d3d;
+  color: var(--text-primary-dark);
 }
 
 .faq-contato__field input::placeholder {
-  color: #3d3d3d;
+  color: var(--text-primary-dark);
 }
 
 .faq-contato__field img {
@@ -115,27 +116,27 @@
 .faq-contato__submit {
   height: 48px;
   border-radius: var(--radius-small);
-  background-color: var(--surface-brand-primary);
-  color: var(--text-footer);
+  background-color: var(--surface-brand-quaternary);
+  color: var(--text-inverted);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   transition: background-color 0.4s ease;
 }
 
 .faq-contato__submit:hover,
 .faq-contato__submit:focus-visible {
-  background-color: #212972;
-  color: #ffffff;
+  background-color: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
 }
 
 .faq-contato__disclaimer {
-  font-size: 10px;
+  font-size: var(--font-size-xxs);
   line-height: var(--line-height-relaxed);
-  color: #3d3d3d;
+  color: var(--text-primary-dark);
 }
 
 .faq-contato__disclaimer a {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   text-decoration: underline;
 }
 
@@ -150,7 +151,7 @@
 }
 
 .faq-item {
-  background-color: #e0fff9;
+  background-color: var(--surface-brand-quaternary-soft);
   border-radius: var(--radius-small);
   overflow: hidden;
 }
@@ -164,8 +165,8 @@
   gap: var(--spacing-large);
   padding: 16px 56px;
   font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--text-heading);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary-dark);
   text-align: left;
 }
 
@@ -205,7 +206,7 @@
   overflow: hidden;
   transition: max-height 0.35s ease;
   font-size: var(--font-size-sm);
-  color: #141414;
+  color: var(--text-primary-dark);
 }
 
 .faq-item.is-open .faq-item__panel {
@@ -276,7 +277,5 @@
 
   .faq-contato__title h2 {
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-regular);
-    font-family: var(--font-family-display, var(--font-family-base));
   }
 }

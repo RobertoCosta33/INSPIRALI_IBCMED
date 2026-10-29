@@ -1,0 +1,17 @@
+{
+  "label": "FAQ e Contato - UNIFACS",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Perguntas frequentes (accordion) com formulário de contato opcional (desativado por padrão).",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "faq"
+  ],
+  "is_available_for_new_content": true
+}

@@ -1,0 +1,58 @@
+<section class="section section--subtle" id="investimento-e-financiamentos" aria-labelledby="financiamentos-title">
+  <img class="financing-watermark" src="{{ get_asset_url('../../public/images/shared/watermark-m.svg') }}" alt="" aria-hidden="true" />
+  <div class="financing-layout">
+    <div class="financing-intro">
+      <div>
+        <p class="eyebrow">{{ module.eyebrow }}</p>
+        <h2 class="section-intro__title" id="financiamentos-title">{{ module.title }}</h2>
+        <div class="section-intro__text" style="margin-top: var(--spacing-small);">{{ module.intro_text }}</div>
+      </div>
+      <div class="financing-carousel" data-financing-carousel>
+        <div class="financing-highlight">
+          {% for campus in module.campus_prices %}
+          <div class="financing-highlight__slide{% if loop.first %} is-active{% endif %}" data-financing-slide{% if not loop.first %} hidden{% endif %}>
+            {% if campus.campus_name %}<p class="financing-highlight__campus">{{ campus.campus_name }}</p>{% endif %}
+            <p class="financing-highlight__label">{{ campus.price_label }}</p>
+            <p class="financing-highlight__value">{{ campus.price_value }}</p>
+            <p class="financing-highlight__note">{{ campus.price_note }}</p>
+            <p class="financing-highlight__disclaimer">{{ campus.price_disclaimer }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        {% if module.campus_prices|length > 1 %}
+        <div class="financing-nav">
+          <div class="financing-dots" data-financing-dots>
+            {% for campus in module.campus_prices %}
+            <button type="button" class="financing-dot{% if loop.first %} is-active{% endif %}" data-financing-dot="{{ loop.index0 }}" aria-label="{{ campus.campus_name }}"></button>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="financing-programs">
+      {% for program in module.programs %}
+      <article class="info-card">
+        <div>
+          <p class="info-card__title">{{ program.title }}</p>
+          <p class="info-card__subtitle">{{ program.subtitle }}</p>
+        </div>
+        <div class="info-card__text">{{ program.text }}</div>
+        {% if program.note %}
+        <p class="info-card__note">{{ program.note }}</p>
+        {% endif %}
+        {% if program.url.url.href %}
+        <a class="info-card__link" href="{{ program.url.url.href }}"{% if program.url.open_in_new_tab %} target="_blank" rel="noopener{% if program.url.no_follow %} nofollow{% endif %}"{% endif %}>
+          {{ program.link_label }}
+          <img src="{{ get_asset_url('../../public/icons/icon-arrow-right-small-red.svg') }}" alt="" aria-hidden="true" width="16" height="16" />
+        </a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ require_css(get_asset_url('./module.css')) }}
+{{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

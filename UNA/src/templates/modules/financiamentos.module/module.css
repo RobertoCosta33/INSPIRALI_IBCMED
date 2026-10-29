@@ -1,0 +1,144 @@
+/* ====================================================================
+   Módulo: Financiamentos (UNA)
+   Figma: "Financiamentos" (117:3044)
+   ==================================================================== */
+
+.section--subtle:has(.financing-watermark) {
+  position: relative;
+  overflow: hidden;
+}
+
+.financing-watermark {
+  position: absolute;
+  left: -1px;
+  bottom: 0;
+  width: 236px;
+  height: auto;
+  pointer-events: none;
+}
+
+.financing-layout {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.financing-intro {
+  /* `justify-content: flex-end` (confirmado no Figma: node 739-36757) —
+     o bloco de texto + card de valor fica grudado embaixo, próximo da
+     base da coluna de cards ao lado, com espaço em branco acima; não
+     alinhado ao topo com "FIES". */
+  flex: 1 1 420px;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 39px;
+}
+
+.financing-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%;
+}
+
+.financing-highlight {
+  position: relative;
+  background-color: var(--surface-brand-primary);
+  border-radius: var(--radius-small);
+  padding: 20px 32px;
+  min-height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.financing-highlight__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-micro);
+  min-height: 140px;
+  opacity: 0;
+  position: absolute;
+  inset: 20px 32px;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.financing-highlight__slide.is-active {
+  opacity: 1;
+  position: relative;
+  inset: auto;
+  pointer-events: auto;
+}
+
+.financing-highlight__label {
+  color: var(--text-inverted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.85;
+}
+
+.financing-highlight__value {
+  color: var(--text-inverted);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+}
+
+.financing-highlight__note {
+  padding-top: 6px;
+  color: var(--text-inverted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.75;
+}
+
+.financing-highlight__disclaimer {
+  margin-top: var(--spacing-extra-small);
+  color: var(--text-inverted);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+}
+
+.financing-programs {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+@media (max-width: 1024px) {
+  .financing-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .financing-intro {
+    max-width: none;
+  }
+}
+
+/* A UNA não tem o 4º card "Programa Bolsa Permanência" nem o modal de
+   documentos (Figma: 1044:29107 só mostra FIES, Prouni e Pravaler) —
+   por isso o CSS do `.bolsa-modal` não foi portado aqui (ver o
+   equivalente em UAM/src/modules/sections/financiamentos/financiamentos.css
+   caso a UNA venha a precisar dele no futuro). */
+
+@media (max-width: 640px) {
+  .financing-highlight__label,
+  .financing-highlight__note {
+    font-size: var(--font-size-xxs);
+  }
+
+  .financing-highlight__value {
+    font-size: var(--font-size-2xl);
+  }
+}

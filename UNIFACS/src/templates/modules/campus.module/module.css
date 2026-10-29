@@ -1,0 +1,507 @@
+/* ====================================================================
+   Módulo: Campus e infraestrutura (UAM)
+   Figma: "Campus e infraestrutura" (523:29925)
+   ==================================================================== */
+
+/* Grid com áreas nomeadas: no desktop, as duas metades do painel ficam
+   empilhadas na coluna esquerda e a galeria ocupa a coluna direita; no
+   mobile, a ordem muda para título/chips -> galeria -> endereço/CTA
+   (ver breakpoint abaixo), sem precisar duplicar HTML. */
+.campus-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 400px) 1fr;
+  grid-template-areas:
+    "panel-top gallery"
+    "panel-bottom gallery";
+  gap: var(--spacing-extra-large);
+  margin-top: var(--spacing-extra-large);
+  align-items: stretch;
+}
+
+.campus-panel--top {
+  grid-area: panel-top;
+}
+
+.campus-panel--bottom {
+  grid-area: panel-bottom;
+  align-self: end;
+}
+
+.campus-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.campus-panel__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
+}
+
+.campus-panel__text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.campus-chip-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.campus-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  height: 48px;
+  padding: var(--spacing-medium);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  width: 100%;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.campus-chip:hover,
+.campus-chip:focus-visible,
+.campus-chip--active:hover,
+.campus-chip--active:focus-visible,
+.campus-chip--inactive:hover,
+.campus-chip--inactive:focus-visible {
+  background-color: var(--surface-brand-primary-dark);
+  border-color: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
+}
+
+.campus-chip img {
+  width: 16px;
+  height: 16px;
+}
+
+.campus-chip--active {
+  background-color: var(--surface-brand-quaternary);
+  color: var(--text-inverted);
+}
+
+.campus-chip--inactive {
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--border-brand-quaternary);
+  color: var(--text-brand-quaternary);
+}
+
+.campus-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.campus-detail__location {
+  /* Figma: cidade em Montserrat Medium 14px no accent secundário (teal). */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-brand);
+}
+
+.campus-detail__location img {
+  width: 12px;
+  height: 12px;
+}
+
+.campus-detail__address {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.campus-detail__address a {
+  color: var(--text-brand);
+  text-decoration: underline;
+}
+
+.campus-panel__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  padding: 20px var(--spacing-large);
+  border-radius: var(--radius-small);
+  border: 1px solid transparent;
+  background-color: var(--surface-brand-quaternary);
+  backdrop-filter: blur(20px);
+  color: var(--text-inverted);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.campus-panel__cta:hover,
+.campus-panel__cta:focus-visible {
+  background-color: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
+}
+
+.campus-gallery {
+  grid-area: gallery;
+  display: flex;
+  gap: var(--spacing-extra-small);
+  min-width: 0;
+}
+
+.campus-gallery__media {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.campus-gallery__viewport {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.campus-gallery__meta {
+  position: absolute;
+  inset: auto 24px 24px auto;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.campus-gallery__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.campus-gallery__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campus-gallery__image.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.campus-gallery__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.campus-gallery__overlay {
+  /* Figma: gradiente de rgba(49,49,50,0) (a partir de 50%) até #313132. */
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(49, 49, 50, 0) 50%, #313132 100%);
+  pointer-events: none;
+}
+
+.campus-gallery__label {
+  /* Figma: accent secundário (#4e8d97) a 75% — mesmo valor usado nas
+     legendas das miniaturas abaixo. */
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: rgba(78, 141, 151, 0.75);
+  color: var(--text-footer);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.campus-gallery__counter {
+  color: var(--text-footer);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.campus-gallery__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.campus-gallery__nav-btn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-total);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campus-gallery__nav-btn img {
+  position: relative;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.campus-gallery__nav-btn--prev {
+  /* Figma: botão desabilitado em cinza-azulado com seta branca. */
+  background-color: var(--surface-neutral);
+  transition: background-color 0.2s ease;
+}
+
+.campus-gallery__nav-btn--prev:not(.is-enabled) img {
+  filter: brightness(0) invert(1);
+}
+
+.campus-gallery__nav-btn--prev.is-enabled {
+  background-color: var(--surface-inverted);
+}
+
+.campus-gallery__nav-btn[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.campus-gallery__nav-icon--flip {
+  transform: scaleX(-1);
+}
+
+.campus-gallery__nav-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-total);
+  background: conic-gradient(var(--surface-brand-primary) calc(var(--progress, 0) * 1%), var(--surface-neutral) 0);
+}
+
+.campus-gallery__nav-ring::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  border-radius: var(--radius-total);
+  background-color: var(--surface-inverted);
+}
+
+.campus-gallery__thumbs {
+  /* Sem `max-height` fixo (diferente da UAM): aqui a altura real já vem
+     exata via JS (`syncGalleryHeight()`, igual à do viewport) — um teto
+     fixo menor cortaria a coluna abaixo da altura do viewer, voltando a
+     abrir o vão em branco que estamos corrigindo. */
+  flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.campus-thumb {
+  /* Diferente da UAM (altura fixa de 132px, pensada pra galeria com 7+
+     fotos que rola dentro da coluna): a UNA sempre tem só 4 fotos fixas,
+     então as miniaturas esticam (`flex: 1 1 0`) pra preencher exatamente
+     a altura do viewer ao lado — ver `height` (não `max-height`) setado
+     via JS em `campus.js` `syncGalleryHeight()`. */
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: var(--spacing-micro);
+}
+
+.campus-thumb__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campus-thumb.is-active {
+  outline: 2px solid var(--surface-brand-primary);
+  outline-offset: -2px;
+}
+
+.campus-thumb__label {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  background-color: rgba(78, 141, 151, 0.75);
+  color: var(--text-footer);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  padding: 2px var(--spacing-micro);
+  border-radius: var(--spacing-micro);
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.campus-thumb__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+}
+
+/* Lightbox: amplia a imagem clicada da galeria. */
+.campus-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-extra-large);
+  background-color: rgba(34, 34, 35, 0.9);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.campus-lightbox[hidden] {
+  display: none;
+}
+
+.campus-lightbox.is-open {
+  opacity: 1;
+}
+
+.campus-lightbox__image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-small);
+  transform: scale(0.96);
+  transition: transform 0.25s ease;
+}
+
+.campus-lightbox.is-open .campus-lightbox__image {
+  transform: scale(1);
+}
+
+.campus-lightbox__close {
+  position: absolute;
+  top: var(--spacing-large);
+  right: var(--spacing-large);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-total);
+  background-color: var(--surface-inverted);
+}
+
+.campus-lightbox__close img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1024px) {
+  /* Empilha em coluna única, na ordem: título/chips -> galeria -> endereço/CTA. */
+  .campus-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "panel-top"
+      "gallery"
+      "panel-bottom";
+  }
+
+  .campus-panel {
+    width: 100%;
+    max-width: none;
+  }
+
+  .campus-panel--bottom {
+    align-self: auto;
+  }
+
+  .campus-gallery {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .campus-gallery {
+    flex-direction: column;
+  }
+
+  /* No mobile o Figma substitui a faixa de miniaturas por um contador
+     (ex.: "01 / 03") e os controles abaixo da imagem, em vez de
+     sobrepostos a ela. */
+  .campus-gallery__thumbs {
+    display: none;
+  }
+
+  .campus-gallery__viewport {
+    min-height: 0;
+    height: 242px;
+  }
+
+  .campus-gallery__meta {
+    position: static;
+    inset: auto;
+    width: 100%;
+    margin-top: var(--spacing-extra-small);
+  }
+
+  .campus-gallery__counter {
+    color: var(--text-primary-dark);
+  }
+
+  .campus-gallery__nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .campus-gallery__nav-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .campus-gallery__nav-btn--prev.is-enabled {
+    background-color: var(--surface-inverted);
+  }
+
+  .campus-gallery__counter {
+    font-size: var(--font-size-sm);
+  }
+
+  .campus-panel__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .campus-panel__text {
+    font-size: var(--font-size-xs);
+  }
+
+  .campus-chip {
+    font-size: var(--font-size-xs);
+  }
+
+  .campus-panel__cta {
+    height: 48px;
+    padding: var(--spacing-medium);
+    font-size: var(--font-size-xs);
+  }
+}

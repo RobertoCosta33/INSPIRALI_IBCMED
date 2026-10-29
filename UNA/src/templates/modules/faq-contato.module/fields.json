@@ -1,0 +1,105 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "PERGUNTAS FREQUENTES"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Tem alguma dúvida sobre a Medicina UNA?"
+  },
+  {
+    "name": "show_form",
+    "label": "Mostrar formulário de contato",
+    "type": "boolean",
+    "default": false,
+    "help_text": "Desativado por enquanto — o formulário será reativado no futuro. Quando ativar, os dropdowns deixam de ficar centralizados e voltam a dividir espaço com o formulário."
+  },
+  {
+    "name": "form_title",
+    "label": "Texto acima do formulário",
+    "type": "text",
+    "default": "É muito fácil! Preencha o formulário e nós entraremos em contato com você!"
+  },
+  {
+    "name": "contact_form",
+    "label": "Formulário HubSpot",
+    "type": "form",
+    "default": {
+      "response_type": "inline",
+      "message": "Obrigado! Entraremos em contato em breve."
+    },
+    "help_text": "Selecione o formulário do HubSpot criado para captar esses leads."
+  },
+  {
+    "name": "form_disclaimer",
+    "label": "Aviso de privacidade",
+    "type": "richtext",
+    "default": "<p>Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"https://www.una.br/canal-de-privacidade/\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>.</p>"
+  },
+  {
+    "name": "faq_items",
+    "label": "Perguntas frequentes",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 9
+    },
+    "children": [
+      {
+        "name": "question",
+        "label": "Pergunta",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "answer",
+        "label": "Resposta",
+        "type": "richtext",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "question": "Como fazer faculdade de Medicina em Tucuruí?",
+        "answer": "<p>Se você escolheu estudar na Una, o primeiro passo é escolher a melhor forma de ingresso para o seu caso. A forma mais conhecida costuma ser o vestibular, prova que aborda conhecimentos aprendidos no ensino médio.</p><p>A Una conta com um processo seletivo exclusivo e especial para Medicina, no campus de Tucuruí (PA). Para participar, você precisa:</p><ol><li><strong>Fazer sua inscrição.</strong></li><li><strong>Conferir o edital com informações importantes sobre o processo seletivo.</strong></li><li><strong>Realizar a prova.</strong></li><li><strong>Verificar o edital com o resultado.</strong></li><li><strong>Realizar sua matrícula.</strong></li></ol><p>Também é possível optar por novas formas de ingresso como: Enem, transferência, portador de diploma, dentre outros. Basta acessar o menu principal e verificar editais e informações sobre cada processo em aberto.</p>"
+      },
+      {
+        "question": "Quanto tempo dura o curso de Medicina?",
+        "answer": "<p>O curso de Medicina tem duração mínima de 6 anos (12 semestres), divididos entre o ciclo básico, o ciclo clínico e o internato — período de imersão prática em hospitais e serviços de saúde.</p><p>Na Una, essa jornada é acompanhada de perto por um corpo docente especializado e pela parceria acadêmica com o Hospital Israelita Albert Einstein, através do Ecossistema Inspirali.</p>"
+      },
+      {
+        "question": "Como fazer faculdade de Medicina na Una?",
+        "answer": "<p>Para cursar Medicina na Una, basta escolher a forma de ingresso mais adequada para o seu momento: processo seletivo próprio, Enem, transferência externa ou portador de diploma.</p><p>Acesse o menu \"Formas de Ingresso\" no topo da página para conferir os editais, prazos de inscrição e documentos exigidos em cada modalidade.</p>"
+      },
+      {
+        "question": "É possível se transferir para a Medicina Una?",
+        "answer": "<p>Sim, você pode fazer a transferência do curso para a Una, basta seguir alguns passos:</p><ul><li><strong>Faça inscrição:</strong> preencha o formulário com dados pessoais, curso, unidade em que deseja estudar e selecione transferência como forma de ingresso.</li><li><strong>Envie a documentação:</strong> encaminhe os documentos de acordo com o solicitado em edital.</li><li><strong>Confirmação:</strong> ao ser aprovado, será necessário validar que está de acordo com a análise curricular.</li><li><strong>Faça matrícula:</strong> assine o contrato para se matricular e comece sua jornada na Una!</li></ul>"
+      },
+      {
+        "question": "Como financiar faculdade de Medicina?",
+        "answer": "<p>Existem diversas opções de financiamento para o curso de Medicina na Una: o FIES (financiamento estudantil do Governo Federal), o Prouni (bolsas de estudo via nota do Enem) e o Pravaler (financiamento estudantil privado).</p><p>Confira a dobra \"Planeje o seu futuro\", mais acima nesta página, para ver as condições de cada programa.</p>"
+      },
+      {
+        "question": "Como fazer Medicina pelo Fies?",
+        "answer": "<p>Esse é um programa do governo federal que oferece financiamento para estudantes que desejam cursar o ensino superior em instituições privadas. Sendo assim, o aluno de Medicina pode financiar até 100% do curso e só começa a pagar depois de formado.</p><p>A cada semestre, o Fies abre inscrições para ajudar os selecionados a pagarem as mensalidades do curso com o apoio do Governo Federal.</p><p>É necessário ter realizado Enem a partir de 2010, fazer inscrição no programa, escolher curso, Instituição de Ensino Superior e turno. Depois, é só aguardar o resultado.</p>"
+      },
+      {
+        "question": "Como funciona o Prouni para Medicina?",
+        "answer": "<p>Trata-se de um sistema que concede bolsas de estudos integrais ou de 50% em instituições privadas. Quanto melhor seu desempenho na prova do Enem, maior a chance de conseguir o benefício integral.</p><p>A Una é uma Instituição de Ensino Superior que aceita estudantes do Prouni para a graduação em Medicina.</p>"
+      },
+      {
+        "question": "Como fazer faculdade de Medicina?",
+        "answer": "<p>O primeiro passo é escolher a instituição e a forma de ingresso: vestibular/processo seletivo próprio, Enem, transferência externa ou portador de diploma.</p><p>Depois de aprovado, é só confirmar a documentação exigida em edital e realizar a matrícula para começar a sua jornada na Medicina.</p>"
+      },
+      {
+        "question": "Quanto ganha um médico recém-formado?",
+        "answer": "<p>De acordo com a Demografia Médica da Associação Médica Brasileira de 2023 a renda mensal média de ganhos é de <strong>R$ 34,1 mil*</strong>.</p><p>Para médicos em início de carreira, a renda média mensal é de <strong>R$ 12,2 mil*</strong>.</p><p>*Demografia Médica da Associação Médica Brasileira (Capítulo 10 – Renda declarada dos médicos, página 165).</p>"
+      }
+    ]
+  }
+]

@@ -1,0 +1,576 @@
+[
+  {
+    "name": "invitation_title",
+    "label": "Título do convite",
+    "type": "text",
+    "default": "A maior autoridade em educação médica do Brasil espera por você."
+  },
+  {
+    "name": "invitation_cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Inscreva-se agora para 2027.1"
+  },
+  {
+    "name": "invitation_cta_url",
+    "label": "Link do botão",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "href": "#processos-seletivos",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "link_columns",
+    "label": "Colunas de links institucionais",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 5,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Título da coluna",
+        "type": "text",
+        "default": "A Unisul"
+      },
+      {
+        "name": "links",
+        "label": "Links",
+        "type": "group",
+        "occurrence": {
+          "min": 0,
+          "max": 20,
+          "default": 5
+        },
+        "children": [
+          {
+            "name": "link_label",
+            "label": "Texto",
+            "type": "text",
+            "default": "Link"
+          },
+          {
+            "name": "url",
+            "label": "URL",
+            "type": "link",
+            "default": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "title": "A Unisul",
+        "links": [
+          {
+            "link_label": "Sobre a Unisul",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sobre/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Unidades e Polos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/unidades/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Nosso Currículo",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/nosso-curriculo/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Avaliação Institucional e CPA",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sobre/avaliacao-institucional-e-cpa/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "UC Dual",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/nosso-curriculo/uc-dual/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Cadastro",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/cadastro-emec/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Internacional Office",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sobre/internacional/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Pesquisa e Desenvolvimento Científico",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/nosso-curriculo/iniciacao-cientifica/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Núcleo de Apoio Psicopedagógico e Inclusão (NAPI)",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sou-estudante/napi/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Biblioteca",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sou-estudante/biblioteca/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Blog",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/blog/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Trabalhe Conosco",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.vagas.com.br/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Faça parte",
+        "links": [
+          {
+            "link_label": "Graduação",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/graduacao/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Pós-Graduação e MBA",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://pos.unisul.br/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Mestrado e Doutorado",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/mestrado-doutorado/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Cursos livres e Extensão",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sou-estudante/extensao-universitaria/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Modalidades",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/modalidades/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Formas de Entrada",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/formas-de-entrada/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Bolsas e Financiamentos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/bolsas-e-financiamentos/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Alunos, Professores e Candidatos",
+        "links": [
+          {
+            "link_label": "Calendário Acadêmico",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sou-estudante/calendario/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Editais",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sou-candidato/editais/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "ENADE",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://www.unisul.br/sou-estudante/enade/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Consulta Pública de Diploma",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://diploma.unisul.br/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Consulta de Histórico",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://historicoescolar.unisul.br/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Repositório Universitário da Ânima (RUNA)",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://repositorio.animaeducacao.com.br/communities/4c50d99b-d283-42fb-b090-4a92239a4e44",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": true,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "contact_title",
+    "label": "Título da coluna de contato",
+    "type": "text",
+    "default": "Central de Atendimento"
+  },
+  {
+    "name": "contact_items",
+    "label": "Telefones de contato",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 5,
+      "default": 2
+    },
+    "children": [
+      {
+        "name": "contact_label",
+        "label": "Rótulo",
+        "type": "text",
+        "default": "Graduação e Pós-graduação"
+      },
+      {
+        "name": "value",
+        "label": "Telefone",
+        "type": "text",
+        "default": "11 4007-1192"
+      }
+    ],
+    "default": [
+      {
+        "contact_label": "Graduação e Pós-graduação",
+        "value": "11 4007-1192"
+      },
+      {
+        "contact_label": "EAD",
+        "value": "11 5108-0481"
+      }
+    ]
+  },
+  {
+    "name": "social_links",
+    "label": "Redes sociais",
+    "type": "group",
+    "children": [
+      {
+        "name": "facebook_url",
+        "label": "Facebook",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://www.facebook.com/unisul.official/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "instagram_url",
+        "label": "Instagram",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://www.instagram.com/unisul.oficial/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "linkedin_url",
+        "label": "LinkedIn",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://br.linkedin.com/company/unisul",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "tiktok_url",
+        "label": "TikTok",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://www.tiktok.com/@unisul_universidade",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "x_url",
+        "label": "X (Twitter)",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "youtube_url",
+        "label": "YouTube",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://www.youtube.com/user/cmunisul",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": {}
+  },
+  {
+    "name": "emec_qr_image",
+    "label": "QR Code e-MEC",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/shared/emec-qrcode.png",
+      "alt": "QR Code do cadastro e-MEC da UNISUL"
+    }
+  },
+  {
+    "name": "emec_qr_label",
+    "label": "Texto do QR Code",
+    "type": "text",
+    "default": "Acesse aqui o cadastro da UNISUL no e-MEC"
+  },
+  {
+    "name": "emec_qr_url",
+    "label": "Link do QR Code",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "href": "https://www.unisul.br/cadastro-emec/",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "privacy_channel_url",
+    "label": "Link do Canal de Privacidade",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "href": "https://www.unisul.br/canal-de-privacidade/",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "copyright_text",
+    "label": "Texto de copyright",
+    "type": "text",
+    "default": "Copyright © 2026 - Ânima Educação. Todos os direitos reservados."
+  }
+]

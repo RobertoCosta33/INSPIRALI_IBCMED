@@ -1,0 +1,56 @@
+[
+  {
+    "name": "color_fields",
+    "label": "Cores da marca",
+    "type": "group",
+    "children": [
+      {
+        "name": "brand_primary",
+        "label": "Cor primária (teal)",
+        "type": "color",
+        "default": {
+          "color": "#4E8D97",
+          "opacity": 100
+        }
+      },
+      {
+        "name": "brand_primary_dark",
+        "label": "Cor primária escura (hover, rodapé)",
+        "type": "color",
+        "default": {
+          "color": "#313132",
+          "opacity": 100
+        }
+      },
+      {
+        "name": "brand_primary_light",
+        "label": "Cor primária clara (fundos de destaque)",
+        "type": "color",
+        "default": {
+          "color": "#EDF1F0",
+          "opacity": 100
+        }
+      }
+    ]
+  },
+  {
+    "name": "typography_fields",
+    "label": "Tipografia",
+    "type": "group",
+    "children": [
+      {
+        "name": "base_font",
+        "label": "Fonte base (títulos e corpo)",
+        "type": "font",
+        "default": {
+          "size": 16,
+          "size_unit": "px",
+          "color": "#222223",
+          "font": "Montserrat",
+          "font_set": "GOOGLE",
+          "variant": "regular"
+        }
+      }
+    ]
+  }
+]

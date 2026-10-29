@@ -1,0 +1,97 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "CORPO DOCENTE DE ELITE"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Coordenadores especialistas ao seu lado"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Em Palhoça e Tubarão, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu desenvolvimento."
+  },
+  {
+    "name": "coordinators",
+    "label": "Coordenadores",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 4
+    },
+    "children": [
+      {
+        "name": "photo",
+        "label": "Foto",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "role",
+        "label": "Cargo / unidade",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "person_name",
+        "label": "Nome",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "bio",
+        "label": "Biografia",
+        "type": "richtext",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/docente/jefferson-traebert.jpg",
+          "alt": "Jefferson Luiz Traebert"
+        },
+        "role": "Coordenador Médico de Curso - Pedra Branca",
+        "person_name": "Jefferson Luiz Traebert",
+        "bio": "Médico epidemiologista e cirurgião-dentista, mestre pela Universidade de Londres, doutor pela Universidade Federal de Santa Catarina e pós-doutor pela Universidade de Toronto. É coordenador do curso de Medicina, professor de Habilidades Médicas e pesquisador do Programa de Pós-Graduação em Ciências da Saúde da UNISUL. Atua como médico epidemiologista do CEPON e pesquisador do Instituto de Ciência e Tecnologia da FAHECE. Possui produção científica consolidada nas áreas de epidemiologia e saúde coletiva, com publicações em periódicos nacionais e internacionais."
+      },
+      {
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/docente/fabiana-gama.jpg",
+          "alt": "Fabiana Oenning da Gama"
+        },
+        "role": "Coordenadora Administrativa - Pedra Branca",
+        "person_name": "Fabiana Oenning da Gama",
+        "bio": "Fabiana Oenning da Gama, Enfermeira, Especialista em Terapia Intensiva e Mestre em Psicopedagogia. Docente universitária a 30 anos, atuo nas áreas de Clínica Médica e Pesquisa. Atualmente estou como coordenadora administrativa do Curso de Medicina da Unisul, campus Pedra Branca."
+      },
+      {
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/docente/thais-sousa.jpg",
+          "alt": "Thais Oliveira de Sousa"
+        },
+        "role": "Coordenadora Médica de Curso - Tubarão",
+        "person_name": "Thais Oliveira de Sousa",
+        "bio": "Médica graduada pela Universidade do Sul de Santa Catarina (2010-2015). Residência médica em Pediatria no Hospital Materno-Infantil Presidente Vargas (2016-2018) e em Gastroenterologia Pediátrica no Hospital São Lucas da PUCRS (2018-2020). Endoscopia Digestiva Alta e Colonoscopia pela Universidade Federal de Ciências da Saúde de Porto Alegre (2020-2021). Professora do Curso de Medicina da Universidade Federal de Santa Catarina (UFSC) e da Universidade do Sul de Santa Catarina (UNISUL). Atua em setor privado na área de Gastroenterologia Pediátrica e Endoscopia Digestiva Pediátrica. Membro da Sociedade Brasileira de Pediatria (SBP) e da Sociedade Latino-Americana de Gastroenterologia, Hepatologia e Nutrição Pediátrica (LASPGHAN). Mestre e Doutoranda em Ciências da Saúde pelo PPGCS UNISUL."
+      },
+      {
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/docente/thami-souza.jpg",
+          "alt": "Thami Goulart de Souza"
+        },
+        "role": "Coordenadora Administrativa - Tubarão",
+        "person_name": "Thami Goulart de Souza",
+        "bio": "Graduação em Letras - Secretariado Executivo pela Universidade do Sul de Santa Catarina (2007). Pós-graduação em Gestão de Serviços de Saúde, pela Unisul, 2024. Atualmente atuo como Coordenadora Administrativa do Curso de Medicina da Universidade do Sul de Santa Catarina."
+      }
+    ]
+  }
+]

@@ -1,0 +1,528 @@
+/* ====================================================================
+   Módulo: Processo seletivo (UAM)
+   Figma: "Processo seletivo" (523:29921)
+   ==================================================================== */
+
+.selection-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  margin-bottom: var(--spacing-extra-large);
+}
+
+.selection-intro .section-intro__text {
+  max-width: 1170px;
+}
+
+.selection-intro__title span {
+  color: var(--text-heading);
+}
+
+.selection-intro__guidance {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.selection-card {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  padding: 40px 40px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.selection-card__bg {
+  /* `object-fit: cover` é essencial aqui: sem ele, a imagem é esticada de
+     forma não-uniforme para preencher width % e height % diferentes (que
+     são só um jeito de reproduzir o recorte/posição do Figma), em vez de
+     manter a proporção original e cortar o excesso. */
+  position: absolute;
+  top: 0;
+  left: 24.07%;
+  width: 103.96%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.selection-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* Figma: degradê do cinza escuro (#313132) para transparente. */
+  background: linear-gradient(to left, rgba(49, 49, 50, 0) 0%, var(--surface-brand-primary-dark) 55%);
+}
+
+.selection-card__header {
+  align-self: stretch;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.selection-card__eyebrow {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-inverted);
+}
+
+.selection-card__lead {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-inverted);
+}
+
+.selection-card__tabs {
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-small);
+  min-width: 0;
+}
+
+.selection-card__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  height: 52px;
+  padding: var(--spacing-small) var(--spacing-large);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--surface-inverted);
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-inverted);
+  white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.selection-card__tab.is-active {
+  background-color: var(--surface-inverted);
+  border-color: var(--surface-inverted);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--text-primary-dark);
+}
+
+.selection-card__tab:not(.is-active):hover,
+.selection-card__tab:not(.is-active):focus-visible {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+/* O ícone de cada aba precisa trocar de cor conforme o estado (cor de
+   marca no fundo claro ativo, quase-branco no fundo escuro inativo) —
+   como são arquivos <img> (não SVG inline),  não
+   funciona; por isso existem duas versões do ícone, alternadas via
+   display. */
+.selection-card__tab-icon--inactive {
+  display: none;
+}
+
+.selection-card__tab:not(.is-active) .selection-card__tab-icon--active {
+  display: none;
+}
+
+.selection-card__tab:not(.is-active) .selection-card__tab-icon--inactive {
+  display: block;
+}
+
+.selection-card__panel {
+  align-self: stretch;
+  width: auto;
+  max-width: 700px;
+  min-width: 0;
+  background-color: rgba(247, 248, 248, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+  padding: var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 42px;
+}
+
+.selection-card__panel[hidden] {
+  display: none;
+}
+
+.selection-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.selection-status {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  background-color: rgba(247, 248, 248, 0.15);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: var(--spacing-extra-small);
+  font-size: var(--font-size-xxs);
+  color: #ffffff;
+}
+
+.selection-card__name {
+  /* Figma (ANIMA/Title 3): ExtraBold 32px. */
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: #ffffff;
+}
+
+.selection-card__description {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  color: #ffffff;
+}
+
+.selection-card__facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.selection-card__facts p {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: #ffffff;
+}
+
+/* Figma: "Investimento:" em Bold; o resto da linha em Light. */
+.selection-card__facts strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.selection-card__facts .selection-card__facts-note {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+  color: #ffffff;
+}
+
+.selection-card__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spacing-medium);
+}
+
+.selection-card__cta {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  height: 64px;
+  padding: 20px 24px;
+  border-radius: var(--radius-small);
+  background-color: #ffffff;
+  color: var(--text-primary-dark);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.selection-card__cta:hover,
+.selection-card__cta:focus-visible {
+  background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
+}
+
+.selection-card__links-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-medium);
+}
+
+.selection-card__link {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-extra-small) var(--spacing-medium);
+  border-radius: var(--radius-total);
+  font-size: var(--font-size-sm);
+  color: #ffffff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.selection-card__link:hover,
+.selection-card__link:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .selection-card {
+    padding: var(--spacing-large);
+  }
+
+  /* Só o nome do card ("Enem 27.1" etc.) diminui nesta largura — o eyebrow
+     ("Ingresso 2027.1") continua em 40px até a dobra tablet (≤860px). */
+  .selection-card__name {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 860px) {
+  /* A partir do tablet (Figma: 768px) os botões de forma de ingresso ficam
+     empilhados em largura total, em vez da fileira compacta do desktop. */
+  .selection-card__tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .selection-card__eyebrow,
+  .selection-card__name {
+    font-size: var(--font-size-xl);
+  }
+
+  .selection-card__lead {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 640px) {
+  .selection-card {
+    padding: var(--spacing-medium);
+    gap: var(--spacing-large);
+  }
+
+  .selection-card__eyebrow,
+  .selection-card__name {
+    font-size: var(--font-size-xl);
+  }
+
+  .selection-card__lead {
+    font-size: var(--font-size-sm);
+  }
+
+  .selection-card__description,
+  .selection-card__facts p {
+    font-size: var(--font-size-sm);
+  }
+
+  .selection-card__facts .selection-card__facts-note {
+    font-size: var(--font-size-xxs);
+  }
+
+  .selection-card__cta {
+    height: 40px;
+    padding: var(--spacing-small);
+    font-size: var(--font-size-xs);
+  }
+
+  .selection-card__cta img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Recorte da imagem de fundo é diferente no mobile (Figma: left -41.73%,
+     width 217.98%) — usar o recorte do desktop aqui esticava/espremia a
+     imagem por causa da proporção mais estreita do card. */
+  .selection-card__bg {
+    left: -41.73%;
+    width: 217.98%;
+  }
+}
+
+
+/* ====================================================================
+   Modal "Processo Seletivo Medicina" — lista de editais por forma de
+   ingresso, Figma: "popup-editais" (523:32987).
+   ==================================================================== */
+
+.edital-modal[hidden] {
+  display: none;
+}
+
+.edital-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 17, 17, 0.5);
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.edital-modal.is-open .edital-modal__backdrop {
+  opacity: 1;
+}
+
+.edital-modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.96);
+  z-index: 201;
+  width: min(740px, calc(100vw - 32px));
+  max-height: calc(100vh - 64px);
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-medium);
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.edital-modal.is-open .edital-modal__dialog {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.edital-modal__header {
+  display: flex;
+  gap: var(--spacing-large);
+  align-items: flex-start;
+}
+
+.edital-modal__header-text {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edital-modal__header-text #edital-modal-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.edital-modal__header-text p:last-child {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-heading);
+}
+
+.edital-modal__close {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edital-modal__close img {
+  width: 100%;
+  height: 100%;
+}
+
+.edital-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  overflow-y: auto;
+}
+
+.edital-item {
+  /* Figma: cards do modal de editais usam o mesmo cinza translúcido de
+     `--surface-secondary-subtle` (Metodologia / Financiamentos). */
+  background-color: var(--surface-secondary-subtle);
+  border-radius: var(--radius-small);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.edital-item__trigger {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  padding: 16px 56px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-heading);
+  text-align: left;
+}
+
+.edital-item__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.edital-item__icon .icon-plus,
+.edital-item__icon .icon-minus {
+  position: absolute;
+  inset: 0;
+  width: 16px;
+  height: 16px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.edital-item__trigger .icon-minus {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.edital-item.is-open .edital-item__trigger .icon-plus {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.edital-item.is-open .edital-item__trigger .icon-minus {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.edital-item__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.edital-item.is-open .edital-item__panel {
+  max-height: 600px;
+}
+
+.edital-item__panel-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  padding: 16px 56px var(--spacing-medium);
+}
+
+.edital-item__link {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-heading);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .edital-modal__dialog {
+    padding: var(--spacing-large);
+  }
+
+  .edital-item__trigger,
+  .edital-item__panel-inner {
+    padding-left: var(--spacing-large);
+    padding-right: var(--spacing-large);
+  }
+}

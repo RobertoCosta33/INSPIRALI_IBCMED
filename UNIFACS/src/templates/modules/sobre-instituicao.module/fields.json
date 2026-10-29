@@ -1,0 +1,63 @@
+[
+  {
+    "name": "video_cover_image",
+    "label": "Imagem de capa do vídeo",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/video-cover.png",
+      "alt": "Profissionais de saúde da UNIFACS em ambiente hospitalar"
+    }
+  },
+  {
+    "name": "video_url",
+    "label": "Link do vídeo (YouTube)",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.youtube.com/watch?v=yQwlmYldIzM",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "DESCUBRA A UNIFACS"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Educação que transforma realidades e abre novas oportunidades."
+  },
+  {
+    "name": "body_text",
+    "label": "Texto",
+    "type": "richtext",
+    "default": "<p>Com mais de 60 anos de legado, a UNIFACS já impactou mais de 300 mil vidas através de iniciativas que promovem o conhecimento e a inclusão social.</p><p>Veja nosso vídeo institucional para entender melhor a UNIFACS.</p>"
+  },
+  {
+    "name": "cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Explore a UNIFACS"
+  },
+  {
+    "name": "cta_url",
+    "label": "Link do botão",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.unifacs.br/sobre/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

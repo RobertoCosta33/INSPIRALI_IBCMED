@@ -1,0 +1,17 @@
+{
+  "label": "Grupo Inspirali - UNA",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Grupo Inspirali: lockup, estatísticas, Lifelong Learning (linha do tempo) e logos das instituições.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "inspirali"
+  ],
+  "is_available_for_new_content": true
+}

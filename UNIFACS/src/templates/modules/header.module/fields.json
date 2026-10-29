@@ -1,0 +1,245 @@
+[
+  {
+    "name": "home_url",
+    "label": "Link do logo (página inicial)",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "institution_logo",
+    "label": "Logo da instituição (imagem única: ícone + UNIFACS + Excelência Acadêmica Einstein)",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/shared/unifacs-header-logo.png",
+      "alt": "UNIFACS — Excelência Acadêmica Einstein",
+      "width": 1175,
+      "height": 192
+    }
+  },
+  {
+    "name": "candidate_label",
+    "label": "Texto institucional ao lado da busca (ex.: \"Sou Candidato\"). Deixe vazio para ocultar.",
+    "type": "text",
+    "default": "Sou Candidato"
+  },
+  {
+    "name": "enrollment_cta_label",
+    "label": "Texto do botão de inscrição (desktop)",
+    "type": "text",
+    "default": "Inscreva-se para 2027.1"
+  },
+  {
+    "name": "enrollment_cta_label_short",
+    "label": "Texto do botão de inscrição no mobile (versão curta)",
+    "type": "text",
+    "default": "Inscreva-se"
+  },
+  {
+    "name": "enrollment_items",
+    "label": "Opções do dropdown de inscrição",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 10,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "item_label",
+        "label": "Texto",
+        "type": "text",
+        "default": "Enem 27.1"
+      },
+      {
+        "name": "url",
+        "label": "Link",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18447",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "item_label": "Enem 27.1",
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18447",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "item_label": "Transferência Externa 27.1",
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18503",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "item_label": "Portador de Diploma 27.1",
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18430",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "course_nav_links",
+    "label": "Links do menu do curso",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 15,
+      "default": 8
+    },
+    "children": [
+      {
+        "name": "link_label",
+        "label": "Texto",
+        "type": "text",
+        "default": "Editais e Resultados"
+      },
+      {
+        "name": "url",
+        "label": "Link (âncora da página ou URL externa)",
+        "type": "link",
+        "default": {
+          "url": {
+            "href": "#processos-seletivos",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "link_label": "Editais e Resultados",
+        "url": {
+          "url": {
+            "href": "#processos-seletivos",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Diferenciais",
+        "url": {
+          "url": {
+            "href": "#nosso-dna",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Matriz Curricular",
+        "url": {
+          "url": {
+            "href": "#matriz-curricular",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Nossos Campus",
+        "url": {
+          "url": {
+            "href": "#nossos-campus",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Ensino e Prática",
+        "url": {
+          "url": {
+            "href": "#metodologia",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Bolsas e Financiamentos",
+        "url": {
+          "url": {
+            "href": "#investimento-e-financiamentos",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Inspirali",
+        "url": {
+          "url": {
+            "href": "#grupo-inspirali",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Loja",
+        "url": {
+          "url": {
+            "href": "https://umapenca.com/lojamedunifacs/",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  }
+]

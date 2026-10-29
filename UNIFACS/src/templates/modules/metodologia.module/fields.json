@@ -1,0 +1,71 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "METODOLOGIA E TECNOLOGIA"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "A ciência por trás do seu aprendizado"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Metodologias ativas reconhecidas globalmente para sedimentar o conhecimento na memória de longo prazo."
+  },
+  {
+    "name": "media_image",
+    "label": "Imagem",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/learning-environment.jpg",
+      "alt": "Ambiente de aprendizagem prática na UNIFACS"
+    }
+  },
+  {
+    "name": "accordion_items",
+    "label": "Itens do accordion",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "default": 4
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Título",
+        "type": "text",
+        "default": "Metodologia de Harvard - CBCL"
+      },
+      {
+        "name": "text",
+        "label": "Texto",
+        "type": "richtext",
+        "default": "Aprendizagem Colaborativa Baseada em Casos. Você discutirá diagnósticos reais em equipe, desenvolvendo raciocínio clínico ao invés de memorizar teorias."
+      }
+    ],
+    "default": [
+      {
+        "title": "Metodologia de Harvard - CBCL",
+        "text": "Aprendizagem Colaborativa Baseada em Casos. Você discutirá diagnósticos reais em equipe, desenvolvendo raciocínio clínico ao invés de memorizar teorias."
+      },
+      {
+        "title": "Imersão com MedRoom",
+        "text": "A tecnologia a serviço da vida. Utilizamos plataformas líderes em realidade virtual para o estudo avançado de anatomia e fisiologia 3D, preparando você antes mesmo do contato real."
+      },
+      {
+        "title": "Fluência Digital e ProntLife",
+        "text": "Domine a Medicina contemporânea. Uso ético de Inteligência Artificial e prontuário eletrônico inteligente para estruturar seu raciocínio clínico."
+      },
+      {
+        "title": "Avaliação Programática",
+        "text": "Um sistema focado no seu crescimento contínuo. A avaliação não é punitiva, mas sim diagnóstica, com feedbacks constantes para lapidar sua performance e garantir sua segurança."
+      }
+    ]
+  }
+]

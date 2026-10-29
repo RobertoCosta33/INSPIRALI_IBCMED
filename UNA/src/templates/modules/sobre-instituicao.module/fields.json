@@ -1,0 +1,63 @@
+[
+  {
+    "name": "video_cover_image",
+    "label": "Imagem de capa do vídeo",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/video-cover.png",
+      "alt": "Vídeo institucional da Una"
+    }
+  },
+  {
+    "name": "video_url",
+    "label": "Link do vídeo (YouTube)",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.youtube.com/watch?v=yQwlmYldIzM",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "SOBRE A UNA"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "richtext",
+    "default": "Conhecimento que<br />transforma vidas."
+  },
+  {
+    "name": "body_text",
+    "label": "Texto",
+    "type": "richtext",
+    "default": "<p>Há mais de 60 anos transformando vidas por meio da educação.</p><p>Assista ao vídeo institucional para conhecer melhor a Una.</p>"
+  },
+  {
+    "name": "cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Conheça a Una"
+  },
+  {
+    "name": "cta_url",
+    "label": "Link do botão",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://www.una.br/sobre/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

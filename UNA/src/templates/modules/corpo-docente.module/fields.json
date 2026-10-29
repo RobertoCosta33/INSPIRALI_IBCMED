@@ -1,0 +1,79 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "CORPO DOCENTE DE ELITE"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Coordenadores especialistas ao seu lado"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Em Tucuruí (PA), nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu desenvolvimento."
+  },
+  {
+    "name": "coordinators",
+    "label": "Coordenadores",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 2
+    },
+    "children": [
+      {
+        "name": "photo",
+        "label": "Foto",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "role",
+        "label": "Cargo / unidade",
+        "type": "text",
+        "default": "Coordenador Médico"
+      },
+      {
+        "name": "person_name",
+        "label": "Nome",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "bio",
+        "label": "Biografia",
+        "type": "richtext",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/docente/daniel-voloski-guasselli.png",
+          "alt": "Daniel Voloski Guasselli"
+        },
+        "role": "Coordenador Administrativo",
+        "person_name": "Daniel Voloski Guasselli",
+        "bio": "Graduado em Licenciatura Plena em Ciências Biológicas (IFPA-Tucuruí - PA). Mestrado em Genética e Biologia Molecular pelo Programa de Pós-Graduação em Genética e Biologia Molecular (UFPA-Belém-PA). Doutorado em Genética e Biologia Molecular pelo Programa de Pós-graduação em Genética e Biologia molecular (UFPA-Belém-PA). Atuação Docente permanente na Faculdade Gamaliel (FATEFIG) nos cursos de Odontologia, Enfermagem, Estética e Nutrição - Campus Tucuruí - PA. Professor conteudista Faculdade Gamaliel (FATEFIG) - Campus Tucuruí - PA. Professor substituto na Universidade do Estado do Pará (UEPA) - Campus Tucuruí - PA. Professor ES III e Coordenador Adjunto no curso de Medicina Faculdade de Medicina UNA - Campus Tucuruí - PA."
+      },
+      {
+        "photo": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/docente/leonardo-savio-creao.png",
+          "alt": "Leonardo Sávio da Silva Creão"
+        },
+        "role": "Coordenador Médico",
+        "person_name": "Leonardo Sávio da Silva Creão",
+        "bio": "Possui graduação em medicina pela Universidade do Estado do Pará (2010). Atualmente é Médico no CENTRO MÉDICO DO PARÁ, POLÍCIA CIENTÍFICA DO PARÁ e no INSTITUTO DE PREVIDÊNCIA DOS SERVIDORES DO MUNICÍPIO DE TUCURUÍ-PA. Tem experiência na área de RADIOLOGIA E DIAGNÓSTICO POR IMAGEM, atuando principalmente nas seguintes áreas: Radiologia Geral - Ultrassonografia - Mamografia - Tomografia Computadorizada - Ressonância Magnética - Radiologia Vascular - Radiologia Intervencionista - Neurorradiologia. Mestrado Acadêmico pelo Programa de Pós-graduação em Oncologia e Ciências Médicas - UFPA e Especialização em Gestão e Auditoria em Sistemas de Saúde."
+      }
+    ]
+  }
+]

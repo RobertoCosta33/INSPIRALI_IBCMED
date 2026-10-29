@@ -1,0 +1,138 @@
+/* ====================================================================
+   Módulo: Sobre a Anhembi Morumbi (UAM)
+   Figma: "Institucional Anhembi Morumbi" (739:36750 / 702:19840)
+   ==================================================================== */
+
+.institutional-about {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.institutional-about__video {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  aspect-ratio: 646 / 365;
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.institutional-about__video-image {
+  position: absolute;
+  top: 0;
+  left: -23.12%;
+  width: 143.01%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.institutional-about__video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 103px;
+  height: 103px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.institutional-about__video-play img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.institutional-about__content {
+  flex: 0 0 510px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.institutional-about__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.institutional-about__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.institutional-about__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-brand-quaternary);
+}
+
+.institutional-about__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  height: 64px;
+  padding: var(--spacing-large);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--border-brand-primary);
+  background-color: var(--surface-inverted);
+  backdrop-filter: blur(20px);
+  color: var(--text-brand);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.institutional-about__cta:hover,
+.institutional-about__cta:focus-visible {
+  background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
+}
+
+@media (max-width: 1024px) {
+  .institutional-about {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .institutional-about__content {
+    flex-basis: auto;
+    order: 1;
+  }
+
+  /* Em layout de coluna, `flex: 1 1 0` (pensado para o desktop em linha)
+     faz a base do eixo principal (altura) ir a 0 e o vídeo some, já que o
+     container não tem altura extra pra distribuir via flex-grow. */
+  .institutional-about__video {
+    flex: 0 0 auto;
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .institutional-about__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .institutional-about__text {
+    font-size: var(--font-size-sm);
+  }
+
+  .institutional-about__cta {
+    height: 40px;
+    padding: var(--spacing-small);
+    font-size: var(--font-size-xs);
+  }
+}

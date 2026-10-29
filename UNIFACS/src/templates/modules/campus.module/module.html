@@ -1,0 +1,174 @@
+<section
+  class="section section--tint-strong"
+  id="nossos-campus"
+  aria-labelledby="campus-title"
+>
+  <p class="eyebrow">{{ module.eyebrow }}</p>
+  <h2 class="section-intro__title" id="campus-title">{{ module.title }}</h2>
+  <div class="section-intro__text">{{ module.intro_text }}</div>
+
+  <div class="campus-layout">
+    <div class="campus-panel campus-panel--top">
+      <div>
+        <p class="campus-panel__title">{{ module.panel_title }}</p>
+        <div class="campus-panel__text">{{ module.panel_text }}</div>
+      </div>
+    </div>
+
+    <div class="campus-panel campus-panel--bottom">
+      <div class="campus-detail">
+        <p class="campus-detail__location">
+          <img
+            src="{{ get_asset_url('../../public/icons/icon-location.svg') }}"
+            alt=""
+            aria-hidden="true"
+          />
+          <span data-campus-city>{{ module.city }}</span>
+        </p>
+        <p class="campus-detail__address" data-campus-address>
+          {{ module.address_text }}{% if module.map_url.url.href %}
+          <a href="{{ module.map_url.url.href }}" target="_blank" rel="noopener"
+            >{{ module.map_label }}</a
+          >{% endif %}
+        </p>
+      </div>
+      <a
+        class="campus-panel__cta"
+        href="{{ module.cta_url.url.href }}"
+        target="_blank"
+        rel="noopener"
+        data-campus-cta
+        >{{ module.cta_label }}</a
+      >
+    </div>
+
+    <div class="campus-gallery" data-campus-gallery>
+      <div class="campus-gallery__media">
+        <div class="campus-gallery__viewport">
+          {% for photo in module.photos %}
+          <div
+            class="campus-gallery__image{% if loop.first %} is-active{% endif %}"
+            data-gallery-slide
+            data-label="{{ photo.caption }}"
+          >
+            <img
+              class="campus-gallery__photo"
+              src="{{ photo.image.src }}"
+              alt="{{ photo.image.alt }}"
+              loading="lazy"
+            />
+          </div>
+          {% endfor %}
+          <div class="campus-gallery__overlay" aria-hidden="true"></div>
+          <span class="campus-gallery__label" data-gallery-label
+            >{{ module.photos[0].caption }}</span
+          >
+          <div class="campus-gallery__meta">
+            <span class="campus-gallery__counter"
+              ><span data-gallery-counter>01</span> /
+              <span data-gallery-total
+                >{% if module.photos|length < 10 %}0{% endif %}{{
+                module.photos|length }}</span
+              ></span
+            >
+            <div class="campus-gallery__nav">
+              <button
+                type="button"
+                class="campus-gallery__nav-btn campus-gallery__nav-btn--prev"
+                data-gallery-prev
+                aria-label="Imagem anterior"
+              >
+                <img
+                  src="{{ get_asset_url('../../public/icons/icon-chevron-left-nav.svg') }}"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+              <button
+                type="button"
+                class="campus-gallery__nav-btn campus-gallery__nav-btn--next"
+                data-gallery-next
+                aria-label="Próxima imagem"
+              >
+                <span
+                  class="campus-gallery__nav-ring"
+                  data-gallery-progress
+                  style="--progress: 0"
+                ></span>
+                <img
+                  class="campus-gallery__nav-icon--flip"
+                  src="{{ get_asset_url('../../public/icons/icon-chevron-left-nav.svg') }}"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="campus-gallery__thumbs">
+        {% for photo in module.photos %}
+        <button
+          type="button"
+          class="campus-thumb{% if loop.first %} is-active{% endif %}"
+          data-gallery-thumb="{{ loop.index0 }}"
+        >
+          <img
+            class="campus-thumb__photo"
+            src="{{ photo.image.src }}"
+            alt=""
+            loading="lazy"
+          />
+          <span class="campus-thumb__label">{{ photo.caption }}</span>
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="campus-lightbox" data-campus-lightbox hidden>
+    <button
+      type="button"
+      class="campus-lightbox__close"
+      data-campus-lightbox-close
+      aria-label="Fechar imagem ampliada"
+    >
+      <img
+        src="{{ get_asset_url('../../public/icons/icon-modal-close.svg') }}"
+        alt=""
+        aria-hidden="true"
+      />
+    </button>
+    <img
+      class="campus-lightbox__image"
+      data-campus-lightbox-image
+      src=""
+      alt=""
+    />
+  </div>
+</section>
+
+{# Dados da unidade (fotos), consumidos pelo module.js para montar a galeria
+dinamicamente — mesma lógica do protótipo estático. #}
+<script type="application/json" data-campus-json>
+  [
+    {
+      "campus_key": {{ module.campus_key|tojson }},
+      "label": {{ module.campus_name|tojson }},
+      "city": {{ module.city|tojson }},
+      "photos": [
+        {% for photo in module.photos %}
+        { "src": {{ photo.image.src|tojson }}, "label": {{ photo.caption|tojson }} }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+</script>
+
+<script>
+  window.UNIFACS_PLAY_ICON_URL =
+    "{{ get_asset_url('../../public/icons/icon-play-white.svg') }}";
+</script>
+
+{{ require_css(get_asset_url('./module.css')) }} {{
+require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

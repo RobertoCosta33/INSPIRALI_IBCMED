@@ -1,0 +1,321 @@
+/* ====================================================================
+   Reset e estilos base
+   ==================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fallback caso o JS do header ainda não tenha calculado a altura real
+   (ver src/modules/shared/header/header.js) — evita que o conteúdo
+   apareça atrás do header fixo antes do primeiro cálculo. */
+body {
+  padding-top: 136px;
+}
+
+@media (max-width: 860px) {
+  body {
+    padding-top: 72px;
+  }
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  color: var(--text-primary-dark);
+  background-color: var(--surface-inverted);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-gutter);
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 var(--page-gutter-tablet);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--page-gutter-mobile);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: -48px;
+  background: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
+  padding: var(--spacing-small) var(--spacing-large);
+  border-radius: 0 0 var(--radius-small) 0;
+  transition: top 0.2s ease;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Eyebrow / rótulo de seção — Figma UNIFACS: Montserrat Bold (Subtitle 1). */
+.eyebrow {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
+  text-transform: uppercase;
+  margin: 0 0 var(--spacing-small);
+}
+
+.section-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.section-intro__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.section-intro__text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+@media (max-width: 640px) {
+  /* Figma mobile (375-575px): Title 4 (24px), em vez do tamanho desktop
+     (--font-size-3xl, 40px), usado por padrão em todos os títulos de seção.
+     Precisa vir DEPOIS das regras acima no arquivo: como têm a mesma
+     especificidade, a regra declarada por último no CSS vence, mesmo
+     dentro de um media query. */
+  .section-intro__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .section-intro__text {
+    font-size: var(--font-size-sm);
+  }
+
+  .eyebrow {
+    font-size: var(--font-size-xxs);
+  }
+}
+
+/* Utilitários de cor de texto */
+.text-brand {
+  color: var(--text-brand);
+}
+
+.text-heading {
+  color: var(--text-heading);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-extra-small);
+  padding: var(--spacing-small) var(--spacing-large);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.btn-primary {
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--surface-brand-primary-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-brand);
+  border: 1px solid var(--border-brand-primary);
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  background-color: var(--surface-brand-primary-light);
+}
+
+.btn-pill {
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  border-radius: var(--radius-total);
+  padding: var(--spacing-extra-small) var(--spacing-medium);
+  font-size: var(--font-size-sm);
+  width: 100%;
+}
+
+.btn-pill:hover,
+.btn-pill:focus-visible {
+  background-color: var(--surface-brand-primary-dark);
+}
+
+.btn-pill-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-extra-small);
+  background-color: var(--surface-primary-subtle);
+  color: var(--text-brand);
+  border: 1px solid var(--border-brand-primary);
+  border-radius: var(--radius-total);
+  padding: var(--spacing-extra-small) var(--spacing-medium);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.btn-pill-outline:hover,
+.btn-pill-outline:focus-visible {
+  background-color: var(--surface-brand-primary-light);
+}
+
+/* Seções de página — usadas por todos os módulos de conteúdo.
+   O fundo (cor/gradiente) ocupa 100% da largura da tela; o padding
+   lateral cresce dinamicamente para centralizar o conteúdo em telas
+   largas (limitando-o a --page-max-width), sem nunca ficar menor que
+   o gutter padrão. */
+.section {
+  padding: 64px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+}
+
+.section--subtle {
+  background-color: var(--surface-inverted);
+}
+
+.section--tint {
+  background-color: var(--surface-brand-tint);
+}
+
+.section--tint-strong {
+  background-color: var(--surface-brand-tint-strong);
+}
+
+.section--dark {
+  /* Figma (Ecossistema): fundo no accent quaternário (terroso), não no
+     teal de --surface-brand-primary — único uso desta classe. */
+  background-color: var(--surface-brand-quaternary);
+  color: var(--text-inverted);
+  padding: 56px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+}
+
+.section--mint {
+  /* Figma (Grupo Inspirali): fundo creme (--surface-primary-subtle), não o
+     teal claro — único uso desta classe. */
+  background-color: var(--surface-primary-subtle);
+}
+
+@media (max-width: 1280px) {
+  .section,
+  .section--dark {
+    padding-left: var(--page-gutter-tablet);
+    padding-right: var(--page-gutter-tablet);
+  }
+}
+
+@media (max-width: 640px) {
+  .section,
+  .section--dark {
+    padding-left: var(--page-gutter-mobile);
+    padding-right: var(--page-gutter-mobile);
+  }
+}
+
+/* Links de texto com seta */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+  color: var(--text-brand-dark);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  text-decoration: underline;
+}

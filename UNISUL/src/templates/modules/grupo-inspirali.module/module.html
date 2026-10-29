@@ -1,0 +1,90 @@
+<section
+  class="section section--tint-strong"
+  id="grupo-inspirali"
+  aria-labelledby="inspirali-title"
+>
+  <div class="inspirali-section">
+    <div class="inspirali-header">
+      <div class="inspirali-header__brand">
+        <img
+          class="inspirali-header__lockup"
+          src="{{ module.inspirali_logo.src }}"
+          alt="{{ module.inspirali_logo.alt }}"
+        />
+      </div>
+      <div>
+        <h2 class="inspirali-header__title" id="inspirali-title">
+          {{ module.title }}
+        </h2>
+        <div class="inspirali-header__text">{{ module.text }}</div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      {% for stat in module.stats %}
+      <article
+        class="stat-card{% if not stat.value %} stat-card--no-value{% endif %}"
+      >
+        <div class="stat-card__row">
+          <span class="stat-card__icon"
+            ><img src="{{ stat.icon.src }}" alt="" aria-hidden="true"
+          /></span>
+          {% if stat.value %}
+          <p class="stat-card__value">{{ stat.value }}</p>
+          {% endif %}
+        </div>
+        <p class="stat-card__title">{{ stat.title }}</p>
+        <div class="stat-card__text">{{ stat.text }}</div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="lifelong">
+      <div class="lifelong__text">
+        <div>
+          <p class="lifelong__label">{{ module.lifelong_label }}</p>
+          <p class="lifelong__sublabel">{{ module.lifelong_sublabel }}</p>
+        </div>
+        <div>{{ module.lifelong_text }}</div>
+      </div>
+
+      <div class="timeline">
+        {% for step in module.timeline_steps %}
+        <div class="timeline-step">
+          <div class="timeline-step__connector">
+            {% if loop.last and step.icon.src %}
+            <span class="timeline-step__dot"
+              ><img src="{{ step.icon.src }}" alt="" aria-hidden="true"
+            /></span>
+            {% else %}
+            <span class="timeline-step__dot">{{ loop.index }}</span>
+            {% endif %} {% if not loop.last %}<span
+              class="timeline-step__line"
+              aria-hidden="true"
+            ></span
+            >{% endif %}
+          </div>
+          <div class="timeline-step__content">
+            <p class="timeline-step__title">{{ step.title }}</p>
+            <div class="timeline-step__text">{{ step.text }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="partner-logos">
+      {% for partner in module.partner_logos %}
+      <img
+        src="{{ partner.logo.src }}"
+        alt="{{ partner.logo.alt }}"
+        loading="lazy"
+        width="{{ partner.logo.width }}"
+        height="{{ partner.logo.height }}"
+      />
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ require_css(get_asset_url('./module.css')) }}

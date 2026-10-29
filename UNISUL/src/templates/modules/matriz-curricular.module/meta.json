@@ -1,0 +1,17 @@
+{
+  "label": "Matriz Curricular - UNISUL",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Grade curricular por unidade (1ª a 8ª + Internato), com \"Ver mais\" por unidade.",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "matriz-curricular"
+  ],
+  "is_available_for_new_content": true
+}

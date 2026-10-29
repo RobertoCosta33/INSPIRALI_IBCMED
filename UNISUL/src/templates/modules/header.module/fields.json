@@ -1,0 +1,251 @@
+[
+  {
+    "name": "home_url",
+    "label": "Link do logo (página inicial)",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "href": "/",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "home_aria_label",
+    "label": "Texto acessível do link do logo (aria-label)",
+    "type": "text",
+    "default": "Página inicial UNISUL"
+  },
+  {
+    "name": "institution_logo",
+    "label": "Logo da UNISUL (imagem única: ícone + \"UNISUL\" + \"Excelência Acadêmica Einstein\", usada em todos os breakpoints)",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNISUL-assets/shared/unisul-header-logo.png",
+      "alt": "UNISUL — Excelência Acadêmica Einstein",
+      "width": 1010,
+      "height": 192
+    }
+  },
+  {
+    "name": "candidate_label",
+    "label": "Texto fixo \"Sou Candidato\" ao lado da busca (deixe vazio para ocultar)",
+    "type": "text",
+    "default": "Sou Candidato"
+  },
+  {
+    "name": "enrollment_cta_label",
+    "label": "Texto do botão de inscrição (desktop)",
+    "type": "text",
+    "default": "Inscreva-se para 2027.1"
+  },
+  {
+    "name": "enrollment_cta_label_short",
+    "label": "Texto do botão de inscrição no mobile (versão curta)",
+    "type": "text",
+    "default": "Inscreva-se"
+  },
+  {
+    "name": "enrollment_items",
+    "label": "Opções do dropdown de inscrição",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 10,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "item_label",
+        "label": "Texto",
+        "type": "text",
+        "default": "Enem 27.1"
+      },
+      {
+        "name": "url",
+        "label": "Link",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://fichainscricao.inspirali.com/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "item_label": "Enem 27.1",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "https://fichainscricao.inspirali.com/concurso/18400",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "item_label": "Transferência Externa 27.1",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "https://fichainscricao.inspirali.com/concurso/18505",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "item_label": "Portador de Diploma 27.1",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "course_nav_links",
+    "label": "Links do menu do curso",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 15,
+      "default": 8
+    },
+    "children": [
+      {
+        "name": "link_label",
+        "label": "Texto",
+        "type": "text",
+        "default": "Editais e Resultados"
+      },
+      {
+        "name": "url",
+        "label": "Link (âncora da página ou URL externa)",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "#processos-seletivos",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "link_label": "Editais e Resultados",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "#processos-seletivos",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Diferenciais",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "#nosso-dna",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Matriz Curricular",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "#matriz-curricular",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Nossos Campus",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "#nossos-campus",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Ensino e Prática",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "#metodologia",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Bolsas e Financiamentos",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "#investimento-e-financiamentos",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Inspirali",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "#grupo-inspirali",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "link_label": "Loja",
+        "url": {
+          "url": {
+            "content_id": null,
+            "href": "https://umapenca.com/lojamedunisul/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  }
+]

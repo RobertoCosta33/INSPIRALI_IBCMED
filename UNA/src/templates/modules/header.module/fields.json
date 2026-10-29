@@ -1,0 +1,230 @@
+[
+  {
+    "name": "home_url",
+    "label": "Link do logo (página inicial)",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "institution_logo",
+    "label": "Logo da instituição (imagem combinada: ícone + \"UNA MEDICINA\" + divisor + \"Excelência Acadêmica Einstein\")",
+    "type": "image",
+    "default": {
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/shared/una-header-logo.png",
+      "alt": "UNA Medicina — Excelência Acadêmica Einstein",
+      "width": 897,
+      "height": 192
+    }
+  },
+  {
+    "name": "institution_subtitle",
+    "label": "Subtítulo abaixo da logo (ex.: \"Medicina\"). Deixe vazio para ocultar (a logo da UNA já traz o subtítulo embutido).",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "partner_logo",
+    "label": "Logo do parceiro acadêmico (ex.: \"Excelência Acadêmica\" + Einstein, já embutidos na imagem). Deixe vazio para ocultar.",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": ""
+    }
+  },
+  {
+    "name": "mobile_logo",
+    "label": "Logo combinada para mobile (≤640px). Deixe vazio para usar a mesma logo em todos os breakpoints (padrão da UNA).",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": ""
+    }
+  },
+  {
+    "name": "enrollment_cta_label",
+    "label": "Texto do botão de inscrição (desktop)",
+    "type": "text",
+    "default": "Inscreva-se para 2027.1"
+  },
+  {
+    "name": "enrollment_cta_label_short",
+    "label": "Texto do botão de inscrição no mobile (versão curta)",
+    "type": "text",
+    "default": "Inscreva-se"
+  },
+  {
+    "name": "enrollment_items",
+    "label": "Opções do dropdown de inscrição",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 10,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "item_label",
+        "label": "Texto",
+        "type": "text",
+        "default": "Processo Enem 27.1"
+      },
+      {
+        "name": "url",
+        "label": "Link",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "https://fichainscricao.inspirali.com/",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18415",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Processo Enem 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18501",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Transferência Externa 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18434",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Portador de Diploma 27.1"
+      }
+    ]
+  },
+  {
+    "name": "course_nav_links",
+    "label": "Links do menu do curso",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 15,
+      "default": 8
+    },
+    "children": [
+      {
+        "name": "link_label",
+        "label": "Texto",
+        "type": "text",
+        "default": "Editais e Resultados"
+      },
+      {
+        "name": "url",
+        "label": "Link (âncora da página ou URL externa)",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "#processos-seletivos",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "url": {
+          "url": {
+            "href": "#editais-e-resultados",
+            "type": "EXTERNAL"
+          }
+        },
+        "link_label": "Editais e Resultados"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "#nosso-dna",
+            "type": "EXTERNAL"
+          }
+        },
+        "link_label": "Diferenciais"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "#matriz-curricular",
+            "type": "EXTERNAL"
+          }
+        },
+        "link_label": "Matriz Curricular"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "#nossos-campus",
+            "type": "EXTERNAL"
+          }
+        },
+        "link_label": "Nossos Campus"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "#metodologia",
+            "type": "EXTERNAL"
+          }
+        },
+        "link_label": "Ensino e Prática"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "#investimento-e-financiamentos",
+            "type": "EXTERNAL"
+          }
+        },
+        "link_label": "Bolsas e Financiamentos"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "#grupo-inspirali",
+            "type": "EXTERNAL"
+          }
+        },
+        "link_label": "Inspirali"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://umapenca.com/lojameduna/",
+            "type": "EXTERNAL"
+          }
+        },
+        "link_label": "Loja"
+      }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "ECOSSISTEMA DE CUIDADO E PRÁTICA"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Onde a Medicina Acontece."
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Uma rede de prática, cuidado e suporte que acompanha o estudante em cada etapa da formação — dentro e fora da universidade."
+  },
+  {
+    "name": "slides",
+    "label": "Slides do carrossel",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "default": 4
+    },
+    "children": [
+      {
+        "name": "image",
+        "label": "Imagem",
+        "type": "image",
+        "default": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/ecosystem-carousel-1.jpg",
+          "alt": "Centro Integrado de Saúde da UNIFACS"
+        }
+      },
+      {
+        "name": "eyebrow",
+        "label": "Eyebrow do slide",
+        "type": "text",
+        "default": "Centros Integrados de Saúde (CIS)"
+      },
+      {
+        "name": "subtitle",
+        "label": "Subtítulo (opcional)",
+        "type": "text",
+        "default": "Prática intensa sob supervisão de elite"
+      },
+      {
+        "name": "value",
+        "label": "Valor em destaque (opcional)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "support_text",
+        "label": "Texto de apoio",
+        "type": "richtext",
+        "default": "agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à população."
+      }
+    ],
+    "default": [
+      {
+        "eyebrow": "Centros Integrados de Saúde (CIS)",
+        "subtitle": "Prática intensa sob supervisão de elite",
+        "value": "+218.000",
+        "support_text": "agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à população.",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/ecosystem-carousel-1.jpg",
+          "alt": "Centro Integrado de Saúde da UNIFACS"
+        }
+      },
+      {
+        "eyebrow": "Travessia Humanitária",
+        "subtitle": "A medicina além dos muros",
+        "value": "",
+        "support_text": "Participe de expedições transformadoras na Amazônia, no Sertão e em comunidades vulneráveis, aplicando a humanização na prática.",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/ecosystem-carousel-2.jpg",
+          "alt": "Aluna da UNIFACS em missão humanitária atendendo paciente"
+        }
+      },
+      {
+        "eyebrow": "Rede Hospitalar de Alta Complexidade",
+        "subtitle": "Internato sólido de alto nível",
+        "value": "",
+        "support_text": "Internato sólido com vivência em urgência, cirurgia e pediatria através de parcerias com hospitais de referência.",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/ecosystem-carousel-3.jpg",
+          "alt": "Equipe médica em atendimento hospitalar de alta complexidade"
+        }
+      },
+      {
+        "eyebrow": "Programa Angatu (Saúde Mental)",
+        "subtitle": "Cuidado com quem vai cuidar",
+        "value": "",
+        "support_text": "Reconhecemos que cuidar de vidas exige resiliência. Oferecemos acolhimento psicológico, oficinas de bem-estar e grupos de apoio para garantir uma carreira saudável e equilibrada.",
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/ecosystem-carousel-4.jpg",
+          "alt": "Mãos entrelaçadas representando acolhimento e cuidado emocional"
+        }
+      }
+    ]
+  }
+]

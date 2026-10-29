@@ -1,0 +1,44 @@
+<section class="section section--dark" id="ecossistema-de-cuidado" aria-labelledby="ecossistema-title">
+  <p class="eyebrow" style="color: var(--text-inverted);">{{ module.eyebrow }}</p>
+  <h2 class="practice-heading" id="ecossistema-title">{{ module.title }}</h2>
+  <div class="section-intro__text" style="color: var(--text-inverted); margin-bottom: var(--spacing-large);">{{ module.intro_text }}</div>
+
+  <div class="evidence-carousel" data-evidence-carousel>
+    <div class="evidence-carousel__viewport">
+      {% for slide in module.slides %}
+      <div class="evidence-carousel__slide{% if loop.first %} is-active{% endif %}" data-evidence-slide>
+        <img src="{{ slide.image.src }}" alt="{{ slide.image.alt }}" loading="lazy" />
+        <div class="evidence-carousel__content">
+          {% if slide.subtitle %}
+          <div>
+            <p class="evidence-carousel__eyebrow">{{ slide.eyebrow }}</p>
+            <p class="evidence-carousel__subtitle">{{ slide.subtitle }}</p>
+          </div>
+          {% else %}
+          <p class="evidence-carousel__eyebrow">{{ slide.eyebrow }}</p>
+          {% endif %}
+          {% if slide.value %}<p class="evidence-carousel__value">{{ slide.value }}</p>{% endif %}
+          <div class="evidence-carousel__label">{{ slide.support_text }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="carousel-controls">
+      <button type="button" class="carousel-controls__btn" data-evidence-prev aria-label="Slide anterior">
+        <img src="{{ get_asset_url('../../public/icons/icon-chevron-left-circle.svg') }}" alt="" aria-hidden="true" />
+      </button>
+      <div class="carousel-controls__dots">
+        {% for slide in module.slides %}
+        <button type="button" class="carousel-dot{% if loop.first %} is-active{% endif %}" data-evidence-dot aria-label="Slide {{ loop.index }}"></button>
+        {% endfor %}
+      </div>
+      <button type="button" class="carousel-controls__btn" data-evidence-next aria-label="Próximo slide">
+        <img src="{{ get_asset_url('../../public/icons/icon-chevron-right-circle.svg') }}" alt="" aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+</section>
+
+{{ require_css(get_asset_url('./module.css')) }}
+{{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

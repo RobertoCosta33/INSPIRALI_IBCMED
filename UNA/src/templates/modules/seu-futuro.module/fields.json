@@ -1,0 +1,155 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "SEU FUTURO NA MEDICINA"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Explore as áreas de pós-graduação"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "Conheça as áreas do conhecimento da Inspirali Pós Medicina e encontre cursos para o seu momento de carreira."
+  },
+  {
+    "name": "cta_label",
+    "label": "Texto do botão",
+    "type": "text",
+    "default": "Saiba mais"
+  },
+  {
+    "name": "cta_url",
+    "label": "Link do botão \"Saiba mais\"",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://inspiraliposmedicina.com/",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": true,
+      "no_follow": false
+    }
+  },
+  {
+    "name": "cards",
+    "label": "Cartões de áreas",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 15,
+      "default": 10
+    },
+    "children": [
+      {
+        "name": "image",
+        "label": "Imagem",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "text",
+        "label": "Texto (especialidades)",
+        "type": "richtext",
+        "default": ""
+      },
+      {
+        "name": "title",
+        "label": "Título",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-1.jpg",
+          "alt": "Saúde da Criança e do Adolescente"
+        },
+        "text": "Pediatria, Neonatologia, Neuropediatria e Nutrologia Pediátrica.",
+        "title": "Saúde da Criança e do Adolescente"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-2.jpg",
+          "alt": "Saúde em Imagem e Diagnóstico"
+        },
+        "text": "Ultrassonografia, Ecodoppler e Imagem da Mama.",
+        "title": "Saúde em Imagem e Diagnóstico"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-3.jpg",
+          "alt": "Saúde da Mulher"
+        },
+        "text": "Ginecologia e Obstetrícia, Uroginecologia e Ginecologia Regenerativa.",
+        "title": "Saúde da Mulher"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-4.jpg",
+          "alt": "Saúde da Pele e Estética"
+        },
+        "text": "Dermatologia Clínica e Cosmética, Cirurgia Ambulatorial Dermatológica e Estética Corporal Feminina.",
+        "title": "Saúde da Pele e Estética"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-1.jpg",
+          "alt": "Saúde Metabólica e Performance"
+        },
+        "text": "Nutrologia, Medicina do Esporte e Endocrinologia e Metabologia.",
+        "title": "Saúde Metabólica e Performance"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-2.jpg",
+          "alt": "Saúde Digestiva"
+        },
+        "text": "Endoscopia Digestiva e Fellowship em Colonoscopia.",
+        "title": "Saúde Digestiva"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-3.jpg",
+          "alt": "Saúde do Idoso"
+        },
+        "text": "Pós-graduação em Geriatria.",
+        "title": "Saúde do Idoso"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-4.jpg",
+          "alt": "Saúde focada em Gestão e Tecnologia"
+        },
+        "text": "Medicina do Trabalho e Perícia Médica.",
+        "title": "Saúde focada em Gestão e Tecnologia"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-1.jpg",
+          "alt": "Saúde Clínica"
+        },
+        "text": "Urgência e Emergência e Medicina da Dor e Terapias Intervencionistas.",
+        "title": "Saúde Clínica"
+      },
+      {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNA-assets/misc/posgrad-2.jpg",
+          "alt": "Saúde Mental e Comportamental"
+        },
+        "text": "Psiquiatria, Neurologia, Sexologia Clínica e Medicina do Sono.",
+        "title": "Saúde Mental e Comportamental"
+      }
+    ]
+  }
+]
