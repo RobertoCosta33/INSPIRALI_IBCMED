@@ -18,12 +18,14 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background-color: var(--surface-brand-soft);
-  border: 1px solid var(--border-brand-primary);
+  /* Figma: pill em light/accent/secondary (#507b82) a 12%, texto no accent
+     secundário (#4e8d97) em Bold. */
+  background-color: rgba(80, 123, 130, 0.12);
+  border: 1px solid var(--text-brand-alt);
   border-radius: 8px;
   padding: 4px 8px;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
@@ -49,13 +51,14 @@
   padding: 20px 24px;
   gap: 16px;
   border-radius: var(--radius-small);
-  border: 1px solid #ffffff;
-  background-color: var(--surface-brand-primary);
+  /* Figma: CTA sólido no accent quaternário (terroso), texto claro. */
+  border: 1px solid var(--surface-brand-quaternary);
+  background-color: var(--surface-brand-quaternary);
   backdrop-filter: blur(20px);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: #ffffff;
+  color: var(--text-inverted);
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
@@ -115,9 +118,9 @@
 }
 
 .spiral-cta--outline {
-  border-color: var(--border-brand-primary);
+  border-color: var(--border-brand-quaternary);
   background-color: rgba(254, 255, 250, 0.08);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .spiral-cta:hover,
@@ -130,5 +133,6 @@
 .spiral-cta--outline:hover,
 .spiral-cta--outline:focus-visible {
   background-color: var(--surface-brand-primary-light);
-  color: var(--surface-brand-primary-dark);
+  border-color: var(--border-brand-quaternary);
+  color: var(--text-brand-quaternary);
 }

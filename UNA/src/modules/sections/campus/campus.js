@@ -19,10 +19,11 @@
 
   const CAMPUS_GALLERIES = {
     tucurui: buildGallery("tucurui", "Tucuruí", [
-      ["Fachada", "fachada.png"],
-      ["Sala de aula presencial", "sala-de-aula-presencial.png"],
-      ["Laboratórios equipados", "laboratorios-equipados.png"],
-      ["Espaços de Convivência", "espacos-de-convivencia.png"],
+      ["Laboratório morfofuncional", "laboratorio-morfofuncional.jpg"],
+      ["Laboratório morfofuncional com realidade virtual", "laboratorio-morfofuncional-realidade-virtual.jpg"],
+      ["Enfermaria simulada", "enfermaria-simulada.jpg"],
+      ["Sala de aprendizagem ativa", "sala-de-aprendizagem-ativa.jpg"],
+      ["Espaço de estudos", "espaco-de-estudos.jpg"],
     ]),
   };
 

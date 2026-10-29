@@ -15,7 +15,12 @@
 }
 
 .selection-intro__title span {
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
+}
+
+/* Figma: o trecho "Excelência Acadêmica Einstein" usa o accent terciário (dourado). */
+.selection-intro__title .text-brand {
+  color: var(--text-brand-tertiary);
 }
 
 .selection-intro__guidance {
@@ -58,7 +63,8 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to left, rgba(0, 121, 106, 0) 0%, var(--surface-brand-primary) 55%);
+  /* Figma: degradê do cinza escuro (accent/primary) para transparente. */
+  background: linear-gradient(to left, rgba(49, 49, 50, 0) 0%, var(--surface-brand-primary-dark) 55%);
 }
 
 .selection-card__header {
@@ -73,14 +79,14 @@
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
-  color: var(--surface-primary-subtle);
+  color: var(--text-inverted);
 }
 
 .selection-card__lead {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--surface-primary-subtle);
+  color: var(--text-inverted);
 }
 
 .selection-card__tabs {
@@ -98,25 +104,25 @@
   height: 52px;
   padding: var(--spacing-small) var(--spacing-large);
   border-radius: var(--radius-small);
-  border: 1px solid var(--surface-primary-subtle);
-  background-color: rgba(244, 247, 246, 0.16);
+  border: 1px solid var(--surface-inverted);
+  background-color: rgba(255, 255, 255, 0.15);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
-  color: var(--surface-primary-subtle);
+  color: var(--text-inverted);
   white-space: nowrap;
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 .selection-card__tab.is-active {
-  background-color: var(--surface-primary-subtle);
+  background-color: var(--surface-inverted);
   border-color: transparent;
   font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  color: var(--text-primary-dark);
 }
 
 .selection-card__tab:not(.is-active):hover,
 .selection-card__tab:not(.is-active):focus-visible {
-  background-color: rgba(255, 250, 252, 0.3);
+  background-color: rgba(255, 255, 255, 0.28);
 }
 
 /* O ícone de cada aba precisa trocar de cor conforme o estado (cor de
@@ -141,7 +147,7 @@
   width: auto;
   max-width: 700px;
   min-width: 0;
-  background-color: rgba(244, 247, 246, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
   padding: var(--spacing-large);
@@ -165,24 +171,26 @@
   display: inline-flex;
   align-items: center;
   align-self: flex-start;
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--surface-brand-quaternary);
   border: 1px solid #ffffff;
   border-radius: 4px;
   padding: var(--spacing-extra-small);
   font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
   color: #ffffff;
 }
 
 .selection-card__name {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: #ffffff;
 }
 
 .selection-card__description {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
   color: #ffffff;
 }
 
@@ -193,11 +201,16 @@
 }
 
 .selection-card__facts p {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
   color: #ffffff;
 }
 
-.selection-card__facts-note {
+.selection-card__facts strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+.selection-card__facts p.selection-card__facts-note {
   font-size: var(--font-size-xs);
   color: #ffffff;
 }
@@ -219,8 +232,9 @@
   padding: 20px 24px;
   border-radius: var(--radius-small);
   background-color: #ffffff;
-  color: var(--text-brand);
+  color: var(--text-primary-dark);
   font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -243,14 +257,14 @@
   padding: var(--spacing-extra-small) var(--spacing-medium);
   border-radius: var(--radius-total);
   font-size: var(--font-size-sm);
-  color: var(--surface-primary-subtle);
+  color: var(--text-inverted);
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .selection-card__link:hover,
 .selection-card__link:focus-visible {
-  background-color: rgba(255, 250, 252, 0.15);
-  color: var(--surface-primary-subtle);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--text-inverted);
 }
 
 @media (max-width: 1024px) {
@@ -294,11 +308,13 @@
     font-size: var(--font-size-xl);
   }
 
-  .selection-card__lead {
+  .selection-card__lead,
+  .selection-card__description,
+  .selection-card__facts p {
     font-size: var(--font-size-sm);
   }
 
-  .selection-card__facts-note {
+  .selection-card__facts p.selection-card__facts-note {
     font-size: var(--font-size-xxs);
   }
 

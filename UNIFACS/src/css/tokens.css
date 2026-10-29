@@ -1,54 +1,77 @@
 /* ====================================================================
    Design tokens — extraídos do Figma "Redesign - Páginas IES"
-   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "UNIFACS", nó 1147:24544).
-   Mantém os nomes de variável usados no Figma (surface/*, text/*,
-   border/*, spacing/*, radius/*, font/*) para facilitar a conversão
-   futura em módulos HubL — mesma nomenclatura usada em UAM/UNA/src/css/
-   tokens.css, só com os valores de marca da UNIFACS.
+   (arquivo IiZ3Zct5TP6nxPirunSyhk, página "UNIFACS", nó 1147:24544,
+   tema "Inspirali" unificado). Mantém os nomes de variável usados no
+   projeto (surface/*, text/*, border/*, spacing/*, radius/*, font/*)
+   para facilitar a conversão futura em módulos HubL — mesma
+   nomenclatura usada em UAM/src/css/tokens.css.
 
-   IMPORTANTE: a fonte da marca da UNIFACS é "Bricolage Grotesque"
-   (Google Fonts), igual à UNA — DIFERENTE da UAM, que usa "Marcellus".
-   Ver AGENTS.md seção "Fontes por instituição".
+   MUDANÇA DE MARCA: a UNIFACS passa a usar a paleta e a tipografia
+   compartilhadas "Inspirali", substituindo o azul/rosa + Bricolage
+   Grotesque anteriores. Fonte: "Montserrat" (Google Fonts). Diferença
+   em relação à UAM: no Figma da UNIFACS os títulos grandes (Title 2/3/4)
+   usam Montserrat ExtraBold (800), não Bold.
    ==================================================================== */
-
 :root {
   /* Cores de superfície */
   --surface-inverted: #ffffff;
   --surface-primary: #ffffff;
-  --surface-primary-subtle: #fffafc;
-  /* Figma (modal de editais, 1145:44389): fundo rosa claro dos cards de
-     accordion/destaque — unifacs/background/subtle. */
-  --surface-secondary-subtle: #ffe0ed;
-  --surface-brand-primary: #1d4189;
-  /* Figma do footer (1147:24566): fundo escuro #000e29 — "unifacs/dark/
-     background/subtle", não um simples blend do azul de marca. */
-  --surface-brand-primary-dark: #000e29;
-  --surface-brand-primary-light: #e0e3ff;
-  --surface-brand-primary-light-alt: #c7cdff;
-  --surface-brand-tint: rgba(29, 65, 137, 0.08);
-  --surface-brand-tint-strong: #ffe0ed;
-  --surface-brand-soft: rgba(29, 65, 137, 0.12);
-  --surface-brand-soft-weak: rgba(29, 65, 137, 0.1);
+  /* Figma: "inspirali/background/subtle" — fundo creme usado em
+     Institucional, Nosso DNA, Campus, Grupo Inspirali e no card da
+     Matriz Curricular. */
+  --surface-primary-subtle: #fcf7ee;
+  /* Figma: cinza translúcido usado nos cards de Metodologia, Financiamentos
+     e do modal de editais — "soft card" neutro, não mais rosa. */
+  --surface-secondary-subtle: rgba(214, 219, 222, 0.6);
+  /* "inspirali/accent/secondary" — teal suave, o accent principal
+     (eyebrows, CTAs com borda, links, stats). */
+  --surface-brand-primary: #4e8d97;
+  /* "inspirali/accent/primary" — neutro escuro, usado em header/nav/footer
+     e gradientes de card (substitui o azul-marinho antigo). */
+  --surface-brand-primary-dark: #313132;
+  --surface-brand-primary-light: #edf1f0;
+  --surface-brand-primary-light-alt: #d2e3de;
+  --surface-brand-tint: rgba(78, 141, 151, 0.08);
+  /* Figma (Institucional, Nosso DNA, Campus): mesmo creme sólido de
+     --surface-primary-subtle, não um tint translúcido. */
+  --surface-brand-tint-strong: #fcf7ee;
+  --surface-brand-soft: rgba(78, 141, 151, 0.12);
+  --surface-brand-soft-weak: rgba(78, 141, 151, 0.08);
+  /* "inspirali/accent/quaternary" — tom terroso/areia, o segundo accent
+     usado em Matriz Curricular, Campus, Ecossistema, Footer e nos CTAs
+     sólidos de FAQ. */
+  --surface-brand-quaternary: #898177;
+  --surface-brand-quaternary-soft: rgba(137, 129, 119, 0.2);
+  /* "inspirali/background/canvas" — fundo da seção FAQ e contato. */
+  --surface-canvas: #f7f8f8;
+  /* "inspirali/background/surface" — cinza neutro do card do formulário. */
+  --surface-neutral: #d6dbde;
 
   /* Cores de texto */
   --text-inverted: #ffffff;
-  --text-heading: #06070a;
-  --text-primary-dark: #06070a;
-  --text-secondary-dark: #262729;
-  --text-brand: #1d4189;
-  --text-brand-dark: #1d4189;
-  --text-footer-muted: #cccccc;
-  --text-footer: #f5f5f5;
+  /* "inspirali/dark/background/canvas" — títulos grandes. */
+  --text-heading: #222223;
+  /* "inspirali/accent/primary" — corpo de texto. */
+  --text-primary-dark: #313132;
+  --text-secondary-dark: #3d3d3d;
+  --text-brand: #4e8d97;
+  --text-brand-dark: #313132;
+  --text-brand-quaternary: #898177;
+  /* "inspirali/accent/tertiary" — dourado, destaque "Excelência Acadêmica
+     Einstein" no título do Processo seletivo. */
+  --text-brand-tertiary: #b09435;
+  --text-footer-muted: rgba(255, 255, 255, 0.7);
+  --text-footer: #ffffff;
 
   /* Cores de borda */
-  --border-primary-light: #d8d2d3;
-  --border-brand-primary: #1d4189;
-  --border-brand-soft: rgba(29, 65, 137, 0.2);
-  --border-brand-soft-strong: rgba(29, 65, 137, 0.4);
+  --border-primary-light: #c9c8be;
+  --border-brand-primary: #4e8d97;
+  --border-brand-soft: rgba(78, 141, 151, 0.2);
+  --border-brand-soft-strong: rgba(78, 141, 151, 0.4);
+  --border-brand-quaternary: #898177;
 
-  /* Tipografia — família da marca: Bricolage Grotesque (Google Fonts) */
-  --font-family-base: "Bricolage Grotesque", "Segoe UI", sans-serif;
-
+  /* Tipografia — família da marca: Montserrat (Google Fonts) */
+  --font-family-base: "Montserrat", "Segoe UI", sans-serif;
   --font-size-xxs: 12px;
   --font-size-xs: 14px;
   --font-size-sm: 16px;
@@ -70,11 +93,12 @@
   --line-height-lg: 40px;
   --line-height-xl: 48px;
 
-  /* Pesos — Bricolage Grotesque: ExtraLight 200, Light 300, Regular 400, Medium 500, Bold 700, ExtraBold 800 */
+  /* Pesos — Montserrat: ExtraLight 200, Light 300, Regular 400, Medium 500, SemiBold 600, Bold 700, ExtraBold 800 */
   --font-weight-extralight: 200;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
 

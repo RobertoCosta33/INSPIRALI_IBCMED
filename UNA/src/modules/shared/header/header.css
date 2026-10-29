@@ -85,7 +85,7 @@
 }
 
 .institutional-header__lang-item.is-active {
-  color: #141414;
+  color: var(--text-primary-dark);
 }
 
 .institutional-header__lang-divider {
@@ -108,7 +108,7 @@
   display: none;
   align-items: center;
   gap: var(--spacing-medium);
-  background-color: #dcdce0;
+  background-color: var(--surface-neutral);
   padding: var(--spacing-extra-small) var(--page-gutter-mobile);
   width: 100%;
   border: none;
@@ -123,7 +123,7 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: #3d3d3d;
+  color: var(--text-secondary-dark);
 }
 
 .institutional-header__mobile-search-btn {
@@ -144,7 +144,9 @@
 }
 
 .course-nav {
-  background-color: var(--surface-brand-primary);
+  /* Figma: fundo no accent neutro escuro (--surface-brand-primary-dark,
+     #313132), não no teal de --surface-brand-primary. */
+  background-color: var(--surface-brand-primary-dark);
   color: var(--text-inverted);
 }
 
@@ -197,7 +199,7 @@
 
 /* No mobile/tablet o header fica só com as logos + o botão "Inscreva-se"
    (sem menu hambúrguer) — a navegação do curso já está disponível logo
-   abaixo, na faixa verde, e a busca tem sua própria barra dedicada. */
+   abaixo, na faixa escura, e a busca tem sua própria barra dedicada. */
 
 @media (max-width: 640px) {
   .institutional-header {
@@ -255,6 +257,16 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-extra-small);
+  /* Figma: o botão "Inscreva-se para 2027.1" usa o accent terciário
+     (dourado), diferente do .btn-primary genérico (teal). O hover do
+     .btn-primary (fundo #313132) continua valendo. */
+  background-color: var(--text-brand-tertiary);
+  border-color: var(--text-brand-tertiary);
+}
+
+.header-cta-dropdown__trigger:hover,
+.header-cta-dropdown__trigger:focus-visible {
+  border-color: var(--surface-brand-primary-dark);
 }
 
 .header-cta-dropdown__chevron {

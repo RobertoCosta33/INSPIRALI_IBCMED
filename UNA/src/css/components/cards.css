@@ -5,7 +5,8 @@
 .info-card {
   flex: 1 1 0;
   min-width: 260px;
-  background-color: var(--surface-secondary-subtle);
+  /* Figma (Financiamentos): cards no cinza claro "inspirali/background/canvas". */
+  background-color: var(--surface-canvas);
   border-radius: var(--radius-small);
   padding: var(--spacing-small) var(--spacing-large);
   display: flex;
@@ -50,9 +51,9 @@
 
 .info-card__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: #555046;
+  color: var(--text-primary-dark);
 }
 
 /* Cartão de disciplina (Matriz Curricular) */
@@ -87,7 +88,7 @@
   flex: 1 1 0;
   min-width: 220px;
   min-height: 260px;
-  background-color: var(--surface-secondary-subtle);
+  background-color: var(--surface-brand-primary-light);
   border: 1px solid var(--border-brand-soft);
   border-radius: var(--radius-small);
   padding: 20px var(--spacing-large) var(--spacing-large);
@@ -110,7 +111,7 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-small);
-  background-color: var(--surface-brand-soft-weak);
+  background-color: var(--surface-brand-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +124,7 @@
 
 .stat-card__value {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-xl);
   color: var(--text-brand);
 }
@@ -132,7 +133,7 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .stat-card__text {
@@ -207,8 +208,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(41, 0, 7, 0) 40%, rgba(41, 0, 7, 0.878) 80%, #290007 100%),
-    linear-gradient(180deg, rgba(10, 6, 7, 0) 0%, rgba(10, 6, 7, 0.4) 100%);
+    linear-gradient(180deg, rgba(49, 49, 50, 0) 40%, rgba(49, 49, 50, 0.878) 80%, #313132 100%),
+    linear-gradient(180deg, rgba(0, 3, 41, 0) 0%, rgba(0, 3, 41, 0.4) 100%);
 }
 
 .posgrad-card__body {
@@ -222,21 +223,15 @@
 }
 
 .posgrad-card__title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: #f5f5f5;
+  color: var(--text-inverted);
 }
 
 .posgrad-card__text {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: #cccccc;
-}
-
-@media (max-width: 640px) {
-  .posgrad-card__title {
-    font-size: var(--font-size-lg);
-  }
+  color: var(--text-footer-muted);
 }

@@ -78,7 +78,8 @@
 }
 
 .financing-highlight__campus {
-  color: var(--surface-brand-primary-light);
+  /* Figma (1100:13455): rótulo da unidade em #ddeae6 (único uso). */
+  color: #ddeae6;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-relaxed);
@@ -87,7 +88,7 @@
 }
 
 .financing-highlight__label {
-  color: var(--surface-brand-primary-light);
+  color: var(--text-inverted);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
@@ -95,7 +96,7 @@
 }
 
 .financing-highlight__value {
-  color: #ffffff;
+  color: var(--text-inverted);
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
@@ -103,7 +104,7 @@
 
 .financing-highlight__note {
   padding-top: 6px;
-  color: var(--surface-brand-primary-light);
+  color: var(--text-inverted);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
@@ -112,7 +113,7 @@
 
 .financing-highlight__disclaimer {
   margin-top: var(--spacing-extra-small);
-  color: var(--surface-brand-primary-light);
+  color: var(--text-inverted);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-tight);
@@ -154,13 +155,13 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(0, 121, 106, 0.25);
+  background-color: rgba(80, 123, 130, 0.2);
   cursor: pointer;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .financing-dot:hover {
-  background-color: rgba(0, 121, 106, 0.45);
+  background-color: rgba(80, 123, 130, 0.4);
 }
 
 .financing-dot.is-active {
@@ -251,8 +252,7 @@
   flex: 1 1 0;
   min-width: 0;
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -269,7 +269,7 @@
 }
 
 .bolsa-modal__box {
-  background-color: #e0fff9;
+  background-color: var(--surface-primary-subtle);
   border-radius: var(--radius-small);
   padding: var(--spacing-medium) 56px;
   overflow-y: auto;

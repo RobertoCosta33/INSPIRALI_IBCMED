@@ -35,8 +35,7 @@
 
 .campus-panel__title {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
@@ -61,10 +60,10 @@
   height: 48px;
   padding: var(--spacing-medium);
   border-radius: var(--radius-small);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   width: 100%;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 .campus-chip:hover,
@@ -73,8 +72,9 @@
 .campus-chip--active:focus-visible,
 .campus-chip--inactive:hover,
 .campus-chip--inactive:focus-visible {
-  background-color: var(--surface-brand-primary-light);
-  color: var(--text-brand);
+  background-color: var(--surface-brand-primary-dark);
+  border-color: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
 }
 
 .campus-chip img {
@@ -83,14 +83,14 @@
 }
 
 .campus-chip--active {
-  background-color: var(--surface-brand-primary);
-  color: var(--text-footer);
+  background-color: var(--surface-brand-quaternary);
+  color: var(--text-inverted);
 }
 
 .campus-chip--inactive {
-  background-color: var(--text-footer);
-  border: 1px solid var(--border-brand-primary);
-  color: var(--text-brand);
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--border-brand-quaternary);
+  color: var(--text-brand-quaternary);
 }
 
 .campus-detail {
@@ -100,14 +100,13 @@
 }
 
 .campus-detail__location {
-  /* Figma: cidade + "Ver no mapa" usam o accent terciário rosa (#d7006d),
-     não o azul de marca. */
+  /* Figma: cidade em Montserrat Medium 14px no accent secundário (teal). */
   display: flex;
   align-items: center;
   gap: var(--spacing-extra-small);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
-  color: #d7006d;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-brand);
 }
 
 .campus-detail__location img {
@@ -116,13 +115,14 @@
 }
 
 .campus-detail__address {
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
-  color: #3d3d3d;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
 }
 
 .campus-detail__address a {
-  color: #d7006d;
+  color: var(--text-brand);
   text-decoration: underline;
 }
 
@@ -134,9 +134,9 @@
   padding: 20px var(--spacing-large);
   border-radius: var(--radius-small);
   border: 1px solid transparent;
-  background-color: var(--surface-brand-primary);
+  background-color: var(--surface-brand-quaternary);
   backdrop-filter: blur(20px);
-  color: var(--text-footer);
+  color: var(--text-inverted);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
@@ -145,9 +145,8 @@
 
 .campus-panel__cta:hover,
 .campus-panel__cta:focus-visible {
-  background-color: var(--surface-brand-primary-light);
-  border-color: var(--surface-brand-primary-dark);
-  color: var(--surface-brand-primary-dark);
+  background-color: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
 }
 
 .campus-gallery {
@@ -215,21 +214,20 @@
 }
 
 .campus-gallery__overlay {
-  /* Figma: gradiente de rgba(10,6,7,0) a #0a0607 sólido (não o verde-escuro
-     da UAM). */
+  /* Figma: gradiente de rgba(49,49,50,0) (a partir de 50%) até #313132. */
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10, 6, 7, 0) 0%, #0a0607 100%);
+  background: linear-gradient(to bottom, rgba(49, 49, 50, 0) 50%, #313132 100%);
   pointer-events: none;
 }
 
 .campus-gallery__label {
-  /* Figma: rgba(230,0,37,0.75) — mesmo valor usado nas legendas das
-     miniaturas abaixo. */
+  /* Figma: accent secundário (#4e8d97) a 75% — mesmo valor usado nas
+     legendas das miniaturas abaixo. */
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: rgba(29, 65, 137, 0.75);
+  background-color: rgba(78, 141, 151, 0.75);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
@@ -268,12 +266,17 @@
 }
 
 .campus-gallery__nav-btn--prev {
-  background-color: #a3a3a3;
+  /* Figma: botão desabilitado em cinza-azulado com seta branca. */
+  background-color: var(--surface-neutral);
   transition: background-color 0.2s ease;
 }
 
+.campus-gallery__nav-btn--prev:not(.is-enabled) img {
+  filter: brightness(0) invert(1);
+}
+
 .campus-gallery__nav-btn--prev.is-enabled {
-  background-color: #fafaff;
+  background-color: var(--surface-inverted);
 }
 
 .campus-gallery__nav-btn[aria-disabled="true"] {
@@ -288,7 +291,7 @@
   position: absolute;
   inset: 0;
   border-radius: var(--radius-total);
-  background: conic-gradient(var(--surface-brand-primary) calc(var(--progress, 0) * 1%), #dcdce0 0);
+  background: conic-gradient(var(--surface-brand-primary) calc(var(--progress, 0) * 1%), var(--surface-neutral) 0);
 }
 
 .campus-gallery__nav-ring::after {
@@ -296,7 +299,7 @@
   position: absolute;
   inset: 1.5px;
   border-radius: var(--radius-total);
-  background-color: #fafaff;
+  background-color: var(--surface-inverted);
 }
 
 .campus-gallery__thumbs {
@@ -341,7 +344,7 @@
   left: 8px;
   right: 8px;
   bottom: 8px;
-  background-color: rgba(29, 65, 137, 0.75);
+  background-color: rgba(78, 141, 151, 0.75);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
@@ -371,7 +374,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--spacing-extra-large);
-  background-color: rgba(10, 15, 14, 0.9);
+  background-color: rgba(34, 34, 35, 0.9);
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -463,7 +466,7 @@
   }
 
   .campus-gallery__counter {
-    color: #141414;
+    color: var(--text-primary-dark);
   }
 
   .campus-gallery__nav-btn {
@@ -476,12 +479,8 @@
     height: 16px;
   }
 
-  .campus-gallery__nav-btn--prev {
-    background-color: #fafaff;
-  }
-
   .campus-gallery__nav-btn--prev.is-enabled {
-    background-color: #fafaff;
+    background-color: var(--surface-inverted);
   }
 
   .campus-gallery__counter {

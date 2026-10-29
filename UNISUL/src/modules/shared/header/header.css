@@ -54,7 +54,7 @@
 .institutional-header__divider {
   width: 1px;
   height: 56px;
-  background-color: #7a7a7a;
+  background-color: var(--surface-brand-quaternary);
   opacity: 0.4;
   flex-shrink: 0;
 }
@@ -88,17 +88,17 @@
 .institutional-header__lang-item {
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
-  color: #7a7a7a;
+  color: var(--text-brand-quaternary);
 }
 
 .institutional-header__lang-item.is-active {
-  color: #141414;
+  color: var(--text-primary-dark);
 }
 
 .institutional-header__lang-divider {
   width: 1px;
   height: 8px;
-  background-color: #7a7a7a;
+  background-color: var(--surface-brand-quaternary);
 }
 
 .institutional-header__link {
@@ -108,7 +108,7 @@
   padding: var(--spacing-micro);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
-  color: #141414;
+  color: var(--text-primary-dark);
   white-space: nowrap;
 }
 
@@ -124,14 +124,16 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-small);
-  background-color: rgba(122, 122, 122, 0.08);
+  /* Figma: botão de busca com contorno areia (#7a6f66), sem preenchimento. */
+  border: 1px solid var(--border-brand-quaternary);
+  background-color: transparent;
 }
 
 .institutional-header__mobile-search {
   display: none;
   align-items: center;
   gap: var(--spacing-medium);
-  background-color: #dcdce0;
+  background-color: var(--surface-neutral);
   padding: var(--spacing-extra-small) var(--page-gutter-mobile);
   width: 100%;
   border: none;
@@ -146,7 +148,7 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: #3d3d3d;
+  color: var(--text-primary-dark);
 }
 
 .institutional-header__mobile-search-btn {
@@ -156,7 +158,8 @@
   width: 38px;
   height: 32px;
   border-radius: var(--radius-small);
-  background-color: rgba(122, 122, 122, 0.08);
+  border: 1px solid var(--border-brand-quaternary);
+  background-color: transparent;
   flex-shrink: 0;
 }
 
@@ -166,8 +169,20 @@
   font-size: var(--font-size-xs);
 }
 
+/* Figma: o botão "Inscreva-se" do header usa o accent areia (#7a6f66);
+   no hover escurece para o neutro escuro, como o resto da página. */
+.institutional-header__nav .btn.btn-primary {
+  background-color: var(--surface-brand-quaternary);
+}
+
+.institutional-header__nav .btn.btn-primary:hover,
+.institutional-header__nav .btn.btn-primary:focus-visible {
+  background-color: var(--surface-brand-primary-dark);
+}
+
 .course-nav {
-  background-color: var(--surface-brand-primary);
+  /* Figma: fundo no neutro escuro (#313132). */
+  background-color: var(--surface-brand-primary-dark);
   color: var(--text-inverted);
 }
 

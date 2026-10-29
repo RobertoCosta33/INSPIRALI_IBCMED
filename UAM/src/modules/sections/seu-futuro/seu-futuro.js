@@ -55,12 +55,12 @@
 
     const ICONS = {
       prev: {
-        active: "/UAM/src/public/icons/icon-chevron-left-nav-white.svg",
-        inactive: "/UAM/src/public/icons/icon-chevron-left-nav.svg",
+        active: "/UAM/src/public/icons/icon-arrow-left-btn-white.svg",
+        inactive: "/UAM/src/public/icons/icon-arrow-left-btn.svg",
       },
       next: {
-        active: "/UAM/src/public/icons/icon-chevron-right-nav.svg",
-        inactive: "/UAM/src/public/icons/icon-chevron-right-nav-teal.svg",
+        active: "/UAM/src/public/icons/icon-arrow-right-btn.svg",
+        inactive: "/UAM/src/public/icons/icon-arrow-right-btn.svg",
       },
     };
 

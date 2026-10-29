@@ -19,7 +19,7 @@
   right: -175px;
   width: 570px;
   height: 534px;
-  background-color: rgba(41, 49, 137, 0.2);
+  background-color: rgba(80, 123, 130, 0.2);
   -webkit-mask-image: url("/UNISUL/src/public/images/shared/grupo-inspirali-broto-unisul.png");
   mask-image: url("/UNISUL/src/public/images/shared/grupo-inspirali-broto-unisul.png");
   -webkit-mask-size: contain;
@@ -84,16 +84,9 @@
   flex-wrap: wrap;
 }
 
-/* No Figma (1044:31070) o fundo do card é quase branco (#fffafb), não o
-   rosa que `--surface-secondary-subtle` usa em outras seções da UNA
-   (Metodologia, FAQ) — por isso sobrescreve aqui, só para esta seção. */
-#grupo-inspirali .stat-card {
-  /* Figma (1100:13603): fundo quase-branco + borda cinza neutra
-     (#dcdce0), não o tom azul/índigo usado como borda padrão em
-     `.stat-card` (cards.css). */
-  background-color: var(--surface-primary-subtle);
-  border-color: #dcdce0;
-}
+/* Figma (1100:13603): os stat cards desta seção usam o fundo claro da
+   paleta (#edf1f0) e borda teal a 20% — já definidos em `.stat-card`
+   (cards.css), sem sobrescrita. */
 
 .lifelong {
   display: flex;
@@ -116,15 +109,15 @@
 }
 
 .lifelong__label {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
 
 .lifelong__sublabel {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -133,7 +126,7 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-relaxed);
-  color: var(--text-primary-dark);
+  color: var(--text-brand-quaternary);
 }
 
 .timeline {
@@ -183,7 +176,7 @@
 .timeline-step__line {
   width: 2px;
   flex: 1 1 auto;
-  background-color: var(--border-brand-soft-strong);
+  background-color: var(--surface-brand-primary);
   min-height: 24px;
 }
 
@@ -203,20 +196,18 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-primary-dark);
+  color: var(--text-brand-quaternary);
 }
 
 .partner-logos {
-  /* Fundo quase-branco + borda cinza neutra (#dcdce0) — mesmo padrão
-     do `.stat-card` desta seção (1100:13603), não o índigo de
-     `--border-brand-soft` usado em outras seções. */
+  /* Figma (1100:13678): mesma superfície e borda dos `.stat-card`. */
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-medium);
-  background-color: var(--surface-primary-subtle);
-  border: 1px solid #dcdce0;
+  background-color: var(--surface-brand-primary-light);
+  border: 1px solid var(--border-brand-soft);
   border-radius: 12px;
   padding: var(--spacing-extra-large);
   overflow-x: auto;

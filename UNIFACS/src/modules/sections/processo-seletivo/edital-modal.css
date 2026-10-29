@@ -10,7 +10,7 @@
 .edital-modal__backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(17, 17, 17, 0.5);
+  background-color: rgba(34, 34, 35, 0.5);
   z-index: 200;
   opacity: 0;
   transition: opacity 0.25s ease;
@@ -61,8 +61,7 @@
 
 .edital-modal__header-text #edital-modal-title {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -97,8 +96,8 @@
 }
 
 .edital-item {
-  /* Figma (1145:44389): cards do modal de editais usam o mesmo rosa
-     claro de `--surface-secondary-subtle`, não um verde-água. */
+  /* Figma (1145:44389): cards do modal de editais usam o mesmo cinza
+     translúcido de `--surface-secondary-subtle`. */
   background-color: var(--surface-secondary-subtle);
   border-radius: var(--radius-small);
   overflow: hidden;
@@ -114,7 +113,7 @@
   gap: var(--spacing-large);
   padding: 16px 56px;
   font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-heading);
   text-align: left;
 }

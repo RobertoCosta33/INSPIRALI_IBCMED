@@ -76,7 +76,7 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -144,8 +144,9 @@ h4 {
 }
 
 .section-intro__title {
+  /* Figma (ANIMA/Title 2): Bricolage Grotesque ExtraBold 40px. */
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -154,7 +155,8 @@ h4 {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-relaxed);
-  color: var(--text-primary-dark);
+  /* Figma (ANIMA/Body 2): Light 20px na cor areia da UNISUL. */
+  color: var(--text-brand-quaternary);
 }
 
 @media (max-width: 640px) {
@@ -276,13 +278,17 @@ h4 {
 }
 
 .section--dark {
-  background-color: var(--surface-brand-primary);
+  /* Figma (Ecossistema): fundo areia (accent quaternário), não o teal de
+     --surface-brand-primary — único uso desta classe. */
+  background-color: var(--surface-brand-quaternary);
   color: var(--text-inverted);
   padding: 56px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .section--mint {
-  background-color: var(--surface-brand-primary-light);
+  /* Figma (Grupo Inspirali): fundo creme (--surface-primary-subtle) —
+     único uso desta classe. */
+  background-color: var(--surface-primary-subtle);
 }
 
 @media (max-width: 1280px) {

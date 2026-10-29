@@ -77,7 +77,7 @@
 }
 
 .financing-highlight__label {
-  color: var(--surface-brand-primary-light);
+  color: var(--text-inverted);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
@@ -85,7 +85,7 @@
 }
 
 .financing-highlight__value {
-  color: #ffffff;
+  color: var(--text-inverted);
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
@@ -93,7 +93,7 @@
 
 .financing-highlight__note {
   padding-top: 6px;
-  color: var(--surface-brand-primary-light);
+  color: var(--text-inverted);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
@@ -102,7 +102,7 @@
 
 .financing-highlight__disclaimer {
   margin-top: var(--spacing-extra-small);
-  color: var(--surface-brand-primary-light);
+  color: var(--text-inverted);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-tight);

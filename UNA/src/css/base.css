@@ -76,7 +76,7 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -129,7 +129,8 @@ h4 {
 
 /* Eyebrow / rótulo de seção */
 .eyebrow {
-  font-weight: var(--font-weight-extrabold);
+  /* Figma (Montserrat/Subtitle 1): eyebrows em Bold 700, cor accent/secondary. */
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
@@ -144,11 +145,9 @@ h4 {
 }
 
 .section-intro__title {
-  /* Diferente da UAM (Marcellus, onde títulos grandes usam sempre
-     `regular` — negrito sintético destoaria do Figma): a UNA usa
-     Bricolage Grotesque, cuja família tem um peso ExtraBold desenhado
-     de verdade, e é exatamente o peso usado nos títulos no Figma da
-     UNA. Ver AGENTS.md "Fontes por instituição". */
+  /* Figma da UNA (Montserrat/Title 2): títulos grandes de seção em
+     ExtraBold 800 — diferente da UAM, cujo Figma usa Bold 700 nesses
+     títulos. Ver AGENTS.md "Fontes por instituição". */
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
@@ -157,7 +156,7 @@ h4 {
 
 .section-intro__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
 }
@@ -224,6 +223,7 @@ h4 {
 .btn-outline:hover,
 .btn-outline:focus-visible {
   background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
 }
 
 .btn-pill {
@@ -257,6 +257,7 @@ h4 {
 .btn-pill-outline:hover,
 .btn-pill-outline:focus-visible {
   background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
 }
 
 /* Seções de página — usadas por todos os módulos de conteúdo.
@@ -281,13 +282,17 @@ h4 {
 }
 
 .section--dark {
-  background-color: var(--surface-brand-primary);
+  /* Figma (Ecossistema): fundo no accent quaternário (terroso), não no
+     teal de --surface-brand-primary — único uso desta classe. */
+  background-color: var(--surface-brand-quaternary);
   color: var(--text-inverted);
   padding: 56px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .section--mint {
-  background-color: var(--surface-brand-primary-light);
+  /* Figma (Grupo Inspirali): fundo creme (--surface-primary-subtle),
+     não o teal claro — único uso desta classe. */
+  background-color: var(--surface-primary-subtle);
 }
 
 @media (max-width: 1280px) {

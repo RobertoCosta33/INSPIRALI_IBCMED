@@ -14,7 +14,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1.5px solid var(--border-brand-soft);
+  border-bottom: 1.5px solid var(--surface-brand-quaternary-soft);
 }
 
 .unit-tab {
@@ -24,14 +24,14 @@
   text-align: center;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
   border-bottom: 3px solid transparent;
   margin-bottom: -1.5px;
 }
 
 .unit-tab.is-active {
   font-weight: var(--font-weight-extrabold);
-  border-bottom-color: var(--text-brand);
+  border-bottom-color: var(--text-brand-quaternary);
 }
 
 .unit-panel {
@@ -73,19 +73,19 @@
 .unit-panel__eyebrow {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-extrabold);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__hours {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-micro);
-  background-color: var(--surface-brand-soft);
+  background-color: var(--surface-brand-quaternary-soft);
   border-radius: var(--spacing-micro);
   padding: var(--spacing-micro) var(--spacing-extra-small);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-extrabold);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__hours img {
@@ -95,15 +95,14 @@
 
 .unit-panel__title {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
 
 .unit-panel__divider {
   height: 1px;
-  background-color: var(--border-brand-soft);
+  background-color: var(--surface-brand-quaternary-soft);
   border: none;
 }
 
@@ -130,7 +129,7 @@
   justify-content: space-between;
   gap: var(--spacing-medium);
   padding: var(--spacing-small) 0;
-  border-bottom: 1px solid var(--border-brand-soft);
+  border-bottom: 1px solid var(--surface-brand-quaternary-soft);
 }
 
 .unit-panel__discipline-name {
@@ -140,7 +139,7 @@
 
 .unit-panel__discipline-hours {
   font-size: var(--font-size-xs);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
   white-space: nowrap;
 }
 
@@ -148,7 +147,7 @@
   align-self: center;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__placeholder {

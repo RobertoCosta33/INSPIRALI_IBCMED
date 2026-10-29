@@ -20,7 +20,7 @@
 .video-modal__backdrop {
   position: absolute;
   inset: 0;
-  background-color: rgba(10, 15, 14, 0.9);
+  background-color: rgba(34, 34, 35, 0.9);
   opacity: 0;
   transition: opacity 0.25s ease;
 }

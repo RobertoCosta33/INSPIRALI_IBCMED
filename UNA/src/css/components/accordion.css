@@ -17,7 +17,8 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-large);
-  background-color: var(--surface-secondary-subtle);
+  /* Figma (Metodologia): cards no cinza claro "inspirali/background/canvas". */
+  background-color: var(--surface-canvas);
   border-radius: var(--radius-small);
   padding: var(--spacing-large);
   text-align: left;
@@ -72,7 +73,7 @@
   display: none;
   height: 1px;
   margin: 0 var(--spacing-medium);
-  background-color: #fafaff;
+  background-color: var(--surface-inverted);
   border: none;
 }
 
@@ -83,7 +84,7 @@
 .accordion-panel {
   max-height: 0;
   overflow: hidden;
-  background-color: var(--surface-secondary-subtle);
+  background-color: var(--surface-canvas);
   border-radius: 0 0 var(--radius-small) var(--radius-small);
   transition: max-height 0.35s ease;
 }
@@ -110,7 +111,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .accordion-summary {

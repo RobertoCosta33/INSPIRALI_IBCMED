@@ -61,8 +61,7 @@
 
 .edital-modal__header-text #edital-modal-title {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -97,7 +96,7 @@
 }
 
 .edital-item {
-  background-color: var(--surface-brand-primary-light);
+  background-color: var(--surface-secondary-subtle);
   border-radius: var(--radius-small);
   overflow: hidden;
   flex-shrink: 0;
@@ -112,7 +111,7 @@
   gap: var(--spacing-large);
   padding: 16px 56px;
   font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-heading);
   text-align: left;
 }

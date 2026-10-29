@@ -4,12 +4,10 @@
    ==================================================================== */
 
 .unit-card {
-  /* No Figma da UNA (931:26828) o card inteiro tem um fundo rosa/vermelho
-     bem claro (~#ffe1e6), não o cinza neutro de `--surface-primary-subtle`
-     usado na UAM — por isso aqui usamos o tint de marca (mais forte),
-     que já é vermelho nos tokens da UNA. */
+  /* Figma da UNA (931:26048): o card inteiro usa o creme
+     "inspirali/background/subtle" (--surface-primary-subtle). */
   width: 100%;
-  background-color: var(--surface-brand-tint-strong);
+  background-color: var(--surface-primary-subtle);
   border-radius: var(--radius-medium);
   padding: var(--spacing-medium) var(--spacing-large) var(--spacing-large);
 }
@@ -28,14 +26,14 @@
   text-align: center;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
   border-bottom: 3px solid transparent;
   margin-bottom: -1.5px;
 }
 
 .unit-tab.is-active {
-  font-weight: var(--font-weight-extrabold);
-  border-bottom-color: var(--text-brand);
+  font-weight: var(--font-weight-bold);
+  border-bottom-color: var(--text-brand-quaternary);
 }
 
 .unit-panel {
@@ -76,8 +74,8 @@
 
 .unit-panel__eyebrow {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-extrabold);
-  color: var(--text-brand);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__hours {
@@ -88,8 +86,8 @@
   border-radius: var(--spacing-micro);
   padding: var(--spacing-micro) var(--spacing-extra-small);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-extrabold);
-  color: var(--text-brand);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__hours img {
@@ -99,8 +97,7 @@
 
 .unit-panel__title {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -119,8 +116,8 @@
 
 .unit-panel__group-title {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-extrabold);
-  color: #3d3d3d;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary-dark);
 }
 
 .unit-panel__disciplines {
@@ -144,7 +141,7 @@
 
 .unit-panel__discipline-hours {
   font-size: var(--font-size-xs);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
   white-space: nowrap;
 }
 
@@ -152,7 +149,7 @@
   align-self: center;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__placeholder {

@@ -61,12 +61,10 @@
 }
 
 .institutional-about__title {
-  /* extrabold (não regular como na UAM/Marcellus): Bricolage Grotesque
-     tem um ExtraBold desenhado de verdade, e é o peso usado no título
-     no Figma da UNA — ver AGENTS.md "Fontes por instituição". */
+  /* Figma da UNA (Montserrat/Title 2): ExtraBold 800 — ver AGENTS.md
+     "Fontes por instituição". */
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
-  font-family: var(--font-family-display, var(--font-family-base));
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -76,7 +74,7 @@
   flex-direction: column;
   gap: var(--spacing-medium);
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
 }
@@ -94,7 +92,7 @@
   backdrop-filter: blur(20px);
   color: var(--text-brand);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 

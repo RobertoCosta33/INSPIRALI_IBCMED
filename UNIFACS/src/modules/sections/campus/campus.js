@@ -20,8 +20,11 @@
   const CAMPUS_GALLERIES = {
     salvador: buildGallery("campus", "Salvador", [
       ["Biblioteca", "biblioteca.jpg"],
-      ["Laboratórios equipados", "laboratorios.jpg"],
-      ["Sala de aula", "sala-de-aula.jpg"],
+      ["Laboratório de anatomia", "laboratorio-de-anatomia.jpg"],
+      ["Laboratório de simulação clínica", "laboratorio-de-simulacao-clinica.jpg"],
+      ["Laboratório morfofuncional", "laboratorio-morfofuncional.jpg"],
+      ["Simulação de cuidados neonatais", "simulacao-cuidados-neonatais.jpg"],
+      ["Área de convivência", "area-de-convivencia.jpg"],
     ]),
   };
 

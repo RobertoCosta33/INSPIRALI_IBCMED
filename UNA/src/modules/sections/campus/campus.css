@@ -35,8 +35,7 @@
 
 .campus-panel__title {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
@@ -64,7 +63,7 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   width: 100%;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 .campus-chip:hover,
@@ -83,14 +82,14 @@
 }
 
 .campus-chip--active {
-  background-color: var(--surface-brand-primary);
-  color: var(--text-footer);
+  background-color: var(--surface-brand-quaternary);
+  color: var(--text-inverted);
 }
 
 .campus-chip--inactive {
-  background-color: var(--text-footer);
-  border: 1px solid var(--border-brand-primary);
-  color: var(--text-brand);
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--border-brand-quaternary);
+  color: var(--text-brand-quaternary);
 }
 
 .campus-detail {
@@ -103,8 +102,9 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-extra-small);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
   color: var(--text-brand);
 }
 
@@ -114,9 +114,10 @@
 }
 
 .campus-detail__address {
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
-  color: #3d3d3d;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
 }
 
 .campus-detail__address a {
@@ -131,10 +132,11 @@
   height: 64px;
   padding: 20px var(--spacing-large);
   border-radius: var(--radius-small);
-  border: 1px solid transparent;
-  background-color: var(--surface-brand-primary);
+  /* Figma: CTA sólido no accent quaternário (terroso), texto branco. */
+  border: 1px solid var(--border-brand-quaternary);
+  background-color: var(--surface-brand-quaternary);
   backdrop-filter: blur(20px);
-  color: var(--text-footer);
+  color: var(--text-inverted);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
@@ -143,9 +145,9 @@
 
 .campus-panel__cta:hover,
 .campus-panel__cta:focus-visible {
-  background-color: var(--surface-brand-primary-light);
+  background-color: var(--surface-brand-primary-dark);
   border-color: var(--surface-brand-primary-dark);
-  color: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
 }
 
 .campus-gallery {
@@ -213,8 +215,9 @@
 }
 
 .campus-gallery__overlay {
-  /* Figma: gradiente de rgba(10,6,7,0) a #0a0607 sólido (não o verde-escuro
-     da UAM). */
+  /* Figma da UNA (948:41432): gradiente de rgba(10,6,7,0) a #0a0607
+     sólido — token escuro que o Figma da UNA ainda usa aqui (na UAM é
+     #313132). */
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(10, 6, 7, 0) 0%, #0a0607 100%);
@@ -222,12 +225,12 @@
 }
 
 .campus-gallery__label {
-  /* Figma: rgba(230,0,37,0.75) — mesmo valor usado nas legendas das
-     miniaturas abaixo. */
+  /* Figma: rgba(80,123,130,0.75) (light/accent/secondary) — mesmo valor
+     usado nas legendas das miniaturas abaixo. */
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: rgba(230, 0, 37, 0.75);
+  background-color: rgba(80, 123, 130, 0.75);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
@@ -238,7 +241,7 @@
 .campus-gallery__counter {
   color: var(--text-footer);
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-tight);
 }
 
@@ -271,7 +274,7 @@
 }
 
 .campus-gallery__nav-btn--prev.is-enabled {
-  background-color: #fafaff;
+  background-color: var(--surface-inverted);
 }
 
 .campus-gallery__nav-btn[aria-disabled="true"] {
@@ -294,7 +297,7 @@
   position: absolute;
   inset: 1.5px;
   border-radius: var(--radius-total);
-  background-color: #fafaff;
+  background-color: var(--surface-inverted);
 }
 
 .campus-gallery__thumbs {
@@ -339,7 +342,7 @@
   left: 8px;
   right: 8px;
   bottom: 8px;
-  background-color: rgba(230, 0, 37, 0.75);
+  background-color: rgba(80, 123, 130, 0.75);
   color: var(--text-footer);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
@@ -461,7 +464,7 @@
   }
 
   .campus-gallery__counter {
-    color: #141414;
+    color: var(--text-primary-dark);
   }
 
   .campus-gallery__nav-btn {
@@ -475,11 +478,11 @@
   }
 
   .campus-gallery__nav-btn--prev {
-    background-color: #fafaff;
+    background-color: var(--surface-inverted);
   }
 
   .campus-gallery__nav-btn--prev.is-enabled {
-    background-color: #fafaff;
+    background-color: var(--surface-inverted);
   }
 
   .campus-gallery__counter {

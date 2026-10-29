@@ -76,7 +76,7 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
@@ -127,9 +127,9 @@ h4 {
   top: 0;
 }
 
-/* Eyebrow / rótulo de seção */
+/* Eyebrow / rótulo de seção — Figma UNIFACS: Montserrat Bold (Subtitle 1). */
 .eyebrow {
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
@@ -145,14 +145,14 @@ h4 {
 
 .section-intro__title {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
 
 .section-intro__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
 }
@@ -276,13 +276,17 @@ h4 {
 }
 
 .section--dark {
-  background-color: var(--surface-brand-primary);
+  /* Figma (Ecossistema): fundo no accent quaternário (terroso), não no
+     teal de --surface-brand-primary — único uso desta classe. */
+  background-color: var(--surface-brand-quaternary);
   color: var(--text-inverted);
   padding: 56px max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
 }
 
 .section--mint {
-  background-color: var(--surface-brand-primary-light);
+  /* Figma (Grupo Inspirali): fundo creme (--surface-primary-subtle), não o
+     teal claro — único uso desta classe. */
+  background-color: var(--surface-primary-subtle);
 }
 
 @media (max-width: 1280px) {

@@ -4,7 +4,8 @@
    ==================================================================== */
 
 .practice-heading {
-  font-size: var(--font-size-2xl);
+  /* Figma (ANIMA/Title 2): ExtraBold 40px, branco sobre o fundo areia. */
+  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-inverted);
@@ -14,7 +15,5 @@
 @media (max-width: 640px) {
   .practice-heading {
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-regular);
-    font-family: var(--font-family-display, var(--font-family-base));
   }
 }

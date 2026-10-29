@@ -13,7 +13,8 @@
 
 .footer-invitation {
   width: 100%;
-  background-color: var(--surface-brand-primary);
+  /* Figma: accent quaternário (terroso), não o teal de marca. */
+  background-color: var(--surface-brand-quaternary);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -25,8 +26,7 @@
 .footer-invitation__title {
   flex: 1 1 480px;
   color: var(--text-inverted);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-extrabold);
   font-size: var(--font-size-3xl);
   line-height: var(--line-height-xl);
   max-width: 772px;
@@ -40,8 +40,8 @@
   gap: var(--spacing-extra-small);
   padding: 12px var(--spacing-large);
   border-radius: var(--radius-small);
-  background-color: #f7faf9;
-  color: var(--text-brand);
+  background-color: var(--surface-inverted);
+  color: var(--text-brand-quaternary);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-sm);
@@ -51,8 +51,8 @@
 
 .footer-invitation__cta:hover,
 .footer-invitation__cta:focus-visible {
-  background-color: var(--surface-brand-primary-dark);
-  color: var(--text-inverted);
+  background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
 }
 
 .footer-body {
@@ -166,10 +166,8 @@
 }
 
 .footer-emec-strip__line {
-  /* Branco translúcido (não #3d3d3d cinza-escuro como na UAM): o fundo do
-     rodapé da UNA é vermelho bem escuro (quase preto), então uma linha
-     cinza-escura ficaria praticamente invisível — no Figma a linha é
-     branca a 25% de opacidade. */
+  /* Branco translúcido: no Figma a linha é branca a 25% de opacidade
+     sobre o fundo escuro (#313132) do rodapé. */
   flex: 1 1 auto;
   height: 2px;
   border: none;

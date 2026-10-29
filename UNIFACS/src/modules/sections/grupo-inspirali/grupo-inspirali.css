@@ -19,7 +19,7 @@
   right: -175px;
   width: 570px;
   height: 534px;
-  background-color: rgba(29, 65, 137, 0.2);
+  background-color: rgba(78, 141, 151, 0.2);
   -webkit-mask-image: url("/UNIFACS/src/public/images/shared/grupo-inspirali-broto-unifacs.png");
   mask-image: url("/UNIFACS/src/public/images/shared/grupo-inspirali-broto-unifacs.png");
   -webkit-mask-size: contain;
@@ -72,7 +72,7 @@
 
 .inspirali-header__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
   max-width: 606px;
@@ -84,11 +84,11 @@
   flex-wrap: wrap;
 }
 
-/* No Figma (1044:31070) o fundo do card é quase branco (#fffafb), não o
-   rosa que `--surface-secondary-subtle` usa em outras seções da UNA
-   (Metodologia, FAQ) — por isso sobrescreve aqui, só para esta seção. */
+/* Figma (1303:46864): fundo do card em #edf1f0 (`--surface-brand-primary-light`)
+   com borda rgba(78,141,151,.2), não o cinza translúcido de
+   `--surface-secondary-subtle` usado em Metodologia/Financiamentos. */
 #grupo-inspirali .stat-card {
-  background-color: var(--surface-primary-subtle);
+  background-color: var(--surface-brand-primary-light);
 }
 
 .lifelong {
@@ -112,22 +112,22 @@
 }
 
 .lifelong__label {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
 
 .lifelong__sublabel {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-heading);
 }
 
 .lifelong__text > p {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
 }
@@ -179,7 +179,7 @@
 .timeline-step__line {
   width: 2px;
   flex: 1 1 auto;
-  background-color: var(--border-brand-soft-strong);
+  background-color: var(--surface-brand-primary);
   min-height: 24px;
 }
 
@@ -192,7 +192,7 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .timeline-step__text {
@@ -203,15 +203,14 @@
 }
 
 .partner-logos {
-  /* Figma (1044:31145): fundo quase-branco (#fffafb) + borda
-     rgba(230,0,37,.2) — igual ao `.stat-card` desta seção, não o rosa de
-     `--surface-secondary-subtle` usado em Metodologia/FAQ. */
+  /* Figma (1147:24773): fundo #edf1f0 + borda rgba(78,141,151,.2) — igual
+     ao `.stat-card` desta seção. */
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-medium);
-  background-color: var(--surface-primary-subtle);
+  background-color: var(--surface-brand-primary-light);
   border: 1px solid var(--border-brand-soft);
   border-radius: 12px;
   padding: var(--spacing-extra-large);

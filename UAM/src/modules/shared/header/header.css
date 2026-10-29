@@ -196,7 +196,9 @@
 }
 
 .course-nav {
-  background-color: var(--surface-brand-primary);
+  /* Figma: fundo no accent neutro escuro (--surface-brand-primary-dark,
+     #313132), não o teal de --surface-brand-primary. */
+  background-color: var(--surface-brand-primary-dark);
   color: var(--text-inverted);
 }
 
@@ -323,6 +325,10 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-extra-small);
+  /* Figma: este botão específico usa o accent neutro escuro, diferente
+     do `.btn-primary` genérico (teal) usado por outras instituições. */
+  background-color: var(--surface-brand-primary-dark) !important;
+  border-color: var(--surface-brand-primary-dark) !important;
 }
 
 .header-cta-dropdown__chevron {

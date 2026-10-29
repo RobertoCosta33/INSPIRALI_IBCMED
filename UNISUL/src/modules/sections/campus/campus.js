@@ -34,14 +34,21 @@
 
   const CAMPUS_GALLERIES = {
     palhoca: buildGallery("palhoca", "Palhoça", [
-      ["Biblioteca", "biblioteca.jpg"],
-      ["Laboratórios equipados", "laboratorios-equipados.jpg"],
-      ["Sala de aula", "sala-de-aula.jpg"],
+      ["Fachada do Centro Integrado de Saúde", "fachada-cis.jpg"],
+      ["Recepção do Centro Integrado de Saúde", "recepcao-cis.jpg"],
+      ["Laboratório morfofuncional", "laboratorio-morfofuncional.jpg"],
+      ["Laboratório com mesa anatômica digital", "laboratorio-mesa-anatomica-digital.jpg"],
+      ["Sala de exames clínicos", "sala-de-exames-clinicos.jpg"],
+      ["Vista aérea do campus", "vista-aerea.jpg"],
     ]),
     tubarao: buildGallery("tubarao", "Tubarão", [
-      ["Biblioteca", "biblioteca.jpg"],
-      ["Laboratórios equipados", "laboratorios-equipados.jpg"],
-      ["Sala de aula", "sala-de-aula.jpg"],
+      ["Fachada do campus", "fachada-do-campus.jpg"],
+      ["Recepção da Clínica Integrada de Saúde", "recepcao-clinica-integrada.jpg"],
+      ["Acesso aos consultórios", "acesso-aos-consultorios.jpg"],
+      ["Laboratório de anatomia", "laboratorio-de-anatomia.jpg"],
+      ["Laboratório de habilidades clínicas", "laboratorio-de-habilidades-clinicas.jpg"],
+      ["Espaço de convivência e estudos", "espaco-de-convivencia-e-estudos.jpg"],
+      ["Espaço de estudos compartilhado", "espaco-de-estudos-compartilhado.jpg"],
     ]),
   };
 
@@ -269,18 +276,17 @@
       if (!layout || !panelTop || !panelBottom || !viewport) return;
       if (window.innerWidth <= 860) {
         viewport.style.height = "";
+        if (thumbsList) thumbsList.style.maxHeight = "";
         return;
       }
       const layoutStyles = window.getComputedStyle(layout);
       const rowGap = parseFloat(layoutStyles.rowGap || layoutStyles.gap || "0") || 0;
       const height = panelTop.offsetHeight + rowGap + panelBottom.offsetHeight;
       viewport.style.height = height + "px";
-      // Diferente da UAM (7+ fotos, precisa de altura fixa + rolagem): a
-      // UNISUL só tem 3 fotos por campus — não forçamos altura nas
-      // miniaturas aqui, elas acompanham a altura do viewport via flex
-      // stretch natural (`.campus-gallery` é flex row; ver campus.css).
-      // Forçar `max-height` em JS aqui reproduz o bug já corrigido na UNA:
-      // a coluna fica mais baixa que o viewport e sobra vão em branco.
+      // Palhoça (6 fotos) e Tubarão (7 fotos): miniaturas com altura fixa
+      // (132px, ver campus.css) acompanham a mesma altura do viewport —
+      // o excesso de fotos rola dentro da própria coluna (igual à UAM).
+      if (thumbsList) thumbsList.style.maxHeight = height + "px";
     }
 
     window.addEventListener("resize", syncGalleryHeight);
@@ -355,7 +361,7 @@
           if (icon) {
             icon.src = isActive
               ? "/UNISUL/src/public/icons/icon-building-white.svg"
-              : "/UNISUL/src/public/icons/icon-building-teal.svg";
+              : "/UNISUL/src/public/icons/icon-building-indigo.svg";
           }
         });
 

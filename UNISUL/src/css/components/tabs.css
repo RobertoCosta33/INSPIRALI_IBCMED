@@ -4,10 +4,9 @@
    ==================================================================== */
 
 .unit-card {
-  /* Figma (1063:3633): fundo com leve tint azul/índigo (rgba(41,49,137,
-     .08)), não o quase-branco padrão. */
+  /* Figma (Information card/Matriz curricular): fundo creme sólido. */
   width: 100%;
-  background-color: var(--surface-brand-tint);
+  background-color: var(--surface-primary-subtle);
   border-radius: var(--radius-medium);
   padding: var(--spacing-medium) var(--spacing-large) var(--spacing-large);
 }
@@ -16,7 +15,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1.5px solid var(--border-brand-soft);
+  border-bottom: 1.5px solid var(--border-brand-soft-medium);
 }
 
 .unit-tab {
@@ -26,14 +25,14 @@
   text-align: center;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
-  color: var(--text-brand);
+  color: var(--text-primary-dark);
   border-bottom: 3px solid transparent;
   margin-bottom: -1.5px;
 }
 
 .unit-tab.is-active {
   font-weight: var(--font-weight-extrabold);
-  border-bottom-color: var(--text-brand);
+  border-bottom-color: var(--text-primary-dark);
 }
 
 .unit-panel {
@@ -75,20 +74,20 @@
 .unit-panel__eyebrow {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-extrabold);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__hours {
-  /* Figma: fundo sólido claro (#e0e3ff), não o blend translúcido. */
+  /* Figma: chip teal a 15% de opacidade, texto em areia. */
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-micro);
-  background-color: var(--surface-brand-primary-light);
+  background-color: rgba(80, 123, 130, 0.15);
   border-radius: var(--spacing-micro);
   padding: var(--spacing-micro) var(--spacing-extra-small);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-extrabold);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__hours img {
@@ -118,7 +117,7 @@
 .unit-panel__group-title {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-extrabold);
-  color: #3d3d3d;
+  color: var(--text-primary-dark);
 }
 
 .unit-panel__disciplines {
@@ -132,7 +131,7 @@
   justify-content: space-between;
   gap: var(--spacing-medium);
   padding: var(--spacing-small) 0;
-  border-bottom: 1px solid var(--border-brand-soft);
+  border-bottom: 1px solid var(--border-brand-soft-medium);
 }
 
 .unit-panel__discipline-name {
@@ -142,7 +141,7 @@
 
 .unit-panel__discipline-hours {
   font-size: var(--font-size-xs);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
   white-space: nowrap;
 }
 
@@ -150,7 +149,7 @@
   align-self: center;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__placeholder {

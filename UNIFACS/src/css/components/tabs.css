@@ -4,11 +4,10 @@
    ==================================================================== */
 
 .unit-card {
-  /* Figma (1147:25971): fundo rosa translúcido (rgba(255,224,237,.35)),
-     mais próximo de `--surface-secondary-subtle` do que do quase-branco
-     usado por padrão aqui. */
+  /* Figma (1145:44503): card da matriz sobre o creme do tema
+     (inspirali/background/subtle). */
   width: 100%;
-  background-color: var(--surface-secondary-subtle);
+  background-color: var(--surface-primary-subtle);
   border-radius: var(--radius-medium);
   padding: var(--spacing-medium) var(--spacing-large) var(--spacing-large);
 }
@@ -17,10 +16,9 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* Figma: abas inativas usam um contorno rosa (--unifacs/accent/tertiary,
-     #d7006d) a 30% — accent terciário específico desta seção, diferente
-     do azul de marca usado no resto da página. */
-  border-bottom: 1.5px solid rgba(215, 0, 109, 0.3);
+  /* Figma: abas inativas usam contorno em light/accent/secondary
+     (#507b82) a 30%. */
+  border-bottom: 1.5px solid rgba(80, 123, 130, 0.3);
 }
 
 .unit-tab {
@@ -30,14 +28,14 @@
   text-align: center;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
   border-bottom: 3px solid transparent;
   margin-bottom: -1.5px;
 }
 
 .unit-tab.is-active {
-  font-weight: var(--font-weight-extrabold);
-  border-bottom-color: var(--text-heading);
+  font-weight: var(--font-weight-bold);
+  border-bottom-color: var(--text-primary-dark);
 }
 
 .unit-panel {
@@ -78,22 +76,22 @@
 
 .unit-panel__eyebrow {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-extrabold);
-  color: var(--text-brand);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary-dark);
 }
 
 .unit-panel__hours {
-  /* Figma: selo "Total: Xh" usa o accent terciário rosa (#d7006d) como
-     texto — fundo branco sólido para destacar do card (que já é rosa). */
+  /* Figma: selo "Total: Xh" com fundo light/accent/secondary a 15% e
+     texto no accent quaternário (Bold). */
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-micro);
-  background-color: var(--surface-primary-subtle);
+  background-color: rgba(80, 123, 130, 0.15);
   border-radius: var(--spacing-micro);
   padding: var(--spacing-micro) var(--spacing-extra-small);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-extrabold);
-  color: #d7006d;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__hours img {
@@ -105,13 +103,13 @@
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .unit-panel__divider {
-  /* Figma: divisor usa o accent terciário rosa a 30% de opacidade. */
+  /* Figma: divisor no accent secundário (teal) a 30% de opacidade. */
   height: 1px;
-  background-color: rgba(215, 0, 109, 0.3);
+  background-color: rgba(78, 141, 151, 0.3);
   border: none;
 }
 
@@ -123,8 +121,8 @@
 
 .unit-panel__group-title {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-extrabold);
-  color: #3d3d3d;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary-dark);
 }
 
 .unit-panel__disciplines {
@@ -138,17 +136,18 @@
   justify-content: space-between;
   gap: var(--spacing-medium);
   padding: var(--spacing-small) 0;
-  border-bottom: 1px solid var(--border-brand-soft);
+  border-bottom: 1px solid rgba(80, 123, 130, 0.3);
 }
 
 .unit-panel__discipline-name {
   font-size: var(--font-size-sm);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .unit-panel__discipline-hours {
   font-size: var(--font-size-xs);
-  color: var(--text-brand);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-brand-quaternary);
   white-space: nowrap;
 }
 
@@ -156,7 +155,7 @@
   align-self: center;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  color: var(--text-brand-quaternary);
 }
 
 .unit-panel__placeholder {

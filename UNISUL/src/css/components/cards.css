@@ -20,7 +20,7 @@
   gap: var(--spacing-extra-small);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
-  color: var(--text-brand);
+  color: var(--text-primary-dark);
   transition: color 0.4s ease;
 }
 
@@ -31,35 +31,35 @@
 
 .info-card__link:hover,
 .info-card__link:focus-visible {
-  color: var(--surface-brand-primary-dark);
+  color: var(--text-brand);
 }
 
 .info-card__title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--text-brand);
+  color: var(--text-primary-dark);
 }
 
 .info-card__subtitle {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-brand);
+  color: var(--text-primary-dark);
 }
 
 .info-card__text {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-relaxed);
-  color: #555046;
+  color: var(--text-brand-quaternary);
 }
 
 .info-card__note {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: #555046;
+  color: var(--text-primary-dark);
 }
 
 /* Cartão de disciplina (Matriz Curricular) */
@@ -94,7 +94,7 @@
   flex: 1 1 0;
   min-width: 220px;
   min-height: 260px;
-  background-color: var(--surface-secondary-subtle);
+  background-color: var(--surface-brand-primary-light);
   border: 1px solid var(--border-brand-soft);
   border-radius: var(--radius-small);
   padding: 20px var(--spacing-large) var(--spacing-large);
@@ -104,7 +104,7 @@
 }
 
 .stat-card--no-value {
-  border-color: var(--surface-brand-primary-light);
+  border-color: var(--border-brand-soft);
 }
 
 .stat-card__row {
@@ -139,14 +139,14 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .stat-card__text {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-primary-dark);
+  color: var(--text-brand-quaternary);
 }
 
 /* Cartão do carrossel de pós-graduação */
@@ -211,13 +211,12 @@
 }
 
 .posgrad-card__overlay {
-  /* Figma (1100:14257): degradê até o índigo de marca (#293189), não
-     o teal/verde-escuro da UAM. */
+  /* Figma (1100:14257): degradê até o cinza escuro (#313132). */
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 3, 41, 0) 40%, rgba(41, 49, 137, 0.878) 80%, #293189 100%),
-    linear-gradient(180deg, rgba(0, 3, 41, 0) 0%, rgba(0, 3, 41, 0.4) 100%);
+    linear-gradient(180deg, rgba(49, 49, 50, 0) 40%, rgba(49, 49, 50, 0.878) 80%, #313132 100%),
+    linear-gradient(180deg, rgba(49, 49, 50, 0) 0%, rgba(49, 49, 50, 0.4) 100%);
 }
 
 .posgrad-card__body {
@@ -231,17 +230,17 @@
 }
 
 .posgrad-card__title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: #f5f5f5;
+  color: var(--text-inverted);
 }
 
 .posgrad-card__text {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: #cccccc;
+  color: var(--surface-canvas);
 }
 
 @media (max-width: 640px) {

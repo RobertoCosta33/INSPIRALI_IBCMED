@@ -18,7 +18,7 @@
   right: -160px;
   width: 640px;
   height: 600px;
-  background-color: rgba(0, 121, 106, 0.18);
+  background-color: rgba(78, 141, 151, 0.18);
   -webkit-mask-image: url("/UAM/src/public/images/shared/grupo-inspirali-broto.png");
   mask-image: url("/UAM/src/public/images/shared/grupo-inspirali-broto.png");
   -webkit-mask-size: contain;
@@ -119,8 +119,7 @@
 
 .inspirali-header__title {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family-display, var(--font-family-base));
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
   max-width: 606px;
@@ -129,7 +128,7 @@
 
 .inspirali-header__text {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
   max-width: 606px;
@@ -162,22 +161,22 @@
 }
 
 .lifelong__label {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
 }
 
 .lifelong__sublabel {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .lifelong__text > p {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--text-primary-dark);
 }
@@ -242,7 +241,7 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--text-heading);
+  color: var(--text-primary-dark);
 }
 
 .timeline-step__text {
@@ -258,7 +257,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-medium);
-  background-color: var(--surface-secondary-subtle);
+  background-color: var(--surface-brand-primary-light);
   border: 1px solid var(--border-brand-soft);
   border-radius: 12px;
   padding: var(--spacing-extra-large);

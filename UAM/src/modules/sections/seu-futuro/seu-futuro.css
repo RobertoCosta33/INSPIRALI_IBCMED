@@ -50,8 +50,8 @@
 
 .future-header__cta:hover,
 .future-header__cta:focus-visible {
-  background-color: #c9d1dc;
-  color: #545b8e;
+  background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
 }
 
 

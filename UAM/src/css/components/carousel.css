@@ -57,7 +57,7 @@
 
 .evidence-carousel__eyebrow {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-tight);
 }
 
@@ -69,7 +69,7 @@
 
 .evidence-carousel__value {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-tight);
 }
 
@@ -162,7 +162,7 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(0, 121, 106, 0.16);
+  background-color: rgba(78, 141, 151, 0.2);
 }
 
 .card-carousel__dot.is-active {
@@ -196,16 +196,23 @@
   cursor: not-allowed;
 }
 
+/* Figma: seta com haste (arrow-left/right-btn), desenhada na vertical e
+   girada -90° — "esquerda" aponta para cima e "direita" para baixo no
+   arquivo original. Estado desabilitado: glifo com 40% de opacidade. */
 .card-carousel__nav-btn img {
-  width: 24px;
-  height: 24px;
+  width: 11.5px;
+  height: 17.5px;
+  transform: rotate(-90deg);
+  transition: opacity 0.4s ease;
+}
+
+.card-carousel__nav-btn:disabled img {
+  opacity: 0.4;
 }
 
 @media (max-width: 640px) {
   .evidence-carousel__eyebrow {
     font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-regular);
-    font-family: var(--font-family-display, var(--font-family-base));
   }
 
   .evidence-carousel__subtitle {
