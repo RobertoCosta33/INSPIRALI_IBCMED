@@ -184,6 +184,7 @@
   position: absolute;
   inset: auto 24px 24px auto;
   left: 24px;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -465,8 +466,17 @@
     margin-top: var(--spacing-extra-small);
   }
 
+  /* Figma mobile (2318:27735): contador "01 / 03" em areia, Regular 16. */
   .campus-gallery__counter {
-    color: var(--text-primary-dark);
+    color: var(--text-brand-quaternary);
+    font-weight: var(--font-weight-regular);
+  }
+
+  /* Rotulo da foto no canto inferior esquerdo da imagem. */
+  .campus-gallery__label {
+    top: auto;
+    bottom: 8px;
+    left: 12px;
   }
 
   .campus-gallery__nav-btn {
@@ -479,33 +489,44 @@
     height: 16px;
   }
 
+  /* Figma: botao "anterior" desabilitado em #c9c8be; habilitado fica claro. */
   .campus-gallery__nav-btn--prev {
-    background-color: var(--surface-inverted);
+    background-color: #c9c8be;
   }
 
   .campus-gallery__nav-btn--prev.is-enabled {
-    background-color: var(--surface-inverted);
+    background-color: #fafaff;
   }
 
   .campus-gallery__counter {
     font-size: var(--font-size-sm);
   }
 
+  /* Figma mobile: secao com 48px de padding vertical; titulo do painel 24px
+     ExtraBold, textos de 16px, chips de 40px e CTA de 52px. */
+  #nossos-campus {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .campus-panel__title {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
   }
 
   .campus-panel__text {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
   }
 
   .campus-chip {
+    height: 40px;
+    padding: var(--spacing-small);
     font-size: var(--font-size-xs);
   }
 
   .campus-panel__cta {
-    height: 48px;
+    height: 52px;
     padding: var(--spacing-medium);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
   }
 }

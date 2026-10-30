@@ -135,3 +135,18 @@
   background-color: var(--surface-brand-primary-light);
   color: var(--surface-brand-quaternary);
 }
+
+/* Hover: o icone troca para a cor do texto (areia) para continuar visivel sobre o fundo claro. */
+.spiral-cta__icon--hover {
+  display: none;
+}
+
+.spiral-cta:hover .spiral-cta__icon--default,
+.spiral-cta:focus-visible .spiral-cta__icon--default {
+  display: none;
+}
+
+.spiral-cta:hover .spiral-cta__icon--hover,
+.spiral-cta:focus-visible .spiral-cta__icon--hover {
+  display: block;
+}

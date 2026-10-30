@@ -80,6 +80,10 @@
 }
 
 .docente-card__more {
+  /* Figma: "Ver mais +" alinhado a esquerda, junto com o texto do card. */
+  align-self: flex-start;
+  padding: 0;
+  text-align: left;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-extrabold);
   color: var(--text-inverted);
@@ -336,5 +340,70 @@
 
   .docente-card__more {
     font-size: var(--font-size-xxs);
+  }
+
+  /* Figma mobile (2318:27734): secao com 48px de padding vertical, cards de
+     212x283 e setas abaixo do carrossel, ao lado dos indicadores. */
+  #corpo-docente {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .docente-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-large) var(--spacing-medium);
+    margin-top: var(--spacing-extra-large);
+  }
+
+  .docente-grid {
+    flex: 0 0 100%;
+    width: 100%;
+    gap: var(--spacing-medium);
+  }
+
+  .docente-card {
+    flex: 0 0 212px;
+    width: 212px;
+    height: 283px;
+  }
+
+  .docente-card__info {
+    left: var(--spacing-medium);
+    right: var(--spacing-medium);
+    bottom: var(--spacing-medium);
+    gap: var(--spacing-extra-small);
+  }
+
+  .docente-card__role {
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  .docente-card__bio {
+    height: 51px;
+    color: var(--surface-primary-subtle);
+  }
+
+  .docente-carousel__steps {
+    order: 1;
+    margin: 0 auto 0 0;
+  }
+
+  .docente-carousel__nav {
+    position: static;
+    transform: none;
+    width: 40px;
+    height: 40px;
+    order: 2;
+  }
+
+  .docente-carousel__nav--next {
+    order: 3;
+  }
+
+  .docente-carousel__nav img {
+    width: 16px;
+    height: 16px;
   }
 }

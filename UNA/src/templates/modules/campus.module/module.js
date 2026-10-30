@@ -149,8 +149,8 @@
 
       const overlay = viewport.querySelector(".campus-gallery__overlay");
       const labelEl = viewport.querySelector("[data-gallery-label]");
-      const counterEl = viewport.querySelector(".campus-gallery__counter");
-      const navEl = viewport.querySelector(".campus-gallery__nav");
+      const counterEl = root.querySelector(".campus-gallery__counter");
+      const navEl = root.querySelector(".campus-gallery__nav");
 
       viewport.querySelectorAll("[data-gallery-slide]").forEach(function (el) { el.remove(); });
       photos.forEach(function (photo, i) {

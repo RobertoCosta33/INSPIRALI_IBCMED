@@ -100,45 +100,45 @@
           <span class="campus-gallery__label" data-gallery-label
             >{{ module.campuses[0].photos[0].caption }}</span
           >
-          <div class="campus-gallery__meta">
-            <span class="campus-gallery__counter"
-              ><span data-gallery-counter>01</span> /
-              <span data-gallery-total
-                >{{ module.campuses[0].photos|length }}</span
-              ></span
+        </div>
+        <div class="campus-gallery__meta">
+          <span class="campus-gallery__counter"
+            ><span data-gallery-counter>01</span> /
+            <span data-gallery-total
+              >{{ module.campuses[0].photos|length }}</span
+            ></span
+          >
+          <div class="campus-gallery__nav">
+            <button
+              type="button"
+              class="campus-gallery__nav-btn campus-gallery__nav-btn--prev"
+              data-gallery-prev
+              aria-label="Imagem anterior"
             >
-            <div class="campus-gallery__nav">
-              <button
-                type="button"
-                class="campus-gallery__nav-btn campus-gallery__nav-btn--prev"
-                data-gallery-prev
-                aria-label="Imagem anterior"
-              >
-                <img
-                  src="{{ get_asset_url('../../public/icons/icon-chevron-left-indigo-small.svg') }}"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </button>
-              <button
-                type="button"
-                class="campus-gallery__nav-btn campus-gallery__nav-btn--next"
-                data-gallery-next
-                aria-label="Próxima imagem"
-              >
-                <span
-                  class="campus-gallery__nav-ring"
-                  data-gallery-progress
-                  style="--progress: 0"
-                ></span>
-                <img
-                  class="campus-gallery__nav-icon--flip"
-                  src="{{ get_asset_url('../../public/icons/icon-chevron-left-indigo-small.svg') }}"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </button>
-            </div>
+              <img
+                src="{{ get_asset_url('../../public/icons/icon-chevron-left-indigo-small.svg') }}"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+            <button
+              type="button"
+              class="campus-gallery__nav-btn campus-gallery__nav-btn--next"
+              data-gallery-next
+              aria-label="Próxima imagem"
+            >
+              <span
+                class="campus-gallery__nav-ring"
+                data-gallery-progress
+                style="--progress: 0"
+              ></span>
+              <img
+                class="campus-gallery__nav-icon--flip"
+                src="{{ get_asset_url('../../public/icons/icon-chevron-left-indigo-small.svg') }}"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
           </div>
         </div>
       </div>

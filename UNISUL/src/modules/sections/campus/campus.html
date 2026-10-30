@@ -1,118 +1,281 @@
-      <section class="section section--tint-strong" id="nossos-campus" aria-labelledby="campus-title">
-        <p class="eyebrow">ONDE A FORMAÇÃO ACONTECE</p>
-        <h2 class="section-intro__title" id="campus-title">Estrutura completa em um só lugar</h2>
-        <p class="section-intro__text">
-          Medicina em Santa Catarina, com laboratórios, salas de aula e biblioteca para apoiar a sua jornada.
+<section
+  class="section section--tint-strong"
+  id="nossos-campus"
+  aria-labelledby="campus-title"
+>
+  <p class="eyebrow">ONDE A FORMAÇÃO ACONTECE</p>
+  <h2 class="section-intro__title" id="campus-title">
+    Estrutura completa em um só lugar
+  </h2>
+  <p class="section-intro__text">
+    Medicina em Santa Catarina, com laboratórios, salas de aula e biblioteca
+    para apoiar a sua jornada.
+  </p>
+
+  <div class="campus-layout">
+    <div class="campus-panel campus-panel--top">
+      <div>
+        <p class="campus-panel__title">Nossas unidades</p>
+        <p class="campus-panel__text">
+          Infraestrutura de excelência para o seu sucesso: auditório,
+          biblioteca, laboratórios de última geração e muito mais, projetados
+          para o seu desenvolvimento acadêmico e profissional.
         </p>
+      </div>
+      <div class="campus-chip-list">
+        <button
+          type="button"
+          class="campus-chip campus-chip--active"
+          data-campus-chip
+          data-campus="palhoca"
+          data-city="Palhoça, SC"
+          data-address="Av. Pedra Branca, 25 - Cidade Universitária • CEP 88137-270"
+          data-map="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Pedra%20Branca%2C%2025%20-%20Cidade%20Universit%C3%A1ria%2C%20Palho%C3%A7a%20-%20SC%2C%2088137-270"
+          data-cta="https://www.unisul.br/unidades/"
+          aria-pressed="true"
+        >
+          <img
+            src="/UNISUL/src/public/icons/icon-building-white.svg"
+            alt=""
+            aria-hidden="true"
+            width="16"
+            height="16"
+          />
+          Palhoça
+        </button>
+        <button
+          type="button"
+          class="campus-chip campus-chip--inactive"
+          data-campus-chip
+          data-campus="tubarao"
+          data-city="Tubarão, SC"
+          data-address="Av. José Acácio Moreira, 787 - Dehon • CEP 88704-900"
+          data-map="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Jos%C3%A9%20Ac%C3%A1cio%20Moreira%2C%20787%20-%20Dehon%2C%20Tubar%C3%A3o%20-%20SC%2C%2088704-900"
+          data-cta="https://www.unisul.br/unidades/tubarao/"
+          aria-pressed="false"
+        >
+          <img
+            src="/UNISUL/src/public/icons/icon-building-indigo.svg"
+            alt=""
+            aria-hidden="true"
+            width="16"
+            height="16"
+          />
+          Tubarão
+        </button>
+      </div>
+    </div>
 
-        <div class="campus-layout">
-          <div class="campus-panel campus-panel--top">
-            <div>
-              <p class="campus-panel__title">Nossas unidades</p>
-              <p class="campus-panel__text">
-                Infraestrutura de excelência para o seu sucesso: auditório, biblioteca, laboratórios de última
-                geração e muito mais, projetados para o seu desenvolvimento acadêmico e profissional.
-              </p>
-            </div>
-            <div class="campus-chip-list">
-              <button
-                type="button"
-                class="campus-chip campus-chip--active"
-                data-campus-chip
-                data-campus="palhoca"
-                data-city="Palhoça, SC"
-                data-address="Av. Pedra Branca, 25 - Cidade Universitária • CEP 88137-270" data-map="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Pedra%20Branca%2C%2025%20-%20Cidade%20Universit%C3%A1ria%2C%20Palho%C3%A7a%20-%20SC%2C%2088137-270"
-                data-cta="https://www.unisul.br/unidades/"
-                aria-pressed="true"
-              >
-                <img src="/UNISUL/src/public/icons/icon-building-white.svg" alt="" aria-hidden="true" width="16" height="16" />
-                Palhoça
-              </button>
-              <button
-                type="button"
-                class="campus-chip campus-chip--inactive"
-                data-campus-chip
-                data-campus="tubarao"
-                data-city="Tubarão, SC"
-                data-address="Av. José Acácio Moreira, 787 - Dehon • CEP 88704-900" data-map="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Jos%C3%A9%20Ac%C3%A1cio%20Moreira%2C%20787%20-%20Dehon%2C%20Tubar%C3%A3o%20-%20SC%2C%2088704-900"
-                data-cta="https://www.unisul.br/unidades/tubarao/"
-                aria-pressed="false"
-              >
-                <img src="/UNISUL/src/public/icons/icon-building-indigo.svg" alt="" aria-hidden="true" width="16" height="16" />
-                Tubarão
-              </button>
-            </div>
-          </div>
+    <div class="campus-panel campus-panel--bottom">
+      <div class="campus-detail">
+        <p class="campus-detail__location">
+          <img
+            src="/UNISUL/src/public/icons/icon-location.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <span data-campus-city>Palhoça, SC</span>
+        </p>
+        <p class="campus-detail__address">
+          <span data-campus-address
+            >Av. Pedra Branca, 25 - Cidade Universitária • CEP 88137-270</span
+          >
+          -
+          <a
+            href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Pedra%20Branca%2C%2025%20-%20Cidade%20Universit%C3%A1ria%2C%20Palho%C3%A7a%20-%20SC%2C%2088137-270"
+            target="_blank"
+            rel="noopener"
+            data-campus-map
+            >Ver no mapa</a
+          >
+        </p>
+      </div>
+      <a
+        class="campus-panel__cta"
+        href="https://www.unisul.br/unidades/"
+        target="_blank"
+        rel="noopener"
+        data-campus-cta
+        >Conheça mais da unidade</a
+      >
+    </div>
 
-          <div class="campus-panel campus-panel--bottom">
-            <div class="campus-detail">
-              <p class="campus-detail__location">
-                <img src="/UNISUL/src/public/icons/icon-location.svg" alt="" aria-hidden="true" />
-                <span data-campus-city>Palhoça, SC</span>
-              </p>
-              <p class="campus-detail__address"><span data-campus-address>Av. Pedra Branca, 25 - Cidade Universitária • CEP 88137-270</span> - <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Pedra%20Branca%2C%2025%20-%20Cidade%20Universit%C3%A1ria%2C%20Palho%C3%A7a%20-%20SC%2C%2088137-270" target="_blank" rel="noopener" data-campus-map>Ver no mapa</a></p>
-            </div>
-            <a class="campus-panel__cta" href="https://www.unisul.br/unidades/" target="_blank" rel="noopener" data-campus-cta>Conheça mais da unidade</a>
-          </div>
-
-          <div class="campus-gallery" data-campus-gallery>
-            <div class="campus-gallery__media">
-              <div class="campus-gallery__viewport">
-                <img class="campus-gallery__image is-active" data-gallery-slide data-label="Fachada do Centro Integrado de Saúde" src="/UNISUL/src/public/images/campus-gallery/palhoca/fachada-cis.jpg" alt="Fachada do Centro Integrado de Saúde — campus Palhoça" loading="lazy" />
-                <img class="campus-gallery__image" data-gallery-slide data-label="Recepção do Centro Integrado de Saúde" src="/UNISUL/src/public/images/campus-gallery/palhoca/recepcao-cis.jpg" alt="Recepção do Centro Integrado de Saúde — campus Palhoça" loading="lazy" />
-                <img class="campus-gallery__image" data-gallery-slide data-label="Laboratório morfofuncional" src="/UNISUL/src/public/images/campus-gallery/palhoca/laboratorio-morfofuncional.jpg" alt="Laboratório morfofuncional — campus Palhoça" loading="lazy" />
-                <img class="campus-gallery__image" data-gallery-slide data-label="Laboratório com mesa anatômica digital" src="/UNISUL/src/public/images/campus-gallery/palhoca/laboratorio-mesa-anatomica-digital.jpg" alt="Laboratório com mesa anatômica digital — campus Palhoça" loading="lazy" />
-                <img class="campus-gallery__image" data-gallery-slide data-label="Sala de exames clínicos" src="/UNISUL/src/public/images/campus-gallery/palhoca/sala-de-exames-clinicos.jpg" alt="Sala de exames clínicos — campus Palhoça" loading="lazy" />
-                <img class="campus-gallery__image" data-gallery-slide data-label="Vista aérea do campus" src="/UNISUL/src/public/images/campus-gallery/palhoca/vista-aerea.jpg" alt="Vista aérea do campus — campus Palhoça" loading="lazy" />
-                <div class="campus-gallery__overlay" aria-hidden="true"></div>
-                <span class="campus-gallery__label" data-gallery-label>Fachada do Centro Integrado de Saúde</span>
-                <div class="campus-gallery__meta">
-                  <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>06</span></span>
-                  <div class="campus-gallery__nav">
-                    <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
-                      <img src="/UNISUL/src/public/icons/icon-chevron-left-indigo-small.svg" alt="" aria-hidden="true" />
-                    </button>
-                    <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
-                      <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 33"></span>
-                      <img class="campus-gallery__nav-icon--flip" src="/UNISUL/src/public/icons/icon-chevron-left-indigo-small.svg" alt="" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="campus-gallery__thumbs">
-              <button type="button" class="campus-thumb is-active" data-gallery-thumb="0">
-                <img src="/UNISUL/src/public/images/campus-gallery/palhoca/fachada-cis.jpg" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Fachada do Centro Integrado de Saúde</span>
-              </button>
-              <button type="button" class="campus-thumb" data-gallery-thumb="1">
-                <img src="/UNISUL/src/public/images/campus-gallery/palhoca/recepcao-cis.jpg" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Recepção do Centro Integrado de Saúde</span>
-              </button>
-              <button type="button" class="campus-thumb" data-gallery-thumb="2">
-                <img src="/UNISUL/src/public/images/campus-gallery/palhoca/laboratorio-morfofuncional.jpg" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Laboratório morfofuncional</span>
-              </button>
-              <button type="button" class="campus-thumb" data-gallery-thumb="3">
-                <img src="/UNISUL/src/public/images/campus-gallery/palhoca/laboratorio-mesa-anatomica-digital.jpg" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Laboratório com mesa anatômica digital</span>
-              </button>
-              <button type="button" class="campus-thumb" data-gallery-thumb="4">
-                <img src="/UNISUL/src/public/images/campus-gallery/palhoca/sala-de-exames-clinicos.jpg" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Sala de exames clínicos</span>
-              </button>
-              <button type="button" class="campus-thumb" data-gallery-thumb="5">
-                <img src="/UNISUL/src/public/images/campus-gallery/palhoca/vista-aerea.jpg" alt="" loading="lazy" />
-                <span class="campus-thumb__label">Vista aérea do campus</span>
-              </button>
-            </div>
+    <div class="campus-gallery" data-campus-gallery>
+      <div class="campus-gallery__media">
+        <div class="campus-gallery__viewport">
+          <img
+            class="campus-gallery__image is-active"
+            data-gallery-slide
+            data-label="Fachada do Centro Integrado de Saúde"
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/fachada-cis.jpg"
+            alt="Fachada do Centro Integrado de Saúde — campus Palhoça"
+            loading="lazy"
+          />
+          <img
+            class="campus-gallery__image"
+            data-gallery-slide
+            data-label="Recepção do Centro Integrado de Saúde"
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/recepcao-cis.jpg"
+            alt="Recepção do Centro Integrado de Saúde — campus Palhoça"
+            loading="lazy"
+          />
+          <img
+            class="campus-gallery__image"
+            data-gallery-slide
+            data-label="Laboratório morfofuncional"
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/laboratorio-morfofuncional.jpg"
+            alt="Laboratório morfofuncional — campus Palhoça"
+            loading="lazy"
+          />
+          <img
+            class="campus-gallery__image"
+            data-gallery-slide
+            data-label="Laboratório com mesa anatômica digital"
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/laboratorio-mesa-anatomica-digital.jpg"
+            alt="Laboratório com mesa anatômica digital — campus Palhoça"
+            loading="lazy"
+          />
+          <img
+            class="campus-gallery__image"
+            data-gallery-slide
+            data-label="Sala de exames clínicos"
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/sala-de-exames-clinicos.jpg"
+            alt="Sala de exames clínicos — campus Palhoça"
+            loading="lazy"
+          />
+          <img
+            class="campus-gallery__image"
+            data-gallery-slide
+            data-label="Vista aérea do campus"
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/vista-aerea.jpg"
+            alt="Vista aérea do campus — campus Palhoça"
+            loading="lazy"
+          />
+          <div class="campus-gallery__overlay" aria-hidden="true"></div>
+          <span class="campus-gallery__label" data-gallery-label
+            >Fachada do Centro Integrado de Saúde</span
+          >
+        </div>
+        <div class="campus-gallery__meta">
+          <span class="campus-gallery__counter"
+            ><span data-gallery-counter>01</span> /
+            <span data-gallery-total>06</span></span
+          >
+          <div class="campus-gallery__nav">
+            <button
+              type="button"
+              class="campus-gallery__nav-btn campus-gallery__nav-btn--prev"
+              data-gallery-prev
+              aria-label="Imagem anterior"
+            >
+              <img
+                src="/UNISUL/src/public/icons/icon-chevron-left-indigo-small.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+            <button
+              type="button"
+              class="campus-gallery__nav-btn campus-gallery__nav-btn--next"
+              data-gallery-next
+              aria-label="Próxima imagem"
+            >
+              <span
+                class="campus-gallery__nav-ring"
+                data-gallery-progress
+                style="--progress: 33"
+              ></span>
+              <img
+                class="campus-gallery__nav-icon--flip"
+                src="/UNISUL/src/public/icons/icon-chevron-left-indigo-small.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
           </div>
         </div>
+      </div>
+      <div class="campus-gallery__thumbs">
+        <button
+          type="button"
+          class="campus-thumb is-active"
+          data-gallery-thumb="0"
+        >
+          <img
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/fachada-cis.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="campus-thumb__label"
+            >Fachada do Centro Integrado de Saúde</span
+          >
+        </button>
+        <button type="button" class="campus-thumb" data-gallery-thumb="1">
+          <img
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/recepcao-cis.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="campus-thumb__label"
+            >Recepção do Centro Integrado de Saúde</span
+          >
+        </button>
+        <button type="button" class="campus-thumb" data-gallery-thumb="2">
+          <img
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/laboratorio-morfofuncional.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="campus-thumb__label">Laboratório morfofuncional</span>
+        </button>
+        <button type="button" class="campus-thumb" data-gallery-thumb="3">
+          <img
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/laboratorio-mesa-anatomica-digital.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="campus-thumb__label"
+            >Laboratório com mesa anatômica digital</span
+          >
+        </button>
+        <button type="button" class="campus-thumb" data-gallery-thumb="4">
+          <img
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/sala-de-exames-clinicos.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="campus-thumb__label">Sala de exames clínicos</span>
+        </button>
+        <button type="button" class="campus-thumb" data-gallery-thumb="5">
+          <img
+            src="/UNISUL/src/public/images/campus-gallery/palhoca/vista-aerea.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="campus-thumb__label">Vista aérea do campus</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
-        <div class="campus-lightbox" data-campus-lightbox hidden>
-          <button type="button" class="campus-lightbox__close" data-campus-lightbox-close aria-label="Fechar imagem ampliada">
-            <img src="/UNISUL/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
-          </button>
-          <img class="campus-lightbox__image" data-campus-lightbox-image src="" alt="" />
-        </div>
-      </section>
+  <div class="campus-lightbox" data-campus-lightbox hidden>
+    <button
+      type="button"
+      class="campus-lightbox__close"
+      data-campus-lightbox-close
+      aria-label="Fechar imagem ampliada"
+    >
+      <img
+        src="/UNISUL/src/public/icons/icon-modal-close.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </button>
+    <img
+      class="campus-lightbox__image"
+      data-campus-lightbox-image
+      src=""
+      alt=""
+    />
+  </div>
+</section>

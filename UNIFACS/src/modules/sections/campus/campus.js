@@ -21,7 +21,10 @@
     salvador: buildGallery("campus", "Salvador", [
       ["Biblioteca", "biblioteca.jpg"],
       ["Laboratório de anatomia", "laboratorio-de-anatomia.jpg"],
-      ["Laboratório de simulação clínica", "laboratorio-de-simulacao-clinica.jpg"],
+      [
+        "Laboratório de simulação clínica",
+        "laboratorio-de-simulacao-clinica.jpg",
+      ],
       ["Laboratório morfofuncional", "laboratorio-morfofuncional.jpg"],
       ["Simulação de cuidados neonatais", "simulacao-cuidados-neonatais.jpg"],
       ["Área de convivência", "area-de-convivencia.jpg"],
@@ -37,8 +40,12 @@
     const prevBtn = root.querySelector("[data-gallery-prev]");
     const nextBtn = root.querySelector("[data-gallery-next]");
     const progressRing = root.querySelector("[data-gallery-progress]");
-    let slides = Array.prototype.slice.call(root.querySelectorAll("[data-gallery-slide]"));
-    let thumbs = Array.prototype.slice.call(root.querySelectorAll("[data-gallery-thumb]"));
+    let slides = Array.prototype.slice.call(
+      root.querySelectorAll("[data-gallery-slide]"),
+    );
+    let thumbs = Array.prototype.slice.call(
+      root.querySelectorAll("[data-gallery-thumb]"),
+    );
     let index = 0;
 
     const AUTOPLAY_DURATION = 3000;
@@ -57,7 +64,8 @@
       function tick(now) {
         const elapsed = now - startTime;
         const progress = Math.min((elapsed / AUTOPLAY_DURATION) * 100, 100);
-        if (progressRing) progressRing.style.setProperty("--progress", String(progress));
+        if (progressRing)
+          progressRing.style.setProperty("--progress", String(progress));
 
         if (elapsed >= AUTOPLAY_DURATION) {
           show(index + 1, { scrollThumb: false });
@@ -85,7 +93,8 @@
       }
       if (counter) counter.textContent = String(index + 1).padStart(2, "0");
       if (total) total.textContent = String(slides.length).padStart(2, "0");
-      if (label) label.textContent = slides[index].getAttribute("data-label") || "";
+      if (label)
+        label.textContent = slides[index].getAttribute("data-label") || "";
       // "Anterior" fica de fato desabilitado (não clicável, sem dar a volta
       // para a última foto) só na primeira foto; das demais em diante usa o
       // mesmo destaque do botão "Próxima". "Próxima" nunca desabilita — ao
@@ -102,7 +111,9 @@
     }
 
     function bindThumb(thumb, i) {
-      thumb.addEventListener("click", function () { show(i); });
+      thumb.addEventListener("click", function () {
+        show(i);
+      });
     }
 
     // Rola a coluna de miniaturas isoladamente (sem afetar o scroll da página).
@@ -125,7 +136,10 @@
       if (thumbTop < viewTop) {
         thumbsList.scrollTo({ top: thumbTop, behavior: "smooth" });
       } else if (thumbBottom > viewBottom) {
-        thumbsList.scrollTo({ top: thumbBottom - thumbsList.clientHeight, behavior: "smooth" });
+        thumbsList.scrollTo({
+          top: thumbBottom - thumbsList.clientHeight,
+          behavior: "smooth",
+        });
       }
     }
 
@@ -135,16 +149,22 @@
 
       const overlay = viewport.querySelector(".campus-gallery__overlay");
       const labelEl = viewport.querySelector("[data-gallery-label]");
-      const counterEl = viewport.querySelector(".campus-gallery__counter");
-      const navEl = viewport.querySelector(".campus-gallery__nav");
+      const counterEl = root.querySelector(".campus-gallery__counter");
+      const navEl = root.querySelector(".campus-gallery__nav");
 
-      viewport.querySelectorAll("[data-gallery-slide]").forEach(function (el) { el.remove(); });
+      viewport.querySelectorAll("[data-gallery-slide]").forEach(function (el) {
+        el.remove();
+      });
       photos.forEach(function (photo, i) {
         const slide = document.createElement("div");
-        slide.className = "campus-gallery__image" + (i === 0 ? " is-active" : "") + (photo.type === "video" ? " campus-gallery__image--video" : "");
+        slide.className =
+          "campus-gallery__image" +
+          (i === 0 ? " is-active" : "") +
+          (photo.type === "video" ? " campus-gallery__image--video" : "");
         slide.setAttribute("data-gallery-slide", "");
         slide.setAttribute("data-label", photo.label);
-        if (photo.type === "video") slide.setAttribute("data-video-url", photo.videoUrl);
+        if (photo.type === "video")
+          slide.setAttribute("data-video-url", photo.videoUrl);
 
         const img = document.createElement("img");
         img.className = "campus-gallery__photo";
@@ -169,25 +189,46 @@
       photos.forEach(function (photo, i) {
         const btn = document.createElement("button");
         btn.type = "button";
-        btn.className = "campus-thumb" + (i === 0 ? " is-active" : "") + (photo.type === "video" ? " campus-thumb--video" : "");
+        btn.className =
+          "campus-thumb" +
+          (i === 0 ? " is-active" : "") +
+          (photo.type === "video" ? " campus-thumb--video" : "");
         btn.setAttribute("data-gallery-thumb", String(i));
-        const playIconHtml = photo.type === "video" ? '<img class="campus-thumb__play" src="/UNIFACS/src/public/icons/icon-play-white.svg" alt="" aria-hidden="true" />' : "";
-        btn.innerHTML = '<img class="campus-thumb__photo" src="' + photo.src + '" alt="" loading="lazy" />' + playIconHtml + '<span class="campus-thumb__label">' + photo.label + "</span>";
+        const playIconHtml =
+          photo.type === "video"
+            ? '<img class="campus-thumb__play" src="/UNIFACS/src/public/icons/icon-play-white.svg" alt="" aria-hidden="true" />'
+            : "";
+        btn.innerHTML =
+          '<img class="campus-thumb__photo" src="' +
+          photo.src +
+          '" alt="" loading="lazy" />' +
+          playIconHtml +
+          '<span class="campus-thumb__label">' +
+          photo.label +
+          "</span>";
         thumbsList.appendChild(btn);
       });
 
-      slides = Array.prototype.slice.call(root.querySelectorAll("[data-gallery-slide]"));
-      thumbs = Array.prototype.slice.call(root.querySelectorAll("[data-gallery-thumb]"));
+      slides = Array.prototype.slice.call(
+        root.querySelectorAll("[data-gallery-slide]"),
+      );
+      thumbs = Array.prototype.slice.call(
+        root.querySelectorAll("[data-gallery-thumb]"),
+      );
       thumbs.forEach(bindThumb);
       index = 0;
       show(0);
     }
 
-    if (prevBtn) prevBtn.addEventListener("click", function () {
-      if (prevBtn.getAttribute("aria-disabled") === "true") return;
-      show(index - 1);
-    });
-    if (nextBtn) nextBtn.addEventListener("click", function () { show(index + 1); });
+    if (prevBtn)
+      prevBtn.addEventListener("click", function () {
+        if (prevBtn.getAttribute("aria-disabled") === "true") return;
+        show(index - 1);
+      });
+    if (nextBtn)
+      nextBtn.addEventListener("click", function () {
+        show(index + 1);
+      });
     thumbs.forEach(bindThumb);
 
     // Clicar na imagem/vídeo em destaque: vídeo abre o YouTube em nova aba,
@@ -198,7 +239,10 @@
       let didSwipe = false;
 
       viewport.addEventListener("click", function (event) {
-        if (didSwipe) { didSwipe = false; return; }
+        if (didSwipe) {
+          didSwipe = false;
+          return;
+        }
         if (event.target.closest(".campus-gallery__nav")) return;
         const activeSlide = slides[index];
         if (!activeSlide) return;
@@ -217,15 +261,24 @@
         if (img) openLightbox(img.src, img.alt);
       });
 
-      viewport.addEventListener("touchstart", function (event) {
-        touchStartX = event.touches[0].clientX;
-        didSwipe = false;
-      }, { passive: true });
+      viewport.addEventListener(
+        "touchstart",
+        function (event) {
+          touchStartX = event.touches[0].clientX;
+          didSwipe = false;
+        },
+        { passive: true },
+      );
 
-      viewport.addEventListener("touchmove", function (event) {
-        if (touchStartX === null) return;
-        if (Math.abs(event.touches[0].clientX - touchStartX) > 10) didSwipe = true;
-      }, { passive: true });
+      viewport.addEventListener(
+        "touchmove",
+        function (event) {
+          if (touchStartX === null) return;
+          if (Math.abs(event.touches[0].clientX - touchStartX) > 10)
+            didSwipe = true;
+        },
+        { passive: true },
+      );
 
       viewport.addEventListener("touchend", function (event) {
         if (touchStartX === null) return;
@@ -246,7 +299,9 @@
     // altura real da coluna esquerda em JS e aplicamos no viewport.
     const layout = root.closest(".campus-layout");
     const panelTop = layout ? layout.querySelector(".campus-panel--top") : null;
-    const panelBottom = layout ? layout.querySelector(".campus-panel--bottom") : null;
+    const panelBottom = layout
+      ? layout.querySelector(".campus-panel--bottom")
+      : null;
 
     function syncGalleryHeight() {
       if (!layout || !panelTop || !panelBottom || !viewport) return;
@@ -256,7 +311,8 @@
         return;
       }
       const layoutStyles = window.getComputedStyle(layout);
-      const rowGap = parseFloat(layoutStyles.rowGap || layoutStyles.gap || "0") || 0;
+      const rowGap =
+        parseFloat(layoutStyles.rowGap || layoutStyles.gap || "0") || 0;
       const height = panelTop.offsetHeight + rowGap + panelBottom.offsetHeight;
       viewport.style.height = height + "px";
       // Miniaturas NÃO recebem altura fixa via JS aqui (diferente da UAM):
@@ -284,8 +340,12 @@
 
   // Lightbox simples para ampliar a imagem clicada.
   const lightbox = document.querySelector("[data-campus-lightbox]");
-  const lightboxImg = lightbox ? lightbox.querySelector("[data-campus-lightbox-image]") : null;
-  const lightboxClose = lightbox ? lightbox.querySelector("[data-campus-lightbox-close]") : null;
+  const lightboxImg = lightbox
+    ? lightbox.querySelector("[data-campus-lightbox-image]")
+    : null;
+  const lightboxClose = lightbox
+    ? lightbox.querySelector("[data-campus-lightbox-close]")
+    : null;
 
   function openLightbox(src, alt) {
     if (!lightbox || !lightboxImg) return;
