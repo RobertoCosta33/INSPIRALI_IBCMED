@@ -32,7 +32,7 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Conhecimento que transforma vidas."
+    "default": "Conhecimento que transforma vidas"
   },
   {
     "name": "body_text",

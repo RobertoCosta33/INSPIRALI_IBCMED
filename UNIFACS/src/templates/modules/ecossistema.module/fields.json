@@ -9,7 +9,7 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Onde a Medicina Acontece."
+    "default": "Onde a Medicina Acontece"
   },
   {
     "name": "intro_text",

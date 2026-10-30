@@ -3,7 +3,7 @@
     "name": "invitation_title",
     "label": "Título do convite",
     "type": "text",
-    "default": "A maior autoridade em educação médica do Brasil espera por você."
+    "default": "A maior autoridade em educação médica do Brasil espera por você"
   },
   {
     "name": "invitation_cta_label",

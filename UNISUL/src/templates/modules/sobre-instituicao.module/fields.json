@@ -38,7 +38,7 @@
     "name": "title",
     "label": "Título",
     "type": "richtext",
-    "default": "Conhecimento que transforma vidas."
+    "default": "Conhecimento que transforma vidas"
   },
   {
     "name": "body_text",

@@ -32,7 +32,7 @@
     "name": "title",
     "label": "Título",
     "type": "richtext",
-    "default": "Conhecimento que<br />transforma vidas."
+    "default": "Conhecimento que<br />transforma vidas"
   },
   {
     "name": "body_text",

@@ -57,7 +57,7 @@
     "occurrence": {
       "min": 1,
       "max": 6,
-      "default": 3
+      "default": 4
     },
     "children": [
       {
@@ -202,6 +202,29 @@
         },
         "icon_inactive": {
           "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-license-white.svg",
+          "alt": ""
+        }
+      },
+      {
+        "tab_label": "Certificações Internacionais 27.1",
+        "status_label": "Inscrições Abertas",
+        "description": "Para candidatos com certificação: IB, Abitur ou Sat",
+        "facts": "<p class=\"selection-card__facts-note\">*Inscrição mediante taxa</p>",
+        "cta_label": "Quero me inscrever para 27.1",
+        "cta_url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18436",
+            "type": "EXTERNAL"
+          }
+        },
+        "edital_link_label": "Consultar Edital",
+        "modality_name": "Certificações Internacionais 27.1",
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-globe-teal.svg",
+          "alt": ""
+        },
+        "icon_inactive": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-globe-white.svg",
           "alt": ""
         }
       }

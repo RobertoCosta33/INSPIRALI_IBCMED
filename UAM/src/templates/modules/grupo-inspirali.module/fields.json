@@ -14,7 +14,7 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Um ecossistema dedicado ao ensino médico de alta qualidade no Brasil."
+    "default": "Um ecossistema dedicado ao ensino médico de alta qualidade no Brasil"
   },
   {
     "name": "text",
