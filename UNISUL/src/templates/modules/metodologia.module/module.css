@@ -53,3 +53,23 @@
     width: 100%;
   }
 }
+
+@media (max-width: 640px) {
+  /* Figma mobile (2318:27736): secao com 48px de padding vertical e 32px
+     entre o bloco de introducao/imagem e a lista de disclosures. */
+  #metodologia {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .methodology {
+    gap: var(--spacing-extra-large);
+  }
+
+  /* Figma: 8px entre eyebrow e titulo (12px entre o grupo e o texto, ja dado
+     pelo margin-top do paragrafo). O titulo ja e ExtraBold na base da UNISUL
+     e o titulo dos disclosures ja e Bold em components/accordion.css. */
+  #metodologia .eyebrow {
+    margin-bottom: var(--spacing-extra-small);
+  }
+}

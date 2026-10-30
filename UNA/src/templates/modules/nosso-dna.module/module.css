@@ -62,13 +62,14 @@
   height: 6px;
   width: 32px;
   border-radius: 3px;
-  background-color: rgba(176, 148, 53, 0.2);
+  /* Figma: bolinhas inativas em rgba(176,148,53,.35). */
+  background-color: rgba(176, 148, 53, 0.35);
   cursor: pointer;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .dna-pillars-dot:hover {
-  background-color: rgba(176, 148, 53, 0.4);
+  background-color: rgba(176, 148, 53, 0.5);
 }
 
 .dna-pillars-dot.is-active {
@@ -110,8 +111,40 @@
 }
 
 @media (max-width: 640px) {
+  /* Figma mobile: secao com 48px de padding vertical e 40px entre
+     introducao, pilares e indicadores. */
+  #nosso-dna {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Introducao: eyebrow -> titulo 12px; titulo -> texto 16px; titulo em
+     ExtraBold (Title 4). O .eyebrow base tem margin-bottom de 12px, que
+     somava ao gap do flex (24px no total). */
+  #nosso-dna .eyebrow {
+    margin-bottom: 0;
+  }
+
+  #nosso-dna .section-intro__title {
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  #nosso-dna .section-intro__text {
+    margin-top: var(--spacing-micro);
+  }
+
+  .dna-pillars {
+    gap: var(--spacing-large);
+    margin-top: 40px;
+  }
+
+  .dna-pillars-dots {
+    margin-top: 40px;
+  }
+
   .dna-pillar__title {
     font-size: var(--font-size-lg);
+    line-height: var(--line-height-tight);
   }
 
   .dna-pillar__text {

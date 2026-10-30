@@ -1,62 +1,151 @@
-<section class="section section--subtle" id="matriz-curricular" aria-labelledby="matriz-title">
+<section
+  class="section section--subtle"
+  id="matriz-curricular"
+  aria-labelledby="matriz-title"
+>
   <div class="spiral-header">
     <p class="eyebrow">{{ module.eyebrow }}</p>
     <h2 class="section-intro__title" id="matriz-title">{{ module.title }}</h2>
     <div class="section-intro__text">{{ module.intro_text }}</div>
     <div class="spiral-status-row">
       <span class="status-pill">
-        <img src="{{ get_asset_url('../../public/icons/icon-star-small.svg') }}" alt="" aria-hidden="true" />
+        <img
+          src="{{ get_asset_url('../../public/icons/icon-star-small.svg') }}"
+          alt=""
+          aria-hidden="true"
+        />
         {{ module.status_modality }}
       </span>
       <span class="status-pill">
-        <img src="{{ get_asset_url('../../public/icons/icon-clock.svg') }}" alt="" aria-hidden="true" />
+        <img
+          src="{{ get_asset_url('../../public/icons/icon-clock.svg') }}"
+          alt=""
+          aria-hidden="true"
+        />
         {{ module.status_total_hours }}
       </span>
     </div>
   </div>
 
-  <div class="section-intro__text" style="margin-top: var(--spacing-extra-large);">{{ module.downloads_text }}</div>
+  <div class="section-intro__text spiral-downloads-text">
+    {{ module.downloads_text }}
+  </div>
   <div class="spiral-ctas">
     <div class="spiral-cta-group">
-      <a class="spiral-cta" href="{{ module.download_2026_file }}" target="_blank" rel="noopener">
+      <a
+        class="spiral-cta"
+        href="{{ module.download_2026_file }}"
+        target="_blank"
+        rel="noopener"
+      >
         {{ module.download_2026_label }}
-        <img class="spiral-cta__icon spiral-cta__icon--default" src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
-        <img class="spiral-cta__icon spiral-cta__icon--hover" src="{{ get_asset_url('../../public/icons/icon-pdf-sand.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+        <img
+          class="spiral-cta__icon spiral-cta__icon--default"
+          src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+        <img
+          class="spiral-cta__icon spiral-cta__icon--hover"
+          src="{{ get_asset_url('../../public/icons/icon-pdf-sand.svg') }}"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
       </a>
       {% if module.download_2026_caption %}
-      <p class="spiral-cta-group__caption">{{ module.download_2026_caption }}</p>
+      <p class="spiral-cta-group__caption">
+        {{ module.download_2026_caption }}
+      </p>
       {% endif %}
     </div>
     <div class="spiral-cta-group">
-      <a class="spiral-cta" href="{{ module.download_current_file }}" target="_blank" rel="noopener">
+      <a
+        class="spiral-cta"
+        href="{{ module.download_current_file }}"
+        target="_blank"
+        rel="noopener"
+      >
         {{ module.download_current_label }}
-        <img class="spiral-cta__icon spiral-cta__icon--default" src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
-        <img class="spiral-cta__icon spiral-cta__icon--hover" src="{{ get_asset_url('../../public/icons/icon-pdf-sand.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+        <img
+          class="spiral-cta__icon spiral-cta__icon--default"
+          src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
+        <img
+          class="spiral-cta__icon spiral-cta__icon--hover"
+          src="{{ get_asset_url('../../public/icons/icon-pdf-sand.svg') }}"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24"
+        />
       </a>
       {% if module.download_current_caption %}
-      <p class="spiral-cta-group__caption">{{ module.download_current_caption }}</p>
+      <p class="spiral-cta-group__caption">
+        {{ module.download_current_caption }}
+      </p>
       {% endif %}
     </div>
-    <a class="spiral-cta spiral-cta--outline" href="{{ module.ppc_url.url.href }}" target="_blank" rel="noopener">
+    <a
+      class="spiral-cta spiral-cta--outline"
+      href="{{ module.ppc_url.url.href }}"
+      target="_blank"
+      rel="noopener"
+    >
       {{ module.ppc_label }}
-      <img src="{{ get_asset_url('../../public/icons/icon-arrow-right-small-sand.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+      <img
+        src="{{ get_asset_url('../../public/icons/icon-arrow-right-small-sand.svg') }}"
+        alt=""
+        aria-hidden="true"
+        width="24"
+        height="24"
+      />
     </a>
   </div>
 
-  <div class="unit-card" style="margin-top: var(--spacing-extra-large);" data-tabs>
+  <div class="unit-card spiral-unit-card" data-tabs>
     <div class="unit-tabs" role="tablist">
       {% for unit in module.units %}
-      <button type="button" class="unit-tab{% if loop.first %} is-active{% endif %}" data-tab="{{ unit.unit_key }}" role="tab">{{ unit.tab_label }}</button>
+      <button
+        type="button"
+        class="unit-tab{% if loop.first %} is-active{% endif %}"
+        data-tab="{{ unit.unit_key }}"
+        role="tab"
+      >
+        {{ unit.tab_label }}
+      </button>
       {% endfor %}
     </div>
 
     {% for unit in module.units %}
-    <div class="unit-panel" data-tab-panel="{{ unit.unit_key }}"{% if not loop.first %} hidden{% endif %}>
+    <div
+      class="unit-panel"
+      data-tab-panel="{{ unit.unit_key }}"
+      {%
+      if
+      not
+      loop.first
+      %}
+      hidden{%
+      endif
+      %}
+    >
       <div>
         <div class="unit-panel__meta">
           <p class="unit-panel__eyebrow">{{ unit.eyebrow }}</p>
           <span class="unit-panel__hours">
-            <img src="{{ get_asset_url('../../public/icons/icon-clock.svg') }}" alt="" aria-hidden="true" />
+            <img
+              src="{{ get_asset_url('../../public/icons/icon-clock.svg') }}"
+              alt=""
+              aria-hidden="true"
+            />
             Total: {{ unit.total_hours }}
           </span>
         </div>
@@ -70,15 +159,15 @@
         <div class="unit-panel__disciplines">
           {% for discipline in group.disciplines %}
           <div class="unit-panel__discipline">
-            <p class="unit-panel__discipline-name">{{ discipline.discipline_name }}</p>
+            <p class="unit-panel__discipline-name">
+              {{ discipline.discipline_name }}
+            </p>
             <p class="unit-panel__discipline-hours">{{ discipline.hours }}</p>
           </div>
           {% endfor %}
         </div>
       </div>
-      {% endfor %}
-
-      {% if unit.extra_groups %}
+      {% endfor %} {% if unit.extra_groups %}
       <div class="unit-panel__extra" data-unit-extra>
         <div class="unit-panel__extra-inner">
           {% for group in unit.extra_groups %}
@@ -87,8 +176,12 @@
             <div class="unit-panel__disciplines">
               {% for discipline in group.disciplines %}
               <div class="unit-panel__discipline">
-                <p class="unit-panel__discipline-name">{{ discipline.discipline_name }}</p>
-                <p class="unit-panel__discipline-hours">{{ discipline.hours }}</p>
+                <p class="unit-panel__discipline-name">
+                  {{ discipline.discipline_name }}
+                </p>
+                <p class="unit-panel__discipline-hours">
+                  {{ discipline.hours }}
+                </p>
               </div>
               {% endfor %}
             </div>
@@ -96,12 +189,19 @@
           {% endfor %}
         </div>
       </div>
-      <button type="button" class="unit-panel__more" data-unit-more aria-expanded="false">Ver mais +</button>
+      <button
+        type="button"
+        class="unit-panel__more"
+        data-unit-more
+        aria-expanded="false"
+      >
+        Ver mais +
+      </button>
       {% endif %}
     </div>
     {% endfor %}
   </div>
 </section>
 
-{{ require_css(get_asset_url('./module.css')) }}
-{{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}
+{{ require_css(get_asset_url('./module.css')) }} {{
+require_js(get_asset_url('./module.js'), { "position": "footer" }) }}

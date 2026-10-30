@@ -303,3 +303,115 @@
     font-size: var(--font-size-2xl);
   }
 }
+
+/* ====================================================================
+   Mobile (<= 640px) — Figma "Financiamentos" mobile (2318:27738, 375px).
+   Ajustes de tipografia, espaçamento e alinhamento; desktop intacto.
+   ==================================================================== */
+
+.financing-intro__text {
+  margin-top: var(--spacing-small);
+}
+
+@media (max-width: 640px) {
+  /* Figma: padding vertical da seção = 48px (a .section usa 64px). */
+  #investimento-e-financiamentos {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Figma: eyebrow -> título -> texto com 24px entre cada bloco e 24px
+     até o card de valor. O flex-basis de 420px do desktop virava altura
+     mínima na coluna empilhada. */
+  .financing-intro {
+    flex: 0 0 auto;
+    gap: var(--spacing-large);
+  }
+
+  .financing-programs {
+    flex: 0 0 auto;
+  }
+
+  .financing-intro .eyebrow {
+    margin-bottom: var(--spacing-large);
+  }
+
+  .financing-intro .section-intro__title {
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  .financing-intro__text {
+    margin-top: var(--spacing-large);
+  }
+
+  /* Card de valor: padding 20/24, textos com gaps 12 / 8 / 2 / 4. */
+  .financing-highlight {
+    padding: 20px var(--spacing-large);
+    min-height: 0;
+  }
+
+  .financing-highlight__slide {
+    inset: 20px var(--spacing-large);
+    gap: 0;
+    min-height: 0;
+  }
+
+  .financing-highlight__campus {
+    margin-bottom: var(--spacing-small);
+  }
+
+  .financing-highlight__label {
+    margin-bottom: var(--spacing-extra-small);
+  }
+
+  .financing-highlight__value {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: 2px;
+  }
+
+  .financing-highlight__note {
+    padding-top: 0;
+    margin-bottom: var(--spacing-micro);
+  }
+
+  .financing-highlight__disclaimer {
+    margin-top: 0;
+    line-height: var(--line-height-relaxed);
+    opacity: 0.75;
+  }
+
+  /* Contador do carrossel: botões de 20px e barras com raio de 4px. */
+  .financing-nav__btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .financing-dot {
+    border-radius: var(--radius-extra-small);
+  }
+
+  /* Cards de programa: padding 16/24, bloco de título com altura mínima
+     de 49px (4px entre título e subtítulo), 24px até o link e nota de 12px. */
+  .financing-programs .info-card {
+    min-width: 0;
+    padding: var(--spacing-medium) var(--spacing-large);
+  }
+
+  .financing-programs .info-card > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-micro);
+    min-height: 49px;
+  }
+
+  .financing-programs .info-card__note {
+    font-size: var(--font-size-xxs);
+  }
+
+  .financing-programs .info-card__link {
+    margin-top: var(--spacing-small);
+    line-height: var(--line-height-tight);
+  }
+}

@@ -406,4 +406,45 @@
     width: 16px;
     height: 16px;
   }
+
+  /* Figma mobile (UAM 2318:27734) - conferencia de tipografia e espacamentos. */
+
+  /* Introducao: eyebrow -> titulo -> texto com 16px; titulo em ExtraBold
+     (Title 4). O .eyebrow base tem margin-bottom de 12px que somava ao gap. */
+  #corpo-docente .section-intro {
+    gap: var(--spacing-medium);
+  }
+
+  #corpo-docente .eyebrow {
+    margin-bottom: 0;
+  }
+
+  #corpo-docente .section-intro__title {
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  /* Carrossel sem barra de rolagem visivel (Figma nao mostra scrollbar). */
+  .docente-grid {
+    scrollbar-width: none;
+  }
+
+  .docente-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Cargo / nome / bio formam um unico bloco com gap de 4px (a bio fica
+     fora de .docente-card__identity, entao compensa os 8px do gap do card). */
+  .docente-card__bio {
+    margin-top: calc(var(--spacing-micro) - var(--spacing-extra-small));
+    height: auto;
+    max-height: 51px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .docente-card__more {
+    line-height: var(--line-height-tight);
+  }
 }

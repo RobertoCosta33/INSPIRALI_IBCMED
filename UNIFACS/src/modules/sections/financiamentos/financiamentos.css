@@ -130,13 +130,90 @@
    equivalente em UAM/src/modules/sections/financiamentos/financiamentos.css
    caso a UNA venha a precisar dele no futuro). */
 
+/* Espaçamento que antes era inline no HTML (12px entre título e texto). */
+.financing-intro__text {
+  margin-top: var(--spacing-small);
+}
+
 @media (max-width: 640px) {
+  /* Figma mobile: padding vertical da seção = 48px (a .section usa 64px). */
+  #investimento-e-financiamentos {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Figma: eyebrow -> título -> texto com 24px entre cada bloco e 24px
+     até o card de valor. O flex-basis de 420px do desktop virava altura
+     mínima na coluna empilhada. */
+  .financing-intro {
+    flex: 0 0 auto;
+    gap: var(--spacing-large);
+  }
+
+  .financing-programs {
+    flex: 0 0 auto;
+  }
+
+  .financing-intro .eyebrow {
+    margin-bottom: var(--spacing-large);
+  }
+
+  .financing-intro__text {
+    margin-top: var(--spacing-large);
+  }
+
+  /* Card de valor: padding 20/24, textos com gaps 12 / 8 / 2 / 4. */
+  .financing-highlight {
+    padding: 20px var(--spacing-large);
+    min-height: 0;
+  }
+
+  .financing-highlight__slide {
+    inset: 20px var(--spacing-large);
+    gap: 0;
+    min-height: 0;
+  }
+
+  .financing-highlight__campus {
+    margin-bottom: var(--spacing-small);
+  }
+
+  .financing-highlight__label {
+    margin-bottom: var(--spacing-extra-small);
+  }
+
   .financing-highlight__label,
   .financing-highlight__note {
     font-size: var(--font-size-xxs);
   }
 
   .financing-highlight__value {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: 2px;
+  }
+
+  .financing-highlight__note {
+    margin-top: 0;
+    margin-bottom: var(--spacing-micro);
+  }
+
+  /* Cards de programa: padding 16/24, bloco de título com altura mínima
+     de 49px (4px entre título e subtítulo), 24px até o link e nota de 12px. */
+  .financing-programs .info-card {
+    min-width: 0;
+    padding: var(--spacing-medium) var(--spacing-large);
+  }
+
+  .financing-programs .info-card > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-micro);
+    min-height: 49px;
+  }
+
+  .financing-programs .info-card__note {
+    font-size: var(--font-size-xxs);
   }
 }

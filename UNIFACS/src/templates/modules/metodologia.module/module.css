@@ -52,3 +52,23 @@
     width: 100%;
   }
 }
+
+@media (max-width: 640px) {
+  /* Figma mobile: seção com 48px de padding vertical e 32px entre o bloco
+     de introdução/imagem e a lista de disclosures. */
+  #metodologia {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .methodology {
+    gap: var(--spacing-extra-large);
+  }
+
+  /* Figma: 8px entre eyebrow e título (12px entre o grupo e o texto, já dado
+     pelo margin-top do parágrafo). O título já é ExtraBold (base.css) e o
+     título dos disclosures já é Bold (accordion.css). */
+  #metodologia .eyebrow {
+    margin-bottom: var(--spacing-extra-small);
+  }
+}

@@ -1,5 +1,4 @@
-MISSING:   gap: var(--spacing-extra-small);
-  /* Figma: este botão e /* ====================================================================
+/* ====================================================================
    Header institucional + navegação do curso
    Figma: "Institutional header" (523:29934) + "Course navigation" (523:29935)
    ==================================================================== */
@@ -227,13 +226,24 @@ MISSING:   gap: var(--spacing-extra-small);
    abaixo, na faixa azul, e a busca tem sua própria barra dedicada. */
 
 @media (max-width: 640px) {
+  /* Figma mobile: barra com padding 8px 20px e gap de 16px entre a logo
+     e o botão "Inscreva-se" (altura total 48px). */
   .institutional-header {
-    padding: var(--spacing-small) var(--page-gutter-mobile);
-    gap: var(--spacing-extra-small);
+    padding: var(--spacing-extra-small) var(--page-gutter-mobile);
+    gap: var(--spacing-medium);
+  }
+
+  /* Figma: a logo ocupa todo o espaço livre da linha (flex 1), em vez de
+     altura fixa de 32px — evita estourar a largura em 375px. */
+  .institutional-header__brand {
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   .institutional-header__brand img {
-    height: 32px;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
   }
 
   /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
@@ -257,8 +267,12 @@ MISSING:   gap: var(--spacing-extra-small);
     font-size: var(--font-size-xxs);
   }
 
+  /* Figma ("Field"): padding vertical de 4px (altura total 40px com o
+     botão de 32px), não 8px. */
   .institutional-header__mobile-search {
     display: flex;
+    padding-top: var(--spacing-micro);
+    padding-bottom: var(--spacing-micro);
   }
 
   /* A busca já aparece na barra dedicada abaixo do header; evita duplicidade
@@ -267,8 +281,14 @@ MISSING:   gap: var(--spacing-extra-small);
     display: none;
   }
 
+  /* Figma: barra de 56px com padding horizontal de 20px, sem padding
+     vertical (itens centralizados) e gap de 24px. */
   .course-nav__list {
-    padding: var(--spacing-small) var(--page-gutter-mobile);
+    padding: 0 var(--page-gutter-mobile);
+  }
+
+  .course-nav__link {
+    line-height: var(--line-height-tight);
   }
 }
 

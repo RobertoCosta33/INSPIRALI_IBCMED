@@ -274,12 +274,67 @@
   }
 }
 
+/* ====================================================================
+   Mobile (<= 640px) — Figma "FAQ e contato" mobile (2318:27741, 375px).
+   Desktop intacto.
+   ==================================================================== */
+
 @media (max-width: 640px) {
+  /* Figma: padding vertical 48px e 40px entre o título e a lista. */
   .faq-contato {
-    padding: var(--spacing-extra-large) var(--page-gutter-mobile);
+    padding: 48px var(--page-gutter-mobile);
+    gap: 40px;
   }
 
+  /* Figma: título alinhado à esquerda (a variante sem formulário
+     centralizava no desktop). */
+  .faq-contato--form-disabled {
+    text-align: left;
+  }
+
+  .faq-contato--form-disabled .faq-contato__form-col,
+  .faq-contato--form-disabled .faq-contato__title {
+    align-items: stretch;
+  }
+
+  .faq-contato__eyebrow {
+    font-size: var(--font-size-xxs);
+    line-height: var(--line-height-tight);
+  }
+
+  /* O título já é ExtraBold na base da UNISUL. */
   .faq-contato__title h2 {
     font-size: var(--font-size-xl);
+  }
+
+  /* Pergunta: 14px bold, line-height 1.16. */
+  .faq-item__trigger {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+  }
+
+  /* Formulário (hoje desativado): mesmos valores do Figma mobile. */
+  .faq-contato__form-title {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+  }
+
+  .faq-contato__field input {
+    font-size: var(--font-size-xxs);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .faq-contato__submit {
+    height: 40px;
+    margin-top: calc(-1 * var(--spacing-extra-small));
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+  }
+
+  .faq-contato__disclaimer a {
+    font-weight: var(--font-weight-bold);
   }
 }

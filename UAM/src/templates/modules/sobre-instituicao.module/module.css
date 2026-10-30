@@ -123,17 +123,50 @@
 }
 
 @media (max-width: 640px) {
+  /* Figma mobile (2318:27731): padding 48px 20px e gap de 32px entre o
+     bloco de texto e o vídeo (a `.section` base usa 64px). */
+  .institutional-about.section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: var(--spacing-extra-large);
+  }
+
+  /* Figma: eyebrow a 12px do título (o gap do `__intro` já dá 12px, então
+     zera a margem inferior padrão de `.eyebrow`). */
+  .institutional-about__intro .eyebrow {
+    margin-bottom: 0;
+  }
+
+  /* Figma: título Title 4 — ExtraBold (800) 24px, não Bold. */
   .institutional-about__title {
     font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
   }
 
   .institutional-about__text {
     font-size: var(--font-size-sm);
   }
 
+  /* Figma: CTA de 52px (padding 16px), texto Bold 16px (lh 1.16), ícone 16px. */
   .institutional-about__cta {
-    height: 40px;
-    padding: var(--spacing-small);
-    font-size: var(--font-size-xs);
+    height: 52px;
+    padding: var(--spacing-medium);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-tight);
+  }
+
+  .institutional-about__cta img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Figma: vídeo 335x172 (proporção ~1,95:1) e botão de play de 52px. */
+  .institutional-about__video {
+    aspect-ratio: 335 / 172;
+  }
+
+  .institutional-about__video-play {
+    width: 52px;
+    height: 52px;
   }
 }

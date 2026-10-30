@@ -223,13 +223,25 @@
    abaixo, na faixa escura, e a busca tem sua própria barra dedicada. */
 
 @media (max-width: 640px) {
+  /* Figma mobile (2318:27750): barra com padding 8px 20px e gap de 16px
+     entre a logo e o botão "Inscreva-se" (altura total 48px). */
   .institutional-header {
-    padding: var(--spacing-small) var(--page-gutter-mobile);
-    gap: var(--spacing-extra-small);
+    padding: var(--spacing-extra-small) var(--page-gutter-mobile);
+    gap: var(--spacing-medium);
+  }
+
+  /* A logo ocupa o espaço livre da linha (flex 1) e encolhe em telas
+     estreitas, em vez de altura fixa que estouraria a largura. Em 32px de
+     altura a logo (1010x192) tem ~168px de largura, daí o max-width. */
+  .institutional-header__brand {
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   .institutional-header__brand img {
-    height: 32px;
+    width: 100%;
+    max-width: 168px;
+    height: auto;
   }
 
   /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
@@ -253,8 +265,12 @@
     font-size: var(--font-size-xxs);
   }
 
+  /* Figma ("Field"): padding vertical de 4px (altura total 40px com o
+     botão de 32px), não 8px. */
   .institutional-header__mobile-search {
     display: flex;
+    padding-top: var(--spacing-micro);
+    padding-bottom: var(--spacing-micro);
   }
 
   /* A busca já aparece na barra dedicada abaixo do header; evita duplicidade
@@ -263,8 +279,14 @@
     display: none;
   }
 
+  /* Figma: barra de 56px com padding horizontal de 20px, sem padding
+     vertical (itens centralizados) e gap de 24px. */
   .course-nav__list {
-    padding: var(--spacing-small) var(--page-gutter-mobile);
+    padding: 0 var(--page-gutter-mobile);
+  }
+
+  .course-nav__link {
+    line-height: var(--line-height-tight);
   }
 }
 

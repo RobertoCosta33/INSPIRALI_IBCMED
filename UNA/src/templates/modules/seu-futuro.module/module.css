@@ -91,14 +91,45 @@
 }
 
 @media (max-width: 640px) {
+  /* Figma mobile (UAM 2318:27740): padding vertical da secao = 48px. O
+     cabecalho (pt 40px, gap 12px, eyebrow sem margem, titulo ExtraBold) ja
+     esta correto na UNA e nao precisou de ajuste. */
+  #seu-futuro-na-medicina {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* CTA "Saiba mais": 52px de altura, padding 16px, texto 20px. */
   .future-header__cta {
-    height: 40px;
-    padding: var(--spacing-small);
-    font-size: var(--font-size-xs);
+    height: 52px;
+    padding: var(--spacing-medium);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-tight);
   }
 
   .future-header__cta img {
     width: 16px;
     height: 16px;
+  }
+
+  /* Carrossel: 24px ate a navegacao, 16px entre cartoes (mesmo valor
+     usado pelo JS ao rolar), navegacao no fluxo (antes era absoluta e
+     invadia o padding inferior da secao). */
+  #seu-futuro-na-medicina .card-carousel {
+    gap: var(--spacing-large);
+  }
+
+  #seu-futuro-na-medicina .card-carousel__track {
+    gap: var(--spacing-medium);
+    padding-bottom: 0;
+  }
+
+  #seu-futuro-na-medicina .card-carousel__nav {
+    position: static;
+  }
+
+  /* Titulo do cartao com line-height 1.4 (Body 2 do Figma). */
+  #seu-futuro-na-medicina .posgrad-card__title {
+    line-height: var(--line-height-relaxed);
   }
 }

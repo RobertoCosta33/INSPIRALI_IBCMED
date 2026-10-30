@@ -14,5 +14,48 @@
 @media (max-width: 640px) {
   .practice-heading {
     font-size: var(--font-size-xl);
+    /* Figma mobile: 12px entre título e texto de apoio (desktop: 24px). */
+    margin-bottom: var(--spacing-small);
+  }
+
+  /* Figma mobile: seção com 48px de padding vertical (a .section--dark usa
+     72px). Seletores com #id para vencer a ordem de carregamento dos CSS
+     compartilhados (carousel.css). */
+  #ecossistema-de-cuidado {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Texto de apoio -> carrossel = 32px. O texto tem margin-bottom: 24px
+     inline no HTML, então os 8px restantes vão como padding do carrossel. */
+  #ecossistema-de-cuidado .evidence-carousel {
+    padding-top: var(--spacing-extra-small);
+    /* Figma: 16px entre a imagem e os controles. */
+    gap: var(--spacing-medium);
+  }
+
+  /* Figma: conteúdo a 24px das bordas (largura de 287px no card de 335px). */
+  #ecossistema-de-cuidado .evidence-carousel__content {
+    left: var(--spacing-large);
+    right: var(--spacing-large);
+  }
+
+  /* Figma: título do card Bold (700) 20px; 8px até o subtítulo 14px. */
+  #ecossistema-de-cuidado .evidence-carousel__eyebrow {
+    font-weight: var(--font-weight-bold);
+  }
+
+  #ecossistema-de-cuidado .evidence-carousel__subtitle {
+    margin-top: var(--spacing-extra-small);
+  }
+
+  /* Figma: 12px entre o número (+218.000) e a descrição; o gap do conteúdo
+     é 24px, então o número recua 12px. */
+  #ecossistema-de-cuidado .evidence-carousel__value {
+    margin-bottom: calc(-1 * var(--spacing-small));
+  }
+
+  #ecossistema-de-cuidado .evidence-carousel__label {
+    font-size: var(--font-size-xs);
   }
 }

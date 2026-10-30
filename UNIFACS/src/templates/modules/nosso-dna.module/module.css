@@ -109,8 +109,36 @@
 }
 
 @media (max-width: 640px) {
+  /* Figma mobile: seção com 48px de padding vertical e 40px entre
+     introdução, pilares e indicadores. */
+  #nosso-dna {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Introdução: eyebrow -> título 12px; título -> texto 16px. O .eyebrow
+     base tem margin-bottom de 12px, que somava ao gap do flex (24px no
+     total). O título já é ExtraBold (base.css). */
+  #nosso-dna .eyebrow {
+    margin-bottom: 0;
+  }
+
+  #nosso-dna .section-intro__text {
+    margin-top: var(--spacing-micro);
+  }
+
+  .dna-pillars {
+    gap: var(--spacing-large);
+    margin-top: 40px;
+  }
+
+  .dna-pillars-dots {
+    margin-top: 40px;
+  }
+
   .dna-pillar__title {
     font-size: var(--font-size-lg);
+    line-height: var(--line-height-tight);
   }
 
   .dna-pillar__text {

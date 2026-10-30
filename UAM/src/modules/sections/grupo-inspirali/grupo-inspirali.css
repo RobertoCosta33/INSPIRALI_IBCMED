@@ -421,3 +421,108 @@
     display: none;
   }
 }
+
+/* ====================================================================
+   Mobile (<= 640px) — Figma "Grupo Inspirali" mobile (2318:27739, 375px).
+   Ajustes de tipografia, espaçamento e alinhamento; desktop intacto.
+   ==================================================================== */
+
+@media (max-width: 640px) {
+  /* Figma: padding vertical da seção = 48px; 40px entre os blocos
+     (cabeçalho+stats / lifelong / logos). */
+  #grupo-inspirali {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  #grupo-inspirali .inspirali-section {
+    gap: 40px;
+  }
+
+  /* Cabeçalho -> stats = 24px (40px do gap geral - 16px). */
+  .inspirali-header {
+    gap: var(--spacing-extra-large);
+    margin-bottom: -16px;
+  }
+
+  .inspirali-header__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: var(--spacing-small);
+    max-width: none;
+  }
+
+  .inspirali-header__text {
+    max-width: none;
+  }
+
+  /* Cards de estatística: 16px entre eles, altura pelo conteúdo, linha
+     do ícone/valor com 40px e 8px até o título. */
+  .stats-grid {
+    gap: var(--spacing-medium);
+  }
+
+  .stat-card {
+    flex: 0 0 auto;
+    min-height: 0;
+  }
+
+  .stat-card__row {
+    min-height: 40px;
+  }
+
+  .stat-card__value {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+  }
+
+  .stat-card__title {
+    margin-top: -4px;
+  }
+
+  /* Lifelong: coluna com 24px entre texto e linha do tempo; os
+     flex-basis do desktop viravam altura mínima na coluna. */
+  .lifelong {
+    gap: var(--spacing-large);
+    align-items: stretch;
+  }
+
+  .lifelong__text,
+  .timeline {
+    flex: 0 0 auto;
+    max-width: none;
+  }
+
+  .lifelong__label {
+    font-size: var(--font-size-xxs);
+  }
+
+  .lifelong__sublabel {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  .lifelong__text > p {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Linha do tempo: número 14px extrabold; conteúdo com 4px de padding
+     superior, 4px entre título e texto; o último passo sem padding
+     inferior. */
+  .timeline-step__dot {
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+  }
+
+  .timeline-step__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-micro);
+    padding-top: var(--spacing-micro);
+  }
+
+  .timeline-step:last-child .timeline-step__content {
+    padding-bottom: 0;
+  }
+}

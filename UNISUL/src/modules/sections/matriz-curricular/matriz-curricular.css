@@ -9,6 +9,12 @@
   gap: var(--spacing-medium);
 }
 
+/* Espaçamentos que antes eram inline (mantidos em 32px no desktop). */
+.spiral-downloads-text,
+.spiral-unit-card {
+  margin-top: var(--spacing-extra-large);
+}
+
 .spiral-status-row {
   display: flex;
   gap: var(--spacing-medium);
@@ -149,4 +155,141 @@
 .spiral-cta:hover .spiral-cta__icon--hover,
 .spiral-cta:focus-visible .spiral-cta__icon--hover {
   display: block;
+}
+
+/* ====================================================================
+   Mobile (<= 640px) — Figma "Jornada curricular" mobile (2318:27733)
+   Seção com 48px de padding vertical; 24px entre cabeçalho e downloads;
+   40px entre downloads e card de unidades. Os seletores com #id evitam
+   mexer nos estilos compartilhados de components/tabs.css.
+   ==================================================================== */
+@media (max-width: 640px) {
+  #matriz-curricular {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Introdução: eyebrow, título e texto com gap de 12px (o `.eyebrow` base
+     tem margin-bottom de 12px, que somava ao gap). O título já é ExtraBold
+     na base da UNISUL. */
+  #matriz-curricular .spiral-header {
+    gap: var(--spacing-small);
+  }
+
+  #matriz-curricular .eyebrow {
+    margin-bottom: 0;
+  }
+
+  /* 12px (gap) + 4px = 16px até as pílulas de status. */
+  #matriz-curricular .spiral-status-row {
+    margin-top: var(--spacing-micro);
+  }
+
+  .status-pill {
+    font-size: var(--font-size-xxs);
+  }
+
+  .spiral-downloads-text {
+    margin-top: var(--spacing-large);
+  }
+
+  .spiral-unit-card {
+    margin-top: 40px;
+  }
+
+  /* CTAs: Bold 16 (Title 6); legenda Regular 12 com recuo de 24px. */
+  .spiral-cta {
+    font-size: var(--font-size-sm);
+  }
+
+  .spiral-cta-group__caption {
+    padding-left: var(--spacing-large);
+  }
+
+  /* Card de unidades: 16px nas laterais e 24px embaixo. */
+  #matriz-curricular .unit-card {
+    padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-large);
+  }
+
+  /* Abas: 152px cada, padding 8px, 14px; ativa em ExtraBold
+     (line-height 1.16), inativas em Regular (line-height 1.4). */
+  #matriz-curricular .unit-tab {
+    flex: 0 0 152px;
+    min-width: 152px;
+    padding: var(--spacing-extra-small);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-relaxed);
+  }
+
+  #matriz-curricular .unit-tab.is-active {
+    line-height: var(--line-height-tight);
+  }
+
+  /* Conteúdo da unidade: padding 32px 16px e gap de 32px entre blocos. */
+  #matriz-curricular .unit-panel {
+    padding: var(--spacing-extra-large) var(--spacing-medium);
+    gap: var(--spacing-extra-large);
+  }
+
+  #matriz-curricular .unit-panel__meta {
+    margin-bottom: var(--spacing-extra-small);
+  }
+
+  #matriz-curricular .unit-panel__eyebrow {
+    line-height: var(--line-height-tight);
+  }
+
+  #matriz-curricular .unit-panel__hours {
+    line-height: var(--line-height-tight);
+  }
+
+  #matriz-curricular .unit-panel__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+  }
+
+  /* 12px entre título e divisória (compensa o gap de 32px do painel). */
+  #matriz-curricular .unit-panel__divider {
+    margin: calc(var(--spacing-small) - var(--spacing-extra-large)) 0 0;
+  }
+
+  #matriz-curricular .unit-panel__group-title {
+    line-height: var(--line-height-tight);
+  }
+
+  #matriz-curricular .unit-panel__discipline {
+    gap: var(--spacing-micro);
+  }
+
+  #matriz-curricular .unit-panel__discipline-name,
+  #matriz-curricular .unit-panel__discipline-hours {
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Grupos extras (revelados em "Ver mais +"): mesmo gap de 32px. Fechado,
+     o bloco recolhe o gap duplicado para o botão ficar a 32px do último
+     grupo, como no Figma. */
+  #matriz-curricular .unit-panel__extra {
+    margin-top: calc(var(--spacing-extra-large) * -1);
+    transition: grid-template-rows 0.4s ease, margin-top 0.4s ease;
+  }
+
+  #matriz-curricular .unit-panel__extra.is-open {
+    margin-top: 0;
+  }
+
+  #matriz-curricular .unit-panel__extra-inner {
+    gap: var(--spacing-extra-large);
+  }
+
+  /* "Ver mais +": ExtraBold 14, sem padding vertical e colado ao fim do
+     card (anula o padding inferior de 32px do painel). */
+  #matriz-curricular .unit-panel__more {
+    padding: 0 40px;
+    margin-bottom: calc(var(--spacing-extra-large) * -1);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+  }
 }

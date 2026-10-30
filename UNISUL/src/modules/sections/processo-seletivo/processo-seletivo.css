@@ -310,9 +310,33 @@
 }
 
 @media (max-width: 640px) {
-  .selection-card {
-    padding: var(--spacing-medium);
+  /* Figma mobile: seção com padding vertical de 48px (a `.section` base usa
+     64px) e gap de 24px entre título e textos da introdução. O título já é
+     ExtraBold na base da UNISUL. */
+  #processos-seletivos.section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .selection-intro {
     gap: var(--spacing-large);
+  }
+
+  /* Os dois parágrafos de texto ficam separados por uma linha em branco
+     (16px x 1.4 = 22.4px). */
+  .selection-intro .section-intro__text + .section-intro__text {
+    margin-top: -1.6px;
+  }
+
+  /* Figma: card com padding de 20px e gap de 24px. */
+  .selection-card {
+    padding: 20px;
+    gap: var(--spacing-large);
+  }
+
+  /* Figma: degradê mobile vai de rgba(49,49,50,0.6) até o cinza sólido em 49%. */
+  .selection-card::before {
+    background: linear-gradient(to left, rgba(49, 49, 50, 0.6) 0%, var(--surface-brand-primary-dark) 49.054%);
   }
 
   .selection-card__eyebrow,
@@ -320,8 +344,20 @@
     font-size: var(--font-size-xl);
   }
 
+  /* Figma: "Escolha sua forma de ingresso:" em Regular 16 / 1.4. */
   .selection-card__lead {
     font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-regular);
+  }
+
+  /* Figma: botões de forma de ingresso com texto centralizado; ativo em
+     SemiBold (600), não ExtraBold. */
+  .selection-card__tab {
+    justify-content: center;
+  }
+
+  .selection-card__tab.is-active {
+    font-weight: 600;
   }
 
   .selection-card__description,
@@ -329,19 +365,49 @@
     font-size: var(--font-size-sm);
   }
 
-  .selection-card__facts .selection-card__facts-note {
-    font-size: var(--font-size-xxs);
+  /* Figma: descrição Regular 16/1.4 (a 8px do nome: 12px de gap - 4px);
+     textos com line-height 1.4. */
+  .selection-card__description {
+    margin-top: -4px;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
   }
 
+  .selection-card__facts .selection-card__facts-note {
+    font-size: var(--font-size-xxs);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Figma: 42px entre o bloco de textos e as ações (gap 32 + 10),
+     8px entre o CTA e os links. */
+  .selection-card__actions {
+    margin-top: 10px;
+    gap: var(--spacing-extra-small);
+  }
+
+  /* Figma: CTA 14px Bold (lh 1.16), padding 16px 12px, gap 8px, ícone 16px
+     (altura resultante 48px). */
   .selection-card__cta {
-    height: 40px;
-    padding: var(--spacing-small);
+    height: auto;
+    gap: var(--spacing-extra-small);
+    padding: var(--spacing-medium) var(--spacing-small);
     font-size: var(--font-size-xs);
+    line-height: var(--line-height-tight);
   }
 
   .selection-card__cta img {
     width: 16px;
     height: 16px;
+  }
+
+  /* Figma: links secundários 14px / 1.4, sem gap entre si. */
+  .selection-card__links-row {
+    gap: 0;
+  }
+
+  .selection-card__link {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-relaxed);
   }
 
   /* Recorte da imagem de fundo é diferente no mobile (Figma: left -41.73%,

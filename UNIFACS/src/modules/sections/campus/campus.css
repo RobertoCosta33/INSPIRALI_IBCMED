@@ -474,10 +474,11 @@
     font-weight: var(--font-weight-regular);
   }
 
-  /* Rotulo da foto no canto inferior esquerdo da imagem. */
+  /* Rotulo da foto no canto inferior esquerdo da imagem (Figma: left 12px,
+     ~12px acima da borda inferior da imagem de 242px). */
   .campus-gallery__label {
     top: auto;
-    bottom: 8px;
+    bottom: 12px;
     left: 12px;
   }
 
@@ -497,6 +498,7 @@
 
   .campus-gallery__counter {
     font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
   }
 
   /* Figma mobile: secao com 48px de padding vertical; titulo do painel 24px
@@ -506,9 +508,17 @@
     padding-bottom: 48px;
   }
 
+  /* Figma: 12px entre titulo e texto de apoio da secao (o titulo ja e
+     ExtraBold no base.css). */
+  #nossos-campus .section-intro__text {
+    margin-top: var(--spacing-small);
+  }
+
+  /* Figma: 16px entre "Nossa unidade" e o texto do painel. */
   .campus-panel__title {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-extrabold);
+    margin-bottom: var(--spacing-medium);
   }
 
   .campus-panel__text {
@@ -519,11 +529,39 @@
     height: 40px;
     padding: var(--spacing-small);
     font-size: var(--font-size-xs);
+    line-height: var(--line-height-tight);
   }
 
   .campus-panel__cta {
     height: 52px;
     padding: var(--spacing-medium);
     font-size: var(--font-size-sm);
+    line-height: var(--line-height-tight);
+  }
+
+  /* Figma mobile: a ordem e titulo/texto + endereco (24px de gap) ->
+     galeria -> CTA. Como endereco e CTA vivem no mesmo wrapper
+     (.campus-panel--bottom), ele vira "display: contents" e cada filho
+     ganha sua propria area do grid, sem duplicar HTML. */
+  .campus-layout {
+    grid-template-areas:
+      "panel-top"
+      "detail"
+      "gallery"
+      "cta";
+  }
+
+  .campus-panel--bottom {
+    display: contents;
+  }
+
+  .campus-detail {
+    grid-area: detail;
+    /* 32px do grid - 8px = 24px (gap do painel esquerdo no Figma). */
+    margin-top: calc(-1 * var(--spacing-extra-small));
+  }
+
+  .campus-panel__cta {
+    grid-area: cta;
   }
 }

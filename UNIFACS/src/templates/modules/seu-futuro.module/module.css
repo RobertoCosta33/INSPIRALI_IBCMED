@@ -95,3 +95,57 @@
     height: 16px;
   }
 }
+
+/* ====================================================================
+   Mobile (<= 640px) — ajustes de tipografia, espaçamento e layout
+   (mesmo padrão da UAM). Desktop intacto.
+   ==================================================================== */
+
+@media (max-width: 640px) {
+  /* Figma: padding vertical da seção = 48px. */
+  #seu-futuro-na-medicina {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Cabeçalho: 40px de respiro acima do eyebrow, 12px entre eyebrow,
+     título e texto (o .eyebrow trazia mais 12px de margin-bottom). O título
+     já é ExtraBold (base.css). */
+  .future-header__content {
+    gap: var(--spacing-small);
+    padding-top: 40px;
+  }
+
+  .future-header__content .eyebrow {
+    margin-bottom: 0;
+  }
+
+  /* CTA "Saiba mais": 52px de altura, padding 16px, texto 20px. */
+  .future-header__cta {
+    height: 52px;
+    padding: var(--spacing-medium);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-tight);
+  }
+
+  /* Carrossel: 24px até a navegação, 16px entre cartões (mesmo valor
+     usado pelo JS ao rolar), navegação no fluxo (antes era absoluta e
+     invadia o padding inferior da seção). */
+  #seu-futuro-na-medicina .card-carousel {
+    gap: var(--spacing-large);
+  }
+
+  #seu-futuro-na-medicina .card-carousel__track {
+    gap: var(--spacing-medium);
+    padding-bottom: 0;
+  }
+
+  #seu-futuro-na-medicina .card-carousel__nav {
+    position: static;
+  }
+
+  /* Título do cartão com line-height 1.4 (Body 2 do Figma). */
+  #seu-futuro-na-medicina .posgrad-card__title {
+    line-height: var(--line-height-relaxed);
+  }
+}
