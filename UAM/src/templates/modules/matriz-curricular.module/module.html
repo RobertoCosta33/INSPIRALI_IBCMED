@@ -20,7 +20,8 @@
     <div class="spiral-cta-group">
       <a class="spiral-cta" href="{{ module.download_2026_file }}" target="_blank" rel="noopener">
         {{ module.download_2026_label }}
-        <img src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+        <img class="spiral-cta__icon spiral-cta__icon--default" src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+        <img class="spiral-cta__icon spiral-cta__icon--hover" src="{{ get_asset_url('../../public/icons/icon-pdf-sand.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
       </a>
       {% if module.download_2026_caption %}
       <p class="spiral-cta-group__caption">{{ module.download_2026_caption }}</p>
@@ -29,7 +30,8 @@
     <div class="spiral-cta-group">
       <a class="spiral-cta" href="{{ module.download_current_file }}" target="_blank" rel="noopener">
         {{ module.download_current_label }}
-        <img src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+        <img class="spiral-cta__icon spiral-cta__icon--default" src="{{ get_asset_url('../../public/icons/icon-pdf.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+        <img class="spiral-cta__icon spiral-cta__icon--hover" src="{{ get_asset_url('../../public/icons/icon-pdf-sand.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
       </a>
       {% if module.download_current_caption %}
       <p class="spiral-cta-group__caption">{{ module.download_current_caption }}</p>

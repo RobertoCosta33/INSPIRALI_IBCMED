@@ -3,20 +3,6 @@
    Figma: "Financiamentos" (117:3044)
    ==================================================================== */
 
-.section--subtle:has(.financing-watermark) {
-  position: relative;
-  overflow: hidden;
-}
-
-.financing-watermark {
-  position: absolute;
-  left: -1px;
-  bottom: 0;
-  width: 236px;
-  height: auto;
-  pointer-events: none;
-}
-
 .financing-layout {
   position: relative;
   display: flex;

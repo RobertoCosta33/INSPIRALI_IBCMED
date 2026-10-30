@@ -36,6 +36,8 @@
   width: 100%;
   border-radius: var(--radius-medium);
   overflow: hidden;
+  /* clip impede que o navegador role o card na horizontal (a imagem de fundo é mais larga que o card) ao focar/clicar numa aba. */
+  overflow: clip;
   padding: 40px 40px 56px;
   display: flex;
   flex-direction: column;
@@ -69,7 +71,7 @@
 
 .selection-card__header {
   align-self: stretch;
-  max-width: 700px;
+  max-width: 750px;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-extra-small);
@@ -145,7 +147,7 @@
 .selection-card__panel {
   align-self: stretch;
   width: auto;
-  max-width: 700px;
+  max-width: 750px;
   min-width: 0;
   background-color: rgba(255, 250, 252, 0.15);
   border-radius: 8px;
@@ -153,8 +155,15 @@
   padding: var(--spacing-large);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 42px;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+/* Figma: painel com altura mínima de 465px, igual nas três abas (o card não muda de altura ao trocar de forma de ingresso). */
+@media (min-width: 861px) {
+  .selection-card__panel {
+    min-height: 465px;
+  }
 }
 
 .selection-card__panel[hidden] {
@@ -219,6 +228,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  margin-top: auto;
   gap: var(--spacing-medium);
 }
 

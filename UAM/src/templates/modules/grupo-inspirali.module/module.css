@@ -8,28 +8,6 @@
   overflow: hidden;
 }
 
-/* Padrão decorativo "constelação" do Figma, atrás da logo/título — a
-   imagem de origem é preto sobre transparente; usamos como máscara para
-   pintar com a cor de marca, em vez de recortar/colorir o PNG. */
-#grupo-inspirali::before {
-  content: "";
-  position: absolute;
-  top: -180px;
-  right: -160px;
-  width: 640px;
-  height: 600px;
-  background-color: rgba(176, 148, 53, 0.18);
-  -webkit-mask-image: url("https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/grupo-inspirali-broto.png");
-  mask-image: url("https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/grupo-inspirali-broto.png");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  pointer-events: none;
-}
-
 .inspirali-section {
   position: relative;
   display: flex;
@@ -252,17 +230,31 @@
 }
 
 .partner-logos {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-medium);
-  /* Figma: faixa de logos em branco com borda dourada a 20%. */
+    /* Figma: faixa de logos em branco com borda dourada a 20%. */
   background-color: var(--surface-inverted);
   border: 1px solid var(--border-brand-soft);
   border-radius: 12px;
   padding: var(--spacing-extra-large);
   overflow-x: auto;
+}
+
+.partner-logos__track {
+  display: block;
+  width: 100%;
+}
+
+.partner-logos__set {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  min-width: max-content;
+}
+
+/* Copia usada so no carrossel automatico do mobile. */
+.partner-logos__set--clone {
+  display: none;
 }
 
 .partner-logos img {
@@ -321,7 +313,7 @@
     min-width: 100%;
   }
 
-  .partner-logos {
+  .partner-logos__set {
     justify-content: flex-start;
   }
 
@@ -369,5 +361,63 @@
 
   .inspirali-header__lockup-partner {
     height: 20px;
+  }
+}
+
+/* Mobile: carrossel automatico e infinito, rolando devagar para a esquerda. A copia
+   decorativa do conjunto fecha o loop sem salto (translateX de 0 a -50%). */
+@media (max-width: 640px) {
+  .partner-logos {
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .partner-logos__track {
+    display: flex;
+    width: max-content;
+    animation: partner-logos-marquee 40s linear infinite;
+    will-change: transform;
+  }
+
+  .partner-logos__set {
+    flex: 0 0 auto;
+    min-width: 0;
+    gap: var(--spacing-extra-large);
+    padding-right: var(--spacing-extra-large);
+  }
+
+  .partner-logos__set--clone {
+    display: flex;
+  }
+
+  .partner-logos:hover .partner-logos__track,
+  .partner-logos:active .partner-logos__track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes partner-logos-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respeita quem prefere menos movimento: volta a rolagem manual, sem a copia. */
+@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+  .partner-logos {
+    overflow-x: auto;
+  }
+
+  .partner-logos__track {
+    animation: none;
+  }
+
+  .partner-logos__set--clone {
+    display: none;
   }
 }

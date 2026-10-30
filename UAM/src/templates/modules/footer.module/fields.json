@@ -358,15 +358,6 @@
     ]
   },
   {
-    "name": "emec_strip_logo",
-    "label": "Selo e-MEC (faixa)",
-    "type": "image",
-    "default": {
-      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/emec-logo-footer.svg",
-      "alt": "Faculdade de Medicina em São Paulo e na Anhembi Morumbi"
-    }
-  },
-  {
     "name": "social_links",
     "label": "Redes sociais",
     "type": "group",

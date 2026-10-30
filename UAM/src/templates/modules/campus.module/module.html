@@ -53,6 +53,7 @@
           {% endfor %}
           <div class="campus-gallery__overlay" aria-hidden="true"></div>
           <span class="campus-gallery__label" data-gallery-label>{{ module.campuses[0].photos[0].label }}</span>
+        </div>
           <div class="campus-gallery__meta">
             <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>{{ module.campuses[0].photos|length }}</span></span>
             <div class="campus-gallery__nav">
@@ -65,7 +66,6 @@
               </button>
             </div>
           </div>
-        </div>
       </div>
       <div class="campus-gallery__thumbs">
         {% for photo in module.campuses[0].photos %}

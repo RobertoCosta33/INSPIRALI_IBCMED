@@ -3,21 +3,6 @@
    Figma: "Financiamentos" (117:3044)
    ==================================================================== */
 
-.section--subtle:has(.financing-watermark) {
-  position: relative;
-  overflow: hidden;
-}
-
-.financing-watermark {
-  /* Figma: 236x293 (não a proporção intrínseca do SVG, 278x452). */
-  position: absolute;
-  left: -1px;
-  bottom: 0;
-  width: 236px;
-  height: 293px;
-  pointer-events: none;
-}
-
 .financing-layout {
   position: relative;
   display: flex;

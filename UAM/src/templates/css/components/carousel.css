@@ -57,7 +57,7 @@
 
 .evidence-carousel__eyebrow {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
 }
 
@@ -69,13 +69,13 @@
 
 .evidence-carousel__value {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
 }
 
 .evidence-carousel__label {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   max-width: 540px;
 }

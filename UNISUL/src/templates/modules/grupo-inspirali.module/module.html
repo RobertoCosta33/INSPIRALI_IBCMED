@@ -74,7 +74,9 @@
     </div>
 
     <div class="partner-logos">
-      {% for partner in module.partner_logos %}
+      <div class="partner-logos__track">
+        <div class="partner-logos__set">
+          {% for partner in module.partner_logos %}
       <img
         src="{{ partner.logo.src }}"
         alt="{{ partner.logo.alt }}"
@@ -83,6 +85,20 @@
         height="{{ partner.logo.height }}"
       />
       {% endfor %}
+        </div>
+        {# Copia decorativa: permite o loop infinito do carrossel automatico no mobile. #}
+        <div class="partner-logos__set partner-logos__set--clone" aria-hidden="true">
+          {% for partner in module.partner_logos %}
+      <img
+        src="{{ partner.logo.src }}"
+        alt=""
+        loading="lazy"
+        width="{{ partner.logo.width }}"
+        height="{{ partner.logo.height }}"
+      />
+      {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </section>

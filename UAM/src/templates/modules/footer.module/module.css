@@ -162,7 +162,8 @@
 .footer-emec-strip {
   display: flex;
   align-items: center;
-  gap: var(--spacing-extra-large);
+  /* Figma: duas linhas separadas por 64px, sem logo no meio. */
+  gap: 64px;
 }
 
 .footer-emec-strip__line {
@@ -170,11 +171,6 @@
   height: 2px;
   border: none;
   background-color: rgba(255, 255, 255, 0.25);
-}
-
-.footer-emec-strip img {
-  height: 24px;
-  width: auto;
 }
 
 .footer-bottom {
@@ -286,8 +282,13 @@
     flex: 1 1 100%;
   }
 
+  /* Sem a logo, o mobile mostra uma única linha contínua. */
   .footer-emec-strip {
-    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer-emec-strip__line + .footer-emec-strip__line {
+    display: none;
   }
 
   .footer-bottom {
