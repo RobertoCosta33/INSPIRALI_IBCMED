@@ -43,7 +43,7 @@
     "occurrence": {
       "min": 0,
       "max": 10,
-      "default": 4
+      "default": 3
     },
     "children": [
       {
@@ -84,7 +84,7 @@
             "type": "EXTERNAL"
           }
         },
-        "item_label": "Transferência Externa 27.1 - Prova 29/10"
+        "item_label": "Transferência Externa 27.1 - Prova 19/11"
       },
       {
         "url": {
@@ -94,15 +94,6 @@
           }
         },
         "item_label": "Portador de Diploma 27.1"
-      },
-      {
-        "url": {
-          "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18441",
-            "type": "EXTERNAL"
-          }
-        },
-        "item_label": "Retorno 27.1"
       }
     ]
   },
