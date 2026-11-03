@@ -1,0 +1,528 @@
+/* ====================================================================
+   Módulo: Grupo Inspirali (UAM)
+   Figma: "Grupo Inspirali" (150:4207)
+   ==================================================================== */
+
+#grupo-inspirali {
+  position: relative;
+  overflow: hidden;
+}
+
+.inspirali-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+}
+
+.inspirali-header {
+  display: flex;
+  align-items: center;
+  gap: 130px;
+}
+
+.inspirali-header__brand {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.inspirali-header__lockup {
+  /* Proporção da imagem fonte (650x302): "INSPIRALI" ocupa ~67px de altura,
+     a partir da linha 35 — nessa altura (180px) ele fica perto do tamanho
+     do título (--font-size-3xl, 40px). `.inspirali-header` usa
+     `align-items: center`, então a logo fica centralizada verticalmente
+     em relação ao bloco de título + descrição ao lado. */
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  object-position: left top;
+}
+
+/* Versão horizontal (INSPIRALI | Excelência Acadêmica Einstein lado a
+   lado) usada só até 1023px (Figma 768px) — a imagem única do desktop é
+   empilhada (INSPIRALI em cima, Einstein embaixo) e não cabe bem quando a
+   logo fica centralizada numa largura estreita. */
+.inspirali-header__lockup-row {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.inspirali-header__lockup-mark {
+  height: 24px;
+  width: auto;
+}
+
+.inspirali-header__lockup-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #7a7a7a;
+  opacity: 0.4;
+}
+
+.inspirali-header__lockup-partner {
+  height: 24px;
+  width: auto;
+}
+
+/* Versão horizontal (INSPIRALI | Excelência Acadêmica Einstein lado a
+   lado) usada só até 1023px (Figma 768px) — a imagem única do desktop é
+   empilhada (INSPIRALI em cima, Einstein embaixo) e não cabe bem quando a
+   logo fica centralizada numa largura estreita. */
+.inspirali-header__lockup-row {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.inspirali-header__lockup-mark {
+  height: 24px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.inspirali-header__lockup-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #7a7a7a;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+.inspirali-header__lockup-partner {
+  height: 24px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.inspirali-header__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
+  max-width: 606px;
+  margin-bottom: 18px;
+}
+
+.inspirali-header__text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+  max-width: 606px;
+}
+
+.stats-grid {
+  display: flex;
+  gap: var(--spacing-large);
+  flex-wrap: wrap;
+}
+
+.lifelong {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lifelong__text {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lifelong__text > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-small);
+}
+
+.lifelong__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-brand);
+}
+
+.lifelong__sublabel {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-primary-dark);
+}
+
+.lifelong__text > p {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.timeline {
+  flex: 1 1 400px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-step {
+  display: flex;
+  gap: var(--spacing-medium);
+  align-items: stretch;
+}
+
+.timeline-step:last-child .timeline-step__title {
+  color: var(--text-brand);
+}
+
+.timeline-step__connector {
+  flex: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-step__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--surface-brand-primary);
+  color: var(--text-inverted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-relaxed);
+  flex-shrink: 0;
+}
+
+.timeline-step__dot img {
+  width: 16px;
+  height: 16px;
+}
+
+.timeline-step__line {
+  width: 2px;
+  flex: 1 1 auto;
+  background-color: var(--border-brand-soft-strong);
+  min-height: 24px;
+}
+
+.timeline-step__content {
+  flex: 1 1 0;
+  padding-bottom: var(--spacing-large);
+}
+
+.timeline-step__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-primary-dark);
+}
+
+.timeline-step__text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.partner-logos {
+    /* Figma: faixa de logos em branco com borda dourada a 20%. */
+  background-color: var(--surface-inverted);
+  border: 1px solid var(--border-brand-soft);
+  border-radius: 12px;
+  padding: var(--spacing-extra-large);
+  overflow-x: auto;
+}
+
+.partner-logos__track {
+  display: block;
+  width: 100%;
+}
+
+.partner-logos__set {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  min-width: max-content;
+}
+
+/* Copia usada so no carrossel automatico do mobile. */
+.partner-logos__set--clone {
+  display: none;
+}
+
+.partner-logos img {
+  width: auto;
+  height: auto;
+  max-width: none;
+  flex-shrink: 0;
+}
+
+/* Entre 1024 e 1280px (gutter de tablet) os 4 cards ainda ficam numa única
+   fileira (Figma: 1024px), mas precisam de um min-width menor que o do
+   desktop largo para caberem sem quebrar linha. */
+@media (max-width: 1280px) {
+  .stat-card {
+    min-width: 190px;
+  }
+}
+
+/* Até 1023px o Figma empilha cabeçalho, stats e timeline (coluna única) —
+   só a partir de 1024px eles ficam lado a lado. */
+@media (max-width: 1023px) {
+  .lifelong {
+    flex-direction: column;
+  }
+
+  .inspirali-header {
+    flex-direction: column;
+    gap: var(--spacing-large);
+  }
+
+  /* A logo fica centralizada acima do título (Figma 768px) — só ela, o
+     bloco de título/descrição continua alinhado à esquerda. */
+  .inspirali-header__brand {
+    align-self: center;
+  }
+
+  /* A logo fica centralizada acima do título (Figma 768px) — só ela, o
+     bloco de título/descrição continua alinhado à esquerda. */
+  .inspirali-header__brand {
+    align-self: center;
+  }
+
+  .inspirali-header__lockup {
+    display: none;
+  }
+
+  .inspirali-header__lockup-row {
+    display: flex;
+  }
+
+  .stats-grid {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    min-width: 100%;
+  }
+
+  .partner-logos__set {
+    justify-content: flex-start;
+  }
+
+  .inspirali-header__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .inspirali-header__text {
+    font-size: var(--font-size-sm);
+  }
+
+  .lifelong__label {
+    font-size: var(--font-size-sm);
+  }
+
+  .lifelong__sublabel {
+    font-size: var(--font-size-2xl);
+  }
+
+  .lifelong__text > p {
+    font-size: var(--font-size-xs);
+  }
+
+  .timeline-step__title {
+    font-size: var(--font-size-sm);
+  }
+
+  .timeline-step__text {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Em telas realmente estreitas (375-640px), mesmo a versão horizontal
+   compacta da logo (24px) não cabe: INSPIRALI (575x67) + divisor +
+   Excelência Acadêmica Einstein (499x73) passam de 400px de largura
+   somados. Reduz a altura para caber dentro do card com folga. */
+@media (max-width: 640px) {
+  .inspirali-header__lockup-row {
+    gap: var(--spacing-extra-small);
+  }
+
+  .inspirali-header__lockup-mark {
+    height: 20px;
+  }
+
+  .inspirali-header__lockup-partner {
+    height: 20px;
+  }
+}
+
+/* Mobile: carrossel automatico e infinito, rolando devagar para a esquerda. A copia
+   decorativa do conjunto fecha o loop sem salto (translateX de 0 a -50%). */
+@media (max-width: 640px) {
+  .partner-logos {
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .partner-logos__track {
+    display: flex;
+    width: max-content;
+    animation: partner-logos-marquee 40s linear infinite;
+    will-change: transform;
+  }
+
+  .partner-logos__set {
+    flex: 0 0 auto;
+    min-width: 0;
+    gap: var(--spacing-extra-large);
+    padding-right: var(--spacing-extra-large);
+  }
+
+  .partner-logos__set--clone {
+    display: flex;
+  }
+
+  .partner-logos:hover .partner-logos__track,
+  .partner-logos:active .partner-logos__track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes partner-logos-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respeita quem prefere menos movimento: volta a rolagem manual, sem a copia. */
+@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+  .partner-logos {
+    overflow-x: auto;
+  }
+
+  .partner-logos__track {
+    animation: none;
+  }
+
+  .partner-logos__set--clone {
+    display: none;
+  }
+}
+
+/* ====================================================================
+   Mobile (<= 640px) — Figma "Grupo Inspirali" mobile (2318:27739, 375px).
+   Ajustes de tipografia, espaçamento e alinhamento; desktop intacto.
+   ==================================================================== */
+
+@media (max-width: 640px) {
+  /* Figma: padding vertical da seção = 48px; 40px entre os blocos
+     (cabeçalho+stats / lifelong / logos). */
+  #grupo-inspirali {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  #grupo-inspirali .inspirali-section {
+    gap: 40px;
+  }
+
+  /* Cabeçalho -> stats = 24px (40px do gap geral - 16px). */
+  .inspirali-header {
+    gap: var(--spacing-extra-large);
+    margin-bottom: -16px;
+  }
+
+  .inspirali-header__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: var(--spacing-small);
+    max-width: none;
+  }
+
+  .inspirali-header__text {
+    max-width: none;
+  }
+
+  /* Cards de estatística: 16px entre eles, altura pelo conteúdo, linha
+     do ícone/valor com 40px e 8px até o título. */
+  .stats-grid {
+    gap: var(--spacing-medium);
+  }
+
+  .stat-card {
+    flex: 0 0 auto;
+    min-height: 0;
+  }
+
+  .stat-card__row {
+    min-height: 40px;
+  }
+
+  .stat-card__value {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+  }
+
+  .stat-card__title {
+    margin-top: -4px;
+  }
+
+  /* Lifelong: coluna com 24px entre texto e linha do tempo; os
+     flex-basis do desktop viravam altura mínima na coluna. */
+  .lifelong {
+    gap: var(--spacing-large);
+    align-items: stretch;
+  }
+
+  .lifelong__text,
+  .timeline {
+    flex: 0 0 auto;
+    max-width: none;
+  }
+
+  .lifelong__label {
+    font-size: var(--font-size-xxs);
+  }
+
+  .lifelong__sublabel {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  .lifelong__text > p {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Linha do tempo: número 14px extrabold; conteúdo com 4px de padding
+     superior, 4px entre título e texto; o último passo sem padding
+     inferior. */
+  .timeline-step__dot {
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+  }
+
+  .timeline-step__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-micro);
+    padding-top: var(--spacing-micro);
+  }
+
+  .timeline-step:last-child .timeline-step__content {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,364 @@
+/* ====================================================================
+   Header institucional + navegação do curso
+   Figma: "Institutional header" (523:29934) + "Course navigation" (523:29935)
+   ==================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.institutional-header {
+  background-color: var(--surface-inverted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  /* Figma: altura 96px (logo de 72px + padding vertical de 16px). */
+  padding: var(--spacing-medium) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+}
+
+.header-cta-dropdown__trigger-short {
+  display: none;
+}
+
+/* Figma ("Institutional header", 490:21118): a logo é uma imagem única
+   ("USJT", 447x72) com São Judas + Medicina + Einstein já
+   combinados — não montamos mais o lockup em peças separadas. */
+.institutional-header__brand {
+  display: block;
+  flex-shrink: 0;
+}
+
+.institutional-header__brand img {
+  display: block;
+  height: 72px;
+  width: auto;
+}
+
+.institutional-header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+  flex-shrink: 0;
+}
+
+.institutional-header__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-extra-small);
+}
+
+.institutional-header__lang {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.institutional-header__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+}
+
+.institutional-header__lang-item {
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  color: #7a7a7a;
+}
+
+.institutional-header__lang-item.is-active {
+  color: #141414;
+}
+
+.institutional-header__lang-divider {
+  width: 1px;
+  height: 8px;
+  background-color: #7a7a7a;
+}
+
+.institutional-header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+  padding: var(--spacing-micro);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  color: #141414;
+  white-space: nowrap;
+}
+
+.institutional-header__link:hover,
+.institutional-header__link:focus-visible {
+  text-decoration: underline;
+}
+
+.institutional-header__search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-small);
+  /* Figma: botão de busca só com contorno no accent primário. */
+  border: 1px solid var(--surface-brand-primary-dark);
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+}
+
+.institutional-header__search:hover,
+.institutional-header__search:focus-visible {
+  background-color: var(--surface-secondary-subtle);
+}
+
+.institutional-header__mobile-search {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-medium);
+  background-color: #dcdce0;
+  padding: var(--spacing-extra-small) var(--page-gutter-mobile);
+  width: 100%;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.institutional-header__mobile-search-placeholder {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: #3d3d3d;
+}
+
+.institutional-header__mobile-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 32px;
+  border-radius: var(--radius-small);
+  background-color: rgba(122, 122, 122, 0.08);
+  flex-shrink: 0;
+}
+
+.institutional-header__nav .btn {
+  height: 48px;
+  padding: var(--spacing-medium);
+  font-size: var(--font-size-xs);
+}
+
+.course-nav {
+  /* Figma: fundo no accent neutro escuro (--surface-brand-primary-dark,
+     #313132), não o teal de --surface-brand-primary. */
+  background-color: var(--surface-brand-primary-dark);
+  color: var(--text-inverted);
+}
+
+.course-nav__list {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+  padding: var(--spacing-small) max(var(--page-gutter), calc((100% - var(--page-max-width) + 2 * var(--page-gutter)) / 2));
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.course-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.course-nav__link {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  color: var(--text-inverted);
+  opacity: 0.92;
+  transition: opacity 0.4s ease;
+}
+
+.course-nav__link:hover,
+.course-nav__link:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+  .institutional-header {
+    padding: var(--spacing-medium) var(--page-gutter-tablet);
+  }
+
+  .institutional-header__brand img {
+    height: 48px;
+  }
+
+  .course-nav__list {
+    padding: var(--spacing-small) var(--page-gutter-tablet);
+    justify-content: flex-start;
+  }
+}
+
+/* No mobile/tablet o header fica só com as logos + o botão "Inscreva-se"
+   (sem menu hambúrguer) — a navegação do curso já está disponível logo
+   abaixo, na faixa verde, e a busca tem sua própria barra dedicada. */
+
+@media (max-width: 640px) {
+  /* Figma mobile (2318:27750): barra com padding 8px 20px e gap de 16px
+     entre a logo e o botão "Inscreva-se" (altura total 48px). */
+  .institutional-header {
+    padding: var(--spacing-extra-small) var(--page-gutter-mobile);
+    gap: var(--spacing-medium);
+  }
+
+  /* Figma: a logo ocupa todo o espaço livre da linha (flex 1, proporção
+     1095/176), em vez de altura fixa de 32px — que estourava a largura
+     em 375px (logo 199px + gap + botão 133px > 335px). */
+  .institutional-header__brand {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .institutional-header__brand img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+  }
+
+  /* No mobile o botão mostra só "Inscreva-se" (sem "para 2027.1"), para
+     caber ao lado da logo + Einstein numa única linha, como no Figma. */
+  .header-cta-dropdown__trigger-full {
+    display: none;
+  }
+
+  .header-cta-dropdown__trigger-short {
+    display: inline;
+  }
+
+  /* O botão mobile do Figma é liso, sem a setinha de dropdown do desktop. */
+  .header-cta-dropdown__chevron {
+    display: none;
+  }
+
+  .institutional-header__nav .btn {
+    height: 32px;
+    padding: 0 var(--spacing-small);
+    font-size: var(--font-size-xxs);
+  }
+
+  /* Figma ("Field"): padding vertical de 4px (altura total 40px com o
+     botão de 32px), não 8px. */
+  .institutional-header__mobile-search {
+    display: flex;
+    padding-top: var(--spacing-micro);
+    padding-bottom: var(--spacing-micro);
+  }
+
+  /* A busca já aparece na barra dedicada abaixo do header; evita duplicidade
+     dentro do menu hambúrguer neste breakpoint. */
+  .institutional-header__search {
+    display: none;
+  }
+
+  /* Figma: barra de 56px com padding horizontal de 20px, sem padding
+     vertical (itens centralizados) e gap de 24px. */
+  .course-nav__list {
+    padding: 0 var(--page-gutter-mobile);
+  }
+
+  .course-nav__link {
+    line-height: var(--line-height-tight);
+  }
+}
+
+/* Dropdown "Inscreva-se para 2027.1" */
+.header-cta-dropdown {
+  position: relative;
+}
+
+.header-cta-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-extra-small);
+  /* Figma: este botão específico usa o accent neutro escuro, diferente
+     do `.btn-primary` genérico (teal) usado por outras instituições. */
+  background-color: var(--surface-brand-primary-dark) !important;
+  border-color: var(--surface-brand-primary-dark) !important;
+}
+
+.header-cta-dropdown__chevron {
+  transition: transform 0.3s ease;
+}
+
+.header-cta-dropdown.is-open .header-cta-dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.header-cta-dropdown__menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 8px;
+  min-width: 280px;
+  z-index: 110;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-cta-dropdown__menu-inner {
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-small);
+  box-shadow: 0 16px 32px rgba(17, 17, 17, 0.15);
+  padding: var(--spacing-small);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header-cta-dropdown.is-open .header-cta-dropdown__menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* :hover só controla o dropdown em dispositivos que realmente têm um
+   ponteiro com hover (mouse) — em touch, o navegador simula ":hover" após
+   o toque e ele "gruda" aberto mesmo depois do clique fechar via JS
+   (.is-open removida), porque o CSS continua casando. */
+@media (hover: hover) {
+  .header-cta-dropdown:hover .header-cta-dropdown__menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .header-cta-dropdown:hover .header-cta-dropdown__chevron {
+    transform: rotate(180deg);
+  }
+}
+
+.header-cta-dropdown__item {
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-heading);
+  white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.header-cta-dropdown__item:hover,
+.header-cta-dropdown__item:focus-visible {
+  background-color: var(--surface-primary-subtle);
+  color: var(--text-brand);
+}

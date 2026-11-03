@@ -1,0 +1,89 @@
+      <section class="section section--subtle" id="corpo-docente" aria-labelledby="corpo-docente-title">
+        <div class="section-intro" style="max-width: 1002px;">
+          <p class="eyebrow">CORPO DOCENTE DE ELITE</p>
+          <h2 class="section-intro__title" id="corpo-docente-title">Coordenadores especialistas ao seu lado</h2>
+          <p class="section-intro__text">
+            Na São Judas, nossos coordenadores se dedicam à sua formação e ao
+            acompanhamento próximo do seu desenvolvimento.
+          </p>
+        </div>
+
+        <div class="docente-carousel" data-docente-carousel>
+          <div class="docente-grid" data-docente-track>
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/USJT/src/public/images/docente/tatiane-santos.png" alt="Tatiane Santos Silva Teixeira" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenadora Administrativa</p>
+                  <p class="docente-card__name">Tatiane Santos Silva Teixeira</p>
+                </div>
+                <p class="docente-card__bio">
+                  Graduada em Administração e pós-graduada em Gestão Escolar, atua há 7 anos na Universidade São
+                  Judas, onde construiu uma trajetória de crescimento profissional, iniciando no atendimento ao
+                  corpo docente, passando pela função de Analista Acadêmica e, atualmente, exercendo o cargo de
+                  Coordenadora Administrativa do curso de Medicina. Sua atuação é voltada à gestão de processos
+                  acadêmicos e administrativos, contribuindo para a excelência do curso e para a formação de
+                  médicos éticos, humanizados e preparados para os desafios da prática profissional.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/USJT/src/public/images/docente/evaldo-stanislau.png" alt="Evaldo Stanislau Affonso de Araújo" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Médico de Curso</p>
+                  <p class="docente-card__name">Evaldo Stanislau Affonso de Araújo</p>
+                </div>
+                <p class="docente-card__bio">
+                  Médico Infectologista especializado e pós-graduado pela FMUSP. Assistente-Doutor da Divisão de
+                  Moléstias Infecciosas do HC-FMUSP, consultor em saúde para o Ministério da Saúde e OMS na área
+                  de doenças infecciosas. Pesquisador e autor de diversos artigos e livros com consolidada
+                  atividade na comunicação em saúde. Docente da Universidade São Judas e Inspirali há oito anos,
+                  onde coordena a faculdade de Medicina da Universidade São Judas e foi o coordenador médico do
+                  Comitê Covid da Ânima Educação.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+          </div>
+
+          <button type="button" class="docente-carousel__nav docente-carousel__nav--prev" data-docente-prev aria-label="Coordenador anterior">
+            <img src="/USJT/src/public/icons/icon-arrow-left-nav-outline.svg" alt="" aria-hidden="true" />
+          </button>
+          <button type="button" class="docente-carousel__nav docente-carousel__nav--next" data-docente-next aria-label="Próximo coordenador">
+            <img src="/USJT/src/public/icons/icon-arrow-right-nav-outline.svg" alt="" aria-hidden="true" />
+          </button>
+
+          <div class="docente-carousel__steps">
+            <span class="docente-carousel__step is-active" data-docente-step></span>
+            <span class="docente-carousel__step" data-docente-step></span>
+          </div>
+        </div>
+
+        <div class="docente-modal" data-docente-modal hidden aria-hidden="true">
+          <div class="docente-modal__backdrop" data-docente-modal-close></div>
+          <div class="docente-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="docente-modal-name">
+            <div class="docente-modal__photo-wrap">
+              <img class="docente-modal__photo" data-docente-modal-photo src="" alt="" />
+            </div>
+            <div class="docente-modal__content">
+              <div class="docente-modal__header">
+                <div>
+                  <p class="docente-modal__name" id="docente-modal-name" data-docente-modal-name></p>
+                  <p class="docente-modal__role" data-docente-modal-role></p>
+                </div>
+                <button type="button" class="docente-modal__close" data-docente-modal-close aria-label="Fechar">
+                  <img src="/USJT/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+                </button>
+              </div>
+              <div class="docente-modal__bio">
+                <p data-docente-modal-bio></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

@@ -1,0 +1,3 @@
+[
+  { "name": "placeholder", "label": "Texto de placeholder do campo de busca", "type": "text", "default": "Buscar nesta página..." }
+]
