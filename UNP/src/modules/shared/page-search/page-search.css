@@ -1,0 +1,111 @@
+/* ====================================================================
+   Busca na página ("Ctrl+F" customizado), acionada pela lupa do header.
+   ==================================================================== */
+
+.page-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-medium);
+  background-color: rgba(17, 17, 17, 0.12);
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.page-search[hidden] {
+  display: none;
+}
+
+.page-search.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.page-search__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-small);
+  box-shadow: 0 16px 40px rgba(17, 17, 17, 0.2);
+  padding: var(--spacing-small) var(--spacing-medium);
+}
+
+.page-search__input {
+  flex: 1 1 0;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--text-heading);
+}
+
+.page-search__count {
+  flex-shrink: 0;
+  font-size: var(--font-size-xs);
+  color: var(--text-primary-dark);
+  white-space: nowrap;
+}
+
+.page-search__nav,
+.page-search__close {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-extra-small);
+  transition: background-color 0.2s ease;
+}
+
+.page-search__nav:hover,
+.page-search__close:hover {
+  background-color: var(--surface-brand-soft);
+}
+
+.page-search__nav-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.page-search__nav-icon--up {
+  transform: rotate(180deg);
+}
+
+.page-search__close img {
+  width: 12px;
+  height: 12px;
+}
+
+/* Destaques gerados pelo mark.js. Cor e texto fixos (não herdam do
+   elemento ao redor) para garantir contraste tanto em fundos claros quanto
+   em cards escuros (ex.: card teal de Investimento Mensal). */
+.page-search-highlight {
+  background-color: #ffe08a;
+  color: #111827;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(17, 24, 39, 0.15);
+}
+
+.page-search-highlight.is-current {
+  background-color: #ff8a00;
+  color: #111827;
+  box-shadow: 0 0 0 2px #111827;
+}
+
+@media (max-width: 640px) {
+  .page-search__bar {
+    max-width: none;
+  }
+}

@@ -1,0 +1,77 @@
+/* ====================================================================
+   Módulo: Metodologia e tecnologia (UAM)
+   Figma: "Metodologia" (114:2395)
+   ==================================================================== */
+
+.methodology {
+  display: flex;
+  gap: 64px;
+  align-items: stretch;
+}
+
+.methodology__intro {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+}
+
+.methodology__media {
+  display: block;
+  width: 100%;
+}
+
+.methodology__image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-medium);
+}
+
+.methodology__list {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+@media (max-width: 1024px) {
+  .methodology {
+    flex-direction: column;
+  }
+
+  .methodology__intro {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Figma mobile (2318:27736): secao com 48px de padding vertical e 32px
+     entre o bloco de introducao/imagem e a lista de disclosures. */
+  #metodologia {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .methodology {
+    gap: var(--spacing-extra-large);
+  }
+
+  /* Figma: 8px entre eyebrow e titulo (12px entre o grupo e o texto, ja dado
+     pelo margin-top do paragrafo); titulo em ExtraBold (800). */
+  #metodologia .eyebrow {
+    margin-bottom: var(--spacing-extra-small);
+  }
+
+  #metodologia .section-intro__title {
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  /* Figma: titulo dos disclosures em Bold (700) 14px. */
+  .methodology__list .accordion-trigger__title {
+    font-weight: var(--font-weight-bold);
+  }
+}

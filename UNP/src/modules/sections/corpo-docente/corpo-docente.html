@@ -1,0 +1,78 @@
+      <section class="section section--subtle" id="corpo-docente" aria-labelledby="corpo-docente-title">
+        <div class="section-intro" style="max-width: 1002px;">
+          <p class="eyebrow">CORPO DOCENTE DE ELITE</p>
+          <h2 class="section-intro__title" id="corpo-docente-title">Coordenadores especialistas ao seu lado</h2>
+          <p class="section-intro__text">
+            Na UnP, nossos coordenadores se dedicam à sua formação e ao acompanhamento
+            próximo do seu desenvolvimento.
+          </p>
+        </div>
+
+        <div class="docente-carousel" data-docente-carousel>
+          <div class="docente-grid" data-docente-track>
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNP/src/public/images/docente/andrea-lima.png" alt="Andrea Lima de Oliveira" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenadora Administrativa</p>
+                  <p class="docente-card__name">Andrea Lima de Oliveira</p>
+                </div>
+                <p class="docente-card__bio">
+                  Graduada em Ciências Biológicas pela Universidade Potiguar, Mestre em Biologia Molecular e Genética pela Universidade Federal do Rio Grande do Norte. Atua como docente da UnP desde 2010 e está na coordenação administrativa do curso de Medicina desde 2019. Possui também MBA em Liderança de Alta Performance pela UnP.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNP/src/public/images/docente/tasia-feitosa.png" alt="Tásia de Albuquerque Falcão Feitosa" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenadora Médica</p>
+                  <p class="docente-card__name">Tásia de Albuquerque Falcão</p>
+                </div>
+                <p class="docente-card__bio">
+                  Coordenadora acadêmica e professora nas unidades curriculares de Habilidades Médicas e Necessidades e Cuidados em Saúde do curso de Medicina da Universidade Potiguar. Tem experiência nas áreas de Doenças Infecciosas e Parasitárias, Gestão em Serviços de Saúde, Auditoria Médica e Mecanismos de Regulação, Educação Médica e Medicina do Trabalho.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+          </div>
+
+          <button type="button" class="docente-carousel__nav docente-carousel__nav--prev" data-docente-prev aria-label="Coordenador anterior">
+            <img src="/UNP/src/public/icons/icon-arrow-left-nav-outline.svg" alt="" aria-hidden="true" />
+          </button>
+          <button type="button" class="docente-carousel__nav docente-carousel__nav--next" data-docente-next aria-label="Próximo coordenador">
+            <img src="/UNP/src/public/icons/icon-arrow-right-nav-outline.svg" alt="" aria-hidden="true" />
+          </button>
+
+          <div class="docente-carousel__steps">
+            <span class="docente-carousel__step is-active" data-docente-step></span>
+            <span class="docente-carousel__step" data-docente-step></span>
+          </div>
+        </div>
+
+        <div class="docente-modal" data-docente-modal hidden aria-hidden="true">
+          <div class="docente-modal__backdrop" data-docente-modal-close></div>
+          <div class="docente-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="docente-modal-name">
+            <div class="docente-modal__photo-wrap">
+              <img class="docente-modal__photo" data-docente-modal-photo src="" alt="" />
+            </div>
+            <div class="docente-modal__content">
+              <div class="docente-modal__header">
+                <div>
+                  <p class="docente-modal__name" id="docente-modal-name" data-docente-modal-name></p>
+                  <p class="docente-modal__role" data-docente-modal-role></p>
+                </div>
+                <button type="button" class="docente-modal__close" data-docente-modal-close aria-label="Fechar">
+                  <img src="/UNP/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+                </button>
+              </div>
+              <div class="docente-modal__bio">
+                <p data-docente-modal-bio></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
