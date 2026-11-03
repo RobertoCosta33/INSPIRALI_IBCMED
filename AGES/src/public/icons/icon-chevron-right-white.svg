@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Button">
+<g clip-path="url(#clip0_0_364)">
+<rect width="24" height="24" rx="12" fill="#FAFAFF"/>
+<g id="arrow-left-1">
+<path id="Vector" d="M9.8125 16.5312C9.8125 16.5312 14.1875 13.1941 14.1875 12C14.1875 10.8059 9.8125 7.46875 9.8125 7.46875" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#b09435"/>
+</g>
+<path id="Ellipse" d="M23.25 12C23.25 18.2132 18.2132 23.25 12 23.25C5.7868 23.25 0.75 18.2132 0.75 12C0.75 5.7868 5.7868 0.75 12 0.75C18.2132 0.75 23.25 5.7868 23.25 12Z" stroke-width="1.5" stroke="#DCDCE0"/>
+<path id="ellipse" d="M12 0.75C14.225 0.75 16.4001 1.4098 18.2502 2.64597C20.1002 3.88213 21.5422 5.63914 22.3936 7.69481C23.2451 9.75048 23.4679 12.0125 23.0338 14.1948C22.5998 16.3771 21.5283 18.3816 19.955 19.955" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#b09435"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_364">
+<rect width="24" height="24" rx="12" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "label": "Modal de vídeo - UAM",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Modal compartilhado que toca vídeos do YouTube embutidos na própria página (usado por \"Sobre a Instituição\" e pela galeria de campus).",
+  "host_template_types": ["PAGE", "BLOG_LISTING", "BLOG_POST"],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": ["video", "modal"],
+  "is_available_for_new_content": false
+}

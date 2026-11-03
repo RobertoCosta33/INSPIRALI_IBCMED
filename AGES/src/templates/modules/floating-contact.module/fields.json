@@ -1,0 +1,76 @@
+[
+  {
+    "name": "show_call_button",
+    "label": "Mostrar botão \"Ligue já!\"",
+    "type": "boolean",
+    "default": false,
+    "help_text": "Desativado por enquanto — fica só o botão do WhatsApp. Marque esta opção para reativar."
+  },
+  {
+    "name": "call_label",
+    "label": "Texto do botão \"Ligue já!\"",
+    "type": "text",
+    "default": "Ligue já!"
+  },
+  {
+    "name": "call_phone_label",
+    "label": "Texto acima do telefone",
+    "type": "text",
+    "default": "Dúvidas? Ligue:"
+  },
+  {
+    "name": "call_phone_number",
+    "label": "Telefone (exibido)",
+    "type": "text",
+    "default": "0800-000-0650"
+  },
+  {
+    "name": "call_phone_tel",
+    "label": "Telefone (link tel:, só números)",
+    "type": "text",
+    "default": "08000006050"
+  },
+  {
+    "name": "show_doubt_button",
+    "label": "Mostrar botão \"Tem alguma dúvida?\" (formulário)",
+    "type": "boolean",
+    "default": false,
+    "help_text": "Desativado por enquanto — o formulário será reativado no futuro. Marque esta opção quando for reativar."
+  },
+  {
+    "name": "doubt_label",
+    "label": "Texto do botão \"Tem alguma dúvida?\"",
+    "type": "text",
+    "default": "Tem alguma dúvida?"
+  },
+  {
+    "name": "doubt_form",
+    "label": "Formulário HubSpot",
+    "type": "form",
+    "default": {
+      "response_type": "inline",
+      "message": "Obrigado! Entraremos em contato em breve."
+    },
+    "help_text": "Selecione o formulário do HubSpot criado para captar esses leads."
+  },
+  {
+    "name": "doubt_disclaimer",
+    "label": "Aviso de privacidade do formulário",
+    "type": "richtext",
+    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"https://portal.anhembi.br/canal-de-privacidade/\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
+  },
+  {
+    "name": "whatsapp_url",
+    "label": "Link do WhatsApp",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "https://api.whatsapp.com/send/?phone=551140071192&text=Ol%C3%A1%21+Gostaria+de+informa%C3%A7%C3%B5es+sobre+Medicina&type=phone_number&app_absent=0",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

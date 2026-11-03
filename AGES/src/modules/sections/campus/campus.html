@@ -1,0 +1,130 @@
+      <section class="section section--tint-strong" id="nossos-campus" aria-labelledby="campus-title">
+        <p class="eyebrow">ONDE A FORMAÇÃO ACONTECE</p>
+        <h2 class="section-intro__title" id="campus-title">Quatro Campi. Uma formação conectada à prática.</h2>
+        <p class="section-intro__text">
+          A Ages possui unidades em diversos locais como Irecê, Jacobina, Paripiranga e Senhor do Bonfim! Conheça
+          melhor nossas unidades e confira a mais perto de você.
+        </p>
+
+        <div class="campus-layout">
+          <div class="campus-panel campus-panel--top">
+            <div>
+              <p class="campus-panel__title">Nossas unidades</p>
+              <p class="campus-panel__text">
+                Infraestrutura de excelência para o seu sucesso: auditório, biblioteca, laboratórios de última
+                geração e muito mais, projetados para o seu desenvolvimento acadêmico e profissional.
+              </p>
+            </div>
+            <div class="campus-chip-list">
+              <button
+                type="button"
+                class="campus-chip campus-chip--active"
+                data-campus-chip
+                data-campus="irece"
+                data-city="Irecê, BA"
+                data-address="Rua Projetada 07, LOT Novo Irecê, 850. Qd 2 • CEP 44900-000"
+                data-cta="#"
+                aria-pressed="true"
+              >
+                <img src="/AGES/src/public/icons/icon-building-white.svg" alt="" aria-hidden="true" width="16" height="16" />
+                Irecê
+              </button>
+              <button
+                type="button"
+                class="campus-chip campus-chip--inactive"
+                data-campus-chip
+                data-campus="jacobina"
+                data-city="Jacobina, BA"
+                data-address="Jacobina - BA"
+                data-cta="#"
+                aria-pressed="false"
+              >
+                <img src="/AGES/src/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" width="16" height="16" />
+                Jacobina
+              </button>
+              <button
+                type="button"
+                class="campus-chip campus-chip--inactive"
+                data-campus-chip
+                data-campus="paripiranga"
+                data-city="Paripiranga, BA"
+                data-address="Paripiranga - BA"
+                data-cta="#"
+                aria-pressed="false"
+              >
+                <img src="/AGES/src/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" width="16" height="16" />
+                Paripiranga
+              </button>
+              <button
+                type="button"
+                class="campus-chip campus-chip--inactive"
+                data-campus-chip
+                data-campus="senhor-do-bonfim"
+                data-city="Senhor do Bonfim, BA"
+                data-address="Senhor do Bonfim - BA"
+                data-cta="#"
+                aria-pressed="false"
+              >
+                <img src="/AGES/src/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" width="16" height="16" />
+                Senhor do Bonfim
+              </button>
+            </div>
+          </div>
+
+          <div class="campus-panel campus-panel--bottom">
+            <div class="campus-detail">
+              <p class="campus-detail__location">
+                <img src="/AGES/src/public/icons/icon-location.svg" alt="" aria-hidden="true" />
+                <span data-campus-city>Irecê, BA</span>
+              </p>
+              <p class="campus-detail__address" data-campus-address>Rua Projetada 07, LOT Novo Irecê, 850. Qd 2 • CEP 44900-000</p>
+            </div>
+            <a class="campus-panel__cta" href="#" target="_blank" rel="noopener" data-campus-cta>Conheça mais da unidade</a>
+          </div>
+
+          <div class="campus-gallery" data-campus-gallery>
+            <div class="campus-gallery__media">
+              <div class="campus-gallery__viewport">
+                <img class="campus-gallery__image is-active" data-gallery-slide data-label="Biblioteca" src="/AGES/src/public/images/campus-gallery/ages/biblioteca.jpg" alt="Biblioteca — campus Irecê" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Laboratórios equipados" src="/AGES/src/public/images/campus-gallery/ages/laboratorios-equipados.jpg" alt="Laboratórios equipados — campus Irecê" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Sala de aula presencial" src="/AGES/src/public/images/campus-gallery/ages/sala-de-aula-presencial.jpg" alt="Sala de aula presencial — campus Irecê" loading="lazy" />
+                <div class="campus-gallery__overlay" aria-hidden="true"></div>
+                <span class="campus-gallery__label" data-gallery-label>Biblioteca</span>
+              </div>
+                <div class="campus-gallery__meta">
+                  <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>03</span></span>
+                  <div class="campus-gallery__nav">
+                    <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
+                      <img src="/AGES/src/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
+                    </button>
+                    <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
+                      <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 14"></span>
+                      <img class="campus-gallery__nav-icon--flip" src="/AGES/src/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+            </div>
+            <div class="campus-gallery__thumbs">
+              <button type="button" class="campus-thumb is-active" data-gallery-thumb="0">
+                <img src="/AGES/src/public/images/campus-gallery/ages/biblioteca.jpg" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Biblioteca</span>
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="1">
+                <img src="/AGES/src/public/images/campus-gallery/ages/laboratorios-equipados.jpg" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Laboratórios equipados</span>
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="2">
+                <img src="/AGES/src/public/images/campus-gallery/ages/sala-de-aula-presencial.jpg" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Sala de aula presencial</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="campus-lightbox" data-campus-lightbox hidden>
+          <button type="button" class="campus-lightbox__close" data-campus-lightbox-close aria-label="Fechar imagem ampliada">
+            <img src="/AGES/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+          </button>
+          <img class="campus-lightbox__image" data-campus-lightbox-image src="" alt="" />
+        </div>
+      </section>

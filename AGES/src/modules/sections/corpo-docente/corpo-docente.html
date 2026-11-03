@@ -1,0 +1,105 @@
+      <section class="section section--subtle" id="corpo-docente" aria-labelledby="corpo-docente-title">
+        <div class="section-intro" style="max-width: 1002px;">
+          <p class="eyebrow">CORPO DOCENTE DE ELITE</p>
+          <h2 class="section-intro__title" id="corpo-docente-title">Coordenadores especialistas ao seu lado</h2>
+          <p class="section-intro__text">
+            Em Jacobina e Irecê, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu
+            desenvolvimento.
+          </p>
+        </div>
+
+        <div class="docente-carousel" data-docente-carousel>
+          <div class="docente-grid" data-docente-track>
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/AGES/src/public/images/docente/leidson-rodrigo.png" alt="Dr. Leidson Rodrigo" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Médico de Curso - Jacobina e Irecê</p>
+                  <p class="docente-card__name">Dr. Leidson Rodrigo</p>
+                </div>
+                <p class="docente-card__bio">
+                  Coordenador da Faculdade AGES de Medicina e do ambulatório de doenças raras da Faculdade AGES.
+                  Preceptor da Residência de Clínica Médica do Hospital Regional Vicentina Goulart. Doutorando do
+                  PPGECOH-UNEB (Linha de Pesquisa em Polineuropatia Amiloidótica Familiar). Mestre em Ciências
+                  Farmacêuticas pelo PPGFARMA-UNEB. Residência em Neurologia Clínica pelo Hospital São Rafael - BA.
+                  Graduação em Medicina pela Universidade Estadual de Santa Cruz-BA.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/AGES/src/public/images/docente/tarcisio-goncalves.png" alt="Tarcísio Gonçalves" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Administrativo - Jacobina</p>
+                  <p class="docente-card__name">Tarcísio Gonçalves</p>
+                </div>
+                <p class="docente-card__bio">
+                  Graduado em Enfermagem pelo Centro Universitário Ages (2017). Especialização em Enfermagem de
+                  Urgência e Emergência (2019). Mestrando em Ecologia Humana e Gestão Socioambiental na UNEB –
+                  Juazeiro (2025-atual).
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/AGES/src/public/images/docente/maira-meira.jpeg" alt="Maíra Meira" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenadora Administrativa - Irecê</p>
+                  <p class="docente-card__name">Maíra Meira</p>
+                </div>
+                <p class="docente-card__bio">
+                  Farmacêutica graduada pela Universidade Estadual de Feira de Santana (UEFS). Experiência
+                  profissional no Instituto de Tecnologia em Fármacos (Farmanguinhos/Fiocruz/RJ). Mestre pela
+                  Universidade Federal do Vale do São Francisco (UNIVASF), com área de concentração em farmacologia
+                  e fisiologia humana. Pós-graduação lato sensu em Farmácia Clínica e Serviços Farmacêuticos
+                  (Unimais). Docente e coordenadora adjunta no curso de Medicina (AGES-Irecê) pela Inspirali e
+                  Anima Educação.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+          </div>
+
+          <button type="button" class="docente-carousel__nav docente-carousel__nav--prev" data-docente-prev aria-label="Coordenador anterior">
+            <img src="/AGES/src/public/icons/icon-arrow-left-nav-outline.svg" alt="" aria-hidden="true" />
+          </button>
+          <button type="button" class="docente-carousel__nav docente-carousel__nav--next" data-docente-next aria-label="Próximo coordenador">
+            <img src="/AGES/src/public/icons/icon-arrow-right-nav-outline.svg" alt="" aria-hidden="true" />
+          </button>
+
+          <div class="docente-carousel__steps">
+            <span class="docente-carousel__step is-active" data-docente-step></span>
+            <span class="docente-carousel__step" data-docente-step></span>
+          </div>
+        </div>
+
+        <div class="docente-modal" data-docente-modal hidden aria-hidden="true">
+          <div class="docente-modal__backdrop" data-docente-modal-close></div>
+          <div class="docente-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="docente-modal-name">
+            <div class="docente-modal__photo-wrap">
+              <img class="docente-modal__photo" data-docente-modal-photo src="" alt="" />
+            </div>
+            <div class="docente-modal__content">
+              <div class="docente-modal__header">
+                <div>
+                  <p class="docente-modal__name" id="docente-modal-name" data-docente-modal-name></p>
+                  <p class="docente-modal__role" data-docente-modal-role></p>
+                </div>
+                <button type="button" class="docente-modal__close" data-docente-modal-close aria-label="Fechar">
+                  <img src="/AGES/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+                </button>
+              </div>
+              <div class="docente-modal__bio">
+                <p data-docente-modal-bio></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
