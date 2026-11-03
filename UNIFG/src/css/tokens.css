@@ -1,0 +1,127 @@
+/* ====================================================================
+   Design tokens — extraídos do Figma "Redesign - Páginas IES"
+   (arquivo IiZ3Zct5TP6nxPirunSyhk, seção "PROPOSTA", nó 1947:19129,
+   tema "Inspirali" unificado — 2026-10-23). Mantém os nomes de
+   variável já usados no projeto (surface/*, text/*, border/*,
+   spacing/*, radius/*, font/*) para facilitar a conversão futura em
+   módulos HubL.
+
+   MUDANÇA DE MARCA: a partir desta atualização, a UAM (e futuramente
+   as demais instituições) passa a usar a paleta e tipografia
+   compartilhadas "Inspirali", substituindo o teal + Marcellus
+   anteriores. Fonte: "Montserrat" (Google Fonts).
+   ==================================================================== */
+
+:root {
+  /* Cores de superfície */
+  --surface-inverted: #ffffff;
+  --surface-primary: #ffffff;
+  /* Figma: "inspirali/background/subtle" — cinza claro (#f3f4f6, antes
+     creme) usado em Institucional, Nosso DNA, Campus, Grupo Inspirali e FAQ. */
+  --surface-primary-subtle: #f3f4f6;
+  /* Figma: mesmo cinza claro dos cards de Metodologia, Financiamentos
+     e Matriz ("Information card"). */
+  --surface-secondary-subtle: #f3f4f6;
+  /* "inspirali/accent/tertiary" — dourado, agora o accent principal de
+     marca (eyebrows, bolinhas, ícones, links). O teal "accent/secondary"
+     foi removido do Figma. */
+  --surface-brand-primary: #b09435;
+  /* "inspirali/accent/primary" — neutro escuro, usado em nav/footer/
+     gradientes de card (substitui o verde-petróleo escuro antigo). */
+  --surface-brand-primary-dark: #313132;
+  --surface-brand-primary-light: #edf1f0;
+  --surface-brand-primary-light-alt: #f3f4f6;
+  --surface-brand-tint: #f3f4f6;
+  /* Figma (Institucional, Nosso DNA, Campus): mesmo cinza sólido de
+     --surface-primary-subtle, não um tint translúcido. */
+  --surface-brand-tint-strong: #f3f4f6;
+  --surface-brand-soft: rgba(176, 148, 53, 0.12);
+  --surface-brand-soft-weak: rgba(176, 148, 53, 0.08);
+  /* "inspirali/accent/quaternary" — tom terroso/areia, o segundo
+     accent usado em Matriz Curricular, Campus, Ecossistema, Footer e
+     nos CTAs sólidos de FAQ/Financiamentos. */
+  --surface-brand-quaternary: #898177;
+  --surface-brand-quaternary-soft: rgba(137, 129, 119, 0.2);
+  /* "inspirali/background/canvas" — fundo da seção FAQ e contato. */
+  --surface-canvas: #f3f4f6;
+  /* "inspirali/background/surface" — cinza neutro do card do formulário. */
+  --surface-neutral: #d6dbde;
+
+  /* Cores de texto */
+  --text-inverted: #ffffff;
+  /* "inspirali/dark/background/canvas" — títulos grandes. */
+  --text-heading: #222223;
+  /* "inspirali/accent/primary" — corpo de texto. */
+  --text-primary-dark: #313132;
+  --text-secondary-dark: #3d3d3d;
+  --text-brand: #b09435;
+  --text-brand-dark: #313132;
+  --text-brand-quaternary: #898177;
+  /* "inspirali/light/accent/tertiary" — eyebrow do Corpo docente. */
+  --text-brand-alt: #b09437;
+  /* "inspirali/accent/tertiary" — dourado, destaque "Excelência Acadêmica Einstein". */
+  --text-brand-tertiary: #b09435;
+  --text-footer-muted: rgba(255, 255, 255, 0.7);
+  --text-footer: #ffffff;
+
+  /* Cores de borda */
+  --border-primary-light: #c9c8be;
+  --border-brand-primary: #b09435;
+  --border-brand-soft: rgba(176, 148, 53, 0.2);
+  --border-brand-soft-strong: rgba(176, 148, 53, 0.4);
+  --border-brand-quaternary: #898177;
+
+  /* Tipografia — família da marca: Montserrat (Google Fonts) */
+  --font-family-base: "Montserrat", "Segoe UI", sans-serif;
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-size-4xl: 48px;
+
+  /* Alturas de linha (razões, como definidas no Figma) */
+  --line-height-tight: 1.16;
+  --line-height-snug: 1.2;
+  --line-height-relaxed: 1.4;
+
+  /* Compatibilidade com módulos existentes (px fixos aproximados) */
+  --line-height-xs: 16px;
+  --line-height-sm: 24px;
+  --line-height-lg: 40px;
+  --line-height-xl: 48px;
+
+  /* Pesos — Montserrat: ExtraLight 200, Light 300, Regular 400, Medium 500, SemiBold 600, Bold 700, ExtraBold 800 */
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Espaçamento */
+  --spacing-micro: 4px;
+  --spacing-extra-small: 8px;
+  --spacing-small: 12px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-extra-large: 32px;
+
+  /* Raio de borda */
+  --radius-extra-small: 4px;
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-total: 999px;
+
+  /* Grade / contêiner (desktop de referência: 1440px) */
+  --page-max-width: 1440px;
+  --page-gutter: 112px;
+  --page-gutter-tablet: 48px;
+  --page-gutter-mobile: 20px;
+}

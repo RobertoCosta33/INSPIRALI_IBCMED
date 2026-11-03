@@ -1,0 +1,75 @@
+/* ====================================================================
+   Módulo: Ecossistema de prática e cuidado (UAM)
+   Figma: "Ecossistema de prática e cuidado" (64:2117 / 112:2816)
+   ==================================================================== */
+
+.practice-heading {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-inverted);
+  margin-bottom: var(--spacing-large);
+}
+
+@media (max-width: 640px) {
+  .practice-heading {
+    font-size: var(--font-size-xl);
+    /* Figma mobile: 12px entre titulo e texto de apoio (desktop: 24px). */
+    margin-bottom: var(--spacing-small);
+  }
+
+  /* Figma mobile (2318:27737): secao com 48px de padding vertical (a
+     .section--dark usa 72px). Seletores com #id para vencer a ordem de
+     carregamento dos CSS compartilhados (carousel.css). */
+  #ecossistema-de-cuidado {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Texto de apoio -> carrossel = 32px. O texto tem margin-bottom: 24px
+     inline no HTML, entao os 8px restantes vao como padding do carrossel. */
+  #ecossistema-de-cuidado .evidence-carousel {
+    padding-top: var(--spacing-extra-small);
+    /* Figma: 16px entre a imagem e os controles. */
+    gap: var(--spacing-medium);
+  }
+
+  /* Figma: gradiente de #222 (0%) a 96,154% sobre a imagem. */
+  #ecossistema-de-cuidado .evidence-carousel__slide::after {
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0), #222222 96.154%);
+  }
+
+  /* Figma: conteudo a 24px das bordas (largura de 287px no card de 335px). */
+  #ecossistema-de-cuidado .evidence-carousel__content {
+    left: var(--spacing-large);
+    right: var(--spacing-large);
+  }
+
+  /* Figma: titulo do card Bold (700) 20px; 8px ate o subtitulo 14px. */
+  #ecossistema-de-cuidado .evidence-carousel__eyebrow {
+    font-weight: var(--font-weight-bold);
+  }
+
+  #ecossistema-de-cuidado .evidence-carousel__subtitle {
+    margin-top: var(--spacing-extra-small);
+  }
+
+  /* Figma: 12px entre o numero (+218.000) e a descricao; o gap do conteudo
+     e 24px, entao o numero recua 12px. */
+  #ecossistema-de-cuidado .evidence-carousel__value {
+    margin-bottom: calc(-1 * var(--spacing-small));
+  }
+
+  #ecossistema-de-cuidado .evidence-carousel__label {
+    font-size: var(--font-size-xs);
+  }
+
+  /* Figma: indicadores inativos a 40% de opacidade. */
+  #ecossistema-de-cuidado .carousel-dot {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  #ecossistema-de-cuidado .carousel-dot.is-active {
+    background-color: var(--surface-inverted);
+  }
+}

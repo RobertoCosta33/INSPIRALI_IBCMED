@@ -1,0 +1,436 @@
+/* ====================================================================
+   Rodapé institucional — Figma: "Footer" (150:3552)
+   ==================================================================== */
+
+.site-footer {
+  background-color: var(--surface-brand-primary-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-extra-large);
+  padding-bottom: var(--spacing-extra-large);
+}
+
+.footer-invitation {
+  width: 100%;
+  /* Figma: accent quaternário (terroso), não o teal de marca. */
+  background-color: var(--surface-brand-quaternary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+  padding: 64px var(--page-gutter);
+}
+
+.footer-invitation__title {
+  flex: 1 1 480px;
+  color: var(--text-inverted);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-xl);
+  max-width: 772px;
+}
+
+.footer-invitation__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: var(--spacing-extra-small);
+  padding: 12px var(--spacing-large);
+  border-radius: var(--radius-small);
+  background-color: var(--surface-inverted);
+  color: var(--text-brand-quaternary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  white-space: nowrap;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.footer-invitation__cta:hover,
+.footer-invitation__cta:focus-visible {
+  background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
+}
+
+.footer-body {
+  width: 100%;
+  max-width: var(--page-max-width);
+  padding: 0 var(--page-gutter);
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-large) 0;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 180px;
+  border-right: 2px solid rgba(255, 255, 255, 0.25);
+  padding: 0 var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.footer-col:first-child {
+  padding-left: 0;
+}
+
+.footer-col:last-child {
+  border-right: none;
+}
+
+.footer-col__title {
+  color: var(--text-footer);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  padding-bottom: var(--spacing-small);
+}
+
+.footer-col__title--lg {
+  font-size: var(--font-size-md);
+}
+
+.footer-col__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col__links a {
+  position: relative;
+  width: fit-content;
+  color: var(--text-footer);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  padding: var(--spacing-extra-small) 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-micro);
+}
+
+.footer-col__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--surface-brand-primary);
+  transition: width 0.35s ease;
+}
+
+.footer-col__links a:hover::after,
+.footer-col__links a:focus-visible::after {
+  width: 100%;
+}
+
+.footer-col__links-arrow {
+  transition: color 0.35s ease;
+}
+
+.footer-col__links a:hover .footer-col__links-arrow,
+.footer-col__links a:focus-visible .footer-col__links-arrow {
+  color: var(--surface-brand-primary);
+}
+
+.footer-col__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.footer-col__contact-label {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xs);
+}
+
+.footer-col__contact-value {
+  color: var(--text-inverted);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+}
+
+.footer-emec-strip {
+  display: flex;
+  align-items: center;
+  /* Figma: duas linhas separadas por 64px, sem logo no meio. */
+  gap: 64px;
+}
+
+.footer-emec-strip__line {
+  flex: 1 1 auto;
+  height: 2px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-emec-qr {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-emec-qr img {
+  width: 70px;
+  height: auto;
+}
+
+.footer-emec-qr a {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
+  max-width: 100px;
+}
+
+.footer-bottom__links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.footer-bottom__links a,
+.footer-bottom__links button {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xs);
+}
+
+.footer-bottom__link {
+  position: relative;
+  width: fit-content;
+  padding: var(--spacing-extra-small) 0;
+}
+
+.footer-bottom__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--surface-brand-primary);
+  transition: width 0.35s ease;
+}
+
+.footer-bottom__link:hover::after,
+.footer-bottom__link:focus-visible::after {
+  width: 100%;
+}
+
+.footer-copyright {
+  color: var(--text-footer-muted);
+  font-size: var(--font-size-xxs);
+  text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .footer-invitation,
+  .footer-body {
+    padding-left: var(--page-gutter-tablet);
+    padding-right: var(--page-gutter-tablet);
+  }
+}
+
+@media (max-width: 860px) {
+  .footer-col {
+    flex: 1 1 45%;
+    border-right: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-invitation,
+  .footer-body {
+    padding-left: var(--page-gutter-mobile);
+    padding-right: var(--page-gutter-mobile);
+  }
+
+  .footer-invitation {
+    padding-top: var(--spacing-extra-large);
+    padding-bottom: var(--spacing-extra-large);
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+  }
+
+  /* Sem a logo, o mobile mostra uma única linha contínua. */
+  .footer-emec-strip {
+    gap: 0;
+  }
+
+  .footer-emec-strip__line + .footer-emec-strip__line {
+    display: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ====================================================================
+   Mobile (<= 640px) — Figma "Footer" mobile (2318:27742, 375px).
+   Desktop intacto.
+   ==================================================================== */
+
+@media (max-width: 640px) {
+  .site-footer {
+    gap: 64px;
+    padding-bottom: 64px;
+  }
+
+  /* Convite final: padding 48/20, título 24px extrabold, CTA de 52px
+     em largura total. */
+  .footer-invitation {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: var(--spacing-extra-large);
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .footer-invitation__title {
+    flex: 0 0 auto;
+    max-width: none;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+  }
+
+  .footer-invitation__cta {
+    width: 100%;
+    height: 52px;
+    padding: var(--spacing-medium);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-tight);
+  }
+
+  /* Corpo: 32px entre os blocos; colunas empilhadas com 32px entre elas. */
+  .footer-body {
+    gap: var(--spacing-extra-large);
+  }
+
+  .footer-nav {
+    gap: var(--spacing-extra-large) 0;
+  }
+
+  .footer-col {
+    gap: 0;
+  }
+
+  /* Primeira coluna: título bold 16px/1.16 + 20px até a lista. */
+  .footer-col__title {
+    line-height: var(--line-height-tight);
+    padding-bottom: 20px;
+  }
+
+  /* Demais colunas: título semibold 16px/1.4 + 16px até a lista. */
+  .footer-col:not(:first-child) .footer-col__title {
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-relaxed);
+    padding-bottom: var(--spacing-medium);
+  }
+
+  .footer-col__title--lg {
+    font-size: var(--font-size-sm);
+  }
+
+  .footer-col__links a {
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .footer-col__contact-label {
+    color: var(--text-footer);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .footer-col__contact-value {
+    line-height: var(--line-height-tight);
+  }
+
+  .footer-col__contact > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-micro);
+  }
+
+  /* Faixa e-MEC: duas linhas separadas por 24px numa faixa de 78px. */
+  .footer-emec-strip {
+    gap: var(--spacing-large);
+    height: 78px;
+  }
+
+  .footer-emec-strip__line + .footer-emec-strip__line {
+    display: block;
+  }
+
+  .footer-emec-qr img {
+    width: 69px;
+  }
+
+  .footer-emec-qr a {
+    color: var(--text-footer);
+    max-width: 88px;
+    line-height: 16px;
+  }
+
+  /* Links finais: duas colunas iguais, texto centralizado e branco. */
+  .footer-bottom__links {
+    align-self: stretch;
+    gap: var(--spacing-small);
+  }
+
+  .footer-bottom__links > * {
+    flex: 1 1 0;
+    text-align: center;
+  }
+
+  .footer-bottom__links a,
+  .footer-bottom__links button {
+    color: var(--text-footer);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .footer-bottom__link {
+    width: auto;
+    padding: 0;
+  }
+
+  .footer-copyright {
+    color: var(--text-footer);
+    line-height: var(--line-height-relaxed);
+    padding-top: var(--spacing-medium);
+  }
+}

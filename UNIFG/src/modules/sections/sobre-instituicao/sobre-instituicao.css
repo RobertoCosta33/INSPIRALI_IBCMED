@@ -1,0 +1,172 @@
+/* ====================================================================
+   Módulo: Sobre a UniFG
+   Figma: "Video Institucional" UniFG (2320:117535)
+   ==================================================================== */
+
+.institutional-about {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.institutional-about__video {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  aspect-ratio: 646 / 365;
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.institutional-about__video-image {
+  /* Figma (2320:24277): a capa preenche todo o quadro do vídeo (object-fit: cover). */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.institutional-about__video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 103px;
+  height: 103px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.institutional-about__video-play img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.institutional-about__content {
+  flex: 0 0 510px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.institutional-about__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.institutional-about__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.institutional-about__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary-dark);
+}
+
+.institutional-about__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  height: 64px;
+  padding: var(--spacing-large);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--surface-brand-primary-dark);
+  background-color: var(--surface-inverted);
+  backdrop-filter: blur(20px);
+  /* Figma: texto no accent primário (#313132), Bold 20. */
+  color: var(--text-brand-dark);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.institutional-about__cta:hover,
+.institutional-about__cta:focus-visible {
+  background-color: var(--surface-brand-primary-light);
+  color: var(--surface-brand-primary-dark);
+}
+
+@media (max-width: 1024px) {
+  .institutional-about {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .institutional-about__content {
+    flex-basis: auto;
+    order: 1;
+  }
+
+  /* Em layout de coluna, `flex: 1 1 0` (pensado para o desktop em linha)
+     faz a base do eixo principal (altura) ir a 0 e o vídeo some, já que o
+     container não tem altura extra pra distribuir via flex-grow. */
+  .institutional-about__video {
+    flex: 0 0 auto;
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Figma mobile (2318:27731): padding 48px 20px e gap de 32px entre o
+     bloco de texto e o vídeo (a `.section` base usa 64px). */
+  .institutional-about.section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: var(--spacing-extra-large);
+  }
+
+  /* Figma: eyebrow a 12px do título (o gap do `__intro` já dá 12px, então
+     zera a margem inferior padrão de `.eyebrow`). */
+  .institutional-about__intro .eyebrow {
+    margin-bottom: 0;
+  }
+
+  /* Figma: título Title 4 — ExtraBold (800) 24px, não Bold. */
+  .institutional-about__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  .institutional-about__text {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Figma: CTA de 52px (padding 16px), texto Bold 16px (lh 1.16), ícone 16px. */
+  .institutional-about__cta {
+    height: 52px;
+    padding: var(--spacing-medium);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-tight);
+  }
+
+  .institutional-about__cta img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Figma: vídeo 335x172 (proporção ~1,95:1) e botão de play de 52px. */
+  .institutional-about__video {
+    aspect-ratio: 335 / 172;
+  }
+
+  .institutional-about__video-play {
+    width: 52px;
+    height: 52px;
+  }
+}

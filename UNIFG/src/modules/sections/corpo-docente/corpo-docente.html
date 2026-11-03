@@ -1,0 +1,115 @@
+      <section class="section section--subtle" id="corpo-docente" aria-labelledby="corpo-docente-title">
+        <div class="section-intro" style="max-width: 1002px;">
+          <p class="eyebrow">CORPO DOCENTE DE ELITE</p>
+          <h2 class="section-intro__title" id="corpo-docente-title">Coordenadores especialistas ao seu lado</h2>
+          <p class="section-intro__text">
+            Na UniFG, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu
+            desenvolvimento.
+          </p>
+        </div>
+
+        <div class="docente-carousel" data-docente-carousel>
+          <div class="docente-grid" data-docente-track>
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNIFG/src/public/images/docente/irineu-viana.png" alt="Dr. Irineu Viana" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Médico de Curso - Brumado</p>
+                  <p class="docente-card__name">Dr. Irineu Viana</p>
+                </div>
+                <p class="docente-card__bio">
+                  Médico formado pela Escola Bahiana de Medicina e Saúde Pública (1995), com residências em
+                  Clínica Médica e Gastroenterologia, pós-graduação em Gestão em Saúde e mestrado em Saúde
+                  Tropical. Professor do curso de Medicina da UniFG Brumado e da UESB, coordena o curso desde
+                  2022, início do seu funcionamento.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNIFG/src/public/images/docente/docente-placeholder.png" alt="Hellen Braga Martins Oliveira" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenadora Administrativa - Brumado</p>
+                  <p class="docente-card__name">Hellen Braga Martins Oliveira</p>
+                </div>
+                <p class="docente-card__bio">
+                  Coordenadora administrativa do curso de Medicina da UniFG, unidade Brumado.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNIFG/src/public/images/docente/docente-placeholder.png" alt="Juan Ramon Castellanos Pierra" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenador Médico de Curso - Guanambi</p>
+                  <p class="docente-card__name">Juan Ramon Castellanos Pierra</p>
+                </div>
+                <p class="docente-card__bio">
+                  Coordenador médico do curso de Medicina da UniFG, unidade Guanambi.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+
+            <article class="docente-card">
+              <img class="docente-card__photo" src="/UNIFG/src/public/images/docente/danielle-costa-silva.png" alt="Danielle Pereira Costa Silva" loading="lazy" />
+              <div class="docente-card__overlay" aria-hidden="true"></div>
+              <div class="docente-card__info">
+                <div class="docente-card__identity">
+                  <p class="docente-card__role">Coordenadora Administrativa - Guanambi</p>
+                  <p class="docente-card__name">Danielle Pereira Costa Silva</p>
+                </div>
+                <p class="docente-card__bio">
+                  Biomédica formada pelo Centro Universitário FG (UNIFG), especialista em Hematologia e
+                  Hemoterapia Laboratorial e em Saúde Pública, e mestre em Promoção da Saúde, Desenvolvimento
+                  Humano e Sociedade. Coordenadora administrativa do curso de Medicina e docente nas áreas de
+                  Bases Biológicas e Medicina Laboratorial.
+                </p>
+                <button type="button" class="docente-card__more" data-docente-more>Ver mais +</button>
+              </div>
+            </article>
+          </div>
+
+          <button type="button" class="docente-carousel__nav docente-carousel__nav--prev" data-docente-prev aria-label="Coordenador anterior">
+            <img src="/UNIFG/src/public/icons/icon-arrow-left-nav-outline.svg" alt="" aria-hidden="true" />
+          </button>
+          <button type="button" class="docente-carousel__nav docente-carousel__nav--next" data-docente-next aria-label="Próximo coordenador">
+            <img src="/UNIFG/src/public/icons/icon-arrow-right-nav-outline.svg" alt="" aria-hidden="true" />
+          </button>
+
+          <div class="docente-carousel__steps">
+            <span class="docente-carousel__step is-active" data-docente-step></span>
+            <span class="docente-carousel__step" data-docente-step></span>
+          </div>
+        </div>
+
+        <div class="docente-modal" data-docente-modal hidden aria-hidden="true">
+          <div class="docente-modal__backdrop" data-docente-modal-close></div>
+          <div class="docente-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="docente-modal-name">
+            <div class="docente-modal__photo-wrap">
+              <img class="docente-modal__photo" data-docente-modal-photo src="" alt="" />
+            </div>
+            <div class="docente-modal__content">
+              <div class="docente-modal__header">
+                <div>
+                  <p class="docente-modal__name" id="docente-modal-name" data-docente-modal-name></p>
+                  <p class="docente-modal__role" data-docente-modal-role></p>
+                </div>
+                <button type="button" class="docente-modal__close" data-docente-modal-close aria-label="Fechar">
+                  <img src="/UNIFG/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+                </button>
+              </div>
+              <div class="docente-modal__bio">
+                <p data-docente-modal-bio></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

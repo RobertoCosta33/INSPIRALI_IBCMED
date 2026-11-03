@@ -1,0 +1,104 @@
+      <section class="section section--tint-strong" id="nossos-campus" aria-labelledby="campus-title">
+        <p class="eyebrow">ONDE A FORMAÇÃO ACONTECE</p>
+        <h2 class="section-intro__title" id="campus-title">Estrutura completa em um só lugar</h2>
+        <p class="section-intro__text">
+          Ambientes modernos e acolhedores em Brumado e Guanambi, proporcionando uma formação médica de
+          excelência.
+        </p>
+
+        <div class="campus-layout">
+          <div class="campus-panel campus-panel--top">
+            <div>
+              <p class="campus-panel__title">Nossas unidades</p>
+              <p class="campus-panel__text">
+                Infraestrutura de excelência para o seu sucesso: auditório, biblioteca, laboratórios de última
+                geração e muito mais, projetados para o seu desenvolvimento acadêmico e profissional.
+              </p>
+            </div>
+            <div class="campus-chip-list">
+              <button
+                type="button"
+                class="campus-chip campus-chip--active"
+                data-campus-chip
+                data-campus="brumado"
+                data-city="Brumado, BA"
+                data-address="Rua Dr. Juracy Pires Gomes - 170 - Mário Meira • CEP 46100-000"
+                data-cta="#"
+                aria-pressed="true"
+              >
+                <img src="/UNIFG/src/public/icons/icon-building-white.svg" alt="" aria-hidden="true" width="16" height="16" />
+                Brumado
+              </button>
+              <button
+                type="button"
+                class="campus-chip campus-chip--inactive"
+                data-campus-chip
+                data-campus="guanambi"
+                data-city="Guanambi, BA"
+                data-address="Unidade São Sebastião — Guanambi - BA"
+                data-cta="#"
+                aria-pressed="false"
+              >
+                <img src="/UNIFG/src/public/icons/icon-building-teal.svg" alt="" aria-hidden="true" width="16" height="16" />
+                Guanambi - São Sebastião
+              </button>
+            </div>
+          </div>
+
+          <div class="campus-panel campus-panel--bottom">
+            <div class="campus-detail">
+              <p class="campus-detail__location">
+                <img src="/UNIFG/src/public/icons/icon-location.svg" alt="" aria-hidden="true" />
+                <span data-campus-city>Brumado, BA</span>
+              </p>
+              <p class="campus-detail__address" data-campus-address>Rua Dr. Juracy Pires Gomes - 170 - Mário Meira • CEP 46100-000</p>
+            </div>
+            <a class="campus-panel__cta" href="#" target="_blank" rel="noopener" data-campus-cta>Conheça mais da unidade</a>
+          </div>
+
+          <div class="campus-gallery" data-campus-gallery>
+            <div class="campus-gallery__media">
+              <div class="campus-gallery__viewport">
+                <img class="campus-gallery__image is-active" data-gallery-slide data-label="Biblioteca" src="/UNIFG/src/public/images/campus-gallery/unifg/biblioteca.png" alt="Biblioteca — campus Brumado" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Laboratórios equipados" src="/UNIFG/src/public/images/campus-gallery/unifg/laboratorios.png" alt="Laboratórios equipados — campus Brumado" loading="lazy" />
+                <img class="campus-gallery__image" data-gallery-slide data-label="Sala de aula presencial" src="/UNIFG/src/public/images/campus-gallery/unifg/sala-de-aula.png" alt="Sala de aula presencial — campus Brumado" loading="lazy" />
+                <div class="campus-gallery__overlay" aria-hidden="true"></div>
+                <span class="campus-gallery__label" data-gallery-label>Biblioteca</span>
+              </div>
+                <div class="campus-gallery__meta">
+                  <span class="campus-gallery__counter"><span data-gallery-counter>01</span> / <span data-gallery-total>03</span></span>
+                  <div class="campus-gallery__nav">
+                    <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--prev" data-gallery-prev aria-label="Imagem anterior">
+                      <img src="/UNIFG/src/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
+                    </button>
+                    <button type="button" class="campus-gallery__nav-btn campus-gallery__nav-btn--next" data-gallery-next aria-label="Próxima imagem">
+                      <span class="campus-gallery__nav-ring" data-gallery-progress style="--progress: 33"></span>
+                      <img class="campus-gallery__nav-icon--flip" src="/UNIFG/src/public/icons/icon-chevron-left-teal-small.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+            </div>
+            <div class="campus-gallery__thumbs">
+              <button type="button" class="campus-thumb is-active" data-gallery-thumb="0">
+                <img src="/UNIFG/src/public/images/campus-gallery/unifg/biblioteca.png" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Biblioteca</span>
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="1">
+                <img src="/UNIFG/src/public/images/campus-gallery/unifg/laboratorios.png" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Laboratórios equipados</span>
+              </button>
+              <button type="button" class="campus-thumb" data-gallery-thumb="2">
+                <img src="/UNIFG/src/public/images/campus-gallery/unifg/sala-de-aula.png" alt="" loading="lazy" />
+                <span class="campus-thumb__label">Sala de aula presencial</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="campus-lightbox" data-campus-lightbox hidden>
+          <button type="button" class="campus-lightbox__close" data-campus-lightbox-close aria-label="Fechar imagem ampliada">
+            <img src="/UNIFG/src/public/icons/icon-modal-close.svg" alt="" aria-hidden="true" />
+          </button>
+          <img class="campus-lightbox__image" data-campus-lightbox-image src="" alt="" />
+        </div>
+      </section>

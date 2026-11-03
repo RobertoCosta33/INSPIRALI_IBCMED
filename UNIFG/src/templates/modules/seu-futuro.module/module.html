@@ -1,0 +1,52 @@
+<section class="section section--subtle" id="seu-futuro-na-medicina" aria-labelledby="futuro-title">
+  <div class="future-panel">
+    <div class="future-header__text">
+      <div class="future-header__content">
+        <p class="eyebrow">{{ module.eyebrow }}</p>
+        <h2 class="section-intro__title future-header__title" id="futuro-title">{{ module.title }}</h2>
+        <div class="section-intro__text">{{ module.intro_text }}</div>
+      </div>
+      <a class="future-header__cta" href="{{ module.cta_url.url.href }}"{% if module.cta_url.open_in_new_tab %} target="_blank" rel="noopener{% if module.cta_url.no_follow %} nofollow{% endif %}"{% endif %}>
+        {{ module.cta_label }}
+        <img src="{{ get_asset_url('../../public/icons/icon-arrow-right-outline-teal.svg') }}" alt="" aria-hidden="true" width="24" height="24" />
+      </a>
+    </div>
+
+    <div class="card-carousel" data-card-carousel>
+      <div class="card-carousel__track" data-card-track>
+        {% for card in module.cards %}
+        <article class="posgrad-card">
+          <img class="posgrad-card__image" src="{{ card.image.src }}" alt="{{ card.image.alt }}" loading="lazy" />
+          <div class="posgrad-card__overlay" aria-hidden="true"></div>
+          <div class="posgrad-card__body">
+            <div class="posgrad-card__text">{{ card.text }}</div>
+            <p class="posgrad-card__title">{{ card.title }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="card-carousel__footer">
+        <div class="card-carousel__nav">
+          <button type="button" class="card-carousel__nav-btn" data-card-prev aria-label="Cartões anteriores">
+            <img src="{{ get_asset_url('../../public/icons/icon-arrow-left-btn.svg') }}" alt="" aria-hidden="true" />
+          </button>
+          <button type="button" class="card-carousel__nav-btn card-carousel__nav-btn--active" data-card-next aria-label="Mais cartões">
+            <img src="{{ get_asset_url('../../public/icons/icon-arrow-right-btn.svg') }}" alt="" aria-hidden="true" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.UAM_CARD_NAV_ICONS = {
+    prevActive: "{{ get_asset_url('../../public/icons/icon-arrow-left-btn-white.svg') }}",
+    prevInactive: "{{ get_asset_url('../../public/icons/icon-arrow-left-btn.svg') }}",
+    nextActive: "{{ get_asset_url('../../public/icons/icon-arrow-right-btn.svg') }}",
+    nextInactive: "{{ get_asset_url('../../public/icons/icon-arrow-right-btn.svg') }}"
+  };
+</script>
+
+{{ require_css(get_asset_url('./module.css')) }}
+{{ require_js(get_asset_url('./module.js'), { "position": "footer" }) }}
