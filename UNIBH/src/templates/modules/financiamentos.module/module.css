@@ -1,0 +1,417 @@
+/* ====================================================================
+   Módulo: Financiamentos (UAM)
+   Figma: "Financiamentos" (117:3044)
+   ==================================================================== */
+
+.financing-layout {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: var(--spacing-extra-large);
+  flex-wrap: wrap;
+}
+
+.financing-intro {
+  /* `justify-content: flex-end` (confirmado no Figma: node 739-36757) —
+     o bloco de texto + card de valor fica grudado embaixo, próximo da
+     base da coluna de cards ao lado, com espaço em branco acima; não
+     alinhado ao topo com "FIES". */
+  flex: 1 1 420px;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 39px;
+}
+
+.financing-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%;
+}
+
+.financing-highlight {
+  position: relative;
+  /* Figma: card de valor mensal no accent primário (#313132). */
+  background-color: var(--surface-brand-primary-dark);
+  border-radius: var(--radius-small);
+  padding: 20px 32px;
+  min-height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.financing-highlight__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-micro);
+  min-height: 140px;
+  opacity: 0;
+  position: absolute;
+  inset: 20px 32px;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.financing-highlight__slide.is-active {
+  opacity: 1;
+  position: relative;
+  inset: auto;
+  pointer-events: auto;
+}
+
+.financing-highlight__campus {
+  color: var(--text-inverted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.financing-highlight__label {
+  color: var(--text-inverted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.85;
+}
+
+.financing-highlight__value {
+  color: var(--text-inverted);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.financing-highlight__note {
+  padding-top: 6px;
+  color: var(--text-inverted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.75;
+}
+
+.financing-highlight__disclaimer {
+  margin-top: var(--spacing-extra-small);
+  color: var(--text-inverted);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+}
+
+.financing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-small);
+  width: 100%;
+}
+
+.financing-nav__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+}
+
+.financing-nav__btn[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.financing-nav__btn img {
+  width: 7px;
+  height: 12px;
+}
+
+.financing-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-extra-small);
+}
+
+.financing-dot {
+  height: 6px;
+  width: 32px;
+  border-radius: 3px;
+  background-color: rgba(176, 148, 53, 0.2);
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.financing-dot:hover {
+  background-color: rgba(176, 148, 53, 0.4);
+}
+
+.financing-dot.is-active {
+  width: 64px;
+  background-color: var(--surface-brand-primary);
+}
+
+.financing-dot.is-active:hover {
+  background-color: var(--surface-brand-primary);
+}
+
+.financing-programs {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+@media (max-width: 1024px) {
+  .financing-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .financing-intro {
+    max-width: none;
+  }
+}
+
+/* ====================================================================
+   Modal "Programa Bolsa Permanência" — lista de documentos necessários,
+   Figma: "popup-editais" (1208:61339).
+   ==================================================================== */
+
+.bolsa-modal[hidden] {
+  display: none;
+}
+
+.bolsa-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+}
+
+.bolsa-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(17, 17, 17, 0.5);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.bolsa-modal.is-open .bolsa-modal__backdrop {
+  opacity: 1;
+}
+
+.bolsa-modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.96);
+  width: min(740px, calc(100vw - 32px));
+  max-height: calc(100vh - 64px);
+  background-color: var(--surface-inverted);
+  border-radius: var(--radius-medium);
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extra-large);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.bolsa-modal.is-open .bolsa-modal__dialog {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.bolsa-modal__header {
+  display: flex;
+  gap: var(--spacing-large);
+  align-items: flex-start;
+}
+
+.bolsa-modal__header p {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-heading);
+}
+
+.bolsa-modal__close {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.bolsa-modal__close img {
+  width: 100%;
+  height: 100%;
+}
+
+.bolsa-modal__box {
+  background-color: var(--surface-primary-subtle);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-medium) 56px;
+  overflow-y: auto;
+}
+
+.bolsa-modal__list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.bolsa-modal__list li {
+  margin-bottom: var(--spacing-extra-small);
+}
+
+.bolsa-modal__list li:last-child {
+  margin-bottom: 0;
+}
+
+.bolsa-modal__list a {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-heading);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .bolsa-modal__dialog {
+    padding: var(--spacing-large);
+  }
+
+  .bolsa-modal__box {
+    padding: var(--spacing-medium) var(--spacing-large);
+  }
+
+  .financing-highlight__campus {
+    font-size: var(--font-size-xs);
+  }
+
+  .financing-highlight__label,
+  .financing-highlight__note {
+    font-size: var(--font-size-xxs);
+  }
+
+  .financing-highlight__value {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* ====================================================================
+   Mobile (<= 640px) — Figma "Financiamentos" mobile (2318:27738, 375px).
+   Ajustes de tipografia, espaçamento e alinhamento; desktop intacto.
+   ==================================================================== */
+
+.financing-intro__text {
+  margin-top: var(--spacing-small);
+}
+
+@media (max-width: 640px) {
+  /* Figma: padding vertical da seção = 48px (a .section usa 64px). */
+  #investimento-e-financiamentos {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* Figma: eyebrow -> título -> texto com 24px entre cada bloco e 24px
+     até o card de valor. O flex-basis de 420px do desktop virava altura
+     mínima na coluna empilhada. */
+  .financing-intro {
+    flex: 0 0 auto;
+    gap: var(--spacing-large);
+  }
+
+  .financing-programs {
+    flex: 0 0 auto;
+  }
+
+  .financing-intro .eyebrow {
+    margin-bottom: var(--spacing-large);
+  }
+
+  .financing-intro .section-intro__title {
+    font-weight: var(--font-weight-extrabold);
+  }
+
+  .financing-intro__text {
+    margin-top: var(--spacing-large);
+  }
+
+  /* Card de valor: padding 20/24, textos com gaps 12 / 8 / 2 / 4. */
+  .financing-highlight {
+    padding: 20px var(--spacing-large);
+    min-height: 0;
+  }
+
+  .financing-highlight__slide {
+    inset: 20px var(--spacing-large);
+    gap: 0;
+    min-height: 0;
+  }
+
+  .financing-highlight__campus {
+    margin-bottom: var(--spacing-small);
+  }
+
+  .financing-highlight__label {
+    margin-bottom: var(--spacing-extra-small);
+  }
+
+  .financing-highlight__value {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: 2px;
+  }
+
+  .financing-highlight__note {
+    padding-top: 0;
+    margin-bottom: var(--spacing-micro);
+  }
+
+  .financing-highlight__disclaimer {
+    margin-top: 0;
+    line-height: var(--line-height-relaxed);
+    opacity: 0.75;
+  }
+
+  /* Contador do carrossel: botões de 20px e barras com raio de 4px. */
+  .financing-nav__btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .financing-dot {
+    border-radius: var(--radius-extra-small);
+  }
+
+  /* Cards de programa: padding 16/24, bloco de título com altura mínima
+     de 49px (4px entre título e subtítulo), 24px até o link e nota de 12px. */
+  .financing-programs .info-card {
+    min-width: 0;
+    padding: var(--spacing-medium) var(--spacing-large);
+  }
+
+  .financing-programs .info-card > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-micro);
+    min-height: 49px;
+  }
+
+  .financing-programs .info-card__note {
+    font-size: var(--font-size-xxs);
+  }
+
+  .financing-programs .info-card__link {
+    margin-top: var(--spacing-small);
+    line-height: var(--line-height-tight);
+  }
+}

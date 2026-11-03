@@ -1,0 +1,13 @@
+{
+  "label": "Busca na página (Ctrl+F) - UAM",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Busca/destaque de texto na página atual, usando mark.js. Acionada pela lupa do header.",
+  "host_template_types": ["PAGE", "BLOG_LISTING", "BLOG_POST"],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": ["search"],
+  "is_available_for_new_content": false
+}

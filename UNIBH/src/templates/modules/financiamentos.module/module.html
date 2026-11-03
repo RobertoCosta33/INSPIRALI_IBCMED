@@ -1,0 +1,185 @@
+<section
+  class="section section--subtle"
+  id="investimento-e-financiamentos"
+  aria-labelledby="financiamentos-title"
+>
+  <div class="financing-layout">
+    <div class="financing-intro">
+      <div>
+        <p class="eyebrow">{{ module.eyebrow }}</p>
+        <h2 class="section-intro__title" id="financiamentos-title">
+          {{ module.title }}
+        </h2>
+        <div class="section-intro__text financing-intro__text">
+          {{ module.intro_text }}
+        </div>
+      </div>
+      <div class="financing-carousel" data-financing-carousel>
+        <div class="financing-highlight">
+          {% for campus in module.campus_prices %}
+          <div
+            class="financing-highlight__slide{% if loop.first %} is-active{% endif %}"
+            data-financing-slide{%
+            if
+            not
+            loop.first
+            %}
+            hidden{%
+            endif
+            %}
+          >
+            <p class="financing-highlight__campus">{{ campus.campus_name }}</p>
+            <p class="financing-highlight__label">{{ campus.price_label }}</p>
+            <p class="financing-highlight__value">{{ campus.price_value }}</p>
+            <p class="financing-highlight__note">{{ campus.price_note }}</p>
+            <p class="financing-highlight__disclaimer">
+              {{ campus.price_disclaimer }}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="financing-nav">
+          <button
+            type="button"
+            class="financing-nav__btn financing-nav__btn--prev"
+            data-financing-prev
+            data-icon-enabled="{{ get_asset_url('../../public/icons/icon-chevron-left-financing-active.svg') }}"
+            data-icon-disabled="{{ get_asset_url('../../public/icons/icon-chevron-left-financing.svg') }}"
+            aria-label="Unidade anterior"
+          >
+            <img
+              src="{{ get_asset_url('../../public/icons/icon-chevron-left-financing.svg') }}"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+          <div class="financing-dots" data-financing-dots>
+            {% for campus in module.campus_prices %}
+            <button
+              type="button"
+              class="financing-dot{% if loop.first %} is-active{% endif %}"
+              data-financing-dot="{{ loop.index0 }}"
+              aria-label="{{ campus.campus_name }}"
+            ></button>
+            {% endfor %}
+          </div>
+          <button
+            type="button"
+            class="financing-nav__btn financing-nav__btn--next"
+            data-financing-next
+            data-icon-enabled="{{ get_asset_url('../../public/icons/icon-chevron-right-financing.svg') }}"
+            data-icon-disabled="{{ get_asset_url('../../public/icons/icon-chevron-right-financing-disabled.svg') }}"
+            aria-label="Próxima unidade"
+          >
+            <img
+              src="{{ get_asset_url('../../public/icons/icon-chevron-right-financing.svg') }}"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="financing-programs">
+      {% for program in module.programs %}
+      <article class="info-card">
+        <div>
+          <p class="info-card__title">{{ program.title }}</p>
+          <p class="info-card__subtitle">{{ program.subtitle }}</p>
+        </div>
+        <div class="info-card__text">{{ program.text }}</div>
+        {% if program.note %}
+        <p class="info-card__note">{{ program.note }}</p>
+        {% endif %} {% if program.opens_modal %}
+        <button type="button" class="info-card__link" data-open-bolsa-modal>
+          {{ program.link_label }}
+          <img
+            src="{{ get_asset_url('../../public/icons/icon-arrow-right-small.svg') }}"
+            alt=""
+            aria-hidden="true"
+            width="16"
+            height="16"
+          />
+        </button>
+        {% elif program.url.url.href %}
+        <a
+          class="info-card__link"
+          href="{{ program.url.url.href }}"
+          {%
+          if
+          program.url.open_in_new_tab
+          %}
+          target="_blank"
+          rel="noopener{% if program.url.no_follow %} nofollow{% endif %}"
+          {%
+          endif
+          %}
+        >
+          {{ program.link_label }}
+          <img
+            src="{{ get_asset_url('../../public/icons/icon-arrow-right-small.svg') }}"
+            alt=""
+            aria-hidden="true"
+            width="16"
+            height="16"
+          />
+        </a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if module.bolsa_modal_documents|length > 0 %}
+  <div class="bolsa-modal" data-bolsa-modal hidden aria-hidden="true">
+    <div class="bolsa-modal__backdrop" data-bolsa-modal-close></div>
+    <div
+      class="bolsa-modal__dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bolsa-modal-title"
+    >
+      <div class="bolsa-modal__header">
+        <p id="bolsa-modal-title">{{ module.bolsa_modal_title }}</p>
+        <button
+          type="button"
+          class="bolsa-modal__close"
+          data-bolsa-modal-close
+          aria-label="Fechar"
+        >
+          <img
+            src="{{ get_asset_url('../../public/icons/icon-modal-close.svg') }}"
+            alt=""
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+      <div class="bolsa-modal__box">
+        <ul class="bolsa-modal__list">
+          {% for doc in module.bolsa_modal_documents %}
+          <li>
+            <a
+              href="{{ doc.url.url.href }}"
+              {%
+              if
+              doc.url.open_in_new_tab
+              %}
+              target="_blank"
+              rel="noopener{% if doc.url.no_follow %} nofollow{% endif %}"
+              {%
+              endif
+              %}
+              >{{ doc.doc_label }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>
+
+{{ require_css(get_asset_url('./module.css')) }} {{
+require_js(get_asset_url('./module.js'), { "position": "footer" }) }}
