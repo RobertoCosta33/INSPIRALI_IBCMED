@@ -9,13 +9,13 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Sua jornada na Medicina continua aqui"
+    "default": "Seu futuro é viável. Nós ajudamos a construí-lo!"
   },
   {
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Da graduação à pós-graduação, estamos ao seu lado em cada etapa da sua formação e evolução profissional."
+    "default": "O valor do investimento reflete a infraestrutura premium, o corpo docente de excelência e a tecnologia de ponta do Ecossistema Inspirali."
   },
   {
     "name": "campus_prices",
