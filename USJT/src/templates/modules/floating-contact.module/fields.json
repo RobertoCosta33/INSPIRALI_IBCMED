@@ -28,7 +28,7 @@
     "name": "call_phone_tel",
     "label": "Telefone (link tel:, só números)",
     "type": "text",
-    "default": "08000006050"
+    "default": "tel:08000006050"
   },
   {
     "name": "show_doubt_button",
@@ -57,7 +57,7 @@
     "name": "doubt_disclaimer",
     "label": "Aviso de privacidade do formulário",
     "type": "richtext",
-    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"https://portal.anhembi.br/canal-de-privacidade/\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
+    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"#\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
   },
   {
     "name": "whatsapp_url",
@@ -65,7 +65,7 @@
     "type": "link",
     "default": {
       "url": {
-        "href": "https://api.whatsapp.com/send/?phone=551140071192&text=Ol%C3%A1%21+Gostaria+de+informa%C3%A7%C3%B5es+sobre+Medicina&type=phone_number&app_absent=0",
+        "href": "#",
         "type": "EXTERNAL",
         "content_id": null
       },

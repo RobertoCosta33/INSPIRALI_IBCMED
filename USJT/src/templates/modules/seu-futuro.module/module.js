@@ -53,7 +53,7 @@
     const dots = root.querySelectorAll(".card-carousel__dot");
     if (!track) return;
 
-    const ICONS = window.UAM_CARD_NAV_ICONS || {};
+    const ICONS = window.USJT_CARD_NAV_ICONS || {};
     let dotIndex = 0;
     const EDGE_TOLERANCE = 2; // px de folga para evitar problemas de arredondamento
 

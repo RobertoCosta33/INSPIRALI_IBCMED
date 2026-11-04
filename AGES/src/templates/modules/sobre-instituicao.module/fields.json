@@ -4,8 +4,13 @@
     "label": "Imagem de capa do vídeo",
     "type": "image",
     "default": {
-      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/video-cover-v2.png",
-      "alt": "Aluna da Anhembi Morumbi em missão humanitária no Brasil"
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/AGES-assets/institucional/video-cover-v2.png",
+      "alt": "Fachada da Ages — Faculdade de Medicina",
+      "loading": "lazy",
+      "width": 0,
+      "height": 0,
+      "max_width": 0,
+      "max_height": 0
     }
   },
   {
@@ -14,7 +19,7 @@
     "type": "link",
     "default": {
       "url": {
-        "href": "https://www.youtube.com/watch?v=Cm1HBnoeYng",
+        "href": "https://www.youtube.com/watch?v=YYqckUiHht0",
         "type": "EXTERNAL",
         "content_id": null
       },
@@ -26,25 +31,25 @@
     "name": "eyebrow",
     "label": "Eyebrow",
     "type": "text",
-    "default": "SOBRE A ANHEMBI MORUMBI"
+    "default": "SOBRE A AGES"
   },
   {
     "name": "title",
     "label": "Título",
     "type": "richtext",
-    "default": "Conhecimento que<br />transforma vidas"
+    "default": "Conhecimento que<br />transforma vidas."
   },
   {
     "name": "body_text",
     "label": "Texto",
     "type": "richtext",
-    "default": "<p>Há mais de 50 anos, a Anhembi Morumbi une tradição acadêmica e inovação para conectar o conhecimento aos desafios do mundo.</p><p>Assista ao vídeo institucional para conhecer melhor a Anhembi Morumbi.</p>"
+    "default": "<p>Ao longo de mais de quatro décadas, a AGES construiu uma trajetória marcada pela expansão do ensinosuperior no interior da Bahia, com diferentes cursos e unidades que ajudam milhares de estudantes atransformar seus projetos em conquistas.</p><p>Assista ao vídeo institucional para conhecer melhor a AGES.</p>"
   },
   {
     "name": "cta_label",
     "label": "Texto do botão",
     "type": "text",
-    "default": "Conheça a Anhembi Morumbi"
+    "default": "Conheça a AGES"
   },
   {
     "name": "cta_url",
@@ -52,7 +57,7 @@
     "type": "link",
     "default": {
       "url": {
-        "href": "https://portal.anhembi.br/sobre/",
+        "href": "#",
         "type": "EXTERNAL",
         "content_id": null
       },

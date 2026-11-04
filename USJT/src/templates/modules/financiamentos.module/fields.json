@@ -1,36 +1,113 @@
 [
-  { "name": "eyebrow", "label": "Eyebrow", "type": "text", "default": "PLANEJE O SEU FUTURO" },
-  { "name": "title", "label": "Título", "type": "text", "default": "Seu futuro é viável. Nós ajudamos a construí-lo!" },
-  { "name": "intro_text", "label": "Texto introdutório", "type": "richtext", "default": "O valor do investimento reflete a infraestrutura premium, o corpo docente de excelência e a tecnologia de ponta do Ecossistema Inspirali." },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "PLANEJE O SEU FUTURO"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Seu futuro é viável. Nós ajudamos a construí-lo!"
+  },
+  {
+    "name": "intro_text",
+    "label": "Texto introdutório",
+    "type": "richtext",
+    "default": "<p>O valor do investimento reflete a infraestrutura premium, o corpo docente de excelência e a tecnologia de ponta do Ecossistema Inspirali.</p>"
+  },
   {
     "name": "campus_prices",
     "label": "Investimento mensal por campus",
     "type": "group",
-    "occurrence": { "min": 1, "max": 6, "default": 3 },
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
     "children": [
-      { "name": "campus_name", "label": "Nome do campus", "type": "text", "default": "UAM - Mooca" },
-      { "name": "price_label", "label": "Rótulo", "type": "text", "default": "Investimento Mensal (2026)" },
-      { "name": "price_value", "label": "Valor", "type": "text", "default": "R$ 13.295,00" },
-      { "name": "price_note", "label": "Nota", "type": "text", "default": "Consulte condições de financiamento" },
-      { "name": "price_disclaimer", "label": "Nota de rodapé", "type": "text", "default": "*Mensalidade de 2026 vinculada à pontualidade" }
+      {
+        "name": "campus_name",
+        "label": "Nome do campus",
+        "type": "text",
+        "default": "USJT - Mooca"
+      },
+      {
+        "name": "price_label",
+        "label": "Rótulo",
+        "type": "text",
+        "default": "Investimento Mensal (2026)"
+      },
+      {
+        "name": "price_value",
+        "label": "Valor",
+        "type": "text",
+        "default": "R$ 13.295,00"
+      },
+      {
+        "name": "price_note",
+        "label": "Nota",
+        "type": "text",
+        "default": "Consulte condições de financiamento"
+      },
+      {
+        "name": "price_disclaimer",
+        "label": "Nota de rodapé",
+        "type": "text",
+        "default": "*Mensalidade de 2026 vinculada à pontualidade"
+      }
     ],
     "default": [
-      { "campus_name": "UAM - Mooca", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 13.295,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" },
-      { "campus_name": "UAM - Piracicaba", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" },
-      { "campus_name": "UAM - São José dos Campos", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" }
+      {
+        "campus_name": "USJT - Salgado Filho",
+        "price_label": "Investimento Mensal (2026)*",
+        "price_value": "R$ 12.795,00",
+        "price_note": "Consulte condições de financiamento ao lado",
+        "price_disclaimer": "*Mensalidade de 2026 vinculada a pontualidade"
+      }
     ]
   },
   {
     "name": "programs",
     "label": "Programas de financiamento",
     "type": "group",
-    "occurrence": { "min": 1, "max": 6, "default": 4 },
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 4
+    },
     "children": [
-      { "name": "title", "label": "Título", "type": "text", "default": "FIES" },
-      { "name": "subtitle", "label": "Subtítulo", "type": "text", "default": "Financiamento estudantil" },
-      { "name": "text", "label": "Texto", "type": "richtext", "default": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social)." },
-      { "name": "note", "label": "Nota pequena (opcional, ex.: \"*Válido nas unidades...\")", "type": "text", "default": "" },
-      { "name": "link_label", "label": "Texto do botão \"Saiba mais\"", "type": "text", "default": "Saiba mais sobre o FIES" },
+      {
+        "name": "title",
+        "label": "Título",
+        "type": "text",
+        "default": "FIES"
+      },
+      {
+        "name": "subtitle",
+        "label": "Subtítulo",
+        "type": "text",
+        "default": "Financiamento estudantil"
+      },
+      {
+        "name": "text",
+        "label": "Texto",
+        "type": "richtext",
+        "default": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social)."
+      },
+      {
+        "name": "note",
+        "label": "Nota pequena (opcional, ex.: \"*Válido nas unidades...\")",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "link_label",
+        "label": "Texto do botão \"Saiba mais\"",
+        "type": "text",
+        "default": "Saiba mais sobre o FIES"
+      },
       {
         "name": "opens_modal",
         "label": "O botão abre o modal de documentos (em vez de um link)?",
@@ -41,14 +118,69 @@
         "name": "url",
         "label": "Link externo (ignorado se \"abre o modal\" estiver marcado)",
         "type": "link",
-        "default": { "url": { "href": "", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false }
+        "default": {
+          "url": {
+            "href": "",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": true,
+          "no_follow": false
+        }
       }
     ],
     "default": [
-      { "title": "FIES", "subtitle": "Financiamento estudantil", "text": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social).", "link_label": "Saiba mais sobre o FIES", "opens_modal": false, "url": { "url": { "href": "https://acessounico.mec.gov.br/fies", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
-      { "title": "Prouni", "subtitle": "Bolsas de estudo", "text": "Bolsas de estudo integrais (100%) ou parciais (50%) através da sua nota do Enem.", "link_label": "Saiba mais sobre o Prouni", "opens_modal": false, "url": { "url": { "href": "https://acessounico.mec.gov.br/prouni", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
-      { "title": "Pravaler", "subtitle": "Financiamento privado", "text": "Financiamento estudantil privado com condições flexíveis e parcelamento facilitado.", "link_label": "Saiba mais sobre o Pravaler", "opens_modal": false, "url": { "url": { "href": "https://www.pravaler.com.br/campanhas/lp-campeao2/medicina/?ies_code=62&nome=ANHEMBI%20MORUMBI&faculdade&utm_source=trade&utm_medium=site-faculdade&utm_campaign=positiva%C3%A7%C3%A3o-medicina", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
-      { "title": "Programa Bolsa Permanência*", "subtitle": "Apoio financeiro", "text": "Apoio financeiro do MEC para estudantes de Medicina vinculados ao Programa Mais Médicos.", "note": "*Válido nas unidades São José dos Campos e Piracicaba.", "link_label": "Veja mais", "opens_modal": true, "url": { "url": { "href": "", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } }
+      {
+        "title": "FIES",
+        "subtitle": "Financiamento estudantil",
+        "text": "<p>Financiamento do Governo Federal com possibilidade de cobertura de até100% (FIES Social).</p>",
+        "note": "",
+        "link_label": "Consultar condições do FIES",
+        "opens_modal": false,
+        "url": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "title": "Prouni",
+        "subtitle": "Bolsas de estudo",
+        "text": "<p>Bolsas de estudo integrais (100%) ou parciais (50%) através da suanota do Enem.</p>",
+        "note": "",
+        "link_label": "Consultar bolsas do Prouni",
+        "opens_modal": false,
+        "url": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "title": "Pravaler",
+        "subtitle": "Financiamento privado",
+        "text": "<p>Financiamento estudantil privado com condições flexíveis eparcelamento facilitado.</p>",
+        "note": "",
+        "link_label": "Consultar condições do Pravaler",
+        "opens_modal": false,
+        "url": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
     ]
   },
   {
@@ -61,29 +193,33 @@
     "name": "bolsa_modal_documents",
     "label": "Documentos do modal \"Programa Bolsa Permanência\"",
     "type": "group",
-    "occurrence": { "min": 0, "max": 20, "default": 12 },
+    "occurrence": {
+      "min": 0,
+      "max": 20,
+      "default": 12
+    },
     "children": [
-      { "name": "doc_label", "label": "Texto do link", "type": "text", "default": "Documento" },
+      {
+        "name": "doc_label",
+        "label": "Texto do link",
+        "type": "text",
+        "default": "Documento"
+      },
       {
         "name": "url",
         "label": "URL (PDF ou página)",
         "type": "link",
-        "default": { "url": { "href": "#", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false }
+        "default": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": true,
+          "no_follow": false
+        }
       }
     ],
-    "default": [
-      { "doc_label": "Informações – Programa Bolsa Permanência – PBP-PMM", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260305160910/Informa%C3%A7%C3%B5es__Programa_Bolsa_Perman%C3%AAncia__PBP-PMM_-_UAM_1.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Declaração de Estudante Bolsista de Medicina Mais Médicos", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260205171631/Declara%C3%A7%C3%A3o_de_Estudante_Bolsista_de_Medicina_Mais_M%C3%A9dicos.docx", "type": "EXTERNAL" } } },
-      { "doc_label": "Documentação Comprobatória de Renda", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260305160909/Documenta%C3%A7%C3%A3o_Comprobat%C3%B3ria_de_Renda.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Termo de Compromisso do Bolsista", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260205172242/Termo_de_Compromisso_do_Bolsista.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Edital Interno Bolsa Permanência Mais Médicos", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260213173747/Edital_Interno_Bolsa_Perman%C3%AAncia_Mais_M%C3%A9dicos_-_Anhembi.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Edital Nº 8/2025", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260213174845/Edital_Bolsa_Perman%C3%AAncia_Mais_M%C3%A9dicos_-_Resultado_Final.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Edital Nº 9/2026", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260213174845/Edital_Bolsa_Perman%C3%AAncia_Mais_M%C3%A9dicos_-_Resultado_Final.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Edital Nº 15/2026", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260316091146/Edital-15_2026.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Errata - Edital Interno Bolsa Permanência Medicina", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/uploads/RES_UAM_466_N%C2%BA_014_20.02.2026___ERRATA_-_Edital_Interno_Bolsa_Perman%C3%AAncia_Medici_r2y7Ek1.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Errata 2 - Edital Interno Bolsa Permanência Medicina", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260313183330/RES_UAM_466_N%C2%BA_062_130326_2%C2%AA_Errata_Edital_Interno_do_Programa_de__SkKD0iV.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Resultado do Programa de Bolsa Permanência SJC - PBP-PMM", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260313183330/PUBLICA%C3%87%C3%83O_Uam_SJC_Resultado_Bolsa_Perman%C3%AAncia_26.1_13.03.26.pdf", "type": "EXTERNAL" } } },
-      { "doc_label": "Resultado do Programa de Bolsa Permanência Piracicaba - PBP-PMM", "url": { "url": { "href": "https://estaticos.animaeducacao.com.br/medias/20260313183329/PUBLICA%C3%87%C3%83O_Uam_Piracicaba_Resultado_Bolsa_Perman%C3%AAncia_26.1_13.03.26.pdf", "type": "EXTERNAL" } } }
-    ]
+    "default": []
   }
 ]

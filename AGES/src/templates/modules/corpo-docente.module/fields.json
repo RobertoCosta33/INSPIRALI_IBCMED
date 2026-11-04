@@ -15,7 +15,7 @@
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Em Mooca, Piracicaba e São José dos Campos, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seu desenvolvimento."
+    "default": "<p>Em Jacobina e Irecê, nossos coordenadores se dedicam à sua formação e ao acompanhamento próximo do seudesenvolvimento.</p>"
   },
   {
     "name": "coordinators",
@@ -71,48 +71,72 @@
     ],
     "default": [
       {
-        "role": "Coordenadora Médica de Curso - Mooca",
-        "bio": "Médica especialista em Ginecologia, Obstetrícia e Uroginecologia, mestre em Ensino em Ciências da Saúde pela Universidade Federal de São Paulo (UNIFESP). Atua como professora de Medicina na Universidade Anhembi Morumbi, na unidade Mooca, contribuindo para a formação de futuros médicos. Também possui experiência na assistência em Uroginecologia e integra a Sociedade Internacional de Uroginecologia (IUGA).",
-        "person_name": "Simone Pereira Vidotti",
         "photo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/simone-pereira-vidotti.png",
-          "alt": "Simone Pereira Vidotti"
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/AGES-assets/docente/leidson-rodrigo.png",
+          "alt": "Dr. Leidson Rodrigo",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
+        "role": "Coordenador Médico de Curso - Jacobina e Irecê",
+        "person_name": "Dr. Leidson Rodrigo",
+        "bio": "<p>Coordenador da Faculdade AGES de Medicina e do ambulatório de doenças raras da Faculdade AGES.Preceptor da Residência de Clínica Médica do Hospital Regional Vicentina Goulart. Doutorando doPPGECOH-UNEB (Linha de Pesquisa em Polineuropatia Amiloidótica Familiar). Mestre em CiênciasFarmacêuticas pelo PPGFARMA-UNEB. Residência em Neurologia Clínica pelo Hospital São Rafael - BA.Graduação em Medicina pela Universidade Estadual de Santa Cruz-BA.</p>",
+        "more_url": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         }
       },
       {
-        "role": "Coordenadora Administrativa - Mooca",
-        "bio": "Docente da Universidade Anhembi Morumbi, com formação em Medicina Veterinária pela Universidade Paulista (UNIP), mestrado e doutorado em Medicina, na área de Cardiologia, pela Universidade Federal de São Paulo (UNIFESP), e pós-doutorado em Física Experimental pela Universidade de São Paulo (USP). Atua no ensino superior, com experiência nas áreas de Fisiologia, Morfologia e pesquisa científica, contribuindo para a formação de estudantes dos cursos de Medicina e Medicina Veterinária.",
-        "person_name": "Tatiana Helfenstein Tocci Moreira",
         "photo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/tatiana-helfenstein.png",
-          "alt": "Tatiana Helfenstein Tocci Moreira"
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/AGES-assets/docente/tarcisio-goncalves.png",
+          "alt": "Tarcísio Gonçalves",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
+        "role": "Coordenador Administrativo - Jacobina",
+        "person_name": "Tarcísio Gonçalves",
+        "bio": "<p>Graduado em Enfermagem pelo Centro Universitário Ages (2017). Especialização em Enfermagem deUrgência e Emergência (2019). Mestrando em Ecologia Humana e Gestão Socioambiental na UNEB –Juazeiro (2025-atual).</p>",
+        "more_url": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         }
       },
       {
-        "role": "Coordenadora Médica de Curso - SJC e Piracicaba",
-        "bio": "Coordenadora do Curso de Medicina da Universidade Anhembi Morumbi Campus Piracicaba, e docente e coordenadora do Curso de Medicina da Universidade Anhembi Morumbi Campus São José dos Campos. Mestra em Ciências da Saúde pela Unifesp. Especialista em Cirurgia do Trauma pelo Colégio Brasileiro de Cirurgiões e em Cirurgia Geral pelo Hospital Municipal Dr. José de Carvalho Florence. Pós-graduada em Endocrinologia e Metabologia pelo IBCMED. Graduada em Medicina pela Faculdade de Medicina de Itajubá.",
-        "person_name": "Barbra Rafaela de Melo Santos Azevedo",
         "photo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/barbra-rafaela.png",
-          "alt": "Barbra Rafaela de Melo Santos Azevedo"
-        }
-      },
-      {
-        "role": "Coordenadora Administrativa - Piracicaba",
-        "bio": "Coordenadora administrativa e docente do Curso de Medicina da Universidade Anhembi Morumbi Campus Piracicaba. Doutora e mestra em Odontologia, área de concentração em Fisiologia, pela UNICAMP. Graduada em Ciências Biológicas (Licenciatura/Bacharelado) pela Universidade Metodista de Piracicaba. Membro da Comissão de Ensino da Sociedade Brasileira de Fisiologia.",
-        "person_name": "Lais Tono Cardozo",
-        "photo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/lais-tono-cardoso.png",
-          "alt": "Lais Tono Cardozo"
-        }
-      },
-      {
-        "role": "Coordenadora Administrativa - São José dos Campos",
-        "bio": "Possui graduação em Fisioterapia pela Universidade do Vale do Paraíba (2008), pós-graduação em Fisioterapia em Neurologia pelo Hospital Israelita Albert Einstein (2010), mestrado em Engenharia Biomédica pela Universidade do Vale do Paraíba (2011), doutorado em Ciências pelo Programa de Pós-Graduação em Neurologia e Neurociências da Universidade Federal de São Paulo (2020) e MBA em Psicologia Organizacional e do Trabalho e Liderança Estratégica pela Universidade Anhembi Morumbi (2025).",
-        "person_name": "Debora Daisy da Silva Vogel",
-        "photo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docente/debora-daisy.png",
-          "alt": "Debora Daisy da Silva Vogel"
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/AGES-assets/docente/maira-meira.jpeg",
+          "alt": "Maíra Meira",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
+        "role": "Coordenadora Administrativa - Irecê",
+        "person_name": "Maíra Meira",
+        "bio": "<p>Farmacêutica graduada pela Universidade Estadual de Feira de Santana (UEFS). Experiênciaprofissional no Instituto de Tecnologia em Fármacos (Farmanguinhos/Fiocruz/RJ). Mestre pelaUniversidade Federal do Vale do São Francisco (UNIVASF), com área de concentração em farmacologiae fisiologia humana. Pós-graduação lato sensu em Farmácia Clínica e Serviços Farmacêuticos(Unimais). Docente e coordenadora adjunta no curso de Medicina (AGES-Irecê) pela Inspirali eAnima Educação.</p>",
+        "more_url": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         }
       }
     ]

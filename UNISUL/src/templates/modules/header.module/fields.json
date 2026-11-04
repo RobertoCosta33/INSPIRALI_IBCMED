@@ -81,40 +81,40 @@
     ],
     "default": [
       {
-        "item_label": "Enem 27.1",
         "url": {
           "url": {
-            "content_id": null,
             "href": "https://fichainscricao.inspirali.com/concurso/18400",
             "type": "EXTERNAL"
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        }
+          }
+        },
+        "item_label": "Processo Enem 27.1"
       },
       {
-        "item_label": "Transferência Externa 27.1",
         "url": {
           "url": {
-            "content_id": null,
             "href": "https://fichainscricao.inspirali.com/concurso/18505",
             "type": "EXTERNAL"
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        }
+          }
+        },
+        "item_label": "Transferência Externa 27.1"
       },
       {
-        "item_label": "Portador de Diploma 27.1",
         "url": {
           "url": {
-            "content_id": null,
-            "href": "#",
+            "href": "https://fichainscricao.inspirali.com/concurso/18459",
             "type": "EXTERNAL"
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        }
+          }
+        },
+        "item_label": "Transferência Interna entre campus 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://www.unisul.br/inscreva/18423",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Destrancamento Medicina 27.1"
       }
     ]
   },

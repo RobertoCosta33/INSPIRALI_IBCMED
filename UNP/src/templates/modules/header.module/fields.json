@@ -5,9 +5,9 @@
     "type": "link",
     "default": {
       "url": {
-        "content_id": null,
-        "href": "/",
-        "type": "EXTERNAL"
+        "href": "/UNP/src/pages/",
+        "type": "EXTERNAL",
+        "content_id": null
       },
       "open_in_new_tab": false,
       "no_follow": false
@@ -18,10 +18,13 @@
     "label": "Logo do cabeçalho (imagem única já com instituição + Medicina + parceiro Einstein, exportada do Figma)",
     "type": "image",
     "default": {
-      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/header-logo.png",
-      "alt": "Universidade Anhembi Morumbi — Medicina — Excelência Acadêmica Einstein",
-      "width": 1095,
-      "height": 176
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNP-assets/shared/header-logo.png",
+      "alt": "Universidade Potiguar — Medicina — Excelência Acadêmica Einstein",
+      "loading": "lazy",
+      "width": 0,
+      "height": 0,
+      "max_width": 0,
+      "max_height": 0
     }
   },
   {
@@ -71,27 +74,36 @@
       {
         "url": {
           "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18399",
-            "type": "EXTERNAL"
-          }
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
         "item_label": "Processo Enem 27.1"
       },
       {
         "url": {
           "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18408",
-            "type": "EXTERNAL"
-          }
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
-        "item_label": "Transferência Externa 27.1 - Prova 19/11"
+        "item_label": "Transferência Externa 27.1 - Prova 29/10"
       },
       {
         "url": {
           "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18429",
-            "type": "EXTERNAL"
-          }
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
         "item_label": "Portador de Diploma 27.1"
       }
@@ -133,17 +145,23 @@
         "url": {
           "url": {
             "href": "#processos-seletivos",
-            "type": "EXTERNAL"
-          }
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
-        "link_label": "Formas de Ingresso"
+        "link_label": "Editais e Resultados"
       },
       {
         "url": {
           "url": {
             "href": "#nosso-dna",
-            "type": "EXTERNAL"
-          }
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
         "link_label": "Diferenciais"
       },
@@ -151,8 +169,11 @@
         "url": {
           "url": {
             "href": "#matriz-curricular",
-            "type": "EXTERNAL"
-          }
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
         "link_label": "Matriz Curricular"
       },
@@ -160,17 +181,23 @@
         "url": {
           "url": {
             "href": "#nossos-campus",
-            "type": "EXTERNAL"
-          }
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
-        "link_label": "Nossos Campi"
+        "link_label": "Nossos Campus"
       },
       {
         "url": {
           "url": {
             "href": "#metodologia",
-            "type": "EXTERNAL"
-          }
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
         "link_label": "Ensino e Prática"
       },
@@ -178,8 +205,11 @@
         "url": {
           "url": {
             "href": "#investimento-e-financiamentos",
-            "type": "EXTERNAL"
-          }
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
         "link_label": "Bolsas e Financiamentos"
       },
@@ -187,17 +217,23 @@
         "url": {
           "url": {
             "href": "#grupo-inspirali",
-            "type": "EXTERNAL"
-          }
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
-        "link_label": "Grupo Inspirali"
+        "link_label": "Inspirali"
       },
       {
         "url": {
           "url": {
-            "href": "https://umapenca.com/lojameduam/",
-            "type": "EXTERNAL"
-          }
+            "href": "https://umapenca.com/lojamedunp/",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
         "link_label": "Loja"
       }

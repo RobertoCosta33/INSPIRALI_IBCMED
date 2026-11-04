@@ -413,7 +413,7 @@
             "link_label": "Cursos livres e Extensão",
             "url": {
               "url": {
-                "href": "https://www.unifacs.br/sou-estudante/extensao-universitaria/",
+                "href": "https://www.unifacs.br/404/",
                 "type": "EXTERNAL",
                 "content_id": null
               },
@@ -526,7 +526,7 @@
             "link_label": "Repositório Universitário da Ânima (RUNA)",
             "url": {
               "url": {
-                "href": "https://repositorio.animaeducacao.com.br/communities/845a8a5e-f4b5-4293-8971-fb051ab0816c",
+                "href": "https://repositorio.animaeducacao.com.br/communities/845a8a5e-f4b5-4293-8971-fb051ab0816c/subcoms-cols",
                 "type": "EXTERNAL",
                 "content_id": null
               },
@@ -569,12 +569,16 @@
     ],
     "default": [
       {
-        "contact_label": "Graduação e Pós-graduação",
-        "value": "11 4007-1192"
+        "contact_label": "Graduação",
+        "value": "0800 284 0212"
+      },
+      {
+        "contact_label": "Pós-Graduação",
+        "value": "71 3021-2800"
       },
       {
         "contact_label": "EAD",
-        "value": "11 5108-0481"
+        "value": "71 3838-7844"
       }
     ]
   },

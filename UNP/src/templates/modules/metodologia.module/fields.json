@@ -9,21 +9,26 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "A ciência por trás do seu aprendizado"
+    "default": "METODOLOGIA E TECNOLOGIA A ciência por trás do seu aprendizado"
   },
   {
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Metodologias ativas reconhecidas globalmente para sedimentar o conhecimento na memória de longo prazo."
+    "default": "<p>Metodologias ativas reconhecidas globalmente para sedimentar o conhecimento na memória de longoprazo.</p>"
   },
   {
     "name": "media_image",
     "label": "Imagem",
     "type": "image",
     "default": {
-      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/learning-environment.png",
-      "alt": "Alunas da Anhembi Morumbi em laboratório de simulação prática"
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNP-assets/metodologia/metodologia-ambiente.png",
+      "alt": "Alunas da UnP em laboratório de simulação prática",
+      "loading": "lazy",
+      "width": 0,
+      "height": 0,
+      "max_width": 0,
+      "max_height": 0
     }
   },
   {
@@ -52,19 +57,19 @@
     "default": [
       {
         "title": "Metodologia de Harvard - CBCL",
-        "text": "Aprendizagem Colaborativa Baseada em Casos. Desde o primeiro dia, você discutirá diagnósticos reais e simulados em equipe, desenvolvendo raciocínio clínico em vez de apenas memorizar teorias."
+        "text": "<p class=\"accordion-panel__text\">Aprendizagem Colaborativa Baseada em Casos. Você discutirá diagnósticos reais em equipe,desenvolvendo raciocínio clínico ao invés de memorizar teorias.</p>"
       },
       {
         "title": "Imersão com MedRoom",
-        "text": "A tecnologia a serviço da vida. Utilizamos plataformas líderes em realidade virtual para o estudo avançado de anatomia e fisiologia 3D, preparando você antes mesmo do contato real."
+        "text": "<p class=\"accordion-panel__text\">A tecnologia a serviço da vida. Utilizamos plataformas líderes em realidade virtual para oestudo avançado de anatomia e fisiologia 3D, preparando você antes mesmo do contato real.</p>"
       },
       {
         "title": "Fluência Digital e ProntLife",
-        "text": "Domine a Medicina contemporânea. Uso ético de Inteligência Artificial e prontuário eletrônico inteligente para estruturar seu raciocínio clínico."
+        "text": "<p class=\"accordion-panel__text\">Domine a Medicina contemporânea. Uso ético de Inteligência Artificial e prontuário eletrônicointeligente para estruturar seu raciocínio clínico.</p>"
       },
       {
         "title": "Avaliação Programática",
-        "text": "Um sistema focado no seu crescimento contínuo. A avaliação não é punitiva, mas sim diagnóstica, com feedbacks constantes para lapidar sua performance e garantir sua segurança."
+        "text": "<p class=\"accordion-panel__text\">Um sistema focado no seu crescimento contínuo. A avaliação não é punitiva, mas sim diagnóstica,com feedbacks constantes para lapidar sua performance e garantir sua segurança.</p>"
       }
     ]
   }

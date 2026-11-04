@@ -1,9 +1,9 @@
 {
-  "label": "Footer - UAM",
+  "label": "Footer - UNP",
   "css_assets": [],
   "external_js": [],
   "global": false,
-  "help_text": "Rodapé institucional com links, contato, redes sociais e e-MEC. Compartilhado em todas as páginas da UAM.",
+  "help_text": "Rodapé institucional com links, contato, redes sociais e e-MEC. Compartilhado em todas as páginas da UNP.",
   "host_template_types": ["PAGE", "BLOG_LISTING", "BLOG_POST"],
   "js_assets": [],
   "other_assets": [],

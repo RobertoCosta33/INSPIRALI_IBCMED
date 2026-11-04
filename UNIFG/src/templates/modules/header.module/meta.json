@@ -1,9 +1,9 @@
 {
-  "label": "Header - UAM",
+  "label": "Header - UNIFG",
   "css_assets": [],
   "external_js": [],
   "global": false,
-  "help_text": "Cabeçalho institucional + menu do curso. Compartilhado em todas as páginas da UAM.",
+  "help_text": "Cabeçalho institucional + menu do curso. Compartilhado em todas as páginas da UNIFG.",
   "host_template_types": ["PAGE", "BLOG_LISTING", "BLOG_POST"],
   "js_assets": [],
   "other_assets": [],

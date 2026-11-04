@@ -15,7 +15,7 @@
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Uma rede de prática, cuidado e suporte que acompanha o estudante em cada etapa da formação — dentro e fora da universidade."
+    "default": "<p>Uma rede de prática, cuidado e suporte que acompanha o estudante em cada etapa da formação — dentro efora da universidade.</p>"
   },
   {
     "name": "slides",
@@ -63,44 +63,64 @@
     ],
     "default": [
       {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNP-assets/ecosystem-carousel-1.png",
+          "alt": "Centro Integrado de Saúde da UnP",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
         "eyebrow": "Centros Integrados de Saúde (CIS)",
         "subtitle": "Prática intensa sob supervisão de elite",
         "value": "+218.000",
-        "support_text": "agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à população.",
-        "image": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/ecosystem-carousel-1.png",
-          "alt": "Centros Integrados de Saúde (CIS)"
-        }
+        "support_text": "<p>agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito àpopulação.</p>"
       },
       {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNP-assets/ecosystem-carousel-2.png",
+          "alt": "Aluna da UnP em missão humanitária atendendo paciente",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
         "eyebrow": "Travessia Humanitária",
         "subtitle": "A medicina além dos muros",
         "value": "",
-        "support_text": "Participe de expedições transformadoras na Amazônia, no Sertão e em comunidades vulneráveis, aplicando a humanização na prática.",
-        "image": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/ecosystem-carousel-2.png",
-          "alt": "Aluna da Anhembi Morumbi em missão humanitária atendendo paciente"
-        }
+        "support_text": "<p>Participe de expedições transformadoras na Amazônia, no Sertão e em comunidades vulneráveis,aplicando a humanização na prática.</p>"
       },
       {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNP-assets/ecosystem-carousel-3.png",
+          "alt": "Equipe médica em atendimento hospitalar de alta complexidade",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
         "eyebrow": "Rede Hospitalar de Alta Complexidade",
         "subtitle": "Internato sólido de alto nível",
         "value": "",
-        "support_text": "Internato sólido com vivência em urgência, cirurgia e pediatria através de parcerias com hospitais de referência.",
-        "image": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/ecosystem-carousel-3.png",
-          "alt": "Equipe médica em atendimento hospitalar de alta complexidade"
-        }
+        "support_text": "<p>Internato sólido com vivência em urgência, cirurgia e pediatria através de parcerias comhospitais de referência.</p>"
       },
       {
+        "image": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNP-assets/ecosystem-carousel-4.png",
+          "alt": "Mãos entrelaçadas representando acolhimento e cuidado emocional",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
         "eyebrow": "Programa Angatu (Saúde Mental)",
         "subtitle": "Cuidado com quem vai cuidar",
         "value": "",
-        "support_text": "Reconhecemos que cuidar de vidas exige resiliência. Oferecemos acolhimento psicológico, oficinas de bem-estar e grupos de apoio para garantir uma carreira saudável e equilibrada.",
-        "image": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/misc/ecosystem-carousel-4.png",
-          "alt": "Mãos entrelaçadas representando acolhimento e cuidado emocional"
-        }
+        "support_text": "<p>Reconhecemos que cuidar de vidas exige resiliência. Oferecemos acolhimento psicológico,oficinas de bem-estar e grupos de apoio para garantir uma carreira saudável e equilibrada.</p>"
       }
     ]
   }

@@ -1,19 +1,19 @@
-# UAM/src/templates/ — Tema HubSpot (IBCMED - Anhembi Morumbi)
+# UNIFG/src/templates/ — Tema HubSpot (IBCMED - UNIFG)
 
-Conversão da página estática (`UAM/src/pages/index.html` + `UAM/src/modules/`)
+Conversão da página estática (`UNIFG/src/pages/index.html` + `UNIFG/src/modules/`)
 para um tema HubSpot CMS (HubL), pronta para upload quando houver uma conta/
 Personal Access Key configurada (ver seção "Próximos passos").
 
 ## Estrutura
 
 ```
-UAM/src/templates/
+UNIFG/src/templates/
   theme.json                 # metadados do tema
   fields.json                 # campos globais de estilo (cores/fonte)
   templates/
     layouts/
       base.html                # <head>, header/footer/widgets, CSS/JS globais
-    medicina-uam.html           # template de página — monta os módulos de seção em ordem
+    medicina-unifg.html           # template de página — monta os módulos de seção em ordem
   modules/
     header.module/              # compartilhado
     footer.module/               # compartilhado
@@ -32,7 +32,7 @@ UAM/src/templates/
     seu-futuro.module/
     faq-contato.module/          # inclui o formulário (desativável)
   css/
-    tokens.css, base.css, components/*.css   # cópia de UAM/src/css/ (design system compartilhado, carregado 1x em base.html; paleta/fonte Inspirali — Montserrat)
+    tokens.css, base.css, components/*.css   # cópia de UNIFG/src/css/ (design system compartilhado, carregado 1x em base.html; paleta/fonte Inspirali — Montserrat)
   vendor/
     mark.min.js
 ```
@@ -74,25 +74,25 @@ do próprio módulo, via `get_asset_url('./module.css')`).
 ## Próximos passos (antes de publicar)
 
 1. Autenticar a HubSpot CLI (`hs init` / `hs auth`) com a conta de destino.
-2. Enviar `UAM/src/templates/` para o Design Manager (`hs cms upload` —
+2. Enviar `UNIFG/src/templates/` para o Design Manager (`hs cms upload` —
    nunca usar `--clean`; sempre buscar/comparar o conteúdo remoto antes).
 3. Fazer upload das imagens/PDFs para o Design Manager/File Manager e
    atualizar os campos de imagem/arquivo com as URLs reais.
 4. Criar a página em Marketing > Website > Páginas usando o template
-   `medicina-uam.html` e revisar visualmente no preview do HubSpot antes
+   `medicina-unifg.html` e revisar visualmente no preview do HubSpot antes
    de publicar.
 5. Quando o formulário de contato for aprovado, criar o formulário no
    HubSpot, ativar `show_form`/`show_doubt_button` e preencher o GUID.
 
 ## Estado da sincronização
 
-Sincronizado com `UAM/src` após a segunda rodada de cores do Figma (paleta
+Sincronizado com `UNIFG/src` após a segunda rodada de cores do Figma (paleta
 Inspirali com dourado `#b09435` / `#313132` / areia `#898177` / cinza claro
 `#f3f4f6`, fonte Montserrat 200–800, setas dos carrosséis `icon-arrow-*-btn`).
 O header usa uma única imagem de logo (`public/images/shared/header-logo.png`,
 campo `logo`), exatamente como no Figma. `css/`, `module.css`, `module.js` e os ícones de
 `public/icons` são cópia do `src`; `campus`, `financiamentos` e `seu-futuro`
-mantêm o JS adaptado (dados via JSON / `data-*` / `window.UAM_CARD_NAV_ICONS`)
+mantêm o JS adaptado (dados via JSON / `data-*` / `window.<INST>_CARD_NAV_ICONS`)
 e `processo-seletivo/module.css` inclui o CSS do `edital-modal`. Ícones de
 campos de imagem (`field-icons/*` no File Manager) precisam ser reenviados com as
-versões recoloridas de `UAM/src/public/icons/`.
+versões recoloridas de `UNIFG/src/public/icons/`.

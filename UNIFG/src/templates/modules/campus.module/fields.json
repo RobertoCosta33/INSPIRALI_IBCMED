@@ -9,13 +9,13 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Três campi. Uma formação conectada à prática."
+    "default": "ONDE A FORMAÇÃO ACONTECE Estrutura completa em um só lugar"
   },
   {
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Medicina na capital e no interior de São Paulo, com laboratórios, salas de aula e biblioteca para apoiar a sua jornada."
+    "default": "<p>Ambientes modernos e acolhedores em Brumado e Guanambi, proporcionando uma formação médica deexcelência.</p>"
   },
   {
     "name": "panel_title",
@@ -27,7 +27,7 @@
     "name": "panel_text",
     "label": "Texto do painel lateral",
     "type": "richtext",
-    "default": "Infraestrutura de excelência para o seu sucesso: auditório, biblioteca, laboratórios de última geração e muito mais, projetados para o seu desenvolvimento acadêmico e profissional."
+    "default": "<p>Infraestrutura de excelência para o seu sucesso: auditório, biblioteca, laboratórios de últimageração e muito mais, projetados para o seu desenvolvimento acadêmico e profissional.</p>"
   },
   {
     "name": "cta_label",
@@ -81,7 +81,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "https://portal.anhembi.br/unidades/",
+            "href": "#",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -125,74 +125,113 @@
     ],
     "default": [
       {
-        "campus_key": "mooca",
-        "chip_label": "Mooca — São Paulo",
-        "display_name": "Mooca",
-        "city": "São Paulo, SP",
-        "address": "Rua Prof. Almeida Lima, 1.134 – Mooca, São Paulo - SP, 03164-000",
+        "campus_key": "brumado",
+        "chip_label": "Brumado",
+        "display_name": "Brumado",
+        "city": "Brumado, BA",
+        "address": "Rua Dr. Juracy Pires Gomes - 170 - Mário Meira • CEP 46100-000",
         "cta_url": {
           "url": {
-            "href": "https://portal.anhembi.br/unidades/mooca/",
-            "type": "EXTERNAL"
-          }
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
-        "video_id": "pZ5RWFXfIQU",
+        "video_id": "",
         "photos": [
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/biblioteca.jpg", "alt": "Biblioteca — campus Mooca" }, "caption": "Biblioteca" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/consultorios-teste.jpg", "alt": "Consultórios Teste — campus Mooca" }, "caption": "Consultórios Teste" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/enfermaria-simulada.jpg", "alt": "Enfermaria simulada — campus Mooca" }, "caption": "Enfermaria simulada" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/entrada-do-campus.jpg", "alt": "Entrada do campus — campus Mooca" }, "caption": "Entrada do campus" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/laboratorio-de-anatomia.jpg", "alt": "Laboratório de anatomia — campus Mooca" }, "caption": "Laboratório de anatomia" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/laboratorio-de-simulacao-clinica.jpg", "alt": "Laboratório de simulação clínica — campus Mooca" }, "caption": "Laboratório de simulação clínica" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/mooca/area-de-convivencia.jpg", "alt": "Área de convivência — campus Mooca" }, "caption": "Área de convivência" }
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFG-assets/campus-gallery/unifg/biblioteca.png",
+              "alt": "Biblioteca — campus Brumado",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Biblioteca"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFG-assets/campus-gallery/unifg/laboratorios.png",
+              "alt": "Laboratórios equipados — campus Brumado",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Laboratórios equipados"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFG-assets/campus-gallery/unifg/sala-de-aula.png",
+              "alt": "Sala de aula presencial — campus Brumado",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Sala de aula presencial"
+          }
         ]
       },
       {
-        "campus_key": "piracicaba",
-        "chip_label": "Piracicaba",
-        "display_name": "Piracicaba",
-        "city": "Piracicaba, SP",
-        "address": "Av. Rio das Pedras, 1.601 – Pompéia, Piracicaba - SP, 13425-380",
+        "campus_key": "guanambi",
+        "chip_label": "Guanambi - São Sebastião",
+        "display_name": "Guanambi - São Sebastião",
+        "city": "Guanambi, BA",
+        "address": "Unidade São Sebastião — Guanambi - BA",
         "cta_url": {
           "url": {
-            "href": "https://portal.anhembi.br/unidades/piracicaba/",
-            "type": "EXTERNAL"
-          }
+            "href": "#",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
-        "video_id": "kOfW_fLo23c",
+        "video_id": "",
         "photos": [
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/biblioteca.jpg", "alt": "Biblioteca — campus Piracicaba" }, "caption": "Biblioteca" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/corredores-e-acesso-as-salas.jpg", "alt": "Corredores e acesso às salas — campus Piracicaba" }, "caption": "Corredores e acesso às salas" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/laboratorio-de-habilidades-medicas.jpg", "alt": "Laboratório de habilidades médicas — campus Piracicaba" }, "caption": "Laboratório de habilidades médicas" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/laboratorio-de-procedimentos-medicos.jpg", "alt": "Laboratório de procedimentos médicos — campus Piracicaba" }, "caption": "Laboratório de procedimentos médicos" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/area-de-convivencia-externa.jpg", "alt": "Área de convivência externa — campus Piracicaba" }, "caption": "Área de convivência externa" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/piracicaba/area-de-convivencia-interna.jpg", "alt": "Área de convivência interna — campus Piracicaba" }, "caption": "Área de convivência interna" }
-        ]
-      },
-      {
-        "campus_key": "sao-jose-dos-campos",
-        "chip_label": "São José dos Campos",
-        "display_name": "São José dos Campos",
-        "city": "São José dos Campos, SP",
-        "address": "Av. Dep. Benedito Matarazzo, 6.070 – Jardim Aquarius, São José dos Campos - SP, 12230-002",
-        "cta_url": {
-          "url": {
-            "href": "https://portal.anhembi.br/unidades/sao-jose-dos-campos/",
-            "type": "EXTERNAL"
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFG-assets/campus-gallery/unifg/biblioteca.png",
+              "alt": "Biblioteca — campus Guanambi - São Sebastião",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Biblioteca"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFG-assets/campus-gallery/unifg/laboratorios.png",
+              "alt": "Laboratórios equipados — campus Guanambi - São Sebastião",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Laboratórios equipados"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFG-assets/campus-gallery/unifg/sala-de-aula.png",
+              "alt": "Sala de aula presencial — campus Guanambi - São Sebastião",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Sala de aula presencial"
           }
-        },
-        "video_id": "I8S5-E5OYlQ",
-        "photos": [
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/consultorio-teste.jpg", "alt": "Consultório Teste — campus São José dos Campos" }, "caption": "Consultório Teste" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/consultorio-teste-2.jpg", "alt": "Consultório Teste — campus São José dos Campos" }, "caption": "Consultório Teste" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/consultorios.jpg", "alt": "Consultórios — campus São José dos Campos" }, "caption": "Consultórios" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/entrada-principal.jpg", "alt": "Entrada principal — campus São José dos Campos" }, "caption": "Entrada principal" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/fachada.jpg", "alt": "Fachada — campus São José dos Campos" }, "caption": "Fachada" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/hall-principal.jpg", "alt": "Hall principal — campus São José dos Campos" }, "caption": "Hall principal" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/laboratorio-de-anatomia.jpg", "alt": "Laboratório de anatomia — campus São José dos Campos" }, "caption": "Laboratório de anatomia" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/laboratorio-de-simulacao-clinica.jpg", "alt": "Laboratório de simulação clínica — campus São José dos Campos" }, "caption": "Laboratório de simulação clínica" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/sala-de-aula.jpg", "alt": "Sala de aula — campus São José dos Campos" }, "caption": "Sala de aula" },
-          { "image": { "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/campus-gallery/sao-jose-dos-campos/vista-aerea.jpg", "alt": "Vista aérea — campus São José dos Campos" }, "caption": "Vista aérea" }
         ]
       }
     ]

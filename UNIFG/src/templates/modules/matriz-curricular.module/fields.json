@@ -15,7 +15,7 @@
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Veja as disciplinas que compõem a formação em Medicina na Anhembi Morumbi, organizadas semestre a semestre ao longo da sua jornada."
+    "default": "<p>Veja as disciplinas que compõem a formação em Medicina na UniFG,organizadas semestre a semestre ao longo da sua jornada.</p>"
   },
   {
     "name": "status_modality",
@@ -45,7 +45,7 @@
     "name": "download_2026_file",
     "label": "Arquivo PDF (matriz 2026)",
     "type": "file",
-    "default": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docs/Matriz_Curricular_Medicina_-_UAM_-_Novo_PPC.pdf"
+    "default": "#"
   },
   {
     "name": "download_2026_caption",
@@ -63,7 +63,7 @@
     "name": "download_current_file",
     "label": "Arquivo PDF (matriz atual)",
     "type": "file",
-    "default": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/docs/57e5d6d0-f9d7-4167-9059-be004c1134e9.pdf"
+    "default": "#"
   },
   {
     "name": "download_current_caption",
@@ -83,7 +83,7 @@
     "type": "link",
     "default": {
       "url": {
-        "href": "https://portal.anhembi.br/sobre/documentos-institucionais/",
+        "href": "#",
         "type": "EXTERNAL",
         "content_id": null
       },
@@ -214,543 +214,74 @@
       {
         "unit_key": "unidade-1",
         "tab_label": "1ª Unidade",
-        "eyebrow": "CICLO BÁSICO",
-        "total_hours": "558h",
-        "title": "Unidade de Aprendizagem 1",
-        "visible_groups": [
-          {
-            "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
-            "disciplines": [
-              {
-                "hours": "180h",
-                "discipline_name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica I"
-              },
-              {
-                "hours": "72h",
-                "discipline_name": "Raciocínio Clínico Colaborativo I"
-              }
-            ]
-          },
-          {
-            "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
-            "disciplines": [
-              {
-                "hours": "108h",
-                "discipline_name": "Habilidades Médicas I"
-              },
-              {
-                "hours": "18h",
-                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético I"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "INTEGRAÇÃO AO SUS",
-            "disciplines": [
-              {
-                "hours": "144h",
-                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) I"
-              }
-            ]
-          },
-          {
-            "group_title": "INOVAÇÕES EM MEDICINA",
-            "disciplines": [
-              {
-                "hours": "36h",
-                "discipline_name": "Integração Saúde, Sociedade e Ambiente I"
-              }
-            ]
-          }
-        ]
+        "eyebrow": "",
+        "total_hours": "",
+        "title": "",
+        "visible_groups": [],
+        "extra_groups": []
       },
       {
         "unit_key": "unidade-2",
         "tab_label": "2ª Unidade",
-        "eyebrow": "CICLO BÁSICO",
-        "total_hours": "558h",
-        "title": "Unidade de Aprendizagem 2",
-        "visible_groups": [
-          {
-            "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
-            "disciplines": [
-              {
-                "hours": "180h",
-                "discipline_name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica II"
-              },
-              {
-                "hours": "72h",
-                "discipline_name": "Raciocínio Clínico Colaborativo II"
-              }
-            ]
-          },
-          {
-            "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
-            "disciplines": [
-              {
-                "hours": "108h",
-                "discipline_name": "Habilidades Médicas II"
-              },
-              {
-                "hours": "18h",
-                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético II"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "INTEGRAÇÃO AO SUS",
-            "disciplines": [
-              {
-                "hours": "144h",
-                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) II"
-              }
-            ]
-          },
-          {
-            "group_title": "INOVAÇÕES EM MEDICINA",
-            "disciplines": [
-              {
-                "hours": "36h",
-                "discipline_name": "Integração Saúde, Sociedade e Ambiente II"
-              }
-            ]
-          }
-        ]
+        "eyebrow": "",
+        "total_hours": "",
+        "title": "",
+        "visible_groups": [],
+        "extra_groups": []
       },
       {
         "unit_key": "unidade-3",
         "tab_label": "3ª Unidade",
-        "eyebrow": "CICLO BÁSICO",
-        "total_hours": "594h",
-        "title": "Unidade de Aprendizagem 3",
-        "visible_groups": [
-          {
-            "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
-            "disciplines": [
-              {
-                "hours": "180h",
-                "discipline_name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica III"
-              },
-              {
-                "hours": "72h",
-                "discipline_name": "Raciocínio Clínico Colaborativo III"
-              }
-            ]
-          },
-          {
-            "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
-            "disciplines": [
-              {
-                "hours": "108h",
-                "discipline_name": "Habilidades Médicas III"
-              },
-              {
-                "hours": "36h",
-                "discipline_name": "Bases Farmacológicas e Não-Farmacológicas I"
-              },
-              {
-                "hours": "18h",
-                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético III"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "INTEGRAÇÃO AO SUS",
-            "disciplines": [
-              {
-                "hours": "144h",
-                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) III"
-              }
-            ]
-          },
-          {
-            "group_title": "INOVAÇÕES EM MEDICINA",
-            "disciplines": [
-              {
-                "hours": "36h",
-                "discipline_name": "Ciência e Tecnologias Médicas I"
-              }
-            ]
-          }
-        ]
+        "eyebrow": "",
+        "total_hours": "",
+        "title": "",
+        "visible_groups": [],
+        "extra_groups": []
       },
       {
         "unit_key": "unidade-4",
         "tab_label": "4ª Unidade",
-        "eyebrow": "CICLO BÁSICO",
-        "total_hours": "522h",
-        "title": "Unidade de Aprendizagem 4",
-        "visible_groups": [
-          {
-            "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
-            "disciplines": [
-              {
-                "hours": "108h",
-                "discipline_name": "Bases Biológicas e Fisiopatológicas Aplicadas a Clínica IV"
-              },
-              {
-                "hours": "72h",
-                "discipline_name": "Raciocínio Clínico Colaborativo IV"
-              }
-            ]
-          },
-          {
-            "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
-            "disciplines": [
-              {
-                "hours": "108h",
-                "discipline_name": "Habilidades Médicas IV"
-              },
-              {
-                "hours": "36h",
-                "discipline_name": "Bases Farmacológicas e Não-Farmacológicas II"
-              },
-              {
-                "hours": "18h",
-                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético IV"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "INTEGRAÇÃO AO SUS",
-            "disciplines": [
-              {
-                "hours": "144h",
-                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) IV"
-              }
-            ]
-          },
-          {
-            "group_title": "INOVAÇÕES EM MEDICINA",
-            "disciplines": [
-              {
-                "hours": "36h",
-                "discipline_name": "Ciência e Tecnologias Médicas II"
-              }
-            ]
-          }
-        ]
+        "eyebrow": "",
+        "total_hours": "",
+        "title": "",
+        "visible_groups": [],
+        "extra_groups": []
       },
       {
         "unit_key": "unidade-5",
         "tab_label": "5ª Unidade",
-        "eyebrow": "CICLO CLÍNICO",
-        "total_hours": "666h",
-        "title": "Unidade de Aprendizagem 5",
-        "visible_groups": [
-          {
-            "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
-            "disciplines": [
-              {
-                "hours": "144h",
-                "discipline_name": "Medicina Integrada I"
-              },
-              {
-                "hours": "108h",
-                "discipline_name": "Raciocínio Clínico Colaborativo V"
-              }
-            ]
-          },
-          {
-            "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
-            "disciplines": [
-              {
-                "hours": "72h",
-                "discipline_name": "Habilidades Médicas V"
-              },
-              {
-                "hours": "72h",
-                "discipline_name": "Habilidades Procedurais e Cirúrgicas I"
-              },
-              {
-                "hours": "18h",
-                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético V"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "INTEGRAÇÃO AO SUS",
-            "disciplines": [
-              {
-                "hours": "252h",
-                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) V"
-              }
-            ]
-          }
-        ]
+        "eyebrow": "",
+        "total_hours": "",
+        "title": "",
+        "visible_groups": [],
+        "extra_groups": []
       },
       {
         "unit_key": "unidade-6",
         "tab_label": "6ª Unidade",
-        "eyebrow": "CICLO CLÍNICO",
-        "total_hours": "666h",
-        "title": "Unidade de Aprendizagem 6",
-        "visible_groups": [
-          {
-            "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
-            "disciplines": [
-              {
-                "hours": "144h",
-                "discipline_name": "Medicina Integrada II"
-              },
-              {
-                "hours": "108h",
-                "discipline_name": "Raciocínio Clínico Colaborativo VI"
-              }
-            ]
-          },
-          {
-            "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
-            "disciplines": [
-              {
-                "hours": "72h",
-                "discipline_name": "Habilidades Médicas VI"
-              },
-              {
-                "hours": "72h",
-                "discipline_name": "Habilidades Procedurais e Cirúrgicas II"
-              },
-              {
-                "hours": "18h",
-                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético VI"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "INTEGRAÇÃO AO SUS",
-            "disciplines": [
-              {
-                "hours": "252h",
-                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) VI"
-              }
-            ]
-          }
-        ]
+        "eyebrow": "",
+        "total_hours": "",
+        "title": "",
+        "visible_groups": [],
+        "extra_groups": []
       },
       {
         "unit_key": "unidade-7",
         "tab_label": "7ª Unidade",
-        "eyebrow": "CICLO CLÍNICO",
-        "total_hours": "666h",
-        "title": "Unidade de Aprendizagem 7",
-        "visible_groups": [
-          {
-            "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
-            "disciplines": [
-              {
-                "hours": "144h",
-                "discipline_name": "Medicina Integrada III"
-              },
-              {
-                "hours": "108h",
-                "discipline_name": "Raciocínio Clínico Colaborativo VII"
-              }
-            ]
-          },
-          {
-            "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
-            "disciplines": [
-              {
-                "hours": "72h",
-                "discipline_name": "Habilidades Médicas VII"
-              },
-              {
-                "hours": "72h",
-                "discipline_name": "Habilidades Procedurais e Cirúrgicas III"
-              },
-              {
-                "hours": "18h",
-                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético VII"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "INTEGRAÇÃO AO SUS",
-            "disciplines": [
-              {
-                "hours": "252h",
-                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) VII"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "unit_key": "unidade-8",
-        "tab_label": "8ª Unidade",
-        "eyebrow": "CICLO CLÍNICO",
-        "total_hours": "666h",
-        "title": "Unidade de Aprendizagem 8",
-        "visible_groups": [
-          {
-            "group_title": "CIÊNCIAS E CLÍNICAS INTEGRADAS",
-            "disciplines": [
-              {
-                "hours": "144h",
-                "discipline_name": "Medicina Integrada IV"
-              },
-              {
-                "hours": "108h",
-                "discipline_name": "Raciocínio Clínico Colaborativo VIII"
-              }
-            ]
-          },
-          {
-            "group_title": "COMPETÊNCIAS MÉDICAS E PESSOAIS",
-            "disciplines": [
-              {
-                "hours": "72h",
-                "discipline_name": "Habilidades Médicas VIII"
-              },
-              {
-                "hours": "72h",
-                "discipline_name": "Habilidades Procedurais e Cirúrgicas IV"
-              },
-              {
-                "hours": "18h",
-                "discipline_name": "Desenvolvimento Pessoal, Profissional e Ético VIII"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "INTEGRAÇÃO AO SUS",
-            "disciplines": [
-              {
-                "hours": "252h",
-                "discipline_name": "Práticas Médicas e Interprofissionais (Extensão*) VIII"
-              }
-            ]
-          }
-        ]
+        "eyebrow": "",
+        "total_hours": "",
+        "title": "",
+        "visible_groups": [],
+        "extra_groups": []
       },
       {
         "unit_key": "internato",
         "tab_label": "Internato",
-        "eyebrow": "INTERNATO",
-        "total_hours": "2880h",
-        "title": "Internato",
-        "visible_groups": [
-          {
-            "group_title": "9º PERÍODO",
-            "disciplines": [
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde da Mulher e da Criança I (120h+120h)"
-              },
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde da Família e da Comunidade I + Saúde Mental I (120h+120h)"
-              },
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde do Adulto I"
-              }
-            ]
-          }
-        ],
-        "extra_groups": [
-          {
-            "group_title": "10º PERÍODO",
-            "disciplines": [
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde da Mulher e da Criança II (120h+120h)"
-              },
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde da Família e da Comunidade II + Saúde Mental II (120h+120h)"
-              },
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde do Adulto II"
-              }
-            ]
-          },
-          {
-            "group_title": "11º PERÍODO",
-            "disciplines": [
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde da Mulher e da Criança III (120h+120h)"
-              },
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde da Família e da Comunidade III + Saúde do Idoso I (120h+120h)"
-              },
-              {
-                "hours": "240h",
-                "discipline_name": "Urgências e Emergências I"
-              }
-            ]
-          },
-          {
-            "group_title": "12º PERÍODO",
-            "disciplines": [
-              {
-                "hours": "240h",
-                "discipline_name": "Estágio Eletivo"
-              },
-              {
-                "hours": "240h",
-                "discipline_name": "Saúde da Família e da Comunidade IV + Saúde do Idoso II (120h+120h)"
-              },
-              {
-                "hours": "240h",
-                "discipline_name": "Urgência e Emergência II"
-              }
-            ]
-          },
-          {
-            "group_title": "UNIDADES CURRICULARES OPTATIVAS",
-            "disciplines": [
-              {
-                "hours": "80h",
-                "discipline_name": "LIBRAS"
-              },
-              {
-                "hours": "80h",
-                "discipline_name": "Inglês Instrumental"
-              }
-            ]
-          },
-          {
-            "group_title": "UNIDADES CURRICULARES ELETIVAS",
-            "disciplines": [
-              {
-                "hours": "36h",
-                "discipline_name": "Tópicos Especiais em Medicina I"
-              },
-              {
-                "hours": "36h",
-                "discipline_name": "Tópicos Especiais em Medicina II"
-              },
-              {
-                "hours": "36h",
-                "discipline_name": "Tópicos Especiais em Medicina III"
-              },
-              {
-                "hours": "36h",
-                "discipline_name": "Tópicos Especiais em Medicina IV"
-              }
-            ]
-          }
-        ]
+        "eyebrow": "",
+        "total_hours": "",
+        "title": "",
+        "visible_groups": [],
+        "extra_groups": []
       }
     ]
   }

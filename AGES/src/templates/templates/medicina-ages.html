@@ -1,0 +1,21 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Medicina - AGES
+-->
+{% extends "./layouts/base.html" %}
+
+{% block main_content %}
+  {% module "processo_seletivo" path="../modules/processo-seletivo.module" %}
+  {% module "sobre_instituicao" path="../modules/sobre-instituicao.module" %}
+  {% module "nosso_dna" path="../modules/nosso-dna.module" %}
+  {% module "matriz_curricular" path="../modules/matriz-curricular.module" %}
+  {% module "corpo_docente" path="../modules/corpo-docente.module" %}
+  {% module "campus" path="../modules/campus.module" %}
+  {% module "metodologia" path="../modules/metodologia.module" %}
+  {% module "ecossistema" path="../modules/ecossistema.module" %}
+  {% module "financiamentos" path="../modules/financiamentos.module" %}
+  {% module "grupo_inspirali" path="../modules/grupo-inspirali.module" %}
+  {% module "seu_futuro" path="../modules/seu-futuro.module" %}
+  {% module "faq_contato" path="../modules/faq-contato.module" %}
+{% endblock %}

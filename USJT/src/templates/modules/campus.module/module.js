@@ -169,7 +169,7 @@
         if (photo.type === "video") {
           const playIcon = document.createElement("img");
           playIcon.className = "campus-gallery__play";
-          playIcon.src = window.UAM_PLAY_ICON_URL || "";
+          playIcon.src = window.USJT_PLAY_ICON_URL || "";
           playIcon.alt = "";
           playIcon.setAttribute("aria-hidden", "true");
           slide.appendChild(playIcon);
@@ -184,7 +184,7 @@
         btn.type = "button";
         btn.className = "campus-thumb" + (i === 0 ? " is-active" : "") + (photo.type === "video" ? " campus-thumb--video" : "");
         btn.setAttribute("data-gallery-thumb", String(i));
-        const playIconHtml = photo.type === "video" ? '<img class="campus-thumb__play" src="' + (window.UAM_PLAY_ICON_URL || "") + '" alt="" aria-hidden="true" />' : "";
+        const playIconHtml = photo.type === "video" ? '<img class="campus-thumb__play" src="' + (window.USJT_PLAY_ICON_URL || "") + '" alt="" aria-hidden="true" />' : "";
         btn.innerHTML = '<img class="campus-thumb__photo" src="' + photo.src + '" alt="" loading="lazy" />' + playIconHtml + '<span class="campus-thumb__label">' + photo.label + "</span>";
         thumbsList.appendChild(btn);
       });

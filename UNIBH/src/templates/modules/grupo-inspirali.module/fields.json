@@ -4,10 +4,13 @@
     "label": "Logo Inspirali + Parceiro acadêmico (imagem única, ex.: Inspirali + Excelência Acadêmica Einstein)",
     "type": "image",
     "default": {
-      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/inspirali-einstein-lockup.png",
+      "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/shared/inspirali-einstein-lockup.png",
       "alt": "Inspirali — Excelência Acadêmica Einstein",
-      "width": 650,
-      "height": 302
+      "loading": "lazy",
+      "width": 0,
+      "height": 0,
+      "max_width": 0,
+      "max_height": 0
     }
   },
   {
@@ -20,7 +23,7 @@
     "name": "text",
     "label": "Texto",
     "type": "richtext",
-    "default": "Excelência Técnico-Científica, Humanização e Responsabilidade Social. Essas são as diretrizes das escolas Inspirali, que em sua graduação, contam com a colaboração do Einstein Hospital Israelita, através de um acordo de desenvolvimento de seu plano acadêmico."
+    "default": "<p>Excelência Técnico-Científica, Humanização e Responsabilidade Social. Essas são as diretrizesdas escolas Inspirali, que em sua graduação, contam com a colaboração do Einstein HospitalIsraelita, através de um acordo de desenvolvimento de seu plano acadêmico.</p>"
   },
   {
     "name": "stats",
@@ -62,40 +65,60 @@
     ],
     "default": [
       {
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/field-icons/icon-map-pin.svg",
+          "alt": "",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
         "value": "15",
         "title": "Presença Nacional",
-        "text": "15 instituições de Ensino Superior em pontos estratégicos do país, garantindo uma rede de intercâmbio e estágios.",
-        "icon": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-map-pin.svg",
-          "alt": ""
-        }
+        "text": "<p>15 instituições de Ensino Superior em pontos estratégicos do país, garantindo uma rede de intercâmbio e estágios.</p>"
       },
       {
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/field-icons/icon-users.svg",
+          "alt": "",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
         "value": "+ 1.300",
         "title": "Corpo Docente de Elite",
-        "text": "Mais de 1.300 professores e médicos especialistas dedicados à sua formação e ao acompanhamento próximo do seu desenvolvimento.",
-        "icon": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-users.svg",
-          "alt": ""
-        }
+        "text": "<p>Mais de 1.300 professores e médicos especialistas dedicados à sua formação e ao acompanhamento próximo do seu desenvolvimento.</p>"
       },
       {
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/field-icons/icon-award.svg",
+          "alt": "",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
         "value": "100%",
-        "title": "Graduação<br />Excelência Acadêmica Einstein",
-        "text": "Em um acordo inédito, exclusivo e de longo prazo com o Einstein, a graduação das escolas Inspirali contam com a assessoria e consultoria acadêmica da maior referência em medicina no país.",
-        "icon": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-award.svg",
-          "alt": ""
-        }
+        "title": "GraduaçãoExcelência Acadêmica Einstein",
+        "text": "<p>Em um acordo inédito, exclusivo e de longo prazo com o Einstein, a graduação das escolas Inspirali contam com a assessoria e consultoria acadêmica da maior referência em medicina no país.</p>"
       },
       {
+        "icon": {
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/field-icons/icon-shield-check.svg",
+          "alt": "",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
+        },
         "value": "",
         "title": "Solidez Ecossistema Ânima",
-        "text": "Segurança e transparência de um grupo com Rating AA.br pela Moody's, garantindo a estabilidade da sua jornada de seis anos.",
-        "icon": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-shield-check.svg",
-          "alt": ""
-        }
+        "text": "<p>Segurança e transparência de um grupo com Rating AA.br pela Moody's, garantindo a estabilidade da sua jornada de seis anos.</p>"
       }
     ]
   },
@@ -115,7 +138,7 @@
     "name": "lifelong_text",
     "label": "Texto",
     "type": "richtext",
-    "default": "Nosso compromisso não termina na entrega do diploma. Ao ingressar na Anhembi Morumbi, você se conecta a uma rede que oferece suporte para a aprovação na residência médica, pós-graduação e educação continuada durante toda a sua vida profissional."
+    "default": "<p><div><p class=\"lifelong__label\">LIFELONG LEARNING</p>"
   },
   {
     "name": "timeline_steps",
@@ -152,23 +175,19 @@
     "default": [
       {
         "title": "Graduação",
-        "text": "Formação médica de excelência com infraestrutura premium e corpo docente especializado."
+        "text": "<p>Formação médica de excelência com infraestrutura premium e corpo docente especializado.</p>"
       },
       {
         "title": "Residência Médica",
-        "text": "Suporte dedicado para aprovação e acompanhamento durante a residência."
+        "text": "<p>Suporte dedicado para aprovação e acompanhamento durante a residência.</p>"
       },
       {
         "title": "Pós-Graduação",
-        "text": "Especialização de alto nível para médicos que buscam excelência clínica e científica."
+        "text": "<p>Especialização de alto nível para médicos que buscam excelência clínica e científica.</p>"
       },
       {
         "title": "Educação Continuada",
-        "text": "Uma rede de aprendizado permanente, por toda a sua vida profissional.",
-        "icon": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/field-icons/icon-infinity.svg",
-          "alt": ""
-        }
+        "text": "<p>Uma rede de aprendizado permanente, por toda a sua vida profissional.</p>"
       }
     ]
   },
@@ -195,56 +214,24 @@
     "default": [
       {
         "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-ages.svg",
-          "alt": "Ages"
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/shared/logo-ages.svg",
+          "alt": "Ages",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
         }
       },
       {
         "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-saojudas.svg",
-          "alt": "São Judas"
-        }
-      },
-      {
-        "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unibh.svg",
-          "alt": "UniBH"
-        }
-      },
-      {
-        "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unifacs.svg",
-          "alt": "UNIFACS"
-        }
-      },
-      {
-        "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unifg.svg",
-          "alt": "UniFG"
-        }
-      },
-      {
-        "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unisul.svg",
-          "alt": "UNISUL"
-        }
-      },
-      {
-        "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-anhembi-small.svg",
-          "alt": "Universidade Anhembi Morumbi"
-        }
-      },
-      {
-        "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-unp.svg",
-          "alt": "UNP"
-        }
-      },
-      {
-        "logo": {
-          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UAM-assets/shared/logo-una.svg",
-          "alt": "UNA"
+          "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/shared/logo-ages.svg",
+          "alt": "",
+          "loading": "lazy",
+          "width": 0,
+          "height": 0,
+          "max_width": 0,
+          "max_height": 0
         }
       }
     ]

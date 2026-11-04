@@ -75,40 +75,49 @@
     ],
     "default": [
       {
-        "item_label": "Enem 27.1",
-        "url": {
-          "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18447",
-            "type": "EXTERNAL",
-            "content_id": null
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        }
-      },
-      {
-        "item_label": "Transferência Externa 27.1",
         "url": {
           "url": {
             "href": "https://fichainscricao.inspirali.com/concurso/18503",
-            "type": "EXTERNAL",
-            "content_id": null
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        }
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Transferência Externa 27.1"
       },
       {
-        "item_label": "Portador de Diploma 27.1",
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18438",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Certificações Internacionais 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18447",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Processo Enem 27.1"
+      },
+      {
         "url": {
           "url": {
             "href": "https://fichainscricao.inspirali.com/concurso/18430",
-            "type": "EXTERNAL",
-            "content_id": null
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        }
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Portador de Diploma 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://www.unifacs.br/inscreva/18421",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Destrancamento Medicina 27.1"
       }
     ]
   },

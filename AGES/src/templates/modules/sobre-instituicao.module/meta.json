@@ -1,9 +1,9 @@
 {
-  "label": "Sobre a Instituição - UAM",
+  "label": "Sobre a Instituição - AGES",
   "css_assets": [],
   "external_js": [],
   "global": false,
-  "help_text": "Seção \"Sobre a Anhembi Morumbi\" com vídeo institucional.",
+  "help_text": "Seção \"Sobre a AGES\" com vídeo institucional.",
   "host_template_types": ["PAGE"],
   "js_assets": [],
   "other_assets": [],

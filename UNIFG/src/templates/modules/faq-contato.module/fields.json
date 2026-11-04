@@ -1,6 +1,16 @@
 [
-  { "name": "eyebrow", "label": "Eyebrow", "type": "text", "default": "PERGUNTAS FREQUENTES" },
-  { "name": "title", "label": "Título", "type": "text", "default": "Tem alguma dúvida sobre a Medicina Anhembi Morumbi?" },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "PERGUNTAS FREQUENTES"
+  },
+  {
+    "name": "title",
+    "label": "Título",
+    "type": "text",
+    "default": "Tem alguma dúvida sobre a Medicina UniFG?"
+  },
   {
     "name": "show_form",
     "label": "Mostrar formulário de contato",
@@ -8,31 +18,88 @@
     "default": false,
     "help_text": "Desativado por enquanto — o formulário será reativado no futuro. Quando ativar, os dropdowns deixam de ficar centralizados e voltam a dividir espaço com o formulário."
   },
-  { "name": "form_title", "label": "Texto acima do formulário", "type": "text", "default": "É muito fácil! Preencha o formulário e nós entraremos em contato com você!" },
+  {
+    "name": "form_title",
+    "label": "Texto acima do formulário",
+    "type": "text",
+    "default": "É muito fácil! Preencha o formulário e nós entraremos em contato com você!"
+  },
   {
     "name": "contact_form",
     "label": "Formulário HubSpot",
     "type": "form",
-    "default": { "response_type": "inline", "message": "Obrigado! Entraremos em contato em breve." },
+    "default": {
+      "response_type": "inline",
+      "message": "Obrigado! Entraremos em contato em breve."
+    },
     "help_text": "Selecione o formulário do HubSpot criado para captar esses leads."
   },
-  { "name": "form_disclaimer", "label": "Aviso de privacidade", "type": "richtext", "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"https://portal.anhembi.br/canal-de-privacidade/\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>." },
+  {
+    "name": "form_disclaimer",
+    "label": "Aviso de privacidade",
+    "type": "richtext",
+    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"#\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
+  },
   {
     "name": "faq_items",
     "label": "Perguntas frequentes",
     "type": "group",
-    "occurrence": { "min": 1, "max": 20, "default": 6 },
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 6
+    },
     "children": [
-      { "name": "question", "label": "Pergunta", "type": "text", "default": "" },
-      { "name": "answer", "label": "Resposta", "type": "richtext", "default": "" }
+      {
+        "name": "question",
+        "label": "Pergunta",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "answer",
+        "label": "Resposta",
+        "type": "richtext",
+        "default": ""
+      }
     ],
     "default": [
-      { "question": "Como fazer faculdade de Medicina em São Paulo?", "answer": "<p>Se você escolheu estudar na Anhembi Morumbi, o primeiro passo é escolher a melhor forma de ingresso para o seu caso. A forma mais conhecida costuma ser o vestibular, prova que aborda conhecimentos aprendidos no ensino médio.</p><p>A Anhembi Morumbi conta com um vestibular exclusivo e especial para Medicina. Para participar, você precisa:</p><ol><li><strong>Fazer sua inscrição.</strong></li><li><strong>Conferir o edital com informações importantes sobre o processo seletivo.</strong></li><li><strong>Realizar o vestibular.</strong></li><li><strong>Verificar o edital com o resultado.</strong></li><li><strong>Realizar sua matrícula.</strong></li></ol><p>Também é possível optar por novas formas de ingresso como: transferência, portador de diploma, dentre outros. Basta acessar o menu principal e verificar editais e informações sobre cada processo em aberto.</p>" },
-      { "question": "É possível se transferir para a Medicina Anhembi Morumbi?", "answer": "<p>Sim, você pode fazer a transferência do curso para a Anhembi Morumbi, basta seguir alguns passos:</p><ul><li><strong>Faça inscrição:</strong> preencha o formulário com dados pessoais, curso, unidade em que deseja estudar e selecione transferência como forma de ingresso.</li><li><strong>Envie a documentação:</strong> Encaminhar os documentos de acordo com o solicitado em edital.</li><li><strong>Confirmação:</strong> ao ser aprovado, será necessário validar que está de acordo com a análise curricular.</li><li><strong>Faça matrícula:</strong> assine o contrato para se matricular e comece sua jornada na Anhembi Morumbi!</li></ul>" },
-      { "question": "Como funciona o FIES para Medicina?", "answer": "<p>Esse é um programa do governo federal que oferece financiamento para estudantes que desejam cursar o ensino superior em instituições privadas. Sendo assim, o aluno de Medicina pode financiar até 100% do curso e só começa a pagar depois de formado.</p><p>A cada semestre, o Fies abre inscrições para ajudar os selecionados a pagarem as mensalidades do curso com o apoio do Governo Federal.</p><p>É necessário ter realizado Enem a partir de 2010, fazer inscrição no programa, escolher curso, Instituição de Ensino Superior e turno. Depois, é só aguardar o resultado.</p>" },
-      { "question": "Como funciona o Prouni para Medicina?", "answer": "<p>Trata-se de um sistema que concede bolsas de estudos integrais ou de 50% em instituições privadas. Quanto melhor seu desempenho na prova do Enem, maior a chance de conseguir o benefício integral.</p><p>A Anhembi Morumbi é uma Instituição de Ensino Superior de São Paulo que aceita estudantes do Prouni para a graduação em Medicina.</p>" },
-      { "question": "Por que estudar Medicina em São Paulo?", "answer": "<p>São Paulo é uma das maiores metrópoles do país, o que permite uma vivência. O Campus Mooca é bem localizado na Zona Leste de São Paulo, perto do metrô (estações Brás e Bresser - Mooca) e do trem (estação Brás), além do fácil acesso de ônibus. O bairro apresenta uma série de atividades culturais e uma grande variedade gastronômica, além de contar com ótimas residências médicas para aperfeiçoamento profissional.</p><p>Já São José dos Campos, onde fica a outra unidade de Medicina da Anhembi Morumbi, está situada entre duas grandes cidades do país, São Paulo e Rio de Janeiro. Trata-se de uma cidade moderna, bem estruturada, com segurança e está entre as 10 melhores do país em educação. A região ainda conta com o Centro Tecnológico Aeroespacial (CTA), Instituto Nacional de Pesquisas Espaciais (INPE), Embraer e outras multinacionais.</p><p>Piracicaba, localidade da terceira unidade de Medicina da Anhembi, é a principal cidade de sua região metropolitana, que fica a noroeste da capital paulista e um dos primeiros polos industriais do país. Apesar de desenvolvida, a área precisa de mais médicos, uma boa oportunidade para os estudantes de ingressarem no mercado.</p>" },
-      { "question": "Quanto ganha um médico recém-formado?", "answer": "<p>De acordo com a Demografia Médica da Associação Médica Brasileira de 2023 a renda mensal média de ganhos é de <strong>R$ 34,1 mil*</strong>.</p><p>Para médicos em início de carreira, a renda média mensal é de <strong>R$ 12,2 mil*</strong>.</p><p>*Demografia Médica da Associação Médica Brasileira (Capítulo 10 – Renda declarada dos médicos, página 165).</p>" }
+      {
+        "question": "Por que fazer faculdade de Medicina na Bahia?",
+        "answer": ""
+      },
+      {
+        "question": "Quanto dura a faculdade de Medicina?",
+        "answer": ""
+      },
+      {
+        "question": "Como fazer faculdade de Medicina na Bahia?",
+        "answer": ""
+      },
+      {
+        "question": "É possível se transferir para a Medicina UniFG?",
+        "answer": ""
+      },
+      {
+        "question": "Como financiar a faculdade de Medicina?",
+        "answer": ""
+      },
+      {
+        "question": "Como fazer Medicina pelo Fies?",
+        "answer": ""
+      },
+      {
+        "question": "Como funciona o Prouni para Medicina?",
+        "answer": ""
+      },
+      {
+        "question": "Como fazer faculdade de Medicina?",
+        "answer": ""
+      },
+      {
+        "question": "Quanto ganha um médico recém-formado?",
+        "answer": ""
+      }
     ]
   }
 ]
