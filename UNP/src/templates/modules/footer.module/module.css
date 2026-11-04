@@ -26,7 +26,7 @@
 .footer-invitation__title {
   flex: 1 1 480px;
   color: var(--text-inverted);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   font-size: var(--font-size-3xl);
   line-height: var(--line-height-xl);
   max-width: 772px;

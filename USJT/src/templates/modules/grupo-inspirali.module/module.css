@@ -97,7 +97,7 @@
 
 .inspirali-header__title {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-brand);
   max-width: 606px;
@@ -147,7 +147,7 @@
 
 .lifelong__sublabel {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   color: var(--text-primary-dark);
 }
@@ -193,7 +193,7 @@
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-relaxed);
   flex-shrink: 0;
 }

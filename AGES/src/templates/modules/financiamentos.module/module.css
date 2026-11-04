@@ -83,7 +83,7 @@
 .financing-highlight__value {
   color: var(--text-inverted);
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
 }
 
