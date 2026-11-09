@@ -38,7 +38,7 @@
     "name": "form_disclaimer",
     "label": "Aviso de privacidade",
     "type": "richtext",
-    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"#\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
+    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"https://www.usjt.br/canal-de-privacidade/\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
   },
   {
     "name": "faq_items",
@@ -65,44 +65,44 @@
     ],
     "default": [
       {
-        "question": "Por que fazer Medicina em SP?",
-        "answer": ""
+        "question": "Por que fazer faculdade de Medicina em SP?",
+        "answer": "<p>São Paulo é uma excelente escolha para quem quer fazer uma faculdade de Medicina. A localização oferece um mercado de trabalho cheio de oportunidades.</p><p>Cubatão, cidade em que a São Judas oferece o curso, tem o menor custo de vida da região e fica a menos de duas horas da capital do Estado.</p>"
       },
       {
         "question": "Quanto tempo dura uma faculdade de Medicina?",
-        "answer": ""
+        "answer": "<p>A graduação dura seis anos. Durante esse tempo, os alunos aprendem na teoria e na prática, cumprindo estágios clínicos e vivendo situações reais da rotina médica.</p><p>Após o curso, o aluno formado fica pronto para atuar nas mais variadas instalações da área da saúde, como hospitais, consultórios e clínicas.</p>"
       },
       {
         "question": "Como fazer faculdade de Medicina em SP?",
-        "answer": ""
+        "answer": "<p>Se você escolheu estudar na São Judas, o primeiro passo é escolher a melhor forma de ingresso para o seu caso. A forma mais conhecida costuma ser o vestibular, prova que aborda conhecimentos aprendidos no ensino médio.</p><p>A São Judas conta com um vestibular especial e exclusivo para Medicina. Para participar é preciso:</p><ol><li><strong>Fazer inscrição.</strong></li><li><strong>Conferir o edital com informações importantes sobre o processo seletivo.</strong></li><li><strong>Realizar o vestibular.</strong></li><li><strong>Verificar o edital com o resultado.</strong></li><li><strong>Realizar matrícula.</strong></li></ol><p>Também é possível optar por novas formas de ingresso como: transferência, portador de diploma, dentre outros. Basta acessar o menu principal e verificar editais e informações sobre cada processo em aberto.</p>"
       },
       {
         "question": "É possível se transferir para a Medicina São Judas?",
-        "answer": ""
+        "answer": "<p>Sim, você pode fazer a transferência de graduação para São Judas. É preciso apenas seguir estes passos:</p><ul><li><strong>Faça inscrição:</strong> preencha o formulário com dados pessoais, curso, unidade em que deseja estudar e selecione transferência como forma de ingresso.</li><li><strong>Envie a documentação:</strong> é necessário encaminhar seu histórico oficial, fornecido pela instituição de origem, para análise.</li><li><strong>Acompanhe o processo:</strong> verifique seu e-mail. Nosso time entrará em contato com você.</li><li><strong>Confirmação:</strong> ao ser aprovado, será preciso validar que está de acordo com a análise curricular.</li><li><strong>Faça matrícula:</strong> assine o contrato para se matricular e comece sua jornada na São Judas!</li></ul>"
       },
       {
         "question": "Como financiar faculdade de Medicina?",
-        "answer": ""
+        "answer": "<p>Na São Judas, é possível custear seu curso de Medicina de duas maneiras simples. Veja:</p><ul><li><strong>Fies:</strong> você tem até 14 anos para pagar e faz isso apenas após se formar, com juros baixos ou zero.</li><li><strong>Pravaler:</strong> você paga 1 semestre em 1 ano e pode investir o resto do seu dinheiro da forma que quiser! Contando ainda com condições especiais até o fim do curso.</li></ul>"
       },
       {
-        "question": "Como funciona o Fies para Medicina?",
-        "answer": ""
+        "question": "Como funciona o FIES para Medicina?",
+        "answer": "<p>Esse é um programa do governo federal que oferece financiamento para estudantes que desejam cursar o ensino superior em instituições privadas. Sendo assim, o aluno de Medicina pode financiar até 100% do curso e só começa a pagar depois de formado.</p><p>A cada semestre, o Fies abre inscrições para ajudar os selecionados a pagarem as mensalidades do curso com o apoio do Governo Federal.</p><p>É necessário ter realizado Enem a partir de 2010, fazer inscrição no programa, escolher curso, Instituição de Ensino Superior e turno. Depois, é só aguardar o resultado.</p>"
       },
       {
         "question": "Como funciona o Prouni para Medicina?",
-        "answer": ""
+        "answer": "<p>Esse é um programa que oferece bolsas integrais ou de 50% em instituições privadas de ensino superior. De acordo com seu desempenho na prova do Enem, sua chance de conseguir o benefício integral é maior.</p><p>A São Judas é uma Instituição de Ensino Superior de SP que oferece financiamento via Prouni para a graduação em Medicina.</p>"
       },
       {
         "question": "Como passar em Medicina?",
-        "answer": ""
+        "answer": "<p>Para começar o curso, é preciso realizar o vestibular de Medicina São Judas. Confira dicas para se dar bem na prova:</p><ul><li><strong>Leia o Edital:</strong> o documento contém informações importantes, como data, local, formato, conteúdo e critérios de avaliação.</li><li><strong>Estude de forma estratégica:</strong> crie um bom plano de estudos, organizando o tempo equilibradamente entre cada disciplina.</li><li><strong>Fique calmo e confie em você:</strong> procure ter tranquilidade no vestibular, lendo as questões atentamente.</li><li><strong>Chegue com antecedência:</strong> no dia da prova, evite atrasos ou imprevistos se programando antecipadamente.</li></ul>"
       },
       {
         "question": "Por que estudar Medicina em Cubatão?",
-        "answer": ""
+        "answer": "<p>Cubatão é a cidade com o menor custo de vida em relação à região, e fica localizada a apenas 20 minutos da cidade de Santos, propiciando todas as opções de lazer que o litoral paulista oferece. Além disso, fica a menos de 2 horas da capital do Estado.</p><p>É considerada uma cidade bastante segura, oferece diversas opções de lazer e está em crescimento, com a população duplicando de 1990 para os dias de hoje. A fama de cidade mais poluída do Brasil foi substituída por programas de recuperação ambiental reconhecidos pela ONU, o que contribui para seu desenvolvimento atual.</p>"
       },
       {
         "question": "Quanto ganha um médico recém-formado?",
-        "answer": ""
+        "answer": "<p>De acordo com a Demografia Médica da Associação Médica Brasileira de 2023 a renda mensal média de ganhos é de <strong>R$ 34,1 mil*</strong>.</p><p>Para médicos em início de carreira, a renda média mensal é de <strong>R$ 12,2 mil*</strong>.</p><p>*Demografia Médica da Associação Médica Brasileira (Capítulo 10 – Renda declarada dos médicos, página 165).</p>"
       }
     ]
   }

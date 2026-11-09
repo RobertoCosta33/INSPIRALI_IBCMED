@@ -74,7 +74,7 @@
       {
         "url": {
           "url": {
-            "href": "#",
+            "href": "https://fichainscricao.inspirali.com/concurso/18416",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -86,26 +86,50 @@
       {
         "url": {
           "url": {
-            "href": "#",
+            "href": "https://fichainscricao.inspirali.com/concurso/18437",
             "type": "EXTERNAL",
             "content_id": null
           },
           "open_in_new_tab": false,
           "no_follow": false
         },
-        "item_label": "Transferência Externa 27.1 - Prova 19/11"
+        "item_label": "Certificações Internacionais 27.1"
       },
       {
         "url": {
           "url": {
-            "href": "#",
+            "href": "https://fichainscricao.inspirali.com/concurso/18502",
             "type": "EXTERNAL",
             "content_id": null
           },
           "open_in_new_tab": false,
           "no_follow": false
         },
-        "item_label": "Portador de Diploma 27.1"
+        "item_label": "Transferência Externa 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18522",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "item_label": "Portador de Diploma 27.1 - Campus Vespasiano"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://www.unibh.br/inscreva/18420",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "item_label": "Destrancamento Medicina 27.1"
       }
     ]
   },

@@ -38,7 +38,7 @@
     "name": "form_disclaimer",
     "label": "Aviso de privacidade",
     "type": "richtext",
-    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"#\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
+    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"https://www.unibh.br/canal-de-privacidade/\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
   },
   {
     "name": "faq_items",
@@ -66,39 +66,39 @@
     "default": [
       {
         "question": "Quanto tempo leva a faculdade de Medicina?",
-        "answer": ""
+        "answer": "<p>A graduação tem duração de 12 semestres, ou seja, 6 anos. No decorrer do curso, o estudante aprende teoria e prática. Além das aulas, faz estágios clínicos e participa de situações médicas reais.</p><p>Com a conclusão da graduação, o profissional estará apto para trabalhar nas mais diversas instalações da área da saúde, tais como: hospitais, consultórios e clínicas.</p>"
       },
       {
-        "question": "Como fazer faculdade de Medicina em Minas Gerais",
-        "answer": ""
+        "question": "Como fazer faculdade de Medicina em Minas Gerais?",
+        "answer": "<p>Se você escolheu estudar no UniBH, o primeiro passo é escolher a melhor forma de ingresso para o seu caso. A forma mais conhecida costuma ser o vestibular, prova que aborda conhecimentos aprendidos no ensino médio.</p><p>No UniBH, a seleção para o curso de Medicina é realizada por meio de um vestibular exclusivo, seguindo estas etapas:</p><ol><li><strong>Inscrição.</strong></li><li><strong>Consulta ao edital com informações essenciais sobre o processo seletivo.</strong></li><li><strong>Realização da prova do vestibular.</strong></li><li><strong>Verificação do edital com os resultados.</strong></li><li><strong>Efetivação da matrícula.</strong></li></ol><p>Também é possível optar por novas formas de ingresso como: transferência, portador de diploma, dentre outros. Basta acessar o menu principal e verificar editais e informações sobre cada processo em aberto.</p>"
       },
       {
         "question": "É possível se transferir para a Medicina UniBH?",
-        "answer": ""
+        "answer": "<p>Sim, você pode fazer a transferência da graduação para o UniBH, basta seguir alguns passos:</p><ul><li><strong>Faça inscrição:</strong> preencha o formulário com dados pessoais, curso, unidade em que deseja estudar e selecione transferência como forma de ingresso.</li><li><strong>Envie a documentação:</strong> é necessário encaminhar seu histórico oficial, fornecido pela instituição de origem, para análise.</li><li><strong>Acompanhe o processo:</strong> fique atento ao seu e-mail. Nosso time entrará em contato com você.</li><li><strong>Confirmação:</strong> ao ser aprovado, é preciso validar que está de acordo com a análise curricular.</li><li><strong>Faça matrícula:</strong> assine o contrato para se matricular e comece sua jornada no UniBH.</li></ul>"
       },
       {
         "question": "Como financiar faculdade de Medicina?",
-        "answer": ""
+        "answer": "<p>No UniBH, é possível custear o curso de duas maneiras. Veja quais:</p><ul><li><strong>FIES:</strong> você tem até 14 anos para pagar e faz isso só depois de se formar, com juros baixos ou zero.</li><li><strong>Pravaler:</strong> você paga 1 semestre em 1 ano e pode investir o resto do seu dinheiro da forma que quiser! E o melhor: com condições especiais até o final do curso.</li></ul>"
       },
       {
         "question": "Como conseguir o Fies para Medicina?",
-        "answer": ""
+        "answer": "<p>Esse é um programa do governo federal que oferece financiamento para estudantes que desejam cursar o ensino superior em instituições privadas. Sendo assim, o aluno de Medicina pode financiar até 100% do curso e só começa a pagar depois de formado.</p><p>A cada semestre, o Fies abre inscrições para ajudar os selecionados a pagarem as mensalidades do curso com o apoio do Governo Federal.</p><p>É necessário ter realizado Enem a partir de 2010, fazer inscrição no programa, escolher curso, Instituição de Ensino Superior e turno. Depois, é só aguardar o resultado.</p>"
       },
       {
         "question": "Como funciona o Prouni para Medicina?",
-        "answer": ""
+        "answer": "<p>Esse programa do governo federal oferece financiamento para que estudantes cursem o ensino superior em instituições privadas. Dessa maneira, o aluno de Medicina pode financiar até 100% da graduação e começa a pagar apenas depois da formatura.</p><p>Para isso, é preciso ter realizado Enem a partir de 2010, fazer inscrição no programa, escolher curso, Instituição de Ensino Superior e turno. Depois, é só aguardar o resultado.</p>"
       },
       {
         "question": "Como passar em Medicina?",
-        "answer": ""
+        "answer": "<p>Para começar a graduação, é preciso fazer o vestibular de Medicina UniBH e alcançar bom desempenho. Confira dicas para ir bem na prova:</p><ul><li><strong>Leia o Edital:</strong> o documento tem informações importantes sobre o vestibular, como data, local, formato, conteúdo e critérios de avaliação.</li><li><strong>Estude de forma estratégica:</strong> faça um plano de estudos eficiente, distribuindo o tempo de forma equilibrada entre disciplinas.</li><li><strong>Fique calmo e confie em você:</strong> procure se manter tranquilo e leia as perguntas com atenção.</li><li><strong>Chegue com antecedência:</strong> no dia do vestibular, programe-se para evitar atrasos ou imprevistos.</li></ul>"
       },
       {
         "question": "Por que estudar em Belo Horizonte?",
-        "answer": ""
+        "answer": "<p>Buritis, na região Oeste de Belo Horizonte, é um bairro jovem e dinâmico, conhecido por sua infraestrutura moderna. Oferece ampla gama de serviços como supermercados, farmácias, restaurantes e academias, além de parques e áreas verdes. Abriga várias instituições de ensino, tornando-se ideal para estudantes. Bem servido por linhas de ônibus e ciclovias, facilita o deslocamento. Com muitos condomínios fechados e monitoramento constante, é um local seguro.</p><p>Buritis combina modernidade, conveniência e qualidade de vida, sendo uma excelente escolha para morar ou estudar na capital mineira.</p>"
       },
       {
         "question": "Quanto ganha um médico recém-formado?",
-        "answer": ""
+        "answer": "<p>De acordo com a Demografia Médica da Associação Médica Brasileira de 2023 a renda mensal média de ganhos é de <strong>R$ 34,1 mil*</strong>.</p><p>Para médicos em início de carreira, a renda média mensal é de <strong>R$ 12,2 mil*</strong>.</p><p>*Demografia Médica da Associação Médica Brasileira (Capítulo 10 – Renda declarada dos médicos, página 165).</p>"
       }
     ]
   }

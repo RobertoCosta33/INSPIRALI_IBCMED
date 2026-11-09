@@ -38,7 +38,7 @@
     "name": "form_disclaimer",
     "label": "Aviso de privacidade",
     "type": "richtext",
-    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"#\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
+    "default": "Prometemos não te mandar SPAM. Usaremos seus dados para compartilhar informações solicitadas através deste formulário. Você pode cancelar o envio da divulgação a qualquer momento, diretamente nas mensagens encaminhadas por nós através do nosso <a href=\"https://www.unp.br/canal-de-privacidade/\" target=\"_blank\" rel=\"noopener\">canal de privacidade</a>."
   },
   {
     "name": "faq_items",
@@ -66,43 +66,43 @@
     "default": [
       {
         "question": "Por que fazer Medicina na UnP?",
-        "answer": ""
+        "answer": "<p>Oferecemos um projeto pedagógico de excelência, corpo docente qualificado e práticas reais desde o início da graduação.</p><p>Esse é o único curso de Medicina conceito 4 pelo MEC no RN. E conta com laboratórios bem equipados, Hospital Simulado, Centro Integrado de Saúde para práticas multidisciplinares e convênios com o SUS. Além de parceria com os melhores hospitais da Grande Natal.</p>"
       },
       {
         "question": "Quanto tempo dura uma faculdade de Medicina?",
-        "answer": ""
+        "answer": "<p>O curso de Medicina tem duração de 12 semestres, totalizando seis anos de duração. Durante a graduação, os estudantes aprendem na teoria e na prática, completando estágios clínicos para vivenciar situações reais da rotina profissional.</p><p>Depois de concluir o curso, o formando estará pronto para trabalhar em diferentes locais, como hospitais, consultórios e clínicas.</p>"
       },
       {
-        "question": "Como cursar Medicina?",
-        "answer": ""
+        "question": "Como cursar medicina?",
+        "answer": "<p>Se você escolheu estudar na UnP, o primeiro passo é escolher a melhor forma de ingresso para o seu caso. A forma mais conhecida costuma ser o vestibular, prova que aborda conhecimentos aprendidos no ensino médio.</p><p>A UnP conta com um vestibular exclusivo e especial para Medicina. Para participar, você precisa:</p><ol><li><strong>Fazer sua inscrição.</strong></li><li><strong>Conferir o edital com informações importantes sobre o processo seletivo.</strong></li><li><strong>Realizar o vestibular.</strong></li><li><strong>Verificar o edital com o resultado.</strong></li><li><strong>Realizar sua matrícula.</strong></li></ol><p>Também é possível optar por novas formas de ingresso como: transferência, portador de diploma, dentre outros. Basta acessar o menu principal e verificar editais e informações sobre cada processo em aberto.</p>"
       },
       {
         "question": "É possível se transferir para a Medicina UnP?",
-        "answer": ""
+        "answer": "<p>Sim, você pode ingressar na UnP via transferência e iniciar sua jornada aqui. Para isso, é necessário seguir alguns passos simples:</p><ul><li><strong>Inscreva-se:</strong> preencha o formulário com dados pessoais, curso, unidade em que pretende estudar e selecione transferência como forma de ingresso.</li><li><strong>Envie seus documentos:</strong> é preciso enviar o histórico oficial, fornecido pela instituição de origem, para análise.</li><li><strong>Acompanhe o processo:</strong> confira seu e-mail. Nosso time entrará em contato com você.</li><li><strong>Confirmação:</strong> ao ser aprovado, é preciso validar que está de acordo com a análise curricular.</li><li><strong>Faça matrícula:</strong> assine o contrato para se matricular e comece sua graduação na UnP!</li></ul>"
       },
       {
         "question": "Como financiar faculdade de Medicina?",
-        "answer": ""
+        "answer": "<p>Na UnP, o curso de Medicina pode ser financiado de duas maneiras:</p><ul><li><strong>FIES:</strong> esse é um programa de financiamento do governo federal. Ao participar, você tem até 14 anos para pagar e faz isso só depois de se formar, com juros baixos ou zero.</li><li><strong>Pravaler:</strong> trata-se de um programa de financiamento estudantil. Nele, você paga 1 semestre em 1 ano e pode investir o resto do dinheiro da maneira que quiser! E o melhor: com condições especiais até o fim da graduação.</li></ul>"
       },
       {
         "question": "Como conseguir o Fies para Medicina?",
-        "answer": ""
+        "answer": "<p>Esse é um programa do governo federal que oferece financiamento para estudantes que desejam cursar o ensino superior em instituições privadas. Sendo assim, o aluno de Medicina pode financiar até 100% do curso e só começa a pagar depois de formado.</p><p>A cada semestre, o Fies abre inscrições para ajudar os selecionados a pagarem as mensalidades do curso com o apoio do Governo Federal.</p><p>É necessário ter realizado Enem a partir de 2010, fazer inscrição no programa, escolher curso, Instituição de Ensino Superior e turno. Depois, é só aguardar o resultado.</p>"
       },
       {
         "question": "Como funciona o Prouni para Medicina?",
-        "answer": ""
+        "answer": "<p>Esse é um programa que concede bolsas de estudos integrais ou de 50% em instituições privadas. Quanto melhor o desempenho que você tiver na prova do Enem, maior a chance de conseguir o benefício integral.</p><p>A UnP disponibiliza o Prouni como forma de financiamento para estudantes da graduação em Medicina.</p>"
       },
       {
         "question": "Como entrar na faculdade de Medicina?",
-        "answer": ""
+        "answer": "<p>Para passar no curso, é necessário realizar o vestibular de Medicina da UnP. Confira algumas dicas para ir bem na prova:</p><ul><li><strong>Leia o Edital:</strong> o documento conta com informações importantes sobre o vestibular, como data, local, formato, conteúdo e critérios de avaliação.</li><li><strong>Planeje os estudos:</strong> crie um cronograma de estudos eficiente, distribuindo sua rotina de maneira equilibrada entre matérias.</li><li><strong>Fique calmo e confie em você:</strong> leia as perguntas com atenção e de forma tranquila.</li><li><strong>Chegue com antecedência:</strong> no dia da prova, programe-se para evitar atrasos e imprevistos.</li></ul>"
       },
       {
         "question": "Por que estudar Medicina em Natal?",
-        "answer": ""
+        "answer": "<p>Natal é a capital do Estado do Rio Grande do Norte, conhecida por sua hospitalidade e suas praias lindas. O local é ótimo para quem quer fazer faculdade de medicina, já que conta com a infraestrutura de uma capital, com restaurantes e muitas possibilidades de lazer, mas a tranquilidade de uma cidade pequena, com menos trânsito do que outras capitais. O curso de medicina da UnP fica na unidade na Avenida Salgado Filho, uma das maiores vias de Natal, o que possibilita diversas opções de transporte público.</p>"
       },
       {
         "question": "Quanto ganha um médico recém-formado?",
-        "answer": ""
+        "answer": "<p>De acordo com a Demografia Médica da Associação Médica Brasileira de 2023 a renda mensal média de ganhos é de <strong>R$ 34,1 mil*</strong>.</p><p>Para médicos em início de carreira, a renda média mensal é de <strong>R$ 12,2 mil*</strong>.</p><p>*Demografia Médica da Associação Médica Brasileira (Capítulo 10 – Renda declarada dos médicos, página 165).</p>"
       }
     ]
   }

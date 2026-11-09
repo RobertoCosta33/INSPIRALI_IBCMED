@@ -74,7 +74,19 @@
       {
         "url": {
           "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18399",
+            "href": "https://fichainscricao.inspirali.com/concurso/18499",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "item_label": "Transferência Externa 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18448",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -86,19 +98,7 @@
       {
         "url": {
           "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18408",
-            "type": "EXTERNAL",
-            "content_id": null
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        },
-        "item_label": "Transferência Externa 27.1 - Prova 19/11"
-      },
-      {
-        "url": {
-          "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18429",
+            "href": "https://fichainscricao.inspirali.com/concurso/18518",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -106,6 +106,18 @@
           "no_follow": false
         },
         "item_label": "Portador de Diploma 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://www.ages.edu.br/inscreva/18417",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "item_label": "Destrancamento Medicina 27.1"
       }
     ]
   },

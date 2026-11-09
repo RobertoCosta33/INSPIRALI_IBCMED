@@ -74,19 +74,7 @@
       {
         "url": {
           "url": {
-            "href": "#",
-            "type": "EXTERNAL",
-            "content_id": null
-          },
-          "open_in_new_tab": false,
-          "no_follow": false
-        },
-        "item_label": "Processo Enem 27.1"
-      },
-      {
-        "url": {
-          "url": {
-            "href": "#",
+            "href": "https://fichainscricao.inspirali.com/concurso/18504",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -98,7 +86,43 @@
       {
         "url": {
           "url": {
-            "href": "#",
+            "href": "https://fichainscricao.inspirali.com/concurso/18449",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "item_label": "Processo Enem 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18220",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "item_label": "Programa de Bolsa Mais Médicos 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18461",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "item_label": "Transferência Interna entre campus 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18521",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -106,6 +130,18 @@
           "no_follow": false
         },
         "item_label": "Portador de Diploma 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://centrouniversitariounifg.edu.br/inscreva/18422",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "item_label": "Destrancamento Medicina 27.1"
       }
     ]
   },
