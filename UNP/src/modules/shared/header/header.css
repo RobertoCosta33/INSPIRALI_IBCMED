@@ -46,13 +46,6 @@
   flex-shrink: 0;
 }
 
-.institutional-header__nav-divider {
-  width: 1px;
-  height: 24px;
-  background-color: var(--surface-brand-primary-dark);
-  opacity: 0.4;
-}
-
 .institutional-header__stack {
   display: flex;
   flex-direction: column;
@@ -86,22 +79,6 @@
   width: 1px;
   height: 8px;
   background-color: #7a7a7a;
-}
-
-.institutional-header__link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-micro);
-  padding: var(--spacing-micro);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
-  color: #141414;
-  white-space: nowrap;
-}
-
-.institutional-header__link:hover,
-.institutional-header__link:focus-visible {
-  text-decoration: underline;
 }
 
 .institutional-header__search {

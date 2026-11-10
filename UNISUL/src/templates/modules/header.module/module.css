@@ -39,16 +39,6 @@
   width: auto;
 }
 
-/* Figma: linha divisória de 24px (#313132 a 40%) entre "Sou Candidato" e
-   o botão de busca. */
-.institutional-header__divider {
-  width: 1px;
-  height: 24px;
-  background-color: var(--surface-brand-primary-dark);
-  opacity: 0.4;
-  flex-shrink: 0;
-}
-
 .institutional-header__nav {
   display: flex;
   align-items: center;
@@ -89,22 +79,6 @@
   width: 1px;
   height: 8px;
   background-color: var(--surface-brand-quaternary);
-}
-
-.institutional-header__link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-micro);
-  padding: var(--spacing-micro);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary-dark);
-  white-space: nowrap;
-}
-
-.institutional-header__link:hover,
-.institutional-header__link:focus-visible {
-  text-decoration: underline;
 }
 
 .institutional-header__search {

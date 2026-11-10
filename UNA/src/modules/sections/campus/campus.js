@@ -17,6 +17,22 @@
     });
   }
 
+  function youtubeThumb(videoId) {
+    return "https://img.youtube.com/vi/" + videoId + "/hqdefault.jpg";
+  }
+
+  function videoSlide(videoId, name) {
+    return {
+      type: "video",
+      videoId: videoId,
+      videoUrl: "https://www.youtube.com/watch?v=" + videoId,
+      src: youtubeThumb(videoId),
+      label: "Vídeo institucional",
+      campusLabel: name,
+      alt: "Vídeo institucional do campus " + name,
+    };
+  }
+
   const CAMPUS_GALLERIES = {
     tucurui: buildGallery("tucurui", "Tucuruí", [
       ["Laboratório morfofuncional", "laboratorio-morfofuncional.jpg"],
@@ -26,6 +42,8 @@
       ["Espaço de estudos", "espaco-de-estudos.jpg"],
     ]),
   };
+
+  CAMPUS_GALLERIES.tucurui.push(videoSlide("No6lSWqfqyg", "Tucuruí"));
 
   document.querySelectorAll("[data-campus-gallery]").forEach(function (root) {
     const viewport = root.querySelector(".campus-gallery__viewport");

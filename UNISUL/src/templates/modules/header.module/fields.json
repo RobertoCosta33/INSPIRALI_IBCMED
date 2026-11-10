@@ -31,12 +31,6 @@
     }
   },
   {
-    "name": "candidate_label",
-    "label": "Texto fixo \"Sou Candidato\" ao lado da busca (deixe vazio para ocultar)",
-    "type": "text",
-    "default": "Sou Candidato"
-  },
-  {
     "name": "enrollment_cta_label",
     "label": "Texto do botão de inscrição (desktop)",
     "type": "text",

@@ -10,10 +10,6 @@
     </a>
 
     <nav class="institutional-header__nav" id="institutional-nav" aria-label="Navegação institucional">
-      {% if module.candidate_label %}
-      <div class="institutional-header__link">{{ module.candidate_label }}</div>
-      <span class="institutional-header__divider" aria-hidden="true"></span>
-      {% endif %}
       <button type="button" class="institutional-header__search" data-search-trigger aria-label="Buscar nesta página">
         <img src="{{ get_asset_url('../../public/icons/icon-search.svg') }}" alt="" aria-hidden="true" width="16" height="16" />
       </button>

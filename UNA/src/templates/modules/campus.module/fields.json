@@ -65,7 +65,7 @@
     "name": "video_id",
     "label": "ID do vídeo institucional no YouTube (opcional — vira o último item da galeria)",
     "type": "text",
-    "default": ""
+    "default": "No6lSWqfqyg"
   },
   {
     "name": "photos",
