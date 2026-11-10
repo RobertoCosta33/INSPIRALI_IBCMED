@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/UAM/src/pages/index.html" },
+    { "source": "/UAM", "destination": "/UAM/src/pages/index.html" },
+    { "source": "/UNA", "destination": "/UNA/src/pages/index.html" },
+    { "source": "/UNIFACS", "destination": "/UNIFACS/src/pages/index.html" },
+    { "source": "/UNISUL", "destination": "/UNISUL/src/pages/index.html" },
+    { "source": "/AGES", "destination": "/AGES/src/pages/index.html" },
+    { "source": "/UNIBH", "destination": "/UNIBH/src/pages/index.html" },
+    { "source": "/UNIFG", "destination": "/UNIFG/src/pages/index.html" },
+    { "source": "/UNP", "destination": "/UNP/src/pages/index.html" },
+    { "source": "/USJT", "destination": "/USJT/src/pages/index.html" }
+  ]
+}
