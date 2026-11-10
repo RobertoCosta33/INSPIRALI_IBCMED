@@ -8,16 +8,16 @@
     "type": "group",
     "occurrence": { "min": 1, "max": 6, "default": 3 },
     "children": [
-      { "name": "campus_name", "label": "Nome do campus", "type": "text", "default": "UAM - Mooca" },
+      { "name": "campus_name", "label": "Nome do campus", "type": "text", "default": "Anhembi Morumbi - Mooca" },
       { "name": "price_label", "label": "Rótulo", "type": "text", "default": "Investimento Mensal (2026)" },
       { "name": "price_value", "label": "Valor", "type": "text", "default": "R$ 13.295,00" },
       { "name": "price_note", "label": "Nota", "type": "text", "default": "Consulte condições de financiamento" },
       { "name": "price_disclaimer", "label": "Nota de rodapé", "type": "text", "default": "*Mensalidade de 2026 vinculada à pontualidade" }
     ],
     "default": [
-      { "campus_name": "UAM - Mooca", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 13.295,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" },
-      { "campus_name": "UAM - Piracicaba", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" },
-      { "campus_name": "UAM - São José dos Campos", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" }
+      { "campus_name": "Anhembi Morumbi - Mooca", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 13.295,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" },
+      { "campus_name": "Anhembi Morumbi - Piracicaba", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" },
+      { "campus_name": "Anhembi Morumbi - São José dos Campos", "price_label": "Investimento Mensal (2026)", "price_value": "R$ 12.995,00", "price_note": "Consulte condições de financiamento", "price_disclaimer": "*Mensalidade de 2026 vinculada à pontualidade" }
     ]
   },
   {
@@ -46,7 +46,7 @@
     ],
     "default": [
       { "title": "FIES", "subtitle": "Financiamento estudantil", "text": "Financiamento do Governo Federal com possibilidade de cobertura de até 100% (FIES Social).", "link_label": "Saiba mais sobre o FIES", "opens_modal": false, "url": { "url": { "href": "https://acessounico.mec.gov.br/fies", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
-      { "title": "Prouni", "subtitle": "Bolsas de estudo", "text": "Bolsas de estudo integrais (100%) ou parciais (50%) através da sua nota do Enem.", "link_label": "Saiba mais sobre o Prouni", "opens_modal": false, "url": { "url": { "href": "https://acessounico.mec.gov.br/prouni", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
+      { "title": "Prouni", "subtitle": "Bolsas de estudo", "text": "Bolsas de estudo integrais (100%) através da sua nota do Enem.", "link_label": "Saiba mais sobre o Prouni", "opens_modal": false, "url": { "url": { "href": "https://acessounico.mec.gov.br/prouni", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
       { "title": "Pravaler", "subtitle": "Financiamento privado", "text": "Financiamento estudantil privado com condições flexíveis e parcelamento facilitado.", "link_label": "Saiba mais sobre o Pravaler", "opens_modal": false, "url": { "url": { "href": "https://www.pravaler.com.br/campanhas/lp-campeao2/medicina/?ies_code=62&nome=ANHEMBI%20MORUMBI&faculdade&utm_source=trade&utm_medium=site-faculdade&utm_campaign=positiva%C3%A7%C3%A3o-medicina", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } },
       { "title": "Programa Bolsa Permanência*", "subtitle": "Apoio financeiro", "text": "Apoio financeiro do MEC para estudantes de Medicina vinculados ao Programa Mais Médicos.", "note": "*Válido nas unidades São José dos Campos e Piracicaba.", "link_label": "Veja mais", "opens_modal": true, "url": { "url": { "href": "", "type": "EXTERNAL", "content_id": null }, "open_in_new_tab": true, "no_follow": false } }
     ]

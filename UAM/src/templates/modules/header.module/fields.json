@@ -103,6 +103,33 @@
           }
         },
         "item_label": "Portador de Diploma 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18460",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Transferência Interna entre campus 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://fichainscricao.inspirali.com/concurso/18441",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Retorno 27.1"
+      },
+      {
+        "url": {
+          "url": {
+            "href": "https://www.anhembi.br/inscreva/18419",
+            "type": "EXTERNAL"
+          }
+        },
+        "item_label": "Destrancamento Medicina 27.1"
       }
     ]
   },
