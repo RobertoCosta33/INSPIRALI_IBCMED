@@ -167,7 +167,7 @@
         "cta_label": "Quero me inscrever para 27.1",
         "cta_url": {
           "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18408",
+            "href": "https://fichainscricao.inspirali.com/concurso/18500",
             "type": "EXTERNAL"
           }
         },
@@ -190,7 +190,7 @@
         "cta_label": "Quero me inscrever para 27.1",
         "cta_url": {
           "url": {
-            "href": "https://fichainscricao.inspirali.com/concurso/18429",
+            "href": "https://fichainscricao.inspirali.com/concurso/18519",
             "type": "EXTERNAL"
           }
         },
@@ -490,7 +490,7 @@
         ]
       },
       {
-        "title": "Transferência Externa 27.1 - Prova 19/11",
+        "title": "Transferência Externa 27.1",
         "links": [
           {
             "url": {
@@ -513,7 +513,7 @@
           {
             "url": {
               "url": {
-                "href": "https://fichainscricao.inspirali.com/concurso/18408",
+                "href": "https://fichainscricao.inspirali.com/concurso/18500",
                 "type": "EXTERNAL"
               }
             },
@@ -554,7 +554,7 @@
           {
             "url": {
               "url": {
-                "href": "https://fichainscricao.inspirali.com/concurso/18429",
+                "href": "https://fichainscricao.inspirali.com/concurso/18519",
                 "type": "EXTERNAL"
               }
             },

@@ -81,7 +81,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/institucional",
+                "href": "https://portal.anhembi.br/sobre/",
                 "type": "EXTERNAL"
               }
             },
@@ -90,7 +90,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/unidades",
+                "href": "https://portal.anhembi.br/unidades/",
                 "type": "EXTERNAL"
               }
             },
@@ -99,7 +99,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/nosso-curriculo",
+                "href": "https://portal.anhembi.br/nosso-curriculo/",
                 "type": "EXTERNAL"
               }
             },
@@ -117,7 +117,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/uc-dual",
+                "href": "https://portal.anhembi.br/nosso-curriculo/uc-dual/",
                 "type": "EXTERNAL"
               }
             },
@@ -126,7 +126,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/cadastro-emec",
+                "href": "https://portal.anhembi.br/cadastro-emec/",
                 "type": "EXTERNAL"
               }
             },
@@ -144,7 +144,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/pesquisa-e-desenvolvimento-cientifico/",
+                "href": "https://portal.anhembi.br/nosso-curriculo/pesquisa/",
                 "type": "EXTERNAL"
               }
             },
@@ -153,7 +153,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/napi",
+                "href": "https://portal.anhembi.br/sou-estudante/napi/",
                 "type": "EXTERNAL"
               }
             },
@@ -162,7 +162,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/biblioteca",
+                "href": "https://portal.anhembi.br/sou-estudante/biblioteca/",
                 "type": "EXTERNAL"
               }
             },
@@ -171,7 +171,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/blog",
+                "href": "https://portal.anhembi.br/blog/",
                 "type": "EXTERNAL"
               }
             },
@@ -180,7 +180,7 @@
           {
             "url": {
               "url": {
-                "href": "https://www.vagas.com.br/",
+                "href": "https://trabalheconosco.vagas.com.br/animaeducacao",
                 "type": "EXTERNAL"
               }
             },
@@ -194,7 +194,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/graduacao",
+                "href": "https://portal.anhembi.br/graduacao/",
                 "type": "EXTERNAL"
               }
             },
@@ -203,7 +203,7 @@
           {
             "url": {
               "url": {
-                "href": "https://pos.anhembi.br/",
+                "href": "https://pos.anhembi.br/?_gl=1*enrbe9*_gcl_aw*R0NMLjE3OTI0MTI1OTMuQ2p3S0NBandyYmZXQmhBZUVpd0FjMmU2UGdDcEp1LVhHcFlTb2o2cGhhZkpObmRjOEgzRm5Ya3pBM1JTWFhocmxQMDh4STJrX01lNzNob0M3ZFlRQXZEX0J3RQ..*_gcl_dc*R0NMLjE3OTI0MTI1OTMuQ2p3S0NBandyYmZXQmhBZUVpd0FjMmU2UGdDcEp1LVhHcFlTb2o2cGhhZkpObmRjOEgzRm5Ya3pBM1JTWFhocmxQMDh4STJrX01lNzNob0M3ZFlRQXZEX0J3RQ..*_gcl_au*MjA1OTUzMzY3MS4xNzkyMTczMzgyLi0uLS4xNzkyNTIzMTAyLjE1OTMyMjk2OS4xNzk0MzU0Mzg2LjE3OTQzNTQzODU.*_ga*MTc2MzQxNzkwOC4xNzkyMTczMzgz*_ga_LLQ62NLZ3L*czE3OTQzNTQyNjgkbzI5JGcxJHQxNzk0MzU0Njc0JGoxNCRsMCRoODkzNzE0OTM0*_ga_GNBTC96V2P*czE3OTQzNTQyNjgkbzI4JGcxJHQxNzk0MzU0NjMxJGo2MCRsMCRoMA..",
                 "type": "EXTERNAL"
               }
             },
@@ -212,7 +212,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/mestrado-doutorado",
+                "href": "https://portal.anhembi.br/mestrado-doutorado/",
                 "type": "EXTERNAL"
               }
             },
@@ -221,7 +221,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/bolsas-financiamentos/extensao-universitaria",
+                "href": "https://portal.anhembi.br/bolsas-e-financiamentos/extensao-universitaria",
                 "type": "EXTERNAL"
               }
             },
@@ -230,7 +230,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/modalidades",
+                "href": "https://portal.anhembi.br/modalidades/",
                 "type": "EXTERNAL"
               }
             },
@@ -239,7 +239,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/formas-entrada",
+                "href": "https://portal.anhembi.br/formas-de-entrada/",
                 "type": "EXTERNAL"
               }
             },
@@ -248,7 +248,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/bolsas-financiamentos",
+                "href": "https://portal.anhembi.br/bolsas-e-financiamentos/",
                 "type": "EXTERNAL"
               }
             },
@@ -262,7 +262,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/calendario-academico/",
+                "href": "https://portal.anhembi.br/sou-estudante/calendario/",
                 "type": "EXTERNAL"
               }
             },
@@ -271,7 +271,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/editais",
+                "href": "https://portal.anhembi.br/sou-candidato/editais/",
                 "type": "EXTERNAL"
               }
             },
@@ -280,7 +280,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/enade",
+                "href": "https://portal.anhembi.br/sou-estudante/enade/",
                 "type": "EXTERNAL"
               }
             },
@@ -298,7 +298,7 @@
           {
             "url": {
               "url": {
-                "href": "https://portal.anhembi.br/consultar-historico/",
+                "href": "https://historicoescolar.anhembi.br/",
                 "type": "EXTERNAL"
               }
             },
@@ -307,7 +307,7 @@
           {
             "url": {
               "url": {
-                "href": "https://repositorio.animaeducacao.com.br/communities/b460710d-a0cf-4312-bc3e-2b5414183473",
+                "href": "https://repositorio.animaeducacao.com.br/communities/b460710d-a0cf-4312-bc3e-2b5414183473?_gl=1*agq2l9*_gcl_aw*R0NMLjE3OTI0MTI1OTMuQ2p3S0NBandyYmZXQmhBZUVpd0FjMmU2UGdDcEp1LVhHcFlTb2o2cGhhZkpObmRjOEgzRm5Ya3pBM1JTWFhocmxQMDh4STJrX01lNzNob0M3ZFlRQXZEX0J3RQ..*_gcl_dc*R0NMLjE3OTI0MTI1OTMuQ2p3S0NBandyYmZXQmhBZUVpd0FjMmU2UGdDcEp1LVhHcFlTb2o2cGhhZkpObmRjOEgzRm5Ya3pBM1JTWFhocmxQMDh4STJrX01lNzNob0M3ZFlRQXZEX0J3RQ..*_gcl_au*MjA1OTUzMzY3MS4xNzkyMTczMzgyLi0uLS4xNzkyNTIzMTAyLjE1OTMyMjk2OS4xNzk0MzU0Mzg2LjE3OTQzNTQzODU.*_ga*MTc2MzQxNzkwOC4xNzkyMTczMzgz*_ga_LLQ62NLZ3L*czE3OTQzNTQyNjgkbzI5JGcxJHQxNzk0MzU0Nzk4JGoxNCRsMCRoODkzNzE0OTM0",
                 "type": "EXTERNAL"
               }
             },
