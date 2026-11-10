@@ -74,7 +74,7 @@
 
 .faq-contato__form-title {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   color: var(--text-primary-dark);
 }
@@ -120,7 +120,7 @@
   background-color: var(--surface-brand-quaternary);
   color: var(--text-inverted);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   transition: background-color 0.4s ease;
 }
 
@@ -137,7 +137,7 @@
 }
 
 .faq-contato__disclaimer a {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   text-decoration: underline;
 }
 
@@ -166,7 +166,7 @@
   gap: var(--spacing-large);
   padding: var(--spacing-large);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   color: var(--text-primary-dark);
   text-align: left;

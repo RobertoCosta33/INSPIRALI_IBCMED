@@ -74,7 +74,7 @@
 .faq-contato__form-title {
   /* Figma (Title 6): Bold 16px, line-height 1.16. */
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   color: var(--text-primary-dark);
 }
@@ -121,7 +121,7 @@
   color: var(--text-inverted);
   /* Figma: botão Enviar em Bold 14px. */
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: var(--line-height-tight);
   transition: background-color 0.4s ease;
 }
@@ -139,7 +139,7 @@
 }
 
 .faq-contato__disclaimer a {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   text-decoration: underline;
 }
 
@@ -168,7 +168,7 @@
   /* Figma (Pergunta frequente/Top): padding 24px, Bold 16px. */
   padding: var(--spacing-large);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   color: var(--text-primary-dark);
   text-align: left;

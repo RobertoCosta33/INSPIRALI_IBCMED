@@ -170,7 +170,7 @@
   /* Figma: card com py 8 + conteúdo com p 24 (= 32px vertical / 24px lateral). */
   padding: 32px var(--spacing-large);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary-dark);
   text-align: left;
 }
