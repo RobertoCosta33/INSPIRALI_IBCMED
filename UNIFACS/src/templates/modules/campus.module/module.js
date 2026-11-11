@@ -1,6 +1,6 @@
 // Carrossel simples da galeria de ambientes do campus. Diferente da UAM
 // (3 unidades com chips para alternar), a UNIFACS tem uma única unidade
-// (Salvador — Professor Barros), então não há seletor de campus aqui.
+// (Salvador — Câmpus Tancredo Neves), então não há seletor de campus aqui.
 // Os dados da unidade (fotos) vêm do campo "photos" do módulo, serializados
 // em <script data-campus-json> por module.html — totalmente editáveis pelo
 // editor do HubSpot.
