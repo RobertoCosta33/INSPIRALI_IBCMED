@@ -38,7 +38,7 @@
     "name": "body_text",
     "label": "Texto",
     "type": "richtext",
-    "default": "<p>Com uma trajetória acadêmica consolidada em Salvador, a Medicina da UNIFACS está inserida em um dos principais polos de saúde do Nordeste, oferecendo uma formação conectada à complexidade assistencial da capital baiana.</p><p>Assista ao vídeo institucional para entender melhor a UNIFACS.</p>"
+    "default": "<p>Com uma trajetória acadêmica consolidada em Salvador, a Medicina da UNIFACS está inserida em um dos principais polos de saúde do Nordeste, oferecendo uma formação conectada à complexidade assistencial da capital baiana.</p><p>Assista ao vídeo....</p>"
   },
   {
     "name": "cta_label",
