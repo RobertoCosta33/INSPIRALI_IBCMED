@@ -289,3 +289,11 @@ Para cada instituição nova, ao criar a página:
 2. Definir e autenticar as contas HubSpot (sandbox e produção) do IBCMED na CLI.
 3. Após aprovação do piloto, criar a estrutura inicial de `ibcmed-theme/` (layout base, header, footer) e converter cada módulo de `UAM/src/modules/sections/*` em um módulo HubL dentro de `UAM/src/templates/`.
 4. Repetir o fluxo Figma → `<INSTITUICAO>/src/modules/` → `<INSTITUICAO>/src/pages/` → aprovação → conversão HubL → upload para as demais instituições, conforme as telas forem disponibilizadas no Figma — **sempre partindo da estrutura de `UAM/` como modelo** (seção 3.2).
+
+---
+
+## 10. Convenções de documentação (Notion e docs/)
+
+- Ao escrever documentação (Notion, `docs/`, comentários voltados a leitores não-técnicos), **sempre expanda siglas entre parênteses na primeira ocorrência** — ex.: UTM (Urchin Tracking Module), SFMC (Salesforce Marketing Cloud), CDP (Customer Data Platform), LP (Landing Page), HubL (HubSpot Markup Language), CRM (Customer Relationship Management), CMS (Content Management System), SDK (Software Development Kit), API (interface de programação de aplicações), PII (dados de identificação pessoal), LGPD (Lei Geral de Proteção de Dados).
+- Siglas dentro de blocos de código/comentários de código podem ficar sem expansão.
+- Não precisa expandir nomes próprios de produtos/ferramentas (HubSpot, Salesforce, Vercel, Figma, Git, GitHub).
