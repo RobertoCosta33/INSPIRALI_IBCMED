@@ -9,25 +9,25 @@
     "name": "title",
     "label": "Título",
     "type": "text",
-    "default": "Estrutura completa em um só lugar"
+    "default": "Medicina em Salvador, com a prática no centro da formação."
   },
   {
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "Laboratórios equipados e ambiente acolhedor em Salvador para uma formação médica de alta qualidade."
+    "default": "No Campus Professor Barros, você aprende em espaços que simulam a rotina médica e ajudam a desenvolver habilidades para o atendimento a pacientes."
   },
   {
     "name": "panel_title",
     "label": "Título do painel",
     "type": "text",
-    "default": "Nossa unidade"
+    "default": "Conheça o campus"
   },
   {
     "name": "panel_text",
     "label": "Texto do painel",
     "type": "richtext",
-    "default": "Infraestrutura de excelência para o seu sucesso: auditório, biblioteca, laboratórios de última geração e muito mais, projetados para o seu desenvolvimento acadêmico e profissional."
+    "default": "Explore os laboratórios de habilidades médicas e o Centro de Simulação, com consultórios simulados, enfermaria e salas de simulação avançada."
   },
   {
     "name": "campus_name",
@@ -45,13 +45,19 @@
     "name": "city",
     "label": "Cidade / UF",
     "type": "text",
-    "default": "Salvador, BA"
+    "default": "Câmpus Tancredo Neves (Novo Câmpus da Saúde) – Salvador"
   },
   {
     "name": "address_text",
     "label": "Endereço (texto antes do link do mapa)",
     "type": "text",
-    "default": "Av. Luís Viana Filho, 3100 - 3146, Pituaçu - Imbuí • CEP 41720-200 -"
+    "default": "Av. Tancredo Neves, 2131, Caminho das Árvores, Salvador – BA -"
+  },
+  {
+    "name": "address_note",
+    "label": "Observação do endereço (linha abaixo do link do mapa)",
+    "type": "text",
+    "default": "Em Salvador, com transporte, shopping e serviços por perto."
   },
   {
     "name": "map_label",
@@ -65,7 +71,7 @@
     "type": "link",
     "default": {
       "url": {
-        "href": "https://maps.app.goo.gl/DhouPDW3Xbza5tdc9",
+        "href": "https://www.google.com/maps/search/?api=1&query=Av.+Tancredo+Neves,+2131,+Caminho+das+%C3%81rvores,+Salvador+-+BA",
         "type": "EXTERNAL",
         "content_id": null
       },

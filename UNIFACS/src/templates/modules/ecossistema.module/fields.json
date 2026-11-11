@@ -46,7 +46,7 @@
         "name": "subtitle",
         "label": "Subtítulo (opcional)",
         "type": "text",
-        "default": "Prática intensa sob supervisão de elite"
+        "default": "Mais de 12 mil atendimentos por ano."
       },
       {
         "name": "value",
@@ -58,15 +58,15 @@
         "name": "support_text",
         "label": "Texto de apoio",
         "type": "richtext",
-        "default": "agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à população."
+        "default": "Atendimentos reais e gratuitos à população, garantindo a você prática intensa sob supervisão docente de elite."
       }
     ],
     "default": [
       {
         "eyebrow": "Centros Integrados de Saúde (CIS)",
-        "subtitle": "Prática intensa sob supervisão de elite",
-        "value": "+218.000",
-        "support_text": "agendamentos anuais nos Centros Integrados de Saúde, com atendimento real e gratuito à população.",
+        "subtitle": "Mais de 12 mil atendimentos por ano.",
+        "value": "+12.000",
+        "support_text": "Atendimentos reais e gratuitos à população, garantindo a você prática intensa sob supervisão docente de elite.",
         "image": {
           "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/ecosystem-carousel-1.jpg",
           "alt": "Centro Integrado de Saúde da UNIFACS"
@@ -86,7 +86,7 @@
         "eyebrow": "Rede Hospitalar de Alta Complexidade",
         "subtitle": "Internato sólido de alto nível",
         "value": "",
-        "support_text": "Internato sólido com vivência em urgência, cirurgia e pediatria através de parcerias com hospitais de referência.",
+        "support_text": "Internato sólido com vivência em urgência, cirurgia e pediatria através de parcerias com os melhores hospitais da região: Hospital Santa Izabel, Obras Sociais Irmã Dulce (OSID) e Hospital Martagão Gesteira.",
         "image": {
           "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIFACS-assets/misc/ecosystem-carousel-3.jpg",
           "alt": "Equipe médica em atendimento hospitalar de alta complexidade"

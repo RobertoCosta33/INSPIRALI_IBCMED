@@ -29,7 +29,8 @@
           {{ module.address_text }}{% if module.map_url.url.href %}
           <a href="{{ module.map_url.url.href }}" target="_blank" rel="noopener"
             >{{ module.map_label }}</a
-          >{% endif %}
+          >{% endif %}{% if module.address_note %}<br />{{
+          module.address_note }}{% endif %}
         </p>
       </div>
       <a
