@@ -1,0 +1,7 @@
+.vercel
+.env*
+
+# Artefatos locais de ferramentas (nao fazem parte do codigo do projeto)
+.agents/
+.tmp-figma/
+skills-lock.json
