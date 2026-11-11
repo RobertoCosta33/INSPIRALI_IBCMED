@@ -52,5 +52,30 @@
         }
       }
     ]
+  },
+  {
+    "name": "tracking",
+    "label": "Tracking (scripts de terceiros)",
+    "type": "group",
+    "children": [
+      {
+        "name": "enabled",
+        "label": "Ativar snippet de tracking (Salesforce/CDP)",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "name": "snippet",
+        "label": "Snippet de tracking — tag <script> completa (SFMC Collect / Data Cloud Web SDK)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "propagate_utms",
+        "label": "Propagar UTMs da URL para links externos (ficha de inscrição etc.)",
+        "type": "boolean",
+        "default": true
+      }
+    ]
   }
 ]
