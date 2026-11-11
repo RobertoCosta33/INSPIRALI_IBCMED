@@ -26,11 +26,11 @@
           <span data-campus-city>{{ module.city }}</span>
         </p>
         <p class="campus-detail__address" data-campus-address>
-          {{ module.address_text }}{% if module.map_url.url.href %}
+          {{ module.address_text }}{% if module.address_note %}<br />{{
+          module.address_note }}{% endif %}{% if module.map_url.url.href %}<br />
           <a href="{{ module.map_url.url.href }}" target="_blank" rel="noopener"
             >{{ module.map_label }}</a
-          >{% endif %}{% if module.address_note %}<br />{{
-          module.address_note }}{% endif %}
+          >{% endif %}
         </p>
       </div>
       <a

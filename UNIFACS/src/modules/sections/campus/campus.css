@@ -9,7 +9,7 @@
    (ver breakpoint abaixo), sem precisar duplicar HTML. */
 .campus-layout {
   display: grid;
-  grid-template-columns: minmax(240px, 400px) 1fr;
+  grid-template-columns: minmax(240px, 480px) 1fr;
   grid-template-areas:
     "panel-top gallery"
     "panel-bottom gallery";

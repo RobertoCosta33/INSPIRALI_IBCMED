@@ -51,7 +51,7 @@
     "name": "address_text",
     "label": "Endereço (texto antes do link do mapa)",
     "type": "text",
-    "default": "Av. Tancredo Neves, 2131, Caminho das Árvores, Salvador – BA -"
+    "default": "Av. Tancredo Neves, 2131, Caminho das Árvores, Salvador – BA"
   },
   {
     "name": "address_note",
