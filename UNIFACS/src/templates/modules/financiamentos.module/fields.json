@@ -31,7 +31,7 @@
         "name": "campus_name",
         "label": "Nome do campus",
         "type": "text",
-        "default": "UNIFACS - Salvador (Professor Barros)"
+        "default": "UNIFACS - Salvador (Tancredo Neves)"
       },
       {
         "name": "price_label",
@@ -60,7 +60,7 @@
     ],
     "default": [
       {
-        "campus_name": "UNIFACS - Salvador (Professor Barros)",
+        "campus_name": "UNIFACS - Salvador (Tancredo Neves)",
         "price_label": "Investimento Mensal (2026)*",
         "price_value": "R$ 13.495,00",
         "price_note": "Consulte condições de financiamento ao lado",

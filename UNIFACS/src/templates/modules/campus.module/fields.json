@@ -15,7 +15,7 @@
     "name": "intro_text",
     "label": "Texto introdutório",
     "type": "richtext",
-    "default": "No Campus Professor Barros, você aprende em espaços que simulam a rotina médica e ajudam a desenvolver habilidades para o atendimento a pacientes."
+    "default": "No Câmpus Tancredo Neves, você aprende em espaços que simulam a rotina médica e ajudam a desenvolver habilidades para o atendimento a pacientes."
   },
   {
     "name": "panel_title",

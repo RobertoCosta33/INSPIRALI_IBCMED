@@ -57,7 +57,7 @@ Cada `*.module/` segue o padrão HubSpot: `meta.json`, `fields.json` (campos edi
   pronto usando o módulo nativo de formulário do HubSpot. A UNIFACS **não tem**
   `floating-contact` no `src` (o "Tem alguma dúvida?" também está desativado), então esse
   módulo não existe aqui e `base.html` não o carrega.
-- **Campus**: a UNIFACS tem uma única unidade (Salvador — Professor Barros), sem chips de
+- **Campus**: a UNIFACS tem uma única unidade (Salvador — Tancredo Neves), sem chips de
   troca de campus e sem vídeo. As fotos vêm do grupo `photos` e são serializadas em
   `<script type="application/json" data-campus-json>` para o `module.js`. O endereço tem o
   link "Ver no mapa" como campos separados (`address_text`, `map_label`, `map_url`).
