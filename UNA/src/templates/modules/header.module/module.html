@@ -49,6 +49,8 @@
             {% for item in module.enrollment_items %}
             <a class="header-cta-dropdown__item" href="{{ item.url.url.href }}" target="_blank" rel="noopener">{{ item.item_label }}</a>
             {% endfor %}
+            <hr class="header-cta-dropdown__divider" />
+            <button type="button" class="header-cta-dropdown__item" data-open-edital-modal>Inscrições e Resultados</button>
           </div>
         </div>
       </div>

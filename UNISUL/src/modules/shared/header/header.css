@@ -348,3 +348,20 @@
   background-color: var(--surface-primary-subtle);
   color: var(--text-brand);
 }
+
+.header-cta-dropdown__divider {
+  border: none;
+  border-top: 1px solid var(--border-primary-light);
+  margin: var(--spacing-small) var(--spacing-medium);
+}
+
+button.header-cta-dropdown__item {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  cursor: pointer;
+}
