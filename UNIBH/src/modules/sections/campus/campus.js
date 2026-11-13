@@ -34,16 +34,23 @@
 
   const CAMPUS_GALLERIES = {
     buritis: buildGallery('buritis', 'Buritis', [
-      ['Área de convivência', 'buritis-1.png'],
-      ['Biblioteca', 'buritis-2.png'],
-      ['Laboratório de simulação', 'buritis-3.png'],
-      ['Sala de aula', 'buritis-4.png'],
+      ['Entrada do campus', 'entrada-do-campus.jpg'],
+      ['Recepção e acesso ao campus', 'recepcao-e-acesso-ao-campus.jpg'],
+      ['Espaço de estudos', 'espaco-de-estudos.png'],
+      ['Sala de aula em auditório', 'sala-de-aula-em-auditorio.jpg'],
+      ['Laboratório morfofuncional', 'laboratorio-morfofuncional.jpg'],
+      ['Laboratório com mesa anatômica digital', 'laboratorio-com-mesa-anatomica-digital.png'],
+      ['Laboratório de simulação avançada', 'laboratorio-de-simulacao-avancada.jpg'],
+      ['Sala de procedimentos', 'sala-de-procedimentos.png'],
     ]),
     vespasiano: buildGallery('vespasiano', 'Vespasiano', [
-      ['Área de convivência', 'vespasiano-1.png'],
-      ['Biblioteca', 'vespasiano-2.png'],
-      ['Laboratório de simulação', 'vespasiano-3.png'],
-      ['Sala de aula', 'vespasiano-4.png'],
+      ['Hall de entrada', 'hall-de-entrada.jpg'],
+      ['Biblioteca', 'biblioteca.jpg'],
+      ['Sala de estudos em grupo', 'sala-de-estudos-em-grupo.jpg'],
+      ['Laboratório de anatomia', 'laboratorio-de-anatomia.jpg'],
+      ['Laboratório de habilidades clínicas', 'laboratorio-de-habilidades-clinicas.jpg'],
+      ['Laboratório de simulação clínica', 'laboratorio-de-simulacao-clinica.jpg'],
+      ['Sala de observação da simulação clínica', 'sala-de-observacao-da-simulacao-clinica.jpg'],
     ]),
   };
 

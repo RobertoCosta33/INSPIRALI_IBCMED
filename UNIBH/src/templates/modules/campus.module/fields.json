@@ -143,51 +143,99 @@
         "photos": [
           {
             "image": {
-              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/buritis-1.png",
-              "alt": "Área de convivência — campus Buritis",
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/entrada-do-campus.jpg",
+              "alt": "Entrada do campus — campus Buritis",
               "loading": "lazy",
               "width": 0,
               "height": 0,
               "max_width": 0,
               "max_height": 0
             },
-            "caption": "Área de convivência"
+            "caption": "Entrada do campus"
           },
           {
             "image": {
-              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/buritis-2.png",
-              "alt": "Biblioteca — campus Buritis",
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/recepcao-e-acesso-ao-campus.jpg",
+              "alt": "Recepção e acesso ao campus — campus Buritis",
               "loading": "lazy",
               "width": 0,
               "height": 0,
               "max_width": 0,
               "max_height": 0
             },
-            "caption": "Biblioteca"
+            "caption": "Recepção e acesso ao campus"
           },
           {
             "image": {
-              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/buritis-3.png",
-              "alt": "Laboratório de simulação — campus Buritis",
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/espaco-de-estudos.png",
+              "alt": "Espaço de estudos — campus Buritis",
               "loading": "lazy",
               "width": 0,
               "height": 0,
               "max_width": 0,
               "max_height": 0
             },
-            "caption": "Laboratório de simulação"
+            "caption": "Espaço de estudos"
           },
           {
             "image": {
-              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/buritis-4.png",
-              "alt": "Sala de aula — campus Buritis",
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/sala-de-aula-em-auditorio.jpg",
+              "alt": "Sala de aula em auditório — campus Buritis",
               "loading": "lazy",
               "width": 0,
               "height": 0,
               "max_width": 0,
               "max_height": 0
             },
-            "caption": "Sala de aula"
+            "caption": "Sala de aula em auditório"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/laboratorio-morfofuncional.jpg",
+              "alt": "Laboratório morfofuncional — campus Buritis",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Laboratório morfofuncional"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/laboratorio-com-mesa-anatomica-digital.png",
+              "alt": "Laboratório com mesa anatômica digital — campus Buritis",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Laboratório com mesa anatômica digital"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/laboratorio-de-simulacao-avancada.jpg",
+              "alt": "Laboratório de simulação avançada — campus Buritis",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Laboratório de simulação avançada"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/buritis/sala-de-procedimentos.png",
+              "alt": "Sala de procedimentos — campus Buritis",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Sala de procedimentos"
           }
         ]
       },
@@ -210,19 +258,19 @@
         "photos": [
           {
             "image": {
-              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/vespasiano-1.png",
-              "alt": "Área de convivência — campus Vespasiano",
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/hall-de-entrada.jpg",
+              "alt": "Hall de entrada — campus Vespasiano",
               "loading": "lazy",
               "width": 0,
               "height": 0,
               "max_width": 0,
               "max_height": 0
             },
-            "caption": "Área de convivência"
+            "caption": "Hall de entrada"
           },
           {
             "image": {
-              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/vespasiano-2.png",
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/biblioteca.jpg",
               "alt": "Biblioteca — campus Vespasiano",
               "loading": "lazy",
               "width": 0,
@@ -234,27 +282,63 @@
           },
           {
             "image": {
-              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/vespasiano-3.png",
-              "alt": "Laboratório de simulação — campus Vespasiano",
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/sala-de-estudos-em-grupo.jpg",
+              "alt": "Sala de estudos em grupo — campus Vespasiano",
               "loading": "lazy",
               "width": 0,
               "height": 0,
               "max_width": 0,
               "max_height": 0
             },
-            "caption": "Laboratório de simulação"
+            "caption": "Sala de estudos em grupo"
           },
           {
             "image": {
-              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/vespasiano-4.png",
-              "alt": "Sala de aula — campus Vespasiano",
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/laboratorio-de-anatomia.jpg",
+              "alt": "Laboratório de anatomia — campus Vespasiano",
               "loading": "lazy",
               "width": 0,
               "height": 0,
               "max_width": 0,
               "max_height": 0
             },
-            "caption": "Sala de aula"
+            "caption": "Laboratório de anatomia"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/laboratorio-de-habilidades-clinicas.jpg",
+              "alt": "Laboratório de habilidades clínicas — campus Vespasiano",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Laboratório de habilidades clínicas"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/laboratorio-de-simulacao-clinica.jpg",
+              "alt": "Laboratório de simulação clínica — campus Vespasiano",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Laboratório de simulação clínica"
+          },
+          {
+            "image": {
+              "src": "https://51397625.fs1.hubspotusercontent-na1.net/hubfs/51397625/UNIBH-assets/campus-gallery/vespasiano/sala-de-observacao-da-simulacao-clinica.jpg",
+              "alt": "Sala de observação da simulação clínica — campus Vespasiano",
+              "loading": "lazy",
+              "width": 0,
+              "height": 0,
+              "max_width": 0,
+              "max_height": 0
+            },
+            "caption": "Sala de observação da simulação clínica"
           }
         ]
       }
