@@ -35,7 +35,6 @@
     {{ require_js(get_asset_url("../../vendor/mark.min.js"), { "position": "head" }) }}
 
     {{ standard_header_includes }}
-    {% if theme.tracking.enabled and theme.tracking.snippet %}{{ theme.tracking.snippet }}{% endif %}
   </head>
   <body class="{{ builtin_body_classes }}">
     <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -50,7 +49,6 @@
     {% module "page_search" path="../../modules/page-search.module" %}
     {% module "video_modal" path="../../modules/video-modal.module" %}
 
-    {% if theme.tracking.propagate_utms %}{{ require_js(get_asset_url("../../js/utm-propagate.js"), { "position": "footer" }) }}{% endif %}
     {{ standard_footer_includes }}
   </body>
 </html>

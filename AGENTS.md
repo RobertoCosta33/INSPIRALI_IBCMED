@@ -294,6 +294,6 @@ Para cada instituição nova, ao criar a página:
 
 ## 10. Convenções de documentação (Notion e docs/)
 
-- Ao escrever documentação (Notion, `docs/`, comentários voltados a leitores não-técnicos), **sempre expanda siglas entre parênteses na primeira ocorrência** — ex.: UTM (Urchin Tracking Module), SFMC (Salesforce Marketing Cloud), CDP (Customer Data Platform), LP (Landing Page), HubL (HubSpot Markup Language), CRM (Customer Relationship Management), CMS (Content Management System), SDK (Software Development Kit), API (interface de programação de aplicações), PII (dados de identificação pessoal), LGPD (Lei Geral de Proteção de Dados).
+- Ao escrever documentação (Notion, `docs/`, comentários voltados a leitores não-técnicos), **sempre expanda siglas entre parênteses na primeira ocorrência** — ex.: LP (Landing Page), HubL (HubSpot Markup Language), CRM (Customer Relationship Management), CMS (Content Management System), SDK (Software Development Kit), API (interface de programação de aplicações), PII (dados de identificação pessoal), LGPD (Lei Geral de Proteção de Dados).
 - Siglas dentro de blocos de código/comentários de código podem ficar sem expansão.
 - Não precisa expandir nomes próprios de produtos/ferramentas (HubSpot, Salesforce, Vercel, Figma, Git, GitHub).
