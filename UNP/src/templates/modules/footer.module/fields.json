@@ -443,7 +443,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.facebook.com/universidadepotiguar",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -457,7 +457,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.instagram.com/universidadepotiguar",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -471,7 +471,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://linkedin.com/school/universidade-potiguar",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -485,7 +485,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.tiktok.com/@universidadepotiguar",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -499,7 +499,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://x.com/unpoficial",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -513,7 +513,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.youtube.com/user/unpoficial",
             "type": "EXTERNAL",
             "content_id": null
           },

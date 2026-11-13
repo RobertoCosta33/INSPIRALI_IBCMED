@@ -415,7 +415,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.facebook.com/unifgoficial/",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -429,7 +429,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.instagram.com/unifgoficial/",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -443,7 +443,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.linkedin.com/company/unifgoficial",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -471,7 +471,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://x.com/unifgoficial",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -485,7 +485,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.youtube.com/channel/UCGhsCPFOPkaFf5pnwKSLYZw",
             "type": "EXTERNAL",
             "content_id": null
           },

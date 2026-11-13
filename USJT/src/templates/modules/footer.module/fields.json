@@ -455,7 +455,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.facebook.com/usjtoficial",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -469,7 +469,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.instagram.com/usjtoficial",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -483,7 +483,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://br.linkedin.com/school/universidade-sao-judas/",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -497,7 +497,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.tiktok.com/@usjt",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -511,7 +511,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://x.com/usjtoficial",
             "type": "EXTERNAL",
             "content_id": null
           },
@@ -525,7 +525,7 @@
         "type": "link",
         "default": {
           "url": {
-            "href": "#",
+            "href": "https://www.youtube.com/c/USJTOficial",
             "type": "EXTERNAL",
             "content_id": null
           },

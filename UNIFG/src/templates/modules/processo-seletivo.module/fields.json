@@ -290,7 +290,7 @@
     "occurrence": {
       "min": 0,
       "max": 15,
-      "default": 8
+      "default": 12
     },
     "children": [
       {
@@ -305,7 +305,7 @@
         "type": "group",
         "occurrence": {
           "min": 0,
-          "max": 15,
+          "max": 20,
           "default": 3
         },
         "children": [
@@ -334,32 +334,724 @@
     ],
     "default": [
       {
-        "title": "Vestibular Tradicional 27.1 - Prova 18/10",
-        "links": []
+        "title": "Transferência Externa 27.1 - Prova 29/10",
+        "links": [
+          {
+            "link_label": "Resultado Preliminar de Classificação",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261110171216/UniFG_Resultado_preliminar_de_classifica%C2%BA%C3%BAo_1_TE_2027.1_10.11.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261005135042/UniFG_Edital_1_Transferncia_Externa_2027.1_05.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261005135042/FAQ_Transferncia_Externa.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Vestibular Tradicional 27.1 - Prova 18/10/2026",
+        "links": [
+          {
+            "link_label": "Resultado Final de Notas da Etapa I (Inspira)",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261030114318/UniFG_Resultado_final_de_notas_da_Etapa_I_Inspira_Retificado_30.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Resultado Preliminar de Notas da Etapa I (Inspira)",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261022114037/UniFG_Resultado_preliminar_de_notas_da_Etapa_I_Inspira_22.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Listagem Final de Inscritos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261013134524/UniFG_-_Listagem_Final_Inscritos_Vestibular_Tradicional_13.10.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Listagem Preliminar de Inscritos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261008172226/UniFG_-_Listagem_Preliminar_Inscritos_Vestibular_Tradicional_13.10.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Manual do candidato - Etapa 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260812140526/Inspira_Manual_Candidato.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Atividades Etapa 1 - Acesse aqui",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://inspira.ada-shorts.com/app",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261106133328/UniFG_Edital_VT1_Presencial_Strix_27.1_06.11.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260714114137/UniFG_Errata_1_VT1_Presencial_Strix_27.1_14.07.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 2",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260731133220/UniFG_Errata_2_VT1_Presencial_Strix_27.1_31.07.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 3",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261008173453/UniFG_Errata_3_VT1_Presencial_Strix_27.1_08.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 4",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261023104047/UniFG_Errata_4_VT1_Presencial_Strix_27.1_23.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 5",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261106133328/UniFG_Errata_5_VT1_Presencial_Strix_27.1_06.11.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260731133219/FAQ_Vestibular_Tradicional_Strix.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
       },
       {
         "title": "Processo Enem 27.1",
-        "links": []
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261112175051/UniFG_Edital_Processo_Enem_2027.1_12.11.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261016173952/UniFG_Errata_1_Processo_Enem_2027.1_16.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 2",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261030132922/UniFG_Errata_2_Processo_Enem_2027.1_30.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 3",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261106165731/UniFG_Errata_3_Processo_Enem_2027.1_06.11.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 4",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261112175051/UniFG_Errata_4_Processo_Enem_2027.1_12.11.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261009115839/FAQ_Processo_Enem_11.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18449",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
       },
       {
-        "title": "Transferência Externa 27.1 - Prova 29/10",
-        "links": []
+        "title": "2° Transferência Externa 27.1 - Prova 19/11",
+        "links": [
+          {
+            "link_label": "Manual do candidato",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261109172611/Manual_do_Candidato_-_Transfer%C3%AAncia_Medicina_27.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261026133856/UniFG_Edital_2_Transferncia_Externa_2027.1_26.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261026133856/FAQ_Transferncia_Externa.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18504",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Realize aqui o upload dos documentos obrigatórios para a análise curricular",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "http://centrouniversitariounifg.edu.br/inscreva/areacandidato/login",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "2º Portador de Diploma 27.1",
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261104142849/Unifg_BA_Edital_2_Obten%C2%BA%C3%BAo_Novo_Ttulo_2027.1._04.11.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261104142849/FAQ_Obten%C2%BA%C3%BAo_de_Novo_Ttulo_-_Portador_de_Diploma_27.1.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18521",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Programa de Bolsa Mais Médicos 27.1",
+        "links": [
+          {
+            "link_label": "Listagem Preliminar de Inscritos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261110154115/PUBLICA%C3%87%C3%83O_UNIFG_Resultado_Preliminar_Inscritos_Mais_M%C3%A9dicos_27.1_10.11.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261014141601/UniFG_Edital_Mais_M%C3%A9dicos_2027.1_14.10.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261014141717/UniFG_Errata_1_Mais_M%C3%A9dicos_2027.1_14.10.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260810140544/FAQ_UniFG_Mais_M%C3%A9dicos.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Transferência Interna entre campus 27.1",
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261103141229/Unifg_BA_Edital_Transfer%C3%AAncia_Interna_27.1_03.11.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261103141141/FAQ_Transfer%C3%AAncia_Interna_27.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18461",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
       },
       {
         "title": "Portador de Diploma 27.1",
-        "links": []
+        "links": [
+          {
+            "link_label": "Resultado Preliminar de Classificação",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261111174733/UniFG_Resultado_preliminar_de_classifica%C2%BA%C3%BAo_Etapas_1_e_2__11.11.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Listagem Final de Inscritos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261109164427/UniFG_-_Listagem_Final_de_Inscritos__1_Portador_de_Diploma_27.1_09.11.2027.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Listagem Preliminar de Inscritos",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261106154504/UniFG_-_Listagem_preliminar_de_Inscritos__1_Portador_de_Diploma_27_qKgFLkV.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261027093552/Unifg_BA_Edital_1_Obten%C2%BA%C3%BAo_Novo_Ttulo_2027.1._27.10.2026..pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261008181507/UniFG_Errata_1_Obten%C3%A7%C3%A3o_Novo_T%C3%ADtulo_2027.1._08.10.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 2",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261027093551/UniFG_Errata_2_1_Obten%C2%BA%C3%BAo_Novo_Ttulo_2027.1._27.10.2026.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261006103123/FAQ_Obten%C3%A7%C3%A3o_de_Novo_T%C3%ADtulo_-_Portador_de_Diploma_27.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
       },
       {
         "title": "Retorno 27.1",
-        "links": []
+        "links": [
+          {
+            "link_label": "Edital",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261009180215/UniFG_Edital_Retorno_2027.1_09.10.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Errata 1",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261009180232/UniFG_Errata_1_-_Retorno_2027.1_09.10.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261005142545/FAQ_Retorno_1.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://fichainscricao.inspirali.com/concurso/18443",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "title": "Destrancamento Medicina 27.1",
+        "links": [
+          {
+            "link_label": "Acompanhe aqui a sua inscrição",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://inscricao.centrouniversitariounifg.edu.br/VESTIB2/inscricao/index.php/status/index/index/codigo/18422/",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Passo a Passo para inscrição e acompanhamento",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261103175615/Passo_a_Passo_Inscri%C3%A7%C3%A3o_-_Destrancamento_Medicina.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "FAQ",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20261103175633/FAQ_Destrancamento_27.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Inscreva-se aqui!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://centrouniversitariounifg.edu.br/inscreva/18422",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
       },
       {
         "title": "Campanha Mérito Inspirali",
-        "links": []
+        "links": [
+          {
+            "link_label": "Confira o regulamento!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260805155136/1645523_-__Regulamento_Bolsa_M%C3%A9rito_Inspirali_27.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
       },
       {
         "title": "Campanha Cashback",
-        "links": []
+        "links": [
+          {
+            "link_label": "Confira o regulamento!",
+            "url": {
+              "url": {
+                "content_id": null,
+                "href": "https://estaticos.animaeducacao.com.br/medias/20260612155211/1551257_-_Regulamento_Bolsa_Cashback_26.pdf",
+                "type": "EXTERNAL"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
       }
     ]
   }
